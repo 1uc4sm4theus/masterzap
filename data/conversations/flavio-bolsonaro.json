@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Flávio Bolsonaro"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2025-11-15",
+      "end": "2025-11-16"
+    },
+    "total_messages": 8,
+    "source": "Conteúdo fornecido pelo usuário",
+    "note": "Os horários não foram informados no conteúdo recebido; a ordem das mensagens foi preservada com horários técnicos sequenciais à meia-noite."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-11-15T00:00:00",
+      "date": "2025-11-15",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Fala, irmão.\nTava no trânsito, voo [?].",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-11-15T00:00:01",
+      "date": "2025-11-15",
+      "time": "00:00:01",
+      "sender": "Flávio Bolsonaro",
+      "content": "Fala, mermao.\nPode atender?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-11-16T00:00:00",
+      "date": "2025-11-16",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Fala, irmãozão.\nTô na igreja, terminando. Te chamo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-11-16T00:00:01",
+      "date": "2025-11-16",
+      "time": "00:00:01",
+      "sender": "Flávio Bolsonaro",
+      "content": "[imagem de visualização única]",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "view_once": true
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-11-16T00:00:02",
+      "date": "2025-11-16",
+      "time": "00:00:02",
+      "sender": "Flávio Bolsonaro",
+      "content": "[imagem de visualização única]",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "view_once": true
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-11-16T00:00:03",
+      "date": "2025-11-16",
+      "time": "00:00:03",
+      "sender": "Flávio Bolsonaro",
+      "content": "Irmão, estou e estarei contigo sempre, não tem meia conversa entre a gente. Só preciso que me dê uma luz! Abs!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-11-16T00:00:04",
+      "date": "2025-11-16",
+      "time": "00:00:04",
+      "sender": "DV",
+      "content": "[imagem de visualização única]",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "view_once": true
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-11-16T00:00:05",
+      "date": "2025-11-16",
+      "time": "00:00:05",
+      "sender": "Flávio Bolsonaro",
+      "content": "Amém!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-11-15",
+        "message_count": 2,
+        "first_message_id": 1,
+        "last_message_id": 2
+      },
+      {
+        "date": "2025-11-16",
+        "message_count": 6,
+        "first_message_id": 3,
+        "last_message_id": 8
+      }
+    ]
+  }
+}

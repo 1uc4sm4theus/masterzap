@@ -386,6 +386,24 @@ export const OTHER_PROFILES = {
     }],
   },
 
+  'flavio-bolsonaro': {
+    sections: [{
+      title: 'Flávio Bolsonaro',
+      paragraphs: [
+        { text: 'Esta conversa foi adicionada a partir do conteúdo fornecido para o MasterWhats. Os horários originais não foram informados.' },
+      ],
+    }],
+  },
+
+  'nikolas-ferreira': {
+    sections: [{
+      title: 'Nikolas Ferreira',
+      paragraphs: [
+        { text: 'Esta conversa foi adicionada a partir do áudio fornecido para o MasterWhats. A data original da mensagem não foi informada.' },
+      ],
+    }],
+  },
+
   'dv-self': {
     about: 'Mensagens salvas',
     sections: [{

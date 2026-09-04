@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Nikolas Ferreira"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2025-11-17",
+      "end": "2025-11-17"
+    },
+    "total_messages": 1,
+    "source": "Conteúdo fornecido pelo usuário",
+    "note": "A data original da mensagem não foi informada; 2025-11-17 é uma data técnica provisória."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-11-17T00:00:00",
+      "date": "2025-11-17",
+      "time": "00:00:00",
+      "sender": "Nikolas Ferreira",
+      "content": "[áudio]",
+      "type": "audio",
+      "audio_src": "/assets/audio-nikolas-ferreira.mp3",
+      "is_edited": false,
+      "attachment": "audio-nikolas-ferreira.mp3",
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-11-17",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1
+      }
+    ]
+  }
+}

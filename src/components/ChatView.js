@@ -24,6 +24,7 @@ import { showContactsSheet, ICON_MESSAGE } from './ContactsSheet.js';
 let media = { conversations: [], avatarFor: () => null, selfAvatar: null, contactAvatar: null, contactName: '', onOpenChat: () => {}, onCopy: () => {}, container: null };
 
 const ICON_PLAY = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>`;
+const ICON_PAUSE = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>`;
 const MAP_PLACEHOLDER = '/assets/map-placeholder.jpg';
 const MAP_PIN = '/assets/map-pin.jpg';
 
@@ -136,13 +137,21 @@ function renderAudioMessage(msg, isOutgoing) {
   const el = document.createElement('div');
   el.className = 'chat-audio';
 
+  const audio = msg.audio_src ? new Audio(msg.audio_src) : null;
+  if (audio) {
+    audio.preload = 'metadata';
+    audio.className = 'chat-audio-native';
+    audio.setAttribute('aria-label', 'Mensagem de áudio');
+    el.appendChild(audio);
+  }
+
   const row = document.createElement('div');
   row.className = 'chat-audio-row';
 
   const play = document.createElement('button');
   play.className = 'chat-audio-play';
-  play.disabled = true;
-  play.setAttribute('aria-label', 'Áudio não disponível');
+  play.disabled = !audio;
+  play.setAttribute('aria-label', audio ? 'Reproduzir áudio' : 'Áudio não disponível');
   play.innerHTML = ICON_PLAY;
   row.appendChild(play);
 
@@ -152,9 +161,15 @@ function renderAudioMessage(msg, isOutgoing) {
     const bar = document.createElement('span');
     bar.className = 'chat-audio-bar';
     bar.style.height = `${4 + ((i * 7919) % 17)}px`;
+    bar.dataset.index = i;
     waveform.appendChild(bar);
   }
   row.appendChild(waveform);
+
+  const duration = document.createElement('span');
+  duration.className = 'chat-audio-duration';
+  duration.textContent = '--:--';
+  row.appendChild(duration);
 
   const who = avatarEl(isOutgoing ? media.selfAvatar : media.contactAvatar,
     isOutgoing ? 'Daniel Vorcaro' : media.contactName, 40, 'chat-audio-avatar');
@@ -169,6 +184,54 @@ function renderAudioMessage(msg, isOutgoing) {
   foot.className = 'chat-audio-foot';
   foot.textContent = 'Áudio não recuperado · transcrição da perícia';
   el.appendChild(foot);
+
+  const formatAudioTime = (seconds) => {
+    if (!Number.isFinite(seconds)) return '--:--';
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
+    return `${minutes}:${secs}`;
+  };
+
+  if (audio) {
+    const bars = [...waveform.children];
+    const updateProgress = () => {
+      const ratio = audio.duration ? audio.currentTime / audio.duration : 0;
+      bars.forEach((bar, index) => bar.classList.toggle('played', index / bars.length < ratio));
+      duration.textContent = formatAudioTime(audio.duration || audio.currentTime);
+    };
+    audio.addEventListener('loadedmetadata', updateProgress);
+    audio.addEventListener('timeupdate', updateProgress);
+    audio.addEventListener('ended', () => {
+      play.innerHTML = ICON_PLAY;
+      play.setAttribute('aria-label', 'Reproduzir áudio');
+      updateProgress();
+    });
+    audio.addEventListener('error', () => {
+      play.disabled = true;
+      play.setAttribute('aria-label', 'Áudio não disponível');
+    });
+    play.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play().then(() => {
+          play.innerHTML = ICON_PAUSE;
+          play.setAttribute('aria-label', 'Pausar áudio');
+        }).catch(() => {
+          play.disabled = true;
+          play.setAttribute('aria-label', 'Áudio não disponível');
+        });
+      } else {
+        audio.pause();
+        play.innerHTML = ICON_PLAY;
+        play.setAttribute('aria-label', 'Reproduzir áudio');
+      }
+    });
+    waveform.addEventListener('click', (event) => {
+      if (!audio.duration) return;
+      const rect = waveform.getBoundingClientRect();
+      audio.currentTime = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)) * audio.duration;
+      updateProgress();
+    });
+  }
 
   if (transcript) {
     const t = document.createElement('div');

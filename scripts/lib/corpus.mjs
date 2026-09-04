@@ -55,6 +55,16 @@ export function sourceOf(entry) {
       how: 'Transcrição manual das imagens do laudo; cada mensagem cita a página e a figura de origem.',
     };
   }
+  if (entry.source === 'Conteúdo fornecido pelo usuário') {
+    return {
+      kind: 'user-provided',
+      label: entry.source,
+      document: null,
+      document_sha256: null,
+      made_public: null,
+      how: 'Conteúdo fornecido diretamente para inclusão no projeto.',
+    };
+  }
   return {
     kind: 'leak',
     label: 'Vazamento das conversas com Martha Graeff, março de 2026',
