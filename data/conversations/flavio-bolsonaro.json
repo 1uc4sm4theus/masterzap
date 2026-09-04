@@ -7,14 +7,27 @@
     "saved_as": null,
     "phone": null,
     "date_range": {
-      "start": "2025-11-15",
+      "start": "2025-09-08",
       "end": "2025-11-16"
     },
-    "total_messages": 8,
+    "total_messages": 9,
     "source": "Conteúdo fornecido pelo usuário",
-    "note": "Os horários não foram informados no conteúdo recebido; a ordem das mensagens foi preservada com horários técnicos sequenciais à meia-noite."
+    "note": "A mensagem de áudio sobre o filme Dark Horse é datada de 08/09/2025. Os horários das demais mensagens não foram informados; a ordem foi preservada com horários técnicos sequenciais à meia-noite."
   },
   "messages": [
+    {
+      "id": 9,
+      "timestamp": "2025-09-08T00:00:00",
+      "date": "2025-09-08",
+      "time": "00:00:00",
+      "sender": "Flávio Bolsonaro",
+      "content": "[áudio]",
+      "type": "audio",
+      "audio_src": "/assets/audio-flavio-bolsonaro.mp3",
+      "is_edited": false,
+      "attachment": "audio-flavio-bolsonaro.mp3",
+      "urls": []
+    },
     {
       "id": 1,
       "timestamp": "2025-11-15T00:00:00",
@@ -117,6 +130,12 @@
   ],
   "index": {
     "dates": [
+      {
+        "date": "2025-09-08",
+        "message_count": 1,
+        "first_message_id": 9,
+        "last_message_id": 9
+      },
       {
         "date": "2025-11-15",
         "message_count": 2,
