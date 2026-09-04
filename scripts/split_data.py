@@ -141,7 +141,13 @@ def describe_report_document():
     sha = hashlib.sha256(path.read_bytes()).hexdigest()
     pages = REPORT_PAGES_FALLBACK
     try:
-        info = subprocess.run(["pdfinfo", str(path)], capture_output=True, text=True, timeout=30)
+        info = subprocess.run(
+            ["pdfinfo", str(path)],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            universal_newlines=True,
+            timeout=30,
+        )
         m = re.search(r"^Pages:\s+(\d+)", info.stdout, re.M)
         if m:
             pages = int(m.group(1))
