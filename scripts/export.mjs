@@ -179,7 +179,12 @@ function conversationJson(entry, messages) {
       note: entry.note || null,
     },
     profile: profileJson(getContactProfile(entry.id), entry.id),
-    messages: messages.map(m => ({ ...m, timestamp: `${m.timestamp}${UTC_OFFSET}` })),
+    messages: messages.map(m => ({
+      ...m,
+      timestamp: /[+-]\d{2}:\d{2}$/.test(m.timestamp)
+        ? m.timestamp
+        : `${m.timestamp}${UTC_OFFSET}`,
+    })),
   };
 }
 

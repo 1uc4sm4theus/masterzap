@@ -44,6 +44,12 @@
     background-color: var(--WDS-background-wash-plain);
   }
 
+  .sidebar-user-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   /* Main area hidden when no conversation is active */
   .main-area {
     display: none;

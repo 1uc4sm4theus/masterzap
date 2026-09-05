@@ -74,9 +74,10 @@ def load_extra_conversations():
 
 
 def get_conversation_id(metadata):
-    """Derive conversation ID from participants (excluding DV)."""
+    """Derive conversation ID from participants (excluding the owner)."""
     participants = metadata["participants"]
-    other = [p for p in participants if p != "DV"]
+    owner = metadata.get("owner", "DV")
+    other = [p for p in participants if p != owner]
     if other:
         return slugify(other[0])
     return slugify("-".join(participants))
@@ -256,12 +257,14 @@ def split_conversation(conv_id, data, index):
     type_counts = Counter(msg["type"] for msg in messages)
 
     last_msg = messages[-1] if messages else None
-    other = [p for p in metadata["participants"] if p != "DV"]
+    owner = metadata.get("owner", "DV")
+    other = [p for p in metadata["participants"] if p != owner]
     entry = {
         "id": conv_id,
         "participants": metadata["participants"],
-        # The other side, by name, so nobody has to know "the one that is not DV".
-        "contact": other[0] if other else metadata["participants"][0],
+        # The other side, by name, so consumers do not need to know the owner.
+        "contact": metadata.get("contact") or (other[0] if other else metadata["participants"][0]),
+        "owner": owner,
         "date_range": normalise_date_range(metadata["date_range"]),
         "total_messages": metadata["total_messages"],
         # Drives the "Mídias, links e documentos" count in the contact drawer.

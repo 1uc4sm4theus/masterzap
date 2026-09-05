@@ -75,7 +75,7 @@ export function sourceOf(entry) {
   };
 }
 
-export const contactOf = (entry) => entry.participants.find(p => p !== 'DV') || entry.participants[0];
+export const contactOf = (entry) => entry.contact || entry.participants.find(p => p !== (entry.owner || 'DV')) || entry.participants[0];
 
 /** The person, as opposed to the name the phone saved them under. */
 export const whoIs = (entry, profile) =>

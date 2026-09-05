@@ -37,7 +37,7 @@ const BACK_ICON = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" s
  * @param {Array} messages
  * @returns {HTMLElement}
  */
-function renderDaySection(date, messages) {
+function renderDaySection(date, messages, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro') {
   const section = document.createElement('section');
   section.className = 'chat-day';
   section.dataset.date = date;
@@ -50,7 +50,7 @@ function renderDaySection(date, messages) {
 
   // Messages
   for (const msg of messages) {
-    section.appendChild(renderMessage(msg));
+    section.appendChild(renderMessage(msg, outgoingSender, ownerName));
   }
 
   return section;
@@ -132,7 +132,7 @@ function avatarEl(src, name, size, className) {
  * with the transcript underneath. The audio itself is not in the material;
  * the play button says so by being disabled.
  */
-function renderAudioMessage(msg, isOutgoing) {
+function renderAudioMessage(msg, isOutgoing, ownerName = 'Daniel Vorcaro') {
   const { transcript } = parseAudio(msg.content);
   const el = document.createElement('div');
   el.className = 'chat-audio';
@@ -172,7 +172,7 @@ function renderAudioMessage(msg, isOutgoing) {
   row.appendChild(duration);
 
   const who = avatarEl(isOutgoing ? media.selfAvatar : media.contactAvatar,
-    isOutgoing ? 'Daniel Vorcaro' : media.contactName, 40, 'chat-audio-avatar');
+    isOutgoing ? ownerName : media.contactName, 40, 'chat-audio-avatar');
   const mic = document.createElement('span');
   mic.className = 'chat-audio-mic';
   mic.innerHTML = ICON_MIC;
@@ -469,8 +469,8 @@ function renderDeletedMessage() {
  * @param {object} msg
  * @returns {HTMLElement}
  */
-function renderMessage(msg) {
-  const isOutgoing = msg.sender === 'DV';
+function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro') {
+  const isOutgoing = msg.sender === outgoingSender;
   const isSystem = msg.type === 'system';
 
   const row = document.createElement('div');
@@ -499,7 +499,7 @@ function renderMessage(msg) {
       content.appendChild(renderMediaPlaceholder('video', msg));
       break;
     case 'audio':
-      content.appendChild(renderAudioMessage(msg, isOutgoing));
+      content.appendChild(renderAudioMessage(msg, isOutgoing, ownerName));
       break;
     case 'image_view_once':
       content.appendChild(renderMediaPlaceholder('image', msg));
@@ -583,7 +583,7 @@ function renderMessage(msg) {
  */
 // Use the design system meetball icon for 3-dot menu
 
-export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSearch, onCloseChat, onAbout, onScreenshot, onExport, onMenuOpen, media: mediaOptions }) {
+export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSearch, onCloseChat, onAbout, onScreenshot, onExport, onMenuOpen, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', media: mediaOptions }) {
   if (mediaOptions) media = { ...media, ...mediaOptions, container };
   // Clear container
   while (container.firstChild) container.removeChild(container.firstChild);
@@ -592,7 +592,7 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
   el.className = 'chat-view';
 
   // Header
-  const displayName = conversation.participants.find(p => p !== 'DV') || conversation.participants[0];
+  const displayName = conversation.contact || conversation.participants.find(p => p !== outgoingSender) || conversation.participants[0];
 
   const header = document.createElement('header');
   header.className = 'chat-header';
@@ -776,7 +776,7 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
     container: messagesArea,
     dateIndex,
     loadMessages,
-    renderDay: (date, messages) => renderDaySection(date, messages),
+    renderDay: (date, messages) => renderDaySection(date, messages, outgoingSender, ownerName),
   });
 
   return { element: el, loader };

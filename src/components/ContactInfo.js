@@ -35,7 +35,7 @@ export function showContactInfo(mainArea, conversation, { mediaCounts = {}, onCl
   const existing = mainArea.querySelector('.contact-info-drawer');
   if (existing) existing.remove();
 
-  const displayName = conversation.participants.find(p => p !== 'DV') || conversation.participants[0];
+  const displayName = conversation.contact || conversation.participants[0];
   const contactProfile = getContactProfile(conversation.id);
   const totalMedia = (mediaCounts.images || 0) + (mediaCounts.videos || 0) + (mediaCounts.documents || 0);
 

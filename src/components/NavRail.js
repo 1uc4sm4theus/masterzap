@@ -16,9 +16,12 @@ const ICON_SETTINGS = `<svg viewBox="0 0 24 24" width="24" height="24" fill="cur
  * @param {HTMLElement} container - the .app-container element
  * @param {object} [options]
  * @param {string} [options.avatarSrc] - user avatar image URL
+ * @param {string} [options.avatarName] - fallback name for generated avatar
  * @returns {HTMLElement}
  */
-export function renderNavRail(container, { avatarSrc, onSettings, onChat, onCalls } = {}) {
+import { defaultAvatarSvg } from '../lib/avatar.js';
+
+export function renderNavRail(container, { avatarSrc, avatarName = 'Perfil', onSettings, onChat, onCalls } = {}) {
   const rail = document.createElement('nav');
   rail.className = 'nav-rail';
   rail.setAttribute('aria-label', 'Navegação');
@@ -66,9 +69,11 @@ export function renderNavRail(container, { avatarSrc, onSettings, onChat, onCall
   if (avatarSrc) {
     const img = document.createElement('img');
     img.src = avatarSrc;
-    img.alt = 'Perfil';
+    img.alt = avatarName;
     img.className = 'nav-rail-avatar-img';
     avatar.appendChild(img);
+  } else {
+    avatar.innerHTML = defaultAvatarSvg(avatarName, 28);
   }
   bottomSection.appendChild(avatar);
 
@@ -82,6 +87,21 @@ export function renderNavRail(container, { avatarSrc, onSettings, onChat, onCall
       if (label === 'Conversas') btn.classList.toggle('active', which === 'chats');
       if (label === 'Chamadas') btn.classList.toggle('active', which === 'calls');
     }
+  };
+
+  rail.setAvatar = ({ src, name = 'Perfil' } = {}) => {
+    while (avatar.firstChild) avatar.removeChild(avatar.firstChild);
+    if (src) {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = name;
+      img.className = 'nav-rail-avatar-img';
+      avatar.appendChild(img);
+    } else {
+      avatar.innerHTML = defaultAvatarSvg(name, 28);
+    }
+    avatar.setAttribute('aria-label', name);
+    avatar.setAttribute('title', name);
   };
 
   container.insertBefore(rail, container.firstChild);

@@ -424,6 +424,12 @@ export const OTHER_PROFILES = {
 export const CONTACT_PROFILES = {
   'martha-graeff': MARTHA_PROFILE,
   'alexandre-de-moraes': MORAES_PROFILE,
+  'meyer-nigri': {
+    sections: [{
+      title: 'Meyer Nigri',
+      paragraphs: [{ text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Jair Bolsonaro e Meyer Nigri.' }],
+    }],
+  },
   ...OTHER_PROFILES,
 };
 
