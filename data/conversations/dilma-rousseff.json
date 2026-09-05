@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "owner": "Lula",
+    "participants": [
+      "Lula",
+      "Dilma Rousseff"
+    ],
+    "contact": "Dilma Rousseff",
+    "date_range": {
+      "start": "2016-03-04",
+      "end": "2016-03-16"
+    },
+    "total_messages": 20,
+    "source": "Conteúdo fornecido pelo usuário",
+    "note": "A transcrição é de 04/03/2016; o áudio fornecido foi datado de 16/03/2016. Os horários originais não foram informados."
+  },
+  "messages": [
+    { "id": 1, "timestamp": "2016-03-04T00:00:00", "date": "2016-03-04", "time": "00:00:00", "sender": "Lula", "content": "Não, não tem ninguém não...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 2, "timestamp": "2016-03-04T00:00:01", "date": "2016-03-04", "time": "00:00:01", "sender": "Dilma Rousseff", "content": "Alô, alô. Oi, Lula!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 3, "timestamp": "2016-03-04T00:00:02", "date": "2016-03-04", "time": "00:00:02", "sender": "Lula", "content": "Tudo bem?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 4, "timestamp": "2016-03-04T00:00:03", "date": "2016-03-04", "time": "00:00:03", "sender": "Dilma Rousseff", "content": "Não, não tô achando tudo bem não.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 5, "timestamp": "2016-03-04T00:00:04", "date": "2016-03-04", "time": "00:00:04", "sender": "Lula", "content": "Faz parte...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 6, "timestamp": "2016-03-04T00:00:05", "date": "2016-03-04", "time": "00:00:05", "sender": "Dilma Rousseff", "content": "Ah, faz parte? Então tá bom. E como é que você tá?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 7, "timestamp": "2016-03-04T00:00:06", "date": "2016-03-04", "time": "00:00:06", "sender": "Lula", "content": "Eu tô bem...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 8, "timestamp": "2016-03-04T00:00:07", "date": "2016-03-04", "time": "00:00:07", "sender": "system", "content": "[...]", "type": "system", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 9, "timestamp": "2016-03-04T00:00:08", "date": "2016-03-04", "time": "00:00:08", "sender": "Lula", "content": "Eu acho que o Moro quis fazer um espetáculo de pirotecnia.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 10, "timestamp": "2016-03-04T00:00:09", "date": "2016-03-04", "time": "00:00:09", "sender": "system", "content": "[...]", "type": "system", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 11, "timestamp": "2016-03-04T00:00:10", "date": "2016-03-04", "time": "00:00:10", "sender": "Lula", "content": "Foram na casa do Paulo Okamotto, foram na casa da Clara...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 12, "timestamp": "2016-03-04T00:00:11", "date": "2016-03-04", "time": "00:00:11", "sender": "system", "content": "[...]", "type": "system", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 13, "timestamp": "2016-03-04T00:00:12", "date": "2016-03-04", "time": "00:00:12", "sender": "Lula", "content": "Eu tô pensando em pegar todo o acervo, eu vou tomar a decisão, e levar, jogar na frente do Ministério Público.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 14, "timestamp": "2016-03-04T00:00:13", "date": "2016-03-04", "time": "00:00:13", "sender": "Dilma Rousseff", "content": "O acervo, de quê?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 15, "timestamp": "2016-03-04T00:00:14", "date": "2016-03-04", "time": "00:00:14", "sender": "Lula", "content": "Dilma, é um monte de container de tranqueira que eu ganhei quando eu tava na Presidência.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 16, "timestamp": "2016-03-04T00:00:15", "date": "2016-03-04", "time": "00:00:15", "sender": "Dilma Rousseff", "content": "Ah, dá pra eles! Eu vou fazer a mesma coisa com os meus, viu?!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 17, "timestamp": "2016-03-04T00:00:16", "date": "2016-03-04", "time": "00:00:16", "sender": "system", "content": "[...]", "type": "system", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 18, "timestamp": "2016-03-04T00:00:17", "date": "2016-03-04", "time": "00:00:17", "sender": "Dilma Rousseff", "content": "Segunda! Segunda! Segunda! Tá?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 19, "timestamp": "2016-03-04T00:00:18", "date": "2016-03-04", "time": "00:00:18", "sender": "Lula", "content": "Tá, depois eu acerto com o galego, pra mim pode ser.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 20, "timestamp": "2016-03-16T00:00:00", "date": "2016-03-16", "time": "00:00:00", "sender": "Lula", "content": "[áudio]", "type": "audio", "audio_src": "/assets/audio-lula-dilma.mp3", "is_edited": false, "attachment": "audio-lula-dilma.mp3", "urls": [] }
+  ],
+  "index": {
+    "dates": [
+      { "date": "2016-03-04", "message_count": 19, "first_message_id": 1, "last_message_id": 19 },
+      { "date": "2016-03-16", "message_count": 1, "first_message_id": 20, "last_message_id": 20 }
+    ]
+  }
+}

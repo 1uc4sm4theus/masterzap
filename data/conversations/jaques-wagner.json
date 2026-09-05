@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "owner": "Lula",
+    "participants": [
+      "Lula",
+      "Jaques Wagner"
+    ],
+    "contact": "Jaques Wagner",
+    "date_range": {
+      "start": "2016-02-26",
+      "end": "2016-03-04"
+    },
+    "total_messages": 51,
+    "source": "Conteúdo fornecido pelo usuário",
+    "note": "Os horários não informados foram preenchidos tecnicamente em sequência. A ligação de 27/02 foi registrada a partir das 16:43. O bloco sobre a Casa Civil não tem data informada e foi agrupado tecnicamente em 04/03/2016."
+  },
+  "messages": [
+    { "id": 1, "timestamp": "2016-02-26T00:00:00", "date": "2016-02-26", "time": "00:00:00", "sender": "Lula", "content": "Quero falar pessoalmente com você.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 2, "timestamp": "2016-02-26T00:00:01", "date": "2016-02-26", "time": "00:00:01", "sender": "Jaques Wagner", "content": "Você vai conseguir vir?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 3, "timestamp": "2016-02-26T00:00:02", "date": "2016-02-26", "time": "00:00:02", "sender": "Lula", "content": "Preciso conversar sobre uma pessoa em Brasília.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 4, "timestamp": "2016-02-26T00:00:03", "date": "2016-02-26", "time": "00:00:03", "sender": "Jaques Wagner", "content": "É ela? É aquilo que você tinha falado?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 5, "timestamp": "2016-02-26T00:00:04", "date": "2016-02-26", "time": "00:00:04", "sender": "Lula", "content": "Se eu não estiver preso, eu vou.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 6, "timestamp": "2016-02-26T00:00:05", "date": "2016-02-26", "time": "00:00:05", "sender": "Jaques Wagner", "content": "Ela marcou para segunda-feira à noite?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 7, "timestamp": "2016-02-26T00:00:06", "date": "2016-02-26", "time": "00:00:06", "sender": "Lula", "content": "É.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 8, "timestamp": "2016-02-26T00:00:07", "date": "2016-02-26", "time": "00:00:07", "sender": "Jaques Wagner", "content": "Vou verificar como está a agenda e falar com ela.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 9, "timestamp": "2016-02-27T16:43:00", "date": "2016-02-27", "time": "16:43:00", "sender": "Lula", "content": "Estou aqui com Paulo Teixeira e Cristiano.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 10, "timestamp": "2016-02-27T16:43:01", "date": "2016-02-27", "time": "16:43:01", "sender": "Lula", "content": "Eles precisam falar com você sobre um assunto urgente.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 11, "timestamp": "2016-02-27T16:43:02", "date": "2016-02-27", "time": "16:43:02", "sender": "Jaques Wagner", "content": "Estou na Bahia.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 12, "timestamp": "2016-02-27T16:43:03", "date": "2016-02-27", "time": "16:43:03", "sender": "Lula", "content": "Me passa o telefone do hotel.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 13, "timestamp": "2016-02-27T16:43:04", "date": "2016-02-27", "time": "16:43:04", "sender": "Jaques Wagner", "content": "Vou ver isso.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 14, "timestamp": "2016-02-29T00:00:00", "date": "2016-02-29", "time": "00:00:00", "sender": "Lula", "content": "A Dilma sabe que nós somos o Exército dela.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 15, "timestamp": "2016-02-29T00:00:01", "date": "2016-02-29", "time": "00:00:01", "sender": "Jaques Wagner", "content": "Sim.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 16, "timestamp": "2016-02-29T00:00:02", "date": "2016-02-29", "time": "00:00:02", "sender": "Lula", "content": "É como a mãe da gente: faz comida, a gente não gosta, mas come.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 17, "timestamp": "2016-02-29T00:00:03", "date": "2016-02-29", "time": "00:00:03", "sender": "Jaques Wagner", "content": "(risos)", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 18, "timestamp": "2016-02-29T00:00:04", "date": "2016-02-29", "time": "00:00:04", "sender": "Lula", "content": "O PMDB não pode embarcar nessa porra.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 19, "timestamp": "2016-02-29T00:00:05", "date": "2016-02-29", "time": "00:00:05", "sender": "Lula", "content": "Pode flexibilizar, mas tem que garantir que a decisão seja da Petrobras.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 20, "timestamp": "2016-02-29T00:00:06", "date": "2016-02-29", "time": "00:00:06", "sender": "Jaques Wagner", "content": "A orientação para a bancada é não dar o Serra.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 21, "timestamp": "2016-03-01T00:00:00", "date": "2016-03-01", "time": "00:00:00", "sender": "Lula", "content": "Estou pensando em não ir para Brasília.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 22, "timestamp": "2016-03-01T00:00:01", "date": "2016-03-01", "time": "00:00:01", "sender": "Jaques Wagner", "content": "Por quê?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 23, "timestamp": "2016-03-01T00:00:02", "date": "2016-03-01", "time": "00:00:02", "sender": "Lula", "content": "Por causa da saída do rapaz.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 24, "timestamp": "2016-03-01T00:00:03", "date": "2016-03-01", "time": "00:00:03", "sender": "Lula", "content": "Depois vão dizer que eu fui comemorar o bota-fora.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 25, "timestamp": "2016-03-01T00:00:04", "date": "2016-03-01", "time": "00:00:04", "sender": "Jaques Wagner", "content": "A Dilma também está preocupada com isso.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 26, "timestamp": "2016-03-01T00:00:05", "date": "2016-03-01", "time": "00:00:05", "sender": "Lula", "content": "Então é melhor eu não ir.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 27, "timestamp": "2016-03-04T00:00:00", "date": "2016-03-04", "time": "00:00:00", "sender": "Lula", "content": "Eu acho importante você falar com a Dilma.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 28, "timestamp": "2016-03-04T00:00:01", "date": "2016-03-04", "time": "00:00:01", "sender": "Lula", "content": "Eles quiseram antecipar o pedido que está na Suprema Corte, que está na mão da Rosa Weber.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 29, "timestamp": "2016-03-04T00:00:02", "date": "2016-03-04", "time": "00:00:02", "sender": "Jaques Wagner", "content": "Entendi.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 30, "timestamp": "2016-03-04T00:00:03", "date": "2016-03-04", "time": "00:00:03", "sender": "Lula", "content": "Eles ficaram com medo de ela decidir a nosso favor.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 31, "timestamp": "2016-03-04T00:00:04", "date": "2016-03-04", "time": "00:00:04", "sender": "Jaques Wagner", "content": "Estão querendo criar clima para o dia 13.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 32, "timestamp": "2016-03-04T00:00:05", "date": "2016-03-04", "time": "00:00:05", "sender": "Jaques Wagner", "content": "Estão batendo em você.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 33, "timestamp": "2016-03-04T00:00:06", "date": "2016-03-04", "time": "00:00:06", "sender": "Lula", "content": "Eu queria que você falasse com ela sobre o negócio da Rosa Weber.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 34, "timestamp": "2016-03-04T00:00:07", "date": "2016-03-04", "time": "00:00:07", "sender": "Jaques Wagner", "content": "Tá bom.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 35, "timestamp": "2016-03-04T00:00:08", "date": "2016-03-04", "time": "00:00:08", "sender": "Lula", "content": "Se homem não tem saco, quem sabe uma mulher corajosa possa fazer o que os homens não fizeram.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 36, "timestamp": "2016-03-04T00:00:09", "date": "2016-03-04", "time": "00:00:09", "sender": "Jaques Wagner", "content": "Falou! Combinado!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 37, "timestamp": "2016-03-04T00:00:10", "date": "2016-03-04", "time": "00:00:10", "sender": "Jaques Wagner", "content": "Um abraço na Marisa e nos meninos.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 38, "timestamp": "2016-03-04T00:00:11", "date": "2016-03-04", "time": "00:00:11", "sender": "Lula", "content": "Abraço, querido.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 39, "timestamp": "2016-03-04T00:01:00", "date": "2016-03-04", "time": "00:01:00", "sender": "Lula", "content": "Você viu que eu já tirei você da Casa Civil?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 40, "timestamp": "2016-03-04T00:01:01", "date": "2016-03-04", "time": "00:01:01", "sender": "Jaques Wagner", "content": "Beleza! Eu vou ser segundo lá na Casa Civil, não tem nenhum problema.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 41, "timestamp": "2016-03-04T00:01:02", "date": "2016-03-04", "time": "00:01:02", "sender": "Lula", "content": "Estou pensando em ir para Brasília amanhã.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 42, "timestamp": "2016-03-04T00:01:03", "date": "2016-03-04", "time": "00:01:03", "sender": "Jaques Wagner", "content": "Claro.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 43, "timestamp": "2016-03-04T00:01:04", "date": "2016-03-04", "time": "00:01:04", "sender": "Lula", "content": "Tenho recebido muito pedido para aceitar.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 44, "timestamp": "2016-03-04T00:01:05", "date": "2016-03-04", "time": "00:01:05", "sender": "Jaques Wagner", "content": "Meu cargo está à sua disposição.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 45, "timestamp": "2016-03-04T00:01:06", "date": "2016-03-04", "time": "00:01:06", "sender": "Jaques Wagner", "content": "Posso até ser seu carregador de documento.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 46, "timestamp": "2016-03-04T00:01:07", "date": "2016-03-04", "time": "00:01:07", "sender": "Lula", "content": "Eu serei seu ajudante.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 47, "timestamp": "2016-03-04T00:01:08", "date": "2016-03-04", "time": "00:01:08", "sender": "Jaques Wagner", "content": "Vou ser seu AJO.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 48, "timestamp": "2016-03-04T00:01:09", "date": "2016-03-04", "time": "00:01:09", "sender": "Lula", "content": "Eu serei seu adjunto.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 49, "timestamp": "2016-03-04T00:01:10", "date": "2016-03-04", "time": "00:01:10", "sender": "Jaques Wagner", "content": "(risos)", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 50, "timestamp": "2016-03-04T00:01:11", "date": "2016-03-04", "time": "00:01:11", "sender": "Lula", "content": "Abraço, querido.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 51, "timestamp": "2016-03-04T00:01:12", "date": "2016-03-04", "time": "00:01:12", "sender": "Jaques Wagner", "content": "Falou! Abraço, tchau.", "type": "text", "is_edited": false, "attachment": null, "urls": [] }
+  ],
+  "index": {
+    "dates": [
+      { "date": "2016-02-26", "message_count": 8, "first_message_id": 1, "last_message_id": 8 },
+      { "date": "2016-02-27", "message_count": 5, "first_message_id": 9, "last_message_id": 13 },
+      { "date": "2016-02-29", "message_count": 7, "first_message_id": 14, "last_message_id": 20 },
+      { "date": "2016-03-01", "message_count": 6, "first_message_id": 21, "last_message_id": 26 },
+      { "date": "2016-03-04", "message_count": 25, "first_message_id": 27, "last_message_id": 51 }
+    ]
+  }
+}

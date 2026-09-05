@@ -10,7 +10,15 @@ export const APP_USERS = [
     id: 'jair-bolsonaro',
     name: 'Jair Bolsonaro',
     owner: 'Jair Bolsonaro',
-    conversationIds: ['meyer-nigri'],
+    avatar: '/assets/avatar-jair-bolsonaro.webp',
+    conversationIds: ['meyer-nigri', 'jair-bolsonaro', 'silas-malafaia', 'eduardo-bolsonaro'],
+  },
+  {
+    id: 'lula',
+    name: 'Lula',
+    owner: 'Lula',
+    avatar: '/assets/avatar-lula.webp',
+    conversationIds: ['dilma-rousseff', 'jaques-wagner', 'lindbergh-farias', 'roberto-teixeira', 'lurian-lula-da-silva'],
   },
 ];
 
