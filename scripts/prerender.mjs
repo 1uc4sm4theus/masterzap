@@ -174,7 +174,9 @@ function messagesHtml(messages) {
       out.push(`<h3>${longDate(day)}</h3>`);
     }
     const cite = msg.source_page ? ` <small>(laudo p. ${msg.source_page}${msg.source_figure ? `, fig. ${msg.source_figure}` : ''})</small>` : '';
-    out.push(`<p id="msg-${msg.id}"><time datetime="${msg.timestamp}${UTC_OFFSET}">${msg.time.slice(0, 5)}</time> <b>${escapeHtml(msg.sender)}</b>: ${escapeHtml(messageText(msg))}${cite}</p>`);
+    const timeLabel = msg.time ? msg.time.slice(0, 5) : '--:--';
+    const datetimeAttr = msg.timestamp ? ` datetime="${msg.timestamp}${UTC_OFFSET}"` : '';
+    out.push(`<p id="msg-${msg.id}"><time${datetimeAttr}>${timeLabel}</time> <b>${escapeHtml(msg.sender)}</b>: ${escapeHtml(messageText(msg))}${cite}</p>`);
   }
   return out;
 }
