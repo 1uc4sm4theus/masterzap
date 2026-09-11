@@ -52,26 +52,26 @@ export function sourceOf(entry) {
       document_sha256: doc.sha256 || null,
       document_pages: doc.pages || null,
       made_public: '2026-09-01',
-      how: 'Transcrição manual das imagens do laudo; cada mensagem cita a página e a figura de origem.',
+      how: 'TranscriÃ§Ã£o manual das imagens do laudo; cada mensagem cita a pÃ¡gina e a figura de origem.',
     };
   }
-  if (entry.source === 'Conteúdo fornecido pelo usuário') {
+  if (entry.source === 'ConteÃºdo fornecido pelo usuÃ¡rio') {
     return {
       kind: 'user-provided',
       label: entry.source,
       document: null,
       document_sha256: null,
       made_public: null,
-      how: 'Conteúdo fornecido diretamente para inclusão no projeto.',
+      how: 'ConteÃºdo fornecido diretamente para inclusÃ£o no projeto.',
     };
   }
   return {
     kind: 'leak',
-    label: 'Vazamento das conversas com Martha Graeff, março de 2026',
+    label: 'Vazamento das conversas com Martha Graeff, marÃ§o de 2026',
     document: null,
     document_sha256: null,
     made_public: '2026-03',
-    how: 'Export de WhatsApp extraído do celular apreendido, vazado para a imprensa.',
+    how: 'Export de WhatsApp extraÃ­do do celular apreendido, vazado para a imprensa.',
   };
 }
 
@@ -87,7 +87,7 @@ export const escapeHtml = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
-// ── highlights that point at a message ─────────────────────────────────────
+// â”€â”€ highlights that point at a message â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 /** The app's search normalisation (src/lib/search.js), mirrored. */
 export const normalize = (str) => str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -97,8 +97,8 @@ export const normalize = (str) => str.toLowerCase().normalize('NFD').replace(/[\
  *
  * In the app a highlight is a search: tap it and the conversation scrolls to
  * the first message that matches. Outside the app that search has nobody to
- * run it, so it is run here, once, at build time, and the result — the
- * message, its date, its page in the report — travels with the quote.
+ * run it, so it is run here, once, at build time, and the result â€” the
+ * message, its date, its page in the report â€” travels with the quote.
  *
  * A term that matches nothing is a broken highlight, and the build fails on
  * it: profile-content.js already promises that every term appears in its
@@ -128,7 +128,7 @@ export function createResolver(entries) {
 /**
  * Every message that names a person, by conversation.
  *
- * @returns {Map<string, object[]>} conversation id → messages, in order; only
+ * @returns {Map<string, object[]>} conversation id â†’ messages, in order; only
  *   conversations with at least one mention
  */
 export function mentionsOf(person, entries, messagesOf) {
@@ -144,7 +144,7 @@ export function mentionsOf(person, entries, messagesOf) {
       const text = normalize(m.content || '');
       const rule = rules.find(r => (!r.only || r.only.has(entry.id)) && r.re.test(text) && !(r.unless && r.unless.test(text)));
       // Each hit remembers the alias that found it, so a page can say
-      // "8 by «gonet», 5 by «paulo»" instead of one inferred total.
+      // "8 by Â«gonetÂ», 5 by Â«pauloÂ»" instead of one inferred total.
       if (rule) hits.push({ msg: m, alias: person.aliases[rules.indexOf(rule)].match });
     }
     if (hits.length) found.set(entry.id, hits);
@@ -154,11 +154,12 @@ export function mentionsOf(person, entries, messagesOf) {
 
 const brDate = (iso) => `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}`;
 
-/** "15/11/2025 18:22 · laudo p. 109, fig. 108" — what a quote needs to be checked. */
+/** "15/11/2025 18:22 Â· laudo p. 109, fig. 108" â€” what a quote needs to be checked. */
 export function citationOf(msg) {
-  const parts = [`${brDate(msg.date)} ${msg.time.slice(0, 5)}`];
+  const time = msg.time ? ` ${msg.time.slice(0, 5)}` : '';
+  const parts = [`${brDate(msg.date)}${time}`];
   if (msg.source_page) parts.push(`laudo p. ${msg.source_page}${msg.source_figure ? `, fig. ${msg.source_figure}` : ''}`);
-  return parts.join(' · ');
+  return parts.join(' Â· ');
 }
 
 /**
@@ -187,7 +188,7 @@ export const messageUrl = (conversationId, msg) => `${SITE}/#/chat/${conversatio
 /**
  * Parse one of the site's links into what it points at.
  *
- * `context` is the conversation an `action:search:` without an `@` means —
+ * `context` is the conversation an `action:search:` without an `@` means â€”
  * the one open in the app when the profile is shown.
  */
 function targetOf(url, { resolve, context } = {}) {
@@ -228,7 +229,7 @@ export function renderLinks(text, opts = {}) {
   const link = (label, href) => (mode === 'md' ? `[${label}](${href})`
     : mode === 'html' ? `<a href="${escapeHtml(href)}"${href.startsWith('http') ? ' rel="noopener"' : ''}>${escapeHtml(label)}</a>`
     : label);
-  const cite = (msg) => (mode === 'html' ? ` <small>⟨${escapeHtml(citationOf(msg))}⟩</small>` : ` ⟨${citationOf(msg)}⟩`);
+  const cite = (msg) => (mode === 'html' ? ` <small>âŸ¨${escapeHtml(citationOf(msg))}âŸ©</small>` : ` âŸ¨${citationOf(msg)}âŸ©`);
 
   let out = '';
   let last = 0;
@@ -270,7 +271,7 @@ export const phonePretty = (p) => (p && /^55\d{10,11}$/.test(p)
   : p || null);
 
 export const MEDIA = {
-  image: 'Foto', video: 'Vídeo', audio: 'Áudio', sticker: 'Sticker',
+  image: 'Foto', video: 'VÃ­deo', audio: 'Ãudio', sticker: 'Sticker',
   document: 'Documento', call: 'Chamada', deleted: 'Mensagem apagada', system: 'Sistema',
 };
 

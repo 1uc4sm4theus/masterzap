@@ -13,9 +13,9 @@
  *                                     too big to show whole (Martha's 65k)
  *   dist/quem/<slug>/index.html       every mention of a person, by
  *                                     conversation, dated, pointing at the
- *                                     message — and dist/quem/ listing them
- *   dist/llms-full.txt                the site's text — about, profiles,
- *                                     highlights, people — with a pointer to
+ *                                     message â€” and dist/quem/ listing them
+ *   dist/llms-full.txt                the site's text â€” about, profiles,
+ *                                     highlights, people â€” with a pointer to
  *                                     each conversation's Markdown
  *   dist/sitemap.xml                  all of the above
  *
@@ -40,7 +40,7 @@ import {
 const DIST = join(ROOT, 'dist');
 const templatePath = join(DIST, 'index.html');
 if (!existsSync(templatePath)) {
-  console.error('dist/index.html not found — run `vite build` first');
+  console.error('dist/index.html not found â€” run `vite build` first');
   process.exit(1);
 }
 const template = readFileSync(templatePath, 'utf-8');
@@ -52,7 +52,7 @@ const byId = new Map(entries.map(e => [e.id, e]));
 const monthFmt = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric' });
 const longMonth = (ym) => monthFmt.format(new Date(`${ym}-15T12:00:00`));
 
-/** 'YYYY-MM' → messages of that month, in order. */
+/** 'YYYY-MM' â†’ messages of that month, in order. */
 function monthsOf(messages) {
   const months = new Map();
   for (const msg of messages) {
@@ -70,8 +70,8 @@ const pathOf = (conversationId, msg) => locate(conversationId, msg)?.replace(/#.
 function reportDoc(source) {
   const doc = {
     '@type': 'DigitalDocument',
-    name: 'IPJ-A nº 3298613/2026 — Polícia Federal',
-    description: 'Informação de Polícia Judiciária de Análise sobre o iPhone apreendido de Daniel Vorcaro; sigilo levantado em 1º de setembro de 2026.',
+    name: 'IPJ-A nÂº 3298613/2026 â€” PolÃ­cia Federal',
+    description: 'InformaÃ§Ã£o de PolÃ­cia JudiciÃ¡ria de AnÃ¡lise sobre o iPhone apreendido de Daniel Vorcaro; sigilo levantado em 1Âº de setembro de 2026.',
     datePublished: '2026-08-27',
   };
   if (source.document_pages) doc.numberOfPages = source.document_pages;
@@ -82,7 +82,7 @@ function reportDoc(source) {
   return doc;
 }
 
-// ── page skeleton ──────────────────────────────────────────────────────────
+// â”€â”€ page skeleton â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 /**
  * The built app page, retitled and with an article in it.
@@ -126,7 +126,7 @@ function appPage({ title, description, path, jsonLd, chat, hash, article, extraH
   return html;
 }
 
-// ── conversation pages ─────────────────────────────────────────────────────
+// â”€â”€ conversation pages â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 /** A description a search result can show, from the profile when there is one. */
 function describe(entry, profile, who) {
@@ -135,7 +135,7 @@ function describe(entry, profile, who) {
   if (!first) return fallback;
   const text = linksToText(first).replace(/\s+/g, ' ').trim();
   if (text.length <= 155) return text;
-  return `${text.slice(0, 155).replace(/\s+\S*$/, '')}…`;
+  return `${text.slice(0, 155).replace(/\s+\S*$/, '')}â€¦`;
 }
 
 function conversationLd(entry, who, description, { path, month, first, last, parent } = {}) {
@@ -145,7 +145,7 @@ function conversationLd(entry, who, description, { path, month, first, last, par
     '@context': 'https://schema.org',
     '@type': 'Conversation',
     '@id': url,
-    name: month ? `Daniel Vorcaro ↔ ${who} — ${longMonth(month)}` : `Daniel Vorcaro ↔ ${who}`,
+    name: month ? `Daniel Vorcaro â†” ${who} â€” ${longMonth(month)}` : `Daniel Vorcaro â†” ${who}`,
     url,
     inLanguage: 'pt-BR',
     description,
@@ -183,15 +183,15 @@ function messagesHtml(messages) {
 
 function provenanceHtml(entry) {
   const source = sourceOf(entry);
-  const out = ['<h2>Proveniência</h2><dl>'];
+  const out = ['<h2>ProveniÃªncia</h2><dl>'];
   out.push(`<dt>Fonte</dt><dd>${escapeHtml(source.label)}</dd>`);
-  if (source.document) out.push(`<dt>Documento</dt><dd>${source.document_url ? `<a href="${escapeHtml(source.document_url)}" rel="noopener">${escapeHtml(source.document)}</a>` : escapeHtml(source.document)}${source.document_pages ? `, ${source.document_pages} páginas` : ''} (no repositório; o site não serve o PDF)</dd>`);
+  if (source.document) out.push(`<dt>Documento</dt><dd>${source.document_url ? `<a href="${escapeHtml(source.document_url)}" rel="noopener">${escapeHtml(source.document)}</a>` : escapeHtml(source.document)}${source.document_pages ? `, ${source.document_pages} pÃ¡ginas` : ''} (no repositÃ³rio; o site nÃ£o serve o PDF)</dd>`);
   if (source.document_sha256) out.push(`<dt>sha256 do documento</dt><dd><code>${source.document_sha256}</code></dd>`);
-  out.push(`<dt>Como chegou ao público</dt><dd>${escapeHtml(source.how)}</dd>`);
+  out.push(`<dt>Como chegou ao pÃºblico</dt><dd>${escapeHtml(source.how)}</dd>`);
   if (entry.saved_as) out.push(`<dt>Contato salvo como</dt><dd>${escapeHtml(entry.saved_as)}</dd>`);
   if (entry.phone) out.push(`<dt>Telefone</dt><dd>${escapeHtml(phonePretty(entry.phone))}</dd>`);
-  out.push(`<dt>Fuso dos horários</dt><dd>${TIMEZONE} (UTC${UTC_OFFSET})</dd>`);
-  if (entry.note) out.push(`<dt>Observação</dt><dd>${escapeHtml(entry.note)}</dd>`);
+  out.push(`<dt>Fuso dos horÃ¡rios</dt><dd>${TIMEZONE} (UTC${UTC_OFFSET})</dd>`);
+  if (entry.note) out.push(`<dt>ObservaÃ§Ã£o</dt><dd>${escapeHtml(entry.note)}</dd>`);
   out.push('</dl>');
   return out;
 }
@@ -200,7 +200,7 @@ function profileHtml(profile, who, entry, fromPath) {
   const out = [];
   const urls = [];
   if (!profile) return { html: out, urls };
-  out.push(`<h2>Quem é ${escapeHtml(who)}</h2>`);
+  out.push(`<h2>Quem Ã© ${escapeHtml(who)}</h2>`);
   for (const section of profile.sections || []) {
     if (section.title && section.title !== who && section.title !== `Sobre ${who}`) {
       out.push(`<h3>${escapeHtml(section.title)}</h3>`);
@@ -227,19 +227,19 @@ function conversationPage(entry, messages, profile, who) {
   const out = [];
 
   out.push(`<article id="prerender">`);
-  out.push(`<h1>Daniel Vorcaro ↔ ${escapeHtml(who)}</h1>`);
+  out.push(`<h1>Daniel Vorcaro â†” ${escapeHtml(who)}</h1>`);
   out.push(`<p>${entry.total_messages} mensagens, de ${entry.date_range.start} a ${entry.date_range.end}. `
-    + `<a href="/#/chat/${entry.id}">Abrir no MasterWhats</a> · `
-    + `<a href="/export/masterwhats-${entry.id}.md">Markdown completo</a> · `
+    + `<a href="/#/chat/${entry.id}">Abrir no MasterWhats</a> Â· `
+    + `<a href="/export/masterwhats-${entry.id}.md">Markdown completo</a> Â· `
     + `<a href="/export/masterwhats-${entry.id}.json">JSON</a></p>`);
   out.push(...provenanceHtml(entry));
   const { html: profileBlock, urls } = profileHtml(profile, who, entry, path);
   out.push(...profileBlock);
 
   if (paged) {
-    out.push(`<h2>Meses</h2><p>A conversa inteira, um mês por página:</p><ul>`);
+    out.push(`<h2>Meses</h2><p>A conversa inteira, um mÃªs por pÃ¡gina:</p><ul>`);
     for (const [ym, msgs] of months) {
-      out.push(`<li><a href="${path}/${ym}">${longMonth(ym)}</a> — ${msgs.length} mensagens</li>`);
+      out.push(`<li><a href="${path}/${ym}">${longMonth(ym)}</a> â€” ${msgs.length} mensagens</li>`);
     }
     out.push('</ul>');
   }
@@ -247,14 +247,14 @@ function conversationPage(entry, messages, profile, who) {
   out.push(`<h2>Conversa${paged ? ` (primeiras ${shown.length} mensagens)` : ''}</h2>`);
   out.push(...messagesHtml(shown));
   if (paged) {
-    out.push(`<p>As outras ${messages.length - shown.length} mensagens estão nas páginas por mês acima, no <a href="/export/masterwhats-${entry.id}.md">Markdown completo</a> e <a href="/#/chat/${entry.id}">no app</a>.</p>`);
+    out.push(`<p>As outras ${messages.length - shown.length} mensagens estÃ£o nas pÃ¡ginas por mÃªs acima, no <a href="/export/masterwhats-${entry.id}.md">Markdown completo</a> e <a href="/#/chat/${entry.id}">no app</a>.</p>`);
   }
   out.push(...sourcesHtml(urls));
   out.push('</article>');
 
   const description = describe(entry, profile, who);
   return appPage({
-    title: `Daniel Vorcaro ↔ ${who} — MasterWhats`,
+    title: `Daniel Vorcaro â†” ${who} â€” MasterWhats`,
     description,
     path,
     jsonLd: conversationLd(entry, who, description, { path, first: entry.date_range.start, last: entry.date_range.end }),
@@ -269,13 +269,13 @@ function monthPage(entry, who, ym, msgs, prevYm, nextYm) {
   const parent = `/chat/${entry.id}`;
   const out = [];
   out.push(`<article id="prerender">`);
-  out.push(`<h1>Daniel Vorcaro ↔ ${escapeHtml(who)} — ${longMonth(ym)}</h1>`);
+  out.push(`<h1>Daniel Vorcaro â†” ${escapeHtml(who)} â€” ${longMonth(ym)}</h1>`);
   out.push(`<p>${msgs.length} mensagens em ${longMonth(ym)}, de ${msgs[0].date} a ${msgs.at(-1).date}. `
-    + `<a href="${parent}">A conversa</a> · `
-    + (prevYm ? `<a href="${parent}/${prevYm}" rel="prev">${longMonth(prevYm)}</a> · ` : '')
-    + (nextYm ? `<a href="${parent}/${nextYm}" rel="next">${longMonth(nextYm)}</a> · ` : '')
-    + `<a href="/#/chat/${entry.id}/msg/${msgs[0].id}">Abrir no MasterWhats</a> · `
-    + `<a href="/export/masterwhats-${entry.id}-${ym}.md">Markdown deste mês</a> · `
+    + `<a href="${parent}">A conversa</a> Â· `
+    + (prevYm ? `<a href="${parent}/${prevYm}" rel="prev">${longMonth(prevYm)}</a> Â· ` : '')
+    + (nextYm ? `<a href="${parent}/${nextYm}" rel="next">${longMonth(nextYm)}</a> Â· ` : '')
+    + `<a href="/#/chat/${entry.id}/msg/${msgs[0].id}">Abrir no MasterWhats</a> Â· `
+    + `<a href="/export/masterwhats-${entry.id}-${ym}.md">Markdown deste mÃªs</a> Â· `
     + `<a href="/export/masterwhats-${entry.id}.md">Markdown completo</a></p>`);
   out.push(...messagesHtml(msgs));
   out.push('</article>');
@@ -284,7 +284,7 @@ function monthPage(entry, who, ym, msgs, prevYm, nextYm) {
   const links = (prevYm ? `<link rel="prev" href="${SITE}${parent}/${prevYm}">\n` : '')
     + (nextYm ? `<link rel="next" href="${SITE}${parent}/${nextYm}">\n` : '');
   return appPage({
-    title: `Daniel Vorcaro ↔ ${who} — ${longMonth(ym)} — MasterWhats`,
+    title: `Daniel Vorcaro â†” ${who} â€” ${longMonth(ym)} â€” MasterWhats`,
     description,
     path,
     jsonLd: conversationLd(entry, who, description, { path, month: ym, first: msgs[0].date, last: msgs.at(-1).date, parent }),
@@ -295,7 +295,7 @@ function monthPage(entry, who, ym, msgs, prevYm, nextYm) {
   });
 }
 
-// ── people ─────────────────────────────────────────────────────────────────
+// â”€â”€ people â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 /** A page of its own: the app has no route for it, so it does not boot the app. */
 function standalone({ title, description, path, jsonLd, body }) {
@@ -336,7 +336,7 @@ ${JSON.stringify(jsonLd, null, 2)}
 </head>
 <body>
 <main>
-<header><a href="/">MasterWhats</a> · <a href="/quem">Pessoas citadas</a></header>
+<header><a href="/">MasterWhats</a> Â· <a href="/quem">Pessoas citadas</a></header>
 ${body}
 </main>
 </body>
@@ -346,10 +346,11 @@ ${body}
 
 function mentionHtml(conversationId, msg, alias, primary) {
   const cite = msg.source_page ? ` <small>(laudo p. ${msg.source_page}${msg.source_figure ? `, fig. ${msg.source_figure}` : ''})</small>` : '';
+  const datetime = msg.timestamp || msg.date;
   return `<div class="msg" id="m-${conversationId}-${msg.id}">`
-    + `<time datetime="${msg.timestamp}${UTC_OFFSET}">${citationOf(msg).split(' · ')[0]}</time> · <b>${escapeHtml(msg.sender)}</b>${cite}${alias !== primary ? ` <small>· por «${escapeHtml(alias)}»</small>` : ''}<br>`
+    + `<time datetime="${datetime ? `${datetime}${msg.timestamp ? UTC_OFFSET : ''}` : ''}">${citationOf(msg).split(' Â· ')[0]}</time> Â· <b>${escapeHtml(msg.sender)}</b>${cite}${alias !== primary ? ` <small>Â· por Â«${escapeHtml(alias)}Â»</small>` : ''}<br>`
     + `${escapeHtml(messageText(msg))}<br>`
-    + `<span class="links"><a href="${locate(conversationId, msg)}">ver na conversa</a> · <a href="${messageUrl(conversationId, msg)}">no app</a> · msg ${msg.id}</span>`
+    + `<span class="links"><a href="${locate(conversationId, msg)}">ver na conversa</a> Â· <a href="${messageUrl(conversationId, msg)}">no app</a> Â· msg ${msg.id}</span>`
     + `</div>`;
 }
 
@@ -361,16 +362,16 @@ function personPage(person, mentions) {
   const byAlias = new Map();
   for (const hits of mentions.values()) for (const { alias } of hits) byAlias.set(alias, (byAlias.get(alias) || 0) + 1);
   // In the order the aliases are declared: the name first, the nicknames after.
-  const breakdown = person.aliases.filter(a => byAlias.has(a.match)).map(a => `${byAlias.get(a.match)} por «${a.match}»`).join(', ');
-  const description = `${person.name}, ${person.role}: ${total} menções em ${convs.length} conversa${convs.length === 1 ? '' : 's'} dos celulares de Daniel Vorcaro — ${convs.map(contactOf).join(', ')}.`;
+  const breakdown = person.aliases.filter(a => byAlias.has(a.match)).map(a => `${byAlias.get(a.match)} por Â«${a.match}Â»`).join(', ');
+  const description = `${person.name}, ${person.role}: ${total} menÃ§Ãµes em ${convs.length} conversa${convs.length === 1 ? '' : 's'} dos celulares de Daniel Vorcaro â€” ${convs.map(contactOf).join(', ')}.`;
   const body = [];
   body.push(`<h1>${escapeHtml(person.name)}</h1>`);
-  body.push(`<p class="role">${escapeHtml(person.role)}${person.profile ? ` · <a href="/chat/${person.profile}">perfil e conversa com Vorcaro</a>` : ''}</p>`);
-  body.push(`<p>${total} menções em ${convs.length} conversa${convs.length === 1 ? '' : 's'} — ${breakdown}. Cada uma linka a mensagem na conversa e no app; as do relatório da PF citam página e figura do laudo.</p>`);
-  body.push(`<p class="how">Como as mensagens se referem a essa pessoa: ${person.aliases.map(a => `<code>${escapeHtml(a.match)}</code>${a.only ? ` (só em ${a.only.map(id => contactOf(byId.get(id))).join(', ')})` : ''}`).join(', ')}. Uma menção achada por um apelido que não é o nome vem marcada.</p>`);
+  body.push(`<p class="role">${escapeHtml(person.role)}${person.profile ? ` Â· <a href="/chat/${person.profile}">perfil e conversa com Vorcaro</a>` : ''}</p>`);
+  body.push(`<p>${total} menÃ§Ãµes em ${convs.length} conversa${convs.length === 1 ? '' : 's'} â€” ${breakdown}. Cada uma linka a mensagem na conversa e no app; as do relatÃ³rio da PF citam pÃ¡gina e figura do laudo.</p>`);
+  body.push(`<p class="how">Como as mensagens se referem a essa pessoa: ${person.aliases.map(a => `<code>${escapeHtml(a.match)}</code>${a.only ? ` (sÃ³ em ${a.only.map(id => contactOf(byId.get(id))).join(', ')})` : ''}`).join(', ')}. Uma menÃ§Ã£o achada por um apelido que nÃ£o Ã© o nome vem marcada.</p>`);
   for (const [id, hits] of mentions) {
     const entry = byId.get(id);
-    body.push(`<h2><a href="/chat/${id}">Daniel Vorcaro ↔ ${escapeHtml(contactOf(entry))}</a> — ${hits.length} men${hits.length === 1 ? 'ção' : 'ções'}</h2>`);
+    body.push(`<h2><a href="/chat/${id}">Daniel Vorcaro â†” ${escapeHtml(contactOf(entry))}</a> â€” ${hits.length} men${hits.length === 1 ? 'Ã§Ã£o' : 'Ã§Ãµes'}</h2>`);
     for (const { msg, alias } of hits) body.push(mentionHtml(id, msg, alias, primary));
   }
   const jsonLd = {
@@ -385,24 +386,24 @@ function personPage(person, mentions) {
     isPartOf: { '@id': `${SITE}/#dataset` },
     dateModified: today,
   };
-  return standalone({ title: `${person.name} nas conversas de Daniel Vorcaro — MasterWhats`, description, path, jsonLd, body: body.join('\n') });
+  return standalone({ title: `${person.name} nas conversas de Daniel Vorcaro â€” MasterWhats`, description, path, jsonLd, body: body.join('\n') });
 }
 
 function peopleIndex(people) {
-  const body = ['<h1>Pessoas citadas</h1>', '<p>Quem aparece nas conversas de Daniel Vorcaro, com toda menção datada e apontando para a mensagem.</p>', '<ul class="people">'];
+  const body = ['<h1>Pessoas citadas</h1>', '<p>Quem aparece nas conversas de Daniel Vorcaro, com toda menÃ§Ã£o datada e apontando para a mensagem.</p>', '<ul class="people">'];
   for (const { person, mentions } of people) {
     const total = [...mentions.values()].reduce((n, v) => n + v.length, 0);
-    body.push(`<li><a href="/quem/${person.slug}">${escapeHtml(person.name)}</a> — ${escapeHtml(person.role)} · ${total} menções em ${mentions.size} conversa${mentions.size === 1 ? '' : 's'}</li>`);
+    body.push(`<li><a href="/quem/${person.slug}">${escapeHtml(person.name)}</a> â€” ${escapeHtml(person.role)} Â· ${total} menÃ§Ãµes em ${mentions.size} conversa${mentions.size === 1 ? '' : 's'}</li>`);
   }
   body.push('</ul>');
   const jsonLd = {
     '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': `${SITE}/quem`, url: `${SITE}/quem`,
     name: 'Pessoas citadas nas conversas de Daniel Vorcaro', inLanguage: 'pt-BR', isPartOf: { '@id': `${SITE}/#dataset` }, dateModified: today,
   };
-  return standalone({ title: 'Pessoas citadas — MasterWhats', description: 'Quem aparece nas conversas de Daniel Vorcaro, com toda menção datada e apontando para a mensagem.', path: '/quem', jsonLd, body: body.join('\n') });
+  return standalone({ title: 'Pessoas citadas â€” MasterWhats', description: 'Quem aparece nas conversas de Daniel Vorcaro, com toda menÃ§Ã£o datada e apontando para a mensagem.', path: '/quem', jsonLd, body: body.join('\n') });
 }
 
-// ── llms-full.txt ──────────────────────────────────────────────────────────
+// â”€â”€ llms-full.txt â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function profileParagraphs(profile, context) {
   const out = [];
@@ -418,30 +419,30 @@ function llmsFull(built, people) {
   const about = SETTINGS_CONTENT.sections.find(s => s.title === 'Sobre o Projeto');
   const rest = SETTINGS_CONTENT.sections.filter(s => s !== about);
   const out = [
-    '# MasterWhats — conteúdo completo', '',
-    `> Tudo que o site diz, em texto. Cada citação traz ⟨data hora · laudo p., fig.⟩ e linka a mensagem na página estática (${SITE}/chat/<id>#msg-<n>, ou a página do mês na conversa com Martha Graeff); a mesma página abre o app nessa mensagem para quem tem JavaScript. O mesmo n aparece como "msg n" no Markdown de cada conversa. ${built.length} conversas, ${total} mensagens, de ${built.at(-1)?.entry.date_range.start ?? ''} a ${built[0]?.entry.date_range.end ?? ''}. Gerado em ${today}. Código e dados: ${REPO}.`, '',
+    '# MasterWhats â€” conteÃºdo completo', '',
+    `> Tudo que o site diz, em texto. Cada citaÃ§Ã£o traz âŸ¨data hora Â· laudo p., fig.âŸ© e linka a mensagem na pÃ¡gina estÃ¡tica (${SITE}/chat/<id>#msg-<n>, ou a pÃ¡gina do mÃªs na conversa com Martha Graeff); a mesma pÃ¡gina abre o app nessa mensagem para quem tem JavaScript. O mesmo n aparece como "msg n" no Markdown de cada conversa. ${built.length} conversas, ${total} mensagens, de ${built.at(-1)?.entry.date_range.start ?? ''} a ${built[0]?.entry.date_range.end ?? ''}. Gerado em ${today}. CÃ³digo e dados: ${REPO}.`, '',
     '## Sobre o projeto', '',
     ...(about?.paragraphs || []).map(p => linksToMarkdown(p.text, { resolve, hrefFor: locate }) + '\n'),
-    '## Quem é Daniel Vorcaro', '',
+    '## Quem Ã© Daniel Vorcaro', '',
     ...profileParagraphs(VORCARO_PROFILE, 'martha-graeff'),
     `## Conversas (${built.length})`, '',
   ];
   for (const { entry, who, profile, months } of built) {
     const source = sourceOf(entry);
-    out.push(`### ${who} — ${entry.total_messages} mensagens, ${entry.date_range.start} a ${entry.date_range.end}`, '');
-    out.push(`- Página: ${SITE}/chat/${entry.id}`);
-    if (months) out.push(`- Um mês por página: ${[...months.keys()].map(ym => `${SITE}/chat/${entry.id}/${ym}`).join(' · ')}`, `- Markdown por mês (troque o mês): ${SITE}/export/masterwhats-${entry.id}-${[...months.keys()][0]}.md`);
-    out.push(`- Conversa completa em Markdown: ${SITE}/export/masterwhats-${entry.id}.md · JSON: ${SITE}/export/masterwhats-${entry.id}.json`);
+    out.push(`### ${who} â€” ${entry.total_messages} mensagens, ${entry.date_range.start} a ${entry.date_range.end}`, '');
+    out.push(`- PÃ¡gina: ${SITE}/chat/${entry.id}`);
+    if (months) out.push(`- Um mÃªs por pÃ¡gina: ${[...months.keys()].map(ym => `${SITE}/chat/${entry.id}/${ym}`).join(' Â· ')}`, `- Markdown por mÃªs (troque o mÃªs): ${SITE}/export/masterwhats-${entry.id}-${[...months.keys()][0]}.md`);
+    out.push(`- Conversa completa em Markdown: ${SITE}/export/masterwhats-${entry.id}.md Â· JSON: ${SITE}/export/masterwhats-${entry.id}.json`);
     out.push(`- Fonte: ${source.label}`);
     if (entry.saved_as) out.push(`- Salvo no celular como: ${entry.saved_as}`);
-    if (entry.note) out.push(`- Observação: ${entry.note}`);
+    if (entry.note) out.push(`- ObservaÃ§Ã£o: ${entry.note}`);
     out.push('');
     out.push(...profileParagraphs(profile, entry.id));
   }
-  out.push(`## Pessoas citadas (${people.length})`, '', `Índice em ${SITE}/quem — cada página lista toda menção, por conversa, datada e apontando para a mensagem.`, '');
+  out.push(`## Pessoas citadas (${people.length})`, '', `Ãndice em ${SITE}/quem â€” cada pÃ¡gina lista toda menÃ§Ã£o, por conversa, datada e apontando para a mensagem.`, '');
   for (const { person, mentions } of people) {
     const per = [...mentions].map(([id, hits]) => `${contactOf(byId.get(id))} (${hits.length})`).join(', ');
-    out.push(`- [${person.name}](${SITE}/quem/${person.slug}) — ${person.role}. Citado em: ${per}.`);
+    out.push(`- [${person.name}](${SITE}/quem/${person.slug}) â€” ${person.role}. Citado em: ${per}.`);
   }
   out.push('');
   for (const section of rest) {
@@ -450,21 +451,21 @@ function llmsFull(built, people) {
   }
   const report = entries.map(e => e.source_document).find(Boolean);
   if (report) {
-    out.push('## Documento-fonte do relatório da PF', '',
-      `- Arquivo: ${report.file} — ${report.pages} páginas`,
+    out.push('## Documento-fonte do relatÃ³rio da PF', '',
+      `- Arquivo: ${report.file} â€” ${report.pages} pÃ¡ginas`,
       `- sha256: ${report.sha256}`,
-      `- Onde obter: ${report.url} (página) ou ${report.download} (os bytes) — o site não serve o PDF; o caminho acima é do repositório`, '');
+      `- Onde obter: ${report.url} (pÃ¡gina) ou ${report.download} (os bytes) â€” o site nÃ£o serve o PDF; o caminho acima Ã© do repositÃ³rio`, '');
   }
   out.push('## Fontes gerais', '', ...SOURCES.map(s => `- [${s.label}](${s.url})`), '');
   out.push('## Export', '',
-    'Comece pelo arquivo de uma conversa (7 a 40 KB, links acima); os consolidados são grandes e raramente necessários.',
+    'Comece pelo arquivo de uma conversa (7 a 40 KB, links acima); os consolidados sÃ£o grandes e raramente necessÃ¡rios.',
     `- Zip com tudo: ${SITE}/export/masterwhats-export.zip (3 MB)`,
     `- Tudo em Markdown: ${SITE}/export/masterwhats.md (3 MB)`,
     `- Tudo em JSON: ${SITE}/export/masterwhats.json (14 MB)`, '');
   return out.join('\n');
 }
 
-// ── sitemap ────────────────────────────────────────────────────────────────
+// â”€â”€ sitemap â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function sitemap(built, people) {
   const url = (loc, priority, changefreq = 'weekly') =>
@@ -484,7 +485,7 @@ function sitemap(built, people) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows.join('\n')}\n</urlset>\n`;
 }
 
-// ── run ────────────────────────────────────────────────────────────────────
+// â”€â”€ run â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const built = [];
 for (const entry of entries) {
@@ -505,21 +506,21 @@ for (const entry of entries) {
     });
   }
   built.push({ entry, who, profile, months });
-  console.log(`chat/${entry.id}/ — ${who}${months ? ` (${months.size} meses)` : ''}`);
+  console.log(`chat/${entry.id}/ â€” ${who}${months ? ` (${months.size} meses)` : ''}`);
 }
 
 const people = [];
 for (const person of PEOPLE) {
   const mentions = mentionsOf(person, entries, resolve.messagesOf);
   if (!mentions.size) {
-    console.error(`pessoa sem menção nenhuma: ${person.slug} — confira os apelidos em people-content.js`);
+    console.error(`pessoa sem menÃ§Ã£o nenhuma: ${person.slug} â€” confira os apelidos em people-content.js`);
     process.exit(1);
   }
   const dir = join(DIST, 'quem', person.slug);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), personPage(person, mentions));
   people.push({ person, mentions });
-  console.log(`quem/${person.slug}/ — ${[...mentions.values()].reduce((n, v) => n + v.length, 0)} menções`);
+  console.log(`quem/${person.slug}/ â€” ${[...mentions.values()].reduce((n, v) => n + v.length, 0)} menÃ§Ãµes`);
 }
 writeFileSync(join(DIST, 'quem', 'index.html'), peopleIndex(people));
 
@@ -531,4 +532,4 @@ const stampSizes = (text) => text.replace(/(masterwhats(?:-export)?\.(?:md|json|
 writeFileSync(join(DIST, 'llms.txt'), stampSizes(readFileSync(join(DIST, 'llms.txt'), 'utf-8')));
 writeFileSync(join(DIST, 'llms-full.txt'), stampSizes(llmsFull(built, people)));
 writeFileSync(join(DIST, 'sitemap.xml'), sitemap(built, people));
-console.log(`\nDone! ${built.length} conversations, ${people.length} people, llms-full.txt, sitemap.xml → ${DIST}`);
+console.log(`\nDone! ${built.length} conversations, ${people.length} people, llms-full.txt, sitemap.xml â†’ ${DIST}`);
