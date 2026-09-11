@@ -46,7 +46,7 @@ export class ScrollLoader {
     this._observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting && !this._loading) {
-          this._loadBatch(LOAD_MORE_DAYS);
+          this._loadUntilOutOfRange();
         }
       },
       { root: this._container, rootMargin: '200px 0px 0px 0px' }
@@ -101,6 +101,26 @@ export class ScrollLoader {
     // If no more days to load, hide sentinel
     if (this._nextIndex < 0 && this._sentinel) {
       this._observer?.unobserve(this._sentinel);
+    }
+  }
+
+  /**
+   * After a _loadBatch, check whether the sentinel is still inside the
+   * IntersectionObserver's trigger margin. With the default threshold,
+   * the browser only fires on enter/exit transitions — if a batch (e.g.
+   * a sparse, text-only day) doesn't add enough height to push the
+   * sentinel out of the 200px margin, no new event ever fires and
+   * loading silently stalls. This keeps loading until the sentinel
+   * actually escapes the margin or history runs out.
+   */
+  async _loadUntilOutOfRange() {
+    await this._loadBatch(LOAD_MORE_DAYS);
+    if (this._nextIndex < 0) return; // no more history
+
+    const rect = this._sentinel.getBoundingClientRect();
+    const rootRect = this._container.getBoundingClientRect();
+    if (rect.bottom >= rootRect.top - 200) {
+      await this._loadUntilOutOfRange();
     }
   }
 
@@ -173,7 +193,6 @@ export class ScrollLoader {
     if (msgEl) {
       msgEl.scrollIntoView({ block: 'center' });
       if (highlight) {
-        // Remove + reflow + re-add to restart animation on repeated clicks
         msgEl.classList.remove('msg-highlight');
         void msgEl.offsetHeight;
         msgEl.classList.add('msg-highlight');
@@ -189,7 +208,6 @@ export class ScrollLoader {
   async scrollToDate(date) {
     const dayEl = await this.loadDate(date);
     if (dayEl) {
-      // Find first message row in this day section
       const firstMsg = dayEl.querySelector('.chat-msg-row');
       if (firstMsg) {
         firstMsg.scrollIntoView({ block: 'center' });

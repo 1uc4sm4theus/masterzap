@@ -7,16 +7,318 @@
     "saved_as": null,
     "phone": "556199910111",
     "date_range": {
-      "start": "2023-12-21",
+      "start": "2023-10-24",
       "end": "2024-07-17"
     },
-    "total_messages": 151,
-    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+    "total_messages": 174,
+    "sources": [
+      "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+      "Relatório da PF citado pela piauí em 10–11/09/2026"
+    ],
+    "note": "Trechos citados em relatório policial e reportagem da piauí — a conversa completa não consta dos documentos. Mensagens de 24–31/10/2023 (festa de Halloween) carecem de timestamp completo (apenas data) e alguns trechos foram resumidos pela reportagem ([teor: ...])."
   },
   "messages": [
     {
-      "id": 1,
+      "timestamp": null,
+      "date": "2023-10-24",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Davi e Pacheco fechado para terça. Chamei Toffoli tb",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 1
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-24",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Davi tá louco perguntando se as suíças vão vir. Se der vms trazer. E na segunda quero ir lá no banco com os meus sócios do escritório.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 2
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-24",
+      "time": null,
+      "sender": "DV",
+      "content": "Virão, sim.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 3
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Fala, irmão. Tudo bem? Me passa depois quem tá confirmado. Só pra eu ter uma ideia de número.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 4
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Toffoli também vai tentar pq preside uma sessão na terça.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 5
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Ciro não?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 6
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "[teor: senador tinha viagem agendada — literal não publicado]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 7
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Vai ser num lugar perto do Rosewood, ultra tranquilo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 8
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Cara, tem 120 mulheres e 20 homens. Tô tendo que tirar mulher porque não tá cabendo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 9
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "[teor: MV vai ligar para perguntar se pode chamar o Wesley]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 10
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Óbvio, né.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 11
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Vai ser bom demais.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 12
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Telefone na porta.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 13
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "E segurança dentro.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 14
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Relaxa que vai ser zero stress.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 15
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Pq tem publicidade um vazamento desses.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 16
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Claro, mas sem tel total.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 17
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Só menina nova. Metade de fora e as daqui conhecemos.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 18
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Boa. Pq tá na moda essa porra. Ontem vazou a festa do Neymar.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 19
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "Se vazar, eu tô morto. Peguei equipe só de controle disso. Não vai vazar nada. Não será primeira nem última.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 20
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "DV",
+      "content": "E outra: festa vai ser bacana, não é festa de putaria. Se alguém falar algo, era evento do banco para parceiros de Halloween.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 21
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-25",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "É, eu sei. Mas, pô, eu, por exemplo, estou falando que vou dormir em Brasília, entendeu? É só pra dar confiança pros caras. Falou, pro Arthur, todo mundo, pô, vai trazer todo mundo. Mandei aqui pro Toffoli. Pô, dá até para trazer o Alexandre numa dessa, entendeu? Quando for só de fora, então é caprichar nisso aí. De repente trazer menos brasileira hoje, porra, que já está bom pra caralho e a gente vê. Mas se você toca aí. Abraço.",
+      "type": "audio",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 22
+    },
+    {
+      "timestamp": null,
+      "date": "2023-10-31",
+      "time": null,
+      "sender": "DV",
+      "content": "Rua Conselheiro Ramalho, 873, Bela Vista.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)",
+      "id": 23
+    },
+    {
+      "id": 24,
       "timestamp": "2023-12-21T09:33:55",
       "date": "2023-12-21",
       "time": "09:33:55",
@@ -27,10 +329,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 19,
-      "source_figure": 14
+      "source_figure": 14,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 2,
+      "id": 25,
       "timestamp": "2023-12-21T09:55:27",
       "date": "2023-12-21",
       "time": "09:55:27",
@@ -42,10 +347,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 19,
-      "source_figure": 14
+      "source_figure": 14,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 3,
+      "id": 26,
       "timestamp": "2023-12-21T10:42:02",
       "date": "2023-12-21",
       "time": "10:42:02",
@@ -56,10 +363,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 19,
-      "source_figure": 14
+      "source_figure": 14,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 4,
+      "id": 27,
       "timestamp": "2023-12-21T10:42:07",
       "date": "2023-12-21",
       "time": "10:42:07",
@@ -70,10 +380,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 19,
-      "source_figure": 14
+      "source_figure": 14,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 5,
+      "id": 28,
       "timestamp": "2023-12-21T10:44:52",
       "date": "2023-12-21",
       "time": "10:44:52",
@@ -85,10 +398,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 19,
-      "source_figure": 14
+      "source_figure": 14,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 6,
+      "id": 29,
       "timestamp": "2023-12-21T10:45:43",
       "date": "2023-12-21",
       "time": "10:45:43",
@@ -99,10 +414,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 19,
-      "source_figure": 14
+      "source_figure": 14,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 7,
+      "id": 30,
       "timestamp": "2023-12-21T16:12:08",
       "date": "2023-12-21",
       "time": "16:12:08",
@@ -113,10 +431,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 21,
-      "source_figure": 17
+      "source_figure": 17,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 8,
+      "id": 31,
       "timestamp": "2023-12-21T16:57:32",
       "date": "2023-12-21",
       "time": "16:57:32",
@@ -127,10 +448,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 21,
-      "source_figure": 17
+      "source_figure": 17,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 9,
+      "id": 32,
       "timestamp": "2023-12-21T16:57:34",
       "date": "2023-12-21",
       "time": "16:57:34",
@@ -141,10 +465,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 21,
-      "source_figure": 17
+      "source_figure": 17,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 10,
+      "id": 33,
       "timestamp": "2023-12-21T18:57:48",
       "date": "2023-12-21",
       "time": "18:57:48",
@@ -156,10 +483,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 21,
-      "source_figure": 17
+      "source_figure": 17,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 11,
+      "id": 34,
       "timestamp": "2023-12-21T18:57:55",
       "date": "2023-12-21",
       "time": "18:57:55",
@@ -170,10 +499,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 21,
-      "source_figure": 17
+      "source_figure": 17,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 12,
+      "id": 35,
       "timestamp": "2023-12-26T10:21:04",
       "date": "2023-12-26",
       "time": "10:21:04",
@@ -184,10 +516,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 22,
-      "source_figure": 18
+      "source_figure": 18,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 13,
+      "id": 36,
       "timestamp": "2023-12-26T10:21:07",
       "date": "2023-12-26",
       "time": "10:21:07",
@@ -198,10 +533,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 22,
-      "source_figure": 18
+      "source_figure": 18,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 14,
+      "id": 37,
       "timestamp": "2023-12-26T10:24:52",
       "date": "2023-12-26",
       "time": "10:24:52",
@@ -212,10 +550,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 22,
-      "source_figure": 18
+      "source_figure": 18,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 15,
+      "id": 38,
       "timestamp": "2023-12-26T10:24:53",
       "date": "2023-12-26",
       "time": "10:24:53",
@@ -226,10 +567,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 22,
-      "source_figure": 18
+      "source_figure": 18,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 16,
+      "id": 39,
       "timestamp": "2023-12-26T10:24:55",
       "date": "2023-12-26",
       "time": "10:24:55",
@@ -240,10 +584,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 22,
-      "source_figure": 18
+      "source_figure": 18,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 17,
+      "id": 40,
       "timestamp": "2023-12-26T10:33:16",
       "date": "2023-12-26",
       "time": "10:33:16",
@@ -254,10 +601,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 22,
-      "source_figure": 18
+      "source_figure": 18,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 18,
+      "id": 41,
       "timestamp": "2023-12-26T10:33:18",
       "date": "2023-12-26",
       "time": "10:33:18",
@@ -268,10 +618,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 22,
-      "source_figure": 18
+      "source_figure": 18,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 19,
+      "id": 42,
       "timestamp": "2023-12-26T11:43:45",
       "date": "2023-12-26",
       "time": "11:43:45",
@@ -282,10 +635,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 23,
-      "source_figure": 19
+      "source_figure": 19,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 20,
+      "id": 43,
       "timestamp": "2023-12-27T19:41:25",
       "date": "2023-12-27",
       "time": "19:41:25",
@@ -297,10 +653,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 21,
+      "id": 44,
       "timestamp": "2023-12-27T19:41:28",
       "date": "2023-12-27",
       "time": "19:41:28",
@@ -311,10 +669,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 22,
+      "id": 45,
       "timestamp": "2023-12-27T19:41:44",
       "date": "2023-12-27",
       "time": "19:41:44",
@@ -325,10 +686,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 23,
+      "id": 46,
       "timestamp": "2023-12-27T19:46:36",
       "date": "2023-12-27",
       "time": "19:46:36",
@@ -339,10 +703,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 24,
+      "id": 47,
       "timestamp": "2023-12-27T19:47:11",
       "date": "2023-12-27",
       "time": "19:47:11",
@@ -353,10 +720,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 25,
+      "id": 48,
       "timestamp": "2023-12-27T19:47:24",
       "date": "2023-12-27",
       "time": "19:47:24",
@@ -367,10 +737,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 26,
+      "id": 49,
       "timestamp": "2023-12-27T19:47:36",
       "date": "2023-12-27",
       "time": "19:47:36",
@@ -382,10 +755,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 27,
+      "id": 50,
       "timestamp": "2023-12-27T19:49:06",
       "date": "2023-12-27",
       "time": "19:49:06",
@@ -397,10 +772,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 28,
+      "id": 51,
       "timestamp": "2023-12-27T20:54:08",
       "date": "2023-12-27",
       "time": "20:54:08",
@@ -411,10 +788,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 29,
+      "id": 52,
       "timestamp": "2023-12-27T21:15:28",
       "date": "2023-12-27",
       "time": "21:15:28",
@@ -425,10 +805,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 30,
+      "id": 53,
       "timestamp": "2023-12-27T22:38:37",
       "date": "2023-12-27",
       "time": "22:38:37",
@@ -439,10 +822,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 24,
-      "source_figure": 20
+      "source_figure": 20,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 31,
+      "id": 54,
       "timestamp": "2024-01-12T14:57:02",
       "date": "2024-01-12",
       "time": "14:57:02",
@@ -453,10 +839,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 31,
-      "source_figure": 28
+      "source_figure": 28,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 32,
+      "id": 55,
       "timestamp": "2024-01-15T17:38:24",
       "date": "2024-01-15",
       "time": "17:38:24",
@@ -467,10 +856,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 32,
-      "source_figure": 30
+      "source_figure": 30,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 33,
+      "id": 56,
       "timestamp": "2024-01-15T17:40:26",
       "date": "2024-01-15",
       "time": "17:40:26",
@@ -481,10 +873,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 32,
-      "source_figure": 30
+      "source_figure": 30,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 34,
+      "id": 57,
       "timestamp": "2024-01-15T17:40:29",
       "date": "2024-01-15",
       "time": "17:40:29",
@@ -495,10 +890,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 32,
-      "source_figure": 30
+      "source_figure": 30,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 35,
+      "id": 58,
       "timestamp": "2024-01-15T17:40:37",
       "date": "2024-01-15",
       "time": "17:40:37",
@@ -509,10 +907,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 32,
-      "source_figure": 30
+      "source_figure": 30,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 36,
+      "id": 59,
       "timestamp": "2024-01-15T17:44:04",
       "date": "2024-01-15",
       "time": "17:44:04",
@@ -523,10 +924,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 32,
-      "source_figure": 30
+      "source_figure": 30,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 37,
+      "id": 60,
       "timestamp": "2024-01-15T17:44:09",
       "date": "2024-01-15",
       "time": "17:44:09",
@@ -537,10 +941,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 32,
-      "source_figure": 30
+      "source_figure": 30,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 38,
+      "id": 61,
       "timestamp": "2024-01-17T20:47:09",
       "date": "2024-01-17",
       "time": "20:47:09",
@@ -551,10 +958,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 33,
-      "source_figure": 33
+      "source_figure": 33,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 39,
+      "id": 62,
       "timestamp": "2024-01-17T21:04:17",
       "date": "2024-01-17",
       "time": "21:04:17",
@@ -565,10 +975,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 33,
-      "source_figure": 33
+      "source_figure": 33,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 40,
+      "id": 63,
       "timestamp": "2024-01-23T07:04:54",
       "date": "2024-01-23",
       "time": "07:04:54",
@@ -579,10 +992,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 35,
-      "source_figure": 35
+      "source_figure": 35,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 41,
+      "id": 64,
       "timestamp": "2024-01-23T07:04:57",
       "date": "2024-01-23",
       "time": "07:04:57",
@@ -593,10 +1009,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 35,
-      "source_figure": 35
+      "source_figure": 35,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 42,
+      "id": 65,
       "timestamp": "2024-01-23T07:05:23",
       "date": "2024-01-23",
       "time": "07:05:23",
@@ -607,10 +1026,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 35,
-      "source_figure": 35
+      "source_figure": 35,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 43,
+      "id": 66,
       "timestamp": "2024-01-30T08:52:36",
       "date": "2024-01-30",
       "time": "08:52:36",
@@ -622,10 +1044,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 35,
-      "source_figure": 36
+      "source_figure": 36,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 44,
+      "id": 67,
       "timestamp": "2024-01-30T08:52:37",
       "date": "2024-01-30",
       "time": "08:52:37",
@@ -637,10 +1061,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 35,
-      "source_figure": 36
+      "source_figure": 36,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 45,
+      "id": 68,
       "timestamp": "2024-01-30T08:52:37",
       "date": "2024-01-30",
       "time": "08:52:37",
@@ -652,10 +1078,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 35,
-      "source_figure": 36
+      "source_figure": 36,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 46,
+      "id": 69,
       "timestamp": "2024-01-30T08:52:45",
       "date": "2024-01-30",
       "time": "08:52:45",
@@ -666,10 +1094,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 35,
-      "source_figure": 36
+      "source_figure": 36,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 47,
+      "id": 70,
       "timestamp": "2024-01-30T08:52:54",
       "date": "2024-01-30",
       "time": "08:52:54",
@@ -680,10 +1111,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 35,
-      "source_figure": 36
+      "source_figure": 36,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 48,
+      "id": 71,
       "timestamp": "2024-01-30T08:53:27",
       "date": "2024-01-30",
       "time": "08:53:27",
@@ -694,10 +1128,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 35,
-      "source_figure": 36
+      "source_figure": 36,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 49,
+      "id": 72,
       "timestamp": "2024-01-30T08:53:56",
       "date": "2024-01-30",
       "time": "08:53:56",
@@ -708,10 +1145,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 35,
-      "source_figure": 36
+      "source_figure": 36,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 50,
+      "id": 73,
       "timestamp": "2024-01-30T09:11:03",
       "date": "2024-01-30",
       "time": "09:11:03",
@@ -722,10 +1162,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 35,
-      "source_figure": 36
+      "source_figure": 36,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 51,
+      "id": 74,
       "timestamp": "2024-01-30T09:11:06",
       "date": "2024-01-30",
       "time": "09:11:06",
@@ -736,10 +1179,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 35,
-      "source_figure": 36
+      "source_figure": 36,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 52,
+      "id": 75,
       "timestamp": "2024-01-30T09:14:36",
       "date": "2024-01-30",
       "time": "09:14:36",
@@ -750,10 +1196,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 35,
-      "source_figure": 36
+      "source_figure": 36,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 53,
+      "id": 76,
       "timestamp": "2024-01-31T16:29:00",
       "date": "2024-01-31",
       "time": "16:29:00",
@@ -764,10 +1213,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 36,
-      "source_figure": 37
+      "source_figure": 37,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 54,
+      "id": 77,
       "timestamp": "2024-01-31T16:30:10",
       "date": "2024-01-31",
       "time": "16:30:10",
@@ -780,10 +1232,13 @@
         "https://maps.app.goo.gl/Su88jvyxcnpwqCyh9?g_st=iwb"
       ],
       "source_page": 36,
-      "source_figure": 37
+      "source_figure": 37,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 55,
+      "id": 78,
       "timestamp": "2024-01-31T16:30:14",
       "date": "2024-01-31",
       "time": "16:30:14",
@@ -794,10 +1249,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 36,
-      "source_figure": 37
+      "source_figure": 37,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 56,
+      "id": 79,
       "timestamp": "2024-01-31T16:30:17",
       "date": "2024-01-31",
       "time": "16:30:17",
@@ -808,10 +1266,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 36,
-      "source_figure": 37
+      "source_figure": 37,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 57,
+      "id": 80,
       "timestamp": "2024-01-31T16:30:29",
       "date": "2024-01-31",
       "time": "16:30:29",
@@ -825,10 +1286,12 @@
       ],
       "forwarded": true,
       "source_page": 36,
-      "source_figure": 37
+      "source_figure": 37,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 58,
+      "id": 81,
       "timestamp": "2024-01-31T16:42:45",
       "date": "2024-01-31",
       "time": "16:42:45",
@@ -839,10 +1302,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 36,
-      "source_figure": 37
+      "source_figure": 37,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 59,
+      "id": 82,
       "timestamp": "2024-01-31T16:42:52",
       "date": "2024-01-31",
       "time": "16:42:52",
@@ -853,10 +1319,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 36,
-      "source_figure": 37
+      "source_figure": 37,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 60,
+      "id": 83,
       "timestamp": "2024-03-13T10:04:19",
       "date": "2024-03-13",
       "time": "10:04:19",
@@ -867,10 +1336,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 61,
+      "id": 84,
       "timestamp": "2024-03-13T10:09:35",
       "date": "2024-03-13",
       "time": "10:09:35",
@@ -881,10 +1353,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 62,
+      "id": 85,
       "timestamp": "2024-03-13T13:08:41",
       "date": "2024-03-13",
       "time": "13:08:41",
@@ -896,10 +1371,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 63,
+      "id": 86,
       "timestamp": "2024-03-13T13:08:46",
       "date": "2024-03-13",
       "time": "13:08:46",
@@ -910,10 +1387,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 64,
+      "id": 87,
       "timestamp": "2024-03-13T13:09:29",
       "date": "2024-03-13",
       "time": "13:09:29",
@@ -924,10 +1404,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 65,
+      "id": 88,
       "timestamp": "2024-03-13T13:09:47",
       "date": "2024-03-13",
       "time": "13:09:47",
@@ -938,10 +1421,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 66,
+      "id": 89,
       "timestamp": "2024-03-13T13:09:55",
       "date": "2024-03-13",
       "time": "13:09:55",
@@ -952,10 +1438,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 67,
+      "id": 90,
       "timestamp": "2024-03-13T13:10:23",
       "date": "2024-03-13",
       "time": "13:10:23",
@@ -966,10 +1455,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 68,
+      "id": 91,
       "timestamp": "2024-03-13T13:10:25",
       "date": "2024-03-13",
       "time": "13:10:25",
@@ -980,10 +1472,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 69,
+      "id": 92,
       "timestamp": "2024-03-13T13:10:49",
       "date": "2024-03-13",
       "time": "13:10:49",
@@ -994,10 +1489,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 70,
+      "id": 93,
       "timestamp": "2024-03-13T13:10:57",
       "date": "2024-03-13",
       "time": "13:10:57",
@@ -1008,10 +1506,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 71,
+      "id": 94,
       "timestamp": "2024-03-13T13:21:52",
       "date": "2024-03-13",
       "time": "13:21:52",
@@ -1022,10 +1523,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 72,
+      "id": 95,
       "timestamp": "2024-03-13T13:41:02",
       "date": "2024-03-13",
       "time": "13:41:02",
@@ -1036,10 +1540,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 73,
+      "id": 96,
       "timestamp": "2024-03-13T13:41:07",
       "date": "2024-03-13",
       "time": "13:41:07",
@@ -1050,10 +1557,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 173,
-      "source_figure": 172
+      "source_figure": 172,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 74,
+      "id": 97,
       "timestamp": "2024-03-13T17:07:33",
       "date": "2024-03-13",
       "time": "17:07:33",
@@ -1064,10 +1574,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 173
+      "source_figure": 173,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 75,
+      "id": 98,
       "timestamp": "2024-03-13T17:07:34",
       "date": "2024-03-13",
       "time": "17:07:34",
@@ -1078,10 +1591,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 173
+      "source_figure": 173,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 76,
+      "id": 99,
       "timestamp": "2024-03-13T17:07:39",
       "date": "2024-03-13",
       "time": "17:07:39",
@@ -1092,10 +1608,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 173
+      "source_figure": 173,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 77,
+      "id": 100,
       "timestamp": "2024-03-13T17:07:45",
       "date": "2024-03-13",
       "time": "17:07:45",
@@ -1107,10 +1626,12 @@
       "urls": [],
       "quoted": "Melhor encarar e entender rapido",
       "source_page": 174,
-      "source_figure": 173
+      "source_figure": 173,
+      "forwarded": false,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 78,
+      "id": 101,
       "timestamp": "2024-03-13T17:07:49",
       "date": "2024-03-13",
       "time": "17:07:49",
@@ -1121,10 +1642,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 173
+      "source_figure": 173,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 79,
+      "id": 102,
       "timestamp": "2024-03-13T17:07:53",
       "date": "2024-03-13",
       "time": "17:07:53",
@@ -1135,10 +1659,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 173
+      "source_figure": 173,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 80,
+      "id": 103,
       "timestamp": "2024-03-13T17:07:54",
       "date": "2024-03-13",
       "time": "17:07:54",
@@ -1149,10 +1676,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 173
+      "source_figure": 173,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 81,
+      "id": 104,
       "timestamp": "2024-03-13T17:08:02",
       "date": "2024-03-13",
       "time": "17:08:02",
@@ -1163,10 +1693,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 173
+      "source_figure": 173,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 82,
+      "id": 105,
       "timestamp": "2024-03-15T14:56:24",
       "date": "2024-03-15",
       "time": "14:56:24",
@@ -1177,10 +1710,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 83,
+      "id": 106,
       "timestamp": "2024-03-15T14:58:03",
       "date": "2024-03-15",
       "time": "14:58:03",
@@ -1191,10 +1727,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 84,
+      "id": 107,
       "timestamp": "2024-03-15T14:58:23",
       "date": "2024-03-15",
       "time": "14:58:23",
@@ -1205,10 +1744,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 85,
+      "id": 108,
       "timestamp": "2024-03-15T14:58:41",
       "date": "2024-03-15",
       "time": "14:58:41",
@@ -1219,10 +1761,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 86,
+      "id": 109,
       "timestamp": "2024-03-15T15:06:35",
       "date": "2024-03-15",
       "time": "15:06:35",
@@ -1233,10 +1778,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 87,
+      "id": 110,
       "timestamp": "2024-03-15T15:06:39",
       "date": "2024-03-15",
       "time": "15:06:39",
@@ -1247,10 +1795,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 88,
+      "id": 111,
       "timestamp": "2024-03-15T15:06:47",
       "date": "2024-03-15",
       "time": "15:06:47",
@@ -1261,10 +1812,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 89,
+      "id": 112,
       "timestamp": "2024-03-15T15:06:59",
       "date": "2024-03-15",
       "time": "15:06:59",
@@ -1275,10 +1829,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 90,
+      "id": 113,
       "timestamp": "2024-03-15T15:07:02",
       "date": "2024-03-15",
       "time": "15:07:02",
@@ -1289,10 +1846,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 91,
+      "id": 114,
       "timestamp": "2024-03-15T15:07:07",
       "date": "2024-03-15",
       "time": "15:07:07",
@@ -1303,10 +1863,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 92,
+      "id": 115,
       "timestamp": "2024-03-15T15:07:11",
       "date": "2024-03-15",
       "time": "15:07:11",
@@ -1317,10 +1880,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 93,
+      "id": 116,
       "timestamp": "2024-03-15T15:07:21",
       "date": "2024-03-15",
       "time": "15:07:21",
@@ -1331,10 +1897,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 94,
+      "id": 117,
       "timestamp": "2024-03-15T15:07:34",
       "date": "2024-03-15",
       "time": "15:07:34",
@@ -1345,10 +1914,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 95,
+      "id": 118,
       "timestamp": "2024-03-15T15:08:02",
       "date": "2024-03-15",
       "time": "15:08:02",
@@ -1359,10 +1931,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 96,
+      "id": 119,
       "timestamp": "2024-03-15T15:09:08",
       "date": "2024-03-15",
       "time": "15:09:08",
@@ -1373,10 +1948,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 97,
+      "id": 120,
       "timestamp": "2024-03-15T15:09:14",
       "date": "2024-03-15",
       "time": "15:09:14",
@@ -1387,10 +1965,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 151,
-      "source_figure": 150
+      "source_figure": 150,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 98,
+      "id": 121,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -1402,10 +1983,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 212,
-      "source_figure": 224
+      "source_figure": 224,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 99,
+      "id": 122,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -1417,10 +2000,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 212,
-      "source_figure": 224
+      "source_figure": 224,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 100,
+      "id": 123,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -1432,10 +2017,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 212,
-      "source_figure": 224
+      "source_figure": 224,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 101,
+      "id": 124,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -1446,10 +2033,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 212,
-      "source_figure": 224
+      "source_figure": 224,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 102,
+      "id": 125,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -1460,10 +2050,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 212,
-      "source_figure": 224
+      "source_figure": 224,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 103,
+      "id": 126,
       "timestamp": "2024-04-03T09:34:09",
       "date": "2024-04-03",
       "time": "09:34:09",
@@ -1475,10 +2068,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 212,
-      "source_figure": 224
+      "source_figure": 224,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 104,
+      "id": 127,
       "timestamp": "2024-04-03T09:34:33",
       "date": "2024-04-03",
       "time": "09:34:33",
@@ -1490,10 +2085,12 @@
       "urls": [],
       "quoted": "Podem entrar em contato lá na PF. Ele aceitou",
       "source_page": 212,
-      "source_figure": 224
+      "source_figure": 224,
+      "forwarded": false,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 105,
+      "id": 128,
       "timestamp": "2024-04-03T09:37:19",
       "date": "2024-04-03",
       "time": "09:37:19",
@@ -1505,10 +2102,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 212,
-      "source_figure": 224
+      "source_figure": 224,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 106,
+      "id": 129,
       "timestamp": "2024-04-03T09:38:38",
       "date": "2024-04-03",
       "time": "09:38:38",
@@ -1519,10 +2118,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 213,
-      "source_figure": 225
+      "source_figure": 225,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 107,
+      "id": 130,
       "timestamp": "2024-04-03T09:38:53",
       "date": "2024-04-03",
       "time": "09:38:53",
@@ -1533,10 +2135,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 213,
-      "source_figure": 225
+      "source_figure": 225,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 108,
+      "id": 131,
       "timestamp": "2024-04-03T09:39:40",
       "date": "2024-04-03",
       "time": "09:39:40",
@@ -1548,10 +2153,12 @@
       "urls": [],
       "quoted": "Vc falou c andre ontem? Ele disse algo da reuniao?",
       "source_page": 213,
-      "source_figure": 225
+      "source_figure": 225,
+      "forwarded": false,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 109,
+      "id": 132,
       "timestamp": "2024-04-03T09:40:03",
       "date": "2024-04-03",
       "time": "09:40:03",
@@ -1562,10 +2169,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 213,
-      "source_figure": 225
+      "source_figure": 225,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 110,
+      "id": 133,
       "timestamp": "2024-04-03T09:40:06",
       "date": "2024-04-03",
       "time": "09:40:06",
@@ -1576,10 +2186,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 213,
-      "source_figure": 225
+      "source_figure": 225,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 111,
+      "id": 134,
       "timestamp": "2024-04-03T09:41:18",
       "date": "2024-04-03",
       "time": "09:41:18",
@@ -1590,10 +2203,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 213,
-      "source_figure": 225
+      "source_figure": 225,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 112,
+      "id": 135,
       "timestamp": "2024-04-06T11:13:30",
       "date": "2024-04-06",
       "time": "11:13:30",
@@ -1605,10 +2221,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 183,
-      "source_figure": 189
+      "source_figure": 189,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 113,
+      "id": 136,
       "timestamp": "2024-04-06T11:13:31",
       "date": "2024-04-06",
       "time": "11:13:31",
@@ -1620,10 +2238,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 183,
-      "source_figure": 189
+      "source_figure": 189,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 114,
+      "id": 137,
       "timestamp": "2024-04-06T14:55:00",
       "date": "2024-04-06",
       "time": "14:55:00",
@@ -1635,10 +2255,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 183,
-      "source_figure": 189
+      "source_figure": 189,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 115,
+      "id": 138,
       "timestamp": "2024-04-06T14:55:09",
       "date": "2024-04-06",
       "time": "14:55:09",
@@ -1649,10 +2271,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 183,
-      "source_figure": 189
+      "source_figure": 189,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 116,
+      "id": 139,
       "timestamp": "2024-04-06T14:55:12",
       "date": "2024-04-06",
       "time": "14:55:12",
@@ -1663,10 +2288,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 183,
-      "source_figure": 189
+      "source_figure": 189,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 117,
+      "id": 140,
       "timestamp": "2024-04-06T14:55:33",
       "date": "2024-04-06",
       "time": "14:55:33",
@@ -1677,10 +2305,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 183,
-      "source_figure": 189
+      "source_figure": 189,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 118,
+      "id": 141,
       "timestamp": "2024-04-06T14:55:45",
       "date": "2024-04-06",
       "time": "14:55:45",
@@ -1691,10 +2322,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 183,
-      "source_figure": 189
+      "source_figure": 189,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 119,
+      "id": 142,
       "timestamp": "2024-04-06T14:57:09",
       "date": "2024-04-06",
       "time": "14:57:09",
@@ -1706,10 +2340,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 183,
-      "source_figure": 189
+      "source_figure": 189,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 120,
+      "id": 143,
       "timestamp": "2024-04-06T14:57:13",
       "date": "2024-04-06",
       "time": "14:57:13",
@@ -1720,10 +2356,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 183,
-      "source_figure": 189
+      "source_figure": 189,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 121,
+      "id": 144,
       "timestamp": "2024-04-17T19:25:19",
       "date": "2024-04-17",
       "time": "19:25:19",
@@ -1735,10 +2374,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 174,
-      "source_figure": 174
+      "source_figure": 174,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 122,
+      "id": 145,
       "timestamp": "2024-04-17T19:25:34",
       "date": "2024-04-17",
       "time": "19:25:34",
@@ -1749,10 +2390,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 174
+      "source_figure": 174,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 123,
+      "id": 146,
       "timestamp": "2024-04-17T19:57:34",
       "date": "2024-04-17",
       "time": "19:57:34",
@@ -1763,10 +2407,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 174
+      "source_figure": 174,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 124,
+      "id": 147,
       "timestamp": "2024-04-17T19:57:43",
       "date": "2024-04-17",
       "time": "19:57:43",
@@ -1777,10 +2424,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 174
+      "source_figure": 174,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 125,
+      "id": 148,
       "timestamp": "2024-04-17T19:57:50",
       "date": "2024-04-17",
       "time": "19:57:50",
@@ -1791,10 +2441,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 174
+      "source_figure": 174,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 126,
+      "id": 149,
       "timestamp": "2024-04-17T19:58:05",
       "date": "2024-04-17",
       "time": "19:58:05",
@@ -1805,10 +2458,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 174
+      "source_figure": 174,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 127,
+      "id": 150,
       "timestamp": "2024-04-17T19:58:13",
       "date": "2024-04-17",
       "time": "19:58:13",
@@ -1819,10 +2475,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 174,
-      "source_figure": 174
+      "source_figure": 174,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 128,
+      "id": 151,
       "timestamp": "2024-04-18T18:13:07",
       "date": "2024-04-18",
       "time": "18:13:07",
@@ -1833,10 +2492,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 188,
-      "source_figure": 195
+      "source_figure": 195,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 129,
+      "id": 152,
       "timestamp": "2024-04-18T18:13:26",
       "date": "2024-04-18",
       "time": "18:13:26",
@@ -1847,10 +2509,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 188,
-      "source_figure": 195
+      "source_figure": 195,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 130,
+      "id": 153,
       "timestamp": "2024-04-18T18:13:34",
       "date": "2024-04-18",
       "time": "18:13:34",
@@ -1861,10 +2526,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 188,
-      "source_figure": 195
+      "source_figure": 195,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 131,
+      "id": 154,
       "timestamp": "2024-04-18T18:13:41",
       "date": "2024-04-18",
       "time": "18:13:41",
@@ -1875,10 +2543,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 188,
-      "source_figure": 195
+      "source_figure": 195,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 132,
+      "id": 155,
       "timestamp": "2024-04-18T18:13:46",
       "date": "2024-04-18",
       "time": "18:13:46",
@@ -1889,10 +2560,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 188,
-      "source_figure": 195
+      "source_figure": 195,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 133,
+      "id": 156,
       "timestamp": "2024-04-18T18:14:14",
       "date": "2024-04-18",
       "time": "18:14:14",
@@ -1903,10 +2577,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 188,
-      "source_figure": 195
+      "source_figure": 195,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 134,
+      "id": 157,
       "timestamp": "2024-04-25T16:15:56",
       "date": "2024-04-25",
       "time": "16:15:56",
@@ -1917,10 +2594,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 135,
+      "id": 158,
       "timestamp": "2024-04-25T16:40:43",
       "date": "2024-04-25",
       "time": "16:40:43",
@@ -1934,10 +2614,12 @@
       ],
       "forwarded": true,
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 136,
+      "id": 159,
       "timestamp": "2024-04-25T16:40:50",
       "date": "2024-04-25",
       "time": "16:40:50",
@@ -1948,10 +2630,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 137,
+      "id": 160,
       "timestamp": "2024-04-25T16:41:30",
       "date": "2024-04-25",
       "time": "16:41:30",
@@ -1962,10 +2647,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 138,
+      "id": 161,
       "timestamp": "2024-04-25T16:41:43",
       "date": "2024-04-25",
       "time": "16:41:43",
@@ -1976,10 +2664,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 139,
+      "id": 162,
       "timestamp": "2024-04-25T16:41:57",
       "date": "2024-04-25",
       "time": "16:41:57",
@@ -1991,10 +2682,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 140,
+      "id": 163,
       "timestamp": "2024-04-25T16:44:25",
       "date": "2024-04-25",
       "time": "16:44:25",
@@ -2005,10 +2698,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 141,
+      "id": 164,
       "timestamp": "2024-04-25T16:44:27",
       "date": "2024-04-25",
       "time": "16:44:27",
@@ -2019,10 +2715,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 142,
+      "id": 165,
       "timestamp": "2024-04-25T16:44:41",
       "date": "2024-04-25",
       "time": "16:44:41",
@@ -2033,10 +2732,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 143,
+      "id": 166,
       "timestamp": "2024-04-25T16:52:33",
       "date": "2024-04-25",
       "time": "16:52:33",
@@ -2047,10 +2749,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 144,
+      "id": 167,
       "timestamp": "2024-04-25T16:52:57",
       "date": "2024-04-25",
       "time": "16:52:57",
@@ -2061,10 +2766,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 145,
+      "id": 168,
       "timestamp": "2024-04-25T17:13:08",
       "date": "2024-04-25",
       "time": "17:13:08",
@@ -2076,10 +2784,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 198,
-      "source_figure": 207
+      "source_figure": 207,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 146,
+      "id": 169,
       "timestamp": "2024-07-16T21:12:35",
       "date": "2024-07-16",
       "time": "21:12:35",
@@ -2091,10 +2801,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 175,
-      "source_figure": 175
+      "source_figure": 175,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 147,
+      "id": 170,
       "timestamp": "2024-07-16T21:12:36",
       "date": "2024-07-16",
       "time": "21:12:36",
@@ -2106,10 +2818,12 @@
       "urls": [],
       "forwarded": true,
       "source_page": 175,
-      "source_figure": 175
+      "source_figure": 175,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 148,
+      "id": 171,
       "timestamp": "2024-07-16T21:12:42",
       "date": "2024-07-16",
       "time": "21:12:42",
@@ -2120,10 +2834,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 175,
-      "source_figure": 175
+      "source_figure": 175,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 149,
+      "id": 172,
       "timestamp": "2024-07-16T21:12:46",
       "date": "2024-07-16",
       "time": "21:12:46",
@@ -2134,10 +2851,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 175,
-      "source_figure": 175
+      "source_figure": 175,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 150,
+      "id": 173,
       "timestamp": "2024-07-17T09:55:15",
       "date": "2024-07-17",
       "time": "09:55:15",
@@ -2148,10 +2868,13 @@
       "attachment": null,
       "urls": [],
       "source_page": 175,
-      "source_figure": 176
+      "source_figure": 176,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 151,
+      "id": 174,
       "timestamp": "2024-07-17T09:55:20",
       "date": "2024-07-17",
       "time": "09:55:20",
@@ -2162,118 +2885,139 @@
       "attachment": null,
       "urls": [],
       "source_page": 175,
-      "source_figure": 176
+      "source_figure": 176,
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     }
   ],
   "index": {
     "dates": [
       {
+        "date": "2023-10-24",
+        "message_count": 3,
+        "first_message_id": 1,
+        "last_message_id": 3
+      },
+      {
+        "date": "2023-10-25",
+        "message_count": 19,
+        "first_message_id": 4,
+        "last_message_id": 22
+      },
+      {
+        "date": "2023-10-31",
+        "message_count": 1,
+        "first_message_id": 23,
+        "last_message_id": 23
+      },
+      {
         "date": "2023-12-21",
         "message_count": 11,
-        "first_message_id": 1,
-        "last_message_id": 11
+        "first_message_id": 24,
+        "last_message_id": 34
       },
       {
         "date": "2023-12-26",
         "message_count": 8,
-        "first_message_id": 12,
-        "last_message_id": 19
+        "first_message_id": 35,
+        "last_message_id": 42
       },
       {
         "date": "2023-12-27",
         "message_count": 11,
-        "first_message_id": 20,
-        "last_message_id": 30
+        "first_message_id": 43,
+        "last_message_id": 53
       },
       {
         "date": "2024-01-12",
         "message_count": 1,
-        "first_message_id": 31,
-        "last_message_id": 31
+        "first_message_id": 54,
+        "last_message_id": 54
       },
       {
         "date": "2024-01-15",
         "message_count": 6,
-        "first_message_id": 32,
-        "last_message_id": 37
+        "first_message_id": 55,
+        "last_message_id": 60
       },
       {
         "date": "2024-01-17",
         "message_count": 2,
-        "first_message_id": 38,
-        "last_message_id": 39
+        "first_message_id": 61,
+        "last_message_id": 62
       },
       {
         "date": "2024-01-23",
         "message_count": 3,
-        "first_message_id": 40,
-        "last_message_id": 42
+        "first_message_id": 63,
+        "last_message_id": 65
       },
       {
         "date": "2024-01-30",
         "message_count": 10,
-        "first_message_id": 43,
-        "last_message_id": 52
+        "first_message_id": 66,
+        "last_message_id": 75
       },
       {
         "date": "2024-01-31",
         "message_count": 7,
-        "first_message_id": 53,
-        "last_message_id": 59
+        "first_message_id": 76,
+        "last_message_id": 82
       },
       {
         "date": "2024-03-13",
         "message_count": 22,
-        "first_message_id": 60,
-        "last_message_id": 81
+        "first_message_id": 83,
+        "last_message_id": 104
       },
       {
         "date": "2024-03-15",
         "message_count": 16,
-        "first_message_id": 82,
-        "last_message_id": 97
+        "first_message_id": 105,
+        "last_message_id": 120
       },
       {
         "date": "2024-04-03",
         "message_count": 14,
-        "first_message_id": 98,
-        "last_message_id": 111
+        "first_message_id": 121,
+        "last_message_id": 134
       },
       {
         "date": "2024-04-06",
         "message_count": 9,
-        "first_message_id": 112,
-        "last_message_id": 120
+        "first_message_id": 135,
+        "last_message_id": 143
       },
       {
         "date": "2024-04-17",
         "message_count": 7,
-        "first_message_id": 121,
-        "last_message_id": 127
+        "first_message_id": 144,
+        "last_message_id": 150
       },
       {
         "date": "2024-04-18",
         "message_count": 6,
-        "first_message_id": 128,
-        "last_message_id": 133
+        "first_message_id": 151,
+        "last_message_id": 156
       },
       {
         "date": "2024-04-25",
         "message_count": 12,
-        "first_message_id": 134,
-        "last_message_id": 145
+        "first_message_id": 157,
+        "last_message_id": 168
       },
       {
         "date": "2024-07-16",
         "message_count": 4,
-        "first_message_id": 146,
-        "last_message_id": 149
+        "first_message_id": 169,
+        "last_message_id": 172
       },
       {
         "date": "2024-07-17",
         "message_count": 2,
-        "first_message_id": 150,
-        "last_message_id": 151
+        "first_message_id": 173,
+        "last_message_id": 174
       }
     ]
   }
