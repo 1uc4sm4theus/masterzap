@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "owner": "Jair Bolsonaro",
+    "participants": [
+      "Jair Bolsonaro",
+      "Eduardo Bolsonaro"
+    ],
+    "contact": "Eduardo Bolsonaro",
+    "date_range": {
+      "start": "2025-06-24",
+      "end": "2025-07-17"
+    },
+    "total_messages": 44,
+    "source": "Conteúdo fornecido pelo usuário",
+    "note": "Os horários originais não foram informados; a ordem das mensagens foi preservada com horários técnicos sequenciais à meia-noite."
+  },
+  "messages": [
+    { "id": 1, "timestamp": "2025-06-24T00:00:00", "date": "2025-06-24", "time": "00:00:00", "sender": "Jair Bolsonaro", "content": "Você perde para o molusco. Vagão 39,1 x 41,6 Lula.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 2, "timestamp": "2025-06-24T00:00:01", "date": "2025-06-24", "time": "00:00:01", "sender": "Eduardo Bolsonaro", "content": "melhor ficar de fora", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 3, "timestamp": "2025-06-24T00:00:02", "date": "2025-06-24", "time": "00:00:02", "sender": "Eduardo Bolsonaro", "content": "já imagino o TF (...) falando com o Trump sobre a China", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 4, "timestamp": "2025-06-24T00:00:03", "date": "2025-06-24", "time": "00:00:03", "sender": "Jair Bolsonaro", "content": "[áudio]", "type": "audio", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 5, "timestamp": "2025-06-25T00:00:00", "date": "2025-06-25", "time": "00:00:00", "sender": "Eduardo Bolsonaro", "content": "A narrativa de Tarcísio te sucedendo, que já há acordo para isto, está muito forte. Precisamos segurar isso para nos mantermos vivos aqui", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 6, "timestamp": "2025-06-25T00:00:01", "date": "2025-06-25", "time": "00:00:01", "sender": "Jair Bolsonaro", "content": "[áudio]", "type": "audio", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 7, "timestamp": "2025-06-26T00:00:00", "date": "2025-06-26", "time": "00:00:00", "sender": "Jair Bolsonaro", "content": "chance de dar certo", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 8, "timestamp": "2025-06-26T00:00:01", "date": "2025-06-26", "time": "00:00:01", "sender": "Jair Bolsonaro", "content": "decolando para BH", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 9, "timestamp": "2025-06-26T00:00:02", "date": "2025-06-26", "time": "00:00:02", "sender": "Eduardo Bolsonaro", "content": "👍", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 10, "timestamp": "2025-06-26T00:00:03", "date": "2025-06-26", "time": "00:00:03", "sender": "Eduardo Bolsonaro", "content": "Pressão aumenta nos EUA. Pode ter certeza, não estamos parados. Veja", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 11, "timestamp": "2025-06-26T00:00:04", "date": "2025-06-26", "time": "00:00:04", "sender": "Eduardo Bolsonaro", "content": "[vídeo]", "type": "video", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 12, "timestamp": "2025-06-27T00:00:00", "date": "2025-06-27", "time": "00:00:00", "sender": "Eduardo Bolsonaro", "content": "[imagem]", "type": "image", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 13, "timestamp": "2025-06-27T00:00:01", "date": "2025-06-27", "time": "00:00:01", "sender": "Eduardo Bolsonaro", "content": "[imagem]", "type": "image", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 14, "timestamp": "2025-06-27T00:00:02", "date": "2025-06-27", "time": "00:00:02", "sender": "Eduardo Bolsonaro", "content": "[imagem]", "type": "image", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 15, "timestamp": "2025-06-27T00:00:03", "date": "2025-06-27", "time": "00:00:03", "sender": "Jair Bolsonaro", "content": "esqueça qualquer crítica ao Gilmar", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 16, "timestamp": "2025-07-07T00:00:00", "date": "2025-07-07", "time": "00:00:00", "sender": "Eduardo Bolsonaro", "content": "Se a anistia light passar, a última ajuda vinda dos EUA terá sido o post do Trump. Eles não irão mais ajudar", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 17, "timestamp": "2025-07-07T00:00:01", "date": "2025-07-07", "time": "00:00:01", "sender": "Eduardo Bolsonaro", "content": "Temos que decidir entre ajudar o Brasil, brecar o STF e resgatar a democracia OU enviar o pessoal que esteve num protesto que evoluiu para uma baderna para casa num semiaberto", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 18, "timestamp": "2025-07-07T00:00:02", "date": "2025-07-07", "time": "00:00:02", "sender": "Eduardo Bolsonaro", "content": "Neste cenário vc: não teria mais amparo dos EUA", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 19, "timestamp": "2025-07-07T00:00:03", "date": "2025-07-07", "time": "00:00:03", "sender": "Eduardo Bolsonaro", "content": "Tire do cálculo o apoio dos EUA, qual estratégia vc tem para atingir qual objetivo? É simples.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 20, "timestamp": "2025-07-09T00:00:00", "date": "2025-07-09", "time": "00:00:00", "sender": "Eduardo Bolsonaro", "content": "Quase meia noite no Brasil e ele postou de novo", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 21, "timestamp": "2025-07-09T00:00:01", "date": "2025-07-09", "time": "00:00:01", "sender": "Eduardo Bolsonaro", "content": "Me dá o ok, para eu enviar para a imprensa", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 22, "timestamp": "2025-07-10T00:00:00", "date": "2025-07-10", "time": "00:00:00", "sender": "Eduardo Bolsonaro", "content": "O cara mais poderoso do mundo está a seu favor. Fizemos a nossa parte", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 23, "timestamp": "2025-07-10T00:00:01", "date": "2025-07-10", "time": "00:00:01", "sender": "Jair Bolsonaro", "content": "[concordância]", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 24, "timestamp": "2025-07-10T00:00:02", "date": "2025-07-10", "time": "00:00:02", "sender": "Eduardo Bolsonaro", "content": "divulgar?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 25, "timestamp": "2025-07-10T00:00:03", "date": "2025-07-10", "time": "00:00:03", "sender": "Jair Bolsonaro", "content": "ok", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 26, "timestamp": "2025-07-11T00:00:00", "date": "2025-07-11", "time": "00:00:00", "sender": "Eduardo Bolsonaro", "content": "Só para te deixar ciente: Tarcísio nunca te ajudou em nada no STF. Sempre esteve de braço cruzado vendo vc se fuder e se aquecendo para 2026", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 27, "timestamp": "2025-07-11T00:00:01", "date": "2025-07-11", "time": "00:00:01", "sender": "Eduardo Bolsonaro", "content": "Tarcísio = Bolsonaro", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 28, "timestamp": "2025-07-11T00:00:02", "date": "2025-07-11", "time": "00:00:02", "sender": "Eduardo Bolsonaro", "content": "Agora ele quer posar de salvador da pátria.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 29, "timestamp": "2025-07-11T00:00:03", "date": "2025-07-11", "time": "00:00:03", "sender": "Eduardo Bolsonaro", "content": "uma “solução Tarcísio” passa longe de resolver o problema, vai apenas resolver a vida do pessoal da Faria Lima.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 30, "timestamp": "2025-07-15T00:00:00", "date": "2025-07-15", "time": "00:00:00", "sender": "Eduardo Bolsonaro", "content": "se vc disser algo sobre EUA que não se encaixar com o que estamos fazendo aqui, pode enterrar algumas ações", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 31, "timestamp": "2025-07-15T00:00:01", "date": "2025-07-15", "time": "00:00:01", "sender": "Eduardo Bolsonaro", "content": "Magnitsky no Moraes está muito muito próxima", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 32, "timestamp": "2025-07-15T00:00:02", "date": "2025-07-15", "time": "00:00:02", "sender": "Jair Bolsonaro", "content": "não iria aprofundar nada sobre sanções", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 33, "timestamp": "2025-07-15T00:00:03", "date": "2025-07-15", "time": "00:00:03", "sender": "Jair Bolsonaro", "content": "ficar na denúncia", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 34, "timestamp": "2025-07-15T00:00:04", "date": "2025-07-15", "time": "00:00:04", "sender": "Eduardo Bolsonaro", "content": "quero que vc olhe para mim e enxergue o Temer", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 35, "timestamp": "2025-07-15T00:00:05", "date": "2025-07-15", "time": "00:00:05", "sender": "Eduardo Bolsonaro", "content": "vc falaria isso do Temer?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 36, "timestamp": "2025-07-15T00:00:06", "date": "2025-07-15", "time": "00:00:06", "sender": "Jair Bolsonaro", "content": "resolver agora na CNN", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 37, "timestamp": "2025-07-15T00:00:07", "date": "2025-07-15", "time": "00:00:07", "sender": "Eduardo Bolsonaro", "content": "ou não fale nada", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 38, "timestamp": "2025-07-15T00:00:08", "date": "2025-07-15", "time": "00:00:08", "sender": "Eduardo Bolsonaro", "content": "me deixa de lado", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 39, "timestamp": "2025-07-17T00:00:00", "date": "2025-07-17", "time": "00:00:00", "sender": "Jair Bolsonaro", "content": "Chamada de vídeo — duração 02:51", "type": "call", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 40, "timestamp": "2025-07-17T00:00:01", "date": "2025-07-17", "time": "00:00:01", "sender": "Eduardo Bolsonaro", "content": "e claro, agradeça publicamente o Trump", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 41, "timestamp": "2025-07-17T00:00:02", "date": "2025-07-17", "time": "00:00:02", "sender": "Eduardo Bolsonaro", "content": "Quer que eu faça uma notinha ora soltar no seu X?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 42, "timestamp": "2025-07-17T00:00:03", "date": "2025-07-17", "time": "00:00:03", "sender": "Jair Bolsonaro", "content": "[vídeo]", "type": "video", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 43, "timestamp": "2025-07-17T00:00:04", "date": "2025-07-17", "time": "00:00:04", "sender": "Jair Bolsonaro", "content": "[imagem]", "type": "image", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 44, "timestamp": "2025-07-17T00:00:05", "date": "2025-07-17", "time": "00:00:05", "sender": "Jair Bolsonaro", "content": "Trump está avaliando uma série de sanções contra Alexandre de Moraes, diz The Washigton Post", "type": "text", "is_edited": false, "attachment": null, "urls": [] }
+  ],
+  "index": {
+    "dates": [
+      { "date": "2025-06-24", "message_count": 4, "first_message_id": 1, "last_message_id": 4 },
+      { "date": "2025-06-25", "message_count": 2, "first_message_id": 5, "last_message_id": 6 },
+      { "date": "2025-06-26", "message_count": 5, "first_message_id": 7, "last_message_id": 11 },
+      { "date": "2025-06-27", "message_count": 4, "first_message_id": 12, "last_message_id": 15 },
+      { "date": "2025-07-07", "message_count": 4, "first_message_id": 16, "last_message_id": 19 },
+      { "date": "2025-07-09", "message_count": 2, "first_message_id": 20, "last_message_id": 21 },
+      { "date": "2025-07-10", "message_count": 4, "first_message_id": 22, "last_message_id": 25 },
+      { "date": "2025-07-11", "message_count": 4, "first_message_id": 26, "last_message_id": 29 },
+      { "date": "2025-07-15", "message_count": 9, "first_message_id": 30, "last_message_id": 38 },
+      { "date": "2025-07-17", "message_count": 6, "first_message_id": 39, "last_message_id": 44 }
+    ]
+  }
+}

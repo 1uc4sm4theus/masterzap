@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "owner": "Jair Bolsonaro",
+    "participants": [
+      "Jair Bolsonaro",
+      "Meyer Nigri"
+    ],
+    "contact": "Meyer Nigri",
+    "phone": "5511999825150",
+    "saved_as": "Meyer Nigri",
+    "date_range": {
+      "start": "2022-06-26",
+      "end": "2022-06-26"
+    },
+    "total_messages": 6,
+    "source": "Conteúdo fornecido pelo usuário"
+  },
+  "messages": [
+    {
+      "id": 1,
+      "sender": "Jair Bolsonaro",
+      "sender_phone": "556182919606",
+      "timestamp": "2022-06-26T09:10:07-03:00",
+      "date": "2022-06-26",
+      "time": "09:10:07",
+      "type": "video",
+      "content": "[vídeo]",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "sender": "Jair Bolsonaro",
+      "sender_phone": "556182919606",
+      "timestamp": "2022-06-26T09:10:10-03:00",
+      "date": "2022-06-26",
+      "time": "09:10:10",
+      "type": "text",
+      "content": "...",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "sender": "Meyer Nigri",
+      "sender_phone": "5511999825150",
+      "timestamp": "2022-06-26T09:13:55-03:00",
+      "date": "2022-06-26",
+      "time": "09:13:55",
+      "type": "text",
+      "content": "Tá repassei pra vários grupos!",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "sender": "Meyer Nigri",
+      "sender_phone": "5511999825150",
+      "timestamp": "2022-06-26T09:21:52-03:00",
+      "date": "2022-06-26",
+      "time": "09:21:52",
+      "type": "text",
+      "content": "Faz tempo q não nos falamos. Como vc tá?",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "sender": "Meyer Nigri",
+      "sender_phone": "5511999825150",
+      "timestamp": "2022-06-26T09:22:23-03:00",
+      "date": "2022-06-26",
+      "time": "09:22:23",
+      "type": "text",
+      "content": "Abs de Veneza",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "sender": "Jair Bolsonaro",
+      "sender_phone": "556182919606",
+      "timestamp": "2022-06-26T11:24:55-03:00",
+      "date": "2022-06-26",
+      "time": "11:24:55",
+      "type": "link",
+      "content": "Barroso diz que 'não há clima' para STF discutir aborto",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2022-06-26",
+        "message_count": 6,
+        "first_message_id": 1,
+        "last_message_id": 6
+      }
+    ]
+  }
+}

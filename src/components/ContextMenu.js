@@ -16,7 +16,7 @@ import { ICON_COPY, ICON_SEND, ICON_INFO } from '../lib/icons.js';
  * @param {Record<string,string>} [options.senderNames] - map short names to full names
  * @returns {{ destroy: function }}
  */
-export function attachContextMenu(chatContainer, { senderNames = {}, incomingSender = '', conversationId = '' } = {}) {
+export function attachContextMenu(chatContainer, { senderNames = {}, incomingSender = '', outgoingSender = 'DV', conversationId = '' } = {}) {
   let menuEl = null;
   let drawerEl = null;
 
@@ -262,7 +262,7 @@ export function attachContextMenu(chatContainer, { senderNames = {}, incomingSen
     return {
       id,
       content,
-      sender: isOutgoing ? 'DV' : incomingSender,
+      sender: isOutgoing ? outgoingSender : incomingSender,
       date,
       time: meta.replace(/editada/i, '').trim(),
       type: 'text',

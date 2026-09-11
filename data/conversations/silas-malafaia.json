@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "owner": "Jair Bolsonaro",
+    "participants": [
+      "Jair Bolsonaro",
+      "Silas Malafaia"
+    ],
+    "contact": "Silas Malafaia",
+    "date_range": {
+      "start": "2025-07-11",
+      "end": "2025-07-15"
+    },
+    "total_messages": 7,
+    "source": "Conteúdo fornecido pelo usuário"
+  },
+  "messages": [
+    {
+      "id": 7,
+      "timestamp": "2025-07-11T00:00:00",
+      "date": "2025-07-11",
+      "time": "00:00:00",
+      "sender": "Silas Malafaia",
+      "content": "[áudio]",
+      "type": "audio",
+      "audio_src": "/assets/audio-silas-malafaia.mp3",
+      "is_edited": false,
+      "attachment": "audio-silas-malafaia.mp3",
+      "urls": []
+    },
+    {
+      "id": 1,
+      "timestamp": "2025-07-15T12:03:21",
+      "date": "2025-07-15",
+      "time": "12:03:21",
+      "sender": "Jair Bolsonaro",
+      "content": "[imagem/anexo — conteúdo não legível na reprodução pública]",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-07-15T12:10:29",
+      "date": "2025-07-15",
+      "time": "12:10:29",
+      "sender": "Jair Bolsonaro",
+      "content": "[imagem/anexo — conteúdo não legível na reprodução pública]",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-07-15T12:26:45",
+      "date": "2025-07-15",
+      "time": "12:26:45",
+      "sender": "Silas Malafaia",
+      "content": "PRESIDENTE! Minha simples opinião. Grave um video sobre a questão de Trump...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-07-15T12:26:48",
+      "date": "2025-07-15",
+      "time": "12:26:48",
+      "sender": "Silas Malafaia",
+      "content": "Atenção",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-07-15T12:28:14",
+      "date": "2025-07-15",
+      "time": "12:28:14",
+      "sender": "Silas Malafaia",
+      "content": "QUEM CALA, CONSENTE!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-07-15T12:59:13",
+      "date": "2025-07-15",
+      "time": "12:59:13",
+      "sender": "Silas Malafaia",
+      "content": "Faça o video eu faço a versão em inglês por IA...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-07-11",
+        "message_count": 1,
+        "first_message_id": 7,
+        "last_message_id": 7
+      },
+      {
+        "date": "2025-07-15",
+        "message_count": 6,
+        "first_message_id": 1,
+        "last_message_id": 6
+      }
+    ]
+  }
+}

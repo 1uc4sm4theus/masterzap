@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "owner": "Lula",
+    "participants": [
+      "Lula",
+      "Roberto Teixeira",
+      "Valmir Moraes"
+    ],
+    "contact": "Roberto Teixeira",
+    "date_range": {
+      "start": "2016-02-26",
+      "end": "2016-03-09"
+    },
+    "total_messages": 21,
+    "source": "Conteúdo fornecido pelo usuário",
+    "note": "As estruturas são baseadas em transcrições publicadas. Os WAVs são identificados no conteúdo, mas não foram fornecidos; as falas foram registradas como texto. Os horários das falas foram preenchidos tecnicamente em sequência a partir do início de cada ligação."
+  },
+  "messages": [
+    { "id": 1, "timestamp": "2016-02-26T17:23:32", "date": "2016-02-26", "time": "17:23:32", "sender": "Lula", "content": "Chamada de voz — arquivo 80582239.WAV", "type": "call", "is_edited": false, "attachment": "80582239.WAV", "urls": [] },
+    { "id": 2, "timestamp": "2016-02-26T17:23:33", "date": "2016-02-26", "time": "17:23:33", "sender": "Lula", "content": "Não vou conseguir encontrar o Jaques pessoalmente.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 3, "timestamp": "2016-02-26T17:23:34", "date": "2016-02-26", "time": "17:23:34", "sender": "Lula", "content": "Eu falei com o Cristiano.\nEle vai ligar para ele.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 4, "timestamp": "2016-02-26T17:23:35", "date": "2016-02-26", "time": "17:23:35", "sender": "Lula", "content": "É para dizer que ele tem que conversar\ncom uma pessoa lá, que é urgente.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 5, "timestamp": "2016-02-26T17:23:36", "date": "2016-02-26", "time": "17:23:36", "sender": "Roberto Teixeira", "content": "Tá.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 6, "timestamp": "2016-02-26T17:23:37", "date": "2016-02-26", "time": "17:23:37", "sender": "Lula", "content": "Não! Mas você tem que ligar para ele agora!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 7, "timestamp": "2016-02-26T17:44:08", "date": "2016-02-26", "time": "17:44:08", "sender": "Lula", "content": "Chamada de voz — arquivo 80582729.WAV", "type": "call", "is_edited": false, "attachment": "80582729.WAV", "urls": [] },
+    { "id": 8, "timestamp": "2016-02-26T17:44:09", "date": "2016-02-26", "time": "17:44:09", "sender": "Valmir Moraes", "content": "A pessoa já falou com o Cristiano.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 9, "timestamp": "2016-02-26T17:44:10", "date": "2016-02-26", "time": "17:44:10", "sender": "Lula", "content": "O nosso amigo já falou com o nosso amigo?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 10, "timestamp": "2016-02-26T17:44:11", "date": "2016-02-26", "time": "17:44:11", "sender": "Roberto Teixeira", "content": "Já está tudo encaminhado.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 11, "timestamp": "2016-02-26T17:44:12", "date": "2016-02-26", "time": "17:44:12", "sender": "Lula", "content": "Tá bom.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 12, "timestamp": "2016-03-09T19:22:49", "date": "2016-03-09", "time": "19:22:49", "sender": "Lula", "content": "Chamada de voz — duração 03:10 — arquivo 80829672.WAV", "type": "call", "is_edited": false, "attachment": "80829672.WAV", "urls": [] },
+    { "id": 13, "timestamp": "2016-03-09T19:22:50", "date": "2016-03-09", "time": "19:22:50", "sender": "Lula", "content": "Que palhaçada que é essa que o Ministério Público\nde São Paulo me denunciou?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 14, "timestamp": "2016-03-09T19:22:51", "date": "2016-03-09", "time": "19:22:51", "sender": "Roberto Teixeira", "content": "...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 15, "timestamp": "2016-03-09T19:22:52", "date": "2016-03-09", "time": "19:22:52", "sender": "Lula", "content": "Quem fez isso?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 16, "timestamp": "2016-03-09T19:22:53", "date": "2016-03-09", "time": "19:22:53", "sender": "Roberto Teixeira", "content": "Conserino.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 17, "timestamp": "2016-03-09T19:22:54", "date": "2016-03-09", "time": "19:22:54", "sender": "Lula", "content": "Mas que porra é essa?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 18, "timestamp": "2016-03-09T19:22:55", "date": "2016-03-09", "time": "19:22:55", "sender": "Roberto Teixeira", "content": "...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 19, "timestamp": "2016-03-09T19:22:56", "date": "2016-03-09", "time": "19:22:56", "sender": "Lula", "content": "Isso é uma acusação de lavagem de dinheiro?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 20, "timestamp": "2016-03-09T19:22:57", "date": "2016-03-09", "time": "19:22:57", "sender": "Roberto Teixeira", "content": "É.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 21, "timestamp": "2016-03-09T19:22:58", "date": "2016-03-09", "time": "19:22:58", "sender": "Lula", "content": "Eu não estou entendendo.", "type": "text", "is_edited": false, "attachment": null, "urls": [] }
+  ],
+  "index": {
+    "dates": [
+      { "date": "2016-02-26", "message_count": 11, "first_message_id": 1, "last_message_id": 11 },
+      { "date": "2016-03-09", "message_count": 10, "first_message_id": 12, "last_message_id": 21 }
+    ]
+  }
+}

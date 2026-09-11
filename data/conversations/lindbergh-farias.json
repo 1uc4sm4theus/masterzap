@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "owner": "Lula",
+    "participants": [
+      "Lula",
+      "Lindbergh Farias"
+    ],
+    "contact": "Lindbergh Farias",
+    "date_range": {
+      "start": "2016-02-27",
+      "end": "2016-03-02"
+    },
+    "total_messages": 34,
+    "source": "Conteúdo fornecido pelo usuário",
+    "note": "Os blocos são estruturas baseadas em transcrições publicadas, não reproduções integrais palavra por palavra. Os horários das falas foram preenchidos tecnicamente em sequência a partir do início informado de cada conversa."
+  },
+  "messages": [
+    { "id": 1, "timestamp": "2016-02-27T22:38:45", "date": "2016-02-27", "time": "22:38:45", "sender": "Lula", "content": "Chamada de voz — duração 03:13", "type": "call", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 2, "timestamp": "2016-02-27T22:38:46", "date": "2016-02-27", "time": "22:38:46", "sender": "Lindbergh Farias", "content": "Presidente, parabéns pelo discurso.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 3, "timestamp": "2016-02-27T22:38:47", "date": "2016-02-27", "time": "22:38:47", "sender": "Lula", "content": "Obrigado.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 4, "timestamp": "2016-02-27T22:38:48", "date": "2016-02-27", "time": "22:38:48", "sender": "Lindbergh Farias", "content": "A bancada do PT pode ser a redenção do nosso partido.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 5, "timestamp": "2016-02-27T22:38:49", "date": "2016-02-27", "time": "22:38:49", "sender": "Lula", "content": "É ir pro cacete, não tem mais jeito.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 6, "timestamp": "2016-02-27T22:38:50", "date": "2016-02-27", "time": "22:38:50", "sender": "system", "content": "[...]", "type": "system", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 7, "timestamp": "2016-02-27T22:38:51", "date": "2016-02-27", "time": "22:38:51", "sender": "Lindbergh Farias", "content": "A Jandira também está dando os parabéns.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 8, "timestamp": "2016-02-27T22:38:52", "date": "2016-02-27", "time": "22:38:52", "sender": "Lula", "content": "Ela tem sido muito leal, muito companheira.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 9, "timestamp": "2016-02-27T22:38:53", "date": "2016-02-27", "time": "22:38:53", "sender": "system", "content": "[...]", "type": "system", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 10, "timestamp": "2016-02-27T22:38:54", "date": "2016-02-27", "time": "22:38:54", "sender": "Lula", "content": "Agora o companheiro Wadih Damous tem a história do promotor de Rondônia...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 11, "timestamp": "2016-02-27T22:38:55", "date": "2016-02-27", "time": "22:38:55", "sender": "system", "content": "[...]", "type": "system", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 12, "timestamp": "2016-02-27T22:38:56", "date": "2016-02-27", "time": "22:38:56", "sender": "Lindbergh Farias", "content": "Ele está falando do promotor de Rondônia e Roraima...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 13, "timestamp": "2016-02-27T22:38:57", "date": "2016-02-27", "time": "22:38:57", "sender": "system", "content": "[...]", "type": "system", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 14, "timestamp": "2016-02-27T22:38:58", "date": "2016-02-27", "time": "22:38:58", "sender": "Lula", "content": "Tinha vascaíno pra caralho lá, hein?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 15, "timestamp": "2016-02-27T22:38:59", "date": "2016-02-27", "time": "22:38:59", "sender": "Lindbergh Farias", "content": "Tinha muito vascaíno, pô! Nós adoramos, presidente! Nós vamos para a guerra!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 16, "timestamp": "2016-02-27T22:39:00", "date": "2016-02-27", "time": "22:39:00", "sender": "Lula", "content": "Tá bom, querido. Um abraço.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 17, "timestamp": "2016-02-27T22:39:01", "date": "2016-02-27", "time": "22:39:01", "sender": "Lindbergh Farias", "content": "Tchau.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 18, "timestamp": "2016-03-02T09:13:11", "date": "2016-03-02", "time": "09:13:11", "sender": "Lindbergh Farias", "content": "Presidente, nós vamos ficar em cima do Aécio.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 19, "timestamp": "2016-03-02T09:13:12", "date": "2016-03-02", "time": "09:13:12", "sender": "Lula", "content": "Uhum.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 20, "timestamp": "2016-03-02T09:13:13", "date": "2016-03-02", "time": "09:13:13", "sender": "Lindbergh Farias", "content": "Já estava um pouco em cima, agora vou ficar marcando ele em cima.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 21, "timestamp": "2016-03-02T09:13:14", "date": "2016-03-02", "time": "09:13:14", "sender": "Lula", "content": "Olha, eu vou contar uma história para você.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 22, "timestamp": "2016-03-02T09:13:15", "date": "2016-03-02", "time": "09:13:15", "sender": "Lula", "content": "Se a Andrade Gutierrez, no depoimento deles, na delação da Andrade Gutierrez...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 23, "timestamp": "2016-03-02T09:13:16", "date": "2016-03-02", "time": "09:13:16", "sender": "Lula", "content": "Eu estou falando nesse telefone porque quero ver se a Polícia Federal está gravando...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 24, "timestamp": "2016-03-02T09:13:17", "date": "2016-03-02", "time": "09:13:17", "sender": "Lula", "content": "(risos)", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 25, "timestamp": "2016-03-02T09:13:18", "date": "2016-03-02", "time": "09:13:18", "sender": "Lula", "content": "Quero ver se está grampeado!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 26, "timestamp": "2016-03-02T09:13:19", "date": "2016-03-02", "time": "09:13:19", "sender": "Lula", "content": "Se na delação da Andrade Gutierrez não aparecer o PSDB nem o Aécio, qualquer brasileiro pode dizer que a delação é uma farsa, uma mentira.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 27, "timestamp": "2016-03-02T09:13:20", "date": "2016-03-02", "time": "09:13:20", "sender": "Lindbergh Farias", "content": "Deixa eu te contar sobre Aécio!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 28, "timestamp": "2016-03-02T09:13:21", "date": "2016-03-02", "time": "09:13:21", "sender": "Lindbergh Farias", "content": "Sabe aquela história da Cemig com a Andrade Gutierrez?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 29, "timestamp": "2016-03-02T09:13:22", "date": "2016-03-02", "time": "09:13:22", "sender": "Lindbergh Farias", "content": "É o maior escândalo de Aécio.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 30, "timestamp": "2016-03-02T09:13:23", "date": "2016-03-02", "time": "09:13:23", "sender": "Lindbergh Farias", "content": "A relação da Cemig com Aécio é umbilical.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 31, "timestamp": "2016-03-02T09:13:24", "date": "2016-03-02", "time": "09:13:24", "sender": "Lula", "content": "Eu sei!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 32, "timestamp": "2016-03-02T09:13:25", "date": "2016-03-02", "time": "09:13:25", "sender": "Lula", "content": "Se a Andrade Gutierrez não acusar o PSDB nessa delação deles, é porque é uma farsa!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 33, "timestamp": "2016-03-02T09:13:26", "date": "2016-03-02", "time": "09:13:26", "sender": "Lindbergh Farias", "content": "No dia que sair essa delação eu vou com esse discurso!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 34, "timestamp": "2016-03-02T09:13:27", "date": "2016-03-02", "time": "09:13:27", "sender": "Lindbergh Farias", "content": "Se não sair eu vou para cima.", "type": "text", "is_edited": false, "attachment": null, "urls": [] }
+  ],
+  "index": {
+    "dates": [
+      { "date": "2016-02-27", "message_count": 17, "first_message_id": 1, "last_message_id": 17 },
+      { "date": "2016-03-02", "message_count": 17, "first_message_id": 18, "last_message_id": 34 }
+    ]
+  }
+}

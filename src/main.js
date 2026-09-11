@@ -24,6 +24,7 @@ import { showImagePreview } from './components/ImagePreview.js';
 import { renderCallsPanel } from './components/CallsPanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
+import { APP_USERS, conversationsForUser } from './lib/users.js';
 
 // ── Active state (only one thing at a time) ──────
 let activeLoader = null;
@@ -37,6 +38,9 @@ let pendingScrollTarget = null;
 let mainAreaSavedContent = null;
 let currentConversationId = null;
 let activeImagePreview = null;
+let sidebar = null;
+let router = null;
+let activeUser = APP_USERS[0];
 
 async function init() {
   const loadingScreen = document.getElementById('loading-screen');
@@ -81,10 +85,21 @@ async function init() {
     'stella-vorcaro': '/assets/avatar-stella-vorcaro.jpg',
     'luiz-renno': '/assets/avatar-luiz-renno.jpg',
     'ana-matos-mkt': '/assets/avatar-ana-matos-mkt.jpg',
+    'eduardo-bolsonaro': '/assets/avatar-eduardo-bolsonaro.jpg',
+    'jair-bolsonaro': '/assets/avatar-mauro-cid.jpg',
+    'meyer-nigri': '/assets/avatar-meyer-nigri.jpg',
+    'silas-malafaia': '/assets/avatar-silas-malafaia.jpg',
+    'dilma-rousseff': '/assets/avatar-dilma-rousseff.jpg',
+    'jaques-wagner': '/assets/avatar-jaques-wagner.jpg',
+    'lindbergh-farias': '/assets/avatar-lindbergh-farias.jpg',
+    'roberto-teixeira': '/assets/avatar-roberto-teixeira.jpg',
     // The chat Vorcaro kept with himself — his own photo, as WhatsApp shows it.
     'dv-self': '/assets/avatar-dv.jpg',
   };
-  const SENDER_NAMES = { 'DV': 'Daniel Vocaro' };
+  const SENDER_NAMES = {
+    DV: 'Daniel Vorcaro',
+    'Jair Bolsonaro': 'Jair Bolsonaro',
+  };
   // Per-conversation media tallies come from conversations.json (built by
   // scripts/split_data.py); this is only the fallback for older data.
   const MEDIA_COUNTS = { images: 0, videos: 0, documents: 0 };
@@ -272,8 +287,8 @@ async function init() {
      * The main area is exactly the right frame for this: on mobile it fills the
      * screen, and on desktop it is the chat without the sidebar.
      */
-    const contactName = conversation.participants.find(p => p !== 'DV')
-      || conversation.participants[0];
+    const contactName = conversation.contact || conversation.participants[0];
+    const outgoingSender = conversation.owner || activeUser.owner;
 
     async function shareScreenshot() {
       const result = await shareChatScreenshot(mainArea, contactName);
@@ -325,6 +340,8 @@ async function init() {
       conversation,
       dateIndex,
       loadMessages: (date) => store.getMessages(id, date),
+      outgoingSender,
+      ownerName: activeUser.name,
       onBack: () => router.navigate('home'),
       onCloseChat: () => router.navigate('home'),
       onAbout: openSettings,
@@ -335,7 +352,7 @@ async function init() {
       media: {
         conversations: store.getConversations(),
         avatarFor: (convId) => AVATARS[convId] || null,
-        selfAvatar: AVATARS['dv-self'],
+        selfAvatar: activeUser.avatar || null,
         contactAvatar: AVATARS[conversation.id] || null,
         contactName,
         onOpenChat: (convId) => router.navigate('chat', convId),
@@ -370,10 +387,11 @@ async function init() {
 
     const messagesArea = mainArea.querySelector('.chat-messages');
     if (messagesArea) {
-      const incomingSender = conversation.participants.find(p => p !== 'DV') || '';
+      const incomingSender = conversation.contact || conversation.participants[0] || '';
       activeContextMenu = attachContextMenu(messagesArea, {
         senderNames: SENDER_NAMES,
         incomingSender,
+        outgoingSender,
         conversationId: id,
       });
     }
@@ -466,7 +484,8 @@ async function init() {
 
   const navRail = renderNavRail(container, {
     onCalls: () => router.navigate('calls'),
-    avatarSrc: '/assets/avatar-dv.jpg',
+    avatarSrc: activeUser.avatar,
+    avatarName: activeUser.name,
     onSettings: openSettings,
     onChat: () => {
       // From the calls screen, this is the way back to the list.
@@ -477,46 +496,90 @@ async function init() {
   });
 
   const navAvatar = navRail.querySelector('.nav-rail-avatar');
-  if (navAvatar) navAvatar.addEventListener('click', openProfile);
+  if (navAvatar) navAvatar.addEventListener('click', toggleUserSwitcher);
 
   // ── Wire sidebar ───────────────────────────────────
 
-  const sidebar = renderSidebar(container, {
-    conversations: store.getConversations(),
-    readConversations,
-    onProfile: openProfile,
-    onAbout: openSettings,
-    onExportAll: () => downloadFile(EXPORT_ALL_URL),
-    onCalls: () => router.navigate('calls'),
-    onChats: () => router.navigate('home'),
-    onSelect: (id) => {
-      // Close profile/settings if open before navigating
-      closeProfile();
-      closeSettings();
-      router.navigate('chat', id);
-    },
-  });
+  function mountSidebar() {
+    if (activeSearch) { activeSearch.destroy?.(); activeSearch = null; }
+    if (sidebar) sidebar.remove();
 
-  // Lock message link → open DV profile
-  const lockLink = sidebar.querySelector('.sidebar-lock-link');
-  if (lockLink) lockLink.addEventListener('click', openProfile);
-
-  // Sidebar search
-  const conversations = store.getConversations();
-  if (conversations.length > 0) {
-    activeSearch = attachSearch(sidebar, conversations[0].id, (messageId, date) => {
-      if (activeLoader) {
-        activeLoader.scrollToMessage(messageId, date);
-      } else {
-        pendingScrollTarget = { messageId, date };
-        router.navigate('chat', conversations[0].id);
-      }
+    const conversations = conversationsForUser(activeUser, store.getConversations());
+    sidebar = renderSidebar(container, {
+      conversations,
+      readConversations,
+      onProfile: openProfile,
+      onAbout: openSettings,
+      onExportAll: () => downloadFile(EXPORT_ALL_URL),
+      onCalls: () => router.navigate('calls'),
+      onChats: () => router.navigate('home'),
+      onUserSwitch: toggleUserSwitcher,
+      activeUser,
+      onSelect: (id) => {
+        closeProfile();
+        closeSettings();
+        router.navigate('chat', id);
+      },
     });
+    if (mainArea.parentNode === container) container.insertBefore(sidebar, mainArea);
+
+    const lockLink = sidebar.querySelector('.sidebar-lock-link');
+    if (lockLink) lockLink.addEventListener('click', openProfile);
+
+    if (conversations.length > 0) {
+      activeSearch = attachSearch(sidebar, conversations[0].id, (messageId, date) => {
+        if (activeLoader) {
+          activeLoader.scrollToMessage(messageId, date);
+        } else {
+          pendingScrollTarget = { messageId, date };
+          router.navigate('chat', conversations[0].id);
+        }
+      });
+    }
   }
+
+  function switchUser(userId) {
+    const nextUser = APP_USERS.find(user => user.id === userId);
+    if (!nextUser || nextUser.id === activeUser.id) return toggleUserSwitcher();
+    container.querySelector('.user-switcher')?.remove();
+    activeUser = nextUser;
+    navRail.setAvatar?.({ src: activeUser.avatar, name: activeUser.name });
+    closeAll();
+    mountSidebar();
+    router.navigate('home');
+  }
+
+  function toggleUserSwitcher() {
+    const existing = container.querySelector('.user-switcher');
+    if (existing) { existing.remove(); return; }
+
+    const switcher = document.createElement('div');
+    switcher.className = 'user-switcher';
+    switcher.setAttribute('role', 'menu');
+
+    const title = document.createElement('div');
+    title.className = 'user-switcher-title';
+    title.textContent = 'Trocar usuário';
+    switcher.appendChild(title);
+
+    for (const user of APP_USERS) {
+      const option = document.createElement('button');
+      option.className = 'user-switcher-option';
+      option.setAttribute('role', 'menuitem');
+      option.classList.toggle('active', user.id === activeUser.id);
+      option.textContent = user.name;
+      option.addEventListener('click', () => switchUser(user.id));
+      switcher.appendChild(option);
+    }
+
+    container.appendChild(switcher);
+  }
+
+  mountSidebar();
 
   // ── Router ─────────────────────────────────────────
 
-  const router = new HashRouter();
+  router = new HashRouter();
   router.on('home', () => { sidebar.showChats?.(); navRail.setActive?.('chats'); showEmptyState(); });
 
   // The calls screen takes the list's place; the log is one file, fetched

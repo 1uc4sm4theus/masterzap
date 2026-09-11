@@ -37,7 +37,8 @@ describe('conversations.json', () => {
 
   it('names the contact as a field, not as "the participant that is not DV"', () => {
     for (const conv of conversations) {
-      expect(conv.contact, conv.id).toBe(conv.participants.find(p => p !== 'DV') || conv.participants[0]);
+      const owner = conv.owner || 'DV';
+      expect(conv.contact, conv.id).toBe(conv.participants.find(p => p !== owner) || conv.participants[0]);
     }
   });
 

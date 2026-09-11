@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "owner": "Jair Bolsonaro",
+    "participants": [
+      "Jair Bolsonaro",
+      "Mauro Cid"
+    ],
+    "contact": "Mauro Cid",
+    "date_range": {
+      "start": "2022-12-29",
+      "end": "2023-01-30"
+    },
+    "total_messages": 6,
+    "source": "Conteúdo fornecido pelo usuário",
+    "note": "Horários não informados no material fornecido; 00:00:00 é um horário técnico. Outras datas foram identificadas pela PF/UOL, mas não tiveram conteúdo ou data detalhados."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2022-12-29T00:00:00",
+      "date": "2022-12-29",
+      "time": "00:00:00",
+      "sender": "Mauro Cid",
+      "content": "O senhor vai trazer árvore e o barco?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2022-12-29T00:00:01",
+      "date": "2022-12-29",
+      "time": "00:00:01",
+      "sender": "Jair Bolsonaro",
+      "content": "[Mensagem apagada]",
+      "type": "deleted",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2022-12-29T00:00:02",
+      "date": "2022-12-29",
+      "time": "00:00:02",
+      "sender": "Jair Bolsonaro",
+      "content": "[Mensagem apagada]",
+      "type": "deleted",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2022-12-29T00:00:03",
+      "date": "2022-12-29",
+      "time": "00:00:03",
+      "sender": "Mauro Cid",
+      "content": "Sim, senhor",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2023-01-30T00:00:00",
+      "date": "2023-01-30",
+      "time": "00:00:00",
+      "sender": "Mauro Cid",
+      "content": "[conteúdo/reportagem]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2023-01-30T00:00:01",
+      "date": "2023-01-30",
+      "time": "00:00:01",
+      "sender": "Jair Bolsonaro",
+      "content": "Cid, a investigação sobre você é pra ver\nse me pega...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2022-12-29",
+        "message_count": 4,
+        "first_message_id": 1,
+        "last_message_id": 4
+      },
+      {
+        "date": "2023-01-30",
+        "message_count": 2,
+        "first_message_id": 5,
+        "last_message_id": 6
+      }
+    ]
+  }
+}

@@ -55,6 +55,16 @@ export function sourceOf(entry) {
       how: 'Transcrição manual das imagens do laudo; cada mensagem cita a página e a figura de origem.',
     };
   }
+  if (entry.source === 'Conteúdo fornecido pelo usuário') {
+    return {
+      kind: 'user-provided',
+      label: entry.source,
+      document: null,
+      document_sha256: null,
+      made_public: null,
+      how: 'Conteúdo fornecido diretamente para inclusão no projeto.',
+    };
+  }
   return {
     kind: 'leak',
     label: 'Vazamento das conversas com Martha Graeff, março de 2026',
@@ -65,7 +75,7 @@ export function sourceOf(entry) {
   };
 }
 
-export const contactOf = (entry) => entry.participants.find(p => p !== 'DV') || entry.participants[0];
+export const contactOf = (entry) => entry.contact || entry.participants.find(p => p !== (entry.owner || 'DV')) || entry.participants[0];
 
 /** The person, as opposed to the name the phone saved them under. */
 export const whoIs = (entry, profile) =>

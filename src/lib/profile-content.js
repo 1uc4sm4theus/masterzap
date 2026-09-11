@@ -386,6 +386,96 @@ export const OTHER_PROFILES = {
     }],
   },
 
+  'flavio-bolsonaro': {
+    sections: [{
+      title: 'Flávio Bolsonaro',
+      paragraphs: [
+        { text: 'Esta conversa foi adicionada a partir do conteúdo fornecido para o MasterWhats. Os horários originais não foram informados.' },
+      ],
+    }],
+  },
+
+  'jair-bolsonaro': {
+    sections: [{
+      title: 'Mauro Cid',
+      paragraphs: [
+        { text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Jair Bolsonaro e Mauro Cid. Os horários originais não foram informados.' },
+      ],
+    }],
+  },
+
+  'silas-malafaia': {
+    sections: [{
+      title: 'Silas Malafaia',
+      paragraphs: [
+        { text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Jair Bolsonaro e Silas Malafaia.' },
+      ],
+    }],
+  },
+
+  'eduardo-bolsonaro': {
+    sections: [{
+      title: 'Eduardo Bolsonaro',
+      paragraphs: [
+        { text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Jair Bolsonaro e Eduardo Bolsonaro. Os horários originais não foram informados.' },
+      ],
+    }],
+  },
+
+  'dilma-rousseff': {
+    sections: [{
+      title: 'Dilma Rousseff',
+      paragraphs: [
+        { text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Lula e Dilma Rousseff. A transcrição é de 04/03/2016; o áudio fornecido foi datado de 16/03/2016.' },
+      ],
+    }],
+  },
+
+  'jaques-wagner': {
+    sections: [{
+      title: 'Jaques Wagner',
+      paragraphs: [
+        { text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Lula e Jaques Wagner. Os horários originais não foram informados na maior parte dos trechos.' },
+      ],
+    }],
+  },
+
+  'lindbergh-farias': {
+    sections: [{
+      title: 'Lindbergh Farias',
+      paragraphs: [
+        { text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Lula e Lindbergh Farias. Os blocos são estruturas baseadas em transcrições publicadas, não reproduções integrais palavra por palavra.' },
+      ],
+    }],
+  },
+
+  'roberto-teixeira': {
+    sections: [{
+      title: 'Roberto Teixeira',
+      paragraphs: [
+        { text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Lula e Roberto Teixeira, com participação de Valmir Moraes em dois blocos. As estruturas são baseadas em transcrições publicadas.' },
+      ],
+    }],
+  },
+
+  'lurian-lula-da-silva': {
+    sections: [{
+      title: 'Lurian Lula da Silva',
+      paragraphs: [
+        { text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Lula e Lurian Cordeiro Lula da Silva, com intermediação de Valmir Moraes da Silva e Claudia.' },
+      ],
+    }],
+  },
+
+  'nikolas-ferreira': {
+    sections: [{
+      title: 'Nikolas Ferreira',
+      paragraphs: [
+        { text: 'Esta conversa foi adicionada a partir do áudio fornecido para o MasterWhats. A data original da mensagem não foi informada.' },
+      ],
+    }],
+  },
+
   'dv-self': {
     about: 'Mensagens salvas',
     sections: [{
@@ -406,6 +496,12 @@ export const OTHER_PROFILES = {
 export const CONTACT_PROFILES = {
   'martha-graeff': MARTHA_PROFILE,
   'alexandre-de-moraes': MORAES_PROFILE,
+  'meyer-nigri': {
+    sections: [{
+      title: 'Meyer Nigri',
+      paragraphs: [{ text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Jair Bolsonaro e Meyer Nigri.' }],
+    }],
+  },
   ...OTHER_PROFILES,
 };
 

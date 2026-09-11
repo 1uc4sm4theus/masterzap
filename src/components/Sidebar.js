@@ -22,7 +22,7 @@ export const FAVORITE_CONVERSATIONS = new Set(['alexandre-de-moraes', 'martha-gr
  * @param {function} options.onSelect - called with conversation id
  * @param {Set<string>} [options.readConversations] - ids already opened
  */
-export function renderSidebar(container, { conversations, onSelect, onProfile, onAbout, onExportAll, onCalls, onChats, readConversations = new Set() }) {
+export function renderSidebar(container, { conversations, onSelect, onProfile, onAbout, onExportAll, onCalls, onChats, onUserSwitch, activeUser, readConversations = new Set() }) {
   const el = document.createElement('aside');
   el.className = 'sidebar';
   el.setAttribute('role', 'navigation');
@@ -32,6 +32,7 @@ export function renderSidebar(container, { conversations, onSelect, onProfile, o
   el.innerHTML = `
     <div class="sidebar-header">
       <span class="sidebar-header-title">MasterWhats</span>
+      <button class="sidebar-user-btn" aria-label="Trocar usuário" title="Trocar usuário"></button>
       <button class="sidebar-menu-btn" aria-label="Menu">${ICON_MEETBALL}</button>
     </div>
     <div class="sidebar-search">
@@ -60,6 +61,21 @@ export function renderSidebar(container, { conversations, onSelect, onProfile, o
   const list = el.querySelector('.conversation-list');
   const searchInput = el.querySelector('.sidebar-search-input');
   const searchClear = el.querySelector('.sidebar-search-clear');
+  const userBtn = el.querySelector('.sidebar-user-btn');
+
+  if (activeUser && userBtn) {
+    userBtn.title = activeUser.name;
+    userBtn.setAttribute('aria-label', `Trocar usuário: ${activeUser.name}`);
+    if (activeUser.avatar) {
+      const img = document.createElement('img');
+      img.src = activeUser.avatar;
+      img.alt = activeUser.name;
+      userBtn.appendChild(img);
+    } else {
+      userBtn.innerHTML = defaultAvatarSvg(activeUser.name, 32);
+    }
+    userBtn.addEventListener('click', onUserSwitch);
+  }
 
   // Show/hide clear button based on input content
   searchInput.addEventListener('input', () => {
@@ -88,9 +104,7 @@ export function renderSidebar(container, { conversations, onSelect, onProfile, o
     const lastTimeLabel = lastDate ? formatRelativeDate(lastDate) : '';
 
     const lastPreview = escapeHtml(conv.last_message?.content || '');
-    const displayName = escapeHtml(
-      conv.participants.find(p => p !== 'DV') || conv.participants[0]
-    );
+    const displayName = escapeHtml(conv.contact || conv.participants[0]);
     const msgCount = conv.total_messages ? formatNumber(conv.total_messages) : '';
 
     // Use real avatar if available, otherwise default SVG

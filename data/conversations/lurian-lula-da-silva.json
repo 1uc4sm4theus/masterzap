@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "owner": "Lula",
+    "participants": [
+      "Lula",
+      "Lurian Lula da Silva",
+      "Valmir Moraes da Silva",
+      "Claudia"
+    ],
+    "contact": "Lurian Lula da Silva",
+    "date_range": {
+      "start": "2016-03-09",
+      "end": "2016-03-09"
+    },
+    "total_messages": 16,
+    "source": "Conteúdo fornecido pelo usuário",
+    "note": "A chamada registra a intermediação de Valmir Moraes da Silva e Claudia. Os horários das falas foram preenchidos tecnicamente em sequência a partir do início informado."
+  },
+  "messages": [
+    { "id": 1, "timestamp": "2016-03-09T19:17:04", "date": "2016-03-09", "time": "19:17:04", "sender": "Lula", "content": "Chamada de voz — duração 01:05 — arquivo 80829474.WAV", "type": "call", "is_edited": false, "attachment": "80829474.WAV", "urls": [] },
+    { "id": 2, "timestamp": "2016-03-09T19:17:05", "date": "2016-03-09", "time": "19:17:05", "sender": "Lurian Lula da Silva", "content": "Oi.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 3, "timestamp": "2016-03-09T19:17:06", "date": "2016-03-09", "time": "19:17:06", "sender": "Lula", "content": "Ô, filha!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 4, "timestamp": "2016-03-09T19:17:07", "date": "2016-03-09", "time": "19:17:07", "sender": "Lurian Lula da Silva", "content": "Oi, gato!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 5, "timestamp": "2016-03-09T19:17:08", "date": "2016-03-09", "time": "19:17:08", "sender": "Lula", "content": "Lamentavelmente não deu certo, filha!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 6, "timestamp": "2016-03-09T19:17:09", "date": "2016-03-09", "time": "19:17:09", "sender": "Lurian Lula da Silva", "content": "Eu sei. E amanhã, de manhã?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 7, "timestamp": "2016-03-09T19:17:10", "date": "2016-03-09", "time": "19:17:10", "sender": "Lula", "content": "Você vai dormir aí, né?!", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 8, "timestamp": "2016-03-09T19:17:11", "date": "2016-03-09", "time": "19:17:11", "sender": "system", "content": "[Os dois combinam tomar café da manhã no dia seguinte.]", "type": "system", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 9, "timestamp": "2016-03-09T19:17:12", "date": "2016-03-09", "time": "19:17:12", "sender": "Lurian Lula da Silva", "content": "Amanhã a gente pode tomar café, 09:30?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 10, "timestamp": "2016-03-09T19:17:13", "date": "2016-03-09", "time": "19:17:13", "sender": "Lula", "content": "Pode, eu vou chegar mais cedo. Pode ser 09:30.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 11, "timestamp": "2016-03-09T19:17:14", "date": "2016-03-09", "time": "19:17:14", "sender": "Lula", "content": "Eu tenho os Sem Terra, depois tenho um ministro...", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 12, "timestamp": "2016-03-09T19:17:15", "date": "2016-03-09", "time": "19:17:15", "sender": "Lurian Lula da Silva", "content": "Então pode ser às 9h?", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 13, "timestamp": "2016-03-09T19:17:16", "date": "2016-03-09", "time": "19:17:16", "sender": "Lula", "content": "Pode. Fala pra Claudia.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 14, "timestamp": "2016-03-09T19:17:17", "date": "2016-03-09", "time": "19:17:17", "sender": "Lurian Lula da Silva", "content": "Tá bom. Amanhã às 9h, eu tô aqui.\nUm beijo.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 15, "timestamp": "2016-03-09T19:17:18", "date": "2016-03-09", "time": "19:17:18", "sender": "Lula", "content": "Tá, outro. Tchau.", "type": "text", "is_edited": false, "attachment": null, "urls": [] },
+    { "id": 16, "timestamp": "2016-03-09T19:17:19", "date": "2016-03-09", "time": "19:17:19", "sender": "Lurian Lula da Silva", "content": "Te amo. Tchau.", "type": "text", "is_edited": false, "attachment": null, "urls": [] }
+  ],
+  "index": {
+    "dates": [
+      { "date": "2016-03-09", "message_count": 16, "first_message_id": 1, "last_message_id": 16 }
+    ]
+  }
+}

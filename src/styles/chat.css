@@ -355,6 +355,7 @@
   gap: 2px;
   flex: 1;
   height: 28px;
+  cursor: pointer;
 }
 
 .chat-audio-bar {
@@ -362,6 +363,13 @@
   min-height: 4px;
   border-radius: 1.5px;
   background-color: var(--WDS-warm-gray-300);
+  transition: background-color 100ms, opacity 100ms;
+  opacity: .7;
+}
+
+.chat-audio-bar.played {
+  background-color: var(--WDS-accent);
+  opacity: 1;
 }
 
 .outgoing .chat-audio-bar {
@@ -672,6 +680,10 @@
   max-width: 320px;
 }
 
+.chat-audio-native {
+  display: none;
+}
+
 .chat-audio-row {
   display: flex;
   align-items: center;
@@ -690,6 +702,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: color 120ms, background-color 120ms;
+}
+
+.chat-audio-play:hover:not(:disabled) {
+  background: rgba(0, 0, 0, .06);
 }
 
 .chat-audio-play:disabled {
