@@ -22,6 +22,7 @@ import {
 } from './lib/screenshot.js';
 import { showImagePreview } from './components/ImagePreview.js';
 import { renderCallsPanel } from './components/CallsPanel.js';
+import { renderPaymentsPanel } from './components/PaymentsPanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
 import { APP_USERS, conversationsForUser } from './lib/users.js';
@@ -484,12 +485,14 @@ async function init() {
 
   const navRail = renderNavRail(container, {
     onCalls: () => router.navigate('calls'),
+    onPayments: () => router.navigate('payments'),
     avatarSrc: activeUser.avatar,
     avatarName: activeUser.name,
     onSettings: openSettings,
     onChat: () => {
-      // From the calls screen, this is the way back to the list.
-      if (router.getCurrentRoute().route === 'calls') { router.navigate('home'); return; }
+      // From secondary screens, this is the way back to the conversation list.
+      const route = router.getCurrentRoute().route;
+      if (route === 'calls' || route === 'payments') { router.navigate('home'); return; }
       closeProfile();
       closeSettings();
     },
@@ -512,6 +515,7 @@ async function init() {
       onAbout: openSettings,
       onExportAll: () => downloadFile(EXPORT_ALL_URL),
       onCalls: () => router.navigate('calls'),
+      onPayments: () => router.navigate('payments'),
       onChats: () => router.navigate('home'),
       onUserSwitch: toggleUserSwitcher,
       activeUser,
@@ -598,6 +602,12 @@ async function init() {
     });
     sidebar.showCalls?.(panel);
     navRail.setActive?.('calls');
+  });
+  router.on('payments', () => {
+    showEmptyState();
+    sidebar.showCalls?.(renderPaymentsPanel());
+    sidebar.classList.add('sidebar--payments');
+    navRail.setActive?.('payments');
   });
   router.on('chat', async (id, messageId) => {
     if (messageId) {

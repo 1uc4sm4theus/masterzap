@@ -1140,6 +1140,154 @@
   display: flex;
 }
 
+.payments-panel {
+  display: none;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  overflow: auto;
+  background: var(--WDS-white);
+}
+
+.sidebar--payments .payments-panel {
+  display: flex;
+}
+
+.payments-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px 8px;
+}
+
+.payments-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--WDS-accent);
+  background: var(--WDS-green-50);
+}
+
+.payments-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+}
+
+.payments-intro,
+.payments-foot {
+  margin: 0;
+  padding: 0 16px 12px;
+  font-size: 12px;
+  color: var(--WDS-content-deemphasized);
+}
+
+.payments-table {
+  width: 100%;
+  padding: 0 12px;
+}
+
+.payments-row {
+  display: grid;
+  grid-template-columns: 1.15fr 1.45fr 0.85fr 1.25fr;
+  gap: 12px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--WDS-lines-divider);
+}
+
+.payments-row-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: var(--WDS-white);
+  color: var(--WDS-content-deemphasized);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.payments-cell {
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--WDS-content-default);
+  overflow-wrap: anywhere;
+}
+
+.payments-cell-date,
+.payments-cell-amount {
+  color: var(--WDS-content-deemphasized);
+}
+
+.payments-cell-amount {
+  font-weight: 600;
+  color: var(--WDS-accent);
+}
+
+.payments-foot {
+  padding-top: 12px;
+  padding-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .payments-header {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .payments-intro,
+  .payments-foot {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .payments-table {
+    padding: 0 12px;
+  }
+
+  .payments-row-header {
+    display: none;
+  }
+
+  .payments-row {
+    display: block;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid var(--WDS-lines-divider);
+    border-radius: 8px;
+    background: var(--WDS-white);
+  }
+
+  .payments-cell {
+    display: block;
+    padding: 3px 0 3px 82px;
+    min-height: 18px;
+    position: relative;
+  }
+
+  .payments-cell::before {
+    position: absolute;
+    left: 0;
+    width: 74px;
+    color: var(--WDS-content-deemphasized);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .payments-cell-origin::before { content: 'Origem'; }
+  .payments-cell-recipient::before { content: 'Destino'; }
+  .payments-cell-date::before { content: 'Data'; }
+  .payments-cell-amount::before { content: 'Valor'; }
+}
+
 .calls-header {
   display: flex;
   align-items: center;

@@ -22,7 +22,7 @@ export const FAVORITE_CONVERSATIONS = new Set(['alexandre-de-moraes', 'martha-gr
  * @param {function} options.onSelect - called with conversation id
  * @param {Set<string>} [options.readConversations] - ids already opened
  */
-export function renderSidebar(container, { conversations, onSelect, onProfile, onAbout, onExportAll, onCalls, onChats, onUserSwitch, activeUser, readConversations = new Set() }) {
+export function renderSidebar(container, { conversations, onSelect, onProfile, onAbout, onExportAll, onCalls, onPayments, onChats, onUserSwitch, activeUser, readConversations = new Set() }) {
   const el = document.createElement('aside');
   el.className = 'sidebar';
   el.setAttribute('role', 'navigation');
@@ -243,23 +243,31 @@ export function renderSidebar(container, { conversations, onSelect, onProfile, o
       <svg viewBox="0 0 32 32" width="24" height="24" fill="currentColor"><path d="M22.246 27.236C18.8584 27.236 14.7666 25.0019 11.0269 21.2743C7.27502 17.5225 5.06519 13.4185 5.06519 10.0066C5.06519 8.08819 5.62371 6.67972 6.93504 5.46553C7.02004 5.39268 7.09289 5.31983 7.16574 5.25912C7.94282 4.5306 8.75633 4.16634 9.49699 4.17849C10.2862 4.20277 11.0147 4.62774 11.6461 5.55052L14.0745 9.07168C14.7666 10.0673 14.8759 11.2451 13.8438 12.3014L12.9696 13.1878C12.7025 13.4549 12.6539 13.7463 12.836 14.0742C13.3217 14.9241 14.1231 15.8347 15.2523 16.9639C16.2843 17.996 17.6321 19.1009 18.227 19.4652C18.5549 19.6473 18.8463 19.5987 19.1134 19.3316L19.9998 18.4574C21.0561 17.4253 22.2339 17.5346 23.2295 18.2267L26.7507 20.6551C27.6735 21.2865 28.1227 22.015 28.1227 22.8042C28.1227 23.5449 27.7706 24.3462 27.0421 25.1355C26.9814 25.2083 26.9085 25.2812 26.8357 25.3661C25.6093 26.6896 24.1887 27.236 22.246 27.236Z"/></svg>
       <span>Chamadas</span>
     </button>
+    <button class="sidebar-bottom-tab" data-tab="payments">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M7 15h3"/></svg>
+      <span>Pagamentos</span>
+    </button>
   `;
   el.appendChild(bottomNav);
   bottomNav.querySelector('[data-tab="chats"]').addEventListener('click', () => onChats?.());
   bottomNav.querySelector('[data-tab="calls"]').addEventListener('click', () => onCalls?.());
+  bottomNav.querySelector('[data-tab="payments"]').addEventListener('click', () => onPayments?.());
 
   /**
    * Swap the list for the calls screen and back. The header, search and
    * filter tabs belong to the chat list; the calls panel brings its own.
    */
   el.showCalls = (panel) => {
-    el.querySelector('.calls-panel')?.remove();
+    el.querySelector('.calls-panel, .payments-panel')?.remove();
     el.insertBefore(panel, bottomNav);
     el.classList.add('sidebar--calls');
-    for (const tab of bottomNav.querySelectorAll('.sidebar-bottom-tab')) tab.classList.toggle('active', tab.dataset.tab === 'calls');
+    const activeTab = panel.classList.contains('payments-panel') ? 'payments' : 'calls';
+    el.classList.toggle('sidebar--payments', activeTab === 'payments');
+    for (const tab of bottomNav.querySelectorAll('.sidebar-bottom-tab')) tab.classList.toggle('active', tab.dataset.tab === activeTab);
   };
   el.showChats = () => {
     el.classList.remove('sidebar--calls');
+    el.classList.remove('sidebar--payments');
     for (const tab of bottomNav.querySelectorAll('.sidebar-bottom-tab')) tab.classList.toggle('active', tab.dataset.tab === 'chats');
   };
 
