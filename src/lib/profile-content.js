@@ -134,6 +134,23 @@ export const MORAES_PROFILE = {
  * source, and the profile says so rather than inventing a biography.
  */
 export const OTHER_PROFILES = {
+  'rayanna': {
+    sections: [{
+      title: 'Rayanna',
+      paragraphs: [
+        { text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Daniel Vorcaro e Rayanna. O chat trata de um encontro em fevereiro de 2025 e de uma cobrança posterior.' },
+        { text: 'O material informa que Kassio negou o encontro e não há mensagem publicada em que ele participe desta conversa.' },
+      ],
+    }],
+  },
+  'rodrigo-fux': {
+    sections: [{
+      title: 'Rodrigo Fux',
+      paragraphs: [
+        { text: 'Conversa fornecida pelo usuário, identificada no material como um diálogo entre Daniel Vorcaro e Rodrigo Fux.' },
+      ],
+    }],
+  },
   'fabio-faria': {
     about: 'Careca 19:30',
     sections: [{
@@ -322,6 +339,7 @@ export const OTHER_PROFILES = {
         { text: 'Produtor dos eventos de Vorcaro e cavaleiro de hipismo. Salvo no celular como "Leo Serrano Giunchetti".' },
         { text: 'A conversa é de abril de 2024, na preparação de Londres, e o tom dele diz muito sobre quem estava sendo recebido. Pede orientação porque era a primeira vez que fazia um evento "{mais coorporativo}[action:search@leo-serrano:coorporativo]" para o banqueiro e que envolvia "{esse bando de gente importante e sensivel}[action:search@leo-serrano:gente importante]" — diferente dos eventos "só de diversão", em que se arriscava sozinho.' },
         { text: 'Detalha então a hierarquia do transporte: dois casais por V-Class para os convidados comuns, e "{os ministros mais sensiveis tipo Alexandre, Tofolli}[action:search@leo-serrano:mais sensiveis]" com um casal por S-Class.' },
+        { text: 'Em dezembro de 2024, Leo encaminha uma mensagem atribuída ao ministro Kassio sobre uma viagem de dez dias para cinco pessoas entre 8 e 18 de janeiro. Depois pergunta a Vorcaro se deve atender o pedido e faturar para ele; Vorcaro responde: "{Sim. Atende. Tudo.}[action:search@leo-serrano:Atende. Tudo.]". Em 15 de dezembro, Leo avisa que o grupo havia desaparecido.' },
       ],
     }],
   },

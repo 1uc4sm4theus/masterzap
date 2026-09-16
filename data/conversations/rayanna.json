@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Rayanna"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2025-02-28",
+      "end": "2025-03-07"
+    },
+    "total_messages": 9,
+    "source": "Conteúdo fornecido pelo usuário",
+    "note": "Transcrição fornecida pelo usuário; os horários originais não foram informados e foram preenchidos tecnicamente em sequência à meia-noite. O material informa que Kassio negou o encontro e não participa deste chat."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-02-28T00:00:00-03:00",
+      "date": "2025-02-28",
+      "time": "00:00:00",
+      "sender": "Rayanna",
+      "content": "Qual o endereço, Dani?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-02-28T00:00:01-03:00",
+      "date": "2025-02-28",
+      "time": "00:00:01",
+      "sender": "Rayanna",
+      "content": "As meninas estão prontas.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-02-28T00:00:02-03:00",
+      "date": "2025-02-28",
+      "time": "00:00:02",
+      "sender": "DV",
+      "content": "Endereço: Rua Leopoldo Couto de Magalhães Júnior, Itaim Bibi, São Paulo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-03-07T00:00:00-03:00",
+      "date": "2025-03-07",
+      "time": "00:00:00",
+      "sender": "Rayanna",
+      "content": "Boa tarde Dani tudo bem?\n\nA minha amiga lá aquele dia!\n\nDeu certo né?\n\nEla disse que ficou com o kassio.\n\nEla tá me cobrando aqui.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-03-07T00:00:01-03:00",
+      "date": "2025-03-07",
+      "time": "00:00:01",
+      "sender": "DV",
+      "content": "Me manda aqui",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-03-07T00:00:02-03:00",
+      "date": "2025-03-07",
+      "time": "00:00:02",
+      "sender": "DV",
+      "content": "Dados e valor.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-03-07T00:00:03-03:00",
+      "date": "2025-03-07",
+      "time": "00:00:03",
+      "sender": "Rayanna",
+      "content": "10 né!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-03-07T00:00:04-03:00",
+      "date": "2025-03-07",
+      "time": "00:00:04",
+      "sender": "Rayanna",
+      "content": "Ela ficou com ele",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-03-07T00:00:05-03:00",
+      "date": "2025-03-07",
+      "time": "00:00:05",
+      "sender": "Rayanna",
+      "content": "[e-mail / dados para pagamento]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-02-28",
+        "message_count": 3,
+        "first_message_id": 1,
+        "last_message_id": 3
+      },
+      {
+        "date": "2025-03-07",
+        "message_count": 6,
+        "first_message_id": 4,
+        "last_message_id": 9
+      }
+    ]
+  }
+}

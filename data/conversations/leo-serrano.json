@@ -8,11 +8,11 @@
     "phone": "5511969204644",
     "date_range": {
       "start": "2024-04-10",
-      "end": "2024-04-10"
+      "end": "2024-12-15"
     },
-    "total_messages": 4,
+    "total_messages": 10,
     "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+    "note": "As quatro mensagens de 10 de abril de 2024 são trechos citados no relatório policial; as seis mensagens de dezembro de 2024 foram fornecidas pelo usuário. A conversa completa não consta do documento."
   },
   "messages": [
     {
@@ -70,6 +70,78 @@
       "urls": [],
       "source_page": 184,
       "source_figure": 190
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-12-05T00:00:00-03:00",
+      "date": "2024-12-05",
+      "time": "00:00:00",
+      "sender": "Leo Serrano",
+      "content": "Mensagem encaminhada de Ministro Kassio: Bom dia Leo. Ministro Kassio. Preciso da sua ajuda para formatar uma viagem de uns 10 dias, entre 8 e 18 de janeiro, para 5 pessoas. De preferência com guias e motoristas de vans que falem português ou espanhol. Inicialmente, imaginei Viena, com bate e volta nas cidades próximas, como Bratislava, Budapeste, Graz ou Salzburgo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-12-05T00:00:01-03:00",
+      "date": "2024-12-05",
+      "time": "00:00:01",
+      "sender": "Leo Serrano",
+      "content": "Dani… Veio de vc esse?\n\nE se sim, é pra atender ele independente ou faço e faturo pra vc? Me avisa, dani. Só pra eu saber como respondê-lo, please?????",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-12-05T00:00:02-03:00",
+      "date": "2024-12-05",
+      "time": "00:00:02",
+      "sender": "DV",
+      "content": "Sim. Atende. Tudo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-12-05T00:00:03-03:00",
+      "date": "2024-12-05",
+      "time": "00:00:03",
+      "sender": "Leo Serrano",
+      "content": "Beleza. E ele paga ou eu jogo procê essa bomba?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-12-05T00:00:04-03:00",
+      "date": "2024-12-05",
+      "time": "00:00:04",
+      "sender": "DV",
+      "content": "Me liga depois.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 10,
+      "timestamp": "2024-12-15T00:00:00-03:00",
+      "date": "2024-12-15",
+      "time": "00:00:00",
+      "sender": "Leo Serrano",
+      "content": "Aquele Kassio que pediu a viagem pra aquele grupo em janeiro sumiu. Só pra vc saber caso ele comente algo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
     }
   ],
   "index": {
@@ -79,6 +151,18 @@
         "message_count": 4,
         "first_message_id": 1,
         "last_message_id": 4
+      },
+      {
+        "date": "2024-12-05",
+        "message_count": 5,
+        "first_message_id": 5,
+        "last_message_id": 9
+      },
+      {
+        "date": "2024-12-15",
+        "message_count": 1,
+        "first_message_id": 10,
+        "last_message_id": 10
       }
     ]
   }
