@@ -33,7 +33,7 @@ export function renderNavRail(container, { avatarSrc, avatarName = 'Perfil', onS
   topSection.className = 'nav-rail-top';
 
   const navItems = [
-    { icon: ICON_CHAT, label: 'Conversas', active: true, enabled: true },
+    { icon: ICON_CHAT, label: 'Conversas', active: true, enabled: true, chat: true },
     { icon: ICON_STATUS, label: 'Status', active: false, enabled: false },
     { icon: ICON_CHANNELS, label: 'Comunidades', active: false, enabled: false },
     { icon: ICON_CALLS, label: 'Chamadas', active: false, enabled: true, calls: true },
@@ -49,7 +49,7 @@ export function renderNavRail(container, { avatarSrc, avatarName = 'Perfil', onS
     btn.setAttribute('aria-label', item.label);
     btn.setAttribute('title', item.label);
     btn.innerHTML = item.icon; // Static SVG
-    if (item.active && onChat) btn.addEventListener('click', onChat);
+    if (item.chat && onChat) btn.addEventListener('click', onChat);
     if (item.calls && onCalls) btn.addEventListener('click', onCalls);
     if (item.payments && onPayments) btn.addEventListener('click', onPayments);
     if (item.media && onMedia) btn.addEventListener('click', onMedia);
