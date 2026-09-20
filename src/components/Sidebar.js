@@ -258,7 +258,7 @@ export function renderSidebar(container, { conversations, onSelect, onProfile, o
    * filter tabs belong to the chat list; the calls panel brings its own.
    */
   el.showCalls = (panel) => {
-    el.querySelector('.calls-panel, .payments-panel')?.remove();
+    el.querySelector('.calls-panel, .payments-panel, .media-panel')?.remove();
     el.insertBefore(panel, bottomNav);
     el.classList.add('sidebar--calls');
     const activeTab = panel.classList.contains('payments-panel') ? 'payments' : 'calls';
@@ -266,6 +266,7 @@ export function renderSidebar(container, { conversations, onSelect, onProfile, o
     for (const tab of bottomNav.querySelectorAll('.sidebar-bottom-tab')) tab.classList.toggle('active', tab.dataset.tab === activeTab);
   };
   el.showChats = () => {
+    el.querySelector('.media-panel')?.remove();
     el.classList.remove('sidebar--calls');
     el.classList.remove('sidebar--payments');
     for (const tab of bottomNav.querySelectorAll('.sidebar-bottom-tab')) tab.classList.toggle('active', tab.dataset.tab === 'chats');
