@@ -23,6 +23,7 @@ import {
 import { showImagePreview } from './components/ImagePreview.js';
 import { renderCallsPanel } from './components/CallsPanel.js';
 import { renderPaymentsPanel } from './components/PaymentsPanel.js';
+import { renderMediaPanel } from './components/MediaPanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
 import { APP_USERS, conversationsForUser } from './lib/users.js';
@@ -486,13 +487,14 @@ async function init() {
   const navRail = renderNavRail(container, {
     onCalls: () => router.navigate('calls'),
     onPayments: () => router.navigate('payments'),
+    onMedia: () => router.navigate('media'),
     avatarSrc: activeUser.avatar,
     avatarName: activeUser.name,
     onSettings: openSettings,
     onChat: () => {
       // From secondary screens, this is the way back to the conversation list.
       const route = router.getCurrentRoute().route;
-      if (route === 'calls' || route === 'payments') { router.navigate('home'); return; }
+      if (route === 'calls' || route === 'payments' || route === 'media') { router.navigate('home'); return; }
       closeProfile();
       closeSettings();
     },
@@ -608,6 +610,22 @@ async function init() {
     sidebar.showCalls?.(renderPaymentsPanel());
     sidebar.classList.add('sidebar--payments');
     navRail.setActive?.('payments');
+  });
+  router.on('media', async () => {
+    showEmptyState();
+    let catalog = { items: [] };
+    try {
+      const response = await fetch('/data/media.json');
+      if (response.ok) catalog = await response.json();
+    } catch (err) {
+      console.warn('Media catalog unavailable:', err);
+    }
+    const panel = renderMediaPanel({
+      items: catalog.items || [],
+      onOpenMessage: (conversationId, messageId) => router.navigate('chat', conversationId, messageId),
+    });
+    sidebar.showCalls?.(panel);
+    navRail.setActive?.('media');
   });
   router.on('chat', async (id, messageId) => {
     if (messageId) {
