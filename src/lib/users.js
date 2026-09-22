@@ -5,21 +5,7 @@ export const APP_USERS = [
     name: 'Daniel Vorcaro',
     owner: 'DV',
     avatar: '/assets/avatar-dv.jpg',
-  },
-  {
-    id: 'jair-bolsonaro',
-    name: 'Jair Bolsonaro',
-    owner: 'Jair Bolsonaro',
-    avatar: '/assets/avatar-jair-bolsonaro.webp',
-    conversationIds: ['meyer-nigri', 'jair-bolsonaro', 'silas-malafaia', 'eduardo-bolsonaro'],
-  },
-  {
-    id: 'lula',
-    name: 'Lula',
-    owner: 'Lula',
-    avatar: '/assets/avatar-lula.webp',
-    conversationIds: ['dilma-rousseff', 'jaques-wagner', 'lindbergh-farias', 'roberto-teixeira', 'lurian-lula-da-silva'],
-  },
+  }
 ];
 
 /** Return only the conversations visible from a user's phone. */
