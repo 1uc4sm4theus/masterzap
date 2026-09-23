@@ -55,7 +55,7 @@ export const SETTINGS_CONTENT = {
     {
       title: 'As cobranças de Flávio Bolsonaro',
       paragraphs: [
-        { text: 'A conversa com {Flávio Bolsonaro}[action:contact:flavio-bolsonaro] mistura o pedido de parcelas do filme {Dark Horse}[action:search@flavio-bolsonaro:Dark Horse] — com Jim Caviezel no elenco — e a agenda pessoal do senador com Vorcaro no segundo semestre de 2025. O áudio de 8 de setembro de 2025, reproduzido pelo {The Intercept}[https://www.intercept.com.br/], é o ponto de partida: Flávio cobra atrasados e diz que um calote em Hollywood teria "efeito elevado a menos um".' },
+        { text: 'A conversa com {Flávio Bolsonaro}[action:contact:flavio-bolsonaro] mistura o pedido de parcelas do filme {filme}[action:search@flavio-bolsonaro:filme] — com Jim Caviezel no elenco — e a agenda pessoal do senador com Vorcaro no segundo semestre de 2025. O áudio de 8 de setembro de 2025, reproduzido pelo {The Intercept}[https://www.intercept.com.br/], é o ponto de partida: Flávio cobra atrasados e diz que um calote em Hollywood teria "efeito elevado a menos um".' },
         { text: 'Nas semanas seguintes eles marcam encontros ("{Quarta 14:30?}[action:search@flavio-bolsonaro:Quarta]"), Flávio atualiza a gravação ("{Já estamos no terceiro dia de gravação}[action:search@flavio-bolsonaro:gravação]") e fecha o fio com "{Amém!}[action:search@flavio-bolsonaro:Amém]".' },
       ],
     },
