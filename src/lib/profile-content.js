@@ -531,27 +531,57 @@ export function getContactProfile(conversationId) {
 export const SOURCES = [
   { label: 'Wikipedia (EN) — Daniel Vorcaro', url: 'https://en.wikipedia.org/wiki/Daniel_Vorcaro' },
   { label: 'Wikipedia (PT) — Escândalo do Banco Master', url: 'https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master' },
-  { label: 'Brasil de Fato — Reconstrução completa da fraude', url: 'https://www.brasildefato.com.br/2026/03/13/banco-master-a-reconstrucao-completa-de-como-uma-fraude-capturou-a-republica/' },
-  { label: 'CNN Brasil — Todas as conversas vazadas', url: 'https://www.cnnbrasil.com.br/politica/veja-todas-as-conversas-de-vorcaro-que-vazaram-hoje-para-a-imprensa/' },
-  { label: 'CNN Brasil — Processo de delação premiada', url: 'https://www.cnnbrasil.com.br/politica/entenda-processo-de-delacao-premiada-que-vorcaro-podera-fazer-com-pf-e-pgr/' },
-  { label: 'Gazeta do Povo — Vazamento e impacto no processo', url: 'https://www.gazetadopovo.com.br/ideias/vazamento-mensagens-vorcaro-processo/' },
-  { label: 'ND Mais — Quem é Martha Graeff', url: 'https://ndmais.com.br/justica/quem-e-martha-graeff-namorada-de-vorcaro/' },
-  { label: 'ND Mais — Conversas improváveis do casal', url: 'https://ndmais.com.br/justica/vorcaro-momolada-peleleca-conversas-martha-graeff/' },
+
+  // Laudo PF / sigilo
+  { label: 'Poder360 — Mendonça retira o sigilo da ação Vorcaro–Moraes', url: 'https://www.poder360.com.br/poder-justica/mendonca-retira-sigilo-de-acao-sobre-vorcaro-e-moraes/' },
+  { label: 'Poder360 — Íntegras dos documentos Moraes–Vorcaro', url: 'https://www.poder360.com.br/poder-justica/leia-as-integras-de-documentos-que-revelam-relacao-de-moraes-com-vorcaro/' },
+  { label: 'Poder360 — Contratos de R$ 208 mi com o escritório Barci', url: 'https://www.poder360.com.br/poder-justica/pf-encontra-contratos-de-r-208-mi-entre-vorcaro-e-barci-de-moraes/' },
+  { label: 'Poder360 — Vorcaro pediu encontro com Galípolo', url: 'https://www.poder360.com.br/poder-justica/vorcaro-pediu-a-moraes-encontro-com-galipolo-para-resolver-tudo/' },
+  { label: 'Poder360 — Gonet, Londres, charuto e Macallan', url: 'https://www.poder360.com.br/poder-justica/gonet-sobre-evento-com-vorcaro-que-tenha-charuto-e-macallan/' },
+  { label: 'JOTA — Síntese e íntegra do relatório da PF', url: 'https://www.jota.info/stf/do-supremo/saiba-tudo-o-que-diz-o-relatorio-da-pf-sobre-moraes-e-vorcaro-leia-a-integra-do-documento' },
+  { label: 'JOTA — “Gratidão da minha vida a você”', url: 'https://www.jota.info/stf/do-supremo/estamos-juntos-sempre-gratidao-da-minha-vida-a-voce-disse-vorcaro-a-moraes-segundo-a-pf' },
+  { label: 'g1 — Prints das conversas no relatório da PF', url: 'https://g1.globo.com/politica/noticia/2026/09/02/vorcaro-e-moraes-veja-prints-de-conversas-reveladas-em-relatorio-da-pf.ghtml' },
+  { label: 'g1 — O que a PF descreve como benefícios à família Moraes', url: 'https://g1.globo.com/politica/noticia/2026/09/02/que-vorcaro-ofereceu-a-moraes-e-sua-familia-segundo-a-pf.ghtml' },
+  { label: 'CNN — Como a PF rastreou as notas de visualização única', url: 'https://www.cnnbrasil.com.br/blogs/jussara-soares/politica/como-a-pf-rastreou-as-mensagens-de-vorcaro-a-contato-atribuido-a-moraes/' },
+  { label: 'CNN — Panorama do caso Moraes e Vorcaro', url: 'https://www.cnnbrasil.com.br/politica/voo-em-jatinho-e-mensagens-o-que-se-sabe-sobre-o-caso-moraes-e-vorcaro/' },
+  { label: 'Agência Brasil — Retirada de sigilo da rede de pagamentos', url: 'https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/mendonca-retira-sigilo-de-processo-sobre-rede-de-pagamentos-de-vorcaro' },
+  { label: 'O Globo — Contrato, PF e viagem do filho de Gonet', url: 'https://oglobo.globo.com/politica/noticia/2026/09/02/contrato-intervencao-junto-a-pf-viagem-de-filho-entenda-como-novas-revelacoes-ligam-moraes-e-gonet-a-vorcaro.ghtml' },
+  { label: 'Metrópoles — Vorcaro e Moraes montando o fórum de Londres', url: 'https://www.metropoles.com/colunas/demetrio-vecchioli/dialogos-mostram-que-vorcaro-e-moraes-montaram-evento-juntos' },
+  { label: 'CNN — Fábio Faria como intermediário, segundo a PF', url: 'https://www.cnnbrasil.com.br/blogs/jussara-soares/politica/fabio-faria-intermediou-contatos-entre-moraes-e-vorcaro-diz-pf/' },
+  { label: 'Congresso em Foco — Sequência de contatos Vorcaro–Moraes', url: 'https://www.congressoemfoco.com.br/noticia/121853/relatorio-da-pf-indica-sequencia-de-contatos-entre-vorcaro-e-moraes' },
+  { label: 'Brasil de Fato — Juristas veem uso político do relatório', url: 'https://www.brasildefato.com.br/2026/09/01/entenda-o-caso-moraes-e-vorcaro-juristas-veem-uso-politico-e-crise-de-credibilidade/' },
+  { label: 'ND+ — Mendonça exige sessão pública no STF', url: 'https://ndmais.com.br/justica/mendonca-exige-sessao-publica-stf-mensagens-vorcaro-moraes/' },
+
+  // Martha / CPI / imprensa
+  { label: 'Folha — Trânsito de Vorcaro entre os três Poderes', url: 'https://www1.folha.uol.com.br/mercado/2026/03/mensagens-de-vorcaro-mostram-transito-entre-stf-congresso-governo-e-empresarios.shtml' },
+  { label: 'Folha — Encontro com Moraes relatado a Martha', url: 'https://www1.folha.uol.com.br/mercado/2026/03/vorcaro-relatou-encontro-com-moraes-em-troca-de-mensagens-com-namorada.shtml' },
+  { label: 'Folha — CPI, luxo e rede de intrigas', url: 'https://www1.folha.uol.com.br/mercado/2026/03/cpi-expoe-luxo-acesso-ao-poder-e-rede-de-intrigas-de-vorcaro.shtml' },
+  { label: 'Folha — Miami e trust no nome de Martha', url: 'https://www1.folha.uol.com.br/mercado/2026/03/vorcaro-discutiu-registrar-bens-no-nome-da-ex-namorada-em-negociacao-de-casa-de-r-490-milhoes.shtml' },
+  { label: 'Estadão — “Extorsão bem chata” em Brasília', url: 'https://www.estadao.com.br/politica/blog-do-fausto-macedo/vorcaro-relata-em-conversa-com-a-namorada-ter-sofrido-extorsao-bem-chata-em-brasilia/' },
+  { label: 'Estadão — Banco “igual máfia”', url: 'https://www.estadao.com.br/politica/blog-do-fausto-macedo/esse-negocio-de-banco-sempre-falei-que-e-igual-mafia-nao-da-para-sair-disse-vorcaro-em-conversa/' },
+  { label: 'Estadão — “Me derrubar só matando”', url: 'https://www.estadao.com.br/politica/coluna-do-estadao/me-derrubar-so-matando-e-isso-eles-nao-tem-coragem-disse-vorcaro-a-namorada/' },
+  { label: 'Estadão — Martha diz que soube pela imprensa', url: 'https://www.estadao.com.br/economia/negocios/ex-noiva-de-vorcaro-diz-que-soube-das-acusacoes-contra-o-banqueiro-pela-imprensa/' },
+  { label: 'CNN — Conversas vazadas à imprensa', url: 'https://www.cnnbrasil.com.br/politica/veja-todas-as-conversas-de-vorcaro-que-vazaram-hoje-para-a-imprensa/' },
+  { label: 'ND+ — Vazamento com Martha Graeff', url: 'https://ndmais.com.br/justica/vorcaro-momolada-peleleca-conversas-martha-graeff/' },
+  { label: 'ND+ — Quem é Martha Graeff', url: 'https://ndmais.com.br/justica/quem-e-martha-graeff-namorada-de-vorcaro/' },
   { label: 'InfoMoney — Ex-noiva não localizada para CPIs', url: 'https://www.infomoney.com.br/politica/martha-graeff-saiba-quem-e-a-ex-noiva-de-vorcaro-nao-localizada-para-depor-em-cpis/' },
-  { label: 'O Tempo — Segunda prisão de Vorcaro', url: 'https://www.otempo.com.br/economia/2026/3/4/entenda-o-caso-do-banco-master-que-levou-daniel-vorcaro-a-prisao-pela-segunda-vez' },
-  { label: 'Poder360 — Íntegras dos documentos que revelam a relação de Moraes com Vorcaro', url: 'https://www.poder360.com.br/poder-justica/leia-as-integras-de-documentos-que-revelam-relacao-de-moraes-com-vorcaro/' },
-  { label: 'Poder360 — Mendonça retira o sigilo da ação', url: 'https://www.poder360.com.br/poder-justica/mendonca-retira-sigilo-de-acao-sobre-vorcaro-e-moraes/' },
-  { label: 'Poder360 — PF encontra contratos de R$ 208 mi com o escritório Barci de Moraes', url: 'https://www.poder360.com.br/poder-justica/pf-encontra-contratos-de-r-208-mi-entre-vorcaro-e-barci-de-moraes/' },
-  { label: 'Poder360 — Vorcaro pediu a Moraes encontro com Galípolo', url: 'https://www.poder360.com.br/poder-justica/vorcaro-pediu-a-moraes-encontro-com-galipolo-para-resolver-tudo/' },
-  { label: 'CNN Brasil — Como a PF rastreou as mensagens de Vorcaro', url: 'https://www.cnnbrasil.com.br/blogs/jussara-soares/politica/como-a-pf-rastreou-as-mensagens-de-vorcaro-a-contato-atribuido-a-moraes/' },
-  { label: 'Congresso em Foco — Sequência de contatos entre Vorcaro e Moraes', url: 'https://www.congressoemfoco.com.br/noticia/121853/relatorio-da-pf-indica-sequencia-de-contatos-entre-vorcaro-e-moraes' },
-  { label: 'Metrópoles — Diálogos mostram Vorcaro e Moraes montando evento juntos', url: 'https://www.metropoles.com/colunas/demetrio-vecchioli/dialogos-mostram-que-vorcaro-e-moraes-montaram-evento-juntos' },
-  { label: 'Brasil de Fato — Entenda o caso Moraes e Vorcaro', url: 'https://www.brasildefato.com.br/2026/09/01/entenda-o-caso-moraes-e-vorcaro-juristas-veem-uso-politico-e-crise-de-credibilidade/' },
-  { label: 'ND Mais — Mendonça exige sessão pública no STF', url: 'https://ndmais.com.br/justica/mendonca-exige-sessao-publica-stf-mensagens-vorcaro-moraes/' },
-  { label: 'ND Mais — Quem é Alexandre de Moraes', url: 'https://ndmais.com.br/politica/quem-e-alexandre-de-moraes/' },
+  { label: 'Gazeta do Povo — Vazamento e impacto no processo', url: 'https://www.gazetadopovo.com.br/ideias/vazamento-mensagens-vorcaro-processo/' },
+
+  // Dark Horse / Flávio
+  { label: 'BBC — Dark Horse e as duas apurações', url: 'https://www.bbc.com/portuguese/articles/cj9xz29p70eo' },
+  { label: 'Agência Brasil — Flávio incluído no inquérito Dark Horse', url: 'https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/mendonca-incluiu-flavio-bolsonaro-como-investigado-no-caso-dark-horse' },
+  { label: 'g1 — Cronologia PF dos contatos Flávio–Vorcaro', url: 'https://g1.globo.com/politica/noticia/2026/09/12/pf-lista-serie-de-contatos-e-encontros-entre-flavio-bolsonaro-e-vorcaro-veja-cronologia.ghtml' },
+  { label: 'Valor — Cobranças de Flávio no relatório da PF', url: 'https://valor.globo.com/politica/noticia/2026/09/12/relatrio-da-pf-sobre-dark-horse-mostra-mensagens-de-flvio-cobrando-vorcaro.ghtml' },
+
+  // Contexto do banco
+  { label: 'Brasil de Fato — Reconstrução da fraude do Banco Master', url: 'https://www.brasildefato.com.br/2026/03/13/banco-master-a-reconstrucao-completa-de-como-uma-fraude-capturou-a-republica/' },
+  { label: 'O Tempo — Operação Compliance Zero e prisões', url: 'https://www.otempo.com.br/economia/2026/3/4/entenda-o-caso-do-banco-master-que-levou-daniel-vorcaro-a-prisao-pela-segunda-vez' },
+  { label: 'CNN — Processo de delação premiada', url: 'https://www.cnnbrasil.com.br/politica/entenda-processo-de-delacao-premiada-que-vorcaro-podera-fazer-com-pf-e-pgr/' },
+  { label: 'ND+ — Quem é Alexandre de Moraes', url: 'https://ndmais.com.br/politica/quem-e-alexandre-de-moraes/' },
 ];
 
-export const CREDITS = 'Projeto feito por {Rafael Bressan}[https://linkedin.com/in/rafaelbressan] com Claude Code. {Código-fonte no GitHub}[https://github.com/rafaelbressan/masterzap]. As informações aqui compiladas são de domínio público, extraídas de reportagens jornalísticas e fontes abertas. Este projeto não tem vinculação com nenhuma das partes envolvidas.';
+export const CREDITS = 'Contato e denúncia de irregularidades: {steve.jkl5@gmail.com}[mailto:steve.jkl5@gmail.com]. Projeto original de {Rafael Bressan}[https://linkedin.com/in/rafaelbressan] ({código no GitHub}[https://github.com/rafaelbressan/masterzap]). Os textos dos perfis cruzam reportagens e documentos já públicos; a plataforma não autentica mensagens e não se responsabiliza pelo uso que terceiros façam dos trechos. Nome citado não implica vínculo, acusação ou endosso. Pedido fundamentado de correção ou remoção é reavaliado pelo e-mail acima.';
+
 
 /**
  * Parse inline links in text. Format: {link text}[url]
