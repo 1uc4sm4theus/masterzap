@@ -21,7 +21,6 @@ import {
   shareImageFile, canShareFiles,
 } from './lib/screenshot.js';
 import { showImagePreview } from './components/ImagePreview.js';
-import { renderCallsPanel } from './components/CallsPanel.js';
 import { renderPaymentsPanel } from './components/PaymentsPanel.js';
 import { renderMediaPanel } from './components/MediaPanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
