@@ -36,7 +36,6 @@ export function renderNavRail(container, { avatarSrc, avatarName = 'Perfil', onS
     { icon: ICON_CHAT, label: 'Conversas', active: true, enabled: true, chat: true },
     { icon: ICON_STATUS, label: 'Status', active: false, enabled: false },
     { icon: ICON_CHANNELS, label: 'Comunidades', active: false, enabled: false },
-    { icon: ICON_CALLS, label: 'Chamadas', active: false, enabled: true, calls: true },
     { icon: ICON_PAYMENTS, label: 'Pagamentos', active: false, enabled: true, payments: true },
     { icon: ICON_MEDIA, label: 'Mídias', active: false, enabled: true, media: true },
   ];
