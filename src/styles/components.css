@@ -756,6 +756,62 @@
   color: var(--WDS-content-deemphasized);
 }
 
+.settings-support {
+  margin: 0 24px 20px;
+  padding: 16px;
+  border: 1px solid var(--WDS-lines-divider);
+  border-radius: 6px;
+}
+
+.settings-support-title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: var(--WDS-content-default);
+}
+
+.settings-support-text,
+.settings-support-status {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--WDS-content-deemphasized);
+}
+
+.settings-support-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-support-key {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  overflow-wrap: anywhere;
+  background: var(--WDS-background-wash-plain);
+  color: var(--WDS-content-default);
+}
+
+.settings-support-copy {
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--WDS-green-700);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+.settings-support-copy:hover {
+  filter: brightness(.94);
+}
+
+.settings-support-status {
+  min-height: 1.25em;
+  margin: 8px 0 0;
+}
+
 /* ── Profile Sections (shared) ───────────────── */
 .profile-sections {
   padding: 16px 24px 32px;

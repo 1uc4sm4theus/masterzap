@@ -132,6 +132,20 @@
     min-width: 0 !important;
     border-right: none !important;
   }
+
+  .settings-support {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .settings-support-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .settings-support-copy {
+    width: 100%;
+  }
 }
 
 /* ── Very small screens (≤ 380px) ────────────── */

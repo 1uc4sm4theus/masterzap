@@ -91,6 +91,7 @@ async function init() {
     'meyer-nigri': '/assets/avatar-meyer-nigri.jpg',
     'silas-malafaia': '/assets/avatar-silas-malafaia.jpg',
     'dilma-rousseff': '/assets/avatar-dilma-rousseff.jpg',
+    'davi-alcolumbre': '/assets/avatar-davi-alcolumbre.jpg',
     'jaques-wagner': '/assets/avatar-jaques-wagner.jpg',
     'lindbergh-farias': '/assets/avatar-lindbergh-farias.jpg',
     'roberto-teixeira': '/assets/avatar-roberto-teixeira.jpg',
