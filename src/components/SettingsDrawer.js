@@ -116,6 +116,38 @@ export function showSettingsDrawer(container, { onClose, actions = {} } = {}) {
       : 'Não foi possível copiar. Selecione a chave acima.';
   });
 
+  const bitcoinLabel = document.createElement('div');
+  bitcoinLabel.className = 'settings-support-method';
+  bitcoinLabel.textContent = 'Bitcoin via Lightning';
+  support.appendChild(bitcoinLabel);
+
+  const bitcoinRow = document.createElement('div');
+  bitcoinRow.className = 'settings-support-row';
+
+  const bitcoinAddress = document.createElement('code');
+  bitcoinAddress.className = 'settings-support-key';
+  bitcoinAddress.textContent = 'fullsearch03@walletsatoshi.com';
+  bitcoinRow.appendChild(bitcoinAddress);
+
+  const bitcoinCopyButton = document.createElement('button');
+  bitcoinCopyButton.className = 'settings-support-copy';
+  bitcoinCopyButton.type = 'button';
+  bitcoinCopyButton.textContent = 'Copiar endereço Bitcoin';
+  bitcoinRow.appendChild(bitcoinCopyButton);
+  support.appendChild(bitcoinRow);
+
+  const bitcoinCopyStatus = document.createElement('p');
+  bitcoinCopyStatus.className = 'settings-support-status';
+  bitcoinCopyStatus.setAttribute('aria-live', 'polite');
+  support.appendChild(bitcoinCopyStatus);
+
+  bitcoinCopyButton.addEventListener('click', async () => {
+    const copied = await copyText(bitcoinAddress.textContent);
+    bitcoinCopyStatus.textContent = copied
+      ? 'Endereço Bitcoin copiado.'
+      : 'Não foi possível copiar. Selecione o endereço acima.';
+  });
+
   body.appendChild(support);
 
   // Divider
