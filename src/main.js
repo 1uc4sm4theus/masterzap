@@ -93,6 +93,11 @@ async function init() {
     'dilma-rousseff': '/assets/avatar-dilma-rousseff.jpg',
     'davi-alcolumbre': '/assets/avatar-davi-alcolumbre.jpg',
     'jaques-wagner': '/assets/avatar-jaques-wagner.jpg',
+    'chiquinho-feitosa': '/assets/avatar-chiquinho-feitosa.jpg',
+    'flavio-bolsonaro': '/assets/avatar-flavio-bolsonaro.jpg',
+    'rodrigo-fux': '/assets/avatar-rodrigo-fux.jpeg',
+    'ciro-gomes': '/assets/avatar-ciro-gomes.jpg',
+    'nikolas-ferreira': '/assets/avatar-nikolas-ferreira.jpg',
     'lindbergh-farias': '/assets/avatar-lindbergh-farias.jpg',
     'roberto-teixeira': '/assets/avatar-roberto-teixeira.jpg',
     // The chat Vorcaro kept with himself — his own photo, as WhatsApp shows it.

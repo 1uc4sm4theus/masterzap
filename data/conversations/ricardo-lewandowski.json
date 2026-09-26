@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Ricardo Lewandowski"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2024-11-19",
+      "end": "2024-11-20"
+    },
+    "total_messages": 16,
+    "source": "Imagens fornecidas pelo usuário",
+    "note": "Trechos transcritos das imagens fornecidas pelo usuário. Datas e horários conforme exibidos nas capturas; segundos preservados quando visíveis."
+  },
+
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-11-19T10:07:38",
+      "date": "2024-11-19",
+      "time": "10:07:38",
+      "sender": "DV",
+      "content": "Como vai meu caro amigo tudo bem?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-11-19T10:15:30",
+      "date": "2024-11-19",
+      "time": "10:15:30",
+      "sender": "Ricardo Lewandowski",
+      "content": "Tudo bem! E vc está vem?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-11-19T10:15:59",
+      "date": "2024-11-19",
+      "time": "10:15:59",
+      "sender": "DV",
+      "content": "Tudo bem! Queria ver se conseguiria te encontrar rapidamente em bsb ou sp esses dias!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-11-19T10:18:15",
+      "date": "2024-11-19",
+      "time": "10:18:15",
+      "sender": "Ricardo Lewandowski",
+      "content": "Claro que sim. Tenho um almoço nesta sexta. A tarde estarei livre. Mas podemos falar em BSB. Abs.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-11-19T10:18:40",
+      "date": "2024-11-19",
+      "time": "10:18:40",
+      "sender": "DV",
+      "content": "Ate quinta estara em bsb?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-11-19T10:20:05",
+      "date": "2024-11-19",
+      "time": "10:20:05",
+      "sender": "Ricardo Lewandowski",
+      "content": "Sim",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-11-19T10:20:18",
+      "date": "2024-11-19",
+      "time": "10:20:18",
+      "sender": "Ricardo Lewandowski",
+      "content": "Sai sexta de manha",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-11-19T10:20:34",
+      "date": "2024-11-19",
+      "time": "10:20:34",
+      "sender": "Ricardo Lewandowski",
+      "content": "Saio",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-11-19T10:22:28",
+      "date": "2024-11-19",
+      "time": "10:22:28",
+      "sender": "DV",
+      "content": "Poderia hoje ou amanha a noite em bsb rapidamente?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 10,
+      "timestamp": "2024-11-19T10:23:19",
+      "date": "2024-11-19",
+      "time": "10:23:19",
+      "sender": "Ricardo Lewandowski",
+      "content": "Poderia ser hoje, pois amanhã tenho um jantar no Itamaraty por conta do G 20.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 11,
+      "timestamp": "2024-11-19T10:24:18",
+      "date": "2024-11-19",
+      "time": "10:24:18",
+      "sender": "DV",
+      "content": "Qualquer hora que puder eu me adequo. Se for conveniente pra voce tomamos um vinho na minha casa e colocamos a conversa em dia",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 12,
+      "timestamp": "2024-11-19T10:32:58",
+      "date": "2024-11-19",
+      "time": "10:32:58",
+      "sender": "Ricardo Lewandowski",
+      "content": "Pode ser. Tenho um compromisso das 18 às 19 horas, depois estarei livre.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 13,
+      "timestamp": "2024-11-19T10:36:19",
+      "date": "2024-11-19",
+      "time": "10:36:19",
+      "sender": "DV",
+      "content": "Combinado. Te espero la quando terminar. Te envio endereço!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 14,
+      "timestamp": "2024-11-19T10:36:35",
+      "date": "2024-11-19",
+      "time": "10:36:35",
+      "sender": "DV",
+      "content": "[ENDEREÇO REDACTED]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 15,
+      "timestamp": "2024-11-19T10:51:16",
+      "date": "2024-11-19",
+      "time": "10:51:16",
+      "sender": "Ricardo Lewandowski",
+      "content": "Por volta das 19:30 estarei lá",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 16,
+      "timestamp": "2024-11-19T10:51:28",
+      "date": "2024-11-19",
+      "time": "10:51:28",
+      "sender": "DV",
+      "content": "Combinado",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 17,
+      "timestamp": "2024-11-20T14:14:00",
+      "date": "2024-11-20",
+      "time": "14:14:00",
+      "sender": "Ricardo Lewandowski",
+      "content": "Anexo",
+      "type": "image",
+      "is_edited": false,
+      "attachment": "Imagem",
+      "urls": []
+    },
+    {
+      "id": 18,
+      "timestamp": "2024-11-20T14:14:13",
+      "date": "2024-11-20",
+      "time": "14:14:13",
+      "sender": "DV",
+      "content": "🙏",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 19,
+      "timestamp": "2024-11-20T14:14:39",
+      "date": "2024-11-20",
+      "time": "14:14:39",
+      "sender": "Ricardo Lewandowski",
+      "content": "🙏",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+
+  "index": {
+    "dates": [
+      {
+        "date": "2024-11-19",
+        "message_count": 16,
+        "first_message_id": 1,
+        "last_message_id": 16
+      },
+      {
+        "date": "2024-11-20",
+        "message_count": 3,
+        "first_message_id": 17,
+        "last_message_id": 19
+      }
+    ]
+  }
+}
