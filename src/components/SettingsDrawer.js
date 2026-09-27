@@ -150,6 +150,8 @@ export function showSettingsDrawer(container, { onClose, actions = {} } = {}) {
 
   body.appendChild(support);
 
+  
+
   // Divider
   const divider = document.createElement('div');
   divider.className = 'contact-info-divider';
