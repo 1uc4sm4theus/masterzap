@@ -68,14 +68,7 @@ export const SETTINGS_CONTENT = {
       ],
     },
 
-    // ── Eduardo Bolsonaro ──
-    {
-      title: 'Eduardo Bolsonaro e as sanções',
-      paragraphs: [
-        { text: 'Com {Eduardo Bolsonaro}[action:contact:eduardo-bolsonaro] o fio é curto e político: o deputado encaminha a Vorcaro, em julho de 2025, o recorte "{Trump está avaliando uma série de sanções contra Alexandre de Moraes}[action:search@eduardo-bolsonaro:sanções]", atribuído ao Washington Examiner. Não há resposta longa no recorte público — o valor do trecho é o encaminhamento em si, no mesmo mês em que o banco já estava sob pressão.' },
-      ],
-    },
-
+  
     // ── Fábio Faria / Halloween ──
     {
       title: 'Fábio Faria, o intermediário',
