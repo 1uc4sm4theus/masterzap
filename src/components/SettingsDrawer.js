@@ -126,7 +126,7 @@ export function showSettingsDrawer(container, { onClose, actions = {} } = {}) {
 
   const bitcoinAddress = document.createElement('code');
   bitcoinAddress.className = 'settings-support-key';
-  bitcoinAddress.textContent = 'fullsearch03@walletsatoshi.com';
+  bitcoinAddress.textContent = 'fullsearch03@walletofsatoshi.com';
   bitcoinRow.appendChild(bitcoinAddress);
 
   const bitcoinCopyButton = document.createElement('button');
