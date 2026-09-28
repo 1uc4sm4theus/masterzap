@@ -75,6 +75,7 @@ async function init() {
     'fabio-faria': '/assets/avatar-fabio-faria.jpg',
     'vivi-moraes': '/assets/avatar-vivi-moraes.jpg',
     'ciro-soares': '/assets/avatar-ciro-soares.jpg',
+    'sicario-master': '/assets/avatar-sicario-master.jpg',
     'geraldo-brazil-journal': '/assets/avatar-geraldo-brazil-journal.jpg',
     'fabiano-zettel': '/assets/avatar-fabiano-zettel.jpg',
     'marcio-conjur': '/assets/avatar-marcio-conjur.jpg',
