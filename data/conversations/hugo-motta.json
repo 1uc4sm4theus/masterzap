@@ -1,0 +1,323 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Hugo Motta"
+    ],
+    "saved_as": "hugo-motta",
+    "phone": null,
+    "date_range": {
+      "start": "2024-03-09",
+      "end": "2025-08"
+    },
+    "total_messages": 20,
+    "source": "Folha de S.Paulo — Constança Rezende: https://www1.folha.uol.com.br/poder/2026/09/mensagens-de-motta-com-vorcaro-citam-sociedade-em-negocio-e-discussao-sobre-projeto-de-lei-na-camara.shtml; Folha de S.Paulo — José Marques e Constança Rezende (proximidade / Mônaco / camarote); O Globo — Sarah Teófilo e Pepita Ortega, 29/09/2026; CNN Brasil — Matheus Teixeira, 29/09/2026; Fatos Online (primeira divulgação do recorte de 2024)",
+    "note": "Compilação das mensagens atribuídas a Hugo Motta e a Daniel Vorcaro (DV) nos trechos publicados pela imprensa a partir do material extraído pela Polícia Federal do celular de Daniel Vorcaro. Horários individuais não foram divulgados."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-03-09",
+      "date": "2024-03-09",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Boa noite amigo! Td bem? Desculpa incomodar no sábado, estou aqui reunido com o pessoal para finalizar a negociação de compra da área aqui de JP. Conforme falamos, já temos os documentos assinados passando a empresa para minha cunhada ela iniciou a negociação com a Adriana mas acredito que ela não tá sabendo do formato de sociedade que ficou combinado. Quando puder me orienta como devemos proceder pq o prazo é curto para saldar com Intercement",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-03-09",
+      "date": "2024-03-09",
+      "time": null,
+      "sender": "DV",
+      "content": "Vamos fazer uma operação rápida com a Adriana, em paralelo organizamos a questão da sociedade.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-03-13",
+      "date": "2024-03-13",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Certo, meu sogro está até aqui, queria levar ele pq acabamos agora de desenrolar as assinaturas que faltavam para poder prosseguir o pagamento. Se vc achar conveniente, analisa e me avisa",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-03-15",
+      "date": "2024-03-15",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Passando para agradecer a confiança e a parceria. Deu tudo certo a tempo de cumprir o contrato. Depois vamos marcar uma conversa para traçar os próximos passos, acredito que vamos ter êxito no projeto! Forte abraço!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-03-15",
+      "date": "2024-03-15",
+      "time": null,
+      "sender": "DV",
+      "content": "Fala meu amigo! Muito feliz de estarmos juntos! Te admiro muito e esse é o início de uma parceria de vida",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-03-15",
+      "date": "2024-03-15",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Com certeza meu amigo, a admiração é recíproca!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-03-23",
+      "date": "2024-03-23",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Quando puder lembra de pedir a seu pessoal o estudo daquele assunto do FGC, se vc for a Brasília essa semana podemos voltar a falar para ver onde podemos tentar encaixar esse assunto",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-04-27",
+      "date": "2024-04-27",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Irmão, o avião que vai me levar em Brasília sai de Guarulhos? Quem devo procurar?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-04-27",
+      "date": "2024-04-27",
+      "time": null,
+      "sender": "DV",
+      "content": "Sim, já vai estar te esperando. Pode ir tranquilo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 10,
+      "timestamp": "2024-04-27",
+      "date": "2024-04-27",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Muito obrigado. Estamos decolando agora. Valeu por tudo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 11,
+      "timestamp": "2024-11-19",
+      "date": "2024-11-19",
+      "time": null,
+      "sender": "DV",
+      "content": "consegue encontrar mais tarde hoje",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 12,
+      "timestamp": "2024-11-19",
+      "date": "2024-11-19",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Sim. Pegando o texto aqui para te mandar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-03-03",
+      "date": "2025-03-03",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "irmão consegue 4 entradas no camarote para as campeãs?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-03-03",
+      "date": "2025-03-03",
+      "time": null,
+      "sender": "DV",
+      "content": "Claro irmão, quantos quiser. Me passa nome completo cpf email e telefone de cada um",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-03",
+      "date": "2025-03",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Encaminhou a Vorcaro uma mensagem — aparentemente de um repórter — perguntando se Motta queria comentar a tentativa de compra do Master pelo BRB.",
+      "type": "forward",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-03",
+      "date": "2025-03",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Disse que não sabia de quem era e enviou a foto para Vorcaro ver se reconhecia.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 17,
+      "timestamp": "2025-05-23",
+      "date": "2025-05-23",
+      "time": null,
+      "sender": "DV",
+      "content": "Mas queria mesmo estar era em Monaco com voce",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 18,
+      "timestamp": "2025-05-23",
+      "date": "2025-05-23",
+      "time": null,
+      "sender": "DV",
+      "content": "so avisa ele se prefere uma pessoa para servir (ed) ou se não quer ninguém na casa na hora",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 19,
+      "timestamp": "2025-05-23",
+      "date": "2025-05-23",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Blz irmaozao. Muito obrigado",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 20,
+      "timestamp": "2025-08",
+      "date": "2025-08",
+      "time": null,
+      "sender": "Hugo Motta",
+      "content": "Convidou Vorcaro para 'a casa de Davi' (possível referência a Davi Alcolumbre).",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-03-09",
+        "message_count": 2,
+        "first_message_id": 1,
+        "last_message_id": 2
+      },
+      {
+        "date": "2024-03-13",
+        "message_count": 1,
+        "first_message_id": 3,
+        "last_message_id": 3
+      },
+      {
+        "date": "2024-03-15",
+        "message_count": 3,
+        "first_message_id": 4,
+        "last_message_id": 6
+      },
+      {
+        "date": "2024-03-23",
+        "message_count": 1,
+        "first_message_id": 7,
+        "last_message_id": 7
+      },
+      {
+        "date": "2024-04-27",
+        "message_count": 3,
+        "first_message_id": 8,
+        "last_message_id": 10
+      },
+      {
+        "date": "2024-11-19",
+        "message_count": 2,
+        "first_message_id": 11,
+        "last_message_id": 12
+      },
+      {
+        "date": "2025-03-03",
+        "message_count": 2,
+        "first_message_id": 13,
+        "last_message_id": 14
+      },
+      {
+        "date": "2025-03",
+        "message_count": 2,
+        "first_message_id": 15,
+        "last_message_id": 16
+      },
+      {
+        "date": "2025-05-23",
+        "message_count": 3,
+        "first_message_id": 17,
+        "last_message_id": 19
+      },
+      {
+        "date": "2025-08",
+        "message_count": 1,
+        "first_message_id": 20,
+        "last_message_id": 20
+      }
+    ]
+  }
+}

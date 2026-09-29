@@ -7,8 +7,8 @@
     "saved_as": null,
     "phone": null,
     "date_range": {
-      "start": "2026-09-25",
-      "end": "2026-09-25"
+      "start": "2025-09-25",
+      "end": "2056-09-25"
     },
     "total_messages": 2,
     "source": "CNN Brasil — Gustavo Uribe: https://www.cnnbrasil.com.br/blogs/gustavo-uribe/politica/em-mensagem-doria-se-diz-preocupado-com-vorcaro-e-pede-conversa-reservada/",
@@ -17,8 +17,8 @@
   "messages": [
     {
       "id": 1,
-      "timestamp": "2026-09-25T14:15:00",
-      "date": "2026-09-25",
+      "timestamp": "2025-09-25T14:15:00",
+      "date": "2025-09-25",
       "time": "14:15:00",
       "sender": "João Doria",
       "content": "Amigo Daniel, Boa tarde. Estou preocupado com você. Tenho escutado coisas que vão precisar de reação sua. Sempre com equilíbrio e ponderação, mas jamais com o silêncio. Vamos agendar um café?",
@@ -29,8 +29,8 @@
     },
     {
       "id": 2,
-      "timestamp": "2026-09-25T14:15:00",
-      "date": "2026-09-25",
+      "timestamp": "2025-09-25T14:15:00",
+      "date": "2025-09-25",
       "time": "14:15:00",
       "sender": "DV",
       "content": "Podemos falar por ligação em vez de café?",
@@ -43,7 +43,7 @@
   "index": {
     "dates": [
       {
-        "date": "2026-09-25",
+        "date": "2025-09-25",
         "message_count": 2,
         "first_message_id": 1,
         "last_message_id": 2
