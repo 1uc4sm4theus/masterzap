@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Luciano Huck"
+    ],
+    "saved_as": "luciano-huck",
+    "phone": null,
+    "date_range": {
+      "start": "2023-11-05",
+      "end": "2025-11-17"
+    },
+    "total_messages": 10,
+    "source": "Texto fornecido pelo usuário, sem print; veículo de origem não informado.",
+    "note": "Compilação a partir de texto fornecido pelo usuário; nenhuma mensagem foi verificada contra imagem. Datas com apenas mês/ano estão no formato YYYY-MM. Horário individual só disponível na última mensagem (-03:00 presumido). Entradas com type='summary' são resumos, não citações. Remetente 'Vorcaro' padronizado como 'DV'."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2023-11-05",
+      "date": "2023-11-05",
+      "time": null,
+      "sender": "Luciano Huck",
+      "content": "Bom te encontrar pessoalmente hoje. Nos devemos um papo. Abração.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "user_provided",
+      "verified": false,
+      "notes": "Contexto informado pelo usuário: primeiro encontro pessoal."
+    },
+    {
+      "id": 2,
+      "timestamp": "2023-11-05",
+      "date": "2023-11-05",
+      "time": null,
+      "sender": "DV",
+      "content": "Fala, amigo. Bom demais te ver. Foi bacana hoje.",
+      "type": "text",
+      "reply_to_id": 1,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "user_provided",
+      "verified": false,
+      "notes": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2023-11-05",
+      "date": "2023-11-05",
+      "time": null,
+      "sender": "Luciano Huck",
+      "content": "Muito.",
+      "type": "text",
+      "reply_to_id": 2,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "user_provided",
+      "verified": false,
+      "notes": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-02",
+      "date": "2024-02",
+      "time": null,
+      "sender": "Luciano Huck",
+      "content": "Daniel, na paz? Valeu hoje pelo apoio. Salvou o dia. Nosso avião já volta na segunda. Sigo esperando poder retribuir as gentilezas. Estou buscando um sócio para o G550. Se te interessar, bora falar.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "user_provided",
+      "verified": false,
+      "notes": "Contexto informado pelo usuário: avião. Dia exato não informado."
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-04",
+      "date": "2024-04",
+      "time": null,
+      "sender": "Luciano Huck",
+      "content": "Boa conversa ontem. Cabeça pensando muito aqui. Bora seguir construindo ideias.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "user_provided",
+      "verified": false,
+      "notes": "Contexto informado pelo usuário: após jantar. Dia exato não informado."
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-04",
+      "date": "2024-04",
+      "time": null,
+      "sender": "DV",
+      "content": "Gostei demais também! Vamos avançar!",
+      "type": "text",
+      "reply_to_id": 5,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "user_provided",
+      "verified": false,
+      "notes": "Dia exato não informado."
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-05-04",
+      "date": "2024-05-04",
+      "time": null,
+      "sender": "Luciano Huck",
+      "content": "Convidou Vorcaro para o after do show da Madonna no Rio.",
+      "type": "summary",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "user_provided",
+      "verified": false,
+      "notes": "Resumo, não é citação literal."
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-05-04",
+      "date": "2024-05-04",
+      "time": null,
+      "sender": "DV",
+      "content": "Recusou o convite: ia para o GP de Miami.",
+      "type": "summary",
+      "reply_to_id": 7,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "user_provided",
+      "verified": false,
+      "notes": "Resumo, não é citação literal."
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-10-29",
+      "date": "2024-10-29",
+      "time": null,
+      "sender": "Luciano Huck",
+      "content": "Valeu pelo jantar e, principalmente, pela conversa e confiança. Tenho certeza que estamos começando um capítulo relevante na construção de uma marca que os brasileiros vão admirar. E, mais do que isso, uma amizade que irá gerar excelentes frutos em muitas frentes. Te mando notícias ao longo do dia sobre a Globo.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "user_provided",
+      "verified": false,
+      "notes": "Contexto informado pelo usuário: jantar que fecha o contrato."
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-11-17T21:47:00-03:00",
+      "date": "2025-11-17",
+      "time": "21:47",
+      "sender": "Luciano Huck",
+      "content": "Vi a boa notícia da compra do Master agora no JN. Muito bom. Congrats. Você merece sair inteiro desta turbulência toda.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "user_provided",
+      "verified": false,
+      "notes": "Contexto informado pelo usuário: última mensagem, minutos antes da prisão em Guarulhos."
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2023-11-05",
+        "message_count": 3,
+        "first_message_id": 1,
+        "last_message_id": 3
+      },
+      {
+        "date": "2024-02",
+        "message_count": 1,
+        "first_message_id": 4,
+        "last_message_id": 4
+      },
+      {
+        "date": "2024-04",
+        "message_count": 2,
+        "first_message_id": 5,
+        "last_message_id": 6
+      },
+      {
+        "date": "2024-05-04",
+        "message_count": 2,
+        "first_message_id": 7,
+        "last_message_id": 8
+      },
+      {
+        "date": "2024-10-29",
+        "message_count": 1,
+        "first_message_id": 9,
+        "last_message_id": 9
+      },
+      {
+        "date": "2025-11-17",
+        "message_count": 1,
+        "first_message_id": 10,
+        "last_message_id": 10
+      }
+    ]
+  }
+}
