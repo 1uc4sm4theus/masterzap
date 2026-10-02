@@ -103,6 +103,8 @@ async function init() {
     'roberto-teixeira': '/assets/avatar-roberto-teixeira.jpg',
     'roberto-justus': '/assets/avatar-roberto-justus.jpg',
     'luciano-huck': '/assets/avatar-luciano-huck.jpg',
+    'yasmin-brunet': '/assets/avatar-yasmin-brunet.jpg',
+    'ronaldo-fenomeno': '/assets/avatar-ronaldo-fenomeno.jpg',
     // The chat Vorcaro kept with himself — his own photo, as WhatsApp shows it.
     'dv-self': '/assets/avatar-dv.jpg',
   };
