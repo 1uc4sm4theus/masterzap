@@ -101,6 +101,8 @@ async function init() {
     'nikolas-ferreira': '/assets/avatar-nikolas-ferreira.jpg',
     'lindbergh-farias': '/assets/avatar-lindbergh-farias.jpg',
     'roberto-teixeira': '/assets/avatar-roberto-teixeira.jpg',
+    'roberto-justus': '/assets/avatar-roberto-justus.jpg',
+    'luciano-huck': '/assets/avatar-luciano-huck.jpg',
     // The chat Vorcaro kept with himself — his own photo, as WhatsApp shows it.
     'dv-self': '/assets/avatar-dv.jpg',
   };
