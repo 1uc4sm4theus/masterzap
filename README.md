@@ -2,7 +2,7 @@
 
 # MasterWhats
 
-> Visualizador interativo das 66.387 mensagens de WhatsApp extraídas dos celulares apreendidos de Daniel Vorcaro (Banco Master), em 24 conversas — de Martha Graeff a Alexandre de Moraes.
+> Visualizador interativo de 66.823 mensagens de WhatsApp em 43 conversas, reunidas de fontes distintas — de Martha Graeff a Alexandre de Moraes.
 
 **[Acesse ao vivo: www.masterwhats.com.br](https://www.masterwhats.com.br/)**
 
@@ -13,10 +13,12 @@ Feito por **[Rafael Bressan](https://linkedin.com/in/rafaelbressan)** com **[Cla
 
 ## Sobre o Projeto
 
-As mensagens vêm dos celulares apreendidos de Daniel Vorcaro — ex-dono do Banco Master, preso pela Polícia Federal em novembro de 2025 — e chegaram ao público em dois momentos, por caminhos diferentes:
+As conversas vêm de fontes distintas e chegaram ao público em momentos diferentes:
 
 - **Março de 2026 — as conversas com Martha Graeff.** 65.772 mensagens trocadas com a então noiva vazaram para a imprensa e revelaram conexões com autoridades dos Três Poderes, apelidos que viralizaram nas redes e detalhes do maior escândalo bancário da história do Brasil.
 - **Setembro de 2026 — o relatório da PF sobre Alexandre de Moraes.** Caiu o sigilo da IPJ-A nº 3298613/2026, em que a Polícia Federal reconstrói, a partir do iPhone de Vorcaro, seus contatos com o ministro do STF e outras 22 pessoas. Não é um export de WhatsApp: as mensagens estavam em imagens dentro do laudo e foram transcritas uma a uma — veja [`data/ipj-3298613/README.md`](data/ipj-3298613/README.md).
+- **Conversa identificada como Walfrido Warde New.** 31 mensagens dos dias 15 e 16 de maio de 2025 foram adicionadas a partir de material fornecido ao projeto e identificado como capturas de tela do WhatsApp.
+- **Trechos da conversa com ACM Neto.** 14 mensagens foram adicionadas conforme reportagem de Lauro Jardim, em O Globo, de 2 de outubro de 2026, que atribui a origem à PF e ao celular de Daniel Vorcaro. O material não é o chat integral, e algumas datas são aproximadas.
 
 O MasterWhats transforma essas conversas em uma experiência de leitura no estilo WhatsApp Web: navegável, pesquisável e compartilhável. Cada contato tem um perfil que explica quem é a pessoa, o que o material revela e de onde vem a informação. Um novo vazamento entra como mais uma conversa.
 
@@ -40,7 +42,7 @@ O nome do repositório — **masterzap** — é uma referência ao projeto origi
 |-------|---------|
 | **Frontend** | Vanilla JS — zero frameworks |
 | **Build** | Vite |
-| **Dados** | 66.387 mensagens em 24 conversas, divididas em arquivos JSON por data |
+| **Dados** | 66.823 mensagens em 43 conversas, divididas em arquivos JSON por data |
 | **Carregamento** | Lazy loading com cache LRU por dia |
 | **Deploy** | Vercel com headers de segurança (HSTS, CSP, X-Frame-Options) |
 | **SEO** | Open Graph, Twitter Cards, JSON-LD, sitemap |

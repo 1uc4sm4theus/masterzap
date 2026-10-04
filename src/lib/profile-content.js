@@ -134,6 +134,22 @@ export const MORAES_PROFILE = {
  * source, and the profile says so rather than inventing a biography.
  */
 export const OTHER_PROFILES = {
+  'acm-neto': {
+    sections: [{
+      title: 'ACM Neto',
+      paragraphs: [
+        { text: 'Trechos citados por Lauro Jardim, de O Globo, em 2 de outubro de 2026, com origem atribuída à Polícia Federal e ao celular de Daniel Vorcaro. O material não corresponde ao chat integral; parte das datas foi informada apenas por mês.' },
+      ],
+    }],
+  },
+  'walfrido-warde-new': {
+    sections: [{
+      title: 'Walfrido Warde New',
+      paragraphs: [
+        { text: 'Esta conversa foi adicionada a partir de uma transcrição fornecida pelo usuário e identificada como capturas de tela do WhatsApp. O material contém mensagens e chamadas dos dias 15 e 16 de maio de 2025.' },
+      ],
+    }],
+  },
   'rayanna': {
     sections: [{
       title: 'Rayanna',

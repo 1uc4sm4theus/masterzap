@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "participants": [
+      "Walfrido Warde New",
+      "DV"
+    ],
+    "saved_as": "walfrido-warde-new",
+    "phone": null,
+    "date_range": {
+      "start": "2025-05-15",
+      "end": "2025-05-16"
+    },
+    "total_messages": 31,
+    "source": "Capturas de tela de conversa do WhatsApp",
+    "note": "Transcrição atualizada conforme material fornecido pelo usuário; 31 mensagens."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-05-15T17:51:01",
+      "date": "2025-05-15",
+      "time": "17:51:01",
+      "sender": "Walfrido Warde New",
+      "content": "Meu irmão",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-05-15T17:51:05",
+      "date": "2025-05-15",
+      "time": "17:51:05",
+      "sender": "DV",
+      "content": "Oi",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-05-15T17:51:11",
+      "date": "2025-05-15",
+      "time": "17:51:11",
+      "sender": "Walfrido Warde New",
+      "content": "Vc estará aqui amanhã?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-05-15T17:51:15",
+      "date": "2025-05-15",
+      "time": "17:51:15",
+      "sender": "DV",
+      "content": "Nao",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-05-15T17:52:42",
+      "date": "2025-05-15",
+      "time": "17:52:42",
+      "sender": "Walfrido Warde New",
+      "content": "Pena",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-05-15T17:52:46",
+      "date": "2025-05-15",
+      "time": "17:52:46",
+      "sender": "Walfrido Warde New",
+      "content": "Queria te ver",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-05-15T17:55:31",
+      "date": "2025-05-15",
+      "time": "17:55:31",
+      "sender": "DV",
+      "content": "Tenho que frear esse joesley senao vai entrar numa guerra",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-05-15T17:55:36",
+      "date": "2025-05-15",
+      "time": "17:55:36",
+      "sender": "DV",
+      "content": "Maior que ja houve",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-05-15T17:55:39",
+      "date": "2025-05-15",
+      "time": "17:55:39",
+      "sender": "DV",
+      "content": "Na historia",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-05-15T17:55:57",
+      "date": "2025-05-15",
+      "time": "17:55:57",
+      "sender": "Walfrido Warde New",
+      "content": "Que loucura",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-05-15T17:56:02",
+      "date": "2025-05-15",
+      "time": "17:56:02",
+      "sender": "Walfrido Warde New",
+      "content": "Como quer fazer?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-05-15T17:58:00",
+      "date": "2025-05-15",
+      "time": "17:58:00",
+      "sender": "Walfrido Warde New",
+      "content": "Posso ajudar?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-05-15T17:59:04",
+      "date": "2025-05-15",
+      "time": "17:59:04",
+      "sender": "DV",
+      "content": "Sim, me ajuda pensar estrategia",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-05-15T17:59:11",
+      "date": "2025-05-15",
+      "time": "17:59:11",
+      "sender": "DV",
+      "content": "E temos que blindar pr",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-05-15T17:59:15",
+      "date": "2025-05-15",
+      "time": "17:59:15",
+      "sender": "DV",
+      "content": "Pq ele vai pra cima",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-05-15T17:59:25",
+      "date": "2025-05-15",
+      "time": "17:59:25",
+      "sender": "Walfrido Warde New",
+      "content": "Acho que vc deveria conversar com ele abertamente",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 17,
+      "timestamp": "2025-05-15T17:59:33",
+      "date": "2025-05-15",
+      "time": "17:59:33",
+      "sender": "Walfrido Warde New",
+      "content": "Entendi",
+      "type": "text",
+      "reply_to_id": 14,
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 18,
+      "timestamp": "2025-05-15T18:00:39",
+      "date": "2025-05-15",
+      "time": "18:00:39",
+      "sender": "Walfrido Warde New",
+      "content": "Precisamos nos encontrar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 19,
+      "timestamp": "2025-05-15T18:24:13",
+      "date": "2025-05-15",
+      "time": "18:24:13",
+      "sender": "DV",
+      "content": "Chamada de voz — duração 01:57",
+      "type": "call",
+      "call_type": "voice_call",
+      "duration": "01:57",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 20,
+      "timestamp": "2025-05-15T18:46:31",
+      "date": "2025-05-15",
+      "time": "18:46:31",
+      "sender": "DV",
+      "content": "Chamada de voz perdida",
+      "type": "call",
+      "call_type": "missed_voice_call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 21,
+      "timestamp": "2025-05-15T18:47:00",
+      "date": "2025-05-15",
+      "time": "18:47:00",
+      "sender": "Walfrido Warde New",
+      "content": "Atende",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 22,
+      "timestamp": "2025-05-15T18:47:03",
+      "date": "2025-05-15",
+      "time": "18:47:03",
+      "sender": "Walfrido Warde New",
+      "content": "Urgente",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 23,
+      "timestamp": "2025-05-15T18:52:10",
+      "date": "2025-05-15",
+      "time": "18:52:10",
+      "sender": "DV",
+      "content": "Chamada de voz — duração 01:02",
+      "type": "call",
+      "call_type": "voice_call",
+      "duration": "01:02",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 24,
+      "timestamp": "2025-05-16T11:02:34",
+      "date": "2025-05-16",
+      "time": "11:02:34",
+      "sender": "Walfrido Warde New",
+      "content": "Irmão",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 25,
+      "timestamp": "2025-05-16T11:02:47",
+      "date": "2025-05-16",
+      "time": "11:02:47",
+      "sender": "Walfrido Warde New",
+      "content": "Tenho uma coisa aqui muito importante pra falar com vc pra alvejarmos os inimigos",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 26,
+      "timestamp": "2025-05-16T11:13:41",
+      "date": "2025-05-16",
+      "time": "11:13:41",
+      "sender": "Walfrido Warde New",
+      "content": "Oportunidade única",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 27,
+      "timestamp": "2025-05-16T11:14:14",
+      "date": "2025-05-16",
+      "time": "11:14:14",
+      "sender": "DV",
+      "content": "Quer falar tel?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 28,
+      "timestamp": "2025-05-16T11:14:22",
+      "date": "2025-05-16",
+      "time": "11:14:22",
+      "sender": "Walfrido Warde New",
+      "content": "Pessoalmente na segunda",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 29,
+      "timestamp": "2025-05-16T11:14:26",
+      "date": "2025-05-16",
+      "time": "11:14:26",
+      "sender": "Walfrido Warde New",
+      "content": "Você vai amar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-05-16T11:14:28",
+      "date": "2025-05-16",
+      "time": "11:14:28",
+      "sender": "DV",
+      "content": "Ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 31,
+      "timestamp": "2025-05-16T11:14:29",
+      "date": "2025-05-16",
+      "time": "11:14:29",
+      "sender": "DV",
+      "content": "Vamos",
+      "type": "text",
+      "reactions": [
+        "❤️"
+      ],
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-05-15",
+        "message_count": 23,
+        "first_message_id": 1,
+        "last_message_id": 23
+      },
+      {
+        "date": "2025-05-16",
+        "message_count": 8,
+        "first_message_id": 24,
+        "last_message_id": 31
+      }
+    ]
+  }
+}
