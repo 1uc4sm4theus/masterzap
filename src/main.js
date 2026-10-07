@@ -84,6 +84,7 @@ async function init() {
     'marcos-prime': '/assets/avatar-marcos-prime.jpg',
     'thatiane-prime': '/assets/avatar-thatiane-prime.jpg',
     'leo-serrano': '/assets/avatar-leo-serrano.jpg',
+    'dani-alves': '/assets/avatar-dani-alves.jpg',
     
     'luiz-renno': '/assets/avatar-luiz-renno.jpg',
     'ana-matos-mkt': '/assets/avatar-ana-matos-mkt.jpg',
