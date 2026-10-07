@@ -77,4 +77,8 @@ describe('rendering', () => {
   it('cites a message without a report page by date alone', () => {
     expect(citationOf({ date: '2024-12-04', time: '00:33:42' })).toBe('04/12/2024 00:33');
   });
+
+  it('cites an audio transcription without inventing a date or time', () => {
+    expect(citationOf({ date: 'sem-data', time: null })).toBe('Data não informada');
+  });
 });

@@ -31,6 +31,7 @@ export function renderSidebar(container, {
   onExportAll,
   onCalls,
   onPayments,
+  onFlights,
   onChats,
   onUserSwitch,
   activeUser,
@@ -69,6 +70,16 @@ export function renderSidebar(container, {
     </div>
     <div class="conversation-list" role="list"></div>
   `;
+
+  if (onFlights) {
+    const flightsLink = document.createElement('button');
+    flightsLink.className = 'sidebar-flights-link';
+    flightsLink.type = 'button';
+    flightsLink.setAttribute('aria-label', 'Voos e passageiros');
+    flightsLink.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5L21 16Z"/></svg><span>Voos e passageiros</span>';
+    flightsLink.addEventListener('click', onFlights);
+    el.insertBefore(flightsLink, el.querySelector('.sidebar-search'));
+  }
 
   const list = el.querySelector('.conversation-list');
   const searchInput = el.querySelector('.sidebar-search-input');
@@ -333,4 +344,3 @@ export function setActiveConversation(sidebar, activeId) {
     item.classList.toggle('active', item.dataset.id === activeId);
   });
 }
-

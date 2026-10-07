@@ -256,7 +256,10 @@ def split_conversation(conv_id, data, index):
 
     type_counts = Counter(msg["type"] for msg in messages)
 
-    last_msg = messages[-1] if messages else None
+    last_msg = next(
+        (msg for msg in reversed(messages) if msg.get("timestamp")),
+        messages[-1] if messages else None,
+    )
     owner = metadata.get("owner", "DV")
     other = [p for p in metadata["participants"] if p != owner]
     entry = {
@@ -311,7 +314,7 @@ def main():
     entries = [split_conversation(*source) for source in sources]
 
     # Most recent conversation first, the way WhatsApp orders the chat list.
-    entries.sort(key=lambda e: e["last_message"]["timestamp"] if e["last_message"] else "",
+    entries.sort(key=lambda e: (e["last_message"]["timestamp"] or "") if e["last_message"] else "",
                  reverse=True)
     write_json(OUTPUT_DIR / "conversations.json", {"conversations": entries})
 

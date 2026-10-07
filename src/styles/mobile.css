@@ -50,6 +50,23 @@
     justify-content: center;
   }
 
+  .sidebar-flights-link {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 9px;
+    margin: 0 12px 8px;
+    padding: 9px 12px;
+    border: 1px solid var(--WDS-lines-divider);
+    border-radius: 6px;
+    background: var(--WDS-white);
+    color: var(--WDS-content-action-emphasized);
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    text-align: left;
+  }
+
   /* Main area hidden when no conversation is active */
   .main-area {
     display: none;
@@ -66,6 +83,32 @@
     flex: 1;
     height: 100%;
     min-height: 0;
+  }
+
+  .app-container.flights-open .main-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+  }
+
+  .flights-header {
+    min-height: 68px;
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .flights-content {
+    padding: 18px 12px 32px;
+  }
+
+  .flight-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .flight-card,
+  .flight-aircraft-notes {
+    padding: 14px;
   }
 
   /* Show back button on mobile */

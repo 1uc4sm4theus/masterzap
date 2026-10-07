@@ -11,6 +11,10 @@ describe('HashRouter', () => {
       expect(HashRouter.parseHash('#/')).toEqual({ route: 'home', param: null, messageId: null });
     });
 
+    it('#/flights → flights', () => {
+      expect(HashRouter.parseHash('#/flights')).toEqual({ route: 'flights', param: null, messageId: null });
+    });
+
     it('# → home', () => {
       expect(HashRouter.parseHash('#')).toEqual({ route: 'home', param: null, messageId: null });
     });
@@ -72,6 +76,11 @@ describe('HashRouter', () => {
     it('navigate("home") sets hash to #/', () => {
       router.navigate('home');
       expect(window.location.hash).toBe('#/');
+    });
+
+    it('navigate("flights") sets hash to #/flights', () => {
+      router.navigate('flights');
+      expect(window.location.hash).toBe('#/flights');
     });
 
     it('navigate("chat", "martha-graeff") sets hash without messageId', () => {

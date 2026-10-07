@@ -22,6 +22,7 @@ import {
 } from './lib/screenshot.js';
 import { showImagePreview } from './components/ImagePreview.js';
 import { renderPaymentsPanel } from './components/PaymentsPanel.js';
+import { renderFlightsPanel } from './components/FlightsPanel.js';
 import { renderMediaPanel } from './components/MediaPanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
@@ -416,6 +417,7 @@ async function init() {
     closeAll();
     setActiveConversation(sidebar, null);
     container.classList.remove('chat-open');
+    container.classList.remove('flights-open');
     while (mainArea.firstChild) mainArea.removeChild(mainArea.firstChild);
     renderEmptyState(mainArea);
   }
@@ -499,13 +501,14 @@ async function init() {
     onCalls: () => router.navigate('calls'),
     onPayments: () => router.navigate('payments'),
     onMedia: () => router.navigate('media'),
+    onFlights: () => router.navigate('flights'),
     avatarSrc: activeUser.avatar,
     avatarName: activeUser.name,
     onSettings: openSettings,
     onChat: () => {
       // From secondary screens, this is the way back to the conversation list.
       const route = router.getCurrentRoute().route;
-      if (route === 'calls' || route === 'payments' || route === 'media') { router.navigate('home'); return; }
+      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights') { router.navigate('home'); return; }
       closeProfile();
       closeSettings();
     },
@@ -529,6 +532,7 @@ async function init() {
       onExportAll: () => downloadFile(EXPORT_ALL_URL),
       onCalls: () => router.navigate('calls'),
       onPayments: () => router.navigate('payments'),
+      onFlights: () => router.navigate('flights'),
       onChats: () => router.navigate('home'),
       onUserSwitch: toggleUserSwitcher,
       activeUser,
@@ -637,6 +641,15 @@ async function init() {
     });
     sidebar.showCalls?.(panel);
     navRail.setActive?.('media');
+  });
+  router.on('flights', () => {
+    closeAll();
+    setActiveConversation(sidebar, null);
+    container.classList.remove('chat-open');
+    container.classList.add('flights-open');
+    while (mainArea.firstChild) mainArea.removeChild(mainArea.firstChild);
+    mainArea.appendChild(renderFlightsPanel({ onBack: () => router.navigate('home') }));
+    navRail.setActive?.('flights');
   });
   router.on('chat', async (id, messageId) => {
     if (messageId) {

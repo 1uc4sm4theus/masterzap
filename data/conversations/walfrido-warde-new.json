@@ -8,11 +8,11 @@
     "phone": null,
     "date_range": {
       "start": "2025-05-15",
-      "end": "2025-05-16"
+      "end": "2025-07-23"
     },
-    "total_messages": 31,
-    "source": "Capturas de tela de conversa do WhatsApp",
-    "note": "Transcrição atualizada conforme material fornecido pelo usuário; 31 mensagens."
+    "total_messages": 56,
+    "source": "Capturas de tela de conversa do WhatsApp e transcrições de áudios fornecidas pelo usuário",
+    "note": "Transcrição atualizada com capturas de 17 e 23/07/2025 e trechos de áudios sem data ou horário informados; 56 registros."
   },
   "messages": [
     {
@@ -395,6 +395,317 @@
       "is_edited": false,
       "attachment": null,
       "urls": []
+    },
+    {
+      "id": 32,
+      "timestamp": "2025-07-17T22:13:37",
+      "date": "2025-07-17",
+      "time": "22:13:37",
+      "sender": "DV",
+      "content": "Vamos precisar entrar na justiça contra bacen entre amanhã e segunda",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 33,
+      "timestamp": "2025-07-17T22:13:54",
+      "date": "2025-07-17",
+      "time": "22:13:54",
+      "sender": "Walfrido Warde New",
+      "content": "Explica",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 34,
+      "timestamp": "2025-07-17T22:13:57",
+      "date": "2025-07-17",
+      "time": "22:13:57",
+      "sender": "Walfrido Warde New",
+      "content": "Vamos",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 35,
+      "timestamp": "2025-07-17T22:14:00",
+      "date": "2025-07-17",
+      "time": "22:14:00",
+      "sender": "Walfrido Warde New",
+      "content": "Mas explica",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 36,
+      "timestamp": "2025-07-17T22:14:05",
+      "date": "2025-07-17",
+      "time": "22:14:05",
+      "sender": "DV",
+      "content": "Galipolo acabou reuniao agora",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 37,
+      "timestamp": "2025-07-17T22:14:11",
+      "date": "2025-07-17",
+      "time": "22:14:11",
+      "sender": "DV",
+      "content": "Inventou nova desculpa",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 38,
+      "timestamp": "2025-07-17T23:17:09",
+      "date": "2025-07-17",
+      "time": "23:17:09",
+      "sender": "Walfrido Warde New",
+      "content": "To com ódio desse cara",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 39,
+      "timestamp": "2025-07-17T23:17:16",
+      "date": "2025-07-17",
+      "time": "23:17:16",
+      "sender": "Walfrido Warde New",
+      "content": "Ele vai sentir o peso da minha mão",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 40,
+      "timestamp": "2025-07-17T23:17:24",
+      "date": "2025-07-17",
+      "time": "23:17:24",
+      "sender": "DV",
+      "content": "Engoliu o galipolo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 41,
+      "timestamp": "2025-07-17T23:17:40",
+      "date": "2025-07-17",
+      "time": "23:17:40",
+      "sender": "DV",
+      "content": "Cara ta indo contra\nVoce\nStf\nCamara\nSenado\nPresidente",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 42,
+      "timestamp": "2025-07-23T15:49:10",
+      "date": "2025-07-23",
+      "time": "15:49:10",
+      "sender": "Walfrido Warde New",
+      "content": "Vamos dar outro jeito",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 43,
+      "timestamp": "2025-07-23T15:51:47",
+      "date": "2025-07-23",
+      "time": "15:51:47",
+      "sender": "DV",
+      "content": "Alexandre",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 44,
+      "timestamp": "2025-07-23T15:51:59",
+      "date": "2025-07-23",
+      "time": "15:51:59",
+      "sender": "Walfrido Warde New",
+      "content": "Sim",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 45,
+      "timestamp": "2025-07-23T15:52:30",
+      "date": "2025-07-23",
+      "time": "15:52:30",
+      "sender": "Walfrido Warde New",
+      "content": "Vou pavimentar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 46,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "Walfrido Warde New",
+      "content": "Irmão, deixa te falar, o Guido está em Londres. Só daqui dez dias, mas eu acho que seria o caso de você mandar teu avião lá buscar ele e trazer ele pra encontrar o presidente, veja aí o que você consegue fazer, conversa com ele.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 47,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "Walfrido Warde New",
+      "content": "Resumo do áudio: pede uma videoconferência com Vorcaro e Mantega para alinharem o conteúdo da conversa com o presidente.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 48,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "Walfrido Warde New",
+      "content": "É urgente, ele vai falar com você sabe quem no domingo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 49,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "Walfrido Warde New",
+      "content": "Você precisa conversar com o chefe. Única chance nossa.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 50,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "Walfrido Warde New",
+      "content": "Resumo do áudio: diz que tentará contato com Marco Aurélio Santana Ribeiro, então chefe de gabinete de Lula, conhecido como Marcola.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 51,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "DV",
+      "content": "Ele precisa escutar da sua boca. Que não tem problema nenhum e que o dano que estão causando é irreversível.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 52,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "Walfrido Warde New",
+      "content": "Vou resolver.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 53,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "Walfrido Warde New",
+      "content": "Vamos desarmar tudo isso.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 54,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "Falante não identificado",
+      "content": "Falante não identificado na transcrição fornecida: “Galípolo ficou de ir lá pra casa de Davi quando encerrasse a reunião.”",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 55,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "DV",
+      "content": "Avise presidente amanhã e vamos pra guerra.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 56,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "Walfrido Warde New",
+      "content": "Vou levar a conhecimento do presidente.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
     }
   ],
   "index": {
@@ -410,6 +721,24 @@
         "message_count": 8,
         "first_message_id": 24,
         "last_message_id": 31
+      },
+      {
+        "date": "2025-07-17",
+        "message_count": 10,
+        "first_message_id": 32,
+        "last_message_id": 41
+      },
+      {
+        "date": "2025-07-23",
+        "message_count": 4,
+        "first_message_id": 42,
+        "last_message_id": 45
+      },
+      {
+        "date": "sem-data",
+        "message_count": 11,
+        "first_message_id": 46,
+        "last_message_id": 56
       }
     ]
   }

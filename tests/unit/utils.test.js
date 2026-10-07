@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { slugify, formatDateLong, formatTime, linkify, escapeHtml, classifyMessage, truncate } from '../../src/lib/utils.js';
+import { slugify, formatDateLong, formatDateShort, formatTime, linkify, escapeHtml, classifyMessage, truncate } from '../../src/lib/utils.js';
 
 describe('slugify', () => {
   it('converts name to lowercase slug', () => {
@@ -33,6 +33,12 @@ describe('formatDateLong', () => {
     expect(result).toContain('13');
     expect(result).toContain('2025');
     expect(result.toLowerCase()).toContain('agosto');
+  });
+});
+
+describe('formatDateShort', () => {
+  it('labels a date that was not provided instead of formatting it as a calendar date', () => {
+    expect(formatDateShort('sem-data')).toBe('Data não informada');
   });
 });
 

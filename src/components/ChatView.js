@@ -45,7 +45,9 @@ function renderDaySection(date, messages, outgoingSender = 'DV', ownerName = 'Da
   // Date badge
   const badge = document.createElement('div');
   badge.className = 'chat-date-badge';
-  badge.textContent = formatDateLong(date);
+  badge.textContent = date === 'sem-data'
+    ? 'Transcrições de áudio · data e horário não informados'
+    : formatDateLong(date);
   section.appendChild(badge);
 
   // Messages
@@ -546,7 +548,7 @@ function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro')
   // Metadata row (time + edited flag)
   const meta = document.createElement('span');
   meta.className = 'chat-msg-meta';
-  meta.textContent = formatTime(msg.time);
+  meta.textContent = msg.timestamp_unknown ? 'Horário não informado' : formatTime(msg.time);
   if (msg.is_edited) {
     const edited = document.createElement('span');
     edited.className = 'chat-msg-edited';

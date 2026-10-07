@@ -192,8 +192,9 @@ export function showChatSearchDrawer(mainArea, conversationId, { dateIndex, onRe
 }
 
 function buildCalendar(dateIndex, onSelect) {
-  const availableDates = new Set(dateIndex.map(d => d.date));
-  const sortedDates = dateIndex.map(d => d.date).sort();
+  const datedEntries = dateIndex.filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d.date));
+  const availableDates = new Set(datedEntries.map(d => d.date));
+  const sortedDates = datedEntries.map(d => d.date).sort();
   const firstChatDate = sortedDates[0]; // e.g. "2024-02-10"
   const lastChatDate = sortedDates[sortedDates.length - 1]; // e.g. "2025-08-13"
 

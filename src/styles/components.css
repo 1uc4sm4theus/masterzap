@@ -1,5 +1,225 @@
 /* Component styles — shared UI elements */
 
+.sidebar-flights-link {
+  display: none;
+}
+
+.flights-panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--WDS-background-wash-inset);
+  color: var(--WDS-content-default);
+}
+
+.flights-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 82px;
+  padding: 14px 28px;
+  border-bottom: 1px solid var(--WDS-lines-divider);
+  background: var(--WDS-surface-elevated-default);
+}
+
+.flights-back {
+  display: grid;
+  flex: 0 0 42px;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--WDS-content-deemphasized);
+  cursor: pointer;
+}
+
+.flights-back:hover,
+.flights-back:focus-visible {
+  background: var(--WDS-surface-highlight);
+  color: var(--WDS-content-default);
+}
+
+.flights-heading h1,
+.flights-heading p {
+  margin: 0;
+}
+
+.flights-heading h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.flights-heading p {
+  margin-top: 3px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 14px;
+}
+
+.flights-content {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 26px 32px 48px;
+  overflow: auto;
+}
+
+.flight-group {
+  margin-bottom: 30px;
+}
+
+.flight-group-heading {
+  margin-bottom: 12px;
+}
+
+.flight-group-heading h2,
+.flight-group-heading p {
+  margin: 0;
+}
+
+.flight-group-heading h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.flight-group-heading p {
+  margin-top: 4px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.flight-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.flight-card,
+.flight-aircraft-notes {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--WDS-lines-divider);
+  border-radius: 10px;
+  background: var(--WDS-surface-elevated-default);
+}
+
+.flight-card-top {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.flight-date {
+  color: var(--WDS-content-default);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.flight-aircraft,
+.flight-status {
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: var(--WDS-background-wash-inset);
+  color: var(--WDS-content-deemphasized);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.flight-status {
+  background: var(--WDS-cream-75);
+  color: var(--WDS-cream-700);
+}
+
+.flight-route {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0 14px;
+  padding: 12px 0;
+  border-top: 1px solid var(--WDS-lines-divider);
+  border-bottom: 1px solid var(--WDS-lines-divider);
+}
+
+.flight-route-icon {
+  display: flex;
+  flex: 0 0 24px;
+  color: var(--WDS-cobalt-500);
+}
+
+.flight-route-place {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.flight-passengers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flight-passenger {
+  padding: 6px 10px;
+  border-radius: 18px;
+  background: var(--WDS-background-wash-inset);
+  color: var(--WDS-content-default);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.flight-note {
+  margin: 12px 0 0;
+  color: var(--WDS-content-deemphasized);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.flight-card-canceled {
+  margin-bottom: 16px;
+  border-left: 3px solid var(--WDS-cream-500);
+}
+
+.flight-canceled-title,
+.flight-aircraft-notes h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.flight-canceled-detail {
+  margin: 9px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.flight-aircraft-notes {
+  margin-top: 16px;
+}
+
+.flight-aircraft-notes p {
+  margin: 10px 0 0;
+  color: var(--WDS-content-deemphasized);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.app-container.flights-open .sidebar {
+  display: none;
+}
+
+.app-container.flights-open .main-area {
+  width: 100%;
+  min-height: 0;
+}
+
 /* ── Date separator badge (enhanced for Batch 5) ─ */
 /* Additional date badge styles live in chat.css (.chat-date-badge) */
 
