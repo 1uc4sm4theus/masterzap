@@ -10,9 +10,9 @@
       "start": "2025-05-13",
       "end": "2025-05-13"
     },
-    "total_messages": 1,
+    "total_messages": 2,
     "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+    "note": "Trecho citado no relatório policial e áudio fornecido pelo usuário; a conversa completa não consta do documento e o horário do áudio é técnico, pois o original não foi informado."
   },
   "messages": [
     {
@@ -28,15 +28,28 @@
       "urls": [],
       "source_page": 159,
       "source_figure": 158
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-05-13T10:12:50",
+      "date": "2025-05-13",
+      "time": "10:12:50",
+      "sender": "DV",
+      "content": "[áudio]",
+      "type": "audio",
+      "audio_src": "/assets/audio-dv-autoenvio.mp3",
+      "is_edited": false,
+      "attachment": "audio-dv-autoenvio.mp3",
+      "urls": []
     }
   ],
   "index": {
     "dates": [
       {
         "date": "2025-05-13",
-        "message_count": 1,
+        "message_count": 2,
         "first_message_id": 1,
-        "last_message_id": 1
+        "last_message_id": 2
       }
     ]
   }

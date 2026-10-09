@@ -429,6 +429,33 @@ export const OTHER_PROFILES = {
     }],
   },
 
+  'julio-anonimo': {
+    sections: [{
+      title: 'Julio Anônimo',
+      paragraphs: [
+        { text: 'Conversa adicionada a partir das capturas fornecidas pelo usuário. O contato aparece no app como "Julio" e foi registrado neste projeto como "Julio Anônimo" para preservar o nome do personagem.' },
+      ],
+    }],
+  },
+
+  'olavo-noletto-ministerio-padilha': {
+    sections: [{
+      title: 'Olavo Noletto',
+      paragraphs: [
+        { text: 'Conversa adicionada a partir das capturas fornecidas pelo usuário. O contato aparece no app como “Olavo Noletto Ministerio Padilha”.' },
+      ],
+    }],
+  },
+
+  'walfrido-mares': {
+    sections: [{
+      title: 'Walfrido Mares',
+      paragraphs: [
+        { text: 'Conversa adicionada a partir da captura de tela fornecida pelo usuário. O contato aparece no app como “Walfrido Mares Guia”.' },
+      ],
+    }],
+  },
+
   'jair-bolsonaro': {
     sections: [{
       title: 'Mauro Cid',
@@ -516,7 +543,7 @@ export const OTHER_PROFILES = {
       title: 'Daniel Vorcaro para ele mesmo',
       paragraphs: [
         { text: 'Não é um contato: é a conversa que o WhatsApp abre para a pessoa consigo mesma, usada como bloco de rascunho.' },
-        { text: 'Tem uma mensagem só, de 13 de maio de 2025 — o {contrato da Viking Participações}[action:search@dv-self:VIKING], que ele salvou para si e, horas depois, encaminhou a {Leonardo Palhares}[action:contact:leo-palhares]. É o segundo contrato com o escritório Barci de Moraes, o que seria pago com o jato e o helicóptero.' },
+        { text: 'Em 13 de maio de 2025, salvou para si o {contrato da Viking Participações}[action:search@dv-self:VIKING] e também um áudio fornecido para o projeto, sem horário original informado. O contrato foi encaminhado horas depois a {Leonardo Palhares}[action:contact:leo-palhares]. É o segundo contrato com o escritório Barci de Moraes, o que seria pago com o jato e o helicóptero.' },
         { text: 'O padrão de escrever para si antes de enviar é o mesmo que a perícia identificou nas 52 notas ao {ministro}[action:contact:alexandre-de-moraes] — com a diferença de que ali o intermediário era o aplicativo Notas e uma captura de tela.' },
       ],
     }],

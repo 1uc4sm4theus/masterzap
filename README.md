@@ -53,15 +53,15 @@ O nome do repositório — **masterzap** — é uma referência ao projeto origi
 git clone https://github.com/rafaelbressan/masterzap.git
 cd masterzap
 npm install
-npm run split-data    # Gera os arquivos JSON por data em public/data/
+npm run dev           # Regenera public/data/ e inicia o servidor de desenvolvimento
 npm run export        # Gera o export limpo (Markdown, JSON, zip) em public/export/
 npm run prerender     # Depois do vite build: páginas /chat/<id>, llms-full.txt e sitemap em dist/
-npm run dev           # Inicia o servidor de desenvolvimento
 ```
 
 ### Outros comandos
 
 ```bash
+npm run split-data    # Regenera os arquivos JSON por data em public/data/
 npm run build         # Build de produção
 npm run preview       # Preview do build
 npm run test          # Testes unitários (Vitest)

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "python scripts/split_data.py && vite",
     "build": "python3 scripts/split_data.py && node scripts/export.mjs && vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
     "split-data": "python3 scripts/split_data.py",

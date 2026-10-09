@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "participants": [
+      "Julio",
+      "DV"
+    ],
+    "owner": "DV",
+    "date_range": {
+      "start": "2024-03-24",
+      "end": "2024-10-23"
+    },
+    "total_messages": 25
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-03-24T15:39:00",
+      "date": "2024-03-24",
+      "time": "15:39:00",
+      "sender": "Julio",
+      "content": "camilo.santos@postalis.com.br",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-03-24T15:39:00",
+      "date": "2024-03-24",
+      "time": "15:39:00",
+      "sender": "Julio",
+      "content": "Boa tarde Daniel, preciso que vc envie o e-mail pro presidente da pastalis ... amanhã ele vai travar a agenda do dia 2 de abril na parte da tarde só pra você !!! Me avisa quando enviar para avisar-ló",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 1,
+      "timestamp": "2024-03-25T09:43:00",
+      "date": "2024-03-25",
+      "time": "09:43:00",
+      "sender": "Julio",
+      "content": "Bom dia Daniel, presidente aqui me ligou cobrando sobre o e-mail... me manda o print do e-mail pra ele te responder com agenda",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-03-25T09:43:00",
+      "date": "2024-03-25",
+      "time": "09:43:00",
+      "sender": "Julio",
+      "content": "Por gentileza",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-03-25T11:55:00",
+      "date": "2024-03-25",
+      "time": "11:55:00",
+      "sender": "Julio",
+      "content": "Pessoal tá me cobrando aqui Daniel.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-03-25T11:56:00",
+      "date": "2024-03-25",
+      "time": "11:56:00",
+      "sender": "Julio",
+      "content": "Preciso de um feed seu",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-03-25T13:42:00",
+      "date": "2024-03-25",
+      "time": "13:42:00",
+      "sender": "Julio",
+      "content": "Daniel, VC deve tá corrido ... veja pra mim o caso do e-mail... a Paula ela faz pra você ou só vc que tá fazendo ?!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-03-25T14:55:00",
+      "date": "2024-03-25",
+      "time": "14:55:00",
+      "sender": "Julio",
+      "content": "Chamada de voz perdida",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "call_type": "missed_voice_call"
+    },
+    {
+      "id": 1,
+      "timestamp": "2024-04-08T17:07:00",
+      "date": "2024-04-08",
+      "time": "17:07:00",
+      "sender": "DV",
+      "content": "Vamos pressionar pra boletar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-04-08T17:08:00",
+      "date": "2024-04-08",
+      "time": "17:08:00",
+      "sender": "Julio",
+      "content": "Postalis evoluiu?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-04-08T17:08:00",
+      "date": "2024-04-08",
+      "time": "17:08:00",
+      "sender": "Julio",
+      "content": "DV",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-04-08T17:08:00",
+      "date": "2024-04-08",
+      "time": "17:08:00",
+      "sender": "Julio",
+      "content": "Evoluiu",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-04-08T17:08:00",
+      "date": "2024-04-08",
+      "time": "17:08:00",
+      "sender": "Julio",
+      "content": "Mandando e-mail também",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-04-08T17:08:00",
+      "date": "2024-04-08",
+      "time": "17:08:00",
+      "sender": "Julio",
+      "content": "Do bb essa semana resolve",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-04-08T17:08:00",
+      "date": "2024-04-08",
+      "time": "17:08:00",
+      "sender": "Julio",
+      "content": "Semana que vem reunião lá",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-04-08T17:08:00",
+      "date": "2024-04-08",
+      "time": "17:08:00",
+      "sender": "Julio",
+      "content": "Aí alinho contigo na sua agenda",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-04-08T17:10:00",
+      "date": "2024-04-08",
+      "time": "17:10:00",
+      "sender": "DV",
+      "content": "Mas vamos tentar concluir",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 1,
+      "timestamp": "2024-10-22T11:54:00",
+      "date": "2024-10-22",
+      "time": "11:54:00",
+      "sender": "Julio",
+      "content": "Daniel, acertado !!! Padilha e Olavo amanhã às 22 horas, um jantar contigo em bsb",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-10-22T13:30:00",
+      "date": "2024-10-22",
+      "time": "13:30:00",
+      "sender": "DV",
+      "content": "Combinado ?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-10-22T18:04:00",
+      "date": "2024-10-22",
+      "time": "18:04:00",
+      "sender": "Julio",
+      "content": "Chamada de voz — duração: 00:26",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "call_type": "voice_call",
+      "duration": "00:26"
+    },
+    {
+      "id": 1,
+      "timestamp": "2024-10-23T21:16:00",
+      "date": "2024-10-23",
+      "time": "21:16:00",
+      "sender": "Julio",
+      "content": "Daniel, vai 5 pessoas ... Padilha, Olavo, o Fernando (primo), um assessor do Padilha e eu",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-10-23T21:16:00",
+      "date": "2024-10-23",
+      "time": "21:16:00",
+      "sender": "DV",
+      "content": "Ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-10-23T21:26:00",
+      "date": "2024-10-23",
+      "time": "21:26:00",
+      "sender": "Julio",
+      "content": "O Padilha já está a caminho",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-10-23T21:29:00",
+      "date": "2024-10-23",
+      "time": "21:29:00",
+      "sender": "Julio",
+      "content": "Daniel me passa a localização por gentileza",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-10-23T21:31:00",
+      "date": "2024-10-23",
+      "time": "21:31:00",
+      "sender": "DV",
+      "content": "SHIS QI 26 CHÁCARA 7 CASA A CEP 71670-720",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-03-24",
+        "message_count": 2,
+        "first_message_id": 1,
+        "last_message_id": 2
+      },
+      {
+        "date": "2024-03-25",
+        "message_count": 6,
+        "first_message_id": 3,
+        "last_message_id": 8
+      },
+      {
+        "date": "2024-04-08",
+        "message_count": 9,
+        "first_message_id": 9,
+        "last_message_id": 17
+      },
+      {
+        "date": "2024-10-22",
+        "message_count": 3,
+        "first_message_id": 18,
+        "last_message_id": 20
+      },
+      {
+        "date": "2024-10-23",
+        "message_count": 5,
+        "first_message_id": 21,
+        "last_message_id": 25
+      }
+    ]
+  }
+}
