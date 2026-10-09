@@ -184,7 +184,7 @@ function renderAudioMessage(msg, isOutgoing, ownerName = 'Daniel Vorcaro') {
 
   const foot = document.createElement('div');
   foot.className = 'chat-audio-foot';
-  foot.textContent = 'Áudio não recuperado · transcrição da perícia';
+  foot.textContent = 'Áudio não recuperado';
   el.appendChild(foot);
 
   const formatAudioTime = (seconds) => {
