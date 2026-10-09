@@ -142,6 +142,47 @@ export const OTHER_PROFILES = {
       ],
     }],
   },
+  'luciano-huck': {
+    sections: [
+      {
+        title: 'Sobre Luciano Huck',
+        paragraphs: [
+          { text: 'Luciano Grostein Huck, nascido em 3 de setembro de 1971 em São Paulo, é apresentador de televisão e empresário. Formado em Jornalismo pela Universidade de São Paulo, apresentou programas de auditório como Caldeirão do Huck e Domingão com Huck.' },
+        ],
+      },
+      {
+        title: 'Relação com Daniel Vorcaro',
+        paragraphs: [
+          { text: 'Reportagem da {Veja}[https://veja.abril.com.br/brasil/mensagens-da-pf-revelam-que-luciano-huck-foi-amigo-e-conselheiro-de-daniel-vorcaro/] relata que mensagens encontradas pela Polícia Federal no celular de Daniel Vorcaro registram uma relação pessoal e tratativas comerciais entre os dois. Entre os assuntos estão o patrocínio do Will Bank ao Domingão com Huck, conversas sobre uma aeronave e favores pessoais. A Veja afirma que as mensagens não indicam ilegalidades.' },
+          { text: 'A conversa publicada neste acervo é formada por capturas de tela, não corresponde ao chat integral e contém lacunas entre os trechos disponíveis.' },
+        ],
+      },
+      {
+        title: 'Esclarecimentos',
+        paragraphs: [
+          { text: 'Após a divulgação, a assessoria de Huck negou que ele e Vorcaro fossem sócios. Segundo a nota reproduzida pelo {Hugo Gloss}[https://hugogloss.uol.com.br/brasil/luciano-huck-esclarece-relacao-com-vorcaro-apos-vazamento-de-mensagens/], o contato esteve relacionado à negociação e à gestão do patrocínio do Will Bank ao programa; a assessoria afirmou que o acordo tinha contrato, notas fiscais, impostos recolhidos e serviços prestados, e que os contratos de imagem e publicidade foram rescindidos antes da intervenção do Banco Central no Will Bank.' },
+        ],
+      },
+    ],
+  },
+  'joao-doria': {
+    sections: [
+      {
+        title: 'Sobre João Doria',
+        paragraphs: [
+          { text: 'João Agripino da Costa Doria Junior, nascido em 16 de dezembro de 1957 em São Paulo, é empresário, jornalista e ex-político. Fundou o Grupo Lide, foi prefeito de São Paulo (2017–2018) e governador do estado (2019–2022). Após desistir da pré-candidatura à Presidência em 2022, anunciou que deixaria a vida pública e voltaria à iniciativa privada.' },
+        ],
+      },
+      {
+        title: 'A mensagem a Daniel Vorcaro',
+        paragraphs: [
+          { text: 'Reportagens do {Poder360}[https://www.poder360.com.br/poder-gente/foi-apenas-um-gesto-cordial-diz-doria-sobre-mensagem-a-vorcaro/] e do {Metrópoles}[https://www.metropoles.com/colunas/paulo-cappelli/doria-se-pronuncia-sobre-troca-de-mensagens-com-vorcaro] publicaram uma mensagem atribuída a Doria, enviada em maio de 2025. Nela, ele diz estar preocupado com Vorcaro, afirma ter ouvido coisas que exigiriam uma reação e propõe um café. Na sequência, segundo as reportagens, menciona Vorcaro, o então sócio Maurício Quadrado e o banco, acrescentando que gostaria de conversar reservadamente. As publicações informam que a conversa não esclarece a que fatos Doria se referia.' },
+          { text: 'A assessoria de Doria afirmou que, quando a mensagem foi enviada, ainda não havia tema público de gravidade imputado ao Banco Master e a descreveu como “apenas um gesto cordial”.' },
+          { text: 'A conversa disponível neste acervo é um recorte publicado pela CNN Brasil e não contém todos os trechos reproduzidos nas reportagens.' },
+        ],
+      },
+    ],
+  },
   'walfrido-warde-new': {
     sections: [{
       title: 'Walfrido Warde New',
@@ -529,24 +570,48 @@ export const OTHER_PROFILES = {
   },
 
   'nikolas-ferreira': {
-    sections: [{
-      title: 'Nikolas Ferreira',
-      paragraphs: [
-        { text: 'Esta conversa foi adicionada a partir do áudio fornecido para o MasterWhats. A data original da mensagem não foi informada.' },
-      ],
-    }],
+    sections: [
+      {
+        title: 'Sobre Nikolas Ferreira',
+        paragraphs: [
+          { text: 'Nikolas Ferreira de Oliveira, nascido em 30 de maio de 1996 em Belo Horizonte, é advogado e político. Eleito deputado federal por Minas Gerais em 2022, foi o candidato a deputado federal mais votado do país naquela eleição e tornou-se uma das principais vozes da direita nas redes sociais e no Congresso.' },
+        ],
+      },
+      {
+        title: 'Áudio e pedido de ajuda',
+        paragraphs: [
+          { text: 'Em setembro de 2026, o {Jornal NH}[https://www.facebook.com/watch/?v=1867100414673831], citando reportagem do ICL Notícias, informou que um áudio enviado por Nikolas a Daniel Vorcaro em março de 2025 foi obtido no âmbito de investigações da Polícia Federal. Segundo o relato, Nikolas pediu ajuda para intermediar a liberação de um ativo de minério em favor de Thiago Rodrigues de Faria, descrito pela publicação como advogado e ex-assessor de seu gabinete.' },
+          { text: 'No mesmo áudio, segundo o Jornal NH, Nikolas pediu desculpas por críticas que havia feito em 2024 ao Fórum Jurídico Brasil de Ideias, em Londres. Ele teria dito que não sabia que o Banco Master era ligado a Vorcaro e atribuiu a André Valadão a informação que o levou a fazer esse esclarecimento. A publicação relata também que Nikolas sugeriu que os dois se encontrassem.' },
+          { text: 'O áudio exibido nesta conversa foi fornecido ao projeto e não tem data original informada. Não há confirmação de que seja a mesma gravação de março de 2025 descrita pela imprensa.' },
+        ],
+      },
+      {
+        title: 'Outras menções nas reportagens',
+        paragraphs: [
+          { text: 'Em artigo do {Le Monde diplomatique Brasil}[https://diplomatique.org.br/o-sugar-daddy-vorcaro-e-a-anatomia-de-seu-esquema-com-a-republica/], o autor atribui a Vorcaro, em mensagem de abril de 2024, a frase: “Esse Nikolas eu banquei todos os voos dele”. O artigo não apresenta, nesse trecho, detalhes que permitam verificar quais voos estariam em questão.' },
+        ],
+      },
+    ],
   },
 
   'dv-self': {
     about: 'Mensagens salvas',
-    sections: [{
-      title: 'Daniel Vorcaro para ele mesmo',
-      paragraphs: [
-        { text: 'Não é um contato: é a conversa que o WhatsApp abre para a pessoa consigo mesma, usada como bloco de rascunho.' },
-        { text: 'Em 13 de maio de 2025, salvou para si o {contrato da Viking Participações}[action:search@dv-self:VIKING] e também um áudio fornecido para o projeto, sem horário original informado. O contrato foi encaminhado horas depois a {Leonardo Palhares}[action:contact:leo-palhares]. É o segundo contrato com o escritório Barci de Moraes, o que seria pago com o jato e o helicóptero.' },
-        { text: 'O padrão de escrever para si antes de enviar é o mesmo que a perícia identificou nas 52 notas ao {ministro}[action:contact:alexandre-de-moraes] — com a diferença de que ali o intermediário era o aplicativo Notas e uma captura de tela.' },
-      ],
-    }],
+    sections: [
+      {
+        title: 'Daniel Vorcaro para ele mesmo',
+        paragraphs: [
+          { text: 'Não é um contato: é a conversa que o WhatsApp abre para a pessoa consigo mesma, usada como bloco de rascunho.' },
+          { text: 'Em 13 de maio de 2025, salvou para si o {contrato da Viking Participações}[action:search@dv-self:VIKING] e também um áudio fornecido para o projeto, sem horário original informado. O contrato foi encaminhado horas depois a {Leonardo Palhares}[action:contact:leo-palhares]. É o segundo contrato com o escritório Barci de Moraes, o que seria pago com o jato e o helicóptero.' },
+          { text: 'O padrão de escrever para si antes de enviar é o mesmo que a perícia identificou nas 52 notas ao {ministro}[action:contact:alexandre-de-moraes] — com a diferença de que ali o intermediário era o aplicativo Notas e uma captura de tela.' },
+        ],
+      },
+      {
+        title: 'Mídias divulgadas pela imprensa',
+        paragraphs: [
+          { text: 'Este espaço também reunirá mídias atribuídas a Daniel Vorcaro que forem divulgadas pela imprensa, mesmo quando não tiverem sido encontradas nos aparelhos examinados. A {Veja noticiou que a defesa confirmou que o áudio sobre Lula é do banqueiro}[https://veja.abril.com.br/brasil/defesa-de-daniel-vorcaro-confirma-que-audio-sobre-lula-e-do-banqueiro/].' },
+        ],
+      },
+    ],
   },
 };
 
