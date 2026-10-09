@@ -476,7 +476,7 @@ function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro')
   const isSystem = msg.type === 'system';
 
   const row = document.createElement('div');
-  row.className = `chat-msg-row ${isOutgoing ? 'outgoing' : 'incoming'}${isSystem ? ' system' : ''}`;
+  row.className = `chat-msg-row ${isOutgoing ? 'outgoing' : 'incoming'}${isSystem ? ' system' : ''}${msg.note ? ' with-note' : ''}`;
   row.dataset.id = msg.id;
 
   if (isSystem) {
@@ -570,6 +570,18 @@ function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro')
   bubble.appendChild(chevron);
 
   row.appendChild(bubble);
+
+  if (msg.note) {
+    const note = document.createElement('div');
+    note.className = 'chat-msg-bubble outgoing chat-msg-note-bubble';
+
+    const noteContent = document.createElement('div');
+    noteContent.className = 'chat-msg-content';
+    noteContent.innerHTML = linkify(escapeHtml(msg.note));
+    note.appendChild(noteContent);
+    row.appendChild(note);
+  }
+
   return row;
 }
 
