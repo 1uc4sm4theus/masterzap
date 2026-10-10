@@ -32,6 +32,7 @@ export function renderSidebar(container, {
   onCalls,
   onPayments,
   onFlights,
+  onChatGPT,
   onChats,
   onUserSwitch,
   activeUser,
@@ -79,6 +80,16 @@ export function renderSidebar(container, {
     flightsLink.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5L21 16Z"/></svg><span>Voos e passageiros</span>';
     flightsLink.addEventListener('click', onFlights);
     el.insertBefore(flightsLink, el.querySelector('.sidebar-search'));
+  }
+
+  if (onChatGPT) {
+    const chatgptLink = document.createElement('button');
+    chatgptLink.className = 'sidebar-chatgpt-link';
+    chatgptLink.type = 'button';
+    chatgptLink.setAttribute('aria-label', 'Consultas ao ChatGPT');
+    chatgptLink.innerHTML = '<img src="/assets/chatgpt-logo.png" alt="" aria-hidden="true"><span>Consultas ao ChatGPT</span>';
+    chatgptLink.addEventListener('click', onChatGPT);
+    el.insertBefore(chatgptLink, el.querySelector('.sidebar-search'));
   }
 
   const list = el.querySelector('.conversation-list');

@@ -23,6 +23,7 @@ import {
 import { showImagePreview } from './components/ImagePreview.js';
 import { renderPaymentsPanel } from './components/PaymentsPanel.js';
 import { renderFlightsPanel } from './components/FlightsPanel.js';
+import { renderChatGPTPanel } from './components/ChatGPTPanel.js';
 import { renderMediaPanel } from './components/MediaPanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
@@ -285,6 +286,7 @@ async function init() {
     // "Não lidas" tally.
     if (markConversationRead(readConversations, id)) sidebar.refreshReadState?.();
     container.classList.add('chat-open');
+    container.classList.remove('flights-open', 'chatgpt-open');
 
     const conversation = store.getConversation(id);
     if (!conversation) { showEmptyState(); return; }
@@ -418,6 +420,7 @@ async function init() {
     setActiveConversation(sidebar, null);
     container.classList.remove('chat-open');
     container.classList.remove('flights-open');
+    container.classList.remove('chatgpt-open');
     while (mainArea.firstChild) mainArea.removeChild(mainArea.firstChild);
     renderEmptyState(mainArea);
   }
@@ -502,13 +505,14 @@ async function init() {
     onPayments: () => router.navigate('payments'),
     onMedia: () => router.navigate('media'),
     onFlights: () => router.navigate('flights'),
+    onChatGPT: () => router.navigate('chatgpt'),
     avatarSrc: activeUser.avatar,
     avatarName: activeUser.name,
     onSettings: openSettings,
     onChat: () => {
       // From secondary screens, this is the way back to the conversation list.
       const route = router.getCurrentRoute().route;
-      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights') { router.navigate('home'); return; }
+      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt') { router.navigate('home'); return; }
       closeProfile();
       closeSettings();
     },
@@ -533,6 +537,7 @@ async function init() {
       onCalls: () => router.navigate('calls'),
       onPayments: () => router.navigate('payments'),
       onFlights: () => router.navigate('flights'),
+      onChatGPT: () => router.navigate('chatgpt'),
       onChats: () => router.navigate('home'),
       onUserSwitch: toggleUserSwitcher,
       activeUser,
@@ -650,6 +655,14 @@ async function init() {
     while (mainArea.firstChild) mainArea.removeChild(mainArea.firstChild);
     mainArea.appendChild(renderFlightsPanel({ onBack: () => router.navigate('home') }));
     navRail.setActive?.('flights');
+  });
+  router.on('chatgpt', () => {
+    showEmptyState();
+    sidebar.showChats?.();
+    container.classList.add('chatgpt-open');
+    mainArea.replaceChildren();
+    mainArea.appendChild(renderChatGPTPanel({ onBack: () => router.navigate('home') }));
+    navRail.setActive?.('chatgpt');
   });
   router.on('chat', async (id, messageId) => {
     if (messageId) {

@@ -15,6 +15,10 @@ describe('HashRouter', () => {
       expect(HashRouter.parseHash('#/flights')).toEqual({ route: 'flights', param: null, messageId: null });
     });
 
+    it('#/chatgpt → chatgpt', () => {
+      expect(HashRouter.parseHash('#/chatgpt')).toEqual({ route: 'chatgpt', param: null, messageId: null });
+    });
+
     it('# → home', () => {
       expect(HashRouter.parseHash('#')).toEqual({ route: 'home', param: null, messageId: null });
     });
@@ -81,6 +85,11 @@ describe('HashRouter', () => {
     it('navigate("flights") sets hash to #/flights', () => {
       router.navigate('flights');
       expect(window.location.hash).toBe('#/flights');
+    });
+
+    it('navigate("chatgpt") sets hash to #/chatgpt', () => {
+      router.navigate('chatgpt');
+      expect(window.location.hash).toBe('#/chatgpt');
     });
 
     it('navigate("chat", "martha-graeff") sets hash without messageId', () => {

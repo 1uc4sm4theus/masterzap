@@ -4,6 +4,10 @@
   display: none;
 }
 
+.sidebar-chatgpt-link {
+  display: none;
+}
+
 .flights-panel {
   position: relative;
   z-index: 1;
@@ -218,6 +222,272 @@
 .app-container.flights-open .main-area {
   width: 100%;
   min-height: 0;
+}
+
+.app-container.chatgpt-open .sidebar {
+  display: none;
+}
+
+.app-container.chatgpt-open .main-area {
+  width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.nav-rail-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.chatgpt-panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #fff;
+  color: #202123;
+}
+
+.chatgpt-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 68px;
+  padding: 12px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.chatgpt-back,
+.chatgpt-mobile-back {
+  border: 0;
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+  font: inherit;
+}
+
+.chatgpt-back {
+  display: none;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.chatgpt-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chatgpt-brand img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.chatgpt-brand h1 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.chatgpt-disclaimer {
+  margin: 0;
+  padding: 11px 24px;
+  border-bottom: 1px solid #ededed;
+  background: #f7f7f8;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.chatgpt-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.chatgpt-list {
+  display: flex;
+  flex: 0 0 290px;
+  flex-direction: column;
+  min-height: 0;
+  border-right: 1px solid #e5e5e5;
+  background: #fafafa;
+}
+
+.chatgpt-search {
+  margin: 14px 12px 8px;
+  padding: 10px 12px;
+  border: 1px solid #e4e4e7;
+  border-radius: 9px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+}
+
+.chatgpt-list-items {
+  min-height: 0;
+  padding: 4px 8px 12px;
+  overflow-y: auto;
+}
+
+.chatgpt-list-item {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+  padding: 11px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.chatgpt-list-item:hover,
+.chatgpt-list-item.active {
+  background: #ececf1;
+}
+
+.chatgpt-list-item[hidden] {
+  display: none;
+}
+
+.chatgpt-list-title {
+  overflow: hidden;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chatgpt-list-date {
+  color: #777;
+  font-size: 11px;
+}
+
+.chatgpt-reader {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.chatgpt-conversation-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  width: min(100%, 820px);
+  margin: 0 auto;
+  padding: 26px 28px 8px;
+}
+
+.chatgpt-conversation-heading h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.chatgpt-conversation-heading time {
+  flex: 0 0 auto;
+  color: #777;
+  font-size: 12px;
+}
+
+.chatgpt-thread {
+  width: min(100%, 820px);
+  margin: 0 auto;
+  padding: 12px 28px 40px;
+}
+
+.chatgpt-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.chatgpt-message-user {
+  align-items: flex-end;
+}
+
+.chatgpt-message-label {
+  margin: 0 4px 6px;
+  color: #686868;
+  font-size: 12px;
+}
+
+.chatgpt-message-bubble {
+  max-width: 88%;
+  margin: 0;
+  padding: 13px 17px;
+  border-radius: 18px;
+  background: #f4f4f4;
+  color: #202123;
+  font-size: 15px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.chatgpt-message-user .chatgpt-message-bubble {
+  background: #e8f1fb;
+}
+
+.chatgpt-source {
+  margin: 6px 4px 0;
+  color: #777;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.chatgpt-editorial-notes {
+  margin: 28px 0 0;
+  padding: 12px 14px;
+  border-left: 3px solid #d5d5d5;
+  background: #f8f8f8;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.chatgpt-editorial-notes p {
+  margin: 0;
+}
+
+.chatgpt-editorial-notes p + p {
+  margin-top: 8px;
+}
+
+.chatgpt-mobile-back {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .chatgpt-list {
+    flex-basis: 250px;
+  }
+
+  .chatgpt-thread,
+  .chatgpt-conversation-heading {
+    width: 100%;
+  }
+
+  .chatgpt-thread {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
 }
 
 /* ── Date separator badge (enhanced for Batch 5) ─ */
