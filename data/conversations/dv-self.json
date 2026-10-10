@@ -10,9 +10,9 @@
       "start": "2025-05-13",
       "end": "2025-05-13"
     },
-    "total_messages": 2,
+    "total_messages": 1,
     "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trecho citado no relatório policial e áudio fornecido pelo usuário; a conversa completa não consta do documento e o horário do áudio é técnico, pois o original não foi informado."
+    "note": "Trecho citado no relatório policial; a conversa completa não consta do documento."
   },
   "messages": [
     {
@@ -28,20 +28,6 @@
       "urls": [],
       "source_page": 159,
       "source_figure": 158
-    },
-    {
-      "id": 2,
-      "timestamp": "2025-05-13T10:12:50",
-      "date": "2025-05-13",
-      "time": "10:12:50",
-      "sender": "DV",
-      "content": "[áudio]",
-      "type": "audio",
-      "audio_src": "/assets/audio-dv-autoenvio.mp3",
-      "note": "⚠️ Áudio divulgado pela revista Veja em 09/10/2026.\n\nA defesa de Daniel Vorcaro emitiu nota oficial dizendo que não confirma a autenticidade nem a integridade do material.\n→ https://www.cnnbrasil.com.br/blogs/caio-junqueira/politica/defesa-de-vorcaro-diz-nao-confirmar-autenticidade-de-audio/\n\nPF e PGR também negam que ele tenha prestado depoimento formal sobre o assunto.\n\nPublicamos apenas como registro do que foi divulgado pela imprensa. A origem e a validade do áudio ainda não foram periciadas.",
-      "is_edited": false,
-      "attachment": "audio-dv-autoenvio.mp3",
-      "urls": []
     }
   ],
   "index": {
