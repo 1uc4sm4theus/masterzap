@@ -582,7 +582,7 @@ export const OTHER_PROFILES = {
         paragraphs: [
           { text: 'Em setembro de 2026, o {Jornal NH}[https://www.facebook.com/watch/?v=1867100414673831], citando reportagem do ICL Notícias, informou que um áudio enviado por Nikolas a Daniel Vorcaro em março de 2025 foi obtido no âmbito de investigações da Polícia Federal. Segundo o relato, Nikolas pediu ajuda para intermediar a liberação de um ativo de minério em favor de Thiago Rodrigues de Faria, descrito pela publicação como advogado e ex-assessor de seu gabinete.' },
           { text: 'No mesmo áudio, segundo o Jornal NH, Nikolas pediu desculpas por críticas que havia feito em 2024 ao Fórum Jurídico Brasil de Ideias, em Londres. Ele teria dito que não sabia que o Banco Master era ligado a Vorcaro e atribuiu a André Valadão a informação que o levou a fazer esse esclarecimento. A publicação relata também que Nikolas sugeriu que os dois se encontrassem.' },
-          { text: 'O áudio exibido nesta conversa foi fornecido ao projeto e não tem data original informada. Não há confirmação de que seja a mesma gravação de março de 2025 descrita pela imprensa.' },
+          { text: 'O áudio exibido nesta conversa foi fornecido ao projeto e está registrado com a data de 30 de março de 2025, informada pelo usuário; o horário original não foi informado. Não há confirmação de que seja a mesma gravação descrita pela imprensa.' },
         ],
       },
       {

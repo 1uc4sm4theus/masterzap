@@ -7,18 +7,18 @@
     "saved_as": null,
     "phone": null,
     "date_range": {
-      "start": "2025-11-17",
-      "end": "2025-11-17"
+      "start": "2025-03-30",
+      "end": "2025-03-30"
     },
     "total_messages": 1,
     "source": "Conteúdo fornecido pelo usuário",
-    "note": "A data original da mensagem não foi informada; 2025-11-17 é uma data técnica provisória."
+    "note": "A data da mensagem, 2025-03-30, foi informada pelo usuário; o horário original não foi informado."
   },
   "messages": [
     {
       "id": 1,
-      "timestamp": "2025-11-17T00:00:00",
-      "date": "2025-11-17",
+      "timestamp": "2025-03-30T00:00:00",
+      "date": "2025-03-30",
       "time": "00:00:00",
       "sender": "Nikolas Ferreira",
       "content": "[áudio]",
@@ -32,7 +32,7 @@
   "index": {
     "dates": [
       {
-        "date": "2025-11-17",
+        "date": "2025-03-30",
         "message_count": 1,
         "first_message_id": 1,
         "last_message_id": 1
