@@ -118,7 +118,11 @@ function conversationMarkdown(entry, messages, { standalone = true, month = null
 
   out.push(`${sub} Proveniência`, '', '| | |', '|---|---|');
   out.push(`| Fonte | ${source.label} |`);
-  if (source.document) out.push(`| Documento | \`${source.document}\`${source.document_pages ? `, ${source.document_pages} páginas` : ''}${source.document_url ? ` — [no repositório](${source.document_url})` : ''} (sha256 \`${source.document_sha256 || 'n/d'}\`) |`);
+  if (source.document || source.document_url) {
+    const document = source.document ? `\`${source.document}\`` : 'Documento externo';
+    const linkLabel = source.document ? 'no repositório' : 'acessar';
+    out.push(`| Documento | ${document}${source.document_pages ? `, ${source.document_pages} páginas` : ''}${source.document_url ? ` — [${linkLabel}](${source.document_url})` : ''}${source.document_sha256 ? ` (sha256 \`${source.document_sha256}\`)` : ''} |`);
+  }
   out.push(`| Como chegou ao público | ${source.how} |`);
   out.push(`| Período | ${month ? `${messages[0].date} a ${messages.at(-1).date}` : `${entry.date_range.start} a ${entry.date_range.end}`} |`);
   out.push(`| Mensagens | ${month ? `${messages.length} (de ${entry.total_messages} na conversa)` : entry.total_messages} |`);
@@ -145,6 +149,8 @@ function conversationMarkdown(entry, messages, { standalone = true, month = null
     if (msg.is_edited) tags.push('editada');
     if (msg.view_once) tags.push('visualização única');
     if (msg.source_page) tags.push(`laudo p. ${msg.source_page}${msg.source_figure ? `, fig. ${msg.source_figure}` : ''}`);
+    if (msg.source_cite) tags.push(msg.source_cite);
+    if (msg.also_in?.length) tags.push(`também citado em ${msg.also_in.join('; ')}`);
     out.push(`**${msg.sender}** · ${tags.join(' · ')}`);
     const body = messageBody(msg);
     if (body) out.push(...body.split('\n').map(escapeLine));

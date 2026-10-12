@@ -41,6 +41,12 @@ export function loadMessages(entry) {
  * split_data.py computed them once.
  */
 export function sourceOf(entry) {
+  if (entry.source_detail) {
+    return {
+      ...entry.source_detail,
+      label: entry.source_detail.label || entry.source,
+    };
+  }
   if (entry.source?.startsWith('IPJ-A')) {
     const doc = entry.source_document || {};
     return {

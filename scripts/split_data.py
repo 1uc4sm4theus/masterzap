@@ -282,7 +282,7 @@ def split_conversation(conv_id, data, index):
             "sender": last_msg["sender"],
         } if last_msg else None,
     }
-    for key in ("phone", "saved_as", "source", "note"):
+    for key in ("phone", "saved_as", "source", "source_detail", "note"):
         if metadata.get(key):
             entry[key] = metadata[key]
     if str(metadata.get("source", "")).startswith("IPJ-A") and REPORT_DOCUMENT:
@@ -319,7 +319,10 @@ def main():
     write_json(OUTPUT_DIR / "conversations.json", {"conversations": entries})
 
     # Every call, newest first — the calls screen reads this one file.
-    CALLS.sort(key=lambda c: c["timestamp"], reverse=True)
+    CALLS.sort(
+        key=lambda c: c["timestamp"] or f'{c["date"]}T{c.get("time") or ""}',
+        reverse=True,
+    )
     write_json(OUTPUT_DIR / "calls.json", {"calls": CALLS})
     print(f"calls.json: {len(CALLS)} calls")
 

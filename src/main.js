@@ -90,6 +90,12 @@ async function init() {
     'thatiane-prime': '/assets/avatar-thatiane-prime.jpg',
     'leo-serrano': '/assets/avatar-leo-serrano.jpg',
     'dani-alves': '/assets/avatar-dani-alves.jpg',
+    'joao-doria': '/assets/avatar-joao-doria.jpg',
+    'hugo-motta': '/assets/avatar-hugo-motta.jpg',
+    'walfrido-mares-guia': '/assets/avatar-walfrido-mares-guia.webp',
+
+
+
     
     'luiz-renno': '/assets/avatar-luiz-renno.jpg',
     'ana-matos-mkt': '/assets/avatar-ana-matos-mkt.jpg',

@@ -240,6 +240,52 @@ export const OTHER_PROFILES = {
         { text: 'Ciro Rocha Soares, advogado baiano. No relatório aparece como {uma das peças mais próximas de Vorcaro}[https://www.bnews.com.br/noticias/crime-e-justica-bahia/charuto-macallan-e-portas-abertas-ciro-soares-surge-como-peca-chave-de-vorcaro-em-relatorio-da-pf.html] nas articulações de bastidor com os tribunais superiores e o Ministério Público.' },
         { text: 'É por ele que o procurador-geral da República, {Paulo Gonet}[https://www.poder360.com.br/poder-brasil/pgr-pediu-a-vorcaro-para-bancar-ida-do-filho-para-londres-diz-pf/], entra na história: Ciro encaminhava mensagens e fotos do PGR ao banqueiro, avisou que "{o Gonet mandou msg pra vc}[action:search@ciro-soares:Gonet mandou]" e, em março de 2025, perguntou se "{o filho dele pode ir com a gente para Londres}[action:search@ciro-soares:filho dele]". Vorcaro respondeu "Obvio ne". Em abril de 2024 já contava ter pedido ao PGR que convencesse um candidato a desistir de uma eleição interna do MP — "{acabei de ligar para ele, ele vai desistir}[action:search@ciro-soares:desistir]".' },
         { text: 'Também repassou o recado de que a comitiva esperava "{charuto e macalan}[action:search@ciro-soares:macalan]" em Londres. Gonet {pediu a nulidade do relatório}[https://www.brasilemfolhas.com.br/2026/09/gonet-pede-nulidade-de-relatorio-da-pf-sobre-banqueiro-e-moraes/].' },
+        { text: 'Em setembro de 2026, O Globo publicou mensagens que mostram Ciro como ponte com o senador {Otto}[action:search@ciro-soares:Otto] Alencar, a quem Vorcaro chama de "{comandante}[action:search@ciro-soares:comandante]". Mensagens publicadas por Noites Húngaras mostram encontros com o ministro André Mendonça — "Levei o André lá no {Vasco}[action:search@ciro-soares:Levei o André lá no Vasco]" — e a agenda com {Cezinha de Madureira}[action:contact:cezinha-de-madureira]. Esses trechos vêm de publicações jornalísticas posteriores ao laudo e estão identificados individualmente na conversa.' },
+      ],
+    }],
+  },
+  'berg': {
+    about: 'Aviação',
+    sections: [{
+      title: 'José Alfredo Berg Filho',
+      paragraphs: [
+        { text: 'Salvo como “Berg”. Em 11 de setembro de 2024, acompanha com Vorcaro um voo para {BSB}[action:search@berg:BSB] e envia uma lista de passageiros, que inclui “{JAGUES VAGNER}[action:search@berg:JAGUES VAGNER]”. As mensagens transcritas são trechos citados na petição da PF sobre Jaques Wagner (Inq. 5026 / Pet. 16.210), p. 63; a conversa completa não é pública.' },
+      ],
+    }],
+  },
+  'marcelo-terra-firme': {
+    about: 'Terra Firme',
+    sections: [{
+      title: 'Marcelo Terra Firme',
+      paragraphs: [
+        { text: 'Contato ligado à Terra Firme, empresa do grupo de Augusto Lima. Em 22 de abril de 2024, trata com Vorcaro de pagamentos validados por {Alberto Felix}[action:contact:alberto-felix]. Os seis registros transcritos são trechos citados em documentos da PF sobre o RioPrevidência e Cláudio Castro (Pet. 15.497), publicados pelo Poder360 em 13 de setembro de 2026; a conversa completa não é pública.' },
+      ],
+    }],
+  },
+  'mario-frias': {
+    about: 'Deputado federal (PL-SP)',
+    sections: [{
+      title: 'Mário Frias',
+      paragraphs: [
+        { text: 'Deputado federal e idealizador do filme Dark Horse, segundo a PF. Em 11 de dezembro de 2024, no dia do encontro com Flávio Bolsonaro na casa de Vorcaro, envia um áudio dizendo que vão “mexer com o {coração}[action:search@mario-frias:coração] de muita gente”. O trecho foi publicado pelo Metrópoles em 12 de setembro de 2026; o conteúdo do áudio não está disponível nesta conversa.' },
+      ],
+    }],
+  },
+  'mauricio-quadrado': {
+    about: 'Conselheiro do Banco Voiter',
+    sections: [{
+      title: 'Maurício Quadrado',
+      paragraphs: [
+        { text: 'Maurício Antonio Quadrado, conselheiro do Banco Voiter, que Vorcaro presidia. Em março de 2024, os dois conversam sobre a tentativa de vender Letras Financeiras do Voiter ao {RioPrevidência}[action:search@mauricio-quadrado:RioPrevidência]. Os doze registros transcritos são trechos citados na representação da PF sobre o RioPrevidência e Cláudio Castro (Pet. 15.497), publicada pelo Poder360 em 13 de setembro de 2026; a conversa completa não é pública.' },
+      ],
+    }],
+  },
+  'ricardo-gordo-siqueira-rodrigues': {
+    about: '“Ricardo Gordo”',
+    sections: [{
+      title: 'Ricardo Siqueira Rodrigues',
+      paragraphs: [
+        { text: 'Salvo no celular como “Ricardo Gordo”. Segundo a representação da PF sobre o RioPrevidência, era articulador e captador de oportunidades de negócio com fundos de previdência de estados e municípios. Nos trechos transcritos, conversa com Vorcaro sobre os {RPPS}[action:search@ricardo-gordo-siqueira-rodrigues:RPPS] e a aproximação com o governador Cláudio Castro. A representação foi publicada pelo Poder360 em 13 de setembro de 2026; a conversa completa não é pública.' },
       ],
     }],
   },
@@ -334,8 +380,8 @@ export const OTHER_PROFILES = {
       title: 'Ana Matos',
       paragraphs: [
         { text: 'Trabalhava no marketing de Vorcaro e coordenou o Fórum Jurídico Londres Brasil de Ideias, apresentado formalmente pelo Grupo Voto e {bancado pelo Banco Master}[https://www.metropoles.com/colunas/demetrio-vecchioli/dialogos-mostram-que-vorcaro-e-moraes-montaram-evento-juntos].' },
-        { text: 'É a conversa que melhor mostra o grau de controle do ministro sobre o evento. Vorcaro barra o envio de convites — "{Deixa eu aprovar com alexandre}[action:search@ana-matos-mkt:aprovar com alexandre]" — e Ana responde, sobre a programação, que "{segui todas as recomendações que vieram do Ministro}[action:search@ana-matos-mkt:vieram do Ministro]", inclusive nomes novos que não estavam na lista original. Sobre um convidado sugerido: "{Alexandre morre se vc fizer isso}[action:search@ana-matos-mkt:Alexandre morre]".' },
-        { text: 'Ela também organiza o convite formal que o {diretor-geral da PF}[action:search@ana-matos-mkt:Andrei PF] precisava "para entrar agenda institucional dele", emite a passagem aérea do ministro a pedido do assessor dele, atende ao pedido de convite para a {filha de Moraes}[action:search@ana-matos-mkt:Giuliana] e, em julho de 2025, conta ter passado "{o dia aqui com Vivi Moraes e o ministro fechando o programa}[action:search@ana-matos-mkt:Vivi Moraes e o ministro]". Quando o evento é cobrado, Vorcaro avisa: "{Alexandre reclamou MUITO}[action:search@ana-matos-mkt:reclamou MUITO]".' },
+        { text: 'É a conversa que melhor mostra o grau de controle do ministro sobre o evento. Vorcaro barra o envio de convites — "{Deixa eu aprovar com alexandre}[action:search@ana-matos-mkt:aprovar com alexandre]" ⟨25/02/2025 12:18 · laudo p. 189, fig. 196⟩ — e Ana responde, sobre a programação, que "{segui todas as recomendações que vieram do Ministro}[action:search@ana-matos-mkt:vieram do Ministro]" ⟨14/03/2025 20:10 · laudo p. 191, fig. 199⟩, inclusive nomes novos que não estavam na lista original. Sobre um convidado sugerido: "{Alexandre morre se vc fizer isso}[action:search@ana-matos-mkt:Alexandre morre]" ⟨18/07/2025 17:29 · laudo p. 193, fig. 202⟩.' },
+        { text: 'Ela também organiza o convite formal que o {diretor-geral da PF}[action:search@ana-matos-mkt:Andrei PF] precisava “para entrar agenda institucional dele” ⟨10/03/2025 18:38 · laudo p. 216, fig. 228⟩, emite a passagem aérea do ministro a pedido do assessor dele, atende ao pedido de convite para a {filha de Moraes}[action:search@ana-matos-mkt:Giuliana] ⟨12/05/2024 21:56 · laudo p. 197, fig. 206⟩ e, em julho de 2025, conta ter passado "{o dia aqui com Vivi Moraes e o ministro fechando o programa}[action:search@ana-matos-mkt:Vivi Moraes e o ministro]" ⟨22/07/2025 18:08 · laudo p. 195, fig. 204⟩. Quando o evento é cobrado, Vorcaro avisa: "{Alexandre reclamou MUITO}[action:search@ana-matos-mkt:reclamou MUITO]" ⟨21/07/2025 12:26 · laudo p. 194, fig. 203⟩.' },
       ],
     }],
   },
@@ -622,6 +668,24 @@ export const OTHER_PROFILES = {
 export const CONTACT_PROFILES = {
   'martha-graeff': MARTHA_PROFILE,
   'alexandre-de-moraes': MORAES_PROFILE,
+  'mkt-aninomo': {
+    sections: [{
+      title: 'Sobre a conversa',
+      paragraphs: [
+        { text: 'O rótulo “Mkt-aninomo” foi definido para exibição no catálogo. Nas mensagens, o remetente aparece como “Anônimo Marketing”; as tarjas podem ocultar mais de uma pessoa e não permitem confirmar sua identidade.' },
+        { text: 'A transcrição fornecida contém 14 registros de três capturas de tela com marca d’água “PODER 360”, entre 5 e 18 de abril de 2025. Ela cobre apenas os trechos visíveis, não a conversa completa. Um registro aparece somente como citação, sem data ou horário próprios.' },
+      ],
+    }],
+  },
+  'cezinha-de-madureira': {
+    sections: [{
+      title: 'Sobre a conversa',
+      paragraphs: [
+        { text: '“Cezinha de Madureira” é o nome informado para exibição; o print não mostra o cabeçalho, nome do contato nem telefone. “DV” é o rótulo usado para os balões verdes por consistência com o conjunto, não uma identificação confirmada pelo cabeçalho.' },
+        { text: 'A transcrição fornecida contém nove registros de um recorte de conversa com marca d’água “arkanto company”. A data de 13 de março de 2025 é inferida; a imagem mostra somente horas e minutos, sem segundos ou fuso horário. Há dois registros de chamada, mas o áudio não foi fornecido.' },
+      ],
+    }],
+  },
   'meyer-nigri': {
     sections: [{
       title: 'Meyer Nigri',

@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "José Alfredo Berg Filho"
+    ],
+    "contact": "José Alfredo Berg Filho",
+    "saved_as": "Berg",
+    "phone": null,
+    "date_range": {
+      "start": "2024-09-11",
+      "end": "2024-09-11"
+    },
+    "total_messages": 14,
+    "source": "Petição da PF — Jaques Wagner e o Banco Master (Inq 5026 / Pet 16.210)",
+    "source_detail": {
+      "kind": "police-filing",
+      "label": "Petição da PF — Jaques Wagner e o Banco Master (Inq 5026 / Pet 16.210)",
+      "document": null,
+      "document_url": "https://arkanto.company/vorcaro/documentos/inq5026-peticao-pf-medidas-cautelares-jaques-wagner.pdf",
+      "document_sha256": null,
+      "made_public": "2026-09",
+      "how": "Transcrição manual dos prints da extração do celular reproduzidos no documento; cada mensagem cita documento, página e figura.",
+      "complements": []
+    },
+    "note": "Trechos citados em documentos da PF — a conversa completa não é pública."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-09-11T16:33:06",
+      "date": "2024-09-11",
+      "time": "16:33:06",
+      "sender": "DV",
+      "content": "Pq segurou o fsw?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63",
+      "forwarded": true
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-09-11T16:33:10",
+      "date": "2024-09-11",
+      "time": "16:33:10",
+      "sender": "DV",
+      "content": "Agora ficou tarde",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63",
+      "forwarded": true
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-09-11T16:35:25",
+      "date": "2024-09-11",
+      "time": "16:35:25",
+      "sender": "Berg",
+      "content": "Pq vai levar 2 horas pra pousar em BSB",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63",
+      "quoted": "Pq segurou o fsw?"
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-09-11T16:35:36",
+      "date": "2024-09-11",
+      "time": "16:35:36",
+      "sender": "DV",
+      "content": "Vamos fst entao",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63",
+      "forwarded": true
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-09-11T16:38:17",
+      "date": "2024-09-11",
+      "time": "16:38:17",
+      "sender": "Berg",
+      "content": "Ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63"
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-09-11T16:56:11",
+      "date": "2024-09-11",
+      "time": "16:56:11",
+      "sender": "Berg",
+      "content": "JOÃO PARCELAR\nJOSÉ AMILCA\nJAGUES VAGNER\nLUCAS REIS",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63",
+      "forwarded": true
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-09-11T16:56:21",
+      "date": "2024-09-11",
+      "time": "16:56:21",
+      "sender": "DV",
+      "content": "[chamada de voz — duração 01:58]",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63",
+      "duration": "01:58"
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-09-11T17:14:28",
+      "date": "2024-09-11",
+      "time": "17:14:28",
+      "sender": "DV",
+      "content": "Pessoas esperando",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63",
+      "forwarded": true
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-09-11T17:15:16",
+      "date": "2024-09-11",
+      "time": "17:15:16",
+      "sender": "DV",
+      "content": "Pq nao embarcaram",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63",
+      "forwarded": true
+    },
+    {
+      "id": 10,
+      "timestamp": "2024-09-11T17:15:28",
+      "date": "2024-09-11",
+      "time": "17:15:28",
+      "sender": "DV",
+      "content": "[chamada de voz — duração 00:13]",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63",
+      "duration": "00:13"
+    },
+    {
+      "id": 11,
+      "timestamp": "2024-09-11T17:24:52",
+      "date": "2024-09-11",
+      "time": "17:24:52",
+      "sender": "Berg",
+      "content": "Já estão embarcados",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63"
+    },
+    {
+      "id": 12,
+      "timestamp": "2024-09-11T18:18:01",
+      "date": "2024-09-11",
+      "time": "18:18:01",
+      "sender": "DV",
+      "content": "Qual previsao chegada gaf",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63",
+      "forwarded": true
+    },
+    {
+      "id": 13,
+      "timestamp": "2024-09-11T18:21:02",
+      "date": "2024-09-11",
+      "time": "18:21:02",
+      "sender": "Berg",
+      "content": "Já chegou",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63"
+    },
+    {
+      "id": 14,
+      "timestamp": "2024-09-11T18:21:30",
+      "date": "2024-09-11",
+      "time": "18:21:30",
+      "sender": "Berg",
+      "content": "Está pegando táxi para sua casa",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, petição Jaques Wagner, p. 63"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-09-11",
+        "message_count": 14,
+        "first_message_id": 1,
+        "last_message_id": 14
+      }
+    ]
+  }
+}

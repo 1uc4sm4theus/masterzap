@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Marcelo Terra Firme"
+    ],
+    "contact": "Marcelo Terra Firme",
+    "saved_as": null,
+    "phone": "557196791894",
+    "date_range": {
+      "start": "2024-04-22",
+      "end": "2024-04-22"
+    },
+    "total_messages": 6,
+    "source": "Representação da PF — RioPrevidência e Cláudio Castro (Pet 15.497), publicada pelo Poder360 em 13/09/2026",
+    "source_detail": {
+      "kind": "police-filing",
+      "label": "Representação da PF — RioPrevidência e Cláudio Castro (Pet 15.497), publicada pelo Poder360 em 13/09/2026",
+      "document": null,
+      "document_url": null,
+      "document_sha256": null,
+      "made_public": "2026-09-13",
+      "how": "Transcrição manual dos prints da extração do celular reproduzidos no documento; cada mensagem cita documento, página e figura.",
+      "complements": []
+    },
+    "note": "Trechos citados em documentos da PF — a conversa completa não é pública."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-04-22T16:23:29",
+      "date": "2024-04-22",
+      "time": "16:23:29",
+      "sender": "DV",
+      "content": "Tudo bem?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 45",
+      "also_in": [
+        "PF, representação RioPrevidência, p. 109"
+      ]
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-04-22T16:23:34",
+      "date": "2024-04-22",
+      "time": "16:23:34",
+      "sender": "DV",
+      "content": "Midias promotora 8 pau?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 45",
+      "also_in": [
+        "PF, representação RioPrevidência, p. 109"
+      ]
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-04-22T16:24:59",
+      "date": "2024-04-22",
+      "time": "16:24:59",
+      "sender": "Marcelo Terra Firme",
+      "content": "Fala irmão",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 45",
+      "also_in": [
+        "PF, representação RioPrevidência, p. 109"
+      ]
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-04-22T16:25:23",
+      "date": "2024-04-22",
+      "time": "16:25:23",
+      "sender": "Marcelo Terra Firme",
+      "content": "Bati com Félix hj de manhã. Ele disse q validou na sexta e pediu pra pagar hj somente",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 45",
+      "quoted": "Midias promotora 8 pau?",
+      "also_in": [
+        "PF, representação RioPrevidência, p. 109"
+      ]
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-04-22T16:28:15",
+      "date": "2024-04-22",
+      "time": "16:28:15",
+      "sender": "Marcelo Terra Firme",
+      "content": "O valor eh esse mesmo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 45",
+      "also_in": [
+        "PF, representação RioPrevidência, p. 109"
+      ]
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-04-22T16:28:28",
+      "date": "2024-04-22",
+      "time": "16:28:28",
+      "sender": "Marcelo Terra Firme",
+      "content": "Se quiser posso te ligar pra alinhar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 45",
+      "also_in": [
+        "PF, representação RioPrevidência, p. 109"
+      ]
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-04-22",
+        "message_count": 6,
+        "first_message_id": 1,
+        "last_message_id": 6
+      }
+    ]
+  }
+}

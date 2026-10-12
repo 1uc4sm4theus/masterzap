@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Mário Frias"
+    ],
+    "contact": "Mário Frias",
+    "saved_as": "Mario Frias",
+    "phone": null,
+    "date_range": {
+      "start": "2024-12-11",
+      "end": "2024-12-11"
+    },
+    "total_messages": 4,
+    "source": "Trechos publicados por Estadão, piauí, Metrópoles, Poder360 e Intercept (2026)",
+    "source_detail": {
+      "kind": "police-filing",
+      "label": "Trechos publicados por Estadão, piauí, Metrópoles, Poder360 e Intercept (2026)",
+      "document": null,
+      "document_url": null,
+      "document_sha256": null,
+      "made_public": "2026-06-03",
+      "how": "Transcrição manual dos prints da extração do celular reproduzidos no documento; cada mensagem cita documento, página e figura.",
+      "complements": [
+        {
+          "id": "metropoles-dark-horse",
+          "label": "Dark Horse — prints da extração publicados pelo Metrópoles (Inq 5070)",
+          "url": "https://www.metropoles.com/brasil/fala-irmaozao-veja-trocas-de-mensagens-entre-flavio-bolsonaro-e-vorcaro",
+          "published": "2026-09-12",
+          "file": "coletas/downloads-caso-master-documentos/imprensa/metropoles-flavio-vorcaro-20260912/"
+        }
+      ]
+    },
+    "note": "Trechos citados em documentos da PF — a conversa completa não é pública."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": null,
+      "date": "2024-12-11",
+      "time": null,
+      "sender": "DV",
+      "content": "Eu tô numa ligação, te chamo em seguida",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Intercept Brasil via Metro1, 19/05/2026",
+      "timestamp_unknown": true
+    },
+    {
+      "id": 2,
+      "timestamp": null,
+      "date": "2024-12-11",
+      "time": null,
+      "sender": "DV",
+      "content": "Segundo o Intercept Brasil (via Metro1), depois dessa resposta os dois conversaram por telefone.",
+      "type": "system",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Intercept Brasil via Metro1, 19/05/2026",
+      "paraphrase": true,
+      "timestamp_unknown": true
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-12-11T18:24:08",
+      "date": "2024-12-11",
+      "time": "18:24:08",
+      "sender": "DV",
+      "content": "Fala irmao",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 3 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-12-11T18:24:32",
+      "date": "2024-12-11",
+      "time": "18:24:32",
+      "sender": "Mario Frias",
+      "content": "[transcrição do áudio] Só te agradecer meu irmão. Vamos mexer com o coração de muita gente, vai ser muito importante para o nosso país, tá? Preciso de vez em quando te falar com as coisas vão andando, tá?",
+      "type": "audio",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 3 · Metrópoles, 12/09/2026",
+      "duration": "00:00:17"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-12-11",
+        "message_count": 4,
+        "first_message_id": 1,
+        "last_message_id": 4
+      }
+    ]
+  }
+}

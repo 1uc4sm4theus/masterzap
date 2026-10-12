@@ -4,6 +4,7 @@
       "DV",
       "Ana Matos Mkt"
     ],
+    "contact": "Ana Matos Mkt",
     "saved_as": null,
     "phone": "5511943290909",
     "date_range": {
@@ -12,6 +13,18 @@
     },
     "total_messages": 99,
     "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "source_detail": {
+      "kind": "police-report",
+      "label": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+      "document": "data/source/IPJ-A-3298613-2026.pdf",
+      "document_url": "https://github.com/rafaelbressan/masterzap/blob/main/data/source/IPJ-A-3298613-2026.pdf",
+      "document_download": "https://raw.githubusercontent.com/rafaelbressan/masterzap/main/data/source/IPJ-A-3298613-2026.pdf",
+      "document_sha256": "23cfdfa410c47ab09cbb2b443965e3a3095d9bc3dc5fb266efff76d6f5192b60",
+      "document_pages": 218,
+      "made_public": "2026-09-01",
+      "how": "Transcrição manual das imagens do laudo; cada mensagem cita a página e a figura de origem.",
+      "complements": []
+    },
     "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
   },
   "messages": [

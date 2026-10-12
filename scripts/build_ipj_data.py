@@ -216,6 +216,40 @@ def build_index(messages):
     }
 
 
+def preserve_supplemental_data(conv_id, payload):
+    """Keep later sourced excerpts when rebuilding the original report chats."""
+    path = OUT_DIR / f"{conv_id}.json"
+    if not path.exists():
+        return
+
+    with open(path, "r", encoding="utf-8") as f:
+        previous = json.load(f)
+
+    supplemental = [
+        msg for msg in previous.get("messages", [])
+        if msg.get("source_cite") and not msg.get("source_page")
+    ]
+    existing_ids = {msg["id"] for msg in payload["messages"]}
+    collisions = existing_ids.intersection(msg["id"] for msg in supplemental)
+    if collisions:
+        raise ValueError(
+            f"{conv_id}: supplemental messages collide with report ids "
+            f"{sorted(collisions)}"
+        )
+
+    payload["messages"].extend(supplemental)
+    payload["messages"].sort(key=lambda msg: msg["id"])
+    dates = [msg["date"] for msg in payload["messages"]]
+    metadata = payload["metadata"]
+    metadata["date_range"] = {"start": min(dates), "end": max(dates)}
+    metadata["total_messages"] = len(payload["messages"])
+
+    previous_metadata = previous.get("metadata", {})
+    for key in ("note", "source_detail"):
+        if previous_metadata.get(key):
+            metadata[key] = previous_metadata[key]
+
+
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -223,6 +257,7 @@ def main():
     conversations.update(build_other_conversations())
 
     for conv_id, payload in sorted(conversations.items()):
+        preserve_supplemental_data(conv_id, payload)
         payload["index"] = build_index(payload["messages"])
         path = OUT_DIR / f"{conv_id}.json"
         with open(path, "w", encoding="utf-8") as f:
