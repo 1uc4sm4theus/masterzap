@@ -25,6 +25,8 @@ import { renderPaymentsPanel } from './components/PaymentsPanel.js';
 import { renderFlightsPanel } from './components/FlightsPanel.js';
 import { renderChatGPTPanel } from './components/ChatGPTPanel.js';
 import { renderMediaPanel } from './components/MediaPanel.js';
+import { renderSoundtrackPanel } from './components/SoundtrackPanel.js';
+import { renderSoundtrackPlayer } from './components/SoundtrackPlayer.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
 import { APP_USERS, conversationsForUser } from './lib/users.js';
@@ -44,6 +46,7 @@ let activeImagePreview = null;
 let sidebar = null;
 let router = null;
 let activeUser = APP_USERS[0];
+let soundtrackPanel = null;
 
 async function init() {
   const loadingScreen = document.getElementById('loading-screen');
@@ -286,7 +289,7 @@ async function init() {
     // "Não lidas" tally.
     if (markConversationRead(readConversations, id)) sidebar.refreshReadState?.();
     container.classList.add('chat-open');
-    container.classList.remove('flights-open', 'chatgpt-open');
+    container.classList.remove('flights-open', 'chatgpt-open', 'soundtrack-open');
 
     const conversation = store.getConversation(id);
     if (!conversation) { showEmptyState(); return; }
@@ -421,6 +424,7 @@ async function init() {
     container.classList.remove('chat-open');
     container.classList.remove('flights-open');
     container.classList.remove('chatgpt-open');
+    container.classList.remove('soundtrack-open');
     while (mainArea.firstChild) mainArea.removeChild(mainArea.firstChild);
     renderEmptyState(mainArea);
   }
@@ -506,13 +510,14 @@ async function init() {
     onMedia: () => router.navigate('media'),
     onFlights: () => router.navigate('flights'),
     onChatGPT: () => router.navigate('chatgpt'),
+    onSoundtrack: () => router.navigate('soundtrack'),
     avatarSrc: activeUser.avatar,
     avatarName: activeUser.name,
     onSettings: openSettings,
     onChat: () => {
       // From secondary screens, this is the way back to the conversation list.
       const route = router.getCurrentRoute().route;
-      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt') { router.navigate('home'); return; }
+      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt' || route === 'soundtrack') { router.navigate('home'); return; }
       closeProfile();
       closeSettings();
     },
@@ -538,6 +543,7 @@ async function init() {
       onPayments: () => router.navigate('payments'),
       onFlights: () => router.navigate('flights'),
       onChatGPT: () => router.navigate('chatgpt'),
+      onSoundtrack: () => router.navigate('soundtrack'),
       onChats: () => router.navigate('home'),
       onUserSwitch: toggleUserSwitcher,
       activeUser,
@@ -603,6 +609,10 @@ async function init() {
 
   mountSidebar();
 
+  const soundtrackPlayer = renderSoundtrackPlayer(container, {
+    onChange: (trackId) => soundtrackPanel?.setCurrentTrack(trackId),
+  });
+
   // ── Router ─────────────────────────────────────────
 
   router = new HashRouter();
@@ -663,6 +673,19 @@ async function init() {
     mainArea.replaceChildren();
     mainArea.appendChild(renderChatGPTPanel({ onBack: () => router.navigate('home') }));
     navRail.setActive?.('chatgpt');
+  });
+  router.on('soundtrack', () => {
+    showEmptyState();
+    sidebar.showChats?.();
+    container.classList.add('soundtrack-open');
+    mainArea.replaceChildren();
+    soundtrackPanel = renderSoundtrackPanel({
+      onBack: () => router.navigate('home'),
+      onLoadTrack: (track) => soundtrackPlayer.select(track),
+      currentTrackId: soundtrackPlayer.getCurrentTrack()?.id || null,
+    });
+    mainArea.appendChild(soundtrackPanel);
+    navRail.setActive?.('soundtrack');
   });
   router.on('chat', async (id, messageId) => {
     if (messageId) {

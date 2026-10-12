@@ -33,6 +33,7 @@ export function renderSidebar(container, {
   onPayments,
   onFlights,
   onChatGPT,
+  onSoundtrack,
   onChats,
   onUserSwitch,
   activeUser,
@@ -90,6 +91,16 @@ export function renderSidebar(container, {
     chatgptLink.innerHTML = '<img src="/assets/chatgpt-logo.png" alt="" aria-hidden="true"><span>Consultas ao ChatGPT</span>';
     chatgptLink.addEventListener('click', onChatGPT);
     el.insertBefore(chatgptLink, el.querySelector('.sidebar-search'));
+  }
+
+  if (onSoundtrack) {
+    const soundtrackLink = document.createElement('button');
+    soundtrackLink.className = 'sidebar-soundtrack-link';
+    soundtrackLink.type = 'button';
+    soundtrackLink.setAttribute('aria-label', 'Trilha Sonora');
+    soundtrackLink.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Trilha Sonora</span>';
+    soundtrackLink.addEventListener('click', onSoundtrack);
+    el.insertBefore(soundtrackLink, el.querySelector('.sidebar-search'));
   }
 
   const list = el.querySelector('.conversation-list');

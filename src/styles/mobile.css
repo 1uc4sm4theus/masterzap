@@ -2,6 +2,10 @@
 
 /* ── Tablet breakpoint (≤ 900px) ─────────────── */
 @media (max-width: 900px) {
+  .soundtrack-player {
+    left: calc(64px + max(280px, 35vw));
+  }
+
   .sidebar {
     width: 35%;
     min-width: 280px;
@@ -290,7 +294,130 @@
   .sidebar-header {
     padding: 8px 12px;
   }
+}
 
+@media (max-width: 600px) {
+    .sidebar-soundtrack-link {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+      gap: 9px;
+      margin: 0 12px 8px;
+      padding: 9px 12px;
+      border: 1px solid var(--WDS-lines-divider);
+      border-radius: 6px;
+      background: var(--WDS-white);
+      color: var(--WDS-content-action-emphasized);
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    .app-container.soundtrack-open .main-area {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      height: 100%;
+    }
+
+    .soundtrack-header {
+      min-height: 60px;
+      padding: 10px 14px;
+    }
+
+    .soundtrack-header h1 {
+      font-size: 19px;
+    }
+
+    .soundtrack-header p {
+      font-size: 12px;
+    }
+
+    .soundtrack-back {
+      display: block;
+    }
+
+    .soundtrack-content {
+      padding: 14px 10px 24px;
+    }
+
+    .soundtrack-provenance {
+      padding: 11px;
+      font-size: 12px;
+    }
+
+    .soundtrack-track {
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 8px 11px;
+      padding: 11px 4px;
+    }
+
+    .soundtrack-cover {
+      width: 48px;
+      height: 48px;
+    }
+
+    .soundtrack-actions {
+      grid-column: 2;
+      justify-content: flex-start;
+      gap: 7px 10px;
+    }
+
+    .soundtrack-player {
+      left: 0;
+      bottom: 60px;
+      padding: 7px 9px 8px;
+    }
+
+    .app-container.chat-open .soundtrack-player,
+    .app-container.soundtrack-open .soundtrack-player {
+      bottom: 0;
+    }
+
+    .soundtrack-player-info {
+      gap: 7px;
+    }
+
+    .soundtrack-player-cover {
+      width: 32px;
+      height: 32px;
+      flex-basis: 32px;
+    }
+
+    .soundtrack-player-close {
+      padding: 5px 7px;
+      font-size: 10px;
+    }
+
+    .soundtrack-player-status {
+      margin: 4px 0;
+      font-size: 9px;
+    }
+
+    .soundtrack-player-embed iframe {
+      height: 76px;
+    }
+
+    .app-container.audio-player-open .main-area {
+      padding-bottom: 190px;
+    }
+
+    .app-container.audio-player-open .conversation-list {
+      padding-bottom: 190px;
+    }
+
+    .app-container.audio-player-open .conversation-list {
+      padding-bottom: 190px;
+    }
+
+    .app-container.audio-player-open.chat-open .main-area,
+    .app-container.audio-player-open.soundtrack-open .main-area {
+      padding-bottom: 185px;
+    }
+}
+
+@media (max-width: 380px) {
   .sidebar-search {
     padding: 4px 8px;
   }
