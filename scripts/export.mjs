@@ -144,7 +144,9 @@ function conversationMarkdown(entry, messages, { standalone = true, month = null
       out.push(`${standalone ? '###' : '####'} ${longDate(day)}`, '');
     }
     // Time to the second and the message id: the key a citation needs.
-    const dateTime = msg.timestamp_unknown ? 'Data e horário não informados' : `${msg.date} ${msg.time}`;
+    const dateTime = msg.timestamp_unknown
+      ? (msg.date === 'sem-data' ? 'Data e horário não informados' : `${longDate(msg.date)}; horário não informado`)
+      : `${msg.date} ${msg.time}`;
     const tags = [dateTime, `msg ${msg.id}`];
     if (msg.is_edited) tags.push('editada');
     if (msg.view_once) tags.push('visualização única');

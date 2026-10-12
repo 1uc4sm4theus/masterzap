@@ -160,6 +160,8 @@ export function mentionsOf(person, entries, messagesOf) {
 
 const brDate = (iso) => /^\d{4}-\d{2}-\d{2}$/.test(iso || '')
   ? `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}`
+  : /^\d{4}-\d{2}$/.test(iso || '')
+    ? `${iso.slice(5, 7)}/${iso.slice(0, 4)}`
   : 'Data não informada';
 
 /** "15/11/2025 18:22 Â· laudo p. 109, fig. 108" â€” what a quote needs to be checked. */
@@ -272,9 +274,12 @@ export const linksToHtml = (text, opts) => renderLinks(text, { ...opts, mode: 'h
 export const linksToText = (text) => renderLinks(text, { mode: 'text' });
 
 const dateFmt = new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+const monthFmt = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric' });
 export const longDate = (iso) => /^\d{4}-\d{2}-\d{2}$/.test(iso || '')
   ? dateFmt.format(new Date(`${iso}T12:00:00`))
-  : 'Transcrições de áudio · data e horário não informados';
+  : /^\d{4}-\d{2}$/.test(iso || '')
+    ? monthFmt.format(new Date(`${iso}-15T12:00:00`))
+    : 'Data não informada';
 
 export const phonePretty = (p) => (p && /^55\d{10,11}$/.test(p)
   ? `+55 ${p.slice(2, 4)} ${p.slice(4, -4)}-${p.slice(-4)}`

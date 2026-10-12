@@ -677,6 +677,26 @@ export const CONTACT_PROFILES = {
       ],
     }],
   },
+  'amiga-anonima-01': {
+    about: 'Amiga não identificada publicamente',
+    sections: [{
+      title: 'Sobre o registro',
+      paragraphs: [
+        { text: 'Esta conversa contém um único texto apresentado pelo usuário como publicado e situado em julho de 2024. A destinatária é descrita como uma amiga não identificada publicamente; esse rótulo não confirma sua identidade.' },
+        { text: 'A referência da publicação, a data exata, a autenticidade da mensagem e o contexto não foram fornecidos para conferência. O texto é um relato atribuído a Daniel Vorcaro sobre uma festa na noite anterior; não constitui, por si só, comprovação independente do ocorrido.' },
+      ],
+    }],
+  },
+  'interlocutor-nao-identificado-01': {
+    about: 'Destinatário não identificado',
+    sections: [{
+      title: 'Sobre o registro',
+      paragraphs: [
+        { text: 'Trecho atribuído a Daniel Vorcaro em uma reportagem da Veja sobre seus negócios e festas com Anitta. A reportagem, conforme descrita, não identifica o destinatário nem divulga a data da mensagem.' },
+        { text: 'O texto publicado termina em reticências; a continuação foi omitida pela reportagem e não foi completada aqui. O contexto de que Anitta teria dançado com Vorcaro também é apresentado como relato da publicação, não como fato verificado independentemente neste projeto. O link exato da reportagem não foi fornecido.' },
+      ],
+    }],
+  },
   'cezinha-de-madureira': {
     sections: [{
       title: 'Sobre a conversa',

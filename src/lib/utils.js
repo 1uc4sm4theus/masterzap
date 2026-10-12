@@ -19,18 +19,17 @@ export function slugify(name) {
 
 /**
  * Format a date string as pt-BR long date.
- * e.g. "2024-02-10" → "10 de fevereiro de 2024"
- * @param {string} dateStr - ISO date string (YYYY-MM-DD)
+ * e.g. "2024-02-10" → "10 de fevereiro de 2024"; "2024-02" → "fevereiro de 2024"
+ * @param {string} dateStr - ISO date or year-month string
  * @returns {string}
  */
 export function formatDateLong(dateStr) {
   const [year, month, day] = dateStr.split('-').map(Number);
-  const date = new Date(year, month - 1, day);
-  return date.toLocaleDateString('pt-BR', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  const date = new Date(year, month - 1, day || 1);
+  const options = day
+    ? { day: 'numeric', month: 'long', year: 'numeric' }
+    : { month: 'long', year: 'numeric' };
+  return date.toLocaleDateString('pt-BR', options);
 }
 
 /**
@@ -40,6 +39,10 @@ export function formatDateLong(dateStr) {
  * @returns {string}
  */
 export function formatDateShort(dateStr) {
+  if (/^\d{4}-\d{2}$/.test(dateStr || '')) {
+    const [year, month] = dateStr.split('-');
+    return `${month}/${year}`;
+  }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr || '')) return 'Data não informada';
   const [year, month, day] = dateStr.split('-');
   return `${day}/${month}/${year}`;

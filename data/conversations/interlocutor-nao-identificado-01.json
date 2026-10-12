@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "interlocutor-nao-identificado-01"
+    ],
+    "contact": "interlocutor-nao-identificado-01",
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "sem-data",
+      "end": "sem-data"
+    },
+    "total_messages": 1,
+    "source": "Reportagem da Veja sobre os negócios e festas de Daniel Vorcaro com Anitta.",
+    "source_detail": {
+      "kind": "journalism",
+      "label": "Reportagem da Veja sobre os negócios e festas de Daniel Vorcaro com Anitta",
+      "document": null,
+      "document_url": null,
+      "document_sha256": null,
+      "made_public": null,
+      "how": "Referência à reportagem e trecho publicado fornecidos pelo usuário; o link exato não foi informado."
+    },
+    "note": "Data não divulgada na reportagem. O destinatário não é identificado. O texto publicado omite a continuação da mensagem, que não foi completada nesta transcrição. O contexto da festa é atribuído à reportagem.",
+    "visible_date_headers_without_messages": []
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": null,
+      "date": "sem-data",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "DV",
+      "content": "Cara, essa Anitta tem alguma coisa diferente. Ela ficou dançando comigo. Foi por um triz. Se eu não tivesse apaixonado…",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "journalism",
+      "source_cite": "Reportagem da Veja; data não divulgada e destinatário não identificado."
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "sem-data",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "amiga-anonima-01"
+    ],
+    "contact": "amiga-anonima-01",
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2024-07",
+      "end": "2024-07"
+    },
+    "total_messages": 1,
+    "source": "Texto apresentado pelo usuário como publicado; referência bibliográfica não informada.",
+    "source_detail": {
+      "kind": "user-provided",
+      "label": "Texto apresentado pelo usuário como publicado",
+      "document": null,
+      "document_url": null,
+      "document_sha256": null,
+      "made_public": null,
+      "how": "Transcrição fornecida pelo usuário. A publicação de origem não foi identificada para conferência."
+    },
+    "note": "O mês de julho de 2024 foi informado pelo usuário; dia e horário não foram fornecidos. A destinatária é descrita como uma amiga não identificada publicamente. O contexto de festa na noite anterior e o teor do texto são apresentados como relato atribuído a Daniel Vorcaro, sem referência da publicação ou confirmação independente.",
+    "visible_date_headers_without_messages": []
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": null,
+      "date": "2024-07",
+      "time": null,
+      "timestamp_unknown": true,
+      "sender": "DV",
+      "content": "Ontem fui parar na festa da Anitta. Ela quase me estuprou. Saí correndo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "user-provided",
+      "source_cite": "Texto apresentado pelo usuário como publicado; publicação não identificada."
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-07",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1
+      }
+    ]
+  }
+}

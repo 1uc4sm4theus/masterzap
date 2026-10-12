@@ -112,7 +112,7 @@ export class DataStore {
    * Find which date contains a given message ID using the date index.
    * @param {string} conversationId
    * @param {number|string} messageId
-   * @returns {Promise<string|null>} ISO date string or null if not found
+   * @returns {Promise<string|null>} ISO date, year-month, or null if not found
    */
   async findDateForMessage(conversationId, messageId) {
     const dates = await this.getConversationIndex(conversationId);
@@ -128,7 +128,7 @@ export class DataStore {
   /**
    * Load messages for a specific date, with LRU caching and request dedup.
    * @param {string} conversationId
-   * @param {string} date - ISO date string (YYYY-MM-DD)
+   * @param {string} date - ISO date (YYYY-MM-DD), year-month (YYYY-MM), or date key
    * @returns {Promise<Array>} Array of message objects
    */
   async getMessages(conversationId, date) {

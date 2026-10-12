@@ -32,8 +32,8 @@ const BACK_ICON = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" s
 
 
 /**
- * Render a single day section with date badge + messages.
- * @param {string} date - ISO date string
+ * Render a date section with date badge + messages.
+ * @param {string} date - ISO date or year-month string
  * @param {Array} messages
  * @returns {HTMLElement}
  */
@@ -46,7 +46,7 @@ function renderDaySection(date, messages, outgoingSender = 'DV', ownerName = 'Da
   const badge = document.createElement('div');
   badge.className = 'chat-date-badge';
   badge.textContent = date === 'sem-data'
-    ? 'Transcrições de áudio · data e horário não informados'
+    ? 'Data e horário não informados'
     : formatDateLong(date);
   section.appendChild(badge);
 
