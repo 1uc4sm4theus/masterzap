@@ -471,6 +471,17 @@ export const OTHER_PROFILES = {
     }],
   },
 
+  'diogo-batista-vorcaro': {
+    about: 'Conversa entre Diogo Batista e Daniel Vorcaro',
+    sections: [{
+      title: 'Diogo Batista',
+      paragraphs: [
+        { text: 'Conversa adicionada a partir dos três prints fornecidos pelo usuário e da matéria atribuída a Daniel Vorcaro. O registro reproduz apenas os trechos visíveis nos prints, com nomes e dados pessoais mascarados conforme o material original.' },
+        { text: 'No trecho disponível, Diogo Batista fala em “segurar umas gringas” para a agência, menciona “sobrou uma ucraniana” e as “3 refugiadas aqui”, além de dizer que uma jovem havia vindo da Ucrânia e que a mãe dela mandou áudio dos bombardeios. O material foi incluído como conversa de referência e não como confirmação de fatos.' },
+      ],
+    }],
+  },
+
   'michael': {
     about: 'Campos do Jordão',
     sections: [{
