@@ -8,9 +8,9 @@
     "phone": "556199910111",
     "date_range": {
       "start": "2023-10-24",
-      "end": "2024-07-17"
+      "end": "2024-07-23"
     },
-    "total_messages": 174,
+    "total_messages": 189,
     "sources": [
       "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
       "Relatório da PF citado pela piauí em 10–11/09/2026"
@@ -2889,6 +2889,201 @@
       "forwarded": false,
       "quoted": null,
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
+    },
+    {
+      "id": 175,
+      "timestamp": "2024-07-23T15:36:14-03:00",
+      "date": "2024-07-23",
+      "time": "15:36:14",
+      "sender": "F?bio Faria",
+      "content": "Gustavo fechou, me avisa a? se for pra mudar.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 176,
+      "timestamp": "2024-07-23T21:12:10-03:00",
+      "date": "2024-07-23",
+      "time": "21:12:10",
+      "sender": "DV",
+      "content": "Nao vou conseguir quinta",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 177,
+      "timestamp": "2024-07-23T21:12:14-03:00",
+      "date": "2024-07-23",
+      "time": "21:12:14",
+      "sender": "DV",
+      "content": "Marca sexta a tarde",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 178,
+      "timestamp": "2024-07-23T21:13:18-03:00",
+      "date": "2024-07-23",
+      "time": "21:13:18",
+      "sender": "F?bio Faria",
+      "content": "Ele s? pode quinta",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 179,
+      "timestamp": "2024-07-23T21:13:25-03:00",
+      "date": "2024-07-23",
+      "time": "21:13:25",
+      "sender": "F?bio Faria",
+      "content": "Sexta tem show",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 180,
+      "timestamp": "2024-07-23T21:13:45-03:00",
+      "date": "2024-07-23",
+      "time": "21:13:45",
+      "sender": "F?bio Faria",
+      "content": "Fiz um grupo do Will e vc agenda direto com ele uma nova data",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 181,
+      "timestamp": "2024-07-23T21:15:17-03:00",
+      "date": "2024-07-23",
+      "time": "21:15:17",
+      "sender": "F?bio Faria",
+      "content": "Se vc quiser me colocar com algu?m do Will Bank e eu fecho com ele.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 182,
+      "timestamp": "2024-07-23T21:20:00-03:00",
+      "date": "2024-07-23",
+      "time": "21:20:00",
+      "sender": "F?bio Faria",
+      "content": "[?udio]",
+      "type": "audio",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 183,
+      "timestamp": "2024-07-23T22:59:24-03:00",
+      "date": "2024-07-23",
+      "time": "22:59:24",
+      "sender": "DV",
+      "content": "Cara, eu so nao posso na quinta",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 184,
+      "timestamp": "2024-07-23T22:59:30-03:00",
+      "date": "2024-07-23",
+      "time": "22:59:30",
+      "sender": "DV",
+      "content": "Vamos marcar apos a volta dele",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 185,
+      "timestamp": "2024-07-23T22:59:35-03:00",
+      "date": "2024-07-23",
+      "time": "22:59:35",
+      "sender": "DV",
+      "content": "Ou fazemos uma video",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 186,
+      "timestamp": "2024-07-23T23:00:16-03:00",
+      "date": "2024-07-23",
+      "time": "23:00:16",
+      "sender": "F?bio Faria",
+      "content": "Ele vem pra SP amanh?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 187,
+      "timestamp": "2024-07-23T23:00:22-03:00",
+      "date": "2024-07-23",
+      "time": "23:00:22",
+      "sender": "F?bio Faria",
+      "content": "E vai a noite pra BH",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 188,
+      "timestamp": "2024-07-23T23:00:36-03:00",
+      "date": "2024-07-23",
+      "time": "23:00:36",
+      "sender": "F?bio Faria",
+      "content": "N?o quer sugerir l? no grupo amanh??",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
+    },
+    {
+      "id": 189,
+      "timestamp": "2024-07-23T23:00:48-03:00",
+      "date": "2024-07-23",
+      "time": "23:00:48",
+      "sender": "F?bio Faria",
+      "content": "No banco durante o dia",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_ref": "Captura de tela anexada pelo usu?rio"
     }
   ],
   "index": {
@@ -3018,6 +3213,12 @@
         "message_count": 2,
         "first_message_id": 173,
         "last_message_id": 174
+      },
+      {
+        "date": "2024-07-23",
+        "message_count": 15,
+        "first_message_id": 175,
+        "last_message_id": 189
       }
     ]
   }
