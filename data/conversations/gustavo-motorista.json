@@ -1,114 +1,42 @@
 {
   "metadata": {
-    "participants": [
-      "DV",
-      "Gustavo Motorista"
-    ],
+    "participants": ["DV", "Gustavo Motorista"],
     "saved_as": null,
     "phone": "5511942328664",
     "date_range": {
       "start": "2023-12-21",
-      "end": "2023-12-21"
+      "end": "2025-02-28"
     },
-    "total_messages": 6,
+    "total_messages": 19,
     "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento. Mensagens 1 a 6 (2023-12-21) vêm do texto fornecido, com página e figura do relatório. Mensagens 7 a 19 (2025-02-28) foram transcritas de uma imagem de baixa resolução com 2 painéis; o painel direito repete as mensagens 13 a 17 do esquerdo e foi deduplicado. Mensagens à direita atribuídas a DV, à esquerda a Gustavo Motorista. O sobrenome e o telefone estão ocultos por tarja cinza no cabeçalho da imagem. Os horários de 2025 estão no fuso -03:00."
   },
   "messages": [
-    {
-      "id": 1,
-      "timestamp": "2023-12-21T08:16:44",
-      "date": "2023-12-21",
-      "time": "08:16:44",
-      "sender": "DV",
-      "content": "Descendo",
-      "type": "text",
-      "is_edited": false,
-      "attachment": null,
-      "urls": [],
-      "source_page": 20,
-      "source_figure": 15
-    },
-    {
-      "id": 2,
-      "timestamp": "2023-12-21T10:42:16",
-      "date": "2023-12-21",
-      "time": "10:42:16",
-      "sender": "DV",
-      "content": "Modelo e placa nosso carro",
-      "type": "text",
-      "is_edited": false,
-      "attachment": null,
-      "urls": [],
-      "source_page": 20,
-      "source_figure": 15
-    },
-    {
-      "id": 3,
-      "timestamp": "2023-12-21T10:42:52",
-      "date": "2023-12-21",
-      "time": "10:42:52",
-      "sender": "Gustavo Motorista",
-      "content": "Range Rover Vogue\nRSB7C37",
-      "type": "text",
-      "is_edited": false,
-      "attachment": null,
-      "urls": [],
-      "source_page": 20,
-      "source_figure": 15
-    },
-    {
-      "id": 4,
-      "timestamp": "2023-12-21T10:46:44",
-      "date": "2023-12-21",
-      "time": "10:46:44",
-      "sender": "DV",
-      "content": "Tucumã 99",
-      "type": "text",
-      "is_edited": false,
-      "attachment": null,
-      "urls": [],
-      "forwarded": true,
-      "source_page": 20,
-      "source_figure": 16
-    },
-    {
-      "id": 5,
-      "timestamp": "2023-12-21T10:46:48",
-      "date": "2023-12-21",
-      "time": "10:46:48",
-      "sender": "DV",
-      "content": "Descendo",
-      "type": "text",
-      "is_edited": false,
-      "attachment": null,
-      "urls": [],
-      "source_page": 20,
-      "source_figure": 16
-    },
-    {
-      "id": 6,
-      "timestamp": "2023-12-21T10:46:51",
-      "date": "2023-12-21",
-      "time": "10:46:51",
-      "sender": "DV",
-      "content": "Vamos nesse endereço agora",
-      "type": "text",
-      "is_edited": false,
-      "attachment": null,
-      "urls": [],
-      "source_page": 20,
-      "source_figure": 16
-    }
+    {"id": 1, "timestamp": "2023-12-21T08:16:44", "date": "2023-12-21", "time": "08:16:44", "sender": "DV", "content": "Descendo", "type": "text", "is_edited": false, "attachment": null, "urls": [], "source_page": 20, "source_figure": 15},
+    {"id": 2, "timestamp": "2023-12-21T10:42:16", "date": "2023-12-21", "time": "10:42:16", "sender": "DV", "content": "Modelo e placa nosso carro", "type": "text", "is_edited": false, "attachment": null, "urls": [], "source_page": 20, "source_figure": 15},
+    {"id": 3, "timestamp": "2023-12-21T10:42:52", "date": "2023-12-21", "time": "10:42:52", "sender": "Gustavo Motorista", "content": "Range Rover Vogue\nRSB7C37", "type": "text", "is_edited": false, "attachment": null, "urls": [], "source_page": 20, "source_figure": 15},
+    {"id": 4, "timestamp": "2023-12-21T10:46:44", "date": "2023-12-21", "time": "10:46:44", "sender": "DV", "content": "Tucumã 99", "type": "text", "is_edited": false, "attachment": null, "urls": [], "forwarded": true, "source_page": 20, "source_figure": 16},
+    {"id": 5, "timestamp": "2023-12-21T10:46:48", "date": "2023-12-21", "time": "10:46:48", "sender": "DV", "content": "Descendo", "type": "text", "is_edited": false, "attachment": null, "urls": [], "source_page": 20, "source_figure": 16},
+    {"id": 6, "timestamp": "2023-12-21T10:46:51", "date": "2023-12-21", "time": "10:46:51", "sender": "DV", "content": "Vamos nesse endereço agora", "type": "text", "is_edited": false, "attachment": null, "urls": [], "source_page": 20, "source_figure": 16},
+
+    {"id": 7, "timestamp": "2025-02-28T14:04:38-03:00", "date": "2025-02-28", "time": "14:04:38", "time_confidence": "média", "sender": "Gustavo Motorista", "content": "Dr, começou chegar meninas", "type": "text", "attachment": null},
+    {"id": 8, "timestamp": "2025-02-28T14:04:42-03:00", "date": "2025-02-28", "time": "14:04:42", "time_confidence": "média", "sender": "Gustavo Motorista", "content": "Pode liberar?", "type": "text", "attachment": null},
+    {"id": 9, "timestamp": "2025-02-28T14:06:52-03:00", "date": "2025-02-28", "time": "14:06:52", "time_confidence": "média", "sender": "DV", "content": "Todas que chegarem", "type": "text", "attachment": null},
+    {"id": 10, "timestamp": "2025-02-28T14:06:54-03:00", "date": "2025-02-28", "time": "14:06:54", "time_confidence": "média", "sender": "DV", "content": "Pode subir", "type": "text", "attachment": null},
+    {"id": 11, "timestamp": "2025-02-28T14:07:03-03:00", "date": "2025-02-28", "time": "14:07:03", "time_confidence": "média", "sender": "DV", "content": "Pega carro dos homens qdo chegarem", "type": "text", "attachment": null, "note": "Primeira palavra lida como 'Pega' (impressa como 'Oega' na imagem)"},
+    {"id": 12, "timestamp": "2025-02-28T14:07:14-03:00", "date": "2025-02-28", "time": "14:07:14", "time_confidence": "média", "sender": "DV", "content": "Fica embaixo vc e geraldo e acompanha chegada", "type": "text", "attachment": null},
+    {"id": 13, "timestamp": "2025-02-28T14:07:30-03:00", "date": "2025-02-28", "time": "14:07:30", "time_confidence": "média", "sender": "Gustavo Motorista", "content": "Ok", "type": "text", "attachment": null},
+    {"id": 14, "timestamp": "2025-02-28T14:07:36-03:00", "date": "2025-02-28", "time": "14:07:36", "time_confidence": "média", "sender": "Gustavo Motorista", "content": "Fica com telefone das meninas?", "type": "text", "attachment": null},
+    {"id": 15, "timestamp": "2025-02-28T14:40:04-03:00", "date": "2025-02-28", "time": "14:40:04", "time_confidence": "média", "sender": "DV", "content": "Convidados chegando", "type": "text", "attachment": null},
+    {"id": 16, "timestamp": "2025-02-28T14:40:07-03:00", "date": "2025-02-28", "time": "14:40:07", "time_confidence": "média", "sender": "DV", "content": "Fusion preto", "type": "text", "attachment": null},
+    {"id": 17, "timestamp": "2025-02-28T14:42:06-03:00", "date": "2025-02-28", "time": "14:42:06", "time_confidence": "média", "sender": "Gustavo Motorista", "content": "Ok", "type": "text", "attachment": null},
+    {"id": 18, "timestamp": "2025-02-28T14:42:36-03:00", "date": "2025-02-28", "time": "14:42:36", "time_confidence": "média", "sender": "DV", "content": "Pega carro e recebe eles", "type": "text", "attachment": null},
+    {"id": 19, "timestamp": "2025-02-28T14:43:19-03:00", "date": "2025-02-28", "time": "14:43:19", "time_confidence": "média", "sender": "Gustavo Motorista", "content": "Ok, estamos aqui no terreo", "type": "text", "attachment": null}
   ],
   "index": {
     "dates": [
-      {
-        "date": "2023-12-21",
-        "message_count": 6,
-        "first_message_id": 1,
-        "last_message_id": 6
-      }
+      {"date": "2023-12-21", "message_count": 6, "first_message_id": 1, "last_message_id": 6},
+      {"date": "2025-02-28", "message_count": 13, "first_message_id": 7, "last_message_id": 19}
     ]
   }
 }
