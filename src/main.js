@@ -98,6 +98,7 @@ async function init() {
 
     
     'luiz-renno': '/assets/avatar-luiz-renno.jpg',
+    'gustavo-lima': '/assets/avatar-gustavo-lima.jpg',
     'ana-matos-mkt': '/assets/avatar-ana-matos-mkt.jpg',
     'eduardo-bolsonaro': '/assets/avatar-eduardo-bolsonaro.jpg',
     'jair-bolsonaro': '/assets/avatar-mauro-cid.jpg',
