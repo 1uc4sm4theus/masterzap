@@ -567,13 +567,16 @@ async function init() {
     if (lockLink) lockLink.addEventListener('click', openProfile);
 
     if (conversations.length > 0) {
-      activeSearch = attachSearch(sidebar, conversations[0].id, (messageId, date) => {
-        if (activeLoader) {
-          activeLoader.scrollToMessage(messageId, date);
-        } else {
-          pendingScrollTarget = { messageId, date };
-          router.navigate('chat', conversations[0].id);
-        }
+      activeSearch = attachSearch(sidebar, conversations, {
+        onConversationClick: (id) => router.navigate('chat', id),
+        onResultClick: (conversationId, messageId, date) => {
+          if (activeLoader && currentConversationId === conversationId) {
+            activeLoader.scrollToMessage(messageId, date);
+          } else {
+            pendingScrollTarget = { messageId, date };
+            router.navigate('chat', conversationId);
+          }
+        },
       });
     }
   }

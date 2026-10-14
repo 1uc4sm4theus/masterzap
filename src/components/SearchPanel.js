@@ -1,91 +1,252 @@
 /**
- * SearchPanel — renders search results in the sidebar area.
- *
- * Appears when the user types in the search input. Shows matching messages
- * with highlighted query text. Clicking a result navigates to that message.
- *
- * Security note: highlightMatch() applies escapeHtml() to ALL three segments
- * (before, match, after) before wrapping the match in a <mark> tag.
- * The <mark> tag itself is a static string literal, not derived from user input.
+ * SearchPanel — renders matching conversations first, followed by matching messages.
  */
 import { escapeHtml, formatDateShort } from '../lib/utils.js';
-import { search, loadSearchIndex, isIndexLoaded } from '../lib/search.js';
+import { defaultAvatarSvg } from '../lib/avatar.js';
+import { loadSearchIndex, normalize, searchIndex } from '../lib/search.js';
 
 const DEBOUNCE_MS = 200;
+const MESSAGE_RESULT_LIMIT = 50;
 
 /**
  * Attach search behavior to the sidebar.
- * @param {HTMLElement} sidebar - the sidebar element
- * @param {string} conversationId - id of the conversation to search
- * @param {function} onResultClick - (messageId, date) => void
+ * @param {HTMLElement} sidebar
+ * @param {Array} conversations
+ * @param {object} callbacks
+ * @param {function} callbacks.onResultClick - (conversationId, messageId, date) => void
+ * @param {function} callbacks.onConversationClick - (conversationId) => void
  * @returns {{ destroy: function }}
  */
-export function attachSearch(sidebar, conversationId, onResultClick) {
+export function attachSearch(sidebar, conversations, { onResultClick, onConversationClick }) {
   const input = sidebar.querySelector('.sidebar-search-input');
   const listContainer = sidebar.querySelector('.conversation-list');
 
   let resultsEl = null;
   let debounceTimer = null;
   let lastQuery = '';
+  let searchVersion = 0;
 
-  function showResults(results, query) {
-    hideResults();
+  function ensureResults() {
+    if (resultsEl) return resultsEl;
 
     resultsEl = document.createElement('div');
     resultsEl.className = 'search-results';
-    resultsEl.setAttribute('role', 'listbox');
+    resultsEl.setAttribute('role', 'region');
     resultsEl.setAttribute('aria-label', 'Resultados da pesquisa');
+    listContainer.style.display = 'none';
+    listContainer.parentNode.insertBefore(resultsEl, listContainer.nextSibling);
+    return resultsEl;
+  }
 
-    if (results.length === 0) {
+  function renderResults(conversationMatches, messageResults, { loading = false, failedCount = 0 } = {}) {
+    const container = ensureResults();
+    container.replaceChildren();
+
+    if (conversationMatches.length > 0) {
+      const section = createSection('Conversas');
+      for (const conversation of conversationMatches) {
+        section.appendChild(createConversationResult(conversation));
+      }
+      container.appendChild(section);
+    }
+
+    if (messageResults.length > 0 || loading) {
+      const section = createSection('Mensagens');
+      for (const result of messageResults) {
+        section.appendChild(createMessageResult(result));
+      }
+      if (loading) {
+        const status = document.createElement('div');
+        status.className = 'search-status';
+        status.textContent = 'Pesquisando mensagens...';
+        section.appendChild(status);
+      }
+      container.appendChild(section);
+    }
+
+    if (failedCount > 0) {
+      const status = document.createElement('div');
+      status.className = 'search-status search-status--error';
+      status.textContent = `Não foi possível pesquisar em ${failedCount} conversa${failedCount === 1 ? '' : 's'}.`;
+      container.appendChild(status);
+    }
+
+    if (!loading && conversationMatches.length === 0 && messageResults.length === 0) {
       const empty = document.createElement('div');
       empty.className = 'search-empty';
       empty.textContent = 'Nenhuma mensagem encontrada';
-      resultsEl.appendChild(empty);
+      container.appendChild(empty);
+    }
+  }
+
+  function createSection(title) {
+    const section = document.createElement('section');
+    section.className = 'search-results-section';
+
+    const heading = document.createElement('h2');
+    heading.className = 'search-results-heading';
+    heading.textContent = title;
+    section.appendChild(heading);
+    return section;
+  }
+
+  function createConversationResult(conversation) {
+    const item = document.createElement('div');
+    item.className = 'search-conversation-item';
+    item.setAttribute('role', 'button');
+    item.setAttribute('tabindex', '0');
+
+    const avatar = document.createElement('div');
+    avatar.className = 'search-conversation-avatar';
+    if (conversation.avatar) {
+      const image = document.createElement('img');
+      image.src = conversation.avatar;
+      image.alt = '';
+      avatar.appendChild(image);
     } else {
-      for (const result of results) {
-        const item = document.createElement('div');
-        item.className = 'search-result-item';
-        item.setAttribute('role', 'option');
-        item.setAttribute('tabindex', '0');
-
-        const senderEl = document.createElement('span');
-        senderEl.className = 'search-result-sender';
-        senderEl.textContent = result.sender;
-
-        const dateEl = document.createElement('span');
-        dateEl.className = 'search-result-date';
-        dateEl.textContent = formatDateShort(result.date);
-
-        const topRow = document.createElement('div');
-        topRow.className = 'search-result-top';
-        topRow.appendChild(senderEl);
-        topRow.appendChild(dateEl);
-
-        const contentEl = document.createElement('div');
-        contentEl.className = 'search-result-content';
-        // All segments are escaped individually, <mark> is a static literal
-        contentEl.innerHTML = highlightMatch(result.content, result.matchStart, result.matchEnd);
-
-        item.appendChild(topRow);
-        item.appendChild(contentEl);
-
-        item.addEventListener('click', () => {
-          onResultClick(result.id, result.date);
-        });
-        item.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter') {
-            e.preventDefault();
-            onResultClick(result.id, result.date);
-          }
-        });
-
-        resultsEl.appendChild(item);
-      }
+      avatar.innerHTML = defaultAvatarSvg(conversation.id);
     }
 
-    // Show results, hide conversation list
-    listContainer.style.display = 'none';
-    listContainer.parentNode.insertBefore(resultsEl, listContainer.nextSibling);
+    const content = document.createElement('div');
+    content.className = 'search-conversation-content';
+
+    const name = document.createElement('div');
+    name.className = 'search-conversation-name';
+    name.innerHTML = highlightMatch(conversation.displayName, conversation.matchStart, conversation.matchEnd);
+    content.appendChild(name);
+
+    const preview = conversation.last_message?.content || '';
+    if (preview) {
+      const previewEl = document.createElement('div');
+      previewEl.className = 'search-conversation-preview';
+      previewEl.textContent = preview;
+      content.appendChild(previewEl);
+    }
+
+    item.append(avatar, content);
+    item.addEventListener('click', () => onConversationClick(conversation.id));
+    item.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        onConversationClick(conversation.id);
+      }
+    });
+    return item;
+  }
+
+  function createMessageResult(result) {
+    const item = document.createElement('div');
+    item.className = 'search-result-item';
+    item.setAttribute('role', 'button');
+    item.setAttribute('tabindex', '0');
+
+    const contactEl = document.createElement('span');
+    contactEl.className = 'search-result-sender';
+    contactEl.textContent = result.contact;
+
+    const dateEl = document.createElement('span');
+    dateEl.className = 'search-result-date';
+    dateEl.textContent = formatDateShort(result.date);
+
+    const topRow = document.createElement('div');
+    topRow.className = 'search-result-top';
+    topRow.append(contactEl, dateEl);
+
+    const contentEl = document.createElement('div');
+    contentEl.className = 'search-result-content';
+    contentEl.innerHTML = highlightMatch(result.content, result.matchStart, result.matchEnd);
+
+    item.append(topRow, contentEl);
+    const openResult = () => onResultClick(result.conversationId, result.id, result.date);
+    item.addEventListener('click', openResult);
+    item.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openResult();
+      }
+    });
+    return item;
+  }
+
+  function highlightMatch(content, start, end) {
+    const before = escapeHtml(content.slice(0, start));
+    const match = escapeHtml(content.slice(start, end));
+    const after = escapeHtml(content.slice(end));
+    return `${before}<mark class="search-highlight">${match}</mark>${after}`;
+  }
+
+  function findConversationMatches(query) {
+    const normalizedQuery = normalize(query);
+    const matches = [];
+
+    for (const conversation of conversations) {
+      const displayName = conversation.contact
+        || conversation.participants?.find(name => name !== (conversation.owner || 'DV'))
+        || conversation.id;
+      const normalizedName = normalize(displayName);
+      const matchStart = normalizedName.indexOf(normalizedQuery);
+      if (matchStart === -1) continue;
+
+      matches.push({
+        ...conversation,
+        displayName,
+        matchStart,
+        matchEnd: matchStart + query.length,
+        matchRank: matchStart === 0
+          ? (normalizedName.length === normalizedQuery.length ? 0 : 1)
+          : 2,
+      });
+    }
+
+    return matches.sort((a, b) => a.matchRank - b.matchRank
+      || a.displayName.localeCompare(b.displayName, 'pt-BR'));
+  }
+
+  async function onInput(version) {
+    const query = input.value.trim();
+    if (query.length < 2) {
+      hideResults();
+      lastQuery = '';
+      return;
+    }
+
+    if (query === lastQuery) return;
+    lastQuery = query;
+
+    const conversationMatches = findConversationMatches(query);
+    renderResults(conversationMatches, [], { loading: true });
+
+    const loadedIndexes = await Promise.allSettled(
+      conversations.map(conversation => loadSearchIndex(conversation.id))
+    );
+    if (version !== searchVersion || input.value.trim() !== query) return;
+
+    const messageResults = [];
+    let failedCount = 0;
+    loadedIndexes.forEach((result, index) => {
+      if (result.status === 'rejected') {
+        failedCount++;
+        console.error(`Failed to load search index for ${conversations[index].id}:`, result.reason);
+        return;
+      }
+      const conversation = conversations[index];
+      const contact = conversation.contact
+        || conversation.participants?.find(name => name !== (conversation.owner || 'DV'))
+        || conversation.id;
+      const hits = searchIndex(result.value, query, {
+        limit: MESSAGE_RESULT_LIMIT,
+        newestFirst: true,
+      });
+      for (const hit of hits) {
+        messageResults.push({ ...hit, conversationId: conversation.id, contact });
+      }
+    });
+
+    const conversationOrder = new Map(conversations.map((conversation, index) => [conversation.id, index]));
+    messageResults.sort((a, b) => b.date.localeCompare(a.date)
+      || conversationOrder.get(a.conversationId) - conversationOrder.get(b.conversationId)
+      || Number(b.id) - Number(a.id));
+    renderResults(conversationMatches, messageResults.slice(0, MESSAGE_RESULT_LIMIT), { failedCount });
   }
 
   function hideResults() {
@@ -96,50 +257,16 @@ export function attachSearch(sidebar, conversationId, onResultClick) {
     listContainer.style.display = '';
   }
 
-  /**
-   * Highlight the matched substring with a <mark> tag.
-   * Each segment is independently escaped before concatenation.
-   */
-  function highlightMatch(content, start, end) {
-    const before = escapeHtml(content.slice(0, start));
-    const match = escapeHtml(content.slice(start, end));
-    const after = escapeHtml(content.slice(end));
-    return `${before}<mark class="search-highlight">${match}</mark>${after}`;
-  }
-
-  async function onInput() {
-    const query = input.value.trim();
-
-    if (query.length < 2) {
-      hideResults();
-      lastQuery = '';
-      return;
-    }
-
-    if (query === lastQuery) return;
-    lastQuery = query;
-
-    // Load index on first search
-    if (!isIndexLoaded(conversationId)) {
-      try {
-        await loadSearchIndex(conversationId);
-      } catch (err) {
-        console.error('Failed to load search index:', err);
-        return;
-      }
-    }
-
-    const results = search(query, { limit: 50 });
-    showResults(results, query);
-  }
-
   function onInputDebounced() {
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(onInput, DEBOUNCE_MS);
+    if (input.value.trim() === lastQuery && resultsEl) return;
+    const version = ++searchVersion;
+    debounceTimer = setTimeout(() => onInput(version), DEBOUNCE_MS);
   }
 
-  function onKeyDown(e) {
-    if (e.key === 'Escape') {
+  function onKeyDown(event) {
+    if (event.key === 'Escape') {
+      searchVersion++;
       input.value = '';
       hideResults();
       input.blur();
@@ -151,6 +278,7 @@ export function attachSearch(sidebar, conversationId, onResultClick) {
 
   return {
     destroy() {
+      searchVersion++;
       clearTimeout(debounceTimer);
       hideResults();
       input.removeEventListener('input', onInputDebounced);

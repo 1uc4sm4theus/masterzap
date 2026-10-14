@@ -4,7 +4,7 @@
 // conversation, and that both bit in practice.
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { loadSearchIndex, isIndexLoaded, resetSearchIndex, search } from '../../src/lib/search.js';
+import { loadSearchIndex, isIndexLoaded, resetSearchIndex, search, searchIndex } from '../../src/lib/search.js';
 
 const INDEXES = {
   'martha-graeff': [
@@ -65,6 +65,17 @@ describe('search index cache', () => {
     expect(isIndexLoaded('martha-graeff')).toBe(true);
     expect(isIndexLoaded('alexandre-de-moraes')).toBe(false);
     expect(isIndexLoaded()).toBe(true);
+  });
+
+  it('loads multiple conversation indexes concurrently without mixing their results', async () => {
+    const [marthaIndex, alexandreIndex] = await Promise.all([
+      loadSearchIndex('martha-graeff'),
+      loadSearchIndex('alexandre-de-moraes'),
+    ]);
+
+    expect(searchIndex(marthaIndex, 'peleleca')).toHaveLength(1);
+    expect(searchIndex(alexandreIndex, 'peleleca')).toHaveLength(0);
+    expect(searchIndex(alexandreIndex, 'estar fora')).toHaveLength(1);
   });
 
   it('propagates a failed fetch and stays unloaded', async () => {

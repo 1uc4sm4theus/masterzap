@@ -85,11 +85,49 @@ test.describe('Search — Batch 7', () => {
   test('no results shows empty message', async ({ page }) => {
     const input = page.locator('.sidebar-search-input');
     await input.fill('xyzzyxyzzy12345');
-    await page.locator('.search-results').waitFor({ timeout: 10000 });
 
     const empty = page.locator('.search-empty');
-    await expect(empty).toBeVisible();
+    await expect(empty).toBeVisible({ timeout: 10000 });
     await expect(empty).toContainText('Nenhuma mensagem encontrada');
+  });
+
+  test('matching conversations are listed before matching messages', async ({ page }) => {
+    const input = page.locator('.sidebar-search-input');
+    await input.fill('Alexandre');
+
+    const conversationResult = page.locator('.search-conversation-item').first();
+    await expect(conversationResult).toBeVisible({ timeout: 10000 });
+    await expect(conversationResult).toContainText('Alexandre');
+
+    const headings = page.locator('.search-results-heading');
+    await expect(headings.first()).toHaveText('Conversas');
+    await expect(headings.nth(1)).toHaveText('Mensagens', { timeout: 10000 });
+  });
+
+  test('clicking a matching conversation opens that conversation', async ({ page }) => {
+    await page.locator('.sidebar-search-input').fill('Diogo Batista');
+    await page.locator('.search-conversation-item').first().click();
+
+    await expect(page.locator('.chat-view')).toBeVisible({ timeout: 10000 });
+    await expect(page).toHaveURL(/#\/chat\/diogo-batista-vorcaro/);
+  });
+
+  test('conversation search ignores the selected sidebar filter', async ({ page }) => {
+    await page.locator('.sidebar-tag[data-filter="favoritas"]').click();
+    await page.locator('.sidebar-search-input').fill('Diogo');
+
+    await expect(page.locator('.search-conversation-item').first()).toContainText('Diogo');
+  });
+
+  test('a message result opens the conversation where it was found', async ({ page }) => {
+    await page.locator('.sidebar-search-input').fill('troféu do Min Alexandre');
+
+    const result = page.locator('.search-result-item').filter({ hasText: 'Ana Matos MKT' }).first();
+    await expect(result).toBeVisible({ timeout: 10000 });
+    await result.click();
+
+    await expect(page.locator('.chat-view')).toBeVisible({ timeout: 10000 });
+    await expect(page).toHaveURL(/#\/chat\/ana-matos-mkt/);
   });
 
   test('search is accent-insensitive', async ({ page }) => {

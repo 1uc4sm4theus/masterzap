@@ -28,7 +28,7 @@ O nome do repositório — **masterzap** — é uma referência ao projeto origi
 
 ## Funcionalidades
 
-- **Busca inteligente** — pesquisa com suporte a acentos e resultados em tempo real
+- **Busca inteligente** — encontra conversas pelo nome e mensagens em todas as conversas disponíveis, com suporte a acentos e resultados em tempo real
 - **Navegação por calendário** — salte para qualquer data entre fevereiro de 2024 e agosto de 2025
 - **Compartilhamento via link direto** — clique com o botão direito em qualquer mensagem, copie o link e compartilhe. Quem clicar é levado direto para a mensagem exata na conversa — ideal para citar trechos específicos
 - **Perfis investigativos** — biografia de Vorcaro e Martha com contexto e links para as reportagens
@@ -131,7 +131,7 @@ As informações compiladas neste projeto são de domínio público, extraídas 
 
 ## English Summary
 
-**MasterWhats** is an interactive viewer for 66,387 WhatsApp messages recovered from the seized phones of Daniel Vorcaro (former owner of Banco Master, arrested by Brazil's Federal Police), across 24 conversations: the leaked exchanges with Martha Graeff and the Federal Police report on his contacts with Supreme Court Justice Alexandre de Moraes, unsealed in September 2026. Built with vanilla JS and Vite, it features smart search with accent support, calendar navigation, direct message link sharing, investigative profiles, and a fully responsive WhatsApp Web-like interface optimized for mobile.
+**MasterWhats** is an interactive viewer for 66,387 WhatsApp messages recovered from the seized phones of Daniel Vorcaro (former owner of Banco Master, arrested by Brazil's Federal Police), across 24 conversations: the leaked exchanges with Martha Graeff and the Federal Police report on his contacts with Supreme Court Justice Alexandre de Moraes, unsealed in September 2026. Built with vanilla JS and Vite, it features global search for conversations and messages with accent support, calendar navigation, direct message link sharing, investigative profiles, and a fully responsive WhatsApp Web-like interface optimized for mobile.
 
 The repo name "masterzap" references the original [MasterZap](https://www.reddit.com/r/brasil/s/xQeqrG27p8) project by Lucas Matheus (built on Replit with Grok), which inspired this reimagined version.
 

@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { search, normalize, resetSearchIndex } from '../../src/lib/search.js';
+import { search, searchIndex, normalize, resetSearchIndex } from '../../src/lib/search.js';
 
 // We can't easily load the full search index in unit tests (it's fetched via HTTP),
 // so we'll test the pure functions and mock the internal index.
@@ -45,5 +45,34 @@ describe('search()', () => {
   it('returns empty array when index is not loaded', () => {
     // Index hasn't been loaded yet
     expect(search('hello')).toEqual([]);
+  });
+});
+
+describe('searchIndex()', () => {
+  const index = [
+    { id: 1, date: '2024-02-10', sender: 'DV', content: 'Diogo ligou' },
+    { id: 2, date: '2025-02-10', sender: 'DV', content: 'Falei com Diogo' },
+  ];
+
+  it('searches a supplied index without relying on the active conversation', () => {
+    const results = searchIndex(index, 'diogo');
+
+    expect(results).toHaveLength(2);
+    expect(results[0].content).toBe('Diogo ligou');
+  });
+
+  it('can return the newest matches first for global search', () => {
+    const results = searchIndex(index, 'diogo', { newestFirst: true, limit: 1 });
+
+    expect(results).toHaveLength(1);
+    expect(results[0].id).toBe(2);
+  });
+
+  it('keeps accent-insensitive matching and highlight offsets', () => {
+    const results = searchIndex([
+      { id: 1, date: '2025-02-10', sender: 'DV', content: 'Conversei com Diôgo' },
+    ], 'diogo');
+
+    expect(results[0].content.slice(results[0].matchStart, results[0].matchEnd)).toBe('Diôgo');
   });
 });

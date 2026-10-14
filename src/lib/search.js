@@ -6,47 +6,42 @@
  * and normalize accents for broader matching.
  */
 
-let _index = null;
-let _indexId = null;
-let _loading = null;
-let _loadingId = null;
+const _indexes = new Map();
+const _pendingIndexes = new Map();
+let _activeIndexId = null;
 
 /**
  * Load the search index for a conversation.
  *
- * The loaded index is cached, but keyed by conversation — switching chats has
- * to refetch, or a search in one conversation would return hits from another.
+ * Indexes are cached per conversation so searches can load several chats
+ * concurrently without replacing the active chat's index.
  *
  * @param {string} conversationId
  * @param {string} [basePath='/data']
  * @returns {Promise<Array>}
  */
 export async function loadSearchIndex(conversationId, basePath = '/data') {
-  if (_index && _indexId === conversationId) return _index;
-  if (_loading && _loadingId === conversationId) return _loading;
+  _activeIndexId = conversationId;
+  if (_indexes.has(conversationId)) return _indexes.get(conversationId);
+  if (_pendingIndexes.has(conversationId)) return _pendingIndexes.get(conversationId);
 
-  _loadingId = conversationId;
-  _loading = fetch(`${basePath}/${conversationId}/search-index.json`)
+  const promise = fetch(`${basePath}/${conversationId}/search-index.json`)
     .then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
     })
     .then(data => {
-      // A newer load may have started while this one was in flight; only the
-      // most recent conversation's result may claim the cache.
-      if (_loadingId === conversationId) {
-        _index = data;
-        _indexId = conversationId;
-        _loading = null;
-      }
+      _indexes.set(conversationId, data);
       return data;
     })
-    .catch(err => {
-      if (_loadingId === conversationId) _loading = null;
-      throw err;
+    .finally(() => {
+      if (_pendingIndexes.get(conversationId) === promise) {
+        _pendingIndexes.delete(conversationId);
+      }
     });
 
-  return _loading;
+  _pendingIndexes.set(conversationId, promise);
+  return promise;
 }
 
 /**
@@ -101,15 +96,34 @@ function excerptAround(content, matchStart, matchEnd) {
  * @param {object} [options]
  * @param {number} [options.limit=50] - max results to return
  * @param {string} [options.sender] - filter by sender name
+ * @param {boolean} [options.newestFirst=false] - scan from newest index entry
  * @returns {Array<{ id, date, sender, content, matchStart, matchEnd }>}
  */
-export function search(query, { limit = 50, sender } = {}) {
-  if (!_index || !query || query.length < 2) return [];
+export function search(query, options = {}) {
+  return searchIndex(_indexes.get(_activeIndexId), query, options);
+}
+
+/**
+ * Search a specific conversation index without changing the active chat index.
+ * @param {Array} index
+ * @param {string} query
+ * @param {object} [options]
+ * @param {number} [options.limit=50]
+ * @param {string} [options.sender]
+ * @param {boolean} [options.newestFirst=false]
+ * @returns {Array<{ id, date, sender, content, matchStart, matchEnd }>}
+ */
+export function searchIndex(index, query, { limit = 50, sender, newestFirst = false } = {}) {
+  if (!index || !query || query.length < 2) return [];
 
   const normalizedQuery = normalize(query);
   const results = [];
 
-  for (const entry of _index) {
+  const start = newestFirst ? index.length - 1 : 0;
+  const end = newestFirst ? -1 : index.length;
+  const step = newestFirst ? -1 : 1;
+  for (let i = start; i !== end; i += step) {
+    const entry = index[i];
     if (sender && entry.sender !== sender) continue;
 
     const normalizedContent = normalize(entry.content);
@@ -128,12 +142,11 @@ export function search(query, { limit = 50, sender } = {}) {
   return results;
 }
 
-/** Clear the loaded index (for testing). */
+/** Clear loaded indexes (for testing). */
 export function resetSearchIndex() {
-  _index = null;
-  _indexId = null;
-  _loading = null;
-  _loadingId = null;
+  _indexes.clear();
+  _pendingIndexes.clear();
+  _activeIndexId = null;
 }
 
 /**
@@ -141,6 +154,6 @@ export function resetSearchIndex() {
  * @param {string} [conversationId]
  */
 export function isIndexLoaded(conversationId) {
-  if (_index === null) return false;
-  return conversationId === undefined || _indexId === conversationId;
+  if (conversationId !== undefined) return _indexes.has(conversationId);
+  return _indexes.size > 0;
 }
