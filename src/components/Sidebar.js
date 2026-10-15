@@ -29,6 +29,7 @@ export function renderSidebar(container, {
   onProfile,
   onAbout,
   onExportAll,
+  onFavorites,
   onCalls,
   onPayments,
   onFlights,
@@ -316,6 +317,7 @@ export function renderSidebar(container, {
     sidebarMenuEl.className = 'sidebar-dropdown-menu';
 
     const items = [
+      { label: 'Mensagens favoritas', action: onFavorites, enabled: !!onFavorites },
       { label: 'Perfil', action: onProfile, enabled: !!onProfile },
       { label: 'Exportar tudo (.zip)', action: onExportAll, enabled: !!onExportAll },
       { label: 'Sobre o MasterWhats', action: onAbout, enabled: !!onAbout },

@@ -31,8 +31,9 @@ O nome do repositório — **masterzap** — é uma referência ao projeto origi
 - **Busca inteligente** — encontra conversas pelo nome e mensagens em todas as conversas disponíveis, com suporte a acentos e resultados em tempo real
 - **Navegação por calendário** — salte para qualquer data entre fevereiro de 2024 e agosto de 2025
 - **Compartilhamento via link direto** — clique com o botão direito em qualquer mensagem, copie o link e compartilhe. Quem clicar é levado direto para a mensagem exata na conversa — ideal para citar trechos específicos
+- **Mensagens favoritas** — salve mensagens pelo menu de cada mensagem e encontre-as no menu da lista de conversas. Os favoritos ficam salvos neste navegador e abrem a conversa na mensagem original
 - **Perfis investigativos** — biografia de Vorcaro e Martha com contexto e links para as reportagens
-- **Menu de contexto** — copie texto, responda ou compartilhe qualquer mensagem
+- **Menu de contexto** — copie, compartilhe, favorite ou consulte informações de uma mensagem
 - **Links internos** — clique nos trechos citados pela imprensa e vá direto para a mensagem original
 - **Totalmente responsivo** — experiência completa no celular e no desktop, um diferencial em relação ao [MasterZap](https://www.reddit.com/r/brasil/s/xQeqrG27p8) original
 

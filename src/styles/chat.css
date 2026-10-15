@@ -490,6 +490,12 @@
   opacity: 1;
 }
 
+@media (hover: none) {
+  .chat-msg-chevron {
+    opacity: 1;
+  }
+}
+
 .chat-msg-chevron:hover {
   color: var(--WDS-content-default);
 }

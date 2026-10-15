@@ -562,11 +562,11 @@ function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro')
   tail.className = 'chat-msg-tail';
   bubble.appendChild(tail);
 
-  // Chevron dropdown trigger (visible on hover)
+  // Three-dot message menu (visible on hover, always available on touch).
   const chevron = document.createElement('button');
   chevron.className = 'chat-msg-chevron';
   chevron.setAttribute('aria-label', 'Menu da mensagem');
-  chevron.innerHTML = ICON_CHEVRON_DW;
+  chevron.innerHTML = ICON_MEETBALL;
   bubble.appendChild(chevron);
 
   row.appendChild(bubble);

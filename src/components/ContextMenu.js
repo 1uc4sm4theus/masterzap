@@ -1,13 +1,15 @@
 /**
  * ContextMenu component — right-click menu for messages.
  *
- * Actions: copy text, show message info drawer.
+ * Actions: favorite, copy and share a message, or show its info drawer.
  * Positioned near the click point, auto-adjusts to stay within viewport.
  */
 
 import { escapeHtml, formatDateLong, formatTime } from '../lib/utils.js';
 import { showToast } from './Toast.js';
 import { ICON_COPY, ICON_SEND, ICON_INFO } from '../lib/icons.js';
+
+const ICON_STAR = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg>';
 
 /**
  * Create and manage a context menu for the chat area.
@@ -16,7 +18,15 @@ import { ICON_COPY, ICON_SEND, ICON_INFO } from '../lib/icons.js';
  * @param {Record<string,string>} [options.senderNames] - map short names to full names
  * @returns {{ destroy: function }}
  */
-export function attachContextMenu(chatContainer, { senderNames = {}, incomingSender = '', outgoingSender = 'DV', conversationId = '' } = {}) {
+export function attachContextMenu(chatContainer, {
+  senderNames = {},
+  incomingSender = '',
+  outgoingSender = 'DV',
+  conversationId = '',
+  conversationName = conversationId,
+  isFavorite = () => false,
+  onToggleFavorite,
+} = {}) {
   let menuEl = null;
   let drawerEl = null;
 
@@ -81,6 +91,23 @@ export function attachContextMenu(chatContainer, { senderNames = {}, incomingSen
 
   function buildMenuItems(msg) {
     const items = [];
+
+    if (msg.id && conversationId && onToggleFavorite) {
+      const favorite = isFavorite(conversationId, msg.id);
+      items.push({
+        label: favorite ? 'Remover dos favoritos' : 'Favoritar mensagem',
+        icon: ICON_STAR,
+        action: () => onToggleFavorite({
+          conversationId,
+          messageId: msg.id,
+          conversationName,
+          date: msg.date,
+          time: msg.time,
+          sender: msg.sender,
+          content: msg.content,
+        }),
+      });
+    }
 
     // Copy text
     if (msg.content) {
@@ -265,6 +292,7 @@ export function attachContextMenu(chatContainer, { senderNames = {}, incomingSen
       sender: isOutgoing ? outgoingSender : incomingSender,
       date,
       time: meta.replace(/editada/i, '').trim(),
+      conversationName,
       type: 'text',
       isEdited,
     };
@@ -300,7 +328,7 @@ export function attachContextMenu(chatContainer, { senderNames = {}, incomingSen
     }
   }
 
-  // Chevron button click → open context menu at chevron position
+  // Message menu button click → open the context menu beside the message.
   function onChevronClick(e) {
     const chevron = e.target.closest('.chat-msg-chevron');
     if (!chevron) return;

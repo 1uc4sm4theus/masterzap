@@ -23,6 +23,10 @@ describe('HashRouter', () => {
       expect(HashRouter.parseHash('#/soundtrack')).toEqual({ route: 'soundtrack', param: null, messageId: null });
     });
 
+    it('#/favorites → favorites', () => {
+      expect(HashRouter.parseHash('#/favorites')).toEqual({ route: 'favorites', param: null, messageId: null });
+    });
+
     it('# → home', () => {
       expect(HashRouter.parseHash('#')).toEqual({ route: 'home', param: null, messageId: null });
     });
@@ -99,6 +103,11 @@ describe('HashRouter', () => {
     it('navigate("soundtrack") sets hash to #/soundtrack', () => {
       router.navigate('soundtrack');
       expect(window.location.hash).toBe('#/soundtrack');
+    });
+
+    it('navigate("favorites") sets hash to #/favorites', () => {
+      router.navigate('favorites');
+      expect(window.location.hash).toBe('#/favorites');
     });
 
     it('navigate("chat", "martha-graeff") sets hash without messageId', () => {

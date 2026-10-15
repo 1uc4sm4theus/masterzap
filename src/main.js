@@ -3,6 +3,11 @@
 
 import { getDataStore } from './lib/data-store.js';
 import { dataUrl } from './lib/data-url.js';
+import {
+  isFavoriteMessageSaved,
+  loadFavoriteMessages,
+  toggleFavoriteMessage,
+} from './lib/favorites.js';
 import { HashRouter } from './lib/router.js';
 import { renderSidebar, setActiveConversation } from './components/Sidebar.js';
 import { renderEmptyState } from './components/EmptyState.js';
@@ -28,6 +33,7 @@ import { renderChatGPTPanel } from './components/ChatGPTPanel.js';
 import { renderMediaPanel } from './components/MediaPanel.js';
 import { renderSoundtrackPanel } from './components/SoundtrackPanel.js';
 import { renderSoundtrackPlayer } from './components/SoundtrackPlayer.js';
+import { renderFavoritesPanel } from './components/FavoritesPanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
 import { APP_USERS, conversationsForUser } from './lib/users.js';
@@ -134,6 +140,7 @@ async function init() {
   const MEDIA_COUNTS = { images: 0, videos: 0, documents: 0 };
 
   const readConversations = loadReadConversations();
+  const favoriteMessages = loadFavoriteMessages();
 
   const store = getDataStore();
   try {
@@ -423,6 +430,16 @@ async function init() {
         incomingSender,
         outgoingSender,
         conversationId: id,
+        conversationName: conversation.contact || conversation.participants[0] || id,
+        isFavorite: (conversationId, messageId) =>
+          isFavoriteMessageSaved(favoriteMessages, conversationId, messageId),
+        onToggleFavorite: (message) => {
+          const favorited = toggleFavoriteMessage(favoriteMessages, message);
+          showToast(
+            mainArea,
+            favorited ? 'Mensagem adicionada aos favoritos' : 'Mensagem removida dos favoritos'
+          );
+        },
       });
     }
   }
@@ -550,6 +567,7 @@ async function init() {
       onProfile: openProfile,
       onAbout: openSettings,
       onExportAll: () => downloadFile(EXPORT_ALL_URL),
+      onFavorites: () => router.navigate('favorites'),
       onCalls: () => router.navigate('calls'),
       onPayments: () => router.navigate('payments'),
       onFlights: () => router.navigate('flights'),
@@ -631,6 +649,15 @@ async function init() {
 
   router = new HashRouter();
   router.on('home', () => { sidebar.showChats?.(); navRail.setActive?.('chats'); showEmptyState(); });
+  router.on('favorites', () => {
+    showEmptyState();
+    sidebar.showChats?.();
+    mainArea.replaceChildren(renderFavoritesPanel(favoriteMessages, {
+      onBack: () => router.navigate('home'),
+      onOpenMessage: (conversationId, messageId) =>
+        router.navigate('chat', conversationId, messageId),
+    }));
+  });
 
   // The calls screen takes the list's place; the log is one file, fetched
   // the first time it is asked for.
