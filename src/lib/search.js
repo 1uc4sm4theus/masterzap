@@ -6,6 +6,8 @@
  * and normalize accents for broader matching.
  */
 
+import { dataUrl } from './data-url.js';
+
 const _indexes = new Map();
 const _pendingIndexes = new Map();
 let _activeIndexId = null;
@@ -25,7 +27,7 @@ export async function loadSearchIndex(conversationId, basePath = '/data') {
   if (_indexes.has(conversationId)) return _indexes.get(conversationId);
   if (_pendingIndexes.has(conversationId)) return _pendingIndexes.get(conversationId);
 
-  const promise = fetch(`${basePath}/${conversationId}/search-index.json`)
+  const promise = fetch(dataUrl(`${basePath}/${conversationId}/search-index.json`))
     .then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();

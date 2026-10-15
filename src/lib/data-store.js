@@ -1,3 +1,5 @@
+import { dataUrl } from './data-url.js';
+
 /**
  * DataStore — lazy-loading data layer with LRU cache for day-chunks.
  *
@@ -60,7 +62,7 @@ export class DataStore {
    */
   constructor({ cacheSize = 30, basePath = '/data', fetcher } = {}) {
     this._basePath = basePath;
-    this._fetcher = fetcher || ((url) => fetch(url).then(r => {
+    this._fetcher = fetcher || ((url) => fetch(dataUrl(url)).then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}: ${url}`);
       return r.json();
     }));

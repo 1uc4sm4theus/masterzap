@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "participants": ["DV", "Kiko Sobrinho"],
+    "saved_as": "Kiko Sobrinho (arquiteto)",
+    "phone": null,
+    "date_range": {
+      "start": "2025-02-26",
+      "end": "2025-02-28"
+    },
+    "total_messages": 38,
+    "source": "Capturas de tela com marca d'água 'piauí' e texto fornecido pelo usuário. Documento de origem não informado.",
+    "note": "O texto de todas as mensagens vem do texto fornecido pelo usuário. Os horários vêm das capturas de tela, que mostram hora e minuto, sem segundos; por isso os timestamps usam ':00' nos segundos e o campo 'time' traz '??'. Só as mensagens 1 a 5 e 30 a 38 têm horário visível. As mensagens 6 a 29 (28/02) não têm horário informado; pela ordem do texto, ficariam entre 10h19 e 13h56, mas essa ordem não foi confirmada. As mensagens 8 e 36 são respostas com citação; a mensagem citada aparece no campo 'quoted' e o id dela no campo 'reply_to', e não foi contada como mensagem separada. Nas capturas, o remetente da direita é 'Vorcaro' e o da esquerda é 'Kiko Sobrinho (arquiteto)'; aqui os rótulos são DV e Kiko Sobrinho, para manter o estilo do JSON da conversa com Rayanna. Nas mensagens de DV, Kiko é chamado de 'leo' (ids 7 e 21). A mensagem 6 aparece cortada na captura ('Cara essas automacoes vao me...'); o texto completo vem do texto fornecido."
+  },
+  "messages": [
+    {"id": 1, "timestamp": "2025-02-26T11:00:00-03:00", "date": "2025-02-26", "time": "11:00:??", "time_confidence": "parcial", "sender": "DV", "content": "Vouch receber ministro aqui sexta", "type": "text", "attachment": null},
+
+    {"id": 2, "timestamp": "2025-02-27T15:29:00-03:00", "date": "2025-02-27", "time": "15:29:??", "time_confidence": "parcial", "sender": "DV", "content": "To igual louco sp", "type": "text", "attachment": null},
+    {"id": 3, "timestamp": "2025-02-27T15:29:00-03:00", "date": "2025-02-27", "time": "15:29:??", "time_confidence": "parcial", "sender": "Kiko Sobrinho", "content": "Pepinos ?", "type": "text", "attachment": null},
+    {"id": 4, "timestamp": "2025-02-27T15:30:00-03:00", "date": "2025-02-27", "time": "15:30:??", "time_confidence": "parcial", "sender": "Kiko Sobrinho", "content": "Agora tendi vc mudou almoço ministro lá pra", "type": "text", "attachment": null},
+
+    {"id": 5, "timestamp": "2025-02-28T10:19:00-03:00", "date": "2025-02-28", "time": "10:19:??", "time_confidence": "parcial", "sender": "DV", "content": "Opa", "type": "text", "attachment": null},
+    {"id": 6, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Cara essas automacoes vao me matar um dia", "type": "text", "attachment": null},
+    {"id": 7, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Tem alguem pra vir leo? Nao ta funcuonando os ambientes roma", "type": "text", "attachment": null},
+    {"id": 8, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "Kiko Sobrinho", "content": "Tenho pera i", "type": "text", "attachment": null, "reply_to": 7, "quoted": {"sender": "DV", "content": "Tem alguem pra vir leo? Nao ta funcuonando os ambientes roma"}},
+    {"id": 9, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "Kiko Sobrinho", "content": "Deixa ver consegue resolver remoto", "type": "text", "attachment": null},
+    {"id": 10, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Resolvi", "type": "text", "attachment": null},
+    {"id": 11, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "Kiko Sobrinho", "content": "Ele tá aí", "type": "text", "attachment": null},
+    {"id": 12, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "Kiko Sobrinho", "content": "Embaixo", "type": "text", "attachment": null},
+    {"id": 13, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "Kiko Sobrinho", "content": "Já", "type": "text", "attachment": null},
+    {"id": 14, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "Kiko Sobrinho", "content": "Cara automação", "type": "text", "attachment": null},
+    {"id": 15, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Pode mandar embora rsrs", "type": "text", "attachment": null},
+    {"id": 16, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Fiz curso intensivo", "type": "text", "attachment": null},
+    {"id": 17, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "Kiko Sobrinho", "content": "Kkkkkkk", "type": "text", "attachment": null},
+    {"id": 18, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Kkkk cara", "type": "text", "attachment": null},
+    {"id": 19, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "Kiko Sobrinho", "content": "Que", "type": "text", "attachment": null},
+    {"id": 20, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Pelo amor de Deus", "type": "text", "attachment": null},
+    {"id": 21, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Tira quele sofa da varanda leo", "type": "text", "attachment": null},
+    {"id": 22, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "To passando vergonha. Melhor deixar sem nada", "type": "text", "attachment": null},
+    {"id": 23, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Ele é logo na entrada, primeira coisa que a pessoa ve", "type": "text", "attachment": null},
+    {"id": 24, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "Kiko Sobrinho", "content": "Que ouve ?", "type": "text", "attachment": null},
+    {"id": 25, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "Kiko Sobrinho", "content": "Já sei rasgou dinovo pqp", "type": "text", "attachment": null},
+    {"id": 26, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Nem voltou", "type": "text", "attachment": null},
+    {"id": 27, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Ta essa baranga tem 6 meses", "type": "text", "attachment": null},
+    {"id": 28, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Manda tirar", "type": "text", "attachment": null},
+    {"id": 29, "timestamp": null, "date": "2025-02-28", "time": null, "time_confidence": "não informado", "sender": "DV", "content": "Deixa sem", "type": "text", "attachment": null},
+
+    {"id": 30, "timestamp": "2025-02-28T13:56:00-03:00", "date": "2025-02-28", "time": "13:56:??", "time_confidence": "parcial", "sender": "Kiko Sobrinho", "content": "Foi arrumado uma vez", "type": "text", "attachment": null},
+    {"id": 31, "timestamp": "2025-02-28T13:56:00-03:00", "date": "2025-02-28", "time": "13:56:??", "time_confidence": "parcial", "sender": "DV", "content": "Aqui", "type": "text", "attachment": null},
+    {"id": 32, "timestamp": "2025-02-28T13:56:00-03:00", "date": "2025-02-28", "time": "13:56:??", "time_confidence": "parcial", "sender": "DV", "content": "Quem e o cara ar", "type": "text", "attachment": null},
+    {"id": 33, "timestamp": "2025-02-28T13:56:00-03:00", "date": "2025-02-28", "time": "13:56:??", "time_confidence": "parcial", "sender": "Kiko Sobrinho", "content": "Vou arrumar", "type": "text", "attachment": null},
+    {"id": 34, "timestamp": "2025-02-28T13:56:00-03:00", "date": "2025-02-28", "time": "13:56:??", "time_confidence": "parcial", "sender": "DV", "content": "Agora ar pifou", "type": "text", "attachment": null},
+    {"id": 35, "timestamp": "2025-02-28T13:56:00-03:00", "date": "2025-02-28", "time": "13:56:??", "time_confidence": "parcial", "sender": "Kiko Sobrinho", "content": "Um que não destrói", "type": "text", "attachment": null},
+    {"id": 36, "timestamp": "2025-02-28T13:56:00-03:00", "date": "2025-02-28", "time": "13:56:??", "time_confidence": "parcial", "sender": "Kiko Sobrinho", "content": "Não", "type": "text", "attachment": null, "reply_to": 34, "quoted": {"sender": "DV", "content": "Agora ar pifou"}},
+    {"id": 37, "timestamp": "2025-02-28T13:56:00-03:00", "date": "2025-02-28", "time": "13:56:??", "time_confidence": "parcial", "sender": "Kiko Sobrinho", "content": "Pqp", "type": "text", "attachment": null},
+    {"id": 38, "timestamp": "2025-02-28T13:57:00-03:00", "date": "2025-02-28", "time": "13:57:??", "time_confidence": "parcial", "sender": "Kiko Sobrinho", "content": "Vou chamar", "type": "text", "attachment": null}
+  ],
+  "index": {
+    "dates": [
+      {"date": "2025-02-26", "message_count": 1, "first_message_id": 1, "last_message_id": 1},
+      {"date": "2025-02-27", "message_count": 3, "first_message_id": 2, "last_message_id": 4},
+      {"date": "2025-02-28", "message_count": 34, "first_message_id": 5, "last_message_id": 38}
+    ]
+  }
+}

@@ -1,6 +1,11 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  define: {
+    __DATA_BUILD_ID__: JSON.stringify(
+      process.env.VERCEL_GIT_COMMIT_SHA || Date.now().toString(36)
+    ),
+  },
   root: '.',
   publicDir: 'public',
   build: {

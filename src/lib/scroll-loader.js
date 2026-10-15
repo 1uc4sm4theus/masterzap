@@ -46,7 +46,7 @@ export class ScrollLoader {
     this._observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting && !this._loading) {
-          this._loadUntilOutOfRange();
+          return this._loadUntilOutOfRange();
         }
       },
       { root: this._container, rootMargin: '200px 0px 0px 0px' }
@@ -105,22 +105,18 @@ export class ScrollLoader {
   }
 
   /**
-   * After a _loadBatch, check whether the sentinel is still inside the
-   * IntersectionObserver's trigger margin. With the default threshold,
-   * the browser only fires on enter/exit transitions — if a batch (e.g.
-   * a sparse, text-only day) doesn't add enough height to push the
-   * sentinel out of the 200px margin, no new event ever fires and
-   * loading silently stalls. This keeps loading until the sentinel
-   * actually escapes the margin or history runs out.
+   * Load enough history to make the container scrollable past the observer's
+   * root margin. The sentinel stays at the top of the container as days are
+   * inserted after it, so checking the sentinel's rect would keep loading the
+   * entire conversation in one go.
    */
   async _loadUntilOutOfRange() {
-    await this._loadBatch(LOAD_MORE_DAYS);
-    if (this._nextIndex < 0) return; // no more history
-
-    const rect = this._sentinel.getBoundingClientRect();
-    const rootRect = this._container.getBoundingClientRect();
-    if (rect.bottom >= rootRect.top - 200) {
-      await this._loadUntilOutOfRange();
+    while (!this._loading && this._nextIndex >= 0) {
+      const loadedBefore = this._loadedDates.size;
+      await this._loadBatch(LOAD_MORE_DAYS);
+      if (this._nextIndex < 0) return;
+      if (this._container.scrollHeight > this._container.clientHeight + 200) return;
+      if (this._loadedDates.size === loadedBefore) return;
     }
   }
 

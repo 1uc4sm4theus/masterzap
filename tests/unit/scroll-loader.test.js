@@ -3,16 +3,19 @@ import { ScrollLoader } from '../../src/lib/scroll-loader.js';
 
 // Mock IntersectionObserver for jsdom
 class MockIntersectionObserver {
+  static instances = [];
+
   constructor(callback) {
     this.callback = callback;
     this.elements = [];
+    MockIntersectionObserver.instances.push(this);
   }
   observe(el) { this.elements.push(el); }
   unobserve(el) { this.elements = this.elements.filter(e => e !== el); }
   disconnect() { this.elements = []; }
   // Helper to simulate intersection
   trigger(isIntersecting) {
-    this.callback([{ isIntersecting }]);
+    return this.callback([{ isIntersecting }]);
   }
 }
 
@@ -39,6 +42,7 @@ describe('ScrollLoader', () => {
 
   beforeEach(() => {
     // Install mock IntersectionObserver
+    MockIntersectionObserver.instances = [];
     globalThis.IntersectionObserver = MockIntersectionObserver;
 
     container = createMockContainer();
@@ -115,6 +119,25 @@ describe('ScrollLoader', () => {
 
     expect(loader.loadedCount).toBe(0);
     expect(loader.isFullyLoaded).toBe(true);
+  });
+
+  it('loads only enough history to make the container scrollable', async () => {
+    dateIndex = Array.from({ length: 20 }, (_, i) => ({
+      date: `2024-02-${String(i + 1).padStart(2, '0')}`,
+      message_count: 1,
+    }));
+    Object.defineProperty(container, 'clientHeight', {
+      value: 450,
+      configurable: true,
+    });
+
+    const loader = new ScrollLoader({ container, dateIndex, loadMessages, renderDay });
+    await loader.init();
+    await MockIntersectionObserver.instances[0].trigger(true);
+
+    expect(loader.loadedCount).toBe(10);
+    expect(loader.isFullyLoaded).toBe(false);
+    expect(loadMessages).toHaveBeenCalledTimes(10);
   });
 
   it('handles loadMessages errors gracefully', async () => {

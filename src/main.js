@@ -2,6 +2,7 @@
 // Entry point — initializes the app layout
 
 import { getDataStore } from './lib/data-store.js';
+import { dataUrl } from './lib/data-url.js';
 import { HashRouter } from './lib/router.js';
 import { renderSidebar, setActiveConversation } from './components/Sidebar.js';
 import { renderEmptyState } from './components/EmptyState.js';
@@ -636,7 +637,7 @@ async function init() {
   let callsPromise = null;
   router.on('calls', async () => {
     showEmptyState();
-    callsPromise ??= fetch('/data/calls.json').then(r => r.json()).then(d => d.calls);
+    callsPromise ??= fetch(dataUrl('/data/calls.json')).then(r => r.json()).then(d => d.calls);
     let calls = [];
     try { calls = await callsPromise; } catch { callsPromise = null; }
     const panel = renderCallsPanel({
@@ -658,7 +659,7 @@ async function init() {
     showEmptyState();
     let catalog = { items: [] };
     try {
-      const response = await fetch('/data/media.json');
+      const response = await fetch(dataUrl('/data/media.json'));
       if (response.ok) catalog = await response.json();
     } catch (err) {
       console.warn('Media catalog unavailable:', err);
