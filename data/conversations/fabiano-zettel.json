@@ -8,11 +8,11 @@
     "phone": "5511932611111",
     "date_range": {
       "start": "2024-02-08",
-      "end": "2024-02-08"
+      "end": "2024-12-30"
     },
-    "total_messages": 14,
+    "total_messages": 18,
     "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+    "note": "Mensagens 1–14: trechos citados no relatório policial — a conversa completa não consta do documento. Mensagens 15–18: transcritas de captura de tela de WhatsApp (HUw-9nOXUAE25N_.jpg); ano 2024 inferido (30/12 caiu numa segunda-feira em 2024 e o texto menciona 'março/24'); horário só com precisão de minuto."
   },
   "messages": [
     {
@@ -211,6 +211,71 @@
       "forwarded": true,
       "source_page": 149,
       "source_figure": 148
+    },
+    {
+      "id": 15,
+      "timestamp": "2024-12-30T16:51:00",
+      "date": "2024-12-30",
+      "time": "16:51",
+      "time_precision": "minute",
+      "sender": "DV",
+      "content": "Olá!\nPreciso de contar sobre o banco super: última nota emitida foi em novembro, a oitava de doze, e não foi paga. Como imagino que esse dinheiro é seu de alguma maneira, achei por bem dedar... rsrs\nSeriam 12 de 100 mil a partir de março/24. Pagaram 7 até agora.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": true,
+      "source_page": null,
+      "source_figure": null,
+      "source_file": "HUw-9nOXUAE25N_.jpg"
+    },
+    {
+      "id": 16,
+      "timestamp": "2024-12-30T16:51:00",
+      "date": "2024-12-30",
+      "time": "16:51",
+      "time_precision": "minute",
+      "sender": "DV",
+      "content": "👆",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "source_file": "HUw-9nOXUAE25N_.jpg"
+    },
+    {
+      "id": 17,
+      "timestamp": "2024-12-30T16:51:00",
+      "date": "2024-12-30",
+      "time": "16:51",
+      "time_precision": "minute",
+      "sender": "DV",
+      "content": "Irmão",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "source_file": "HUw-9nOXUAE25N_.jpg"
+    },
+    {
+      "id": 18,
+      "timestamp": "2024-12-30T16:51:00",
+      "date": "2024-12-30",
+      "time": "16:51",
+      "time_precision": "minute",
+      "sender": "DV",
+      "content": "Esse é aquele contrato do Reinaldo Azevedo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "source_file": "HUw-9nOXUAE25N_.jpg"
     }
   ],
   "index": {
@@ -220,6 +285,12 @@
         "message_count": 14,
         "first_message_id": 1,
         "last_message_id": 14
+      },
+      {
+        "date": "2024-12-30",
+        "message_count": 4,
+        "first_message_id": 15,
+        "last_message_id": 18
       }
     ]
   }
