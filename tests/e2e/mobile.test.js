@@ -72,6 +72,28 @@ test.describe('Mobile Responsive — Batch 8', () => {
     expect(maxWidth).toBe('85%');
   });
 
+  test('message menu does not cover text on mobile', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('.conversation-item').first().click();
+
+    const menuButton = page.locator('.chat-msg-bubble .chat-msg-chevron').first();
+    await menuButton.waitFor({ state: 'attached', timeout: 10000 });
+    await expect(menuButton).toHaveCSS('opacity', '0');
+    await expect(menuButton).toHaveCSS('visibility', 'hidden');
+    await expect(menuButton).toHaveCSS('pointer-events', 'none');
+  });
+
+  test('long-press context menu remains available on mobile', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('.conversation-item').first().click();
+
+    const bubble = page.locator('.chat-msg-bubble').first();
+    await bubble.waitFor({ timeout: 10000 });
+    await bubble.dispatchEvent('contextmenu');
+
+    await expect(page.locator('.context-menu')).toBeVisible();
+  });
+
   test('green header bar is hidden on mobile', async ({ page }) => {
     await page.goto('/');
     const bar = page.locator('.app-header-bar');

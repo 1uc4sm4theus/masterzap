@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Augusto Ebal"
+    ],
+    "saved_as": "augusto-ebal",
+    "phone": null,
+    "date_range": {
+      "start": "2025-04-02",
+      "end": "2025-04-03"
+    },
+    "total_messages": 4,
+    "source": "HUvnQkzWAAAOwkv.jpg: captura de tela de WhatsApp fornecida pelo usuário (cabeçalho: 'WhatsApp Chat - Augusto Ebal - [tarja]'), 02 a 03/04/2025",
+    "note": "Texto transcrito literalmente, preservando grafia e pontuação como aparecem no print. Remetente 'DV' conforme exibido; o outro participante aparece como 'Augusto Ebal' seguido de trecho coberto por tarja, e o número de telefone no cabeçalho também está coberto; foi omitido (phone null). Fuso -03:00 conforme exibido em cada mensagem. Os 4 registros são 1 de Augusto Ebal, 1 de DV e 2 de chamadas perdidas sem remetente identificado (type 'call', sender null). Marcação de data: cabeçalho '2025-04-03' visível; a chamada de 2025-04-02 vem antes dele, sem cabeçalho próprio. O print é um recorte; pode haver mensagens fora dele. A matéria citada (O Globo, coluna de Malu Gaspar, abril/2025) é apenas o link encaminhado; seu conteúdo não foi transcrito.",
+    "visible_date_headers_without_messages": []
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-04-02T23:42:06-03:00",
+      "date": "2025-04-02",
+      "time": "23:42:06",
+      "sender": null,
+      "content": "Chamada de voz perdida",
+      "type": "call",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": "Registro de chamada de voz perdida, em bolha azul alinhada à esquerda (lado de Augusto Ebal), consistente com chamada recebida pelo DV; o print não rotula quem ligou. Primeira bolha do print, sem cabeçalho de data visível acima; a data vem do carimbo. Pode haver mensagens anteriores fora do recorte."
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-04-03T07:34:48-03:00",
+      "date": "2025-04-03",
+      "time": "07:34:48",
+      "sender": "Augusto Ebal",
+      "content": "https://oglobo.globo.com/blogs/malu-gaspar/post/2025/04/banco-master-contratou-mulher-de-alexandre-de-moraes.ghtml\n[Banco Master contratou mulher de Alexandre de Moraes]",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": true,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [
+        "https://oglobo.globo.com/blogs/malu-gaspar/post/2025/04/banco-master-contratou-mulher-de-alexandre-de-moraes.ghtml"
+      ],
+      "source": "screenshot",
+      "verified": true,
+      "notes": "Marcada como 'Encaminhada' no print. A URL quebra em duas linhas no print e foi remontada sem espaços. Os colchetes e o título são o preview do link exibido no print; o preview inclui uma imagem (foto), não transcrita."
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-04-03T07:35:55-03:00",
+      "date": "2025-04-03",
+      "time": "07:35:55",
+      "sender": "DV",
+      "content": "Melhor materia que fizeram nossa na semana",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": "Grafia conforme o print. Exibe dois tiques (entregue/lida) no carimbo."
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-04-03T08:16:58-03:00",
+      "date": "2025-04-03",
+      "time": "08:16:58",
+      "sender": null,
+      "content": "Chamada de voz perdida",
+      "type": "call",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": "Registro de chamada de voz perdida, em bolha azul alinhada à esquerda (lado de Augusto Ebal); o print não rotula quem ligou. Última bolha do print, cortada na borda inferior mas com texto e carimbo legíveis; pode haver mensagens seguintes fora do recorte."
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-04-02",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1
+      },
+      {
+        "date": "2025-04-03",
+        "message_count": 3,
+        "first_message_id": 2,
+        "last_message_id": 4
+      }
+    ]
+  }
+}

@@ -11,8 +11,8 @@
       "start": "2024-04-18",
       "end": "2025-08-02"
     },
-    "total_messages": 105,
-    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF; complementado por 1 captura de tela de WhatsApp (11 a 17/12/2024)",
+    "total_messages": 113,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF; complementado por 2 capturas de tela de WhatsApp (11 a 17/12/2024; 31/07 a 02/08/2025)",
     "source_detail": {
       "kind": "police-report",
       "label": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
@@ -37,10 +37,26 @@
             23
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
+        },
+        {
+          "kind": "screenshot",
+          "label": "Captura de tela de WhatsApp (cabeçalho: 'WhatsApp Chat - Ana Matos Mkt - [tarja preta]'), 31/07 a 02/08/2025",
+          "file": "HUwdxEcXAAAXCIr.jpg",
+          "message_ids": [
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109
+          ],
+          "how": "Transcrição literal feita exclusivamente a partir da imagem."
         }
       ]
     },
-    "note": "Os ids 1-17 e 24-105 são trechos citados no relatório policial (source 'pf_report'; a conversa completa não consta do documento). Os ids 18-23 (11, 13 e 17/12/2024) vêm de captura de tela (source 'screenshot'), sem página/figura do relatório (source_page e source_figure null), e preenchem a lacuna entre 12/05/2024 e 25/02/2025. Nas mensagens do print o horário vai só até o minuto, sem segundos nem fuso exibido; 'timestamp' não traz offset. Remetente 'DV' padronizado (no print o nome exibido é 'Daniel Vorcaro'). Grafia do print preservada ('metrópoles' com acento na primeira mensagem e 'metropoles' sem acento na segunda; 'Metropoles', 'Kovr', 'Will', 'lilian' como exibidos). O print é um recorte; pode haver mensagens fora dele."
+    "note": "Os ids 1-17, 24-101 e 110-113 são trechos citados no relatório policial (source 'pf_report'; a conversa completa não consta do documento). Os ids 18-23 (11, 13 e 17/12/2024) vêm de captura de tela (source 'screenshot'), sem página/figura do relatório (source_page e source_figure null), e preenchem a lacuna entre 12/05/2024 e 25/02/2025. Os ids 102-109 (31/07 e 01/08/2025) vêm de uma segunda captura de tela (source 'screenshot'; HUwdxEcXAAAXCIr.jpg), também sem página/figura, e preenchem a lacuna entre 22/07/2025 e 02/08/2025; os ids de 02/08/2025 foram renumerados de 102-105 para 110-113. Essa captura também exibe as mensagens de 02/08/2025 às 09:54:48 (encaminhada) e 10:01:25, já presentes (ids 110 e 111), conferidas sem divergência de texto e não duplicadas. Nas mensagens do primeiro print o horário vai só até o minuto, sem segundos nem fuso exibido; no segundo print o carimbo mostra segundos e -03:00, mas 'timestamp' foi mantido sem offset, como no restante do arquivo. Remetente 'DV' padronizado (nos prints o nome exibido é 'Daniel Vorcaro' no primeiro e 'DV' no segundo); 'Ana Matos Mkt (…)' normalizado para 'Ana Matos', com o número de telefone coberto por tarja preta no print e omitido. Grafia dos prints preservada ('metrópoles' com acento na primeira mensagem e 'metropoles' sem acento na segunda; 'Metropoles', 'Kovr', 'Will', 'lilian' como exibidos; 'Ela ouvi', 'qq', 'eh', 'Oioi' como exibidos). Id 102: o rótulo do remetente aparece parcialmente cortado no topo do segundo print; atribuído a Ana Matos pelo alinhamento e pelo contexto. Id 109: registro de chamada de voz (type 'call', sender null), bolha azul alinhada à direita (lado do DV), sem rótulo de quem ligou; o carimbo '2025-08-01 18:39:18' está sobreposto à bolha e com baixo contraste (leitura menos segura). Os prints são recortes; podem existir mensagens fora deles (a bolha de 10:01:25 de 02/08/2025 termina na borda inferior do segundo print)."
   },
   "messages": [
     {
@@ -1572,6 +1588,126 @@
     },
     {
       "id": 102,
+      "timestamp": "2025-07-31T17:13:09",
+      "date": "2025-07-31",
+      "time": "17:13:09",
+      "sender": "Ana Matos",
+      "content": "Oi. Tudo bem?\nUma ajuda: Ministro falou alguma coisa de Londres com vc?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "screenshot",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 103,
+      "timestamp": "2025-07-31T17:13:18",
+      "date": "2025-07-31",
+      "time": "17:13:18",
+      "sender": "DV",
+      "content": "Nao",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "screenshot",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 104,
+      "timestamp": "2025-07-31T17:13:21",
+      "date": "2025-07-31",
+      "time": "17:13:21",
+      "sender": "DV",
+      "content": "Falaram c vc?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "screenshot",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 105,
+      "timestamp": "2025-07-31T17:14:56",
+      "date": "2025-07-31",
+      "time": "17:14:56",
+      "sender": "Ana Matos",
+      "content": "Não. Mas preciso retornar ligação da Vivi. Sei pela assessoria dele que o evento está confirmado pra eles\nDetalhe - os primeiros ministros devem cancelar se não dermos certeza de que o Ministro não vai tocar no assunto EUA.\nTenso aqui com eles.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "screenshot",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 106,
+      "timestamp": "2025-07-31T17:15:19",
+      "date": "2025-07-31",
+      "time": "17:15:19",
+      "sender": "Ana Matos",
+      "content": "Bem tenso hoje",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "screenshot",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 107,
+      "timestamp": "2025-07-31T17:17:05",
+      "date": "2025-07-31",
+      "time": "17:17:05",
+      "sender": "Ana Matos",
+      "content": "Qualquer ação agora que apoie ou dê visibilidade ao Ministro eh contra os EUA e ninguém quer essa briga.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "screenshot",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 108,
+      "timestamp": "2025-08-01T16:56:41",
+      "date": "2025-08-01",
+      "time": "16:56:41",
+      "sender": "Ana Matos",
+      "content": "Oioi. A Vivi disse que a família está unida e com saúde e isso que importa e que o evento está mantido. Agradeceu o apoio e solidariedade. Depois de mais tempo na ligação ela disse que então iria consultar o Alexandre, mas que ele não tinha dito nada então, entende que ele não abrirá mão de fazer o evento. Depois de mais um tempo na ligação, logo antes de desligar, ela disse que se preocupa com os filhos que irão também, um pouco mais desarmada.\nResumo, eles querem manter o evento, mas ela abriu a possibilidade de consultar o Alexandre.\nEu frisei com ela a ausência de outros ministros do STF. Ela ouvi esse ponto com mais atenção.\nEstou indo no grupo voto agora. Estou a disposição qq dia e horário que possa falar.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "screenshot",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 109,
+      "timestamp": "2025-08-01T18:39:18",
+      "date": "2025-08-01",
+      "time": "18:39:18",
+      "sender": null,
+      "content": "Chamada de voz\nDuração: 02:01",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "screenshot",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 110,
       "timestamp": "2025-08-02T09:54:48",
       "date": "2025-08-02",
       "time": "09:54:48",
@@ -1587,7 +1723,7 @@
       "source_figure": 205
     },
     {
-      "id": 103,
+      "id": 111,
       "timestamp": "2025-08-02T10:01:25",
       "date": "2025-08-02",
       "time": "10:01:25",
@@ -1602,7 +1738,7 @@
       "source_figure": 205
     },
     {
-      "id": 104,
+      "id": 112,
       "timestamp": "2025-08-02T10:13:28",
       "date": "2025-08-02",
       "time": "10:13:28",
@@ -1617,7 +1753,7 @@
       "source_figure": 205
     },
     {
-      "id": 105,
+      "id": 113,
       "timestamp": "2025-08-02T12:10:25",
       "date": "2025-08-02",
       "time": "12:10:25",
@@ -1731,10 +1867,22 @@
         "last_message_id": 101
       },
       {
+        "date": "2025-07-31",
+        "message_count": 6,
+        "first_message_id": 102,
+        "last_message_id": 107
+      },
+      {
+        "date": "2025-08-01",
+        "message_count": 2,
+        "first_message_id": 108,
+        "last_message_id": 109
+      },
+      {
         "date": "2025-08-02",
         "message_count": 4,
-        "first_message_id": 102,
-        "last_message_id": 105
+        "first_message_id": 110,
+        "last_message_id": 113
       }
     ]
   }
