@@ -10,9 +10,9 @@
       "start": "2023-12-13",
       "end": "2025-04-01"
     },
-    "total_messages": 105,
-    "source": "Ids 1-33, 54-105 (print): imagens de capturas de WhatsApp fornecidas pelo usuário, associadas pela ordem de envio: HUofum1WkAA0hpV.jpg (13 a 19/12/2023, ids 1-6); HUonArIXsAA4F5l.jpg (12 a 18/01/2024, ids 7-11; enviada duas vezes, idêntica); HUnto5IWYAA3Mh7.jpg (montagem de 3 recortes, com 04/02/2024, ids 12-22, e 01/04/2025, ids 96-105); screenshot-2026-10-14-at-18-20-47.png (12/03/2024, ids 23-28); HUn_hBTXYAADUB_.jpg (19/03/2024, ids 29-33); HUn05uSX0AAm_NW.png (01/04/2025, ids 92-95); a98d0b58-bdf6-4264-bd74-79426d786a7f.jpg (04 e 05/09/2024, ids 54-60); 3263c818-1aaa-4277-8a5c-af43d53bcefd.jpg (17/10/2024, ids 61-68); HUofunXXkAE8rM1.png (26 a 31/10/2024, ids 69-75); ca274384-855e-4d27-8065-646fc730b182.jpg (13 a 16/02/2025, ids 76-85); 7fe12216-1866-4e40-aa76-608f15d5630c.jpg e 7fe12216-1866-4e40-aa76-608f15d5630c__1_.jpg, imagens idênticas (25/02/2025, ids 86-91). Transcrição feita exclusivamente a partir do que aparece nas imagens. Ids 34-53: citações de mensagens reproduzidas no texto de uma matéria fornecida pelo usuário, sem print correspondente.",
-    "note": "Texto transcrito literalmente, preservando grafia, pontuação e abreviações como aparecem nos prints e na matéria. Remetente 'DV' conforme exibido. Nos prints, o outro participante aparece como 'Fred Kachar Globo' seguido de número de telefone; foi normalizado para 'Fred Kachar'. O número aparece legível em alguns prints e borrado nos demais; foi omitido (phone null). Fuso -03:00 conforme exibido em cada mensagem dos prints. Dos 105 registros, 85 vêm de prints (source 'screenshot', verified true) e 20 vêm da matéria (source 'press_text', verified false). Os ids seguem ordem cronológica; os da matéria (34-53) ficam entre os prints de 19/03/2024 e 04/09/2024. Ids 34-53: timestamp e time null, porque a matéria não informa o fuso; as horas citadas na matéria estão em notes. A date é completa conforme a matéria (15/05 e 16/05/2024). Ids 12-22 e 92-105 vêm de prints sem cabeçalho de data visível; as datas vêm dos carimbos. O id 54 é um registro de chamada de voz (type 'call', sender null) de 04/09/2024; há 1 registro desse tipo. O id 8 tem um anexo (attachment preenchido; o conteúdo do arquivo não aparece no print). Os ids 60 e 85 não têm carimbo legível; a date foi inferida pela posição e timestamp e time ficam null. Os prints de 12 a 18/01/2024 e de 25/02/2025 foram enviados duas vezes (imagens idênticas) e transcritos uma vez cada. Marcações editoriais nos prints (destaque laranja em 'Lauro', id 87; círculo vermelho nos ids 83 e 84; bolhas com fundo azulado nos ids 2, 70) não fazem parte da conversa. Id 21: o print exibe 2025-02-04 no carimbo, e foi registrado como 2024-02-04 pela sequência; ver notes. Não foram transcritos, por estarem cortados ou ilegíveis: a mensagem de 01/04/2025 às 07:23:07 (ficaria entre os ids 95 e 96), a mensagem de DV abaixo do id 60, a bolha de DV cortada na base do print de 18/01/2024, a bolha cortada na base do print de 19/12/2023 (após o id 6), o cabeçalho 2024-11-06 cortado na base do print de 31/10/2024, os fragmentos no topo dos prints de 17/10/2024 e de 19/03/2024, a bolha cortada no topo do print de 13/02/2025 e as bolhas cortadas na base dos prints de 25/02/2025. Mensagem 17 é resposta com citação visual à mensagem 13; nas demais, reply_to_id é null. Paráfrases da matéria e fragmentos de citação soltos não foram registrados como mensagens. Contexto, trechos não incluídos e conferências no arquivo complementar fred-kachar_imprensa.json. Os 105 registros são 66 de Fred Kachar, 38 de DV e 1 de chamada sem remetente identificado.",
+    "total_messages": 159,
+    "source": "Três origens. (1) Prints de WhatsApp fornecidos pelo usuário (source 'screenshot'), associados pela ordem de envio: HUofum1WkAA0hpV.jpg (13 a 19/12/2023, ids 1-6); HUonArIXsAA4F5l.jpg (12 a 18/01/2024, ids 7-11; enviada duas vezes, idêntica); HUnto5IWYAA3Mh7.jpg (montagem de 3 recortes, com 04/02/2024, ids 12-22, e 01/04/2025, ids 146-159); screenshot-2026-10-14-at-18-20-47.png (12/03/2024); HUn_hBTXYAADUB_.jpg (19/03/2024, ids 35-39); HUn05uSX0AAm_NW.png (01/04/2025); a98d0b58-bdf6-4264-bd74-79426d786a7f.jpg (04 e 05/09/2024); 3263c818-1aaa-4277-8a5c-af43d53bcefd.jpg (17/10/2024, ids 92-99); HUofunXXkAE8rM1.png (26 a 31/10/2024, ids 114-120); ca274384-855e-4d27-8065-646fc730b182.jpg (13 a 16/02/2025); 7fe12216-1866-4e40-aa76-608f15d5630c.jpg e 7fe12216-1866-4e40-aa76-608f15d5630c__1_.jpg, imagens idênticas (25/02/2025, ids 140-145). (2) Imagens de matéria (source 'press_image'), reproduções gráficas de conversas com o título 'conversa entre Daniel Vorcaro e Frederic Kachar sobre ...', fornecidas pelo usuário: ...sobre-capa-da-vogue (12 e 14/10/2024, ids 84-91); ...sobre-proxima-capa (22/10/2024, ids 100-113); ...sobre-tirar-o-banco-master-das-propostas (06, 12, 13 e 18/02/2025); ...sobre-guerra-na-ucrania (07/02/2024 e 12/03/2024); ...sobre-os-dois-lados-de-uma-materia (05/09/2024); ...sobre-campanha-corporativa (15/07/2024, ids 64-74); ...sobre-coluna-da-malu-gaspar (29/04/2024, ids 40-43). (3) Ids 44-63 (source 'press_text'): citações de mensagens reproduzidas no texto de uma matéria fornecida pelo usuário, sem print correspondente.",
+    "note": "Texto transcrito literalmente, preservando grafia, pontuação e abreviações como aparecem nos prints, nas imagens de matéria e na matéria. Remetente 'DV' conforme exibido nos prints; nas imagens de matéria o rótulo é 'Daniel Vorcaro', normalizado para 'DV'. Nos prints, o outro participante aparece como 'Fred Kachar Globo' seguido de número de telefone; foi normalizado para 'Fred Kachar'. O número aparece legível em alguns prints e borrado nos demais; foi omitido (phone null). Fuso -03:00 conforme exibido em cada mensagem dos prints. As imagens de matéria mostram só HH:MM, sem segundos, sem fuso e sem número de telefone: nelas timestamp é null e time vem como HH:MM; a ordem entre mensagens do mesmo minuto segue a ordem das bolhas e dos ids. Dos 159 registros, 85 vêm de prints (source 'screenshot', verified true), 54 vêm de imagens de matéria (source 'press_image', verified true: lidas diretamente das imagens, que são reproduções gráficas e não capturas originais do aparelho) e 20 vêm da matéria em texto (source 'press_text', verified false). Os ids seguem ordem cronológica; os da matéria em texto (44-63) ficam entre as mensagens de 29/04/2024 e 15/07/2024. Os ids foram renumerados em relação à versão anterior do arquivo, porque as mensagens das imagens de matéria foram intercaladas na ordem cronológica. Ids 44-63: timestamp e time null, porque a matéria não informa o fuso; as horas citadas na matéria estão em notes. A date é completa conforme a matéria (15/05 e 16/05/2024). Ids 12-22 e 146-159 vêm de prints sem cabeçalho de data visível; as datas vêm dos carimbos. O id 75 é um registro de chamada de voz (type 'call', sender null) de 04/09/2024; há 1 registro desse tipo. Os ids 8 e 123 têm anexo (attachment preenchido; o conteúdo do arquivo não aparece). O id 136 não tem carimbo legível; a date foi inferida pela posição e timestamp e time ficam null. O id 81 tem só HH:MM (09:38), confirmado na imagem de matéria. Os prints de 12 a 18/01/2024 e de 25/02/2025 foram enviados duas vezes (imagens idênticas) e transcritos uma vez cada. Marcações editoriais nos prints (destaque laranja em 'Lauro', id 141; círculo vermelho nos ids 134 e 135; bolhas com fundo azulado nos ids 2, 115) não fazem parte da conversa. Id 21: o print exibe 2025-02-04 no carimbo, e foi registrado como 2024-02-04 pela sequência; ver notes. Mensagens já transcritas dos prints e reaparecidas nas imagens de matéria (12/03/2024 e 05/09/2024) foram conferidas, sem divergência de texto, e não foram duplicadas; nas imagens de matéria as mensagens de 05/09/2024 aparecem sem o rótulo 'Encaminhada' presente nos prints (mantido is_forwarded conforme os prints). Não foram transcritos, por estarem cortados ou ilegíveis: a mensagem de 01/04/2025 às 07:23:07 (ficaria entre as mensagens de 07:19:21 e 07:33:06), a bolha de DV cortada na base do print de 18/01/2024, a bolha cortada na base do print de 19/12/2023, o cabeçalho 2024-11-06 cortado na base do print de 31/10/2024, os fragmentos no topo dos prints de 17/10/2024 e de 19/03/2024, a bolha cortada no topo do print de 13/02/2025 e as bolhas cortadas na base dos prints de 25/02/2025. Mensagem 17 é resposta com citação visual à mensagem 13; nas demais, reply_to_id é null. Paráfrases da matéria e fragmentos de citação soltos não foram registrados como mensagens. Contexto, trechos não incluídos e conferências no arquivo complementar fred-kachar_imprensa.json (os ids citados nele podem precisar de atualização pela renumeração). Os 159 registros são 89 de Fred Kachar, 69 de DV e 1 de chamada sem remetente identificado.",
     "visible_date_headers_without_messages": []
   },
   "messages": [
@@ -419,6 +419,96 @@
     },
     {
       "id": 23,
+      "timestamp": null,
+      "date": "2024-02-07",
+      "time": "20:44",
+      "sender": "DV",
+      "content": "Bora hoje que vai ser animado",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Imagem de matéria (conversa-...-sobre-guerra-na-ucrania-...webp, que cobre 07/02/2024 e 12/03/2024). Primeira mensagem visível."
+    },
+    {
+      "id": 24,
+      "timestamp": null,
+      "date": "2024-02-07",
+      "time": "20:44",
+      "sender": "DV",
+      "content": "Tem dois oligarcas russos indo e plantel",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 25,
+      "timestamp": null,
+      "date": "2024-02-07",
+      "time": "20:46",
+      "sender": "Fred Kachar",
+      "content": "Kcta",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 26,
+      "timestamp": null,
+      "date": "2024-02-07",
+      "time": "20:46",
+      "sender": "Fred Kachar",
+      "content": "Outra raia hahaha",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 27,
+      "timestamp": null,
+      "date": "2024-02-07",
+      "time": "20:46",
+      "sender": "Fred Kachar",
+      "content": "Aonde isso?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 28,
       "timestamp": "2024-03-12T07:25:49-03:00",
       "date": "2024-03-12",
       "time": "07:25:49",
@@ -436,7 +526,7 @@
       "notes": null
     },
     {
-      "id": 24,
+      "id": 29,
       "timestamp": "2024-03-12T07:26:02-03:00",
       "date": "2024-03-12",
       "time": "07:26:02",
@@ -454,7 +544,7 @@
       "notes": null
     },
     {
-      "id": 25,
+      "id": 30,
       "timestamp": "2024-03-12T11:53:13-03:00",
       "date": "2024-03-12",
       "time": "11:53:13",
@@ -472,7 +562,7 @@
       "notes": null
     },
     {
-      "id": 26,
+      "id": 31,
       "timestamp": "2024-03-12T11:53:21-03:00",
       "date": "2024-03-12",
       "time": "11:53:21",
@@ -490,7 +580,7 @@
       "notes": null
     },
     {
-      "id": 27,
+      "id": 32,
       "timestamp": "2024-03-12T11:53:45-03:00",
       "date": "2024-03-12",
       "time": "11:53:45",
@@ -508,7 +598,7 @@
       "notes": null
     },
     {
-      "id": 28,
+      "id": 33,
       "timestamp": "2024-03-12T21:11:20-03:00",
       "date": "2024-03-12",
       "time": "21:11:20",
@@ -526,7 +616,25 @@
       "notes": null
     },
     {
-      "id": 29,
+      "id": 34,
+      "timestamp": null,
+      "date": "2024-03-12",
+      "time": "22:17",
+      "sender": "DV",
+      "content": "To indo agora",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Resposta a 'Já está na Ucrânia rs?' (mensagem de 21:11:20). Só aparece na imagem de matéria."
+    },
+    {
+      "id": 35,
       "timestamp": "2024-03-19T18:51:26-03:00",
       "date": "2024-03-19",
       "time": "18:51:26",
@@ -544,7 +652,7 @@
       "notes": null
     },
     {
-      "id": 30,
+      "id": 36,
       "timestamp": "2024-03-19T20:07:08-03:00",
       "date": "2024-03-19",
       "time": "20:07:08",
@@ -562,7 +670,7 @@
       "notes": null
     },
     {
-      "id": 31,
+      "id": 37,
       "timestamp": "2024-03-19T20:07:18-03:00",
       "date": "2024-03-19",
       "time": "20:07:18",
@@ -580,7 +688,7 @@
       "notes": null
     },
     {
-      "id": 32,
+      "id": 38,
       "timestamp": "2024-03-19T20:07:20-03:00",
       "date": "2024-03-19",
       "time": "20:07:20",
@@ -598,7 +706,7 @@
       "notes": null
     },
     {
-      "id": 33,
+      "id": 39,
       "timestamp": "2024-03-19T20:07:28-03:00",
       "date": "2024-03-19",
       "time": "20:07:28",
@@ -616,7 +724,79 @@
       "notes": "Bolha na borda inferior do print, com texto e carimbo legíveis. O print termina aqui; pode haver mensagens seguintes fora do recorte."
     },
     {
-      "id": 34,
+      "id": 40,
+      "timestamp": null,
+      "date": "2024-04-29",
+      "time": "09:10",
+      "sender": "DV",
+      "content": "Loucura a Malu embarcar nisso. Chega a ser inacreditável.\nTanto o Poder 360 quanto o Globo, quanto a propria Globo possuem ações e fazem eventos que contam com pessoas do judiciário.\nO Banco participou do evento patrocinando a palestra do Tony Blair, com quem fiz um debate de altíssimo nível.\nEntendo o sensacionalismo que cria evento com ministros, mas colocar o banco dessa forma , é hipocrisia e covardia.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Imagem de matéria (conversa-...-sobre-coluna-da-malu-gaspar-...webp). Grafia 'forma , é' (espaço antes da vírgula) conforme a imagem. Primeira mensagem visível; pode haver mensagens anteriores fora do recorte."
+    },
+    {
+      "id": 41,
+      "timestamp": null,
+      "date": "2024-04-29",
+      "time": "09:22",
+      "sender": "DV",
+      "content": "Pois nesse caso, temos inclusive que abortar o evento com o Valor. No dia teremos membros do congresso e governo, que o banco e outros patrocinadores tem interesse em projetos de lei, etc.\nSe formos pra esse lado, a conversa vai ficar bem ruim.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 42,
+      "timestamp": null,
+      "date": "2024-04-29",
+      "time": "09:23",
+      "sender": "DV",
+      "content": "Como ela vai dar nota de todos os patrocinadores e seus problemas e interesses nos participantes? Ou ela vai atacar somente o Banco Master?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 43,
+      "timestamp": null,
+      "date": "2024-04-29",
+      "time": "09:42",
+      "sender": "Fred Kachar",
+      "content": "Bom dia, meu caro\nNão estou entendendo esse seu tom comigo. Sempre tivemos uma relação de harmonia e respeito.\nSe tiver algum erro na coluna da Malu, peço a correção imediata.\nEsse post não saiu no jornal, mas no perfil dela. Estou sabendo por vc.\nEstá repercutindo o poder 360 e as ilações feitas lá.\nNão posso censurar um colunista e seus perfis. A apuração da coluna sobre o fórum já saiu e está no site do Globo.\nHá uma diferença bem grande entre nosso evento e esse fórum de Londres\nPrimeiro, não gira em torno de ministros de tribunais superiores. Teremos 20 painelistas e um, se confirmado, seria um ministro do stf num contexto de os três poderes debaterem a segurança jurídica do Brasil para investidores americanos, que estarão na plateia.\nSegundo, e mais importante, todos os patrocinadores são públicos e estão sendo comunicados nas dezenas de peças que já saíram. Se entendi direito o site mencionado pela Malu, o ponto está na falta de transparência sobre patrocinadores e custeio das passagens.\nSe vc quiser cancelar sua participação no evento, não tem problema. Só te peço que me aguarde chegar no Brasil, na quarta.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Última mensagem visível da imagem; pode haver mensagens seguintes fora do recorte."
+    },
+    {
+      "id": 44,
       "timestamp": null,
       "date": "2024-05-15",
       "time": null,
@@ -634,7 +814,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 15/05/2024 segundo a matéria; hora não informada. Segundo a matéria, Vorcaro explicava por que não iria a um evento ligado à Forbes; 'Lá' se refere a esse evento."
     },
     {
-      "id": 35,
+      "id": 45,
       "timestamp": null,
       "date": "2024-05-15",
       "time": null,
@@ -652,7 +832,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 15/05/2024 segundo a matéria; hora não informada."
     },
     {
-      "id": 36,
+      "id": 46,
       "timestamp": null,
       "date": "2024-05-15",
       "time": null,
@@ -670,7 +850,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 15/05/2024 segundo a matéria; hora não informada."
     },
     {
-      "id": 37,
+      "id": 47,
       "timestamp": null,
       "date": "2024-05-15",
       "time": null,
@@ -688,7 +868,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 15/05/2024 segundo a matéria; hora não informada. A própria matéria diz que as mensagens não esclarecem o significado de 'sem risco' nem o que aconteceria no evento."
     },
     {
-      "id": 38,
+      "id": 48,
       "timestamp": null,
       "date": "2024-05-15",
       "time": null,
@@ -706,7 +886,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 15/05/2024 segundo a matéria; hora não informada."
     },
     {
-      "id": 39,
+      "id": 49,
       "timestamp": null,
       "date": "2024-05-15",
       "time": null,
@@ -724,7 +904,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 15/05/2024 segundo a matéria; hora não informada. Resposta à pergunta de Kachar sobre poder participar (a pergunta é parafraseada na matéria, não citada)."
     },
     {
-      "id": 40,
+      "id": 50,
       "timestamp": null,
       "date": "2024-05-15",
       "time": null,
@@ -742,7 +922,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 15/05/2024 segundo a matéria; hora não informada."
     },
     {
-      "id": 41,
+      "id": 51,
       "timestamp": null,
       "date": "2024-05-15",
       "time": null,
@@ -760,7 +940,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Hora segundo a matéria: 22h54 de 15/05/2024 (fuso não informado)."
     },
     {
-      "id": 42,
+      "id": 52,
       "timestamp": null,
       "date": "2024-05-15",
       "time": null,
@@ -778,7 +958,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Hora segundo a matéria: 23h48 de 15/05/2024 (fuso não informado)."
     },
     {
-      "id": 43,
+      "id": 53,
       "timestamp": null,
       "date": "2024-05-15",
       "time": null,
@@ -796,7 +976,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Hora segundo a matéria: 23h50 de 15/05/2024 (fuso não informado)."
     },
     {
-      "id": 44,
+      "id": 54,
       "timestamp": null,
       "date": "2024-05-16",
       "time": null,
@@ -814,7 +994,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. A matéria diz que Kachar avisou às 0h04 de 16/05 que estava barrado e, um minuto depois, 'Entrei'; hora aproximada de 00h05 derivada dessa narrativa (fuso não informado)."
     },
     {
-      "id": 45,
+      "id": 55,
       "timestamp": null,
       "date": "2024-05-16",
       "time": null,
@@ -832,7 +1012,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 16/05/2024 (tarde seguinte) segundo a matéria; hora não informada."
     },
     {
-      "id": 46,
+      "id": 56,
       "timestamp": null,
       "date": "2024-05-16",
       "time": null,
@@ -850,7 +1030,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 16/05/2024 (tarde seguinte) segundo a matéria; hora não informada. Resposta de Vorcaro à pergunta de Kachar se havia acordado bem (pergunta parafraseada na matéria)."
     },
     {
-      "id": 47,
+      "id": 57,
       "timestamp": null,
       "date": "2024-05-16",
       "time": null,
@@ -868,7 +1048,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 16/05/2024 (tarde seguinte) segundo a matéria; hora não informada."
     },
     {
-      "id": 48,
+      "id": 58,
       "timestamp": null,
       "date": "2024-05-16",
       "time": null,
@@ -886,7 +1066,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 16/05/2024 (tarde seguinte) segundo a matéria; hora não informada."
     },
     {
-      "id": 49,
+      "id": 59,
       "timestamp": null,
       "date": "2024-05-16",
       "time": null,
@@ -904,7 +1084,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 16/05/2024 (tarde seguinte) segundo a matéria; hora não informada."
     },
     {
-      "id": 50,
+      "id": 60,
       "timestamp": null,
       "date": "2024-05-16",
       "time": null,
@@ -922,7 +1102,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 16/05/2024 (tarde seguinte) segundo a matéria; hora não informada."
     },
     {
-      "id": 51,
+      "id": 61,
       "timestamp": null,
       "date": "2024-05-16",
       "time": null,
@@ -940,7 +1120,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 16/05/2024 (tarde seguinte) segundo a matéria; hora não informada."
     },
     {
-      "id": 52,
+      "id": 62,
       "timestamp": null,
       "date": "2024-05-16",
       "time": null,
@@ -958,7 +1138,7 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data: 16/05/2024 (tarde seguinte) segundo a matéria; hora não informada."
     },
     {
-      "id": 53,
+      "id": 63,
       "timestamp": null,
       "date": "2024-05-16",
       "time": null,
@@ -976,7 +1156,205 @@
       "notes": "Citação reproduzida em matéria (texto fornecido pelo usuário; veículo, autor e data da matéria não informados), sem print correspondente. Data inferida: a matéria apresenta esta como a mensagem de encerramento do mesmo trecho de 16/05/2024; hora não informada."
     },
     {
-      "id": 54,
+      "id": 64,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:25",
+      "sender": "DV",
+      "content": "Fred bom dia",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Imagem de matéria (conversa-...-sobre-campanha-corporativa-...webp). Primeira mensagem visível."
+    },
+    {
+      "id": 65,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:25",
+      "sender": "DV",
+      "content": "Preciso entender se é uma campanha corporativa contra mim",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 66,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:25",
+      "sender": "DV",
+      "content": "De verdade amigo",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 67,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:25",
+      "sender": "DV",
+      "content": "Passou dos limites isso",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 68,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:26",
+      "sender": "DV",
+      "content": "Lauro acabou de soltar uma informação falsa. Nao comprei esse apartamento.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 69,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:27",
+      "sender": "DV",
+      "content": "Isso é muito serio o que está acontecendo",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 70,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:36",
+      "sender": "Fred Kachar",
+      "content": "Bom dia\nNão estou sabendo de nada\nOnde está essa nota?\nNão tem campanha alguma, claro",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 71,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:36",
+      "sender": "Fred Kachar",
+      "content": "Olhei o blog e não achei",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 72,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:43",
+      "sender": "DV",
+      "content": "Resolvido com ele",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 73,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:43",
+      "sender": "DV",
+      "content": "Pode deixar",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 74,
+      "timestamp": null,
+      "date": "2024-07-15",
+      "time": "08:43",
+      "sender": "DV",
+      "content": "Assunto morreu",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Última mensagem visível da imagem."
+    },
+    {
+      "id": 75,
       "timestamp": "2024-09-04T19:17:46-03:00",
       "date": "2024-09-04",
       "time": "19:17:46",
@@ -994,7 +1372,7 @@
       "notes": "Registro de chamada de voz, em bolha alinhada à direita (lado do DV) e de cor diferente das mensagens. O print não rotula quem ligou. Parcialmente coberto pela barra do celular no topo do print."
     },
     {
-      "id": 55,
+      "id": 76,
       "timestamp": "2024-09-05T07:47:21-03:00",
       "date": "2024-09-05",
       "time": "07:47:21",
@@ -1014,7 +1392,7 @@
       "notes": "A URL quebra em linhas no print e foi remontada sem espaços. Os colchetes e a descrição são o preview do link exibido no print."
     },
     {
-      "id": 56,
+      "id": 77,
       "timestamp": "2024-09-05T09:09:46-03:00",
       "date": "2024-09-05",
       "time": "09:09:46",
@@ -1032,7 +1410,7 @@
       "notes": null
     },
     {
-      "id": 57,
+      "id": 78,
       "timestamp": "2024-09-05T09:11:04-03:00",
       "date": "2024-09-05",
       "time": "09:11:04",
@@ -1047,10 +1425,10 @@
       "urls": [],
       "source": "screenshot",
       "verified": true,
-      "notes": "Marcada como 'Encaminhada' no print."
+      "notes": "Marcada como 'Encaminhada' no print. Na imagem de matéria equivalente o rótulo 'Encaminhada' não aparece."
     },
     {
-      "id": 58,
+      "id": 79,
       "timestamp": "2024-09-05T09:17:39-03:00",
       "date": "2024-09-05",
       "time": "09:17:39",
@@ -1065,10 +1443,10 @@
       "urls": [],
       "source": "screenshot",
       "verified": true,
-      "notes": "Marcada como 'Encaminhada' no print. Seis linhas na mesma mensagem."
+      "notes": "Marcada como 'Encaminhada' no print. Seis linhas na mesma mensagem. Na imagem de matéria equivalente o rótulo 'Encaminhada' não aparece; texto idêntico."
     },
     {
-      "id": 59,
+      "id": 80,
       "timestamp": "2024-09-05T09:38:35-03:00",
       "date": "2024-09-05",
       "time": "09:38:35",
@@ -1086,10 +1464,10 @@
       "notes": null
     },
     {
-      "id": 60,
+      "id": 81,
       "timestamp": null,
       "date": "2024-09-05",
-      "time": null,
+      "time": "09:38",
       "sender": "DV",
       "content": "Hehe",
       "type": "text",
@@ -1101,10 +1479,190 @@
       "urls": [],
       "source": "screenshot",
       "verified": true,
-      "notes": "Marcada como 'Encaminhada' no print. O carimbo está parcialmente coberto pelo botão de compartilhar do celular (visível: '2024-09-05 09:3'). A data é inferida pela posição, logo após a mensagem das 09:38:35. Abaixo dela há outra mensagem de DV, cortada e ilegível, que não foi transcrita."
+      "notes": "Marcada como 'Encaminhada' no print. No print original o carimbo estava parcialmente coberto (visível: '2024-09-05 09:3'); a hora 09:38 foi confirmada na imagem de matéria (sem segundos, por isso timestamp null). Na imagem de matéria o rótulo 'Encaminhada' não aparece."
     },
     {
-      "id": 61,
+      "id": 82,
+      "timestamp": null,
+      "date": "2024-09-05",
+      "time": "09:39",
+      "sender": "DV",
+      "content": "Mas ta tudo certo, fizeram bom trabalho!",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Corresponde à mensagem de DV que estava cortada e ilegível abaixo de 'Hehe' no print original."
+    },
+    {
+      "id": 83,
+      "timestamp": null,
+      "date": "2024-09-05",
+      "time": "09:39",
+      "sender": "DV",
+      "content": "E agradeço mto seu empenho",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Última mensagem visível da imagem de matéria."
+    },
+    {
+      "id": 84,
+      "timestamp": null,
+      "date": "2024-10-12",
+      "time": "13:40",
+      "sender": "Fred Kachar",
+      "content": "Boa tarde, meu amigo\nEstá no Brasil ou foi pro seminário da esfera?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Imagem de matéria (conversa-...-sobre-capa-da-vogue-...webp)."
+    },
+    {
+      "id": 85,
+      "timestamp": null,
+      "date": "2024-10-12",
+      "time": "13:40",
+      "sender": "DV",
+      "content": "Aqui, queria te pedir um grande favor.\nMinha namorada está lançando em miami semana que vem uma empresa bem legal, que se chama Happy Aging. Coisa pra mulheres pra anti envelhecimento, etc.\nNegócio de alto nível com medicos e personalidades reconhecidas americanos.\nEu queria fazer uma campanha na vogue brasil de presente pra ela. Vogue de la vai cobrir.\nE ai fazemos uma midia, cobertura do evento lançamento, e de repente ver se voce consegue uma capa pra ela na Vogue. Ela tem cancha pra isso.\nDepois da uma olhada e pede sua turma olhar:\n@happyaging\n@marthagraeff",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Grafia 'fazemos', 'medicos', 'ai', 'de la' conforme a imagem. Os dois @ são perfis citados na mensagem."
+    },
+    {
+      "id": 86,
+      "timestamp": null,
+      "date": "2024-10-12",
+      "time": "13:40",
+      "sender": "DV",
+      "content": "Fui par ao esferan",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Grafia 'par ao esferan' conforme a imagem."
+    },
+    {
+      "id": 87,
+      "timestamp": null,
+      "date": "2024-10-12",
+      "time": "13:41",
+      "sender": "Fred Kachar",
+      "content": "Tá em Roma?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 88,
+      "timestamp": null,
+      "date": "2024-10-12",
+      "time": "13:42",
+      "sender": "Fred Kachar",
+      "content": "Quando puder, me chama pra falarmos da sua namorada",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Bolha seguida, sem rótulo de remetente na imagem (continuação das mensagens de Fred Kachar)."
+    },
+    {
+      "id": 89,
+      "timestamp": null,
+      "date": "2024-10-14",
+      "time": "10:36",
+      "sender": "DV",
+      "content": "Fala meu amigo",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 90,
+      "timestamp": null,
+      "date": "2024-10-14",
+      "time": "10:36",
+      "sender": "DV",
+      "content": "Vai dar certo esquema vogue?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 91,
+      "timestamp": null,
+      "date": "2024-10-14",
+      "time": "14:55",
+      "sender": "Fred Kachar",
+      "content": "Oi, meu amigo\nFizemos reunião com o Eduardo hoje de manhã.\nVou pautar vogue, Marie Claire e Ela (na sequência te encaminho comentário q recebi do Birman ontem - ele veio almoçar hoje aqui).\nEm paralelo, pedi pra irem bolando uma campanha.\nNão sabia que o produto não venderia no Brasil nesse primeiro momento.\n\nSobre ser capa na vogue., eh um processo mais longo e que envolve outras variáveis\nPra vc ter uma ideia, hoje já estamos fotografando fevereiro\nMas eu te asseguro um destaque importante pra Martha. E falarei de capa também com Marie Claire e Ela",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Grafia 'vogue.,' conforme a imagem. Há uma linha em branco entre 'primeiro momento.' e 'Sobre ser capa'. Última mensagem visível da imagem."
+    },
+    {
+      "id": 92,
       "timestamp": "2024-10-17T15:15:51-03:00",
       "date": "2024-10-17",
       "time": "15:15:51",
@@ -1124,7 +1682,7 @@
       "notes": "Marcada como 'Encaminhada' no print. A URL quebra em linhas no print e foi remontada sem espaços. Os colchetes e a descrição são o preview do link exibido no print."
     },
     {
-      "id": 62,
+      "id": 93,
       "timestamp": "2024-10-17T15:16:50-03:00",
       "date": "2024-10-17",
       "time": "15:16:50",
@@ -1144,7 +1702,7 @@
       "notes": "A URL quebra em linhas no print e foi remontada sem espaços. Os colchetes e a descrição são o preview do link exibido no print."
     },
     {
-      "id": 63,
+      "id": 94,
       "timestamp": "2024-10-17T15:17:09-03:00",
       "date": "2024-10-17",
       "time": "15:17:09",
@@ -1164,7 +1722,7 @@
       "notes": "A URL quebra em linhas no print e foi remontada sem espaços. Os colchetes e a descrição são o preview do link exibido no print."
     },
     {
-      "id": 64,
+      "id": 95,
       "timestamp": "2024-10-17T15:27:44-03:00",
       "date": "2024-10-17",
       "time": "15:27:44",
@@ -1182,7 +1740,7 @@
       "notes": null
     },
     {
-      "id": 65,
+      "id": 96,
       "timestamp": "2024-10-17T15:28:44-03:00",
       "date": "2024-10-17",
       "time": "15:28:44",
@@ -1200,7 +1758,7 @@
       "notes": null
     },
     {
-      "id": 66,
+      "id": 97,
       "timestamp": "2024-10-17T15:28:57-03:00",
       "date": "2024-10-17",
       "time": "15:28:57",
@@ -1218,7 +1776,7 @@
       "notes": null
     },
     {
-      "id": 67,
+      "id": 98,
       "timestamp": "2024-10-17T15:29:02-03:00",
       "date": "2024-10-17",
       "time": "15:29:02",
@@ -1236,7 +1794,7 @@
       "notes": null
     },
     {
-      "id": 68,
+      "id": 99,
       "timestamp": "2024-10-17T15:29:16-03:00",
       "date": "2024-10-17",
       "time": "15:29:16",
@@ -1254,7 +1812,259 @@
       "notes": "Carimbo na borda inferior do print, parcialmente cortado; lido como 15:29:16. O print termina aqui; pode haver mensagens seguintes fora do recorte."
     },
     {
-      "id": 69,
+      "id": 100,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:26",
+      "sender": "Fred Kachar",
+      "content": "Tudo joia?\nFoi tudo bem no lançamento? Li que tem fila de espera\nPrecisava da sua ajuda pra destravar o uso do novo contrato.\nAté hoje a Ana não liberou e o mês vai acabar já\nTínhamos um plano robusto pra outubro com a kovr.\nÉ possível?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Imagem de matéria (conversa-...-sobre-proxima-capa-...webp). Primeira mensagem visível."
+    },
+    {
+      "id": 101,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:29",
+      "sender": "DV",
+      "content": "Acabeu de falar com a ana e parece que ja esta em andamento",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Grafia 'Acabeu' conforme a imagem."
+    },
+    {
+      "id": 102,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:29",
+      "sender": "DV",
+      "content": "Sera feito",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 103,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:30",
+      "sender": "Fred Kachar",
+      "content": "Que bom! A posição que me deram ontem era q não estava autorizado ainda",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 104,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:31",
+      "sender": "Fred Kachar",
+      "content": "Me fala do happy aging?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 105,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:34",
+      "sender": "Fred Kachar",
+      "content": "E o lançamento, como foi?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 106,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:36",
+      "sender": "DV",
+      "content": "Bem legal",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 107,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:38",
+      "sender": "Fred Kachar",
+      "content": "Ela ficou feliz com as matérias? Próximo passo é uma capa a Ela ou Marie Claire\nSo precisamos de um fato novo",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 108,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:41",
+      "sender": "DV",
+      "content": "Ficou sim, foi bem legal principalmente a globo.com",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 109,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:45",
+      "sender": "Fred Kachar",
+      "content": "Era a nossa matéria chamada na home",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 110,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:45",
+      "sender": "Fred Kachar",
+      "content": "Deu uma baita repercussão",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 111,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:45",
+      "sender": "DV",
+      "content": "Sim, valeu demais",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 112,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:45",
+      "sender": "DV",
+      "content": "Capa sera muito legal",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 113,
+      "timestamp": null,
+      "date": "2024-10-22",
+      "time": "09:59",
+      "sender": "Fred Kachar",
+      "content": "Estamos trabalhando pra isso!",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Última mensagem visível da imagem."
+    },
+    {
+      "id": 114,
       "timestamp": "2024-10-26T09:48:30-03:00",
       "date": "2024-10-26",
       "time": "09:48:30",
@@ -1272,7 +2082,7 @@
       "notes": "Primeira mensagem visível do print; pode haver mensagens anteriores (por exemplo, o conteúdo a que 'Isso aqui' se refere) fora do recorte."
     },
     {
-      "id": 70,
+      "id": 115,
       "timestamp": "2024-10-26T09:48:52-03:00",
       "date": "2024-10-26",
       "time": "09:48:52",
@@ -1290,7 +2100,7 @@
       "notes": "A bolha tem fundo azulado, diferente das demais do print (possível destaque aplicado por quem montou o print); a cor não faz parte do conteúdo da mensagem."
     },
     {
-      "id": 71,
+      "id": 116,
       "timestamp": "2024-10-26T13:45:18-03:00",
       "date": "2024-10-26",
       "time": "13:45:18",
@@ -1308,7 +2118,7 @@
       "notes": null
     },
     {
-      "id": 72,
+      "id": 117,
       "timestamp": "2024-10-28T07:55:22-03:00",
       "date": "2024-10-28",
       "time": "07:55:22",
@@ -1326,7 +2136,7 @@
       "notes": null
     },
     {
-      "id": 73,
+      "id": 118,
       "timestamp": "2024-10-28T08:36:08-03:00",
       "date": "2024-10-28",
       "time": "08:36:08",
@@ -1344,7 +2154,7 @@
       "notes": null
     },
     {
-      "id": 74,
+      "id": 119,
       "timestamp": "2024-10-28T14:36:07-03:00",
       "date": "2024-10-28",
       "time": "14:36:07",
@@ -1362,7 +2172,7 @@
       "notes": null
     },
     {
-      "id": 75,
+      "id": 120,
       "timestamp": "2024-10-31T08:45:10-03:00",
       "date": "2024-10-31",
       "time": "08:45:10",
@@ -1380,7 +2190,120 @@
       "notes": "Há um cabeçalho de data (2024-11-06) cortado na base do print, sem mensagens visíveis. O print termina aqui."
     },
     {
-      "id": 76,
+      "id": 121,
+      "timestamp": null,
+      "date": "2025-02-06",
+      "time": "08:49",
+      "sender": "Fred Kachar",
+      "content": "*BAILE*\n- *Banco Master*\n2024 - 825K\n2025 - 1,2M patrocínio + sunset exclusivo ou 890k somente patrocínio\n- *Desincha*\n2024 – 110k\n2025 – 300k\n- *Veste*\n2024 – 229k\n2025 – 300k\n- *Happy Aging*\n2025 – 300k\n\n*CARNAVAL*\n- *Banco Master*\n2023 - 1,6M\n2024 – não patrocinou\n2025 - 3,3M lounge piso superior, 80 convidados/dia ou 2,1M piso intermediário, 50 convidados/dia\n- *Veste, BeFly, Desincha*\n2024 - 300k cada marca\n2025 – 405k cada marca\n- *Happy Aging*\n2025 – 405k",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": true,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Imagem de matéria (conversa-...-sobre-tirar-o-banco-master-das-propostas-...webp). Marcada como 'Encaminhada' na imagem. Asteriscos (negrito do WhatsApp) e travessões ('-' e '–') mantidos como exibidos; linha em branco entre BAILE e CARNAVAL."
+    },
+    {
+      "id": 122,
+      "timestamp": null,
+      "date": "2025-02-12",
+      "time": "07:25",
+      "sender": "Fred Kachar",
+      "content": "Bom dia, meu amigo\nSegue um resumo das propostas para baile e camarote.\nTirei o banco nos dois casos.\nVamos nessa?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 123,
+      "timestamp": null,
+      "date": "2025-02-12",
+      "time": "07:25",
+      "sender": "Fred Kachar",
+      "content": "Master_Baile_Camarote",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": true,
+      "is_edited": false,
+      "attachment": {
+        "type": "file",
+        "filename": "Master_Baile_Camarote.pdf",
+        "duration": null,
+        "transcript": null
+      },
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Marcada como 'Encaminhada' na imagem. Mensagem com anexo: a imagem mostra um ícone de clipe, o nome 'Master_Baile_Camarote.pdf' e, abaixo, o rótulo 'Master_Baile_Camarote'; o conteúdo do arquivo não aparece."
+    },
+    {
+      "id": 124,
+      "timestamp": null,
+      "date": "2025-02-13",
+      "time": "15:17",
+      "sender": "Fred Kachar",
+      "content": "Meu amigo, me dá um retorno quando puder?\nAcabei imprimindo os materiais do baile com desincha e happy aging.\nTks",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 125,
+      "timestamp": null,
+      "date": "2025-02-13",
+      "time": "15:46",
+      "sender": "DV",
+      "content": "Vamos fazer ambos",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 126,
+      "timestamp": null,
+      "date": "2025-02-13",
+      "time": "15:46",
+      "sender": "DV",
+      "content": "Nao vou fazer befly nem veste",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 127,
       "timestamp": "2025-02-13T15:51:38-03:00",
       "date": "2025-02-13",
       "time": "15:51:38",
@@ -1398,7 +2321,7 @@
       "notes": null
     },
     {
-      "id": 77,
+      "id": 128,
       "timestamp": "2025-02-13T19:48:54-03:00",
       "date": "2025-02-13",
       "time": "19:48:54",
@@ -1416,7 +2339,7 @@
       "notes": null
     },
     {
-      "id": 78,
+      "id": 129,
       "timestamp": "2025-02-14T07:30:32-03:00",
       "date": "2025-02-14",
       "time": "07:30:32",
@@ -1434,7 +2357,7 @@
       "notes": null
     },
     {
-      "id": 79,
+      "id": 130,
       "timestamp": "2025-02-14T07:30:42-03:00",
       "date": "2025-02-14",
       "time": "07:30:42",
@@ -1452,7 +2375,7 @@
       "notes": null
     },
     {
-      "id": 80,
+      "id": 131,
       "timestamp": "2025-02-15T10:42:06-03:00",
       "date": "2025-02-15",
       "time": "10:42:06",
@@ -1470,7 +2393,7 @@
       "notes": null
     },
     {
-      "id": 81,
+      "id": 132,
       "timestamp": "2025-02-15T17:58:23-03:00",
       "date": "2025-02-15",
       "time": "17:58:23",
@@ -1488,7 +2411,7 @@
       "notes": null
     },
     {
-      "id": 82,
+      "id": 133,
       "timestamp": "2025-02-16T11:39:23-03:00",
       "date": "2025-02-16",
       "time": "11:39:23",
@@ -1506,7 +2429,7 @@
       "notes": null
     },
     {
-      "id": 83,
+      "id": 134,
       "timestamp": "2025-02-16T11:47:35-03:00",
       "date": "2025-02-16",
       "time": "11:47:35",
@@ -1524,7 +2447,7 @@
       "notes": "Destacada por círculo vermelho no print (marcação editorial, não faz parte da conversa)."
     },
     {
-      "id": 84,
+      "id": 135,
       "timestamp": "2025-02-16T11:47:40-03:00",
       "date": "2025-02-16",
       "time": "11:47:40",
@@ -1542,7 +2465,7 @@
       "notes": "Grafia 'chsmo' conforme o print. Destacada por círculo vermelho no print (marcação editorial)."
     },
     {
-      "id": 85,
+      "id": 136,
       "timestamp": null,
       "date": "2025-02-16",
       "time": null,
@@ -1560,7 +2483,61 @@
       "notes": "Carimbo não visível: a bolha está cortada na borda inferior do print. A data é inferida pela posição, logo após a mensagem das 11:47:40. O texto pode continuar abaixo de 'Merci'."
     },
     {
-      "id": 86,
+      "id": 137,
+      "timestamp": null,
+      "date": "2025-02-18",
+      "time": "20:40",
+      "sender": "DV",
+      "content": "Me manda os dados pro patrocinio",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 138,
+      "timestamp": null,
+      "date": "2025-02-18",
+      "time": "20:47",
+      "sender": "DV",
+      "content": "To falando pra acertar o financeiro",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 139,
+      "timestamp": null,
+      "date": "2025-02-18",
+      "time": "20:48",
+      "sender": "Fred Kachar",
+      "content": "Tô me baseando aqui, confirme combinamos na semana passada\n500k na vogue e 800k no camarote",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_image",
+      "verified": true,
+      "notes": "Grafia 'confirme' conforme a imagem. Última mensagem visível da imagem."
+    },
+    {
+      "id": 140,
       "timestamp": "2025-02-25T08:47:33-03:00",
       "date": "2025-02-25",
       "time": "08:47:33",
@@ -1578,7 +2555,7 @@
       "notes": null
     },
     {
-      "id": 87,
+      "id": 141,
       "timestamp": "2025-02-25T08:48:11-03:00",
       "date": "2025-02-25",
       "time": "08:48:11",
@@ -1596,7 +2573,7 @@
       "notes": "A palavra 'Lauro' aparece destacada em laranja no print (marcação editorial)."
     },
     {
-      "id": 88,
+      "id": 142,
       "timestamp": "2025-02-25T08:48:41-03:00",
       "date": "2025-02-25",
       "time": "08:48:41",
@@ -1614,7 +2591,7 @@
       "notes": null
     },
     {
-      "id": 89,
+      "id": 143,
       "timestamp": "2025-02-25T08:48:56-03:00",
       "date": "2025-02-25",
       "time": "08:48:56",
@@ -1632,7 +2609,7 @@
       "notes": null
     },
     {
-      "id": 90,
+      "id": 144,
       "timestamp": "2025-02-25T08:48:59-03:00",
       "date": "2025-02-25",
       "time": "08:48:59",
@@ -1650,7 +2627,7 @@
       "notes": null
     },
     {
-      "id": 91,
+      "id": 145,
       "timestamp": "2025-02-25T08:49:11-03:00",
       "date": "2025-02-25",
       "time": "08:49:11",
@@ -1668,7 +2645,7 @@
       "notes": "Há uma bolha cortada na borda inferior do print, sem texto legível; não foi transcrita."
     },
     {
-      "id": 92,
+      "id": 146,
       "timestamp": "2025-04-01T07:18:58-03:00",
       "date": "2025-04-01",
       "time": "07:18:58",
@@ -1686,7 +2663,7 @@
       "notes": null
     },
     {
-      "id": 93,
+      "id": 147,
       "timestamp": "2025-04-01T07:19:02-03:00",
       "date": "2025-04-01",
       "time": "07:19:02",
@@ -1704,7 +2681,7 @@
       "notes": null
     },
     {
-      "id": 94,
+      "id": 148,
       "timestamp": "2025-04-01T07:19:17-03:00",
       "date": "2025-04-01",
       "time": "07:19:17",
@@ -1722,7 +2699,7 @@
       "notes": null
     },
     {
-      "id": 95,
+      "id": 149,
       "timestamp": "2025-04-01T07:19:21-03:00",
       "date": "2025-04-01",
       "time": "07:19:21",
@@ -1740,7 +2717,7 @@
       "notes": null
     },
     {
-      "id": 96,
+      "id": 150,
       "timestamp": "2025-04-01T07:33:06-03:00",
       "date": "2025-04-01",
       "time": "07:33:06",
@@ -1760,7 +2737,7 @@
       "notes": "Marcada como 'Encaminhada' no print. A URL quebra em três linhas no print e foi remontada sem espaços."
     },
     {
-      "id": 97,
+      "id": 151,
       "timestamp": "2025-04-01T07:33:19-03:00",
       "date": "2025-04-01",
       "time": "07:33:19",
@@ -1778,7 +2755,7 @@
       "notes": null
     },
     {
-      "id": 98,
+      "id": 152,
       "timestamp": "2025-04-01T07:33:31-03:00",
       "date": "2025-04-01",
       "time": "07:33:31",
@@ -1796,7 +2773,7 @@
       "notes": "Grafia 'Dimunui' conforme o print."
     },
     {
-      "id": 99,
+      "id": 153,
       "timestamp": "2025-04-01T08:19:31-03:00",
       "date": "2025-04-01",
       "time": "08:19:31",
@@ -1814,7 +2791,7 @@
       "notes": null
     },
     {
-      "id": 100,
+      "id": 154,
       "timestamp": "2025-04-01T08:20:02-03:00",
       "date": "2025-04-01",
       "time": "08:20:02",
@@ -1832,7 +2809,7 @@
       "notes": null
     },
     {
-      "id": 101,
+      "id": 155,
       "timestamp": "2025-04-01T08:22:47-03:00",
       "date": "2025-04-01",
       "time": "08:22:47",
@@ -1850,7 +2827,7 @@
       "notes": null
     },
     {
-      "id": 102,
+      "id": 156,
       "timestamp": "2025-04-01T08:26:06-03:00",
       "date": "2025-04-01",
       "time": "08:26:06",
@@ -1868,7 +2845,7 @@
       "notes": null
     },
     {
-      "id": 103,
+      "id": 157,
       "timestamp": "2025-04-01T08:28:45-03:00",
       "date": "2025-04-01",
       "time": "08:28:45",
@@ -1886,7 +2863,7 @@
       "notes": null
     },
     {
-      "id": 104,
+      "id": 158,
       "timestamp": "2025-04-01T08:30:47-03:00",
       "date": "2025-04-01",
       "time": "08:30:47",
@@ -1904,7 +2881,7 @@
       "notes": null
     },
     {
-      "id": 105,
+      "id": 159,
       "timestamp": "2025-04-01T08:31:42-03:00",
       "date": "2025-04-01",
       "time": "08:31:42",
@@ -1967,100 +2944,154 @@
         "last_message_id": 22
       },
       {
-        "date": "2024-03-12",
-        "message_count": 6,
+        "date": "2024-02-07",
+        "message_count": 5,
         "first_message_id": 23,
-        "last_message_id": 28
+        "last_message_id": 27
+      },
+      {
+        "date": "2024-03-12",
+        "message_count": 7,
+        "first_message_id": 28,
+        "last_message_id": 34
       },
       {
         "date": "2024-03-19",
         "message_count": 5,
-        "first_message_id": 29,
-        "last_message_id": 33
+        "first_message_id": 35,
+        "last_message_id": 39
       },
       {
-        "date": "2024-05-15",
-        "message_count": 10,
-        "first_message_id": 34,
+        "date": "2024-04-29",
+        "message_count": 4,
+        "first_message_id": 40,
         "last_message_id": 43
       },
       {
-        "date": "2024-05-16",
+        "date": "2024-05-15",
         "message_count": 10,
         "first_message_id": 44,
         "last_message_id": 53
       },
       {
-        "date": "2024-09-04",
-        "message_count": 1,
+        "date": "2024-05-16",
+        "message_count": 10,
         "first_message_id": 54,
-        "last_message_id": 54
+        "last_message_id": 63
       },
       {
-        "date": "2024-09-05",
-        "message_count": 6,
-        "first_message_id": 55,
-        "last_message_id": 60
-      },
-      {
-        "date": "2024-10-17",
-        "message_count": 8,
-        "first_message_id": 61,
-        "last_message_id": 68
-      },
-      {
-        "date": "2024-10-26",
-        "message_count": 3,
-        "first_message_id": 69,
-        "last_message_id": 71
-      },
-      {
-        "date": "2024-10-28",
-        "message_count": 3,
-        "first_message_id": 72,
+        "date": "2024-07-15",
+        "message_count": 11,
+        "first_message_id": 64,
         "last_message_id": 74
       },
       {
-        "date": "2024-10-31",
+        "date": "2024-09-04",
         "message_count": 1,
         "first_message_id": 75,
         "last_message_id": 75
       },
       {
-        "date": "2025-02-13",
-        "message_count": 2,
+        "date": "2024-09-05",
+        "message_count": 8,
         "first_message_id": 76,
-        "last_message_id": 77
+        "last_message_id": 83
+      },
+      {
+        "date": "2024-10-12",
+        "message_count": 5,
+        "first_message_id": 84,
+        "last_message_id": 88
+      },
+      {
+        "date": "2024-10-14",
+        "message_count": 3,
+        "first_message_id": 89,
+        "last_message_id": 91
+      },
+      {
+        "date": "2024-10-17",
+        "message_count": 8,
+        "first_message_id": 92,
+        "last_message_id": 99
+      },
+      {
+        "date": "2024-10-22",
+        "message_count": 14,
+        "first_message_id": 100,
+        "last_message_id": 113
+      },
+      {
+        "date": "2024-10-26",
+        "message_count": 3,
+        "first_message_id": 114,
+        "last_message_id": 116
+      },
+      {
+        "date": "2024-10-28",
+        "message_count": 3,
+        "first_message_id": 117,
+        "last_message_id": 119
+      },
+      {
+        "date": "2024-10-31",
+        "message_count": 1,
+        "first_message_id": 120,
+        "last_message_id": 120
+      },
+      {
+        "date": "2025-02-06",
+        "message_count": 1,
+        "first_message_id": 121,
+        "last_message_id": 121
+      },
+      {
+        "date": "2025-02-12",
+        "message_count": 2,
+        "first_message_id": 122,
+        "last_message_id": 123
+      },
+      {
+        "date": "2025-02-13",
+        "message_count": 5,
+        "first_message_id": 124,
+        "last_message_id": 128
       },
       {
         "date": "2025-02-14",
         "message_count": 2,
-        "first_message_id": 78,
-        "last_message_id": 79
+        "first_message_id": 129,
+        "last_message_id": 130
       },
       {
         "date": "2025-02-15",
         "message_count": 2,
-        "first_message_id": 80,
-        "last_message_id": 81
+        "first_message_id": 131,
+        "last_message_id": 132
       },
       {
         "date": "2025-02-16",
         "message_count": 4,
-        "first_message_id": 82,
-        "last_message_id": 85
+        "first_message_id": 133,
+        "last_message_id": 136
+      },
+      {
+        "date": "2025-02-18",
+        "message_count": 3,
+        "first_message_id": 137,
+        "last_message_id": 139
       },
       {
         "date": "2025-02-25",
         "message_count": 6,
-        "first_message_id": 86,
-        "last_message_id": 91
+        "first_message_id": 140,
+        "last_message_id": 145
       },
       {
         "date": "2025-04-01",
         "message_count": 14,
-        "first_message_id": 92,
-        "last_message_id": 105
+        "first_message_id": 146,
+        "last_message_id": 159
       }
     ]
   }
