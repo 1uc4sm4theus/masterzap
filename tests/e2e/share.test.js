@@ -68,6 +68,7 @@ test.describe('Chat Interactions', () => {
     expect(labels.map(l => l.trim())).toEqual([
       'Info do contato',
       'Pesquisar',
+      'Fixar conversa',
       'Selecionar mensagens',
       'Modo silencioso',
       'Mensagens temporárias',

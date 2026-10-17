@@ -21,6 +21,7 @@ import { renderNavRail } from './components/NavRail.js';
 import { showProfileDrawer } from './components/ProfileDrawer.js';
 import { showSettingsDrawer } from './components/SettingsDrawer.js';
 import { loadReadConversations, markConversationRead } from './lib/read-state.js';
+import { loadPinnedConversations, togglePinnedConversation } from './lib/pinned-conversations.js';
 import { showToast } from './components/Toast.js';
 import {
   shareChatScreenshot, prepareScreenshot, clearPreparedScreenshot,
@@ -141,6 +142,7 @@ async function init() {
 
   const readConversations = loadReadConversations();
   const favoriteMessages = loadFavoriteMessages();
+  let pinnedConversations = loadPinnedConversations(activeUser.id);
 
   const store = getDataStore();
   try {
@@ -381,6 +383,16 @@ async function init() {
       ownerName: activeUser.name,
       onBack: () => router.navigate('home'),
       onCloseChat: () => router.navigate('home'),
+      isConversationPinned: () => pinnedConversations.has(id),
+      onTogglePinConversation: () => {
+        const result = togglePinnedConversation(pinnedConversations, id, activeUser.id);
+        if (result === 'limit') {
+          showToast(mainArea, 'Você pode fixar até 3 conversas');
+          return;
+        }
+        sidebar.refreshPinnedConversations?.(pinnedConversations, id);
+        showToast(mainArea, result === 'pinned' ? 'Conversa fixada' : 'Conversa desafixada');
+      },
       onAbout: openSettings,
       onSearch: toggleSearch,
       onScreenshot: shareScreenshot,
@@ -395,7 +407,7 @@ async function init() {
         onOpenChat: (convId) => router.navigate('chat', convId),
         onCopy: (text, label) => copyText(text).then(ok => showToast(mainArea, ok ? label : 'Não foi possível copiar')),
       },
-      onMenuOpen: () => prepareScreenshot(mainArea, contactName),
+      onScreenshotIntent: () => prepareScreenshot(mainArea, contactName),
       onContactClick: () => {
         // Only one right drawer at a time
         if (activeChatSearch) { activeChatSearch.destroy(); activeChatSearch = null; }
@@ -564,6 +576,7 @@ async function init() {
     sidebar = renderSidebar(container, {
       conversations,
       readConversations,
+      pinnedConversations,
       onProfile: openProfile,
       onAbout: openSettings,
       onExportAll: () => downloadFile(EXPORT_ALL_URL),
@@ -607,6 +620,7 @@ async function init() {
     if (!nextUser || nextUser.id === activeUser.id) return toggleUserSwitcher();
     container.querySelector('.user-switcher')?.remove();
     activeUser = nextUser;
+    pinnedConversations = loadPinnedConversations(activeUser.id);
     navRail.setAvatar?.({ src: activeUser.avatar, name: activeUser.name });
     closeAll();
     mountSidebar();

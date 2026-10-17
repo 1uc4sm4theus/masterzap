@@ -29,6 +29,7 @@ const MAP_PLACEHOLDER = '/assets/map-placeholder.jpg';
 const MAP_PIN = '/assets/map-pin.jpg';
 
 const BACK_ICON = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>`;
+const ICON_PIN = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 5 5-4 1-4 4v5l-2 2-2-7-7-2 2-2h5l4-4z"/><path d="m2 22 7-7"/></svg>';
 
 
 /**
@@ -597,7 +598,7 @@ function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro')
  */
 // Use the design system meetball icon for 3-dot menu
 
-export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSearch, onCloseChat, onAbout, onScreenshot, onExport, onMenuOpen, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', media: mediaOptions }) {
+export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSearch, onCloseChat, onAbout, onScreenshot, onExport, onScreenshotIntent, isConversationPinned = () => false, onTogglePinConversation, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', media: mediaOptions }) {
   if (mediaOptions) media = { ...media, ...mediaOptions, container };
   // Clear container
   while (container.firstChild) container.removeChild(container.firstChild);
@@ -676,6 +677,13 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
   // Dropdown menu (hidden by default)
   let menuOpen = false;
   let menuEl = null;
+  let screenshotPreparationStarted = false;
+
+  function prepareScreenshotOnIntent() {
+    if (screenshotPreparationStarted) return;
+    screenshotPreparationStarted = true;
+    onScreenshotIntent?.();
+  }
 
   function buildMenuEl() {
     const m = document.createElement('div');
@@ -684,6 +692,12 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
     const items = [
       { label: 'Info do contato', icon: ICON_INFO, action: onContactClick, enabled: !!onContactClick },
       { label: 'Pesquisar', icon: ICON_SEARCH, action: onSearch, enabled: !!onSearch },
+      {
+        label: isConversationPinned() ? 'Desafixar conversa' : 'Fixar conversa',
+        icon: ICON_PIN,
+        action: onTogglePinConversation,
+        enabled: !!onTogglePinConversation,
+      },
       { label: 'Selecionar mensagens', icon: ICON_CHECKEMPTY, action: null, enabled: false },
       { label: 'Modo silencioso', icon: ICON_BELL, action: null, enabled: false },
       { label: 'Mensagens temporárias', icon: ICON_TIMER, action: null, enabled: false },
@@ -704,6 +718,10 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
       } else {
         btn.textContent = item.label;
       }
+      if (item.label === 'Compartilhar print') {
+        btn.addEventListener('pointerenter', prepareScreenshotOnIntent, { once: true });
+        btn.addEventListener('focus', prepareScreenshotOnIntent, { once: true });
+      }
       if (item.enabled && item.action) {
         btn.addEventListener('click', () => { closeMenu(); item.action(); });
       }
@@ -717,9 +735,6 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
     menuEl = buildMenuEl();
     header.appendChild(menuEl);
     menuOpen = true;
-    // Give the screenshot a head start: capturing takes seconds, and the tap
-    // that follows has to still be live when navigator.share() is reached.
-    if (onMenuOpen) onMenuOpen();
     setTimeout(() => {
       document.addEventListener('click', onOutsideClick, true);
     }, 0);
@@ -728,7 +743,6 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
   function showMenuAt(x, y) {
     closeMenu();
     menuEl = buildMenuEl();
-    if (onMenuOpen) onMenuOpen();
     menuEl.style.position = 'fixed';
     menuEl.style.top = `${y}px`;
     menuEl.style.left = `${x}px`;

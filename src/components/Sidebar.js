@@ -39,6 +39,7 @@ export function renderSidebar(container, {
   onUserSwitch,
   activeUser,
   readConversations = new Set(),
+  pinnedConversations = new Set(),
 }) {
   const el = document.createElement('aside');
   el.className = 'sidebar';
@@ -134,12 +135,25 @@ export function renderSidebar(container, {
     searchInput.blur();
   });
 
-  for (const conv of conversations) {
+  const pinnedOrder = [...pinnedConversations];
+  const orderedConversations = [...conversations].sort((a, b) => {
+    const aIndex = pinnedOrder.indexOf(a.id);
+    const bIndex = pinnedOrder.indexOf(b.id);
+    if (aIndex < 0) return bIndex < 0 ? 0 : 1;
+    if (bIndex < 0) return -1;
+    return aIndex - bIndex;
+  });
+
+  for (const conv of orderedConversations) {
     const item = document.createElement('div');
     item.className = 'conversation-item';
     item.setAttribute('role', 'listitem');
     item.setAttribute('tabindex', '0');
     item.dataset.id = conv.id;
+    if (pinnedConversations.has(conv.id)) {
+      item.classList.add('conversation-item-pinned');
+      item.setAttribute('aria-label', `${conv.contact || conv.participants?.[0] || conv.id}, conversa fixada`);
+    }
     if (FAVORITE_CONVERSATIONS.has(conv.id)) item.dataset.favorite = 'true';
 
     const lastDate = conv.last_message?.timestamp
@@ -194,6 +208,35 @@ export function renderSidebar(container, {
   emptyMsg.className = 'sidebar-empty-filter';
   emptyMsg.style.display = 'none';
   list.appendChild(emptyMsg);
+
+  const conversationOrder = new Map(conversations.map((conversation, index) => [conversation.id, index]));
+  const conversationsById = new Map(conversations.map(conversation => [conversation.id, conversation]));
+
+  function refreshPinnedConversations(nextPinnedConversations, changedConversationId) {
+    const item = [...list.querySelectorAll('.conversation-item')]
+      .find(conversationItem => conversationItem.dataset.id === changedConversationId);
+    if (!item) return;
+
+    const isPinned = nextPinnedConversations.has(changedConversationId);
+    item.classList.toggle('conversation-item-pinned', isPinned);
+    if (isPinned) {
+      const conversation = conversationsById.get(changedConversationId);
+      const name = conversation?.contact || conversation?.participants?.[0] || conversation?.id || changedConversationId;
+      item.setAttribute('aria-label', `${name}, conversa fixada`);
+
+      const firstUnpinnedItem = [...list.querySelectorAll('.conversation-item')]
+        .find(conversationItem => !nextPinnedConversations.has(conversationItem.dataset.id));
+      list.insertBefore(item, firstUnpinnedItem || lockMsg);
+      return;
+    }
+
+    item.removeAttribute('aria-label');
+    const itemOrder = conversationOrder.get(changedConversationId);
+    const nextUnpinnedItem = [...list.querySelectorAll('.conversation-item')]
+      .find(conversationItem => !nextPinnedConversations.has(conversationItem.dataset.id)
+        && conversationOrder.get(conversationItem.dataset.id) > itemOrder);
+    list.insertBefore(item, nextUnpinnedItem || lockMsg);
+  }
 
   const tagButtons = [...el.querySelectorAll('.sidebar-tag[data-filter]')];
   const unreadCountEl = el.querySelector('.sidebar-tag-count');
@@ -257,6 +300,7 @@ export function renderSidebar(container, {
   searchInput.placeholder = 'Pesquisar';
   refreshReadState();
   el.refreshReadState = refreshReadState;
+  el.refreshPinnedConversations = refreshPinnedConversations;
 
   const bottomNav = document.createElement('nav');
   bottomNav.className = 'sidebar-bottom-nav';
