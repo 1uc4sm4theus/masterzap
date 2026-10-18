@@ -10,9 +10,9 @@
       "start": "2024-03-09",
       "end": "2025-08"
     },
-    "total_messages": 54,
-    "source": "Poder360 (prints com marca d'água 'PODER 360', material extraído pela Polícia Federal do celular de Daniel Vorcaro); Folha de S.Paulo — Constança Rezende: https://www1.folha.uol.com.br/poder/2026/09/mensagens-de-motta-com-vorcaro-citam-sociedade-em-negocio-e-discussao-sobre-projeto-de-lei-na-camara.shtml; Folha de S.Paulo — José Marques e Constança Rezende (proximidade / Mônaco / camarote); O Globo — Sarah Teófilo e Pepita Ortega, 29/09/2026; CNN Brasil — Matheus Teixeira, 29/09/2026; Fatos Online (primeira divulgação do recorte de 2024)",
-    "note": "Apenas a conversa entre DV (Daniel Vorcaro) e Hugo Motta; a conversa de DV com o motorista Sidney foi removida. 'original_id' aponta para o id no JSON completo. Mensagens com source='screenshot' foram transcritas literalmente dos prints (grafia e pontuação originais preservadas; horários em -03:00). Mensagens com source='press' vêm de trechos publicados pela imprensa, sem print disponível, e não foram verificadas contra imagem; as marcadas type='summary' são resumos jornalísticos, não citações. Números de telefone e parte dos nomes de contato estão tarjados nos prints originais."
+    "total_messages": 69,
+    "source": "Poder360 (prints com marca d'água 'PODER 360', material extraído pela Polícia Federal do celular de Daniel Vorcaro); Folha de S.Paulo — Constança Rezende: https://www1.folha.uol.com.br/poder/2026/09/mensagens-de-motta-com-vorcaro-citam-sociedade-em-negocio-e-discussao-sobre-projeto-de-lei-na-camara.shtml; Folha de S.Paulo — José Marques e Constança Rezende (proximidade / Mônaco / camarote); O Globo — Sarah Teófilo e Pepita Ortega, 29/09/2026; CNN Brasil — Matheus Teixeira, 29/09/2026; Fatos Online (primeira divulgação do recorte de 2024). Atualização 18/10/2026: ids 23-37 (15/05/2024) vêm de 1 captura de tela de reprodução editorial, sem marca d'água do Poder360 e sem matéria de origem informada.",
+    "note": "Apenas a conversa entre DV (Daniel Vorcaro) e Hugo Motta; a conversa de DV com o motorista Sidney foi removida. 'original_id' aponta para o id no JSON completo. Mensagens com source='screenshot' foram transcritas literalmente dos prints (grafia e pontuação originais preservadas; horários em -03:00). Mensagens com source='press' vêm de trechos publicados pela imprensa, sem print disponível, e não foram verificadas contra imagem; as marcadas type='summary' são resumos jornalísticos, não citações. Números de telefone e parte dos nomes de contato estão tarjados nos prints originais. Atualização 18/10/2026: foram inseridas 15 mensagens de 15/05/2024 (ids 23-37, original_id null, pois não constam do JSON completo de origem). Por isso os ids das mensagens seguintes foram renumerados (+15; antigos 23-54 viraram 38-69) e os reply_to_id foram remapeados; original_id foi preservado. Os ids 1-22 não mudaram. No print novo só aparece HH:MM (segundos :00) e o fuso -03:00 foi assumido, embora o cabeçalho cite Nova York."
   },
   "messages": [
     {
@@ -435,6 +435,291 @@
     },
     {
       "id": 23,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:16:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:16:00",
+      "sender": "Hugo Motta",
+      "content": "Fala meu amigo",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": "Print sem marca d'água 'PODER 360' (reprodução editorial; cabeçalho 'conversa com Daniel Vorcaro (Nova York, mai/2024)'). Origem diferente dos prints do Poder360 acima; autenticidade não verificada de forma independente. Print mostra só HH:MM: segundos :00 e fuso -03:00 assumidos (o cabeçalho cita Nova York)."
+    },
+    {
+      "id": 24,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:16:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:16:00",
+      "sender": "Hugo Motta",
+      "content": "Td bem?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 25,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:16:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:16:00",
+      "sender": "DV",
+      "content": "Joia",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 26,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:17:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:17:00",
+      "sender": "Hugo Motta",
+      "content": "Vamos pra guerra?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": "Termo 'guerra' também aparece no JSON diogo-batista-vorcaro (id 11); coincidência lexical registrada, sem inferência de sentido."
+    },
+    {
+      "id": 27,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:17:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:17:00",
+      "sender": "Hugo Motta",
+      "content": "Mulher tá indisposta",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 28,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:17:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:17:00",
+      "sender": "Hugo Motta",
+      "content": "Não quer ir jantar",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 29,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:17:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:17:00",
+      "sender": "DV",
+      "content": "Boraa",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 30,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:17:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:17:00",
+      "sender": "Hugo Motta",
+      "content": "Tô querendo ir direto encontrar vcs",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 31,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:17:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:17:00",
+      "sender": "Hugo Motta",
+      "content": "Se for no hotel me ferro",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 32,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:18:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:18:00",
+      "sender": "Hugo Motta",
+      "content": "Kkkkkk",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 33,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:19:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:19:00",
+      "sender": "DV",
+      "content": "No mesmo de ontem",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 34,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:19:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:19:00",
+      "sender": "DV",
+      "content": "Vamos la",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 35,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:19:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:19:00",
+      "sender": "DV",
+      "content": "Ja to indo",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 36,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:20:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:20:00",
+      "sender": "Hugo Motta",
+      "content": "Vamos",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 37,
+      "original_id": null,
+      "timestamp": "2024-05-15T21:20:00-03:00",
+      "date": "2024-05-15",
+      "time": "21:20:00",
+      "sender": "Hugo Motta",
+      "content": "Vou direto",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": 38,
       "original_id": 23,
       "timestamp": "2024-10-21T16:57:11-03:00",
       "date": "2024-10-21",
@@ -453,7 +738,7 @@
       "notes": null
     },
     {
-      "id": 24,
+      "id": 39,
       "original_id": 24,
       "timestamp": "2024-10-21T16:57:24-03:00",
       "date": "2024-10-21",
@@ -472,7 +757,7 @@
       "notes": null
     },
     {
-      "id": 25,
+      "id": 40,
       "original_id": 25,
       "timestamp": "2024-10-21T16:59:42-03:00",
       "date": "2024-10-21",
@@ -491,7 +776,7 @@
       "notes": null
     },
     {
-      "id": 26,
+      "id": 41,
       "original_id": 26,
       "timestamp": "2024-10-21T16:59:44-03:00",
       "date": "2024-10-21",
@@ -510,7 +795,7 @@
       "notes": null
     },
     {
-      "id": 27,
+      "id": 42,
       "original_id": 27,
       "timestamp": "2024-10-21T17:03:42-03:00",
       "date": "2024-10-21",
@@ -529,7 +814,7 @@
       "notes": null
     },
     {
-      "id": 28,
+      "id": 43,
       "original_id": 28,
       "timestamp": "2024-10-21T17:03:47-03:00",
       "date": "2024-10-21",
@@ -548,7 +833,7 @@
       "notes": null
     },
     {
-      "id": 29,
+      "id": 44,
       "original_id": 29,
       "timestamp": "2024-10-21T17:03:49-03:00",
       "date": "2024-10-21",
@@ -567,7 +852,7 @@
       "notes": null
     },
     {
-      "id": 30,
+      "id": 45,
       "original_id": 30,
       "timestamp": "2024-10-21T17:04:13-03:00",
       "date": "2024-10-21",
@@ -586,7 +871,7 @@
       "notes": null
     },
     {
-      "id": 31,
+      "id": 46,
       "original_id": 31,
       "timestamp": "2024-10-21T17:22:03-03:00",
       "date": "2024-10-21",
@@ -605,7 +890,7 @@
       "notes": null
     },
     {
-      "id": 32,
+      "id": 47,
       "original_id": 32,
       "timestamp": "2024-10-21T17:22:06-03:00",
       "date": "2024-10-21",
@@ -624,7 +909,7 @@
       "notes": "Transcrito como aparece no print (sem acento em 'é')."
     },
     {
-      "id": 33,
+      "id": 48,
       "original_id": 33,
       "timestamp": "2024-11-19T10:13:29-03:00",
       "date": "2024-11-19",
@@ -643,7 +928,7 @@
       "notes": null
     },
     {
-      "id": 34,
+      "id": 49,
       "original_id": 34,
       "timestamp": "2024-11-19T10:22:36-03:00",
       "date": "2024-11-19",
@@ -662,7 +947,7 @@
       "notes": null
     },
     {
-      "id": 35,
+      "id": 50,
       "original_id": 35,
       "timestamp": "2024-11-19T10:22:42-03:00",
       "date": "2024-11-19",
@@ -681,7 +966,7 @@
       "notes": null
     },
     {
-      "id": 36,
+      "id": 51,
       "original_id": 36,
       "timestamp": "2024-11-19T13:10:13-03:00",
       "date": "2024-11-19",
@@ -700,7 +985,7 @@
       "notes": null
     },
     {
-      "id": 37,
+      "id": 52,
       "original_id": 37,
       "timestamp": "2024-11-19T13:10:14-03:00",
       "date": "2024-11-19",
@@ -719,7 +1004,7 @@
       "notes": null
     },
     {
-      "id": 38,
+      "id": 53,
       "original_id": 38,
       "timestamp": "2024-11-19T13:10:15-03:00",
       "date": "2024-11-19",
@@ -738,7 +1023,7 @@
       "notes": null
     },
     {
-      "id": 39,
+      "id": 54,
       "original_id": 39,
       "timestamp": "2025-03-03",
       "date": "2025-03-03",
@@ -757,7 +1042,7 @@
       "notes": "Sem print disponível; texto conforme JSON original (imprensa). Não verificado contra imagem."
     },
     {
-      "id": 40,
+      "id": 55,
       "original_id": 40,
       "timestamp": "2025-03-03",
       "date": "2025-03-03",
@@ -776,7 +1061,7 @@
       "notes": "Sem print disponível; texto conforme JSON original (imprensa). Não verificado contra imagem."
     },
     {
-      "id": 41,
+      "id": 56,
       "original_id": 41,
       "timestamp": "2025-03",
       "date": "2025-03",
@@ -795,7 +1080,7 @@
       "notes": "Resumo jornalístico, não é citação literal; sem print disponível."
     },
     {
-      "id": 42,
+      "id": 57,
       "original_id": 42,
       "timestamp": "2025-03",
       "date": "2025-03",
@@ -814,7 +1099,7 @@
       "notes": "Resumo jornalístico, não é citação literal; sem print disponível."
     },
     {
-      "id": 43,
+      "id": 58,
       "original_id": 43,
       "timestamp": "2025-05-23",
       "date": "2025-05-23",
@@ -833,7 +1118,7 @@
       "notes": "Sem print disponível; texto conforme JSON original (imprensa). Não verificado contra imagem."
     },
     {
-      "id": 44,
+      "id": 59,
       "original_id": 44,
       "timestamp": "2025-05-23",
       "date": "2025-05-23",
@@ -852,7 +1137,7 @@
       "notes": "Sem print disponível; texto conforme JSON original (imprensa). Não verificado contra imagem."
     },
     {
-      "id": 45,
+      "id": 60,
       "original_id": 45,
       "timestamp": "2025-05-23",
       "date": "2025-05-23",
@@ -871,7 +1156,7 @@
       "notes": "Sem print disponível; texto conforme JSON original (imprensa). Não verificado contra imagem."
     },
     {
-      "id": 46,
+      "id": 61,
       "original_id": 46,
       "timestamp": "2025-06-05T10:06:08-03:00",
       "date": "2025-06-05",
@@ -890,7 +1175,7 @@
       "notes": null
     },
     {
-      "id": 47,
+      "id": 62,
       "original_id": 47,
       "timestamp": "2025-06-05T10:07:50-03:00",
       "date": "2025-06-05",
@@ -909,7 +1194,7 @@
       "notes": null
     },
     {
-      "id": 48,
+      "id": 63,
       "original_id": 48,
       "timestamp": "2025-06-05T10:19:46-03:00",
       "date": "2025-06-05",
@@ -928,7 +1213,7 @@
       "notes": null
     },
     {
-      "id": 49,
+      "id": 64,
       "original_id": 49,
       "timestamp": "2025-06-05T10:19:50-03:00",
       "date": "2025-06-05",
@@ -947,7 +1232,7 @@
       "notes": null
     },
     {
-      "id": 50,
+      "id": 65,
       "original_id": 50,
       "timestamp": "2025-06-05T10:19:53-03:00",
       "date": "2025-06-05",
@@ -966,7 +1251,7 @@
       "notes": null
     },
     {
-      "id": 51,
+      "id": 66,
       "original_id": 51,
       "timestamp": "2025-06-05T10:25:08-03:00",
       "date": "2025-06-05",
@@ -985,7 +1270,7 @@
       "notes": null
     },
     {
-      "id": 52,
+      "id": 67,
       "original_id": 52,
       "timestamp": "2025-06-05T10:26:41-03:00",
       "date": "2025-06-05",
@@ -1004,7 +1289,7 @@
       "notes": null
     },
     {
-      "id": 53,
+      "id": 68,
       "original_id": 53,
       "timestamp": "2025-06-05T10:28:09-03:00",
       "date": "2025-06-05",
@@ -1023,7 +1308,7 @@
       "notes": null
     },
     {
-      "id": 54,
+      "id": 69,
       "original_id": 55,
       "timestamp": "2025-08",
       "date": "2025-08",
@@ -1075,46 +1360,52 @@
         "last_message_id": 22
       },
       {
+        "date": "2024-05-15",
+        "message_count": 15,
+        "first_message_id": 23,
+        "last_message_id": 37
+      },
+      {
         "date": "2024-10-21",
         "message_count": 10,
-        "first_message_id": 23,
-        "last_message_id": 32
+        "first_message_id": 38,
+        "last_message_id": 47
       },
       {
         "date": "2024-11-19",
         "message_count": 6,
-        "first_message_id": 33,
-        "last_message_id": 38
+        "first_message_id": 48,
+        "last_message_id": 53
       },
       {
         "date": "2025-03-03",
         "message_count": 2,
-        "first_message_id": 39,
-        "last_message_id": 40
+        "first_message_id": 54,
+        "last_message_id": 55
       },
       {
         "date": "2025-03",
         "message_count": 2,
-        "first_message_id": 41,
-        "last_message_id": 42
+        "first_message_id": 56,
+        "last_message_id": 57
       },
       {
         "date": "2025-05-23",
         "message_count": 3,
-        "first_message_id": 43,
-        "last_message_id": 45
+        "first_message_id": 58,
+        "last_message_id": 60
       },
       {
         "date": "2025-06-05",
         "message_count": 8,
-        "first_message_id": 46,
-        "last_message_id": 53
+        "first_message_id": 61,
+        "last_message_id": 68
       },
       {
         "date": "2025-08",
         "message_count": 1,
-        "first_message_id": 54,
-        "last_message_id": 54
+        "first_message_id": 69,
+        "last_message_id": 69
       }
     ]
   }
