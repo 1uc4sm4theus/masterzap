@@ -103,6 +103,7 @@ async function init() {
     'walfrido-mares-guia': '/assets/avatar-walfrido-mares-guia.webp',
     'walfrido-warde-new': '/assets/avatar-walfrido-warde-new.jpg',
     'augusto-lima': '/assets/avatar-augusto-lima.jpg',
+    'andre-valadao': '/assets/avatar-andre-valadao.jpg',
 
 
 

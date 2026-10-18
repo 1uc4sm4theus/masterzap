@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "André Valadão"
+    ],
+    "saved_as": "andre-valadao",
+    "phone": null,
+    "date_range": {
+      "start": "2024-04-27",
+      "end": "2024-04-29"
+    },
+    "total_messages": 4,
+    "source": "Ids 1-2: prints e trechos publicados por ICL, CartaCapital, piauí, Fatos Online e Jornal de Brasília (2026); a citação das mensagens vem de ICL Notícias, 03/09/2026, sem print correspondente. Ids 3-4: 1 captura de tela fornecida pelo usuário, sem matéria de origem informada.",
+    "note": "Trechos citados em documentos da PF — a conversa completa não é pública. Ids 1-2 (source 'press', verified false): hora não informada, por isso timestamp traz só a data e time é null. Ids 3-4 (source 'screenshot', verified true): transcritos literalmente do print, que mostra data, hora e fuso -03:00. Nenhuma mensagem aparece como resposta citada (reply_to_id null). Arquivo convertido do formato de exportação do site (export/conversation/profile/messages) para o formato metadata/messages/index; os blocos 'export' e 'profile' não foram mantidos.",
+    "visible_date_headers_without_messages": []
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-04-27",
+      "date": "2024-04-27",
+      "time": null,
+      "sender": "DV",
+      "content": "De novo pedir sua ajuda com Nikolas. Estão usando a fala dele pra me atacar, por conta de patrocínio num evento em Londres. Acontece, que talvez ele não saiba, participaram vários membros da direita, como Ciro Nogueira, um dos líderes oposição",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "notes": "Citação publicada pela imprensa (ICL Notícias, 03/09/2026), sem print disponível; hora não informada. Não verificado contra imagem."
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-04-27",
+      "date": "2024-04-27",
+      "time": null,
+      "sender": "André Valadão",
+      "content": "Oi Dani. Claro amanhã falo com ele",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "notes": "Citação publicada pela imprensa (ICL Notícias, 03/09/2026), sem print disponível; hora não informada. Não verificado contra imagem."
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-04-29T13:42:17-03:00",
+      "date": "2024-04-29",
+      "time": "13:42:17",
+      "sender": "DV",
+      "content": "Quem me mandou foi um blog de esquerda, que sabe que apoiamos a direita. Olha a bola de neve que pode virar",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": "Print com data, hora e fuso visíveis (-03:00); o nome aparece como 'Andre Valadao' no print. Matéria de origem não informada."
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-04-29T13:42:59-03:00",
+      "date": "2024-04-29",
+      "time": "13:42:59",
+      "sender": "André Valadão",
+      "content": "Sim",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": "Print com data, hora e fuso visíveis (-03:00); o nome do remetente aparece como 'Andre Valadao' no print. Matéria de origem não informada."
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-04-27",
+        "message_count": 2,
+        "first_message_id": 1,
+        "last_message_id": 2
+      },
+      {
+        "date": "2024-04-29",
+        "message_count": 2,
+        "first_message_id": 3,
+        "last_message_id": 4
+      }
+    ]
+  }
+}
