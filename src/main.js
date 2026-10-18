@@ -101,6 +101,8 @@ async function init() {
     'joao-doria': '/assets/avatar-joao-doria.jpg',
     'hugo-motta': '/assets/avatar-hugo-motta.jpg',
     'walfrido-mares-guia': '/assets/avatar-walfrido-mares-guia.webp',
+    'walfrido-warde-new': '/assets/avatar-walfrido-warde-new.jpg',
+    'augusto-lima': '/assets/avatar-augusto-lima.jpg',
 
 
 

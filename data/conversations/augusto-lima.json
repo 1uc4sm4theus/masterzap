@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Augusto Lima"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2024-12-17",
+      "end": "2025-04-03"
+    },
+    "total_messages": 5,
+    "source": "Mensagens extraídas pela PF do celular de Vorcaro, conforme reportagens da imprensa (CNN Brasil via Brasil 247; FOCO MT) e trecho fornecido pelo usuário. Não são transcrições integrais.",
+    "note": "Registro parcial reconstruído de relatos jornalísticos e de captura de tela fornecida pelo usuário. Mensagens 1-2 (dez/2024): data aproximada, sem horário. Mensagens 3-4 (03/04/2025): horários exatos conforme a captura (fuso -03:00); grafia da mensagem 4 preservada como no print ('materia', sem acento). Na captura, o contato do outro lado aparece como 'Augusto Ebal'; aqui mantido como 'Augusto Lima'. A mensagem 5 vem de relato da imprensa ('cerca de seis minutos' após o link), mas a captura mostra apenas uma chamada de voz perdida às 08:16:58 (~42 min após o link), sem rótulo de quem ligou; por isso a mensagem 5 está sem horário."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": null,
+      "date": "2024-12-17",
+      "date_precision": "approximate",
+      "time": null,
+      "sender": "DV",
+      "content": "Envia a Augusto Lima o link de uma notícia sobre a cirurgia de emergência no cérebro a que Lula se submeteu em 10/12/2024, no Hospital Sírio-Libanês (hemorragia intracraniana).",
+      "type": "link",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "context": "Cerca de uma semana após Vorcaro ser recebido por Lula no Palácio do Planalto, em 04/12/2024. Segundo a reportagem, as mensagens indicam que o presidente não conquistou a simpatia do banqueiro.",
+      "source_ref": "Trecho fornecido pelo usuário",
+      "is_forwarded": false
+    },
+    {
+      "id": 2,
+      "timestamp": null,
+      "date": "2024-12-17",
+      "date_precision": "approximate",
+      "time": null,
+      "sender": "DV",
+      "content": "Na traaaveeeee",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "context": "Comentário grosseiro de Vorcaro ao sócio sobre o estado de saúde de Lula, conforme a reportagem fornecida.",
+      "source_ref": "Trecho fornecido pelo usuário",
+      "is_forwarded": false
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-04-03T07:34:48-03:00",
+      "date": "2025-04-03",
+      "date_precision": "exact",
+      "time": "07:34:48",
+      "sender": "Augusto Lima",
+      "content": "https://oglobo.globo.com/blogs/malu-gaspar/post/2025/04/banco-master-contratou-mulher-de-alexandre-de-moraes.ghtml\n[Banco Master contratou mulher de Alexandre de Moraes]",
+      "type": "link",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [
+        "https://oglobo.globo.com/blogs/malu-gaspar/post/2025/04/banco-master-contratou-mulher-de-alexandre-de-moraes.ghtml"
+      ],
+      "source_ref": "CNN Brasil, reproduzido por Brasil 247",
+      "is_forwarded": true
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-04-03T07:35:55-03:00",
+      "date": "2025-04-03",
+      "date_precision": "exact",
+      "time": "07:35:55",
+      "sender": "DV",
+      "content": "Melhor materia que fizeram nossa na semana",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "context": "Resposta de Vorcaro ao link enviado por Lima. A reportagem ressalta que a mensagem, isoladamente, não esclarece o motivo da avaliação positiva nem permite concluir sobre interferência indevida.",
+      "source_ref": "FOCO MT",
+      "is_forwarded": false
+    },
+    {
+      "id": 5,
+      "timestamp": null,
+      "date": "2025-04-03",
+      "date_precision": "day",
+      "time": null,
+      "sender": "DV",
+      "content": "Chamada de voz para Augusto Lima, cerca de seis minutos após o recebimento do link",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "call_type": "voice_call",
+      "duration": null,
+      "source_ref": "Brasil 247 / FOCO MT",
+      "context": "Imprensa relata ligação ~6 min após o link; a captura mostra chamada perdida às 08:16:58 sem identificar quem ligou. Conferir.",
+      "is_forwarded": false
+    }
+  ],
+  "reported_patterns": [
+    {
+      "topic": "BRB",
+      "description": "Relatórios da PF divulgados em setembro apontam conversas de Lima sobre liquidação de operações e fluxo de recursos ligados ao BRB, com envio recorrente de planilhas chamadas \"operações_BRB\".",
+      "source_ref": "TMC"
+    },
+    {
+      "topic": "Relação após saída da sociedade",
+      "description": "Vorcaro e Lima mantiveram comunicação frequente mesmo após Lima deixar oficialmente o Master, em maio de 2024.",
+      "source_ref": "Brasil 247"
+    },
+    {
+      "topic": "Celular de Augusto Lima (outra fonte)",
+      "description": "A PF identificou 74 ligações com o senador Jaques Wagner, além de mensagens sobre aeronaves particulares, ingressos de shows e um apartamento em Salvador (~R$ 2,45 milhões). Material do aparelho do próprio Lima, não do de Vorcaro.",
+      "source_ref": "Times Brasil"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-12-17",
+        "message_count": 2,
+        "first_message_id": 1,
+        "last_message_id": 2,
+        "precision": "approximate"
+      },
+      {
+        "date": "2025-04-03",
+        "message_count": 3,
+        "first_message_id": 3,
+        "last_message_id": 5
+      }
+    ]
+  }
+}

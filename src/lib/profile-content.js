@@ -187,7 +187,7 @@ export const OTHER_PROFILES = {
     sections: [{
       title: 'Walfrido Warde New',
       paragraphs: [
-        { text: 'Esta conversa foi adicionada a partir de uma transcrição fornecida pelo usuário e identificada como capturas de tela do WhatsApp. O material contém mensagens e chamadas dos dias 15 e 16 de maio de 2025.' },
+        { text: 'Esta conversa foi adicionada a partir de capturas de tela do WhatsApp, transcrições e um áudio fornecidos pelo usuário. O material contém mensagens e chamadas dos dias 15 e 16 de maio de 2025, além de trechos sem data; um deles inclui o áudio original e sua transcrição.' },
       ],
     }],
   },

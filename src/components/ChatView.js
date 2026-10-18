@@ -132,8 +132,8 @@ function avatarEl(src, name, size, className) {
 
 /**
  * A voice message as WhatsApp draws it — play, waveform, the sender's photo —
- * with the transcript underneath. The audio itself is not in the material;
- * the play button says so by being disabled.
+ * with the transcript underneath. Messages without an audio source remain
+ * transcript-only, with playback disabled.
  */
 function renderAudioMessage(msg, isOutgoing, ownerName = 'Daniel Vorcaro') {
   const { transcript } = parseAudio(msg.content);
@@ -186,6 +186,7 @@ function renderAudioMessage(msg, isOutgoing, ownerName = 'Daniel Vorcaro') {
   const foot = document.createElement('div');
   foot.className = 'chat-audio-foot';
   foot.textContent = 'Áudio não recuperado';
+  foot.hidden = Boolean(audio);
   el.appendChild(foot);
 
   const formatAudioTime = (seconds) => {
