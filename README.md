@@ -36,6 +36,7 @@ O nome do repositório — **masterzap** — é uma referência ao projeto origi
 - **Menu de contexto** — copie, compartilhe, favorite ou consulte informações de uma mensagem
 - **Links internos** — clique nos trechos citados pela imprensa e vá direto para a mensagem original
 - **Totalmente responsivo** — experiência completa no celular e no desktop, um diferencial em relação ao [MasterZap](https://www.reddit.com/r/brasil/s/xQeqrG27p8) original
+- **Tema escuro** — alterne pelo ícone abaixo de Sobre na barra lateral; no celular, use o menu da lista de conversas. A preferência fica salva neste navegador
 
 ## Tecnologia
 

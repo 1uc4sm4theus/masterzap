@@ -37,6 +37,7 @@ export function renderSidebar(container, {
   onSoundtrack,
   onChats,
   onUserSwitch,
+  onToggleTheme,
   activeUser,
   readConversations = new Set(),
   pinnedConversations = new Set(),
@@ -361,6 +362,11 @@ export function renderSidebar(container, {
     sidebarMenuEl.className = 'sidebar-dropdown-menu';
 
     const items = [
+      {
+        label: document.documentElement.dataset.theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro',
+        action: onToggleTheme,
+        enabled: !!onToggleTheme,
+      },
       { label: 'Mensagens favoritas', action: onFavorites, enabled: !!onFavorites },
       { label: 'Perfil', action: onProfile, enabled: !!onProfile },
       { label: 'Exportar tudo (.zip)', action: onExportAll, enabled: !!onExportAll },

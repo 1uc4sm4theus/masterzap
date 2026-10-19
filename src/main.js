@@ -38,6 +38,7 @@ import { renderFavoritesPanel } from './components/FavoritesPanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
 import { APP_USERS, conversationsForUser } from './lib/users.js';
+import { initializeTheme, setDarkTheme } from './lib/theme.js';
 
 // ── Active state (only one thing at a time) ──────
 let activeLoader = null;
@@ -57,6 +58,7 @@ let activeUser = APP_USERS[0];
 let soundtrackPanel = null;
 
 async function init() {
+  let isDarkTheme = initializeTheme();
   const loadingScreen = document.getElementById('loading-screen');
   const app = document.getElementById('app');
   const loadStart = Date.now();
@@ -557,6 +559,12 @@ async function init() {
     avatarSrc: activeUser.avatar,
     avatarName: activeUser.name,
     onSettings: openSettings,
+    isDarkTheme,
+    onToggleTheme: () => {
+      isDarkTheme = !isDarkTheme;
+      setDarkTheme(isDarkTheme);
+      navRail.setDarkTheme(isDarkTheme);
+    },
     onChat: () => {
       // From secondary screens, this is the way back to the conversation list.
       const route = router.getCurrentRoute().route;
@@ -592,6 +600,11 @@ async function init() {
       onChats: () => router.navigate('home'),
       onUserSwitch: toggleUserSwitcher,
       activeUser,
+      onToggleTheme: () => {
+        isDarkTheme = !isDarkTheme;
+        setDarkTheme(isDarkTheme);
+        navRail.setDarkTheme(isDarkTheme);
+      },
       onSelect: (id) => {
         closeProfile();
         closeSettings();
