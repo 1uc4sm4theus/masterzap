@@ -1,20 +1,41 @@
 {
   "metadata": {
-    "participants": ["DV", "Roberto Justus"],
+    "participants": [
+      "DV",
+      "Roberto Justus"
+    ],
     "saved_as": "roberto-justus",
     "phone": null,
     "date_range": {
-      "start": "2025-08-18",
-      "end": "2025-09-11"
+      "start": "2024-12-21",
+      "end": "2025-11-17"
     },
-    "total_messages": 41,
-    "source": "6 capturas de tela de conversa de WhatsApp com marca d'água 'PODER 360'. Transcrição feita exclusivamente a partir do que aparece nas imagens.",
-    "note": "Texto transcrito literalmente, preservando grafia, pontuação, abreviações e ausência de acentos como aparecem nos prints. Trechos tarjados de preto (complemento do nome do contato) não são legíveis. Remetente 'DV' conforme exibido. Fuso -03:00 conforme exibido em cada mensagem. Os 41 registros incluem 3 chamadas de voz perdidas (type 'call'), 2 mensagens apagadas pelo remetente (type 'deleted') e 2 arquivos de áudio (type 'audio'). Os prints são recortes: há lacunas entre os blocos e mensagens fora dos recortes não estão aqui. Nenhuma mensagem aparece como resposta citada nestes prints, então reply_to_id é null em todas.",
+    "total_messages": 43,
+    "source": "Duas fontes: (1) 6 capturas de tela de conversa de WhatsApp com marca d'água 'PODER 360' (41 registros, de 18/08/2025 a 11/09/2025), transcritas exclusivamente a partir do que aparece nas imagens; (2) 2 mensagens de Roberto Justus citadas em reportagem de O Globo (coluna Lauro Jardim, outubro de 2026; https://oglobo.globo.com/blogs/lauro-jardim/post/2026/10/justus-para-vorcaro-estou-certo-que-nao-mereco-isso.ghtml). O texto das mensagens da reportagem vem do trecho colado pelo usuário; o link não pôde ser aberto para conferência. Cada registro indica a origem no campo 'source'.",
+    "note": "Texto transcrito literalmente, preservando grafia, pontuação, abreviações e ausência de acentos como aparecem nos prints. Trechos tarjados de preto (complemento do nome do contato) não são legíveis. Remetente 'DV' conforme exibido nos prints; nas mensagens de reportagem, o destinatário é Daniel Vorcaro e Justus o chama de 'Daniel'. Fuso -03:00 conforme exibido em cada mensagem dos prints; as mensagens da reportagem não trazem horário (timestamp e time nulos). Os 43 registros incluem 3 chamadas de voz perdidas (type 'call'), 2 mensagens apagadas pelo remetente (type 'deleted') e 2 arquivos de áudio (type 'audio'). Os prints são recortes: há lacunas entre os blocos e mensagens fora dos recortes não estão aqui. Nenhuma mensagem aparece como resposta citada, então reply_to_id é null em todas. Ids renumerados em ordem cronológica: a mensagem de 21/12/2024 (reportagem) é o id 1, os 41 registros dos prints são os ids 2 a 42 (id anterior + 1) e a mensagem de 17/11/2025 (reportagem) é o id 43. '(João Carlos)' no id 1 é inserção editorial do veículo.",
     "visible_date_headers_without_messages": []
   },
   "messages": [
     {
       "id": 1,
+      "timestamp": null,
+      "date": "2024-12-21",
+      "time": null,
+      "sender": "Roberto Justus",
+      "content": "Daniel, estou te procurando desde segunda-feira. Você disse que ia resolver o assunto do aporte com o (João Carlos) Mansur mas pelo jeito não resolveu. Assinamos um contrato em agosto e vamos virar o ano sem concretizar. Acreditei demais nessa parceria e deixei de ir por outros caminhos. Nossa empresa está bombando de negócios e precisa do investimento para realmente alcançar os objetivos. Em 40 anos como empresário, nunca tive tanta dificuldade em falar ou ter retorno como tenho com você. Estou certo que não mereço isso.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "reportagem",
+      "verified": false,
+      "notes": "Mensagem citada em reportagem (O Globo, coluna Lauro Jardim, 10/2026), não vista em print. Data conforme a reportagem (21 de dezembro de 2024); horário não informado. '(João Carlos)' é inserção editorial do veículo. Menciona contrato assinado em agosto (de 2024, pelo contexto) e aporte ainda pendente. Destinatário: Daniel Vorcaro."
+    },
+    {
+      "id": 2,
       "timestamp": "2025-08-18T16:13:32-03:00",
       "date": "2025-08-18",
       "time": "16:13:32",
@@ -32,7 +53,7 @@
       "notes": "Registro de chamada perdida. O print não identifica quem ligou."
     },
     {
-      "id": 2,
+      "id": 3,
       "timestamp": "2025-08-28T16:30:56-03:00",
       "date": "2025-08-28",
       "time": "16:30:56",
@@ -50,7 +71,7 @@
       "notes": null
     },
     {
-      "id": 3,
+      "id": 4,
       "timestamp": "2025-09-01T17:02:03-03:00",
       "date": "2025-09-01",
       "time": "17:02:03",
@@ -68,7 +89,7 @@
       "notes": "Registro de chamada perdida. O print não identifica quem ligou."
     },
     {
-      "id": 4,
+      "id": 5,
       "timestamp": "2025-09-01T23:53:41-03:00",
       "date": "2025-09-01",
       "time": "23:53:41",
@@ -86,7 +107,7 @@
       "notes": null
     },
     {
-      "id": 5,
+      "id": 6,
       "timestamp": "2025-09-01T23:57:41-03:00",
       "date": "2025-09-01",
       "time": "23:57:41",
@@ -104,7 +125,7 @@
       "notes": null
     },
     {
-      "id": 6,
+      "id": 7,
       "timestamp": "2025-09-01T23:58:05-03:00",
       "date": "2025-09-01",
       "time": "23:58:05",
@@ -122,7 +143,7 @@
       "notes": "Cinco parágrafos na mesma mensagem."
     },
     {
-      "id": 7,
+      "id": 8,
       "timestamp": "2025-09-01T23:58:32-03:00",
       "date": "2025-09-01",
       "time": "23:58:32",
@@ -140,7 +161,7 @@
       "notes": null
     },
     {
-      "id": 8,
+      "id": 9,
       "timestamp": "2025-09-01T23:58:45-03:00",
       "date": "2025-09-01",
       "time": "23:58:45",
@@ -158,7 +179,7 @@
       "notes": "O print está cortado na borda inferior e o carimbo de hora aparece só parcialmente; a leitura 23:58:45 é a melhor possível."
     },
     {
-      "id": 9,
+      "id": 10,
       "timestamp": "2025-09-02T00:41:17-03:00",
       "date": "2025-09-02",
       "time": "00:41:17",
@@ -176,7 +197,7 @@
       "notes": null
     },
     {
-      "id": 10,
+      "id": 11,
       "timestamp": "2025-09-02T00:43:18-03:00",
       "date": "2025-09-02",
       "time": "00:43:18",
@@ -194,7 +215,7 @@
       "notes": null
     },
     {
-      "id": 11,
+      "id": 12,
       "timestamp": "2025-09-02T00:45:28-03:00",
       "date": "2025-09-02",
       "time": "00:45:28",
@@ -212,7 +233,7 @@
       "notes": null
     },
     {
-      "id": 12,
+      "id": 13,
       "timestamp": "2025-09-02T00:45:41-03:00",
       "date": "2025-09-02",
       "time": "00:45:41",
@@ -230,7 +251,7 @@
       "notes": null
     },
     {
-      "id": 13,
+      "id": 14,
       "timestamp": "2025-09-02T00:58:26-03:00",
       "date": "2025-09-02",
       "time": "00:58:26",
@@ -248,7 +269,7 @@
       "notes": null
     },
     {
-      "id": 14,
+      "id": 15,
       "timestamp": "2025-09-02T00:58:53-03:00",
       "date": "2025-09-02",
       "time": "00:58:53",
@@ -266,7 +287,7 @@
       "notes": null
     },
     {
-      "id": 15,
+      "id": 16,
       "timestamp": "2025-09-02T00:59:11-03:00",
       "date": "2025-09-02",
       "time": "00:59:11",
@@ -284,7 +305,7 @@
       "notes": null
     },
     {
-      "id": 16,
+      "id": 17,
       "timestamp": "2025-09-02T01:00:53-03:00",
       "date": "2025-09-02",
       "time": "01:00:53",
@@ -302,7 +323,7 @@
       "notes": null
     },
     {
-      "id": 17,
+      "id": 18,
       "timestamp": "2025-09-02T01:01:31-03:00",
       "date": "2025-09-02",
       "time": "01:01:31",
@@ -320,7 +341,7 @@
       "notes": null
     },
     {
-      "id": 18,
+      "id": 19,
       "timestamp": "2025-09-02T01:02:02-03:00",
       "date": "2025-09-02",
       "time": "01:02:02",
@@ -338,7 +359,7 @@
       "notes": "O print termina logo abaixo desta mensagem; pode haver mensagens seguintes fora do recorte."
     },
     {
-      "id": 19,
+      "id": 20,
       "timestamp": "2025-09-02T18:50:20-03:00",
       "date": "2025-09-02",
       "time": "18:50:20",
@@ -356,7 +377,7 @@
       "notes": null
     },
     {
-      "id": 20,
+      "id": 21,
       "timestamp": "2025-09-02T19:52:10-03:00",
       "date": "2025-09-02",
       "time": "19:52:10",
@@ -374,7 +395,7 @@
       "notes": null
     },
     {
-      "id": 21,
+      "id": 22,
       "timestamp": "2025-09-04T15:38:52-03:00",
       "date": "2025-09-04",
       "time": "15:38:52",
@@ -392,7 +413,7 @@
       "notes": "Mensagem longa, com quebras de linha e linhas em branco conforme o print. 'Valor:R$130 milhões' e 'Prazo:5 anos' aparecem sem espaço após os dois-pontos."
     },
     {
-      "id": 22,
+      "id": 23,
       "timestamp": "2025-09-04T20:44:26-03:00",
       "date": "2025-09-04",
       "time": "20:44:26",
@@ -410,7 +431,7 @@
       "notes": "Conteúdo original não disponível."
     },
     {
-      "id": 23,
+      "id": 24,
       "timestamp": "2025-09-04T20:44:36-03:00",
       "date": "2025-09-04",
       "time": "20:44:36",
@@ -428,7 +449,7 @@
       "notes": null
     },
     {
-      "id": 24,
+      "id": 25,
       "timestamp": "2025-09-04T20:44:49-03:00",
       "date": "2025-09-04",
       "time": "20:44:49",
@@ -446,7 +467,7 @@
       "notes": "Marcada como 'Encaminhada' no print."
     },
     {
-      "id": 25,
+      "id": 26,
       "timestamp": "2025-09-04T20:45:12-03:00",
       "date": "2025-09-04",
       "time": "20:45:12",
@@ -464,7 +485,7 @@
       "notes": null
     },
     {
-      "id": 26,
+      "id": 27,
       "timestamp": "2025-09-04T20:45:29-03:00",
       "date": "2025-09-04",
       "time": "20:45:29",
@@ -482,7 +503,7 @@
       "notes": null
     },
     {
-      "id": 27,
+      "id": 28,
       "timestamp": "2025-09-04T20:45:54-03:00",
       "date": "2025-09-04",
       "time": "20:45:54",
@@ -500,7 +521,7 @@
       "notes": null
     },
     {
-      "id": 28,
+      "id": 29,
       "timestamp": "2025-09-04T20:46:13-03:00",
       "date": "2025-09-04",
       "time": "20:46:13",
@@ -518,7 +539,7 @@
       "notes": null
     },
     {
-      "id": 29,
+      "id": 30,
       "timestamp": "2025-09-04T21:08:14-03:00",
       "date": "2025-09-04",
       "time": "21:08:14",
@@ -536,7 +557,7 @@
       "notes": null
     },
     {
-      "id": 30,
+      "id": 31,
       "timestamp": "2025-09-04T21:08:37-03:00",
       "date": "2025-09-04",
       "time": "21:08:37",
@@ -554,7 +575,7 @@
       "notes": null
     },
     {
-      "id": 31,
+      "id": 32,
       "timestamp": "2025-09-04T21:10:37-03:00",
       "date": "2025-09-04",
       "time": "21:10:37",
@@ -572,7 +593,7 @@
       "notes": null
     },
     {
-      "id": 32,
+      "id": 33,
       "timestamp": null,
       "date": "2025-09-04",
       "time": null,
@@ -590,7 +611,7 @@
       "notes": "O print está cortado na borda inferior e o carimbo de hora não aparece. Posição logo após a mensagem das 21:10:37, na mesma tela de 04/09; a data é inferida pela posição."
     },
     {
-      "id": 33,
+      "id": 34,
       "timestamp": "2025-09-11T21:49:06-03:00",
       "date": "2025-09-11",
       "time": "21:49:06",
@@ -608,7 +629,7 @@
       "notes": "Mensagem longa, com quebras de linha e linhas em branco conforme o print. Grafia preservada ('gera uma condição', 'divida', 'fabrica')."
     },
     {
-      "id": 34,
+      "id": 35,
       "timestamp": "2025-09-11T21:56:42-03:00",
       "date": "2025-09-11",
       "time": "21:56:42",
@@ -626,7 +647,7 @@
       "notes": "Cinco parágrafos na mesma mensagem. 'maior que você possa imaginar' e 'solução .' (espaço antes do ponto) conforme o print."
     },
     {
-      "id": 35,
+      "id": 36,
       "timestamp": "2025-09-11T22:22:36-03:00",
       "date": "2025-09-11",
       "time": "22:22:36",
@@ -644,7 +665,7 @@
       "notes": "Registro de chamada perdida. O print não identifica quem ligou."
     },
     {
-      "id": 36,
+      "id": 37,
       "timestamp": "2025-09-11T22:22:56-03:00",
       "date": "2025-09-11",
       "time": "22:22:56",
@@ -662,7 +683,7 @@
       "notes": null
     },
     {
-      "id": 37,
+      "id": 38,
       "timestamp": "2025-09-11T22:27:06-03:00",
       "date": "2025-09-11",
       "time": "22:27:06",
@@ -680,7 +701,7 @@
       "notes": "Conteúdo original não disponível."
     },
     {
-      "id": 38,
+      "id": 39,
       "timestamp": "2025-09-11T22:32:21-03:00",
       "date": "2025-09-11",
       "time": "22:32:21",
@@ -703,7 +724,7 @@
       "notes": "O player no print mostra 0:00 / 0:00; duração e conteúdo do áudio não estão disponíveis."
     },
     {
-      "id": 39,
+      "id": 40,
       "timestamp": "2025-09-11T22:32:55-03:00",
       "date": "2025-09-11",
       "time": "22:32:55",
@@ -726,7 +747,7 @@
       "notes": "O player no print mostra 0:00 / 0:00; duração e conteúdo do áudio não estão disponíveis."
     },
     {
-      "id": 40,
+      "id": 41,
       "timestamp": "2025-09-11T22:41:23-03:00",
       "date": "2025-09-11",
       "time": "22:41:23",
@@ -744,7 +765,7 @@
       "notes": null
     },
     {
-      "id": 41,
+      "id": 42,
       "timestamp": "2025-09-11T22:41:35-03:00",
       "date": "2025-09-11",
       "time": "22:41:35",
@@ -760,16 +781,76 @@
       "source": "screenshot",
       "verified": true,
       "notes": "O print termina nesta mensagem; pode haver mensagens seguintes fora do recorte."
+    },
+    {
+      "id": 43,
+      "timestamp": null,
+      "date": "2025-11-17",
+      "time": null,
+      "sender": "Roberto Justus",
+      "content": "Fiquei muito feliz com a notícia da venda para o Fictor! Parabéns! Cala a boca de todos que apostavam na liquidação do Master! Ufa! Que bom!! Abração",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "reportagem",
+      "verified": false,
+      "notes": "Mensagem citada em reportagem (O Globo, coluna Lauro Jardim, 10/2026), extraída, segundo o texto, do celular de Vorcaro apreendido pela PF. Recebida poucas horas antes da primeira prisão de Vorcaro, na noite de 17 de novembro (ano 2025 inferido pelo contexto). Parabeniza por suposta venda do Master para a Fictor, negócio que não se concretizou. Horário exato não informado. Destinatário: Daniel Vorcaro."
     }
   ],
   "index": {
     "dates": [
-      { "date": "2025-08-18", "message_count": 1, "first_message_id": 1, "last_message_id": 1 },
-      { "date": "2025-08-28", "message_count": 1, "first_message_id": 2, "last_message_id": 2 },
-      { "date": "2025-09-01", "message_count": 6, "first_message_id": 3, "last_message_id": 8 },
-      { "date": "2025-09-02", "message_count": 12, "first_message_id": 9, "last_message_id": 20 },
-      { "date": "2025-09-04", "message_count": 12, "first_message_id": 21, "last_message_id": 32 },
-      { "date": "2025-09-11", "message_count": 9, "first_message_id": 33, "last_message_id": 41 }
+      {
+        "date": "2024-12-21",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1
+      },
+      {
+        "date": "2025-08-18",
+        "message_count": 1,
+        "first_message_id": 2,
+        "last_message_id": 2
+      },
+      {
+        "date": "2025-08-28",
+        "message_count": 1,
+        "first_message_id": 3,
+        "last_message_id": 3
+      },
+      {
+        "date": "2025-09-01",
+        "message_count": 6,
+        "first_message_id": 4,
+        "last_message_id": 9
+      },
+      {
+        "date": "2025-09-02",
+        "message_count": 12,
+        "first_message_id": 10,
+        "last_message_id": 21
+      },
+      {
+        "date": "2025-09-04",
+        "message_count": 12,
+        "first_message_id": 22,
+        "last_message_id": 33
+      },
+      {
+        "date": "2025-09-11",
+        "message_count": 9,
+        "first_message_id": 34,
+        "last_message_id": 42
+      },
+      {
+        "date": "2025-11-17",
+        "message_count": 1,
+        "first_message_id": 43,
+        "last_message_id": 43
+      }
     ]
   }
 }
