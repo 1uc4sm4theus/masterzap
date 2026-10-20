@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Pablo Marçal"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2025-09-02",
+      "end": "2025-09-02"
+    },
+    "total_messages": 4,
+    "source": "1 captura de tela (trecho de conversa com a legenda 'Transcrição reproduzida pela reportagem de O Globo', rótulo 'Linproxy' no print), transcrita exclusivamente a partir da imagem.",
+    "note": "Conversa curta, informada como completa por quem enviou o print (só esse trecho existe). Não é print de WhatsApp: é uma transcrição reproduzida pela reportagem de O Globo, sem horários, balões ou tiques, então 'time' é null e 'timestamp' traz só a data. A mensagem de Pablo Marçal aparece em balão verde com a legenda 'Pablo Marçal · 2 de setembro de 2025'. A resposta de Vorcaro aparece como três linhas empilhadas ('Fala', 'Irmão', 'Acho que sim, dificilmente cenário diferente') sob a legenda 'Daniel Vorcaro · resposta minutos depois'; foram registradas como três mensagens, mas o print não mostra balões, então podem ser uma só com quebras de linha (leitura menos segura). A data da resposta (2025-09-02) é assumida a partir de 'minutos depois'. Remetente 'DV' padronizado (no print o nome exibido é 'Daniel Vorcaro'); nome do outro participante grafado 'Pablo Marçal', como no print. Texto transcrito literalmente, com a grafia do print. reply_to_id é null em todas.",
+    "visible_date_headers_without_messages": []
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-09-02",
+      "date": "2025-09-02",
+      "time": null,
+      "sender": "Pablo Marçal",
+      "content": "E aí irmão. Bolsonaro vai puxar cadeia mesmo?",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "quote_fidelity": "literal",
+      "source": "news_report",
+      "source_ref": "O Globo (transcrição reproduzida na reportagem)",
+      "verified": true,
+      "notes": "Data conforme a legenda do print ('Pablo Marçal · 2 de setembro de 2025'). Sem horário exibido.",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-09-02",
+      "date": "2025-09-02",
+      "time": null,
+      "sender": "DV",
+      "content": "Fala",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "quote_fidelity": "literal",
+      "source": "news_report",
+      "source_ref": "O Globo (transcrição reproduzida na reportagem)",
+      "verified": true,
+      "notes": "Legenda do print: 'Daniel Vorcaro · resposta minutos depois'. Data 2025-09-02 assumida a partir de 'minutos depois'; o print não mostra data nem horário da resposta.",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-09-02",
+      "date": "2025-09-02",
+      "time": null,
+      "sender": "DV",
+      "content": "Irmão",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "quote_fidelity": "literal",
+      "source": "news_report",
+      "source_ref": "O Globo (transcrição reproduzida na reportagem)",
+      "verified": true,
+      "notes": "Ver nota da id 2.",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-09-02",
+      "date": "2025-09-02",
+      "time": null,
+      "sender": "DV",
+      "content": "Acho que sim, dificilmente cenário diferente",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "quote_fidelity": "literal",
+      "source": "news_report",
+      "source_ref": "O Globo (transcrição reproduzida na reportagem)",
+      "verified": true,
+      "notes": "Ver nota da id 2.",
+      "source_page": null,
+      "source_figure": null
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-09-02",
+        "message_count": 4,
+        "first_message_id": 1,
+        "last_message_id": 4
+      }
+    ]
+  }
+}

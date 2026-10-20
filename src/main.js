@@ -106,6 +106,7 @@ async function init() {
     'walfrido-warde-new': '/assets/avatar-walfrido-warde-new.jpg',
     'augusto-lima': '/assets/avatar-augusto-lima.jpg',
     'andre-valadao': '/assets/avatar-andre-valadao.jpg',
+    'pablo-marcal': '/assets/avatar-pablo-marcal.jpg',
 
 
 
