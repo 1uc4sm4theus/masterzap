@@ -144,6 +144,26 @@ export function searchIndex(index, query, { limit = 50, sender, newestFirst = fa
   return results;
 }
 
+/**
+ * Count matching messages in a conversation index without building result objects.
+ * @param {Array} index
+ * @param {string} query
+ * @param {object} [options]
+ * @param {string} [options.sender]
+ * @returns {number}
+ */
+export function countSearchIndex(index, query, { sender } = {}) {
+  if (!index || !query || query.length < 2) return 0;
+
+  const normalizedQuery = normalize(query);
+  let count = 0;
+  for (const entry of index) {
+    if (sender && entry.sender !== sender) continue;
+    if (normalize(entry.content).includes(normalizedQuery)) count++;
+  }
+  return count;
+}
+
 /** Clear loaded indexes (for testing). */
 export function resetSearchIndex() {
   _indexes.clear();

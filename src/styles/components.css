@@ -1676,11 +1676,21 @@
 }
 
 .search-results-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
   margin: 0;
   padding: 14px 16px 8px;
   color: var(--WDS-content-deemphasized);
   font-size: 13px;
   font-weight: 500;
+}
+
+.search-results-count {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
 }
 
 .search-conversation-item {

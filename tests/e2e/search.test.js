@@ -40,6 +40,14 @@ test.describe('Search — Batch 7', () => {
     await expect(date).toBeVisible();
   });
 
+  test('search results show the total number of matching messages', async ({ page }) => {
+    await page.locator('.sidebar-search-input').fill('Bom dia');
+
+    const count = page.locator('.search-results-count');
+    await expect(count).toBeVisible({ timeout: 10000 });
+    await expect(count).toHaveText(/^\d+ resultados? encontrados?$/);
+  });
+
   test('search results highlight the matching text', async ({ page }) => {
     const input = page.locator('.sidebar-search-input');
     await input.fill('Bom dia');

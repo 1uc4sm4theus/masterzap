@@ -37,6 +37,7 @@ import { renderSoundtrackPlayer } from './components/SoundtrackPlayer.js';
 import { renderFavoritesPanel } from './components/FavoritesPanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
+import { parseLink } from './lib/media.js';
 import { APP_USERS, conversationsForUser } from './lib/users.js';
 import { initializeTheme, setDarkTheme } from './lib/theme.js';
 
@@ -714,6 +715,56 @@ async function init() {
     sidebar.classList.add('sidebar--payments');
     navRail.setActive?.('payments');
   });
+  let mediaMessageRecordsPromise = null;
+  async function loadMediaMessageRecords() {
+    if (!mediaMessageRecordsPromise) {
+      mediaMessageRecordsPromise = (async () => {
+        const conversations = store.getConversations();
+        const indexedConversations = await Promise.all(conversations.map(async (conversation) => ({
+          conversation,
+          dates: await store.getConversationIndex(conversation.id),
+        })));
+        const chunks = indexedConversations.flatMap(({ conversation, dates }) =>
+          dates.map(({ date }) => ({ conversation, date }))
+        );
+        const records = [];
+        let nextChunk = 0;
+        const worker = async () => {
+          while (nextChunk < chunks.length) {
+            const chunk = chunks[nextChunk++];
+            const messages = await store.getMessages(chunk.conversation.id, chunk.date);
+            for (const message of messages) {
+              if (message.type !== 'document' && message.type !== 'link') continue;
+              const urls = Array.isArray(message.urls) ? message.urls : [];
+              const parsedLink = message.type === 'link'
+                ? parseLink(message.content)
+                : null;
+              records.push({
+                ...message,
+                type: message.type,
+                owner: chunk.conversation.owner || 'DV',
+                conversation_id: chunk.conversation.id,
+                message_id: message.id,
+                conversation_name: chunk.conversation.contact || chunk.conversation.id,
+                url: urls[0] || parsedLink?.url || '',
+                linkTitle: parsedLink?.title || '',
+                linkHost: parsedLink?.host || '',
+                linkDescription: parsedLink?.description || parsedLink?.extra || '',
+              });
+            }
+          }
+        };
+        await Promise.all(Array.from({ length: Math.min(8, chunks.length) }, worker));
+        records.sort((a, b) => (b.timestamp || '').localeCompare(a.timestamp || ''));
+        return records;
+      })().catch((error) => {
+        mediaMessageRecordsPromise = null;
+        throw error;
+      });
+    }
+    return mediaMessageRecordsPromise;
+  }
+
   router.on('media', async () => {
     showEmptyState();
     let catalog = { items: [] };
@@ -725,6 +776,7 @@ async function init() {
     }
     const panel = renderMediaPanel({
       items: catalog.items || [],
+      onLoadItems: async type => (await loadMediaMessageRecords()).filter(item => item.type === type),
       onOpenMessage: (conversationId, messageId) => router.navigate('chat', conversationId, messageId),
     });
     sidebar.showCalls?.(panel);

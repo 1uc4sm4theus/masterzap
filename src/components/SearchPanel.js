@@ -3,7 +3,7 @@
  */
 import { escapeHtml, formatDateShort } from '../lib/utils.js';
 import { defaultAvatarSvg } from '../lib/avatar.js';
-import { loadSearchIndex, normalize, searchIndex } from '../lib/search.js';
+import { countSearchIndex, loadSearchIndex, normalize, searchIndex } from '../lib/search.js';
 
 const DEBOUNCE_MS = 200;
 const MESSAGE_RESULT_LIMIT = 50;
@@ -38,7 +38,11 @@ export function attachSearch(sidebar, conversations, { onResultClick, onConversa
     return resultsEl;
   }
 
-  function renderResults(conversationMatches, messageResults, { loading = false, failedCount = 0 } = {}) {
+  function renderResults(conversationMatches, messageResults, {
+    loading = false,
+    failedCount = 0,
+    messageCount = null,
+  } = {}) {
     const container = ensureResults();
     container.replaceChildren();
 
@@ -50,8 +54,11 @@ export function attachSearch(sidebar, conversations, { onResultClick, onConversa
       container.appendChild(section);
     }
 
-    if (messageResults.length > 0 || loading) {
-      const section = createSection('Mensagens');
+    if (messageResults.length > 0 || loading || messageCount > 0) {
+      const countLabel = messageCount === null
+        ? null
+        : `${messageCount} resultado${messageCount === 1 ? '' : 's'} encontrado${messageCount === 1 ? '' : 's'}`;
+      const section = createSection('Mensagens', countLabel);
       for (const result of messageResults) {
         section.appendChild(createMessageResult(result));
       }
@@ -59,6 +66,12 @@ export function attachSearch(sidebar, conversations, { onResultClick, onConversa
         const status = document.createElement('div');
         status.className = 'search-status';
         status.textContent = 'Pesquisando mensagens...';
+        section.appendChild(status);
+      }
+      if (!loading && messageCount > messageResults.length) {
+        const status = document.createElement('div');
+        status.className = 'search-status';
+        status.textContent = `Exibindo os ${messageResults.length} mais recentes.`;
         section.appendChild(status);
       }
       container.appendChild(section);
@@ -79,13 +92,19 @@ export function attachSearch(sidebar, conversations, { onResultClick, onConversa
     }
   }
 
-  function createSection(title) {
+  function createSection(title, countLabel = null) {
     const section = document.createElement('section');
     section.className = 'search-results-section';
 
     const heading = document.createElement('h2');
     heading.className = 'search-results-heading';
     heading.textContent = title;
+    if (countLabel) {
+      const count = document.createElement('span');
+      count.className = 'search-results-count';
+      count.textContent = countLabel;
+      heading.appendChild(count);
+    }
     section.appendChild(heading);
     return section;
   }
@@ -222,6 +241,7 @@ export function attachSearch(sidebar, conversations, { onResultClick, onConversa
     if (version !== searchVersion || input.value.trim() !== query) return;
 
     const messageResults = [];
+    let messageCount = 0;
     let failedCount = 0;
     loadedIndexes.forEach((result, index) => {
       if (result.status === 'rejected') {
@@ -233,6 +253,7 @@ export function attachSearch(sidebar, conversations, { onResultClick, onConversa
       const contact = conversation.contact
         || conversation.participants?.find(name => name !== (conversation.owner || 'DV'))
         || conversation.id;
+      messageCount += countSearchIndex(result.value, query);
       const hits = searchIndex(result.value, query, {
         limit: MESSAGE_RESULT_LIMIT,
         newestFirst: true,
@@ -246,7 +267,10 @@ export function attachSearch(sidebar, conversations, { onResultClick, onConversa
     messageResults.sort((a, b) => b.date.localeCompare(a.date)
       || conversationOrder.get(a.conversationId) - conversationOrder.get(b.conversationId)
       || Number(b.id) - Number(a.id));
-    renderResults(conversationMatches, messageResults.slice(0, MESSAGE_RESULT_LIMIT), { failedCount });
+    renderResults(conversationMatches, messageResults.slice(0, MESSAGE_RESULT_LIMIT), {
+      failedCount,
+      messageCount,
+    });
   }
 
   function hideResults() {

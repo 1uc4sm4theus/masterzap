@@ -1,3 +1,5 @@
+import { parseLink } from '../lib/media.js';
+
 const ICON_CLOSE = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m18 6-12 12M6 6l12 12"/></svg>';
 const ICON_PLAY = '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="m8 5 11 7-11 7V5Z"/></svg>';
 
@@ -108,7 +110,79 @@ function renderViewer(container, items, index, onOpenMessage) {
   return overlay;
 }
 
-export function renderMediaPanel({ items = [], onOpenMessage = () => {} } = {}) {
+function renderMessageList(content, items, tab, onOpenMessage) {
+  const columns = tab.id === 'document'
+    ? ['Documento', 'Legenda', 'Enviado por']
+    : ['Link', 'Mensagem', 'Enviado por'];
+  const header = document.createElement('div');
+  header.className = 'media-record-header';
+  for (const label of columns) {
+    const cell = document.createElement('span');
+    cell.textContent = label;
+    header.appendChild(cell);
+  }
+  content.appendChild(header);
+
+  const grouped = new Map();
+  for (const item of items) {
+    const key = item.date || item.timestamp?.slice(0, 10) || 'unknown';
+    if (!grouped.has(key)) grouped.set(key, []);
+    grouped.get(key).push(item);
+  }
+
+  for (const group of grouped.values()) {
+    const heading = document.createElement('h2');
+    heading.className = 'media-date-heading';
+    heading.textContent = dateLabel(group[0]);
+    content.appendChild(heading);
+
+    for (const item of group) {
+      const row = document.createElement('button');
+      row.className = 'media-record-row';
+      row.type = 'button';
+      row.setAttribute('aria-label', `${tab.label}: ${tab.id === 'document' ? item.attachment || 'Documento' : item.linkTitle || item.url || 'Link'}`);
+
+      const title = document.createElement('span');
+      title.className = 'media-record-title';
+      title.textContent = tab.id === 'document'
+        ? item.attachment || 'Documento'
+        : item.linkTitle || item.url || 'Link compartilhado';
+
+      const description = document.createElement('span');
+      description.className = 'media-record-description';
+      if (tab.id === 'document') {
+        let documentContent = (item.content || '').replace(/^\[anexo\]\s*/i, '');
+        if (item.attachment && documentContent.startsWith(item.attachment)) {
+          documentContent = documentContent.slice(item.attachment.length);
+        }
+        description.textContent = documentContent
+          .replace(/^\s*[—-]\s*/, '')
+          .trim() || 'Sem legenda';
+      } else {
+        description.textContent = item.linkDescription || item.linkHost || item.url || 'Sem legenda';
+      }
+
+      const sender = document.createElement('span');
+      sender.className = 'media-record-sender';
+      const senderName = item.sender === item.owner ? 'Você' : item.sender || 'Desconhecido';
+      sender.textContent = `${senderName} · ${item.conversation_name || ''} · ${item.timestamp ? new Date(item.timestamp).toLocaleString('pt-BR') : dateLabel(item)}`;
+
+      row.append(title, description, sender);
+      row.addEventListener('click', () => {
+        if (item.conversation_id && item.message_id) {
+          onOpenMessage(item.conversation_id, item.message_id);
+        }
+      });
+      content.appendChild(row);
+    }
+  }
+}
+
+export function renderMediaPanel({
+  items = [],
+  onOpenMessage = () => {},
+  onLoadItems = null,
+} = {}) {
   const panel = document.createElement('section');
   panel.className = 'media-panel';
   panel.setAttribute('aria-label', 'Mídias');
@@ -124,11 +198,32 @@ export function renderMediaPanel({ items = [], onOpenMessage = () => {} } = {}) 
   const content = document.createElement('div');
   content.className = 'media-panel-content';
   let activeTab = 'media';
+  const loadedTabs = new Set(['media']);
+  const loadingTabs = new Set();
+  const tabErrors = new Map();
 
   function renderTab() {
     content.replaceChildren();
     const tab = tabs.find(entry => entry.id === activeTab);
-    const visible = items.filter(item => tab.kinds.includes(item.type));
+    if (loadingTabs.has(tab.id)) {
+      const status = document.createElement('p');
+      status.className = 'media-empty';
+      status.setAttribute('role', 'status');
+      status.textContent = 'Carregando mensagens...';
+      content.appendChild(status);
+      return;
+    }
+    if (tabErrors.has(tab.id)) {
+      const error = document.createElement('p');
+      error.className = 'media-empty media-error';
+      error.setAttribute('role', 'alert');
+      error.textContent = `Não foi possível carregar ${tab.label.toLocaleLowerCase('pt-BR')}. Tente novamente.`;
+      content.appendChild(error);
+      return;
+    }
+
+    const source = loadedTabs.has(tab.id) || !onLoadItems ? tab.items || items : [];
+    const visible = source.filter(item => tab.kinds.includes(item.type));
     if (!visible.length) {
       const empty = document.createElement('p');
       empty.className = 'media-empty';
@@ -136,6 +231,11 @@ export function renderMediaPanel({ items = [], onOpenMessage = () => {} } = {}) 
       content.appendChild(empty);
       return;
     }
+    if (tab.id !== 'media') {
+      renderMessageList(content, visible, tab, onOpenMessage);
+      return;
+    }
+
     const grouped = new Map();
     for (const item of visible) {
       const key = item.date || item.timestamp?.slice(0, 10) || 'unknown';
@@ -173,17 +273,39 @@ export function renderMediaPanel({ items = [], onOpenMessage = () => {} } = {}) 
     button.className = 'media-tab';
     button.type = 'button';
     button.setAttribute('role', 'tab');
+    button.setAttribute('aria-selected', String(tab.id === activeTab));
+    button.setAttribute('aria-controls', 'media-panel-content');
     button.textContent = tab.label;
     button.dataset.tab = tab.id;
     button.onclick = () => {
       activeTab = tab.id;
-      tabBar.querySelectorAll('.media-tab').forEach(el => el.classList.toggle('active', el === button));
+      tabBar.querySelectorAll('.media-tab').forEach(el => {
+        el.classList.toggle('active', el === button);
+        el.setAttribute('aria-selected', String(el === button));
+      });
+      if (tab.id !== 'media' && !loadedTabs.has(tab.id) && !loadingTabs.has(tab.id) && onLoadItems) {
+        tabErrors.delete(tab.id);
+        loadingTabs.add(tab.id);
+        renderTab();
+        Promise.resolve(onLoadItems(tab.id)).then((loadedItems) => {
+          tab.items = loadedItems;
+          loadedTabs.add(tab.id);
+        }).catch((error) => {
+          console.error(`Failed to load ${tab.id} messages:`, error);
+          tabErrors.set(tab.id, error);
+        }).finally(() => {
+          loadingTabs.delete(tab.id);
+          if (activeTab === tab.id) renderTab();
+        });
+        return;
+      }
       renderTab();
     };
     tabBar.appendChild(button);
   }
   tabBar.querySelector('.media-tab').classList.add('active');
   panel.appendChild(tabBar);
+  content.id = 'media-panel-content';
   panel.appendChild(content);
   renderTab();
   return panel;

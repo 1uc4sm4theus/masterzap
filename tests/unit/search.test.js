@@ -1,5 +1,11 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { search, searchIndex, normalize, resetSearchIndex } from '../../src/lib/search.js';
+import {
+  countSearchIndex,
+  search,
+  searchIndex,
+  normalize,
+  resetSearchIndex,
+} from '../../src/lib/search.js';
 
 // We can't easily load the full search index in unit tests (it's fetched via HTTP),
 // so we'll test the pure functions and mock the internal index.
@@ -74,5 +80,26 @@ describe('searchIndex()', () => {
     ], 'diogo');
 
     expect(results[0].content.slice(results[0].matchStart, results[0].matchEnd)).toBe('Diôgo');
+  });
+});
+
+describe('countSearchIndex()', () => {
+  const index = [
+    { id: 1, sender: 'DV', content: 'Irmão, tudo certo?' },
+    { id: 2, sender: 'Martha', content: 'Falei com meu irmao' },
+    { id: 3, sender: 'DV', content: 'Até amanhã' },
+    { id: 4, sender: 'DV', content: 'Irmão, obrigado' },
+  ];
+
+  it('counts matching messages without being limited by the displayed result limit', () => {
+    expect(countSearchIndex(index, 'irmao')).toBe(3);
+  });
+
+  it('supports filtering by sender', () => {
+    expect(countSearchIndex(index, 'irmao', { sender: 'DV' })).toBe(2);
+  });
+
+  it('returns zero for queries that are too short', () => {
+    expect(countSearchIndex(index, 'a')).toBe(0);
   });
 });
