@@ -12,6 +12,7 @@ import { HashRouter } from './lib/router.js';
 import { renderSidebar, setActiveConversation } from './components/Sidebar.js';
 import { renderEmptyState } from './components/EmptyState.js';
 import { renderChatView } from './components/ChatView.js';
+import { renderCallsPanel } from './components/CallsPanel.js';
 import { attachContextMenu } from './components/ContextMenu.js';
 import { attachSearch } from './components/SearchPanel.js';
 import { showContactInfo } from './components/ContactInfo.js';

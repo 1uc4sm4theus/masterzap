@@ -4,38 +4,274 @@
       "DV",
       "Nikolas Ferreira"
     ],
+    "contact": "Nikolas Ferreira",
     "saved_as": null,
     "phone": null,
     "date_range": {
       "start": "2025-03-30",
-      "end": "2025-03-30"
+      "end": "2025-04-02"
     },
-    "total_messages": 1,
-    "source": "Conteúdo fornecido pelo usuário",
-    "note": "A data da mensagem, 2025-03-30, foi informada pelo usuário; o horário original não foi informado."
+    "total_messages": 17,
+    "source": "Prints e trechos publicados por ICL, CartaCapital, piauí, Fatos Online e Jornal de Brasília (2026)",
+    "source_detail": {
+      "kind": "police-filing",
+      "label": "Prints e trechos publicados por ICL, CartaCapital, piauí, Fatos Online e Jornal de Brasília (2026)",
+      "document": null,
+      "document_url": null,
+      "document_sha256": null,
+      "made_public": "2026-09-03",
+      "how": "Transcrição manual dos prints da extração do celular reproduzidos no documento; cada mensagem cita documento, página e figura.",
+      "complements": []
+    },
+    "note": "Trechos citados em documentos da PF — a conversa completa não é pública. ATUALIZAÇÃO 2: o arquivo, que tinha uma única mensagem (id 1, áudio de Nikolas Ferreira com data 30/03/2025 informada pelo usuário, horário não informado e audio_src '/assets/audio-nikolas-ferreira.mp3'), foi substituído pelas 17 mensagens da exportação do site (masterwhats-nikolas-ferreira.json, gerada em 25/09/2026), baseadas em prints e trechos publicados por ICL, CartaCapital, piauí, Fatos Online e Jornal de Brasília (2026). O áudio de Nikolas passou a ser o id 3 (17:56:56), com a transcrição em 'content' (texto da versão de 07/09, conforme source_cite), mantendo audio_src e attachment do arquivo anterior; o horário 00:00:00 do arquivo anterior era apenas um valor provisório. Os carimbos foram mantidos sem offset (a exportação traz -03:00), como no restante do projeto. Os ids 1-17 seguem a numeração da exportação e estão em ordem sequencial no array; a exportação do site os lista por horário e por isso mostra o id 15 antes do id 7 (ver context_note do id 15). Ids 1-2: mensagens de sistema do WhatsApp (type 'system'). Id 4: áudio de visualização única enviado por DV, sem conteúdo (view_once). Id 7: contato 'Thiago Rodrigues BH', transcrito entre colchetes como na exportação. Ids 9, 11 e 16: emojis ilegíveis ou descritos nos prints, também entre colchetes. Id 17 (02/04/2025): horário não informado (time_unknown). O id 15 cita o texto do id 12 (campo 'quoted'). O bloco 'profile' (resumo editorial) da exportação não faz parte deste formato e não foi incluído."
   },
   "messages": [
     {
       "id": 1,
-      "timestamp": "2025-03-30T00:00:00",
+      "timestamp": "2025-03-30T17:56:56",
       "date": "2025-03-30",
-      "time": "00:00:00",
+      "time": "17:56:56",
+      "sender": "DV",
+      "content": "As mensagens e chamadas desta conversa estão protegidas com a criptografia de ponta a ponta. Toque para mais informações",
+      "type": "system",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-03-30T17:56:56",
+      "date": "2025-03-30",
+      "time": "17:56:56",
+      "sender": "DV",
+      "content": "Nikolas Ferreira foi adicionado à sua lista de contatos.",
+      "type": "system",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-03-30T17:56:56",
+      "date": "2025-03-30",
+      "time": "17:56:56",
       "sender": "Nikolas Ferreira",
-      "content": "[áudio]",
+      "content": "[transcrição do áudio] Ei Dani, tudo bom? Como você está? Como estão as coisas aí? Desculpa te incomodar num domingo aí, é jogo rápido, também não quero tomar muito seu tempo. É o seguinte, meu amigo, meu advogado, enfim, irmão meu aqui, comentou comigo e falou daqui do seu nome. Eu falei: ‘não conheço o Dani, enfim, não tenho a proximidade assim, até mesmo a que eu queria ter, enfim, de conversar e trocar ideia, mas eu o conheço.’ Ele falou: ‘cara, tô com um ativo minerário lá, inclusive já passou pela ficha técnica, o pessoal técnico dele, enfim, tá pendente lá, tem algumas pessoas que sabem disso lá na empresa.’ E eu falei: ‘não, ué, eu posso dar um toque nele’. Então assim, não sei nem do que se trata, mas enfim é como é uma pessoa, enfim, que eu confio totalmente, tô passando aí pra você, pra se for do teu interesse, passar o contato dele aqui pra vocês tocarem isso, beleza? No mais, qualquer coisa tô aqui à disposição. Troquei ideia lá com o Pastor Valadão naquela época, lá naquela postagem, eu falei: ‘Pastor, eu não fazia ideia que era este o Banco do Dani etc. e tudo, se não, obviamente eu não teria postado, já teria conversado anteriormente’, mas enfim, acabou que a palavra dita não tem como voltar, né? Mas espero que tenha sido esclarecido, enfim, depois vamos marcar da gente se encontrar também, tá bem? Um abração aí, Dani.",
       "type": "audio",
       "audio_src": "/assets/audio-nikolas-ferreira.mp3",
       "is_edited": false,
       "attachment": "audio-nikolas-ferreira.mp3",
-      "urls": []
+      "urls": [],
+      "source_cite": "print 1 + áudio · ICL Notícias, 03/09/2026 (texto da versão de 07/09)"
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-03-30T18:00:07",
+      "date": "2025-03-30",
+      "time": "18:00:07",
+      "sender": "DV",
+      "content": "[áudio de visualização única]",
+      "type": "audio",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · ICL Notícias, 03/09/2026",
+      "view_once": true
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-03-30T18:01:49",
+      "date": "2025-03-30",
+      "time": "18:01:49",
+      "sender": "Nikolas Ferreira",
+      "content": "Valeu, Dani! Fico feliz!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-03-30T18:01:56",
+      "date": "2025-03-30",
+      "time": "18:01:56",
+      "sender": "Nikolas Ferreira",
+      "content": "Deus te abençoe e vamos estar juntos",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-03-30T18:02:03",
+      "date": "2025-03-30",
+      "time": "18:02:03",
+      "sender": "Nikolas Ferreira",
+      "content": "[contato: Thiago Rodrigues BH]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-03-30T18:02:16",
+      "date": "2025-03-30",
+      "time": "18:02:16",
+      "sender": "DV",
+      "content": "Amem irmao",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-03-30T18:02:17",
+      "date": "2025-03-30",
+      "time": "18:02:17",
+      "sender": "Nikolas Ferreira",
+      "content": "Só dar o toque e vamos encontrar! [emojis ilegíveis no print]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-03-30T18:02:20",
+      "date": "2025-03-30",
+      "time": "18:02:20",
+      "sender": "DV",
+      "content": "Estamos na guerra juntos",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 2 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-03-30T18:02:27",
+      "date": "2025-03-30",
+      "time": "18:02:27",
+      "sender": "Nikolas Ferreira",
+      "content": "Um abração! Dar banho na pequena agora [emoji de riso]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 2 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-03-30T18:02:29",
+      "date": "2025-03-30",
+      "time": "18:02:29",
+      "sender": "DV",
+      "content": "To em brasilia toda semana,\nVamos marcar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 2 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-03-30T18:02:31",
+      "date": "2025-03-30",
+      "time": "18:02:31",
+      "sender": "Nikolas Ferreira",
+      "content": "Pra amanhã voltar pra guerra",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 2 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-03-30T18:02:34",
+      "date": "2025-03-30",
+      "time": "18:02:34",
+      "sender": "DV",
+      "content": "Pede o thiago me chamar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 2 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-03-30T18:02:00",
+      "date": "2025-03-30",
+      "time": "18:02:00",
+      "sender": "Nikolas Ferreira",
+      "content": "Melhor ainda!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 2 · ICL Notícias, 03/09/2026",
+      "quoted": "To em brasilia toda semana\nVamos marcar",
+      "context_note": "O carimbo 18:02:00 é anterior ao da mensagem citada (id 12, 18:02:29); a exportação do site ordena por horário e por isso exibe o id 15 antes do id 7. Carimbo mantido como na exportação (possível erro de leitura do horário no print)."
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-04-01T18:04:51",
+      "date": "2025-04-01",
+      "time": "18:04:51",
+      "sender": "Nikolas Ferreira",
+      "content": "Dani, boa noite!\n\nThiago estará amanhã em Brasília, qualquer horário ele estará disponível, beleza? Só dar um toque nele [emojis ilegíveis no print]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 2 · ICL Notícias, 03/09/2026"
+    },
+    {
+      "id": 17,
+      "timestamp": "2025-04-02",
+      "date": "2025-04-02",
+      "time": "",
+      "sender": "DV",
+      "content": "Deixa comigo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 2 · ICL Notícias, 03/09/2026",
+      "time_unknown": true
     }
   ],
   "index": {
     "dates": [
       {
         "date": "2025-03-30",
-        "message_count": 1,
+        "message_count": 15,
         "first_message_id": 1,
-        "last_message_id": 1
+        "last_message_id": 15
+      },
+      {
+        "date": "2025-04-01",
+        "message_count": 1,
+        "first_message_id": 16,
+        "last_message_id": 16
+      },
+      {
+        "date": "2025-04-02",
+        "message_count": 1,
+        "first_message_id": 17,
+        "last_message_id": 17
       }
     ]
   }
