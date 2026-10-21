@@ -4,15 +4,56 @@
       "DV",
       "Fabiano Zettel 1"
     ],
+    "contact": "Fabiano Zettel 1",
     "saved_as": null,
     "phone": "5511932611111",
     "date_range": {
       "start": "2024-02-08",
-      "end": "2024-12-30"
+      "end": "2025-03-12"
     },
-    "total_messages": 18,
+    "total_messages": 51,
     "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Mensagens 1–14: trechos citados no relatório policial — a conversa completa não consta do documento. Mensagens 15–18: transcritas de captura de tela de WhatsApp (HUw-9nOXUAE25N_.jpg); ano 2024 inferido (30/12 caiu numa segunda-feira em 2024 e o texto menciona 'março/24'); horário só com precisão de minuto."
+    "source_detail": {
+      "kind": "police-report",
+      "label": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+      "document": "data/source/IPJ-A-3298613-2026.pdf",
+      "document_url": "https://github.com/rafaelbressan/masterzap/blob/main/data/source/IPJ-A-3298613-2026.pdf",
+      "document_download": "https://raw.githubusercontent.com/rafaelbressan/masterzap/main/data/source/IPJ-A-3298613-2026.pdf",
+      "document_sha256": "23cfdfa410c47ab09cbb2b443965e3a3095d9bc3dc5fb266efff76d6f5192b60",
+      "document_pages": 218,
+      "made_public": "2026-09-01",
+      "how": "Transcrição manual das imagens do laudo; cada mensagem cita a página e a figura de origem.",
+      "complements": [
+        {
+          "id": "imprensa-anteriores",
+          "label": "Trechos publicados por Estadão, piauí, Metrópoles, Poder360 e Intercept (2026)",
+          "url": null,
+          "published": "2026-06-03",
+          "file": "coletas/downloads-caso-master-documentos/imprensa/"
+        },
+        {
+          "id": "metropoles-dark-horse",
+          "label": "Dark Horse — prints da extração publicados pelo Metrópoles (Inq 5070)",
+          "url": "https://www.metropoles.com/brasil/fala-irmaozao-veja-trocas-de-mensagens-entre-flavio-bolsonaro-e-vorcaro",
+          "published": "2026-09-12",
+          "file": "coletas/downloads-caso-master-documentos/imprensa/metropoles-flavio-vorcaro-20260912/"
+        },
+        {
+          "id": "captura-30-12-2024",
+          "label": "Captura de tela de WhatsApp (HUw-9nOXUAE25N_.jpg), 30/12/2024 16:51",
+          "url": null,
+          "published": null,
+          "file": "HUw-9nOXUAE25N_.jpg",
+          "message_ids": [
+            15,
+            16,
+            17,
+            18
+          ]
+        }
+      ]
+    },
+    "note": "Mensagens 1–14: trechos citados no relatório policial — a conversa completa não consta do documento. Mensagens 15–18: transcritas de captura de tela de WhatsApp (HUw-9nOXUAE25N_.jpg); ano 2024 inferido (30/12 caiu numa segunda-feira em 2024 e o texto menciona 'março/24'); horário só com precisão de minuto. ATUALIZAÇÃO 2: acrescentadas 33 mensagens (ids 19-51), de 09/01/2025 a 12/03/2025, da exportação do site (masterwhats-fabiano-zettel.json, que traz 47 mensagens), a partir de prints da extração do celular publicados pelo Metrópoles (caso Dark Horse, Inq 5070; 12/09/2026 e 21/09/2026), cada uma com o seu 'source_cite'. As mensagens 1-14 da exportação coincidem com as 1-14 deste arquivo; as mensagens 15-18 (30/12/2024) não constam da exportação e foram mantidas. Por isso os ids da exportação a partir do 15 foram renumerados (+4), e os ids agora são sequenciais de 1 a 51 em ordem cronológica no array: por exemplo, 'Filme vc pagou?' passou do id 19 da exportação para o id 23, e 'Esse e o mais importante disparado' do 23 para o 27. Os carimbos foram mantidos sem offset (a exportação traz -03:00), como no restante do projeto. O bloco 'profile' da exportação não faz parte deste formato e não foi incluído (os links #msg-N dele usam a numeração da exportação)."
   },
   "messages": [
     {
@@ -276,6 +317,439 @@
       "source_page": null,
       "source_figure": null,
       "source_file": "HUw-9nOXUAE25N_.jpg"
+    },
+    {
+      "id": 19,
+      "timestamp": "2025-01-09T17:34:35",
+      "date": "2025-01-09",
+      "time": "17:34:35",
+      "sender": "Fabiano Zettel",
+      "content": "Irmão,\nO que eu faço com Ciro e Sicário?\nOs dois são insuportáveis?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · Metrópoles, 21/09/2026"
+    },
+    {
+      "id": 20,
+      "timestamp": "2025-01-10T09:52:10",
+      "date": "2025-01-10",
+      "time": "09:52:10",
+      "sender": "Fabiano Zettel",
+      "content": "Bom dia!\nAtualizado pra você.\nMais chatos:\n- Saulo\n- Sicário\n- Ciro",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · Metrópoles, 21/09/2026"
+    },
+    {
+      "id": 21,
+      "timestamp": "2025-01-10T09:52:36",
+      "date": "2025-01-10",
+      "time": "09:52:36",
+      "sender": "Fabiano Zettel",
+      "content": "[imagem] Lista dos pagamentos pendentes: Casa Brasileira Itaim (ultima parcela) R$ 2.600.000,00; Desincha R$ 10.000.000,00; Bellini - Dez/Jan R$ 1.500.000,00; FA (Chiquinho) - Dez/Jan R$ 1.000.000,00; Obra 6º andar (atrasado) R$ 450.000,00; Impostos (atrasados) R$ 1.700.000,00; Despesas de aeronave pendentes (Moriah) R$ 445.000,00; Despesas de aeronave pendentes (Harpia) R$ 415.000,00; Sangion Group - Dez/Jan R$ 500.000,00; King Empreendimentos (Sicário) R$ 1.000.000,00; Zero Zero - RP Internacional - Dez/Jan R$ 854.000,00; Saulo Wanderley R$ 5.000.000,00; Ciro R$ 1.400.000,00; Arena Capital e GB12 - Dez/Jan R$ 300.000,00; Condomínios, Enele e despesas apartamentos R$ 600.000,00; Total Geral R$ 27.764.000,00",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · Metrópoles, 21/09/2026"
+    },
+    {
+      "id": 22,
+      "timestamp": "2025-01-10T14:39:17",
+      "date": "2025-01-10",
+      "time": "14:39:17",
+      "sender": "Fabiano Zettel",
+      "content": "Faço alguma coisa hoje?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 1 · Metrópoles, 21/09/2026"
+    },
+    {
+      "id": 23,
+      "timestamp": "2025-01-28T20:28:50",
+      "date": "2025-01-28",
+      "time": "20:28:50",
+      "sender": "DV",
+      "content": "Filme vc pagou?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 8 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 24,
+      "timestamp": "2025-01-28T20:34:20",
+      "date": "2025-01-28",
+      "time": "20:34:20",
+      "sender": "Fabiano Zettel",
+      "content": "Irmão,\nNão vem 1 real tem 3 semanas... kkkkkkk\nPaguei foi nada...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 8 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 25,
+      "timestamp": "2025-01-28T20:45:04",
+      "date": "2025-01-28",
+      "time": "20:45:04",
+      "sender": "DV",
+      "content": "Putz",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 8 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 26,
+      "timestamp": "2025-01-28T20:45:55",
+      "date": "2025-01-28",
+      "time": "20:45:55",
+      "sender": "Fabiano Zettel",
+      "content": "E filme não está na lista de 55.5.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 8 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 27,
+      "timestamp": "2025-01-28T21:04:42",
+      "date": "2025-01-28",
+      "time": "21:04:42",
+      "sender": "DV",
+      "content": "Esse e o mais importante disparado",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 8 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 28,
+      "timestamp": "2025-01-28T21:04:45",
+      "date": "2025-01-28",
+      "time": "21:04:45",
+      "sender": "DV",
+      "content": "Nao pode falhar mais",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 8 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 29,
+      "timestamp": "2025-02-05T14:16:16",
+      "date": "2025-02-05",
+      "time": "14:16:16",
+      "sender": "Fabiano Zettel",
+      "content": "Filme tô tentando desde ontem.\nCâmbio do Master criando caso...\nJá mandei 1.000 documentos meus.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-02-05T14:16:31",
+      "date": "2025-02-05",
+      "time": "14:16:31",
+      "sender": "DV",
+      "content": "Paga pra quem?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 31,
+      "timestamp": "2025-02-05T14:16:38",
+      "date": "2025-02-05",
+      "time": "14:16:38",
+      "sender": "DV",
+      "content": "Vamos fazer via entre",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 32,
+      "timestamp": "2025-02-05T14:16:54",
+      "date": "2025-02-05",
+      "time": "14:16:54",
+      "sender": "Fabiano Zettel",
+      "content": "Meu sonho.\nPosso pedir pro Minas?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 33,
+      "timestamp": "2025-02-05T14:17:25",
+      "date": "2025-02-05",
+      "time": "14:17:25",
+      "sender": "DV",
+      "content": "Pode",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 34,
+      "timestamp": "2025-02-05T14:17:28",
+      "date": "2025-02-05",
+      "time": "14:17:28",
+      "sender": "DV",
+      "content": "E manda a grana",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 35,
+      "timestamp": "2025-02-05T14:17:32",
+      "date": "2025-02-05",
+      "time": "14:17:32",
+      "sender": "Fabiano Zettel",
+      "content": "Isso",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 36,
+      "timestamp": "2025-02-05T14:17:33",
+      "date": "2025-02-05",
+      "time": "14:17:33",
+      "sender": "DV",
+      "content": "Pra quem paga la fora",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 37,
+      "timestamp": "2025-02-05T14:17:39",
+      "date": "2025-02-05",
+      "time": "14:17:39",
+      "sender": "Fabiano Zettel",
+      "content": "Um fundo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 38,
+      "timestamp": "2025-02-11T10:08:54",
+      "date": "2025-02-11",
+      "time": "10:08:54",
+      "sender": "DV",
+      "content": "Vc gez o\nCambio filme??",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 39,
+      "timestamp": "2025-02-11T11:11:25",
+      "date": "2025-02-11",
+      "time": "11:11:25",
+      "sender": "Fabiano Zettel",
+      "content": "Passei pro Mineiro.\nEle também estava com dificuldades...\nTô na cola dele.\nMas se vc mandar mensagem, me ajuda muito...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 40,
+      "timestamp": "2025-02-11T11:15:05",
+      "date": "2025-02-11",
+      "time": "11:15:05",
+      "sender": "DV",
+      "content": "Cara nao e possivel",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 41,
+      "timestamp": "2025-02-11T11:15:07",
+      "date": "2025-02-11",
+      "time": "11:15:07",
+      "sender": "DV",
+      "content": "Nao acredito",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 42,
+      "timestamp": "2025-02-11T11:15:30",
+      "date": "2025-02-11",
+      "time": "11:15:30",
+      "sender": "Fabiano Zettel",
+      "content": "O câmbio não quer fazer...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 43,
+      "timestamp": "2025-02-11T11:15:51",
+      "date": "2025-02-11",
+      "time": "11:15:51",
+      "sender": "DV",
+      "content": "Qual motivo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 44,
+      "timestamp": "2025-02-11T11:16:26",
+      "date": "2025-02-11",
+      "time": "11:16:26",
+      "sender": "Fabiano Zettel",
+      "content": "Cadastro.\nAs informações são meio estranhas...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 45,
+      "timestamp": "2025-02-11T13:11:59",
+      "date": "2025-02-11",
+      "time": "13:11:59",
+      "sender": "DV",
+      "content": "Preciso resolver HOJE",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 10 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 46,
+      "timestamp": "2025-02-14T17:20:16",
+      "date": "2025-02-14",
+      "time": "17:20:16",
+      "sender": "Fabiano Zettel",
+      "content": "ENTRE INVESTIME466312546.PDF",
+      "type": "document",
+      "is_edited": false,
+      "attachment": "ENTRE INVESTIME466312546.PDF",
+      "urls": [],
+      "source_cite": "print 11 · Metrópoles, 12/09/2026",
+      "forwarded": true
+    },
+    {
+      "id": 47,
+      "timestamp": "2025-02-14T17:20:22",
+      "date": "2025-02-14",
+      "time": "17:20:22",
+      "sender": "Fabiano Zettel",
+      "content": "Filme! 👏👏👏👏",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 11 · Metrópoles, 12/09/2026",
+      "quoted": "ENTRE INVESTIME466312546.PDF"
+    },
+    {
+      "id": 48,
+      "timestamp": "2025-03-12T18:32:47",
+      "date": "2025-03-12",
+      "time": "18:32:47",
+      "sender": "DV",
+      "content": "Sobre o filme só foi pago a primeira de janeiro",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 12 · Metrópoles, 12/09/2026",
+      "forwarded": true
+    },
+    {
+      "id": 49,
+      "timestamp": "2025-03-12T18:32:53",
+      "date": "2025-03-12",
+      "time": "18:32:53",
+      "sender": "DV",
+      "content": "Precisa me ajudar controlae isso",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 12 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 50,
+      "timestamp": "2025-03-12T18:32:59",
+      "date": "2025-03-12",
+      "time": "18:32:59",
+      "sender": "DV",
+      "content": "Tem que pagar a segunda e a terceira",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 12 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 51,
+      "timestamp": "2025-03-12T18:34:23",
+      "date": "2025-03-12",
+      "time": "18:34:23",
+      "sender": "Fabiano Zettel",
+      "content": "Vou pra cima do Mineiro.\nPassei o fluxo pra ele.\nAchei que ele tava fazendo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 12 · Metrópoles, 12/09/2026",
+      "quoted": "Precisa me ajudar controlae isso"
     }
   ],
   "index": {
@@ -291,6 +765,48 @@
         "message_count": 4,
         "first_message_id": 15,
         "last_message_id": 18
+      },
+      {
+        "date": "2025-01-09",
+        "message_count": 1,
+        "first_message_id": 19,
+        "last_message_id": 19
+      },
+      {
+        "date": "2025-01-10",
+        "message_count": 3,
+        "first_message_id": 20,
+        "last_message_id": 22
+      },
+      {
+        "date": "2025-01-28",
+        "message_count": 6,
+        "first_message_id": 23,
+        "last_message_id": 28
+      },
+      {
+        "date": "2025-02-05",
+        "message_count": 9,
+        "first_message_id": 29,
+        "last_message_id": 37
+      },
+      {
+        "date": "2025-02-11",
+        "message_count": 8,
+        "first_message_id": 38,
+        "last_message_id": 45
+      },
+      {
+        "date": "2025-02-14",
+        "message_count": 2,
+        "first_message_id": 46,
+        "last_message_id": 47
+      },
+      {
+        "date": "2025-03-12",
+        "message_count": 4,
+        "first_message_id": 48,
+        "last_message_id": 51
       }
     ]
   }
