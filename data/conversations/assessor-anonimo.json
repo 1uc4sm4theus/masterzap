@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Assessor (sem nome)"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2024-10-04",
+      "end": "2024-10-04"
+    },
+    "total_messages": 1,
+    "source": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+    "note": "Interlocutor não identificado pela matéria ('assessor sem nome'). Apenas um trecho citado; horário não informado."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-10-04",
+      "date": "2024-10-04",
+      "time": "",
+      "sender": "DV",
+      "content": "To com mixed feelings da bet.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "time_unknown": true,
+      "quote_fidelity": "literal",
+      "thread": "bet"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-10-04",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1
+      }
+    ]
+  }
+}

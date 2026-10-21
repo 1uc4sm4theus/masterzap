@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Nelson Wilians"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2024-10-11",
+      "end": "2024-10-27"
+    },
+    "total_messages": 5,
+    "source": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+    "note": "Trechos citados em matéria; a conversa completa não é pública. Horários não informados (time_unknown), exceto o intervalo de nove minutos entre ids 1 e 2. Id 3 reúne fragmentos citados e não é transcrição integral. Grafia 'Wilians' conforme a matéria; o nome de arquivo pedido era 'willans'. Id 5: 'PIXBET' em caixa alta como na fonte."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-10-11",
+      "date": "2024-10-11",
+      "time": "",
+      "sender": "Nelson Wilians",
+      "content": "Te interessa entrar no negócio de BET? Pergunto porque temos algumas para serem vendidas e relativamente regularizadas.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "time_unknown": true,
+      "quote_fidelity": "literal",
+      "thread": "bet"
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-10-11",
+      "date": "2024-10-11",
+      "time": "",
+      "sender": "DV",
+      "content": "Interesse total.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "time_unknown": true,
+      "quote_fidelity": "literal",
+      "delay_note": "nove minutos depois da mensagem anterior, segundo a matéria",
+      "thread": "bet"
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-10-11",
+      "date": "2024-10-11",
+      "time": "",
+      "sender": "Nelson Wilians",
+      "content": "[fala em] \"duas nas mãos\", uma \"grande que você sabe qual é\" e outra \"pequena\"; diz para \"afiasse o machado\" e amarrar um \"eventual parceiro do exterior\"",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "time_unknown": true,
+      "quote_fidelity": "fragment",
+      "paraphrase": true,
+      "order_note": "'em seguida', sem horário",
+      "thread": "bet"
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-10-25",
+      "date": "2024-10-25",
+      "time": "",
+      "sender": "Nelson Wilians",
+      "content": "Não esqueças daquele nosso assunto e se não houver interesse me fale. Somos amigos independe disso.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "time_unknown": true,
+      "quote_fidelity": "literal",
+      "thread": "bet"
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-10-27",
+      "date": "2024-10-27",
+      "time": "",
+      "sender": "Nelson Wilians",
+      "content": "PIXBET é uma que está no ponto para venda.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "time_unknown": true,
+      "quote_fidelity": "literal",
+      "thread": "bet"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-10-11",
+        "message_count": 3,
+        "first_message_id": 1,
+        "last_message_id": 3
+      },
+      {
+        "date": "2024-10-25",
+        "message_count": 1,
+        "first_message_id": 4,
+        "last_message_id": 4
+      },
+      {
+        "date": "2024-10-27",
+        "message_count": 1,
+        "first_message_id": 5,
+        "last_message_id": 5
+      }
+    ]
+  }
+}

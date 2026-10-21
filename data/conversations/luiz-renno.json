@@ -10,9 +10,9 @@
       "start": "2024-04-19",
       "end": "2025-10-28"
     },
-    "total_messages": 92,
-    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trechos citados em documentos da PF — a conversa completa não é pública. Cada mensagem diz de qual documento saiu."
+    "total_messages": 106,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF; complementado por matérias (Metrópoles, Veja, Folha, Revista Oeste) e por matéria sobre a 'bet' (veículo não informado)",
+    "note": "Trechos citados em documentos da PF — a conversa completa não é pública. Cada mensagem diz de qual documento saiu. ATUALIZAÇÃO (bet): acrescentadas 14 mensagens (ids 93-106, campo thread='bet') de trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados), cobrindo 09/07/2024, 30/09/2024, dez/2024 (dia não informado, date_precision='month'), 19/12/2024 e 06/02/2025. Só o id 93 tem horário (13h46); os demais ficaram sem hora (time_unknown). Ids 97-98 (09/07/2024): a matéria não confirma a ordem entre pergunta e resposta (order_uncertain). Id 103 é descrição da matéria (cédula de 11,5 milhões com 'prazo hoje'), não transcrição. 'AR' (id 104) mantido como na fonte, sem identificação. Ids 99-100 (30/09/2024) dialogam com o id 10 (01/10/2024, 'Vamos olhar alguem da gente! Financeiro operar clean'). Os ids novos foram posicionados no array em ordem cronológica e não renumeram os existentes; as datas de mês sem dia ('2024-12') aparecem como entradas próprias em index.dates. O campo 'source' das mensagens novas é 'source_cite' com a descrição da matéria."
   },
   "messages": [
     {
@@ -140,6 +140,128 @@
       "urls": [],
       "source_page": 185,
       "source_figure": 191
+    },
+    {
+      "id": 93,
+      "timestamp": "2024-07-09T13:46:00-03:00",
+      "date": "2024-07-09",
+      "time": "13:46:00",
+      "sender": "DV",
+      "content": "Essa nossa bet vai arrebentar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "time_precision": "minuto (13h46)"
+    },
+    {
+      "id": 94,
+      "timestamp": "2024-07-09",
+      "date": "2024-07-09",
+      "time": "",
+      "sender": "DV",
+      "content": "Nem lançou e já tá faturando 5mm por dia. Loucura esse negócio",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "time_unknown": true
+    },
+    {
+      "id": 95,
+      "timestamp": "2024-07-09",
+      "date": "2024-07-09",
+      "time": "",
+      "sender": "DV",
+      "content": "Vou fazer um estrago.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "time_unknown": true
+    },
+    {
+      "id": 96,
+      "timestamp": "2024-07-09",
+      "date": "2024-07-09",
+      "time": "",
+      "sender": "DV",
+      "content": "Fechei já Anitta Gustavo Lima Luciano Huck, Globo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "time_unknown": true
+    },
+    {
+      "id": 97,
+      "timestamp": "2024-07-09",
+      "date": "2024-07-09",
+      "time": "",
+      "sender": "Luiz Rennó",
+      "content": "Não sei como está esse assunto em BSB",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "order_uncertain": true,
+      "time_unknown": true
+    },
+    {
+      "id": 98,
+      "timestamp": "2024-07-09",
+      "date": "2024-07-09",
+      "time": "",
+      "sender": "DV",
+      "content": "Aprovando tudo.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "order_uncertain": true,
+      "time_unknown": true
+    },
+    {
+      "id": 99,
+      "timestamp": "2024-09-30",
+      "date": "2024-09-30",
+      "time": "",
+      "sender": "Luiz Rennó",
+      "content": "Fala irmão! Assunto bet. Aquilo que te falei, vc não pode aparecer e teremos que informar quem é o beneficiário final",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "time_unknown": true
+    },
+    {
+      "id": 100,
+      "timestamp": "2024-09-30",
+      "date": "2024-09-30",
+      "time": "",
+      "sender": "Luiz Rennó",
+      "content": "Você tem sugestão de alguém? Quer que eu olhe alguém de confiança?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "time_unknown": true
     },
     {
       "id": 10,
@@ -847,6 +969,71 @@
       "source_cite": "PF, representação RioPrevidência, p. 60"
     },
     {
+      "id": 101,
+      "timestamp": "2024-12",
+      "date": "2024-12",
+      "time": "",
+      "sender": "Luiz Rennó",
+      "content": "20M para pagar os custos até agora",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "date_precision": "month",
+      "time_unknown": true
+    },
+    {
+      "id": 102,
+      "timestamp": "2024-12",
+      "date": "2024-12",
+      "time": "",
+      "sender": "Luiz Rennó",
+      "content": "30 mais 5",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "date_precision": "month",
+      "time_unknown": true
+    },
+    {
+      "id": 103,
+      "timestamp": "2024-12",
+      "date": "2024-12",
+      "time": "",
+      "sender": "Luiz Rennó",
+      "content": "[cédula de R$ 11,5 milhões, com a legenda \"prazo hoje\"]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "date_precision": "month",
+      "paraphrase": true,
+      "quote_fidelity": "fragment",
+      "time_unknown": true
+    },
+    {
+      "id": 104,
+      "timestamp": "2024-12-19",
+      "date": "2024-12-19",
+      "time": "",
+      "sender": "Luiz Rennó",
+      "content": "Cara, uma opção é devolver! Posso falar com o AR que não entraremos e ele aporta? O prazo é hoje senão eles podem perder a licença.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "time_unknown": true
+    },
+    {
       "id": 23,
       "timestamp": "2025-02-02",
       "date": "2025-02-02",
@@ -873,6 +1060,36 @@
       "attachment": null,
       "urls": [],
       "source_cite": "Revista Oeste, 21/09/2026",
+      "time_unknown": true
+    },
+    {
+      "id": 105,
+      "timestamp": "2025-02-06",
+      "date": "2025-02-06",
+      "time": "",
+      "sender": "Luiz Rennó",
+      "content": "Esquece bet",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
+      "time_unknown": true
+    },
+    {
+      "id": 106,
+      "timestamp": "2025-02-06",
+      "date": "2025-02-06",
+      "time": "",
+      "sender": "Luiz Rennó",
+      "content": "Saímos da bet!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados)",
+      "thread": "bet",
       "time_unknown": true
     },
     {
@@ -1269,6 +1486,18 @@
         "last_message_id": 9
       },
       {
+        "date": "2024-07-09",
+        "message_count": 6,
+        "first_message_id": 93,
+        "last_message_id": 98
+      },
+      {
+        "date": "2024-09-30",
+        "message_count": 2,
+        "first_message_id": 99,
+        "last_message_id": 100
+      },
+      {
         "date": "2024-10-01",
         "message_count": 6,
         "first_message_id": 10,
@@ -1299,10 +1528,28 @@
         "last_message_id": 76
       },
       {
+        "date": "2024-12",
+        "message_count": 3,
+        "first_message_id": 101,
+        "last_message_id": 103
+      },
+      {
+        "date": "2024-12-19",
+        "message_count": 1,
+        "first_message_id": 104,
+        "last_message_id": 104
+      },
+      {
         "date": "2025-02-02",
         "message_count": 2,
         "first_message_id": 23,
         "last_message_id": 24
+      },
+      {
+        "date": "2025-02-06",
+        "message_count": 2,
+        "first_message_id": 105,
+        "last_message_id": 106
       },
       {
         "date": "2025-07-04",
