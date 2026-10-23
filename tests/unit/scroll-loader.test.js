@@ -140,20 +140,34 @@ describe('ScrollLoader', () => {
     expect(loadMessages).toHaveBeenCalledTimes(10);
   });
 
-  it('handles loadMessages errors gracefully', async () => {
-    const failingLoader = vi.fn(() => Promise.reject(new Error('network error')));
+  it('retries a failed date instead of skipping it', async () => {
+    dateIndex = [
+      { date: '2024-02-10', message_count: 1 },
+      { date: '2024-02-11', message_count: 1 },
+    ];
+    const retryingLoader = vi.fn()
+      .mockRejectedValueOnce(new Error('network error'))
+      .mockImplementation((date) =>
+        Promise.resolve([{ id: date, date, content: `msg from ${date}` }])
+      );
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
-    const loader = new ScrollLoader({
-      container,
-      dateIndex: [{ date: '2024-01-01', message_count: 1 }],
-      loadMessages: failingLoader,
-      renderDay,
-    });
+    const loader = new ScrollLoader({ container, dateIndex, loadMessages: retryingLoader, renderDay });
     await loader.init();
 
     expect(consoleSpy).toHaveBeenCalled();
     expect(loader.loadedCount).toBe(0);
+    expect(loader.isFullyLoaded).toBe(false);
+
+    await MockIntersectionObserver.instances[0].trigger(true);
+
+    expect(retryingLoader).toHaveBeenNthCalledWith(1, '2024-02-11');
+    expect(retryingLoader).toHaveBeenNthCalledWith(2, '2024-02-11');
+    expect(retryingLoader).toHaveBeenNthCalledWith(3, '2024-02-10');
+    expect(loader.loadedCount).toBe(2);
+    expect(loader.isFullyLoaded).toBe(true);
+    expect(Array.from(container.querySelectorAll('[data-date]'), el => el.dataset.date))
+      .toEqual(['2024-02-10', '2024-02-11']);
     consoleSpy.mockRestore();
   });
 

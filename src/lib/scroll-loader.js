@@ -66,11 +66,14 @@ export class ScrollLoader {
     const scrollTopBefore = this._container.scrollTop;
 
     let loaded = 0;
+    let failed = false;
     while (loaded < count && this._nextIndex >= 0) {
       const entry = this._dateIndex[this._nextIndex];
-      this._nextIndex--;
 
-      if (this._loadedDates.has(entry.date)) continue;
+      if (this._loadedDates.has(entry.date)) {
+        this._nextIndex--;
+        continue;
+      }
 
       try {
         const messages = await this._loadMessages(entry.date);
@@ -84,9 +87,12 @@ export class ScrollLoader {
         }
 
         this._loadedDates.add(entry.date);
+        this._nextIndex--;
         loaded++;
       } catch (err) {
         console.error(`Failed to load day ${entry.date}:`, err);
+        failed = true;
+        break;
       }
     }
 
@@ -102,6 +108,8 @@ export class ScrollLoader {
     if (this._nextIndex < 0 && this._sentinel) {
       this._observer?.unobserve(this._sentinel);
     }
+
+    return failed;
   }
 
   /**
@@ -113,7 +121,8 @@ export class ScrollLoader {
   async _loadUntilOutOfRange() {
     while (!this._loading && this._nextIndex >= 0) {
       const loadedBefore = this._loadedDates.size;
-      await this._loadBatch(LOAD_MORE_DAYS);
+      const failed = await this._loadBatch(LOAD_MORE_DAYS);
+      if (failed) return;
       if (this._nextIndex < 0) return;
       if (this._container.scrollHeight > this._container.clientHeight + 200) return;
       if (this._loadedDates.size === loadedBefore) return;
