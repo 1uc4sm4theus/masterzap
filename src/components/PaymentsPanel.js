@@ -30,6 +30,16 @@ export const PAYMENTS = [
   ['Fabiano Zettel', 'Fundo Leal', '08/07/2024', 'R$ 15 milhões'],
   ['Fabiano Zettel', 'Fundo Arleen', '10/02/2025', 'R$ 14.521.851,17'],
   ['Fabiano Zettel', 'Igreja Batista da Lagoinha Belvedere', '24/12/2024 – 08/12/2025', 'R$ 19,205 milhões'],
+  // Aniversário no Rosewood (Sra. Yasmin) — orçamento enviado por Thatiane Prime em 29/05/2024; DV autorizou "Pode seguir" em 31/05/2024
+  ['Daniel Vorcaro (aporte via Thatiane Prime)', 'Rosewood — aniversário (Sra. Yasmin)', 'Até 29/05/2024', 'R$ 690.036,00 (PAGO)'],
+  ['Daniel Vorcaro (aporte via Thatiane Prime)', 'Decoração — aniversário Rosewood', '29/05/2024 (orçamento)', 'R$ 176.600,00 + 13% NF + R$ 14.000,00 (montagem) ≈ R$ 215.378,00'],
+  ['Daniel Vorcaro (aporte via Thatiane Prime)', 'Iluminação e vídeo — aniversário Rosewood', '29/05/2024 (orçamento)', 'R$ 195.665,96'],
+  ['Daniel Vorcaro (aporte via Thatiane Prime)', 'DJ Brunetta — aniversário Rosewood', '29/05/2024 (orçamento)', 'R$ 5.000,00'],
+  ['Daniel Vorcaro (aporte via Thatiane Prime)', 'Produção Executiva — aniversário Rosewood', '29/05/2024 (orçamento)', 'R$ 65.000,00'],
+  ['Daniel Vorcaro (aporte via Thatiane Prime)', 'Lembrancinhas — aniversário Rosewood', '29/05/2024 (orçamento)', 'R$ 35.940,00'],
+  ['Daniel Vorcaro (aporte via Thatiane Prime)', 'Dennis DJ — aniversário Rosewood', '29/05/2024 (orçamento)', 'R$ 450.000,00 cachê + R$ 110.000,00 produção (crédito de evento anterior em Trancoso abatido; restam R$ 20.000,00 a pagar)'],
+  ['Daniel Vorcaro (aporte via Thatiane Prime)', 'Os Locos — aniversário Rosewood', '29/05/2024 (orçamento)', 'R$ 35.000,00 cachê (som incluído no pacote Rosewood)'],
+  ['Daniel Vorcaro (aporte via Thatiane Prime)', 'L7nnon — aniversário Rosewood', '29/05/2024 (orçamento)', 'R$ 250.000,00 cachê + despesas a confirmar (estimativa +R$ 50.000,00)'],
 ].map(([origin, recipient, date, amount]) => ({ origin, recipient, date, amount }));
 
 export function renderPaymentsPanel(payments = PAYMENTS) {
