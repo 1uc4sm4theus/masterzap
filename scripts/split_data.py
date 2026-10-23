@@ -164,7 +164,12 @@ def describe_report_document():
     }
 
 
-CALL_RE_PT = re.compile(r"^Chamada de (voz|v[ií]deo)(?: — duração (\d{1,2}:\d{2}))?( perdida)?", re.I)
+CALL_RE_PT = re.compile(
+    r"^(?:chamada|liga[çc][ãa]o) de (voz|v[ií]deo)"
+    r"(?:\s*[—–-]\s*dura[çc]ão:?\s*(\d{1,2}:\d{2})|\s+(\d{1,2}:\d{2}))?"
+    r"( perdida)?$",
+    re.I,
+)
 CALL_RE_EN = re.compile(r"^(Missed )?(Voice|Video) call(?:, (\d+) (min|sec)|, (No answer)|, (Ended)|, (Tap to call back))?", re.I)
 
 
@@ -177,12 +182,14 @@ def describe_call(msg):
     Both become the same record. Returns None for a line that is not a call.
     """
     text = (msg.get("content") or "").strip()
+    if text.startswith("[") and text.endswith("]"):
+        text = text[1:-1].strip()
     kind, status, duration = None, None, None
     m = CALL_RE_PT.match(text)
     if m:
         kind = "video" if m.group(1).lower().startswith("v") and "d" in m.group(1).lower() else "voice"
-        duration = m.group(2)
-        status = "missed" if m.group(3) else ("completed" if duration else "ended")
+        duration = m.group(2) or m.group(3)
+        status = "missed" if m.group(4) else ("completed" if duration else "ended")
     else:
         m = CALL_RE_EN.match(text)
         if not m:
