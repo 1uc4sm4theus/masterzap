@@ -18,7 +18,7 @@ describe('calls.json', () => {
   });
 
   it('is newest first', () => {
-    const stamps = calls.map(c => c.timestamp);
+    const stamps = calls.map(c => c.timestamp || `${c.date}T`);
     expect(stamps).toEqual([...stamps].sort().reverse());
   });
 
@@ -31,10 +31,23 @@ describe('calls.json', () => {
   });
 
   it('reads the Portuguese of the report', () => {
-    const c = calls.find(x => x.conversation_id === 'fabio-faria' && x.message_id === 134);
+    const c = calls.find(x => x.conversation_id === 'fabio-faria' && x.duration === '04:34');
     expect(c).toMatchObject({ kind: 'voice', status: 'completed', duration: '04:34', outgoing: false });
-    const missed = calls.find(x => x.conversation_id === 'fabio-faria' && x.message_id === 88);
+    const missed = calls.find(x => x.conversation_id === 'fabio-faria' && x.status === 'missed' && !x.outgoing);
     expect(missed).toMatchObject({ kind: 'voice', status: 'missed', outgoing: false });
+  });
+
+  it('includes Flávio Bolsonaro calls written in bracketed Portuguese', () => {
+    const flavioCalls = calls.filter(c => c.conversation_id === 'flavio-bolsonaro');
+    expect(flavioCalls).toHaveLength(6);
+    expect(flavioCalls).toEqual(expect.arrayContaining([
+      expect.objectContaining({ message_id: 9, kind: 'voice', status: 'completed', duration: '02:38', outgoing: false }),
+      expect.objectContaining({ message_id: 14, kind: 'voice', status: 'completed', duration: '00:45', outgoing: false }),
+      expect.objectContaining({ message_id: 15, kind: 'voice', status: 'completed', duration: '00:25', outgoing: false }),
+      expect.objectContaining({ message_id: 19, kind: 'voice', status: 'completed', duration: '01:50', outgoing: false }),
+      expect.objectContaining({ message_id: 64, kind: 'voice', status: 'missed', outgoing: false }),
+      expect.objectContaining({ message_id: 67, kind: 'voice', status: 'missed', outgoing: false }),
+    ]));
   });
 
   it('reads the English of the export', () => {
