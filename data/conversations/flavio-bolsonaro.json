@@ -7,29 +7,189 @@
     "saved_as": null,
     "phone": null,
     "date_range": {
-      "start": "2025-09-08",
+      "start": "2025-08-20",
       "end": "2025-11-16"
     },
-    "total_messages": 55,
-    "source": "The Intercept Brasil (mai/2026) + relatório PF com sigilo parcialmente levantado (set/2026), conforme reprodução na imprensa",
-    "note": "Áudio de 08/09/2025 é o pedido de parcelas do filme Dark Horse. Horários de 24/09, 01/10, 22/10, 04/11, 07/11, 15/11 e 16/11 vêm das reportagens que reproduziram os prints. Mensagens de visualização única e ligações não têm conteúdo textual integral."
+    "total_messages": 73,
+    "source": "The Intercept Brasil (mai/2026) + relatório PF com sigilo parcialmente levantado (set/2026), conforme reprodução na imprensa + Arkanto/VorcaZap (Inq 5070 STF; prints publicados pelo Metrópoles em 12/09/2026 e trechos do Estadão em 24/09/2026)",
+    "note": "Áudio de 08/09/2025 é o pedido de parcelas do filme Dark Horse. Mensagens de visualização única e ligações não têm conteúdo textual integral. Trechos publicados — a conversa completa não é pública; o WhatsApp de Flávio apagava mensagens após 90 dias e a perícia só recuperou de 20/08 a 16/11/2025. Horários com segundos e as mensagens com campo source_cite foram incorporados do Arkanto; mensagens com time_unknown têm data conhecida mas horário não publicado (ordem conforme a fonte). Campo time_refined marca horários que antes eram aproximados (ex.: áudio de 08/09, antes 00:00:00)."
   },
   "messages": [
     {
       "id": 1,
-      "timestamp": "2025-09-08T00:00:00",
+      "timestamp": "2025-08-20T17:22:00",
+      "date": "2025-08-20",
+      "time": "17:22:00",
+      "sender": "DV",
+      "content": "21 pode ser",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Estadão, 24/09/2026"
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-08-20",
+      "date": "2025-08-20",
+      "time": "",
+      "sender": "Flávio Bolsonaro",
+      "content": "Blz",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "time_unknown": true,
+      "source_cite": "Estadão, 24/09/2026"
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-08-20T21:47:00",
+      "date": "2025-08-20",
+      "time": "21:47:00",
+      "sender": "Flávio Bolsonaro",
+      "content": "A caminho",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Estadão, 24/09/2026"
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-09-08T22:11:25",
       "date": "2025-09-08",
-      "time": "00:00:00",
+      "time": "22:11:25",
       "sender": "Flávio Bolsonaro",
       "content": "Irmão, preferi te mandar o áudio aqui para você ouvir com calma. Bom, aqui a gente tá passando por um dos momentos mais difíceis da nossa vida, né? Não sei como é que vai ser daqui para frente, como é que isso tudo vai acabar, mas tá na mão de Deus aí. E você também, eu sei que você tá passando por um momento dificílimo aí também, essa confusão toda, né? Sem saber exatamente como é que vai caminhar isso tudo.\n\nE apesar de você ter dado liberdade, Daniel, de a gente te cobrar, eu fico sem graça de ficar te cobrando, tá? Mas enfim, é porque tá num momento muito decisivo aqui do filme e como tem muita parcela para trás, cara, tá todo mundo tenso e eu fico preocupado aqui com o efeito contrário do que a gente sonhou pro filme, né?\n\nImagina a gente dando calote num Jim Caviezel, num Cyrus, os caras, pô, renomadíssimos lá no cinema americano, mundial. Pô, ia ser muito ruim, né? Todo efeito positivo que a gente tem certeza que vai vir com esse filme pode ter o efeito elevado a menos um aí, cara.\n\nEntão, se você puder me dar um toque, uma posição aí, Daniel, porque a gente precisa saber o que que faz, cara, da vida, porque já tem muita conta para pagar esse mês e o mês seguinte também. E agora que é a reta final, que a gente não pode vacilar, não pode não honrar com os compromissos aqui, porque senão a gente perde tudo, cara: perde contrato, perde ator, perde diretor, perde equipe, perde tudo. Puder me dar um toque aí, irmão? Desculpa o áudio longo aí, tá? Um abração. Fica com Deus, cara.",
       "type": "audio",
       "audio_src": "/assets/audio-flavio-bolsonaro.mp3",
       "is_edited": false,
       "attachment": "audio-flavio-bolsonaro.mp3",
-      "urls": []
+      "urls": [],
+      "source_cite": "print 19 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 2,
+      "id": 5,
+      "timestamp": "2025-09-08T22:11:41",
+      "date": "2025-09-08",
+      "time": "22:11:41",
+      "sender": "DV",
+      "content": "Fala irmao",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 19 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-09-08T22:11:47",
+      "date": "2025-09-08",
+      "time": "22:11:47",
+      "sender": "Flávio Bolsonaro",
+      "content": "Preferi te mandar um áudio pra vc ouvir com calma aí, mermao! abs!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 19 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-09-08T22:12:02",
+      "date": "2025-09-08",
+      "time": "22:12:02",
+      "sender": "DV",
+      "content": "Te peço desculpas, semana passada foi muito dificil pra mim",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 19 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-09-08T22:12:06",
+      "date": "2025-09-08",
+      "time": "22:12:06",
+      "sender": "DV",
+      "content": "Eu vou resolver amanha",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 19 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-09-08T22:12:11",
+      "date": "2025-09-08",
+      "time": "22:12:11",
+      "sender": "Flávio Bolsonaro",
+      "content": "[ligação de voz 02:38]",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 19 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-09-17T12:51:56",
+      "date": "2025-09-17",
+      "time": "12:51:56",
+      "sender": "DV",
+      "content": "Opa",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 21 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-09-17T12:52:01",
+      "date": "2025-09-17",
+      "time": "12:52:01",
+      "sender": "DV",
+      "content": "14:30?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 21 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-09-17T12:52:10",
+      "date": "2025-09-17",
+      "time": "12:52:10",
+      "sender": "Flávio Bolsonaro",
+      "content": "Hop",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "print 21 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-09-17T12:52:17",
+      "date": "2025-09-17",
+      "time": "12:52:17",
+      "sender": "Flávio Bolsonaro",
+      "content": "Blz",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "quoted": "14:30?",
+      "source_cite": "print 21 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 14,
       "timestamp": "2025-09-24T13:38:00",
       "date": "2025-09-24",
       "time": "13:38:00",
@@ -41,7 +201,7 @@
       "urls": []
     },
     {
-      "id": 3,
+      "id": 15,
       "timestamp": "2025-09-24T17:46:00",
       "date": "2025-09-24",
       "time": "17:46:00",
@@ -53,7 +213,7 @@
       "urls": []
     },
     {
-      "id": 4,
+      "id": 16,
       "timestamp": "2025-09-24T21:25:00",
       "date": "2025-09-24",
       "time": "21:25:00",
@@ -65,7 +225,7 @@
       "urls": []
     },
     {
-      "id": 5,
+      "id": 17,
       "timestamp": "2025-09-24T21:53:00",
       "date": "2025-09-24",
       "time": "21:53:00",
@@ -77,7 +237,7 @@
       "urls": []
     },
     {
-      "id": 6,
+      "id": 18,
       "timestamp": "2025-09-24T21:59:00",
       "date": "2025-09-24",
       "time": "21:59:00",
@@ -89,7 +249,7 @@
       "urls": []
     },
     {
-      "id": 7,
+      "id": 19,
       "timestamp": "2025-09-24T22:00:00",
       "date": "2025-09-24",
       "time": "22:00:00",
@@ -101,7 +261,7 @@
       "urls": []
     },
     {
-      "id": 8,
+      "id": 20,
       "timestamp": "2025-10-01T13:00:00",
       "date": "2025-10-01",
       "time": "13:00:00",
@@ -113,7 +273,7 @@
       "urls": []
     },
     {
-      "id": 9,
+      "id": 21,
       "timestamp": "2025-10-01T13:00:01",
       "date": "2025-10-01",
       "time": "13:00:01",
@@ -125,7 +285,7 @@
       "urls": []
     },
     {
-      "id": 10,
+      "id": 22,
       "timestamp": "2025-10-01T17:46:00",
       "date": "2025-10-01",
       "time": "17:46:00",
@@ -137,7 +297,7 @@
       "urls": []
     },
     {
-      "id": 11,
+      "id": 23,
       "timestamp": "2025-10-01T17:46:01",
       "date": "2025-10-01",
       "time": "17:46:01",
@@ -149,19 +309,21 @@
       "urls": []
     },
     {
-      "id": 12,
-      "timestamp": "2025-10-22T08:54:00",
+      "id": 24,
+      "timestamp": "2025-10-22T08:54:32",
       "date": "2025-10-22",
-      "time": "08:54:00",
+      "time": "08:54:32",
       "sender": "Flávio Bolsonaro",
       "content": "Bom dia, mermao!\nJá estamos no terceiro dia de gravação.\nEstamos no limite.",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 22 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 13,
+      "id": 25,
       "timestamp": "2025-10-22T09:03:00",
       "date": "2025-10-22",
       "time": "09:03:00",
@@ -173,19 +335,21 @@
       "urls": []
     },
     {
-      "id": 14,
-      "timestamp": "2025-10-22T09:22:00",
+      "id": 26,
+      "timestamp": "2025-10-22T09:22:49",
       "date": "2025-10-22",
-      "time": "09:22:00",
+      "time": "09:22:49",
       "sender": "DV",
       "content": "Deixa comigo irmao, vou ver agora",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 22 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 15,
+      "id": 27,
       "timestamp": "2025-10-22T09:44:00",
       "date": "2025-10-22",
       "time": "09:44:00",
@@ -197,55 +361,63 @@
       "urls": []
     },
     {
-      "id": 16,
-      "timestamp": "2025-10-22T10:42:00",
+      "id": 28,
+      "timestamp": "2025-10-22T10:42:54",
       "date": "2025-10-22",
-      "time": "10:42:00",
+      "time": "10:42:54",
       "sender": "Flávio Bolsonaro",
       "content": "Topa jantar com o Jim Caviezel e o Cyrus em São Paulo no dia 2/Nov (segunda)? Totalmente reservado.",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 23 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 17,
-      "timestamp": "2025-10-22T10:43:00",
+      "id": 29,
+      "timestamp": "2025-10-22T10:43:37",
       "date": "2025-10-22",
-      "time": "10:43:00",
+      "time": "10:43:37",
       "sender": "DV",
       "content": "Topo claro",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 23 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 18,
-      "timestamp": "2025-10-22T10:43:01",
+      "id": 30,
+      "timestamp": "2025-10-22T10:43:42",
       "date": "2025-10-22",
-      "time": "10:43:01",
+      "time": "10:43:42",
       "sender": "DV",
       "content": "Será onde? Quer fazer na minha casa?",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 23 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 19,
-      "timestamp": "2025-10-22T10:44:00",
+      "id": 31,
+      "timestamp": "2025-10-22T10:44:12",
       "date": "2025-10-22",
-      "time": "10:44:00",
+      "time": "10:44:12",
       "sender": "Flávio Bolsonaro",
       "content": "Pode ser na sua casa sim! Acho até melhor!",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 23 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 20,
+      "id": 32,
       "timestamp": "2025-10-22T10:46:00",
       "date": "2025-10-22",
       "time": "10:46:00",
@@ -257,7 +429,7 @@
       "urls": []
     },
     {
-      "id": 21,
+      "id": 33,
       "timestamp": "2025-10-22T10:46:30",
       "date": "2025-10-22",
       "time": "10:46:30",
@@ -269,79 +441,91 @@
       "urls": []
     },
     {
-      "id": 22,
-      "timestamp": "2025-10-22T10:47:00",
+      "id": 34,
+      "timestamp": "2025-10-22T10:47:15",
       "date": "2025-10-22",
-      "time": "10:47:00",
+      "time": "10:47:15",
       "sender": "Flávio Bolsonaro",
       "content": "Jim chega dia 30/Out, acho que fica a semana toda gravando.",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 23 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 23,
-      "timestamp": "2025-10-22T10:49:00",
+      "id": 35,
+      "timestamp": "2025-10-22T10:49:31",
       "date": "2025-10-22",
-      "time": "10:49:00",
+      "time": "10:49:31",
       "sender": "DV",
       "content": "Se puder ser terça ou quarta seria melhor pra mim. Mas só se der",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 23 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 24,
-      "timestamp": "2025-10-22T11:51:00",
+      "id": 36,
+      "timestamp": "2025-10-22T11:51:49",
       "date": "2025-10-22",
-      "time": "11:51:00",
+      "time": "11:51:49",
       "sender": "Flávio Bolsonaro",
       "content": "Na quinta ou na sexta funciona pra vc?",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 23 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 25,
-      "timestamp": "2025-10-22T12:42:00",
+      "id": 37,
+      "timestamp": "2025-10-22T12:42:26",
       "date": "2025-10-22",
-      "time": "12:42:00",
+      "time": "12:42:26",
       "sender": "DV",
       "content": "Funciona sim! Quinta melhor",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 23 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 26,
-      "timestamp": "2025-10-22T15:16:00",
+      "id": 38,
+      "timestamp": "2025-10-22T15:16:28",
       "date": "2025-10-22",
-      "time": "15:16:00",
+      "time": "15:16:28",
       "sender": "DV",
       "content": "Tá em BSB?",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 23 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 27,
-      "timestamp": "2025-10-22T15:27:00",
+      "id": 39,
+      "timestamp": "2025-10-22T15:27:33",
       "date": "2025-10-22",
-      "time": "15:27:00",
+      "time": "15:27:33",
       "sender": "Flávio Bolsonaro",
       "content": "Vou avisar lá. Tô sim",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 23 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 28,
+      "id": 40,
       "timestamp": "2025-10-22T15:28:00",
       "date": "2025-10-22",
       "time": "15:28:00",
@@ -353,7 +537,7 @@
       "urls": []
     },
     {
-      "id": 29,
+      "id": 41,
       "timestamp": "2025-10-22T17:38:00",
       "date": "2025-10-22",
       "time": "17:38:00",
@@ -365,7 +549,7 @@
       "urls": []
     },
     {
-      "id": 30,
+      "id": 42,
       "timestamp": "2025-10-22T17:39:00",
       "date": "2025-10-22",
       "time": "17:39:00",
@@ -377,7 +561,7 @@
       "urls": []
     },
     {
-      "id": 31,
+      "id": 43,
       "timestamp": "2025-10-22T20:09:00",
       "date": "2025-10-22",
       "time": "20:09:00",
@@ -389,7 +573,7 @@
       "urls": []
     },
     {
-      "id": 32,
+      "id": 44,
       "timestamp": "2025-10-22T20:09:01",
       "date": "2025-10-22",
       "time": "20:09:01",
@@ -401,7 +585,7 @@
       "urls": []
     },
     {
-      "id": 33,
+      "id": 45,
       "timestamp": "2025-10-22T20:10:00",
       "date": "2025-10-22",
       "time": "20:10:00",
@@ -413,7 +597,7 @@
       "urls": []
     },
     {
-      "id": 34,
+      "id": 46,
       "timestamp": "2025-10-22T20:10:01",
       "date": "2025-10-22",
       "time": "20:10:01",
@@ -425,7 +609,7 @@
       "urls": []
     },
     {
-      "id": 35,
+      "id": 47,
       "timestamp": "2025-10-22T20:10:02",
       "date": "2025-10-22",
       "time": "20:10:02",
@@ -437,7 +621,7 @@
       "urls": []
     },
     {
-      "id": 36,
+      "id": 48,
       "timestamp": "2025-10-22T20:10:03",
       "date": "2025-10-22",
       "time": "20:10:03",
@@ -449,7 +633,7 @@
       "urls": []
     },
     {
-      "id": 37,
+      "id": 49,
       "timestamp": "2025-10-22T20:11:00",
       "date": "2025-10-22",
       "time": "20:11:00",
@@ -461,7 +645,7 @@
       "urls": []
     },
     {
-      "id": 38,
+      "id": 50,
       "timestamp": "2025-10-22T20:11:01",
       "date": "2025-10-22",
       "time": "20:11:01",
@@ -473,7 +657,7 @@
       "urls": []
     },
     {
-      "id": 39,
+      "id": 51,
       "timestamp": "2025-10-22T20:12:00",
       "date": "2025-10-22",
       "time": "20:12:00",
@@ -485,7 +669,7 @@
       "urls": []
     },
     {
-      "id": 40,
+      "id": 52,
       "timestamp": "2025-11-04T08:24:00",
       "date": "2025-11-04",
       "time": "08:24:00",
@@ -497,7 +681,7 @@
       "urls": []
     },
     {
-      "id": 41,
+      "id": 53,
       "timestamp": "2025-11-04T17:42:00",
       "date": "2025-11-04",
       "time": "17:42:00",
@@ -509,7 +693,7 @@
       "urls": []
     },
     {
-      "id": 42,
+      "id": 54,
       "timestamp": "2025-11-04T17:42:01",
       "date": "2025-11-04",
       "time": "17:42:01",
@@ -521,7 +705,7 @@
       "urls": []
     },
     {
-      "id": 43,
+      "id": 55,
       "timestamp": "2025-11-04T17:44:00",
       "date": "2025-11-04",
       "time": "17:44:00",
@@ -533,7 +717,7 @@
       "urls": []
     },
     {
-      "id": 44,
+      "id": 56,
       "timestamp": "2025-11-04T17:50:00",
       "date": "2025-11-04",
       "time": "17:50:00",
@@ -545,44 +729,119 @@
       "urls": []
     },
     {
-      "id": 45,
-      "timestamp": "2025-11-07T20:25:00",
+      "id": 57,
+      "timestamp": "2025-11-07T20:25:38",
       "date": "2025-11-07",
-      "time": "20:25:00",
+      "time": "20:25:38",
       "sender": "Flávio Bolsonaro",
       "content": "[vídeo de visualização única] Tá perdendo, irmão! Tudo isso só está sendo possível por causa de vc!",
       "type": "video",
       "is_edited": false,
       "attachment": null,
       "urls": [],
-      "view_once": true
+      "view_once": true,
+      "duration": "00:15",
+      "source_cite": "print 27 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 46,
-      "timestamp": "2025-11-07T21:40:00",
+      "id": 58,
+      "timestamp": "2025-11-07T20:26:05",
       "date": "2025-11-07",
-      "time": "21:40:00",
+      "time": "20:26:05",
+      "sender": "Flávio Bolsonaro",
+      "content": "[imagem de visualização única]",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "view_once": true,
+      "source_cite": "print 27 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 59,
+      "timestamp": "2025-11-07T21:40:58",
+      "date": "2025-11-07",
+      "time": "21:40:58",
       "sender": "DV",
       "content": "Que demais",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 27 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 47,
-      "timestamp": "2025-11-07T21:44:00",
+      "id": 60,
+      "timestamp": "2025-11-07T21:44:58",
       "date": "2025-11-07",
-      "time": "21:44:00",
+      "time": "21:44:58",
       "sender": "DV",
       "content": "Ficou perfeito",
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source_cite": "print 27 · Metrópoles, 12/09/2026",
+      "time_refined": true
     },
     {
-      "id": 48,
+      "id": 61,
+      "timestamp": "2025-11-11T11:38:48",
+      "date": "2025-11-11",
+      "time": "11:38:48",
+      "sender": "Flávio Bolsonaro",
+      "content": "Visualização única. Vídeo de divulgação do filme, reproduzido pela PF: “This is The Dark Horse — A true story that will be told to the world” / “On the streets of São Paulo”",
+      "type": "video",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "view_once": true,
+      "source_cite": "print 30 · Metrópoles, 12/09/2026"
+    },
+    {
+      "id": 62,
+      "timestamp": "2025-11-13T09:13:00",
+      "date": "2025-11-13",
+      "time": "09:13:00",
+      "sender": "Flávio Bolsonaro",
+      "content": "Fala mermao! Bom dia! Pode atender?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Estadão, 24/09/2026"
+    },
+    {
+      "id": 63,
+      "timestamp": "2025-11-13",
+      "date": "2025-11-13",
+      "time": "",
+      "sender": "DV",
+      "content": "Fala Irmao, te chamo em 30 min",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "time_unknown": true,
+      "source_cite": "Estadão, 24/09/2026"
+    },
+    {
+      "id": 64,
+      "timestamp": "2025-11-14T12:36:00",
+      "date": "2025-11-14",
+      "time": "12:36:00",
+      "sender": "Flávio Bolsonaro",
+      "content": "[chamada de voz perdida]",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "Estadão, 24/09/2026"
+    },
+    {
+      "id": 65,
       "timestamp": "2025-11-15T15:46:00",
       "date": "2025-11-15",
       "time": "15:46:00",
@@ -594,7 +853,7 @@
       "urls": []
     },
     {
-      "id": 49,
+      "id": 66,
       "timestamp": "2025-11-15T15:47:00",
       "date": "2025-11-15",
       "time": "15:47:00",
@@ -606,7 +865,21 @@
       "urls": []
     },
     {
-      "id": 50,
+      "id": 67,
+      "timestamp": "2025-11-16",
+      "date": "2025-11-16",
+      "time": "",
+      "sender": "Flávio Bolsonaro",
+      "content": "[chamada de voz perdida]",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "time_unknown": true,
+      "source_cite": "Estadão, 24/09/2026"
+    },
+    {
+      "id": 68,
       "timestamp": "2025-11-16T10:37:00",
       "date": "2025-11-16",
       "time": "10:37:00",
@@ -618,7 +891,7 @@
       "urls": []
     },
     {
-      "id": 51,
+      "id": 69,
       "timestamp": "2025-11-16T15:38:00",
       "date": "2025-11-16",
       "time": "15:38:00",
@@ -631,7 +904,7 @@
       "view_once": true
     },
     {
-      "id": 52,
+      "id": 70,
       "timestamp": "2025-11-16T15:43:00",
       "date": "2025-11-16",
       "time": "15:43:00",
@@ -644,7 +917,7 @@
       "view_once": true
     },
     {
-      "id": 53,
+      "id": 71,
       "timestamp": "2025-11-16T15:46:00",
       "date": "2025-11-16",
       "time": "15:46:00",
@@ -656,7 +929,7 @@
       "urls": []
     },
     {
-      "id": 54,
+      "id": 72,
       "timestamp": "2025-11-16T15:52:00",
       "date": "2025-11-16",
       "time": "15:52:00",
@@ -669,7 +942,7 @@
       "view_once": true
     },
     {
-      "id": 55,
+      "id": 73,
       "timestamp": "2025-11-16T15:53:00",
       "date": "2025-11-16",
       "time": "15:53:00",
@@ -684,52 +957,82 @@
   "index": {
     "dates": [
       {
-        "date": "2025-09-08",
-        "message_count": 1,
+        "date": "2025-08-20",
+        "message_count": 3,
         "first_message_id": 1,
-        "last_message_id": 1
+        "last_message_id": 3
+      },
+      {
+        "date": "2025-09-08",
+        "message_count": 6,
+        "first_message_id": 4,
+        "last_message_id": 9
+      },
+      {
+        "date": "2025-09-17",
+        "message_count": 4,
+        "first_message_id": 10,
+        "last_message_id": 13
       },
       {
         "date": "2025-09-24",
         "message_count": 6,
-        "first_message_id": 2,
-        "last_message_id": 7
+        "first_message_id": 14,
+        "last_message_id": 19
       },
       {
         "date": "2025-10-01",
         "message_count": 4,
-        "first_message_id": 8,
-        "last_message_id": 11
+        "first_message_id": 20,
+        "last_message_id": 23
       },
       {
         "date": "2025-10-22",
         "message_count": 28,
-        "first_message_id": 12,
-        "last_message_id": 39
+        "first_message_id": 24,
+        "last_message_id": 51
       },
       {
         "date": "2025-11-04",
         "message_count": 5,
-        "first_message_id": 40,
-        "last_message_id": 44
+        "first_message_id": 52,
+        "last_message_id": 56
       },
       {
         "date": "2025-11-07",
-        "message_count": 3,
-        "first_message_id": 45,
-        "last_message_id": 47
+        "message_count": 4,
+        "first_message_id": 57,
+        "last_message_id": 60
+      },
+      {
+        "date": "2025-11-11",
+        "message_count": 1,
+        "first_message_id": 61,
+        "last_message_id": 61
+      },
+      {
+        "date": "2025-11-13",
+        "message_count": 2,
+        "first_message_id": 62,
+        "last_message_id": 63
+      },
+      {
+        "date": "2025-11-14",
+        "message_count": 1,
+        "first_message_id": 64,
+        "last_message_id": 64
       },
       {
         "date": "2025-11-15",
         "message_count": 2,
-        "first_message_id": 48,
-        "last_message_id": 49
+        "first_message_id": 65,
+        "last_message_id": 66
       },
       {
         "date": "2025-11-16",
-        "message_count": 6,
-        "first_message_id": 50,
-        "last_message_id": 55
+        "message_count": 7,
+        "first_message_id": 67,
+        "last_message_id": 73
       }
     ]
   }

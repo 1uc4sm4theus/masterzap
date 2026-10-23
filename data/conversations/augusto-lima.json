@@ -10,9 +10,9 @@
       "start": "2024-12-17",
       "end": "2025-04-03"
     },
-    "total_messages": 5,
-    "source": "Mensagens extraídas pela PF do celular de Vorcaro, conforme reportagens da imprensa (CNN Brasil via Brasil 247; FOCO MT) e trecho fornecido pelo usuário. Não são transcrições integrais.",
-    "note": "Registro parcial reconstruído de relatos jornalísticos e de captura de tela fornecida pelo usuário. Mensagens 1-2 (dez/2024): data aproximada, sem horário. Mensagens 3-4 (03/04/2025): horários exatos conforme a captura (fuso -03:00); grafia da mensagem 4 preservada como no print ('materia', sem acento). Na captura, o contato do outro lado aparece como 'Augusto Ebal'; aqui mantido como 'Augusto Lima'. A mensagem 5 vem de relato da imprensa ('cerca de seis minutos' após o link), mas a captura mostra apenas uma chamada de voz perdida às 08:16:58 (~42 min após o link), sem rótulo de quem ligou; por isso a mensagem 5 está sem horário."
+    "total_messages": 7,
+    "source": "Mensagens extraídas pela PF do celular de Vorcaro, conforme reportagens da imprensa (CNN Brasil via Brasil 247; FOCO MT; Veja) e trecho fornecido pelo usuário. Não são transcrições integrais.",
+    "note": "Registro parcial reconstruído de relatos jornalísticos e de captura de tela fornecida pelo usuário. Mensagens 1-2 (dez/2024) e 3-4 (fev/2025): data aproximada, sem horário. Mensagens 5-6 (03/04/2025): horários exatos conforme a captura (fuso -03:00); grafia da mensagem 6 preservada como no print ('materia', sem acento). Na captura, o contato do outro lado aparece como 'Augusto Ebal'; aqui mantido como 'Augusto Lima'. A mensagem 7 vem de relato da imprensa ('cerca de seis minutos' após o link), mas a captura mostra apenas uma chamada de voz perdida às 08:16:58 (~42 min após o link), sem rótulo de quem ligou; por isso a mensagem 7 está sem horário. Mensagens 3-4: citadas pela Veja; a reportagem não informa o dia exato nem se a resposta de Lima foi enviada em uma única mensagem ou em várias; o trecho foi mantido como publicado, incluindo 'par a' e o '(sic)' da própria reportagem."
   },
   "messages": [
     {
@@ -49,6 +49,38 @@
     },
     {
       "id": 3,
+      "timestamp": null,
+      "date": "2025-02",
+      "date_precision": "month",
+      "time": null,
+      "sender": "DV",
+      "content": "Você acha legal fazermos um negócio com Neymar no Will?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "context": "Vorcaro consulta o então sócio sobre contratar o jogador Neymar para um comercial do Will Bank, marca do grupo. Segundo a Veja, o banco teve ações publicitárias cogitadas pelo banqueiro (e, em alguns casos, implementadas) com Luciano Huck, Anitta, Gusttavo Lima e Vinicius Júnior.",
+      "source_ref": "Veja",
+      "is_forwarded": false
+    },
+    {
+      "id": 4,
+      "timestamp": null,
+      "date": "2025-02",
+      "date_precision": "month",
+      "time": null,
+      "sender": "Augusto Lima",
+      "content": "Está queimado com uma série de assuntos pessoais e profissionais. Não passa credibilidade. É descer muito de Vini Jr par a Neymar. Está em final de carreira (sic)",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "context": "Resposta de Lima contrária à contratação de Neymar. A Veja descreve Lima como apontado como uma das pontes de Vorcaro com o PT. Segundo a reportagem, ambos foram presos pela PF meses depois dessa conversa.",
+      "source_ref": "Veja",
+      "is_forwarded": false
+    },
+    {
+      "id": 5,
       "timestamp": "2025-04-03T07:34:48-03:00",
       "date": "2025-04-03",
       "date_precision": "exact",
@@ -65,7 +97,7 @@
       "is_forwarded": true
     },
     {
-      "id": 4,
+      "id": 6,
       "timestamp": "2025-04-03T07:35:55-03:00",
       "date": "2025-04-03",
       "date_precision": "exact",
@@ -81,7 +113,7 @@
       "is_forwarded": false
     },
     {
-      "id": 5,
+      "id": 7,
       "timestamp": null,
       "date": "2025-04-03",
       "date_precision": "day",
@@ -114,6 +146,11 @@
       "topic": "Celular de Augusto Lima (outra fonte)",
       "description": "A PF identificou 74 ligações com o senador Jaques Wagner, além de mensagens sobre aeronaves particulares, ingressos de shows e um apartamento em Salvador (~R$ 2,45 milhões). Material do aparelho do próprio Lima, não do de Vorcaro.",
       "source_ref": "Times Brasil"
+    },
+    {
+      "topic": "Publicidade do Will Bank com celebridades",
+      "description": "Vorcaro consultava Lima sobre escolhas de garotos-propaganda para o Will Bank. Além de Neymar (vetado por Lima), foram cogitadas ou implementadas ações com Luciano Huck, Anitta, Gusttavo Lima e Vinicius Júnior.",
+      "source_ref": "Veja"
     }
   ],
   "index": {
@@ -126,10 +163,17 @@
         "precision": "approximate"
       },
       {
+        "date": "2025-02",
+        "message_count": 2,
+        "first_message_id": 3,
+        "last_message_id": 4,
+        "precision": "month"
+      },
+      {
         "date": "2025-04-03",
         "message_count": 3,
-        "first_message_id": 3,
-        "last_message_id": 5
+        "first_message_id": 5,
+        "last_message_id": 7
       }
     ]
   }

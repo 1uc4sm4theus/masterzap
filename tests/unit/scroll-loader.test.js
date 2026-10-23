@@ -140,6 +140,33 @@ describe('ScrollLoader', () => {
     expect(loadMessages).toHaveBeenCalledTimes(10);
   });
 
+  it('keeps dates in order when loading history after navigating to a search result', async () => {
+    dateIndex = Array.from({ length: 20 }, (_, i) => ({
+      date: `2024-02-${String(i + 1).padStart(2, '0')}`,
+      message_count: 1,
+    }));
+
+    const loader = new ScrollLoader({ container, dateIndex, loadMessages, renderDay });
+    await loader.init();
+    await loader.loadDate('2024-02-05');
+    await MockIntersectionObserver.instances[0].trigger(true);
+
+    expect(Array.from(container.querySelectorAll('[data-date]'), el => el.dataset.date))
+      .toEqual([
+        '2024-02-05',
+        '2024-02-11',
+        '2024-02-12',
+        '2024-02-13',
+        '2024-02-14',
+        '2024-02-15',
+        '2024-02-16',
+        '2024-02-17',
+        '2024-02-18',
+        '2024-02-19',
+        '2024-02-20',
+      ]);
+  });
+
   it('retries a failed date instead of skipping it', async () => {
     dateIndex = [
       { date: '2024-02-10', message_count: 1 },

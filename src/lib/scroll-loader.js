@@ -64,6 +64,12 @@ export class ScrollLoader {
 
     const scrollHeightBefore = this._container.scrollHeight;
     const scrollTopBefore = this._container.scrollTop;
+    const containerTop = this._container.getBoundingClientRect().top;
+    const scrollAnchor = scrollTopBefore > 0
+      ? Array.from(this._container.querySelectorAll('[data-date]'))
+        .find(section => section.getBoundingClientRect().bottom > containerTop)
+      : null;
+    const scrollAnchorTop = scrollAnchor?.getBoundingClientRect().top;
 
     let loaded = 0;
     let failed = false;
@@ -78,13 +84,7 @@ export class ScrollLoader {
       try {
         const messages = await this._loadMessages(entry.date);
         const dayEl = this._renderDay(entry.date, messages);
-
-        // Insert after sentinel (which is always first child)
-        if (this._sentinel.nextSibling) {
-          this._container.insertBefore(dayEl, this._sentinel.nextSibling);
-        } else {
-          this._container.appendChild(dayEl);
-        }
+        this._insertDayInChronologicalOrder(dayEl);
 
         this._loadedDates.add(entry.date);
         this._nextIndex--;
@@ -98,8 +98,13 @@ export class ScrollLoader {
 
     // Preserve scroll position when prepending content
     if (loaded > 0 && scrollTopBefore > 0) {
-      const scrollHeightAfter = this._container.scrollHeight;
-      this._container.scrollTop = scrollTopBefore + (scrollHeightAfter - scrollHeightBefore);
+      if (scrollAnchor?.isConnected) {
+        this._container.scrollTop = scrollTopBefore
+          + scrollAnchor.getBoundingClientRect().top - scrollAnchorTop;
+      } else {
+        const scrollHeightAfter = this._container.scrollHeight;
+        this._container.scrollTop = scrollTopBefore + (scrollHeightAfter - scrollHeightBefore);
+      }
     }
 
     this._loading = false;
@@ -139,6 +144,13 @@ export class ScrollLoader {
     this._scrollToBottom();
   }
 
+  _insertDayInChronologicalOrder(dayEl) {
+    const date = dayEl.dataset.date;
+    const existingSections = Array.from(this._container.querySelectorAll('[data-date]'));
+    const nextSection = existingSections.find(section => section.dataset.date > date);
+    this._container.insertBefore(dayEl, nextSection || null);
+  }
+
   /** Check if all days have been loaded. */
   get isFullyLoaded() {
     return this._nextIndex < 0;
@@ -162,20 +174,7 @@ export class ScrollLoader {
     try {
       const messages = await this._loadMessages(date);
       const dayEl = this._renderDay(date, messages);
-
-      // Insert in chronological order among existing day sections
-      const existingSections = Array.from(this._container.querySelectorAll('.chat-day'));
-      let inserted = false;
-      for (const section of existingSections) {
-        if (section.dataset.date > date) {
-          this._container.insertBefore(dayEl, section);
-          inserted = true;
-          break;
-        }
-      }
-      if (!inserted) {
-        this._container.appendChild(dayEl);
-      }
+      this._insertDayInChronologicalOrder(dayEl);
 
       this._loadedDates.add(date);
       return dayEl;
