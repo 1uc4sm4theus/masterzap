@@ -10,9 +10,9 @@
       "start": "2023-10-19",
       "end": "2025-10-24"
     },
-    "total_messages": 33,
-    "source": "Trechos citados no relatório policial / decisão STF (Operação Compliance Zero — Caso Master). A conversa completa extraída do celular de Daniel Vorcaro não consta publicada na íntegra.",
-    "note": "Luiz Phillipi Machado de Moraes Mourão (vulgo Sicário / Felipe Mourão). Mensagens sem timestamp na fonte ficam com timestamp null. Trechos entre colchetes são paráfrase da PF quando o texto integral não foi reproduzido. Mensagens sem data/hora na fonte recebem data e hora de placeholder (00:00:00) e date_placeholder/timestamp_placeholder = true."
+    "total_messages": 46,
+    "source": "Trechos citados no relatório policial / decisão STF (Operação Compliance Zero — Caso Master) + BBC News Brasil (mensagens extraídas pela PF do celular de Vorcaro; reportagem sobre pedidos de retirada de conteúdo). A conversa completa não consta publicada na íntegra.",
+    "note": "Luiz Phillipi Machado de Moraes Mourão (vulgo Sicário / Felipe Mourão). Mensagens sem timestamp na fonte ficam com timestamp null. Trechos entre colchetes são paráfrase da PF ou da BBC quando o texto integral não foi reproduzido (campo paraphrased; partial_quote = só um trecho foi citado). Mensagens sem data/hora na fonte recebem data e hora de placeholder (00:00:00) e date_placeholder/timestamp_placeholder = true. Mensagens com source_cite vêm da BBC News Brasil; forwarded = encaminhadas por Mourão como relato de terceiros ('os meninos'). A BBC examinou mais de 11 mil registros da conversa e identificou 189 publicações, páginas e contas mencionadas em pedidos ou relatos de retirada (nov/2023 a nov/2025), e Mourão afirma ter derrubado ao menos 17 perfis no Instagram; aqui constam só as mensagens cujo texto foi reproduzido. VERSÃO SÓ DIÁLOGO: removidas paráfrases entre colchetes, anexos sem texto, contatos, chamadas e eventos de sistema; a versão completa está em masterwhats-sicario-master-completo.json."
   },
   "messages": [
     {
@@ -62,51 +62,258 @@
     },
     {
       "id": 4,
-      "timestamp": "2024-03-26T00:00:00",
-      "date": "2024-03-26",
+      "timestamp": "2023-11-01T00:00:00",
+      "date": "2023-11-01",
       "time": "00:00:00",
       "sender": "DV",
-      "content": "[queixa de drones sobrevoando a propriedade]",
+      "content": "Ficou com raiva",
       "type": "text",
       "is_edited": false,
       "attachment": null,
       "urls": [],
       "source_page": null,
       "source_figure": null,
-      "timestamp_placeholder": true
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
     },
     {
       "id": 5,
-      "timestamp": "2024-03-26T00:00:00",
-      "date": "2024-03-26",
+      "timestamp": "2023-11-01T00:00:00",
+      "date": "2023-11-01",
       "time": "00:00:00",
-      "sender": "Sicário",
-      "content": "[oferece viatura; pergunta se abordagem ostensiva ou velada]",
+      "sender": "DV",
+      "content": "De mim e pode postar algo",
       "type": "text",
       "is_edited": false,
       "attachment": null,
       "urls": [],
       "source_page": null,
       "source_figure": null,
-      "timestamp_placeholder": true
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
     },
     {
       "id": 6,
-      "timestamp": "2024-03-26T00:00:00",
-      "date": "2024-03-26",
+      "timestamp": "2023-11-01T00:00:00",
+      "date": "2023-11-01",
       "time": "00:00:00",
       "sender": "DV",
-      "content": "[escolhe abordagem ostensiva]",
+      "content": "Ai temos que tomar e derrubae",
       "type": "text",
       "is_edited": false,
       "attachment": null,
       "urls": [],
       "source_page": null,
       "source_figure": null,
-      "timestamp_placeholder": true
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
     },
     {
       "id": 7,
+      "timestamp": "2023-11-01T00:00:00",
+      "date": "2023-11-01",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Monitora por enquanto",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 8,
+      "timestamp": "2023-11-01T00:00:00",
+      "date": "2023-11-01",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "So monitorar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "note": "Data exata dessa mensagem e da seguinte não publicada; BBC diz apenas 'mais tarde'.",
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 9,
+      "timestamp": "2023-11-01T00:00:00",
+      "date": "2023-11-01",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Nao vamos fazer nada",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 10,
+      "timestamp": "2023-12-12T00:00:00",
+      "date": "2023-12-12",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "Esses são os links positivos que ficaram,pede para dar uma olhada e se tiver algum que vc queira que retire ou que modifique algum me avise",
+      "type": "document",
+      "is_edited": false,
+      "attachment": "documento '720 Postagens' (Google Docs; 42 links em 42 domínios)",
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 11,
+      "timestamp": "2024-01-01T00:00:00",
+      "date": "2024-01-01",
+      "date_approx": "2024-01",
+      "date_placeholder": true,
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Meu socio tava querendo que derrubasse",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "note": "Pedido de retirada de vídeo de drone sobre a Ilha do Topete (perfil My Phantom Toy).",
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 12,
+      "timestamp": "2024-01-01T00:00:00",
+      "date": "2024-01-01",
+      "date_approx": "2024-01",
+      "date_placeholder": true,
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Pq ta expondo ilha dele",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 13,
+      "timestamp": "2024-01-01T00:00:00",
+      "date": "2024-01-01",
+      "date_approx": "2024-01",
+      "date_placeholder": true,
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Derrubar so esse link ne",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 14,
+      "timestamp": "2024-01-01T00:00:00",
+      "date": "2024-01-01",
+      "date_approx": "2024-01",
+      "date_placeholder": true,
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "Banido mestre",
+      "type": "text",
+      "is_edited": false,
+      "attachment": "vídeo da Ilha do Topete encaminhado",
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "note": "Enviada cinco dias depois do pedido, segundo a BBC.",
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 15,
+      "timestamp": "2024-01-31T00:00:00",
+      "date": "2024-01-31",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Derruba esse site",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 16,
+      "timestamp": "2024-01-31T00:00:00",
+      "date": "2024-01-31",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Urgente",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 17,
+      "timestamp": "2024-01-31T00:00:00",
+      "date": "2024-01-31",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Mas deixa sempre no gatilho",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 18,
+      "timestamp": "2024-01-31T00:00:00",
+      "date": "2024-01-31",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "Estamos dominando o site, vamos ficar monitorando, qualquer coisa que sair derrubamos tudo e se precisar, derrubamos o site.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "forwarded": true,
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 19,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -122,7 +329,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 8,
+      "id": 20,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -138,7 +345,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 9,
+      "id": 21,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -154,7 +361,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 10,
+      "id": 22,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -170,7 +377,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 11,
+      "id": 23,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -186,7 +393,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 12,
+      "id": 24,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -202,7 +409,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 13,
+      "id": 25,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -218,7 +425,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 14,
+      "id": 26,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -234,7 +441,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 15,
+      "id": 27,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -250,7 +457,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 16,
+      "id": 28,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -266,7 +473,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 17,
+      "id": 29,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -282,7 +489,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 18,
+      "id": 30,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -298,7 +505,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 19,
+      "id": 31,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -314,7 +521,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 20,
+      "id": 32,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -330,7 +537,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 21,
+      "id": 33,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -346,7 +553,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 22,
+      "id": 34,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -362,51 +569,91 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 23,
-      "timestamp": "2024-10-17T00:00:00",
-      "date": "2024-10-17",
+      "id": 35,
+      "timestamp": "2024-09-02T00:00:00",
+      "date": "2024-09-02",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "pode mandar derrubar esses dois links?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": "link da reportagem da Folha (30/08/2024) e sua reprodução em outro site",
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 36,
+      "timestamp": "2024-09-02T00:00:00",
+      "date": "2024-09-02",
       "time": "00:00:00",
       "sender": "DV",
-      "content": "[avisa que Sicário puxou o cara errado — alvo era Luiz Camasmie; linha no nome do pai idoso]",
+      "content": "Nao sei como vai derrubar folha",
       "type": "text",
       "is_edited": false,
       "attachment": null,
       "urls": [],
       "source_page": null,
       "source_figure": null,
-      "timestamp_placeholder": true
+      "timestamp_placeholder": true,
+      "note": "Resposta no mesmo dia, conforme a ordem da reportagem; horário não publicado.",
+      "source_cite": "BBC News Brasil"
     },
     {
-      "id": 24,
-      "timestamp": "2024-10-18T00:00:00",
-      "date": "2024-10-18",
+      "id": 37,
+      "timestamp": "2024-09-02T00:00:00",
+      "date": "2024-09-02",
       "time": "00:00:00",
       "sender": "Sicário",
-      "content": "[informa que o empresário mora no Morumbi; pergunta providências; afirma equivocadamente que Camasmie vivia na casa onde morou Silvio Santos]",
+      "content": "Já pedi os meninos,pode deixar",
       "type": "text",
       "is_edited": false,
       "attachment": null,
       "urls": [],
       "source_page": null,
       "source_figure": null,
-      "timestamp_placeholder": true
+      "timestamp_placeholder": true,
+      "source_cite": "BBC News Brasil"
     },
     {
-      "id": 25,
-      "timestamp": "2025-07-24T16:28:00",
-      "date": "2025-07-24",
-      "time": "16:28:00",
+      "id": 38,
+      "timestamp": "2024-09-10T00:00:00",
+      "date": "2024-09-10",
+      "time": "00:00:00",
       "sender": "Sicário",
-      "content": "[encaminha 3 PDFs de procedimentos sigilosos da PR-DF: dois Master/BRB e um sobre triplex de R$ 60 mi em SP]",
-      "type": "document",
+      "content": "Sobre o link da folha está em processo para ser removido, enquanto isso estamos em cima",
+      "type": "text",
       "is_edited": false,
-      "attachment": "3x PDF MPF/PR-DF",
+      "attachment": null,
       "urls": [],
       "source_page": null,
-      "source_figure": null
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "note": "BBC: 'oito dias depois' de 02/09/2024.",
+      "source_cite": "BBC News Brasil"
     },
     {
-      "id": 26,
+      "id": 39,
+      "timestamp": "2024-09-25T00:00:00",
+      "date": "2024-09-25",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "Estamos trabalhando para entrar na database do site da Folha de São Paulo para remover do backup. Assim faremos com os outros links também.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "forwarded": true,
+      "note": "A BBC informa que as conversas não demonstram que o acesso tenha ocorrido; a Folha disse não ter registrado ataques.",
+      "source_cite": "BBC News Brasil"
+    },
+    {
+      "id": 40,
       "timestamp": "2025-07-25T00:00:00",
       "date": "2025-07-25",
       "time": "00:00:00",
@@ -421,7 +668,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 27,
+      "id": 41,
       "timestamp": "2025-07-25T00:00:00",
       "date": "2025-07-25",
       "time": "00:00:00",
@@ -436,7 +683,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 28,
+      "id": 42,
       "timestamp": "2025-07-25T00:00:00",
       "date": "2025-07-25",
       "time": "00:00:00",
@@ -451,22 +698,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 29,
-      "timestamp": "2025-07-25T00:00:00",
-      "date": "2025-07-25",
-      "time": "00:00:00",
-      "sender": "DV",
-      "content": "[encaminha contato com prefixo do Reino Unido: alguém que estava na mesa com esse idiota]",
-      "type": "contact",
-      "is_edited": false,
-      "attachment": "contato UK",
-      "urls": [],
-      "source_page": null,
-      "source_figure": null,
-      "timestamp_placeholder": true
-    },
-    {
-      "id": 30,
+      "id": 43,
       "timestamp": "2025-07-25T00:00:00",
       "date": "2025-07-25",
       "time": "00:00:00",
@@ -481,22 +713,24 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 31,
-      "timestamp": "2025-09-15T00:00:00",
-      "date": "2025-09-15",
+      "id": 44,
+      "timestamp": "2025-10-23T00:00:00",
+      "date": "2025-10-23",
       "time": "00:00:00",
       "sender": "Sicário",
-      "content": "[envia print do ePol — sistema interno da PF; consulta rastreada à Delegacia de Juiz de Fora/MG]",
-      "type": "image",
+      "content": "Os meninos invadiram a revista piauí… Manda deletar os links e todas as matérias?",
+      "type": "text",
       "is_edited": false,
-      "attachment": "print ePol",
+      "attachment": null,
       "urls": [],
       "source_page": null,
       "source_figure": null,
-      "timestamp_placeholder": true
+      "timestamp_placeholder": true,
+      "note": "A BBC não registra resposta de Vorcaro autorizando a exclusão nem demonstração técnica do acesso; a piauí disse não ter registrado problema no site.",
+      "source_cite": "BBC News Brasil"
     },
     {
-      "id": 32,
+      "id": 45,
       "timestamp": "2025-10-24T00:00:00",
       "date": "2025-10-24",
       "time": "00:00:00",
@@ -511,7 +745,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 33,
+      "id": 46,
       "timestamp": "2025-10-24T00:00:00",
       "date": "2025-10-24",
       "time": "00:00:00",
@@ -536,59 +770,72 @@
       },
       {
         "date": "2023-11-01",
-        "message_count": 1,
+        "message_count": 7,
         "first_message_id": 3,
-        "last_message_id": 3,
-        "note": "Data aproximada (fonte indica apenas novembro de 2023)."
+        "last_message_id": 9,
+        "note": "Inclui mensagem com data aproximada (fonte indica apenas novembro de 2023)."
       },
       {
-        "date": "2024-03-26",
-        "message_count": 3,
-        "first_message_id": 4,
-        "last_message_id": 6
+        "date": "2023-12-12",
+        "message_count": 1,
+        "first_message_id": 10,
+        "last_message_id": 10
+      },
+      {
+        "date": "2024-01-01",
+        "message_count": 4,
+        "first_message_id": 11,
+        "last_message_id": 14,
+        "note": "Placeholder: BBC indica apenas janeiro de 2024 (Ilha do Topete e 'desbancar os links negativos')."
+      },
+      {
+        "date": "2024-01-31",
+        "message_count": 4,
+        "first_message_id": 15,
+        "last_message_id": 18
       },
       {
         "date": "2024-04-01",
         "message_count": 16,
-        "first_message_id": 7,
-        "last_message_id": 22,
+        "first_message_id": 19,
+        "last_message_id": 34,
         "note": "Placeholder: mensagens sem data na fonte (entre abril de 2024 e julho de 2025)."
       },
       {
-        "date": "2024-10-17",
-        "message_count": 1,
-        "first_message_id": 23,
-        "last_message_id": 23
+        "date": "2024-09-02",
+        "message_count": 3,
+        "first_message_id": 35,
+        "last_message_id": 37
       },
       {
-        "date": "2024-10-18",
+        "date": "2024-09-10",
         "message_count": 1,
-        "first_message_id": 24,
-        "last_message_id": 24
+        "first_message_id": 38,
+        "last_message_id": 38
       },
       {
-        "date": "2025-07-24",
+        "date": "2024-09-25",
         "message_count": 1,
-        "first_message_id": 25,
-        "last_message_id": 25
+        "first_message_id": 39,
+        "last_message_id": 39
       },
       {
         "date": "2025-07-25",
-        "message_count": 5,
-        "first_message_id": 26,
-        "last_message_id": 30
+        "message_count": 4,
+        "first_message_id": 40,
+        "last_message_id": 43
       },
       {
-        "date": "2025-09-15",
+        "date": "2025-10-23",
         "message_count": 1,
-        "first_message_id": 31,
-        "last_message_id": 31
+        "first_message_id": 44,
+        "last_message_id": 44
       },
       {
         "date": "2025-10-24",
         "message_count": 2,
-        "first_message_id": 32,
-        "last_message_id": 33
+        "first_message_id": 45,
+        "last_message_id": 46
       }
     ]
   }

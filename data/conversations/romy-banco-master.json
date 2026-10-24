@@ -7,17 +7,82 @@
     "saved_as": null,
     "phone": "5511914794467",
     "date_range": {
-      "start": "2024-03-15",
-      "end": "2024-03-15"
+      "start": "2023-12-22",
+      "end": "2025-06-27"
     },
-    "total_messages": 9,
-    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+    "total_messages": 32,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF + Representação da PF — RioPrevidência e Cláudio Castro (Pet 15.497), publicada pelo Poder360 em 13/09/2026 (Arkanto/VorcaZap)",
+    "note": "Trechos citados em documentos da PF — a conversa completa não é pública. Mensagens de 15/03/2024 vêm do laudo IPJ-A nº 3298613/2026 (source_page/source_figure); as demais (22/12/2023 a 27/06/2025) vêm da representação da PF sobre o RioPrevidência e Cláudio Castro (Pet 15.497), publicada pelo Poder360 em 13/09/2026 (source_cite; also_in = outra página do mesmo documento que reproduz o trecho). Horários com fuso -03:00. IDs renumerados em ordem cronológica."
   },
   "messages": [
-  {
+    {
       "id": 1,
-      "timestamp": "2024-03-15T15:17:40",
+      "timestamp": "2023-12-22T10:37:35-03:00",
+      "date": "2023-12-22",
+      "time": "10:37:35",
+      "sender": "DV",
+      "content": "Ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 45",
+      "also_in": [
+        "PF, representação RioPrevidência, p. 109"
+      ]
+    },
+    {
+      "id": 2,
+      "timestamp": "2023-12-22T10:37:39-03:00",
+      "date": "2023-12-22",
+      "time": "10:37:39",
+      "sender": "DV",
+      "content": "Pode fazer",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 45",
+      "also_in": [
+        "PF, representação RioPrevidência, p. 109"
+      ]
+    },
+    {
+      "id": 3,
+      "timestamp": "2023-12-22T10:37:46-03:00",
+      "date": "2023-12-22",
+      "time": "10:37:46",
+      "sender": "Romy Banco Master",
+      "content": "e tambem, hoje tem Midias Promotora de 10,9mm",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 45",
+      "also_in": [
+        "PF, representação RioPrevidência, p. 109"
+      ]
+    },
+    {
+      "id": 4,
+      "timestamp": "2023-12-22T10:37:54-03:00",
+      "date": "2023-12-22",
+      "time": "10:37:54",
+      "sender": "Romy Banco Master",
+      "content": "ok, obrigada",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 45",
+      "quoted": "Pode fazer",
+      "also_in": [
+        "PF, representação RioPrevidência, p. 109"
+      ]
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-03-15T15:17:40-03:00",
       "date": "2024-03-15",
       "time": "15:17:40",
       "sender": "DV",
@@ -30,8 +95,8 @@
       "source_figure": 152
     },
     {
-      "id": 2,
-      "timestamp": "2024-03-15T15:17:49",
+      "id": 6,
+      "timestamp": "2024-03-15T15:17:49-03:00",
       "date": "2024-03-15",
       "time": "15:17:49",
       "sender": "DV",
@@ -44,8 +109,8 @@
       "source_figure": 152
     },
     {
-      "id": 3,
-      "timestamp": "2024-03-15T15:18:09",
+      "id": 7,
+      "timestamp": "2024-03-15T15:18:09-03:00",
       "date": "2024-03-15",
       "time": "15:18:09",
       "sender": "Romy Banco Master",
@@ -59,8 +124,8 @@
       "source_figure": 152
     },
     {
-      "id": 4,
-      "timestamp": "2024-03-15T15:18:12",
+      "id": 8,
+      "timestamp": "2024-03-15T15:18:12-03:00",
       "date": "2024-03-15",
       "time": "15:18:12",
       "sender": "Romy Banco Master",
@@ -73,8 +138,8 @@
       "source_figure": 152
     },
     {
-      "id": 5,
-      "timestamp": "2024-03-15T15:18:52",
+      "id": 9,
+      "timestamp": "2024-03-15T15:18:52-03:00",
       "date": "2024-03-15",
       "time": "15:18:52",
       "sender": "DV",
@@ -87,8 +152,8 @@
       "source_figure": 152
     },
     {
-      "id": 6,
-      "timestamp": "2024-03-15T15:19:00",
+      "id": 10,
+      "timestamp": "2024-03-15T15:19:00-03:00",
       "date": "2024-03-15",
       "time": "15:19:00",
       "sender": "DV",
@@ -101,8 +166,8 @@
       "source_figure": 152
     },
     {
-      "id": 7,
-      "timestamp": "2024-03-15T15:19:04",
+      "id": 11,
+      "timestamp": "2024-03-15T15:19:04-03:00",
       "date": "2024-03-15",
       "time": "15:19:04",
       "sender": "DV",
@@ -115,8 +180,8 @@
       "source_figure": 152
     },
     {
-      "id": 8,
-      "timestamp": "2024-03-15T15:19:16",
+      "id": 12,
+      "timestamp": "2024-03-15T15:19:16-03:00",
       "date": "2024-03-15",
       "time": "15:19:16",
       "sender": "Romy Banco Master",
@@ -129,8 +194,8 @@
       "source_figure": 152
     },
     {
-      "id": 9,
-      "timestamp": "2024-03-15T15:21:48",
+      "id": 13,
+      "timestamp": "2024-03-15T15:21:48-03:00",
       "date": "2024-03-15",
       "time": "15:21:48",
       "sender": "Romy Banco Master",
@@ -141,15 +206,316 @@
       "urls": [],
       "source_page": 153,
       "source_figure": 152
+    },
+    {
+      "id": 14,
+      "timestamp": "2024-05-23T16:36:55-03:00",
+      "date": "2024-05-23",
+      "time": "16:36:55",
+      "sender": "Romy Banco Master",
+      "content": "Daniel, temos os seguintes pagtos via CP:",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 109"
+    },
+    {
+      "id": 15,
+      "timestamp": "2024-05-23T16:37:12-03:00",
+      "date": "2024-05-23",
+      "time": "16:37:12",
+      "sender": "Romy Banco Master",
+      "content": "Midias Promotora - 4,7mm (conta interna)",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 109"
+    },
+    {
+      "id": 16,
+      "timestamp": "2024-05-23T16:37:23-03:00",
+      "date": "2024-05-23",
+      "time": "16:37:23",
+      "sender": "Romy Banco Master",
+      "content": "Terra Firme - 8,7mm (conta interna)",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 109"
+    },
+    {
+      "id": 17,
+      "timestamp": "2024-05-23T16:37:42-03:00",
+      "date": "2024-05-23",
+      "time": "16:37:42",
+      "sender": "Romy Banco Master",
+      "content": "AMF Consultoria - 2,8mm",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 109"
+    },
+    {
+      "id": 18,
+      "timestamp": "2024-05-23T16:54:53-03:00",
+      "date": "2024-05-23",
+      "time": "16:54:53",
+      "sender": "DV",
+      "content": "Midias ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 109"
+    },
+    {
+      "id": 19,
+      "timestamp": "2024-05-29T12:28:08-03:00",
+      "date": "2024-05-29",
+      "time": "12:28:08",
+      "sender": "Romy Banco Master",
+      "content": "EQI Partners Consultores - 9mm",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 109"
+    },
+    {
+      "id": 20,
+      "timestamp": "2024-05-29T12:28:29-03:00",
+      "date": "2024-05-29",
+      "time": "12:28:29",
+      "sender": "Romy Banco Master",
+      "content": "Midias Promotora - 4,8mm",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 109"
+    },
+    {
+      "id": 21,
+      "timestamp": "2024-06-03T17:55:43-03:00",
+      "date": "2024-06-03",
+      "time": "17:55:43",
+      "sender": "Romy Banco Master",
+      "content": "Daniel, boa tarde ! Temos um pagto de 8,7mm que veio do CP para a empresa MSG Serviços Empresariais ref. Profit 1 trimestre de 2024.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 109"
+    },
+    {
+      "id": 22,
+      "timestamp": "2024-06-05T16:48:17-03:00",
+      "date": "2024-06-05",
+      "time": "16:48:17",
+      "sender": "Romy Banco Master",
+      "content": "Boa tarde Daniel, temos um pagto do Contas a Pagar para a empresa MDSV Participações, no valor de 26,4mm.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 109"
+    },
+    {
+      "id": 23,
+      "timestamp": "2024-06-06T10:01:21-03:00",
+      "date": "2024-06-06",
+      "time": "10:01:21",
+      "sender": "Romy Banco Master",
+      "content": "Bom dia Daniel. Temos pagamento para Tellure em 7,5mm.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 109"
+    },
+    {
+      "id": 24,
+      "timestamp": "2024-06-07T16:05:31-03:00",
+      "date": "2024-06-07",
+      "time": "16:05:31",
+      "sender": "Romy Banco Master",
+      "content": "Terra Firme - 8,7mm / Ouro Negro Empreend. 42,7mm / Midias Promotora 4,7mm / MSG Serviços 8,1mm / Terra Firme (mensal) 3,6mm / Tellure Participações 4,6mm",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 110"
+    },
+    {
+      "id": 25,
+      "timestamp": "2024-07-19T12:35:36-03:00",
+      "date": "2024-07-19",
+      "time": "12:35:36",
+      "sender": "Romy Banco Master",
+      "content": "Daniel, boa tarde! Temos uma nota do CP para Midias Promotora de 8,8mm. Felix pediu pra liberar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 110"
+    },
+    {
+      "id": 26,
+      "timestamp": "2025-06-27T16:41:57-03:00",
+      "date": "2025-06-27",
+      "time": "16:41:57",
+      "sender": "Romy Banco Master",
+      "content": "Boa tarde Daniel!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 74"
+    },
+    {
+      "id": 27,
+      "timestamp": "2025-06-27T16:42:21-03:00",
+      "date": "2025-06-27",
+      "time": "16:42:21",
+      "sender": "Romy Banco Master",
+      "content": "Temos aporte de 5mm no Strata Fim",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 74"
+    },
+    {
+      "id": 28,
+      "timestamp": "2025-06-27T16:43:03-03:00",
+      "date": "2025-06-27",
+      "time": "16:43:03",
+      "sender": "Romy Banco Master",
+      "content": "Revolution recebeu 40mm do Rio Prev e vai mandar o recurso p o Jaguar.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 74"
+    },
+    {
+      "id": 29,
+      "timestamp": "2025-06-27T16:43:41-03:00",
+      "date": "2025-06-27",
+      "time": "16:43:41",
+      "sender": "Romy Banco Master",
+      "content": "Temos uma nota do CP de 5mm pra Copenhagen Assessoria",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 74"
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-06-27T16:45:01-03:00",
+      "date": "2025-06-27",
+      "time": "16:45:01",
+      "sender": "Romy Banco Master",
+      "content": "Pendente no CP ainda GIC Consultoria Tributária de 4,7mm e Pitta Lima Advg. 2,5mm",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 74"
+    },
+    {
+      "id": 31,
+      "timestamp": "2025-06-27T16:45:19-03:00",
+      "date": "2025-06-27",
+      "time": "16:45:19",
+      "sender": "Romy Banco Master",
+      "content": "Entre tem solicitação de 10mm",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 74"
+    },
+    {
+      "id": 32,
+      "timestamp": "2025-06-27T16:45:37-03:00",
+      "date": "2025-06-27",
+      "time": "16:45:37",
+      "sender": "Romy Banco Master",
+      "content": "E Prime ainda pendente aqueles 40,2mm",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "PF, representação RioPrevidência, p. 74"
     }
   ],
   "index": {
     "dates": [
       {
+        "date": "2023-12-22",
+        "message_count": 4,
+        "first_message_id": 1,
+        "last_message_id": 4
+      },
+      {
         "date": "2024-03-15",
         "message_count": 9,
-        "first_message_id": 1,
-        "last_message_id": 9
+        "first_message_id": 5,
+        "last_message_id": 13
+      },
+      {
+        "date": "2024-05-23",
+        "message_count": 5,
+        "first_message_id": 14,
+        "last_message_id": 18
+      },
+      {
+        "date": "2024-05-29",
+        "message_count": 2,
+        "first_message_id": 19,
+        "last_message_id": 20
+      },
+      {
+        "date": "2024-06-03",
+        "message_count": 1,
+        "first_message_id": 21,
+        "last_message_id": 21
+      },
+      {
+        "date": "2024-06-05",
+        "message_count": 1,
+        "first_message_id": 22,
+        "last_message_id": 22
+      },
+      {
+        "date": "2024-06-06",
+        "message_count": 1,
+        "first_message_id": 23,
+        "last_message_id": 23
+      },
+      {
+        "date": "2024-06-07",
+        "message_count": 1,
+        "first_message_id": 24,
+        "last_message_id": 24
+      },
+      {
+        "date": "2024-07-19",
+        "message_count": 1,
+        "first_message_id": 25,
+        "last_message_id": 25
+      },
+      {
+        "date": "2025-06-27",
+        "message_count": 7,
+        "first_message_id": 26,
+        "last_message_id": 32
       }
     ]
   }

@@ -110,6 +110,8 @@ async function init() {
     'andre-valadao': '/assets/avatar-andre-valadao.jpg',
     'pablo-marcal': '/assets/avatar-pablo-marcal.jpg',
     'nelson-willians': '/assets/avatar-nelson-willians.jpg',
+    'newton-ramos': '/assets/avatar-newton-ramos.jpg',
+
 
 
 
