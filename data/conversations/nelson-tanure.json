@@ -1,0 +1,231 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Nelson Tanure"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2024-09-12",
+      "end": "2025-02-18"
+    },
+    "total_messages": 8,
+    "source": "Mensagens extraídas pela PF do celular de Vorcaro, conforme duas colunas do blog do Lauro Jardim (O Globo, out/2026): 'O carinho especial de Vorcaro e Tanure com o Itaú' e 'Da CVC à Eletrobras, os negócios de Vorcaro e Tanure que não foram adiante'. Não são transcrições integrais.",
+    "note": "Trechos citados na imprensa — a conversa completa não é pública. Todas as mensagens são citações de reportagem (source 'press', verified false): hora não informada, por isso timestamp traz só a data e time é null; sem prints correspondentes. Datas aproximadas estão marcadas em date_precision. Grafias preservadas como publicadas. Nelson Tanure é descrito pela reportagem como sócio de Vorcaro em vários negócios.",
+    "visible_date_headers_without_messages": []
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-09-12",
+      "date": "2024-09-12",
+      "date_precision": "day",
+      "time": null,
+      "sender": "Nelson Tanure",
+      "content": "Deixa a CVC comigo, vou colocar na sua mão (...) Vou fazer esse negócio pra você",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)",
+      "elided": true,
+      "notes": "Citação publicada com reticências '(...)' no meio; pode reunir mais de uma mensagem. Hora não informada."
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-12-07",
+      "date": "2024-12-07",
+      "date_precision": "approximate",
+      "time": null,
+      "sender": "Nelson Tanure",
+      "content": "O Itaú está cheio de bandidos. Só está semana 2 ratos foram demitidos. Eles não são esses vestais, que propagam ser",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)",
+      "notes": "Reação a notícia de 07/12/2024 sobre processo do Itaú contra um ex-CFO do banco; a reportagem não informa o dia exato das mensagens. Grafia 'está semana' como publicada."
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-12-07",
+      "date": "2024-12-07",
+      "date_precision": "approximate",
+      "time": null,
+      "sender": "DV",
+      "content": "Exato. 100 anos de esquemas",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)",
+      "notes": "Resposta 'de imediato' à mensagem anterior, segundo a reportagem; dia exato não informado."
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-12-07",
+      "date": "2024-12-07",
+      "date_precision": "approximate",
+      "time": null,
+      "sender": "Nelson Tanure",
+      "content": "Verdade. Fica longe!! Melhor assim. Não vamos esquecer. Foram eles que levaram o Nacional e depois o Unibanco à quebra. Vamos ficar bem longe e muito atentos.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)",
+      "notes": "Dia exato não informado."
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-01-29",
+      "date": "2025-01-29",
+      "date_precision": "day",
+      "time": null,
+      "sender": "Nelson Tanure",
+      "content": "Vamos comprar a maior empresa do Brasil. Sabe o nome ???? ELETROBRAS. Vamos dar as mãos e comprar.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)"
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-02-17",
+      "date": "2025-02-17",
+      "date_precision": "day",
+      "time": null,
+      "sender": "Nelson Tanure",
+      "content": "Tínhamos combinado você vir jantar hoje no Rio. O assunto Eletrobrás está sendo discutido agora com o presidente. Vem pra cá, jantar aqui",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)"
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-02-17",
+      "date": "2025-02-17",
+      "date_precision": "day",
+      "time": null,
+      "sender": "DV",
+      "content": "Grande comandante, essa semana nao consigo! Estou na suiça pra reuniao e quinta vou direto brasília",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)",
+      "notes": "Resposta de Vorcaro ao convite; a reportagem não informa o dia exato, assumido o mesmo dia do convite."
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-02-18",
+      "date": "2025-02-18",
+      "date_precision": "day",
+      "time": null,
+      "sender": "Nelson Tanure",
+      "content": "Daniel, Você está vindo pro Rio, jantar ?? Eu e o Hélio (Costa) estivemos ontem de manhã, com o lula, falando da Eletrobras. Foi muito bom, mas ele delegou 100% para seu amigo AS. Precisamos falar, não temos mais tempo !!!!",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)",
+      "notes": "'No dia seguinte' ao convite de 17/02, segundo a reportagem. 'AS' aparece só como iniciais; a reportagem não identifica."
+    }
+  ],
+  "reported_patterns": [
+    {
+      "topic": "CVC",
+      "description": "Tanure, por meio de fundos que controlava, chegou a deter 5% da operadora de turismo pouco antes; a tentativa de levar a CVC para Vorcaro não foi adiante.",
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)"
+    },
+    {
+      "topic": "Eletrobras",
+      "description": "Tanure e Vorcaro discutiram comprar a Eletrobras (jan–fev/2025); Tanure relata encontro com Lula e Hélio Costa e diz que o presidente delegou o assunto. O negócio não saiu da estaca zero.",
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)"
+    },
+    {
+      "topic": "Itaú",
+      "description": "Troca de mensagens em dezembro de 2024 com críticas ao banco após notícia de processo contra ex-CFO.",
+      "source_ref": "O Globo — blog do Lauro Jardim (out/2026)"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-09-12",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1
+      },
+      {
+        "date": "2024-12-07",
+        "message_count": 3,
+        "first_message_id": 2,
+        "last_message_id": 4,
+        "precision": "approximate"
+      },
+      {
+        "date": "2025-01-29",
+        "message_count": 1,
+        "first_message_id": 5,
+        "last_message_id": 5
+      },
+      {
+        "date": "2025-02-17",
+        "message_count": 2,
+        "first_message_id": 6,
+        "last_message_id": 7
+      },
+      {
+        "date": "2025-02-18",
+        "message_count": 1,
+        "first_message_id": 8,
+        "last_message_id": 8
+      }
+    ]
+  }
+}

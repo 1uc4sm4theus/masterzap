@@ -111,6 +111,8 @@ async function init() {
     'pablo-marcal': '/assets/avatar-pablo-marcal.jpg',
     'nelson-willians': '/assets/avatar-nelson-willians.jpg',
     'newton-ramos': '/assets/avatar-newton-ramos.jpg',
+    'nelson-tanure': '/assets/avatar-nelson-tanure.jpg',
+    'diogo-batista-vorcaro': '/assets/avatar-diogo-batista.jpg',
 
 
 

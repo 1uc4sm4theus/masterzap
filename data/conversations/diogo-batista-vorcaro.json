@@ -10,9 +10,9 @@
       "start": "2023-11-03",
       "end": "2024-09-15"
     },
-    "total_messages": 72,
-    "source": "Mensagens 1-24: 3 capturas de tela de conversa de WhatsApp (reprodução editorial, com tarjas), associadas à matéria do UOL de Natália Portinari, 13/10/2026; transcrição feita exclusivamente a partir do que aparece nas imagens. Mensagens 25-48: citações, fragmentos e trechos truncados reproduzidos no texto da mesma matéria, sem print correspondente. Atualização 18/10/2026: mensagens 49-72 vêm de 3 novas capturas (28-29/02/2024; 21/06/2024; 15/09/2024). Dois arquivos enviados são o mesmo print de fev/2024 (duplicata, contado uma vez).",
-    "note": "Texto transcrito literalmente, preservando grafia, pontuação e ausência de acentos como aparecem nos prints (ids 1-24) e na matéria (ids 25-48). Remetente 'DV' corresponde a 'Daniel Vorcaro', nome exibido nos prints. Trechos tarjados aparecem como [nome tarjado]; nenhuma identificação foi tentada. Ids 1-24 (source 'screenshot', verified true): os prints mostram apenas HH:MM, então os segundos foram preenchidos com :00 e o fuso -03:00 foi assumido (não aparece nos prints). Prints de origem: mensagens 1-8 (03 e 05/11/2023), 9-19 (07/11/2023) e 20-24 (14/12/2023). Nenhuma mensagem aparece como resposta citada, então reply_to_id é null em todas. Ids 25-48 (source 'press_uol', verified false): são citações da matéria, não transcrições de print. Têm timestamp e time null. Só 28, 29 e 37 têm data completa (15/04/2024; 29 e 37 inferidas da narrativa). Nas demais, o campo date NÃO é uma data completa: traz o rótulo parcial que a matéria permite ('2023-11' para 36, '2024-01' para 25, 26, 38 e 39, '2024-03' para 27, '2024' para 34) ou 'sem-data' (30-33, 35 e 40-48, sem nenhuma data na matéria). Os rótulos existem só para que o campo nunca seja null; não representam um dia. A ordem dos ids 25-34 segue a ordem de aparição na matéria, e a dos ids 35-48 segue a ordem em que foram incorporados; nenhuma é uma cronologia comprovada. Os ids 35, 36, 37, 42, 43, 44, 47 e 48 são fragmentos ou trechos truncados, não mensagens completas. Ids 35 e 47 têm sender 'indeterminado' porque a matéria não informa o autor (no 47, provavelmente a própria jovem, que não é participante da conversa). Os 48 registros são 35 de Diogo Batista, 11 de DV e 2 de remetente indeterminado. Citações da matéria que já coincidem com mensagens dos prints (ids 14, 17, 19, 23 e 24) não foram duplicadas. Paráfrases da matéria (aviso sobre hotel e voo, passaporte, contrato, parcela de R$ 500 mil) não foram incluídas como mensagens. Detalhes e conferências no arquivo complementar diogo-batista-vorcaro_imprensa.json. Atualização: ids 49-72 (source 'screenshot', verified true) transcritos literalmente dos prints; segundos preenchidos com :00 e fuso -03:00 assumido por consistência com os ids 1-24 (os prints mostram só HH:MM e os cabeçalhos citam 'Lisboa' e 'Trancoso' sem fuso). Os cabeçalhos ('conversa com Daniel Vorcaro (mês/ano)') parecem rótulos editoriais, não da interface original. Total: 49 de Diogo Batista, 21 de DV e 2 indeterminado.",
+    "total_messages": 74,
+    "source": "Mensagens 1-24: 3 capturas de tela de conversa de WhatsApp (reprodução editorial, com tarjas), associadas à matéria do UOL de Natália Portinari, 13/10/2026; transcrição feita exclusivamente a partir do que aparece nas imagens. Mensagens 25-48: citações, fragmentos e trechos truncados reproduzidos no texto da mesma matéria, sem print correspondente. Atualização 18/10/2026: mensagens 49-72 vêm de 3 novas capturas (28-29/02/2024; 21/06/2024; 15/09/2024). Dois arquivos enviados são o mesmo print de fev/2024 (duplicata, contado uma vez). Atualização 25/10/2026: mensagens 73-74 vêm de coluna de Lauro Jardim (O Globo, out/2026), sem print.",
+    "note": "Texto transcrito literalmente, preservando grafia, pontuação e ausência de acentos como aparecem nos prints (ids 1-24) e na matéria (ids 25-48). Remetente 'DV' corresponde a 'Daniel Vorcaro', nome exibido nos prints. Trechos tarjados aparecem como [nome tarjado]; nenhuma identificação foi tentada. Ids 1-24 (source 'screenshot', verified true): os prints mostram apenas HH:MM, então os segundos foram preenchidos com :00 e o fuso -03:00 foi assumido (não aparece nos prints). Prints de origem: mensagens 1-8 (03 e 05/11/2023), 9-19 (07/11/2023) e 20-24 (14/12/2023). Nenhuma mensagem aparece como resposta citada, então reply_to_id é null em todas. Ids 25-48 (source 'press_uol', verified false): são citações da matéria, não transcrições de print. Têm timestamp e time null. Só 28, 29 e 37 têm data completa (15/04/2024; 29 e 37 inferidas da narrativa). Nas demais, o campo date NÃO é uma data completa: traz o rótulo parcial que a matéria permite ('2023-11' para 36, '2024-01' para 25, 26, 38 e 39, '2024-03' para 27, '2024' para 34) ou 'sem-data' (30-33, 35 e 40-48, sem nenhuma data na matéria). Os rótulos existem só para que o campo nunca seja null; não representam um dia. A ordem dos ids 25-34 segue a ordem de aparição na matéria, e a dos ids 35-48 segue a ordem em que foram incorporados; nenhuma é uma cronologia comprovada. Os ids 35, 36, 37, 42, 43, 44, 47 e 48 são fragmentos ou trechos truncados, não mensagens completas. Ids 35 e 47 têm sender 'indeterminado' porque a matéria não informa o autor (no 47, provavelmente a própria jovem, que não é participante da conversa). Os 48 registros são 35 de Diogo Batista, 11 de DV e 2 de remetente indeterminado. Citações da matéria que já coincidem com mensagens dos prints (ids 14, 17, 19, 23 e 24) não foram duplicadas. Paráfrases da matéria (aviso sobre hotel e voo, passaporte, contrato, parcela de R$ 500 mil) não foram incluídas como mensagens. Detalhes e conferências no arquivo complementar diogo-batista-vorcaro_imprensa.json. Atualização: ids 49-72 (source 'screenshot', verified true) transcritos literalmente dos prints; segundos preenchidos com :00 e fuso -03:00 assumido por consistência com os ids 1-24 (os prints mostram só HH:MM e os cabeçalhos citam 'Lisboa' e 'Trancoso' sem fuso). Os cabeçalhos ('conversa com Daniel Vorcaro (mês/ano)') parecem rótulos editoriais, não da interface original. Atualização 25/10/2026: ids 73-74 (source 'press_oglobo', verified false) são citações da coluna de Lauro Jardim (O Globo, out/2026) sobre mensagens de Vorcaro a Diogo a respeito de uma festa em Roma, no final de 2024; sem print, sem dia ou hora (date traz o rótulo parcial '2024'). A menção de Diogo à funkeira Jojo Todynho aparece só como paráfrase na coluna e não foi incluída. O date_range.end continua em 2024-09-15 porque os ids 73-74 não têm data completa. Total: 49 de Diogo Batista, 23 de DV e 2 indeterminado.",
     "visible_date_headers_without_messages": []
   },
   "messages": [
@@ -1311,6 +1311,42 @@
       "source": "screenshot",
       "verified": true,
       "notes": null
+    },
+    {
+      "id": 73,
+      "timestamp": null,
+      "date": "2024",
+      "time": null,
+      "sender": "DV",
+      "content": "Cara. Tinha gorda. Muito gorda. Não é gordinha. Gordona mesmo. Preta. Velha. Nunca na vida Vi nada parecido",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_oglobo",
+      "verified": false,
+      "notes": "Citação reproduzida na coluna de Lauro Jardim (O Globo, out/2026), sem print correspondente. Data segundo a coluna: final de 2024, em conversa sobre uma festa em Roma (dia, mês e hora não informados). Mensagem de Vorcaro ao promoter Diogo Batista, ao reclamar do público da festa."
+    },
+    {
+      "id": 74,
+      "timestamp": null,
+      "date": "2024",
+      "time": null,
+      "sender": "DV",
+      "content": "Jojo todinho era bonita perto. Mocreias mesmo. Surreal",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press_oglobo",
+      "verified": false,
+      "notes": "Citação reproduzida na coluna de Lauro Jardim (O Globo, out/2026), sem print correspondente. Data segundo a coluna: final de 2024, em conversa sobre uma festa em Roma (dia, mês e hora não informados). A coluna diz que, entre as duas mensagens, Diogo citou a funkeira Jojo Todynho; essa mensagem dele não foi reproduzida e não consta no arquivo. Grafia 'Jojo todinho' como publicada."
     }
   ],
   "index": {
@@ -1347,9 +1383,9 @@
       },
       {
         "date": "2024",
-        "message_count": 1,
+        "message_count": 3,
         "first_message_id": 34,
-        "last_message_id": 34
+        "last_message_id": 74
       },
       {
         "date": "2024-01",
