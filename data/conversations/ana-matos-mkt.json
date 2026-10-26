@@ -11,8 +11,8 @@
       "start": "2024-04-18",
       "end": "2025-08-02"
     },
-    "total_messages": 203,
-    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF; complementado por 18 capturas de tela de WhatsApp (20/08 a 17/12/2024; 03/04 a 30/07/2025; 31/07 a 02/08/2025), por trechos citados em reportagem do Estadão (03/03/2025) e por trecho citado em matéria sobre a 'bet' (out/2024; veículo não informado)",
+    "total_messages": 206,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF; complementado por 18 capturas de tela de WhatsApp (20/08 a 17/12/2024; 03/04 a 30/07/2025; 31/07 a 02/08/2025), por trechos citados em reportagem do Estadão (03/03/2025), por trecho citado em matéria sobre a 'bet' (out/2024; veículo não informado) e por trecho citado em matéria sobre a campanha publicitária do BRB (mar/2025; veículo não informado)",
     "source_detail": {
       "kind": "police-report",
       "label": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
@@ -62,14 +62,14 @@
           "label": "Captura de tela de WhatsApp (cabeçalho: 'WhatsApp Chat - Ana Matos Mkt - [tarja preta]'), 31/07 a 02/08/2025",
           "file": "HUwdxEcXAAAXCIr.jpg",
           "message_ids": [
-            192,
-            193,
-            194,
             195,
             196,
             197,
             198,
-            199
+            199,
+            200,
+            201,
+            202
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -78,10 +78,10 @@
           "label": "Captura de tela de WhatsApp (cabeçalho: 'WhatsApp Chat - Ana Matos Mkt - [tarja preta]'), 05/04/2025 00:44 a 00:45",
           "file": null,
           "message_ids": [
-            93,
-            94,
-            95,
-            96
+            96,
+            97,
+            98,
+            99
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -90,8 +90,8 @@
           "label": "Captura de tela de WhatsApp (mesmo cabeçalho), 05/04/2025 15:03 a 15:06",
           "file": null,
           "message_ids": [
-            97,
-            98
+            100,
+            101
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -100,11 +100,11 @@
           "label": "Captura de tela de WhatsApp (mesmo cabeçalho), 18/04/2025 14:25 a 14:55",
           "file": null,
           "message_ids": [
-            127,
-            128,
-            129,
             130,
-            131
+            131,
+            132,
+            133,
+            134
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -113,10 +113,10 @@
           "label": "Captura de tela de WhatsApp (mesmo cabeçalho), 28/05/2025 15:31 a 15:32",
           "file": null,
           "message_ids": [
-            132,
-            133,
-            134,
-            135
+            135,
+            136,
+            137,
+            138
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -125,12 +125,12 @@
           "label": "Captura de tela de WhatsApp (mesmo cabeçalho), 29/05/2025 11:39 a 15:22",
           "file": null,
           "message_ids": [
-            136,
-            137,
-            138,
             139,
             140,
-            141
+            141,
+            142,
+            143,
+            144
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -139,8 +139,8 @@
           "label": "Captura de tela de WhatsApp (cabeçalho: 'Ana Matos Mkt'), 18/07/2025 19:08 a 19:23",
           "file": null,
           "message_ids": [
-            159,
-            160
+            162,
+            163
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -149,12 +149,12 @@
           "label": "Captura de tela de WhatsApp (mesmo cabeçalho), 28/07/2025 22:18 a 22:54",
           "file": null,
           "message_ids": [
-            180,
-            181,
-            182,
             183,
             184,
-            185
+            185,
+            186,
+            187,
+            188
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -163,12 +163,12 @@
           "label": "Captura de tela de WhatsApp (mesmo cabeçalho), 30/07/2025 14:54 a 14:56",
           "file": null,
           "message_ids": [
-            186,
-            187,
-            188,
             189,
             190,
-            191
+            191,
+            192,
+            193,
+            194
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -250,13 +250,13 @@
           "label": "Captura de tela de WhatsApp (cabeçalho: 'WhatsApp Chat - Ana Matos Mkt'), 03/04/2025 06:58 a 07:30",
           "file": null,
           "message_ids": [
-            86,
-            87,
-            88,
             89,
             90,
             91,
-            92
+            92,
+            93,
+            94,
+            95
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -265,9 +265,6 @@
           "label": "Captura de tela de WhatsApp (cabeçalho: 'WhatsApp Chat - Ana Matos Mkt'), 05/04/2025 19:32 a 23:43 (dois recortes empilhados)",
           "file": "HVE0ELyWcAAYTxU__1_.jpg",
           "message_ids": [
-            99,
-            100,
-            101,
             102,
             103,
             104,
@@ -275,7 +272,10 @@
             106,
             107,
             108,
-            109
+            109,
+            110,
+            111,
+            112
           ],
           "how": "Transcrição literal feita exclusivamente a partir da imagem."
         },
@@ -287,10 +287,21 @@
             43
           ],
           "how": "Transcrição de trecho citado na matéria; sem dia, hora, página ou figura do laudo. Ver campos date_precision, quote_fidelity e context_note da mensagem."
+        },
+        {
+          "kind": "news_report",
+          "label": "Matéria colada pelo usuário (veículo e data de publicação não informados) — trechos literais sobre a proposta de contratar Flávia Alessandra e Otaviano Costa para publi do BRB (março de 2025)",
+          "file": null,
+          "message_ids": [
+            86,
+            87,
+            88
+          ],
+          "how": "Transcrição de trechos citados na matéria; sem dia, hora, página ou figura do laudo. Ver campos date_precision, quote_fidelity e context_note das mensagens."
         }
       ]
     },
-    "note": "Os ids 1-17, 24-103 e 106-115 são trechos citados no relatório policial (source 'pf_report'; a conversa completa não consta do documento). Os ids 18-23 (11, 13 e 17/12/2024) vêm de captura de tela (source 'screenshot'), sem página/figura do relatório (source_page e source_figure null), e preenchem a lacuna entre 12/05/2024 e 25/02/2025. Os ids 143-144 (01/08/2025) e demais mensagens de 31/07/2025 vêm de uma segunda captura de tela (source 'screenshot'; HUwdxEcXAAAXCIr.jpg), também sem página/figura, e preenchem a lacuna entre 22/07/2025 e 02/08/2025. Essa captura também exibe as mensagens de 02/08/2025 às 09:54:48 (encaminhada) e 10:01:25, já presentes, conferidas sem divergência de texto e não duplicadas. Nas mensagens do primeiro print o horário vai só até o minuto, sem segundos nem fuso exibido; no segundo print o carimbo mostra segundos e -03:00, mas 'timestamp' foi mantido sem offset, como no restante do arquivo. Remetente 'DV' padronizado (nos prints o nome exibido é 'Daniel Vorcaro' no primeiro e 'DV' no segundo); 'Ana Matos Mkt (…)' normalizado para 'Ana Matos', com o número de telefone coberto por tarja preta no print e omitido. Grafia dos prints preservada ('metrópoles' com acento na primeira mensagem e 'metropoles' sem acento na segunda; 'Metropoles', 'Kovr', 'Will', 'lilian' como exibidos; 'Ela ouvi', 'qq', 'eh', 'Oioi' como exibidos). Id 142 (antigo 109): registro de chamada de voz (type 'call', sender null), bolha azul alinhada à direita (lado do DV), sem rótulo de quem ligou; o carimbo '2025-08-01 18:39:18' está sobreposto à bolha e com baixo contraste (leitura menos segura). Os prints são recortes; podem existir mensagens fora deles. Foram acrescentadas mensagens transcritas de prints de 05/04, 18/04, 28/05, 29/05, 28/07 e 30/07/2025 (source 'screenshot'); nesses prints o carimbo tem segundos e -03:00, mantido sem offset. Bolhas cortadas na borda do recorte não foram transcritas por falta de carimbo/texto completo. ATUALIZAÇÃO 2: acrescentado print de 18/07/2025 (19:08:31 e 19:23:26, source 'screenshot'; ids 104-105); o rótulo de Ana Matos aparece cortado ('Ana Matos Mkt (551194') e foi normalizado para 'Ana Matos'; no topo do print há uma bolha anterior cortada com reação de 👊/👍 parcial, não transcrita. Todos os ids a partir de 104 foram renumerados (+2) e os message_ids dos 'complements' atualizados; referências numéricas de ids em observações antigas deste campo podem refletir numeração anterior. ATUALIZAÇÃO 3: acrescentados os ids 28-38 (03/03/2025), transcritos de trechos citados na reportagem do Estadão 'Vorcaro encomendou vídeos para atacar jornalistas Malu Gaspar e Lauro Jardim' (source 'news_report', com 'source_ref'; sem página/figura do laudo e sem print). A matéria não informa horários, por isso 'time' é null; o campo 'quote_fidelity' distingue falas citadas na íntegra ('literal') de trechos citados apenas em fragmento ('fragment'). Os ids 37-38 podem ser de data posterior a 03/03/2025, pois a matéria diz apenas 'depois de reavaliações'. O vídeo do id 35 não foi visto pela reportagem. As mensagens da matéria dirigidas a outras pessoas (agressão a Lauro Jardim, dirigida a Luiz Phillipi Mourão; devassa na vida de Malu Gaspar, dirigida a Thiago Miranda) não pertencem a esta conversa e foram omitidas. Todos os ids a partir do antigo 28 foram renumerados (+11); as referências numéricas de ids nas observações anteriores deste campo (inclusive 'ids 1-17, 24-103 e 106-115', '143-144', '142' e '104-105') refletem a numeração anterior à ATUALIZAÇÃO 3 e os message_ids em 'complements' já estão na numeração atual. ATUALIZAÇÃO 4: acrescentadas 26 mensagens de seis novos prints de WhatsApp (source 'screenshot', cabeçalho 'WhatsApp Chat - Ana Matos Mkt', carimbo com segundos e -03:00, mantido sem offset): 20/08/2024 (ids 18-23), 18/09/2024 (ids 24-28), 26/09/2024 (ids 29-31), 29/09/2024 (ids 32-33), 16/10/2024 (ids 34-36) e 03/04/2025 (ids 79-85). Os cinco primeiros preenchem a lacuna entre 12/05/2024 e 11/12/2024 e o último a lacuna entre 14/03/2025 e 05/04/2025. Nos prints, as mensagens de DV aparecem com o rótulo 'Encaminhada' (campo 'forwarded'); em 20/08/2024 duas delas citam a mensagem de Ana das 16:37:50 (campo 'quoted'). O id 35 (16/10/2024 17:53:25) é uma imagem encaminhada exibida só como miniatura sem conteúdo visível, e o texto do id 36 (convite de João Camargo) tem o mesmo carimbo. Grafia preservada ('mm', 'cobranded', 'mae', 'balanco', 'joao', 'hj', 'tbm', 'eh', 'Kk' como exibidos). Quebras de linha de bolhas longas seguem o que o print mostra; em 26/09/2024 foi lida como quebra real a que separa 'tem' de 'outdoor' (leitura menos segura). Todos os ids a partir do antigo 18 foram renumerados (+19 até o antigo 59 e +26 a partir do antigo 60); as referências numéricas de ids nas observações anteriores deste campo refletem numeração anterior e os message_ids em 'complements' já estão na numeração atual. ATUALIZAÇÃO 5: acrescentadas 11 mensagens de um novo print de WhatsApp (source 'screenshot', cabeçalho 'WhatsApp Chat - Ana Matos Mkt', carimbo com segundos e -03:00, mantido sem offset; HVE0ELyWcAAYTxU__1_.jpg, dois recortes empilhados) de 05/04/2025 19:32 a 23:43 (ids 92-102), entre o último id de 05/04/2025 (91, 15:06) e o primeiro de 08/04/2025. Id 94 (19:33:22): registro de chamada de voz ('Duração: 01:36'), type 'call', sender null como nos demais registros de chamada, bolha azul alinhada à direita (lado do DV), sem rótulo de quem ligou; carimbo com baixo contraste, mas legível. Id 95 (19:35:14): cartão de contato 'Pablo Marçal' (Nome Formatado e Nome 'Pablo Marçal'; Telefone '—'; X-ABLabel 'WhatsApp'), type 'contact'. Id 99 (21:45:17): áudio de Ana exibido como 'Arquivo de mensagem de áudio', com player 0:00 / 0:00; sem conteúdo transcrito, type 'audio'. Id 100 (23:42:46): 'Mensagem apagada pelo remetente' (type 'deleted'); texto original indisponível. Grafia preservada ('msg', 'concentracao', 'especificamente' como exibidos; 'Sim falei msg porque não atendeu' e 'Ele vai me ligar' separados por quebra de linha real no print). Todos os ids a partir do antigo 92 foram renumerados (+11): as referências numéricas de ids nas observações anteriores deste campo refletem numeração anterior e os message_ids em 'complements' já estão na numeração atual. ATUALIZAÇÃO 6 (bet): acrescentado o id 197 (out/2024; dia e hora não informados, date_precision='month'), trecho literal citado em matéria colada pelo usuário (veículo e data não informados), fala de Ana Matos sobre Kleryston ('bem intencionado, mas não me passa segurança'; grafia da matéria). A matéria não informa destinatário nem dia; a mensagem foi atribuída a esta conversa por indicação do usuário. Para não renumerar os demais ids, o id 197 foi mantido e posicionado no array em ordem cronológica, logo após o id 36 (16/10/2024) e antes do id 37 (11/12/2024); por isso ele aparece fora da sequência numérica. No index, a data '2024-10' é uma entrada de mês sem dia. total_messages passou de 196 para 197. ATUALIZAÇÃO 7: acrescentadas 6 mensagens de um novo print de WhatsApp (source 'screenshot', cabeçalho 'WhatsApp Chat - Ana Matos Mkt', carimbo com segundos e -03:00, mantido sem offset; marca d'água 'Metrópoles' visível ao fundo) de 26/09/2024 12:48:55 a 15:01:02 (ids 32-37), que complementam o dia 26/09/2024 após o id 31 (12:17:01). Id 33 (12:49:20): imagem de Ana exibida só como miniatura roxa sem conteúdo visível. Ids 34-35: mensagens de DV com rótulo 'Encaminhada' (campo 'forwarded'). Id 34 (12:49:55): bolha cortada na borda direita do recorte; o texto visível termina em 'fecho' e a leitura da palavra final é incerta (ver context_note). Há uma bolha de Ana cortada na borda inferior do print, sem carimbo/texto completo, não transcrita. Grafia preservada ('c', 'padock', 'augusto' como exibidos). Todos os ids a partir do antigo 32 foram renumerados (+6 até o antigo 36; o id 197 da ATUALIZAÇÃO 6 passou a 43, voltando à ordem cronológica no array; +7 a partir do antigo 37): os ids agora são sequenciais de 1 a 203 na ordem do array, as referências numéricas de ids nas observações anteriores deste campo refletem numeração anterior (inclusive 'id 197' da ATUALIZAÇÃO 6) e os message_ids em 'complements' já estão na numeração atual. total_messages passou de 197 para 203."
+    "note": "Os ids 1-17, 24-103 e 106-115 são trechos citados no relatório policial (source 'pf_report'; a conversa completa não consta do documento). Os ids 18-23 (11, 13 e 17/12/2024) vêm de captura de tela (source 'screenshot'), sem página/figura do relatório (source_page e source_figure null), e preenchem a lacuna entre 12/05/2024 e 25/02/2025. Os ids 143-144 (01/08/2025) e demais mensagens de 31/07/2025 vêm de uma segunda captura de tela (source 'screenshot'; HUwdxEcXAAAXCIr.jpg), também sem página/figura, e preenchem a lacuna entre 22/07/2025 e 02/08/2025. Essa captura também exibe as mensagens de 02/08/2025 às 09:54:48 (encaminhada) e 10:01:25, já presentes, conferidas sem divergência de texto e não duplicadas. Nas mensagens do primeiro print o horário vai só até o minuto, sem segundos nem fuso exibido; no segundo print o carimbo mostra segundos e -03:00, mas 'timestamp' foi mantido sem offset, como no restante do arquivo. Remetente 'DV' padronizado (nos prints o nome exibido é 'Daniel Vorcaro' no primeiro e 'DV' no segundo); 'Ana Matos Mkt (…)' normalizado para 'Ana Matos', com o número de telefone coberto por tarja preta no print e omitido. Grafia dos prints preservada ('metrópoles' com acento na primeira mensagem e 'metropoles' sem acento na segunda; 'Metropoles', 'Kovr', 'Will', 'lilian' como exibidos; 'Ela ouvi', 'qq', 'eh', 'Oioi' como exibidos). Id 142 (antigo 109): registro de chamada de voz (type 'call', sender null), bolha azul alinhada à direita (lado do DV), sem rótulo de quem ligou; o carimbo '2025-08-01 18:39:18' está sobreposto à bolha e com baixo contraste (leitura menos segura). Os prints são recortes; podem existir mensagens fora deles. Foram acrescentadas mensagens transcritas de prints de 05/04, 18/04, 28/05, 29/05, 28/07 e 30/07/2025 (source 'screenshot'); nesses prints o carimbo tem segundos e -03:00, mantido sem offset. Bolhas cortadas na borda do recorte não foram transcritas por falta de carimbo/texto completo. ATUALIZAÇÃO 2: acrescentado print de 18/07/2025 (19:08:31 e 19:23:26, source 'screenshot'; ids 104-105); o rótulo de Ana Matos aparece cortado ('Ana Matos Mkt (551194') e foi normalizado para 'Ana Matos'; no topo do print há uma bolha anterior cortada com reação de 👊/👍 parcial, não transcrita. Todos os ids a partir de 104 foram renumerados (+2) e os message_ids dos 'complements' atualizados; referências numéricas de ids em observações antigas deste campo podem refletir numeração anterior. ATUALIZAÇÃO 3: acrescentados os ids 28-38 (03/03/2025), transcritos de trechos citados na reportagem do Estadão 'Vorcaro encomendou vídeos para atacar jornalistas Malu Gaspar e Lauro Jardim' (source 'news_report', com 'source_ref'; sem página/figura do laudo e sem print). A matéria não informa horários, por isso 'time' é null; o campo 'quote_fidelity' distingue falas citadas na íntegra ('literal') de trechos citados apenas em fragmento ('fragment'). Os ids 37-38 podem ser de data posterior a 03/03/2025, pois a matéria diz apenas 'depois de reavaliações'. O vídeo do id 35 não foi visto pela reportagem. As mensagens da matéria dirigidas a outras pessoas (agressão a Lauro Jardim, dirigida a Luiz Phillipi Mourão; devassa na vida de Malu Gaspar, dirigida a Thiago Miranda) não pertencem a esta conversa e foram omitidas. Todos os ids a partir do antigo 28 foram renumerados (+11); as referências numéricas de ids nas observações anteriores deste campo (inclusive 'ids 1-17, 24-103 e 106-115', '143-144', '142' e '104-105') refletem a numeração anterior à ATUALIZAÇÃO 3 e os message_ids em 'complements' já estão na numeração atual. ATUALIZAÇÃO 4: acrescentadas 26 mensagens de seis novos prints de WhatsApp (source 'screenshot', cabeçalho 'WhatsApp Chat - Ana Matos Mkt', carimbo com segundos e -03:00, mantido sem offset): 20/08/2024 (ids 18-23), 18/09/2024 (ids 24-28), 26/09/2024 (ids 29-31), 29/09/2024 (ids 32-33), 16/10/2024 (ids 34-36) e 03/04/2025 (ids 79-85). Os cinco primeiros preenchem a lacuna entre 12/05/2024 e 11/12/2024 e o último a lacuna entre 14/03/2025 e 05/04/2025. Nos prints, as mensagens de DV aparecem com o rótulo 'Encaminhada' (campo 'forwarded'); em 20/08/2024 duas delas citam a mensagem de Ana das 16:37:50 (campo 'quoted'). O id 35 (16/10/2024 17:53:25) é uma imagem encaminhada exibida só como miniatura sem conteúdo visível, e o texto do id 36 (convite de João Camargo) tem o mesmo carimbo. Grafia preservada ('mm', 'cobranded', 'mae', 'balanco', 'joao', 'hj', 'tbm', 'eh', 'Kk' como exibidos). Quebras de linha de bolhas longas seguem o que o print mostra; em 26/09/2024 foi lida como quebra real a que separa 'tem' de 'outdoor' (leitura menos segura). Todos os ids a partir do antigo 18 foram renumerados (+19 até o antigo 59 e +26 a partir do antigo 60); as referências numéricas de ids nas observações anteriores deste campo refletem numeração anterior e os message_ids em 'complements' já estão na numeração atual. ATUALIZAÇÃO 5: acrescentadas 11 mensagens de um novo print de WhatsApp (source 'screenshot', cabeçalho 'WhatsApp Chat - Ana Matos Mkt', carimbo com segundos e -03:00, mantido sem offset; HVE0ELyWcAAYTxU__1_.jpg, dois recortes empilhados) de 05/04/2025 19:32 a 23:43 (ids 92-102), entre o último id de 05/04/2025 (91, 15:06) e o primeiro de 08/04/2025. Id 94 (19:33:22): registro de chamada de voz ('Duração: 01:36'), type 'call', sender null como nos demais registros de chamada, bolha azul alinhada à direita (lado do DV), sem rótulo de quem ligou; carimbo com baixo contraste, mas legível. Id 95 (19:35:14): cartão de contato 'Pablo Marçal' (Nome Formatado e Nome 'Pablo Marçal'; Telefone '—'; X-ABLabel 'WhatsApp'), type 'contact'. Id 99 (21:45:17): áudio de Ana exibido como 'Arquivo de mensagem de áudio', com player 0:00 / 0:00; sem conteúdo transcrito, type 'audio'. Id 100 (23:42:46): 'Mensagem apagada pelo remetente' (type 'deleted'); texto original indisponível. Grafia preservada ('msg', 'concentracao', 'especificamente' como exibidos; 'Sim falei msg porque não atendeu' e 'Ele vai me ligar' separados por quebra de linha real no print). Todos os ids a partir do antigo 92 foram renumerados (+11): as referências numéricas de ids nas observações anteriores deste campo refletem numeração anterior e os message_ids em 'complements' já estão na numeração atual. ATUALIZAÇÃO 6 (bet): acrescentado o id 197 (out/2024; dia e hora não informados, date_precision='month'), trecho literal citado em matéria colada pelo usuário (veículo e data não informados), fala de Ana Matos sobre Kleryston ('bem intencionado, mas não me passa segurança'; grafia da matéria). A matéria não informa destinatário nem dia; a mensagem foi atribuída a esta conversa por indicação do usuário. Para não renumerar os demais ids, o id 197 foi mantido e posicionado no array em ordem cronológica, logo após o id 36 (16/10/2024) e antes do id 37 (11/12/2024); por isso ele aparece fora da sequência numérica. No index, a data '2024-10' é uma entrada de mês sem dia. total_messages passou de 196 para 197. ATUALIZAÇÃO 7: acrescentadas 6 mensagens de um novo print de WhatsApp (source 'screenshot', cabeçalho 'WhatsApp Chat - Ana Matos Mkt', carimbo com segundos e -03:00, mantido sem offset; marca d'água 'Metrópoles' visível ao fundo) de 26/09/2024 12:48:55 a 15:01:02 (ids 32-37), que complementam o dia 26/09/2024 após o id 31 (12:17:01). Id 33 (12:49:20): imagem de Ana exibida só como miniatura roxa sem conteúdo visível. Ids 34-35: mensagens de DV com rótulo 'Encaminhada' (campo 'forwarded'). Id 34 (12:49:55): bolha cortada na borda direita do recorte; o texto visível termina em 'fecho' e a leitura da palavra final é incerta (ver context_note). Há uma bolha de Ana cortada na borda inferior do print, sem carimbo/texto completo, não transcrita. Grafia preservada ('c', 'padock', 'augusto' como exibidos). Todos os ids a partir do antigo 32 foram renumerados (+6 até o antigo 36; o id 197 da ATUALIZAÇÃO 6 passou a 43, voltando à ordem cronológica no array; +7 a partir do antigo 37): os ids agora são sequenciais de 1 a 203 na ordem do array, as referências numéricas de ids nas observações anteriores deste campo refletem numeração anterior (inclusive 'id 197' da ATUALIZAÇÃO 6) e os message_ids em 'complements' já estão na numeração atual. total_messages passou de 197 para 203. ATUALIZAÇÃO 8 (BRB / publi): acrescentadas 3 mensagens (ids 86-88; março de 2025; dia e hora não informados, date_precision='month'), trechos literais citados em matéria colada pelo usuário (veículo e data de publicação não informados; source 'news_report'), sobre a proposta de contratar Flávia Alessandra e Otaviano Costa para uma 'publi' do BRB, feita por Ana Matos a Daniel Vorcaro após reunião com integrantes do BRB. A matéria não informa o dia; as mensagens foram posicionadas no fim do bloco de março de 2025 (após o id 85, de 14/03/2025, e antes do id 89, de 03/04/2025), em ordem de conversa (Ana, DV, Ana). No index, a data '2025-03' é uma entrada de mês sem dia. Todos os ids a partir do antigo 86 foram renumerados (+3): os ids agora são sequenciais de 1 a 206 na ordem do array, as referências numéricas de ids nas observações anteriores deste campo refletem numeração anterior e os message_ids em 'complements' já estão na numeração atual. total_messages passou de 203 para 206."
   },
   "messages": [
     {
@@ -1622,6 +1633,69 @@
     },
     {
       "id": 86,
+      "timestamp": "2025-03",
+      "date": "2025-03",
+      "time": "",
+      "sender": "Ana Matos",
+      "content": "Flávia Alessandra e Otaviano, casal, estariam ok para você pra campanha publi? Estou rodando reputacional deles",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "news_report",
+      "source_ref": "Matéria colada pelo usuário (veículo e data não informados): trechos literais sobre a proposta de contratar Flávia Alessandra e Otaviano Costa para publi do BRB",
+      "source_page": null,
+      "source_figure": null,
+      "quote_fidelity": "literal",
+      "time_unknown": true,
+      "date_precision": "month",
+      "thread": "brb-publi",
+      "context_note": "Segundo a matéria, Ana Matos questionou Daniel Vorcaro após uma reunião com integrantes do BRB (Banco Regional de Brasília) sobre contratar a atriz Flávia Alessandra e Otaviano Costa para uma 'publi' do BRB. A matéria informa apenas 'março de 2025', sem dia nem hora; posicionada no fim do bloco de março de 2025."
+    },
+    {
+      "id": 87,
+      "timestamp": "2025-03",
+      "date": "2025-03",
+      "time": "",
+      "sender": "DV",
+      "content": "Sim. Acho um pouco queimados por programa de sexo. Mas, nessa altura campeonato, não vou me opor a eles",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "news_report",
+      "source_ref": "Matéria colada pelo usuário (veículo e data não informados): trechos literais sobre a proposta de contratar Flávia Alessandra e Otaviano Costa para publi do BRB",
+      "source_page": null,
+      "source_figure": null,
+      "quote_fidelity": "literal",
+      "time_unknown": true,
+      "date_precision": "month",
+      "thread": "brb-publi",
+      "context_note": "Resposta de Vorcaro à mensagem anterior (id 86); a matéria não informa dia nem hora."
+    },
+    {
+      "id": 88,
+      "timestamp": "2025-03",
+      "date": "2025-03",
+      "time": "",
+      "sender": "Ana Matos",
+      "content": "São quentes mesmo... Eu falei isso na reunião. Vou rodar reputacional pra ver o quanto",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "news_report",
+      "source_ref": "Matéria colada pelo usuário (veículo e data não informados): trechos literais sobre a proposta de contratar Flávia Alessandra e Otaviano Costa para publi do BRB",
+      "source_page": null,
+      "source_figure": null,
+      "quote_fidelity": "literal",
+      "time_unknown": true,
+      "date_precision": "month",
+      "thread": "brb-publi",
+      "context_note": "Concordância de Ana Matos, dizendo que pesquisaria o impacto da imagem do casal para a ação publicitária; a matéria não informa dia nem hora."
+    },
+    {
+      "id": 89,
       "timestamp": "2025-04-03T06:58:49",
       "date": "2025-04-03",
       "time": "06:58:49",
@@ -1636,7 +1710,7 @@
       "source_figure": null
     },
     {
-      "id": 87,
+      "id": 90,
       "timestamp": "2025-04-03T07:25:52",
       "date": "2025-04-03",
       "time": "07:25:52",
@@ -1651,7 +1725,7 @@
       "source_figure": null
     },
     {
-      "id": 88,
+      "id": 91,
       "timestamp": "2025-04-03T07:26:29",
       "date": "2025-04-03",
       "time": "07:26:29",
@@ -1666,7 +1740,7 @@
       "source_figure": null
     },
     {
-      "id": 89,
+      "id": 92,
       "timestamp": "2025-04-03T07:27:14",
       "date": "2025-04-03",
       "time": "07:27:14",
@@ -1681,7 +1755,7 @@
       "source_figure": null
     },
     {
-      "id": 90,
+      "id": 93,
       "timestamp": "2025-04-03T07:28:33",
       "date": "2025-04-03",
       "time": "07:28:33",
@@ -1696,7 +1770,7 @@
       "source_figure": null
     },
     {
-      "id": 91,
+      "id": 94,
       "timestamp": "2025-04-03T07:30:06",
       "date": "2025-04-03",
       "time": "07:30:06",
@@ -1711,7 +1785,7 @@
       "source_figure": null
     },
     {
-      "id": 92,
+      "id": 95,
       "timestamp": "2025-04-03T07:30:07",
       "date": "2025-04-03",
       "time": "07:30:07",
@@ -1726,7 +1800,7 @@
       "source_figure": null
     },
     {
-      "id": 93,
+      "id": 96,
       "timestamp": "2025-04-05T00:44:31",
       "date": "2025-04-05",
       "time": "00:44:31",
@@ -1743,7 +1817,7 @@
       "source_figure": null
     },
     {
-      "id": 94,
+      "id": 97,
       "timestamp": "2025-04-05T00:44:37",
       "date": "2025-04-05",
       "time": "00:44:37",
@@ -1759,7 +1833,7 @@
       "source_figure": null
     },
     {
-      "id": 95,
+      "id": 98,
       "timestamp": "2025-04-05T00:45:00",
       "date": "2025-04-05",
       "time": "00:45:00",
@@ -1774,7 +1848,7 @@
       "source_figure": null
     },
     {
-      "id": 96,
+      "id": 99,
       "timestamp": "2025-04-05T00:45:08",
       "date": "2025-04-05",
       "time": "00:45:08",
@@ -1789,7 +1863,7 @@
       "source_figure": null
     },
     {
-      "id": 97,
+      "id": 100,
       "timestamp": "2025-04-05T15:03:57",
       "date": "2025-04-05",
       "time": "15:03:57",
@@ -1804,7 +1878,7 @@
       "source_figure": null
     },
     {
-      "id": 98,
+      "id": 101,
       "timestamp": "2025-04-05T15:06:53",
       "date": "2025-04-05",
       "time": "15:06:53",
@@ -1819,7 +1893,7 @@
       "source_figure": null
     },
     {
-      "id": 99,
+      "id": 102,
       "timestamp": "2025-04-05T19:32:32",
       "date": "2025-04-05",
       "time": "19:32:32",
@@ -1834,7 +1908,7 @@
       "source_figure": null
     },
     {
-      "id": 100,
+      "id": 103,
       "timestamp": "2025-04-05T19:33:06",
       "date": "2025-04-05",
       "time": "19:33:06",
@@ -1849,7 +1923,7 @@
       "source_figure": null
     },
     {
-      "id": 101,
+      "id": 104,
       "timestamp": "2025-04-05T19:33:22",
       "date": "2025-04-05",
       "time": "19:33:22",
@@ -1864,7 +1938,7 @@
       "source_figure": null
     },
     {
-      "id": 102,
+      "id": 105,
       "timestamp": "2025-04-05T19:35:14",
       "date": "2025-04-05",
       "time": "19:35:14",
@@ -1879,7 +1953,7 @@
       "source_figure": null
     },
     {
-      "id": 103,
+      "id": 106,
       "timestamp": "2025-04-05T20:48:59",
       "date": "2025-04-05",
       "time": "20:48:59",
@@ -1894,7 +1968,7 @@
       "source_figure": null
     },
     {
-      "id": 104,
+      "id": 107,
       "timestamp": "2025-04-05T20:49:02",
       "date": "2025-04-05",
       "time": "20:49:02",
@@ -1909,7 +1983,7 @@
       "source_figure": null
     },
     {
-      "id": 105,
+      "id": 108,
       "timestamp": "2025-04-05T20:50:04",
       "date": "2025-04-05",
       "time": "20:50:04",
@@ -1924,7 +1998,7 @@
       "source_figure": null
     },
     {
-      "id": 106,
+      "id": 109,
       "timestamp": "2025-04-05T21:45:17",
       "date": "2025-04-05",
       "time": "21:45:17",
@@ -1939,7 +2013,7 @@
       "source_figure": null
     },
     {
-      "id": 107,
+      "id": 110,
       "timestamp": "2025-04-05T23:42:46",
       "date": "2025-04-05",
       "time": "23:42:46",
@@ -1954,7 +2028,7 @@
       "source_figure": null
     },
     {
-      "id": 108,
+      "id": 111,
       "timestamp": "2025-04-05T23:42:59",
       "date": "2025-04-05",
       "time": "23:42:59",
@@ -1969,7 +2043,7 @@
       "source_figure": null
     },
     {
-      "id": 109,
+      "id": 112,
       "timestamp": "2025-04-05T23:43:15",
       "date": "2025-04-05",
       "time": "23:43:15",
@@ -1984,7 +2058,7 @@
       "source_figure": null
     },
     {
-      "id": 110,
+      "id": 113,
       "timestamp": "2025-04-08T17:09:45",
       "date": "2025-04-08",
       "time": "17:09:45",
@@ -1999,7 +2073,7 @@
       "source_figure": 200
     },
     {
-      "id": 111,
+      "id": 114,
       "timestamp": "2025-04-08T17:09:56",
       "date": "2025-04-08",
       "time": "17:09:56",
@@ -2015,7 +2089,7 @@
       "source_figure": 200
     },
     {
-      "id": 112,
+      "id": 115,
       "timestamp": "2025-04-08T18:22:19",
       "date": "2025-04-08",
       "time": "18:22:19",
@@ -2030,7 +2104,7 @@
       "source_figure": 200
     },
     {
-      "id": 113,
+      "id": 116,
       "timestamp": "2025-04-08T18:22:46",
       "date": "2025-04-08",
       "time": "18:22:46",
@@ -2045,7 +2119,7 @@
       "source_figure": 200
     },
     {
-      "id": 114,
+      "id": 117,
       "timestamp": "2025-04-08T20:02:32",
       "date": "2025-04-08",
       "time": "20:02:32",
@@ -2060,7 +2134,7 @@
       "source_figure": 200
     },
     {
-      "id": 115,
+      "id": 118,
       "timestamp": "2025-04-08T20:02:35",
       "date": "2025-04-08",
       "time": "20:02:35",
@@ -2075,7 +2149,7 @@
       "source_figure": 200
     },
     {
-      "id": 116,
+      "id": 119,
       "timestamp": "2025-04-11T14:38:43",
       "date": "2025-04-11",
       "time": "14:38:43",
@@ -2090,7 +2164,7 @@
       "source_figure": 221
     },
     {
-      "id": 117,
+      "id": 120,
       "timestamp": "2025-04-11T14:42:01",
       "date": "2025-04-11",
       "time": "14:42:01",
@@ -2105,7 +2179,7 @@
       "source_figure": 221
     },
     {
-      "id": 118,
+      "id": 121,
       "timestamp": "2025-04-11T14:42:03",
       "date": "2025-04-11",
       "time": "14:42:03",
@@ -2120,7 +2194,7 @@
       "source_figure": 221
     },
     {
-      "id": 119,
+      "id": 122,
       "timestamp": "2025-04-11T14:42:20",
       "date": "2025-04-11",
       "time": "14:42:20",
@@ -2135,7 +2209,7 @@
       "source_figure": 221
     },
     {
-      "id": 120,
+      "id": 123,
       "timestamp": "2025-04-11T14:43:27",
       "date": "2025-04-11",
       "time": "14:43:27",
@@ -2150,7 +2224,7 @@
       "source_figure": 221
     },
     {
-      "id": 121,
+      "id": 124,
       "timestamp": "2025-04-11T14:43:41",
       "date": "2025-04-11",
       "time": "14:43:41",
@@ -2165,7 +2239,7 @@
       "source_figure": 221
     },
     {
-      "id": 122,
+      "id": 125,
       "timestamp": "2025-04-11T14:43:49",
       "date": "2025-04-11",
       "time": "14:43:49",
@@ -2180,7 +2254,7 @@
       "source_figure": 221
     },
     {
-      "id": 123,
+      "id": 126,
       "timestamp": "2025-04-11T14:43:53",
       "date": "2025-04-11",
       "time": "14:43:53",
@@ -2195,7 +2269,7 @@
       "source_figure": 221
     },
     {
-      "id": 124,
+      "id": 127,
       "timestamp": "2025-04-11T14:44:48",
       "date": "2025-04-11",
       "time": "14:44:48",
@@ -2210,7 +2284,7 @@
       "source_figure": 221
     },
     {
-      "id": 125,
+      "id": 128,
       "timestamp": "2025-04-11T14:45:45",
       "date": "2025-04-11",
       "time": "14:45:45",
@@ -2225,7 +2299,7 @@
       "source_figure": 221
     },
     {
-      "id": 126,
+      "id": 129,
       "timestamp": "2025-04-11T14:45:53",
       "date": "2025-04-11",
       "time": "14:45:53",
@@ -2240,7 +2314,7 @@
       "source_figure": 221
     },
     {
-      "id": 127,
+      "id": 130,
       "timestamp": "2025-04-18T14:25:32",
       "date": "2025-04-18",
       "time": "14:25:32",
@@ -2255,7 +2329,7 @@
       "source_figure": null
     },
     {
-      "id": 128,
+      "id": 131,
       "timestamp": "2025-04-18T14:25:34",
       "date": "2025-04-18",
       "time": "14:25:34",
@@ -2270,7 +2344,7 @@
       "source_figure": null
     },
     {
-      "id": 129,
+      "id": 132,
       "timestamp": "2025-04-18T14:49:46",
       "date": "2025-04-18",
       "time": "14:49:46",
@@ -2285,7 +2359,7 @@
       "source_figure": null
     },
     {
-      "id": 130,
+      "id": 133,
       "timestamp": "2025-04-18T14:55:40",
       "date": "2025-04-18",
       "time": "14:55:40",
@@ -2300,7 +2374,7 @@
       "source_figure": null
     },
     {
-      "id": 131,
+      "id": 134,
       "timestamp": "2025-04-18T14:55:53",
       "date": "2025-04-18",
       "time": "14:55:53",
@@ -2315,7 +2389,7 @@
       "source_figure": null
     },
     {
-      "id": 132,
+      "id": 135,
       "timestamp": "2025-05-28T15:31:08",
       "date": "2025-05-28",
       "time": "15:31:08",
@@ -2330,7 +2404,7 @@
       "source_figure": null
     },
     {
-      "id": 133,
+      "id": 136,
       "timestamp": "2025-05-28T15:31:13",
       "date": "2025-05-28",
       "time": "15:31:13",
@@ -2345,7 +2419,7 @@
       "source_figure": null
     },
     {
-      "id": 134,
+      "id": 137,
       "timestamp": "2025-05-28T15:32:31",
       "date": "2025-05-28",
       "time": "15:32:31",
@@ -2360,7 +2434,7 @@
       "source_figure": null
     },
     {
-      "id": 135,
+      "id": 138,
       "timestamp": "2025-05-28T15:32:41",
       "date": "2025-05-28",
       "time": "15:32:41",
@@ -2375,7 +2449,7 @@
       "source_figure": null
     },
     {
-      "id": 136,
+      "id": 139,
       "timestamp": "2025-05-29T11:39:46",
       "date": "2025-05-29",
       "time": "11:39:46",
@@ -2390,7 +2464,7 @@
       "source_figure": null
     },
     {
-      "id": 137,
+      "id": 140,
       "timestamp": "2025-05-29T15:20:28",
       "date": "2025-05-29",
       "time": "15:20:28",
@@ -2408,7 +2482,7 @@
       "source_figure": null
     },
     {
-      "id": 138,
+      "id": 141,
       "timestamp": "2025-05-29T15:20:35",
       "date": "2025-05-29",
       "time": "15:20:35",
@@ -2423,7 +2497,7 @@
       "source_figure": null
     },
     {
-      "id": 139,
+      "id": 142,
       "timestamp": "2025-05-29T15:22:16",
       "date": "2025-05-29",
       "time": "15:22:16",
@@ -2438,7 +2512,7 @@
       "source_figure": null
     },
     {
-      "id": 140,
+      "id": 143,
       "timestamp": "2025-05-29T15:22:32",
       "date": "2025-05-29",
       "time": "15:22:32",
@@ -2453,7 +2527,7 @@
       "source_figure": null
     },
     {
-      "id": 141,
+      "id": 144,
       "timestamp": "2025-05-29T15:22:35",
       "date": "2025-05-29",
       "time": "15:22:35",
@@ -2468,7 +2542,7 @@
       "source_figure": null
     },
     {
-      "id": 142,
+      "id": 145,
       "timestamp": "2025-07-17T13:21:39",
       "date": "2025-07-17",
       "time": "13:21:39",
@@ -2483,7 +2557,7 @@
       "source_figure": 201
     },
     {
-      "id": 143,
+      "id": 146,
       "timestamp": "2025-07-17T13:22:47",
       "date": "2025-07-17",
       "time": "13:22:47",
@@ -2498,7 +2572,7 @@
       "source_figure": 201
     },
     {
-      "id": 144,
+      "id": 147,
       "timestamp": "2025-07-17T13:32:35",
       "date": "2025-07-17",
       "time": "13:32:35",
@@ -2513,7 +2587,7 @@
       "source_figure": 201
     },
     {
-      "id": 145,
+      "id": 148,
       "timestamp": "2025-07-17T13:35:31",
       "date": "2025-07-17",
       "time": "13:35:31",
@@ -2528,7 +2602,7 @@
       "source_figure": 201
     },
     {
-      "id": 146,
+      "id": 149,
       "timestamp": "2025-07-17T13:48:15",
       "date": "2025-07-17",
       "time": "13:48:15",
@@ -2543,7 +2617,7 @@
       "source_figure": 201
     },
     {
-      "id": 147,
+      "id": 150,
       "timestamp": "2025-07-17T13:48:18",
       "date": "2025-07-17",
       "time": "13:48:18",
@@ -2558,7 +2632,7 @@
       "source_figure": 201
     },
     {
-      "id": 148,
+      "id": 151,
       "timestamp": "2025-07-17T13:49:26",
       "date": "2025-07-17",
       "time": "13:49:26",
@@ -2573,7 +2647,7 @@
       "source_figure": 201
     },
     {
-      "id": 149,
+      "id": 152,
       "timestamp": "2025-07-17T13:50:43",
       "date": "2025-07-17",
       "time": "13:50:43",
@@ -2588,7 +2662,7 @@
       "source_figure": 201
     },
     {
-      "id": 150,
+      "id": 153,
       "timestamp": "2025-07-17T13:51:08",
       "date": "2025-07-17",
       "time": "13:51:08",
@@ -2603,7 +2677,7 @@
       "source_figure": 201
     },
     {
-      "id": 151,
+      "id": 154,
       "timestamp": "2025-07-17T14:09:02",
       "date": "2025-07-17",
       "time": "14:09:02",
@@ -2619,7 +2693,7 @@
       "source_figure": 201
     },
     {
-      "id": 152,
+      "id": 155,
       "timestamp": "2025-07-18T17:28:59",
       "date": "2025-07-18",
       "time": "17:28:59",
@@ -2635,7 +2709,7 @@
       "source_figure": 202
     },
     {
-      "id": 153,
+      "id": 156,
       "timestamp": "2025-07-18T17:28:59",
       "date": "2025-07-18",
       "time": "17:28:59",
@@ -2651,7 +2725,7 @@
       "source_figure": 202
     },
     {
-      "id": 154,
+      "id": 157,
       "timestamp": "2025-07-18T17:29:16",
       "date": "2025-07-18",
       "time": "17:29:16",
@@ -2667,7 +2741,7 @@
       "source_figure": 202
     },
     {
-      "id": 155,
+      "id": 158,
       "timestamp": "2025-07-18T17:29:22",
       "date": "2025-07-18",
       "time": "17:29:22",
@@ -2682,7 +2756,7 @@
       "source_figure": 202
     },
     {
-      "id": 156,
+      "id": 159,
       "timestamp": "2025-07-18T17:29:30",
       "date": "2025-07-18",
       "time": "17:29:30",
@@ -2697,7 +2771,7 @@
       "source_figure": 202
     },
     {
-      "id": 157,
+      "id": 160,
       "timestamp": "2025-07-18T17:29:38",
       "date": "2025-07-18",
       "time": "17:29:38",
@@ -2712,7 +2786,7 @@
       "source_figure": 202
     },
     {
-      "id": 158,
+      "id": 161,
       "timestamp": "2025-07-18T17:29:51",
       "date": "2025-07-18",
       "time": "17:29:51",
@@ -2727,7 +2801,7 @@
       "source_figure": 202
     },
     {
-      "id": 159,
+      "id": 162,
       "timestamp": "2025-07-18T19:08:31",
       "date": "2025-07-18",
       "time": "19:08:31",
@@ -2742,7 +2816,7 @@
       "source_figure": null
     },
     {
-      "id": 160,
+      "id": 163,
       "timestamp": "2025-07-18T19:23:26",
       "date": "2025-07-18",
       "time": "19:23:26",
@@ -2757,7 +2831,7 @@
       "source_figure": null
     },
     {
-      "id": 161,
+      "id": 164,
       "timestamp": "2025-07-21T12:25:49",
       "date": "2025-07-21",
       "time": "12:25:49",
@@ -2772,7 +2846,7 @@
       "source_figure": 203
     },
     {
-      "id": 162,
+      "id": 165,
       "timestamp": "2025-07-21T12:25:55",
       "date": "2025-07-21",
       "time": "12:25:55",
@@ -2787,7 +2861,7 @@
       "source_figure": 203
     },
     {
-      "id": 163,
+      "id": 166,
       "timestamp": "2025-07-21T12:26:01",
       "date": "2025-07-21",
       "time": "12:26:01",
@@ -2802,7 +2876,7 @@
       "source_figure": 203
     },
     {
-      "id": 164,
+      "id": 167,
       "timestamp": "2025-07-21T12:26:03",
       "date": "2025-07-21",
       "time": "12:26:03",
@@ -2817,7 +2891,7 @@
       "source_figure": 203
     },
     {
-      "id": 165,
+      "id": 168,
       "timestamp": "2025-07-21T12:26:13",
       "date": "2025-07-21",
       "time": "12:26:13",
@@ -2832,7 +2906,7 @@
       "source_figure": 203
     },
     {
-      "id": 166,
+      "id": 169,
       "timestamp": "2025-07-21T12:26:20",
       "date": "2025-07-21",
       "time": "12:26:20",
@@ -2847,7 +2921,7 @@
       "source_figure": 203
     },
     {
-      "id": 167,
+      "id": 170,
       "timestamp": "2025-07-21T12:26:28",
       "date": "2025-07-21",
       "time": "12:26:28",
@@ -2862,7 +2936,7 @@
       "source_figure": 203
     },
     {
-      "id": 168,
+      "id": 171,
       "timestamp": "2025-07-21T12:26:30",
       "date": "2025-07-21",
       "time": "12:26:30",
@@ -2877,7 +2951,7 @@
       "source_figure": 203
     },
     {
-      "id": 169,
+      "id": 172,
       "timestamp": "2025-07-21T12:26:35",
       "date": "2025-07-21",
       "time": "12:26:35",
@@ -2892,7 +2966,7 @@
       "source_figure": 203
     },
     {
-      "id": 170,
+      "id": 173,
       "timestamp": "2025-07-21T12:26:38",
       "date": "2025-07-21",
       "time": "12:26:38",
@@ -2907,7 +2981,7 @@
       "source_figure": 203
     },
     {
-      "id": 171,
+      "id": 174,
       "timestamp": "2025-07-21T12:27:03",
       "date": "2025-07-21",
       "time": "12:27:03",
@@ -2922,7 +2996,7 @@
       "source_figure": 203
     },
     {
-      "id": 172,
+      "id": 175,
       "timestamp": "2025-07-21T12:27:04",
       "date": "2025-07-21",
       "time": "12:27:04",
@@ -2937,7 +3011,7 @@
       "source_figure": 203
     },
     {
-      "id": 173,
+      "id": 176,
       "timestamp": "2025-07-21T12:27:33",
       "date": "2025-07-21",
       "time": "12:27:33",
@@ -2952,7 +3026,7 @@
       "source_figure": 203
     },
     {
-      "id": 174,
+      "id": 177,
       "timestamp": "2025-07-22T18:06:23",
       "date": "2025-07-22",
       "time": "18:06:23",
@@ -2967,7 +3041,7 @@
       "source_figure": 204
     },
     {
-      "id": 175,
+      "id": 178,
       "timestamp": "2025-07-22T18:06:34",
       "date": "2025-07-22",
       "time": "18:06:34",
@@ -2982,7 +3056,7 @@
       "source_figure": 204
     },
     {
-      "id": 176,
+      "id": 179,
       "timestamp": "2025-07-22T18:08:46",
       "date": "2025-07-22",
       "time": "18:08:46",
@@ -2997,7 +3071,7 @@
       "source_figure": 204
     },
     {
-      "id": 177,
+      "id": 180,
       "timestamp": "2025-07-22T18:09:09",
       "date": "2025-07-22",
       "time": "18:09:09",
@@ -3012,7 +3086,7 @@
       "source_figure": 204
     },
     {
-      "id": 178,
+      "id": 181,
       "timestamp": "2025-07-22T18:09:11",
       "date": "2025-07-22",
       "time": "18:09:11",
@@ -3028,7 +3102,7 @@
       "source_figure": 204
     },
     {
-      "id": 179,
+      "id": 182,
       "timestamp": "2025-07-22T18:09:43",
       "date": "2025-07-22",
       "time": "18:09:43",
@@ -3043,7 +3117,7 @@
       "source_figure": 204
     },
     {
-      "id": 180,
+      "id": 183,
       "timestamp": "2025-07-28T22:18:52",
       "date": "2025-07-28",
       "time": "22:18:52",
@@ -3058,7 +3132,7 @@
       "source_figure": null
     },
     {
-      "id": 181,
+      "id": 184,
       "timestamp": "2025-07-28T22:50:11",
       "date": "2025-07-28",
       "time": "22:50:11",
@@ -3073,7 +3147,7 @@
       "source_figure": null
     },
     {
-      "id": 182,
+      "id": 185,
       "timestamp": "2025-07-28T22:53:10",
       "date": "2025-07-28",
       "time": "22:53:10",
@@ -3088,7 +3162,7 @@
       "source_figure": null
     },
     {
-      "id": 183,
+      "id": 186,
       "timestamp": "2025-07-28T22:53:37",
       "date": "2025-07-28",
       "time": "22:53:37",
@@ -3103,7 +3177,7 @@
       "source_figure": null
     },
     {
-      "id": 184,
+      "id": 187,
       "timestamp": "2025-07-28T22:53:52",
       "date": "2025-07-28",
       "time": "22:53:52",
@@ -3119,7 +3193,7 @@
       "source_figure": null
     },
     {
-      "id": 185,
+      "id": 188,
       "timestamp": "2025-07-28T22:54:05",
       "date": "2025-07-28",
       "time": "22:54:05",
@@ -3135,7 +3209,7 @@
       "source_figure": null
     },
     {
-      "id": 186,
+      "id": 189,
       "timestamp": "2025-07-30T14:54:52",
       "date": "2025-07-30",
       "time": "14:54:52",
@@ -3150,7 +3224,7 @@
       "source_figure": null
     },
     {
-      "id": 187,
+      "id": 190,
       "timestamp": "2025-07-30T14:55:19",
       "date": "2025-07-30",
       "time": "14:55:19",
@@ -3165,7 +3239,7 @@
       "source_figure": null
     },
     {
-      "id": 188,
+      "id": 191,
       "timestamp": "2025-07-30T14:56:36",
       "date": "2025-07-30",
       "time": "14:56:36",
@@ -3180,7 +3254,7 @@
       "source_figure": null
     },
     {
-      "id": 189,
+      "id": 192,
       "timestamp": "2025-07-30T14:56:47",
       "date": "2025-07-30",
       "time": "14:56:47",
@@ -3195,7 +3269,7 @@
       "source_figure": null
     },
     {
-      "id": 190,
+      "id": 193,
       "timestamp": "2025-07-30T14:56:51",
       "date": "2025-07-30",
       "time": "14:56:51",
@@ -3210,7 +3284,7 @@
       "source_figure": null
     },
     {
-      "id": 191,
+      "id": 194,
       "timestamp": "2025-07-30T14:56:57",
       "date": "2025-07-30",
       "time": "14:56:57",
@@ -3225,7 +3299,7 @@
       "source_figure": null
     },
     {
-      "id": 192,
+      "id": 195,
       "timestamp": "2025-07-31T17:13:09",
       "date": "2025-07-31",
       "time": "17:13:09",
@@ -3240,7 +3314,7 @@
       "source_figure": null
     },
     {
-      "id": 193,
+      "id": 196,
       "timestamp": "2025-07-31T17:13:18",
       "date": "2025-07-31",
       "time": "17:13:18",
@@ -3255,7 +3329,7 @@
       "source_figure": null
     },
     {
-      "id": 194,
+      "id": 197,
       "timestamp": "2025-07-31T17:13:21",
       "date": "2025-07-31",
       "time": "17:13:21",
@@ -3270,7 +3344,7 @@
       "source_figure": null
     },
     {
-      "id": 195,
+      "id": 198,
       "timestamp": "2025-07-31T17:14:56",
       "date": "2025-07-31",
       "time": "17:14:56",
@@ -3285,7 +3359,7 @@
       "source_figure": null
     },
     {
-      "id": 196,
+      "id": 199,
       "timestamp": "2025-07-31T17:15:19",
       "date": "2025-07-31",
       "time": "17:15:19",
@@ -3300,7 +3374,7 @@
       "source_figure": null
     },
     {
-      "id": 197,
+      "id": 200,
       "timestamp": "2025-07-31T17:17:05",
       "date": "2025-07-31",
       "time": "17:17:05",
@@ -3315,7 +3389,7 @@
       "source_figure": null
     },
     {
-      "id": 198,
+      "id": 201,
       "timestamp": "2025-08-01T16:56:41",
       "date": "2025-08-01",
       "time": "16:56:41",
@@ -3330,7 +3404,7 @@
       "source_figure": null
     },
     {
-      "id": 199,
+      "id": 202,
       "timestamp": "2025-08-01T18:39:18",
       "date": "2025-08-01",
       "time": "18:39:18",
@@ -3345,7 +3419,7 @@
       "source_figure": null
     },
     {
-      "id": 200,
+      "id": 203,
       "timestamp": "2025-08-02T09:54:48",
       "date": "2025-08-02",
       "time": "09:54:48",
@@ -3361,7 +3435,7 @@
       "source_figure": 205
     },
     {
-      "id": 201,
+      "id": 204,
       "timestamp": "2025-08-02T10:01:25",
       "date": "2025-08-02",
       "time": "10:01:25",
@@ -3376,7 +3450,7 @@
       "source_figure": 205
     },
     {
-      "id": 202,
+      "id": 205,
       "timestamp": "2025-08-02T10:13:28",
       "date": "2025-08-02",
       "time": "10:13:28",
@@ -3391,7 +3465,7 @@
       "source_figure": 205
     },
     {
-      "id": 203,
+      "id": 206,
       "timestamp": "2025-08-02T12:10:25",
       "date": "2025-08-02",
       "time": "12:10:25",
@@ -3511,100 +3585,106 @@
         "last_message_id": 85
       },
       {
+        "date": "2025-03",
+        "message_count": 3,
+        "first_message_id": 86,
+        "last_message_id": 88
+      },
+      {
         "date": "2025-04-03",
         "message_count": 7,
-        "first_message_id": 86,
-        "last_message_id": 92
+        "first_message_id": 89,
+        "last_message_id": 95
       },
       {
         "date": "2025-04-05",
         "message_count": 17,
-        "first_message_id": 93,
-        "last_message_id": 109
+        "first_message_id": 96,
+        "last_message_id": 112
       },
       {
         "date": "2025-04-08",
         "message_count": 6,
-        "first_message_id": 110,
-        "last_message_id": 115
+        "first_message_id": 113,
+        "last_message_id": 118
       },
       {
         "date": "2025-04-11",
         "message_count": 11,
-        "first_message_id": 116,
-        "last_message_id": 126
+        "first_message_id": 119,
+        "last_message_id": 129
       },
       {
         "date": "2025-04-18",
         "message_count": 5,
-        "first_message_id": 127,
-        "last_message_id": 131
+        "first_message_id": 130,
+        "last_message_id": 134
       },
       {
         "date": "2025-05-28",
         "message_count": 4,
-        "first_message_id": 132,
-        "last_message_id": 135
+        "first_message_id": 135,
+        "last_message_id": 138
       },
       {
         "date": "2025-05-29",
         "message_count": 6,
-        "first_message_id": 136,
-        "last_message_id": 141
+        "first_message_id": 139,
+        "last_message_id": 144
       },
       {
         "date": "2025-07-17",
         "message_count": 10,
-        "first_message_id": 142,
-        "last_message_id": 151
+        "first_message_id": 145,
+        "last_message_id": 154
       },
       {
         "date": "2025-07-18",
         "message_count": 9,
-        "first_message_id": 152,
-        "last_message_id": 160
+        "first_message_id": 155,
+        "last_message_id": 163
       },
       {
         "date": "2025-07-21",
         "message_count": 13,
-        "first_message_id": 161,
-        "last_message_id": 173
+        "first_message_id": 164,
+        "last_message_id": 176
       },
       {
         "date": "2025-07-22",
         "message_count": 6,
-        "first_message_id": 174,
-        "last_message_id": 179
+        "first_message_id": 177,
+        "last_message_id": 182
       },
       {
         "date": "2025-07-28",
         "message_count": 6,
-        "first_message_id": 180,
-        "last_message_id": 185
+        "first_message_id": 183,
+        "last_message_id": 188
       },
       {
         "date": "2025-07-30",
         "message_count": 6,
-        "first_message_id": 186,
-        "last_message_id": 191
+        "first_message_id": 189,
+        "last_message_id": 194
       },
       {
         "date": "2025-07-31",
         "message_count": 6,
-        "first_message_id": 192,
-        "last_message_id": 197
+        "first_message_id": 195,
+        "last_message_id": 200
       },
       {
         "date": "2025-08-01",
         "message_count": 2,
-        "first_message_id": 198,
-        "last_message_id": 199
+        "first_message_id": 201,
+        "last_message_id": 202
       },
       {
         "date": "2025-08-02",
         "message_count": 4,
-        "first_message_id": 200,
-        "last_message_id": 203
+        "first_message_id": 203,
+        "last_message_id": 206
       }
     ]
   }
