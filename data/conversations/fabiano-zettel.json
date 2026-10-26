@@ -11,7 +11,7 @@
       "start": "2024-02-08",
       "end": "2025-03-12"
     },
-    "total_messages": 51,
+    "total_messages": 60,
     "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
     "source_detail": {
       "kind": "police-report",
@@ -50,10 +50,28 @@
             17,
             18
           ]
+        },
+        {
+          "id": "captura-31-01-e-03-02-2025",
+          "label": "Captura de tela de WhatsApp com dois painéis (31/01/2025 e 03/02/2025)",
+          "url": null,
+          "published": null,
+          "file": null,
+          "message_ids": [
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ]
         }
       ]
     },
-    "note": "Mensagens 1–14: trechos citados no relatório policial — a conversa completa não consta do documento. Mensagens 15–18: transcritas de captura de tela de WhatsApp (HUw-9nOXUAE25N_.jpg); ano 2024 inferido (30/12 caiu numa segunda-feira em 2024 e o texto menciona 'março/24'); horário só com precisão de minuto. ATUALIZAÇÃO 2: acrescentadas 33 mensagens (ids 19-51), de 09/01/2025 a 12/03/2025, da exportação do site (masterwhats-fabiano-zettel.json, que traz 47 mensagens), a partir de prints da extração do celular publicados pelo Metrópoles (caso Dark Horse, Inq 5070; 12/09/2026 e 21/09/2026), cada uma com o seu 'source_cite'. As mensagens 1-14 da exportação coincidem com as 1-14 deste arquivo; as mensagens 15-18 (30/12/2024) não constam da exportação e foram mantidas. Por isso os ids da exportação a partir do 15 foram renumerados (+4), e os ids agora são sequenciais de 1 a 51 em ordem cronológica no array: por exemplo, 'Filme vc pagou?' passou do id 19 da exportação para o id 23, e 'Esse e o mais importante disparado' do 23 para o 27. Os carimbos foram mantidos sem offset (a exportação traz -03:00), como no restante do projeto. O bloco 'profile' da exportação não faz parte deste formato e não foi incluído (os links #msg-N dele usam a numeração da exportação)."
+    "note": "Mensagens 1–14: trechos citados no relatório policial — a conversa completa não consta do documento. Mensagens 15–18: transcritas de captura de tela de WhatsApp (HUw-9nOXUAE25N_.jpg); ano 2024 inferido (30/12 caiu numa segunda-feira em 2024 e o texto menciona 'março/24'); horário só com precisão de minuto. ATUALIZAÇÃO 2: acrescentadas 33 mensagens (ids 19-51 na numeração anterior), de 09/01/2025 a 12/03/2025, da exportação do site (masterwhats-fabiano-zettel.json, que traz 47 mensagens), a partir de prints da extração do celular publicados pelo Metrópoles (caso Dark Horse, Inq 5070; 12/09/2026 e 21/09/2026), cada uma com o seu 'source_cite'. As mensagens 1-14 da exportação coincidem com as 1-14 deste arquivo; as mensagens 15-18 (30/12/2024) não constam da exportação e foram mantidas. Por isso os ids da exportação a partir do 15 foram renumerados (+4), e os ids são sequenciais de 1 a 60 em ordem cronológica no array: por exemplo, 'Filme vc pagou?' passou do id 19 da exportação para o id 23, e 'Esse e o mais importante disparado' do 23 para o 27. Os carimbos foram mantidos sem offset (a exportação traz -03:00), como no restante do projeto. O bloco 'profile' da exportação não faz parte deste formato e não foi incluído (os links #msg-N dele usam a numeração da exportação). ATUALIZAÇÃO 3: acrescentadas 9 mensagens (ids 29-37), de 31/01/2025 e 03/02/2025, transcritas de captura de tela com dois painéis (painel esquerdo: 31/01/2025; painel direito: 03/02/2025), incluindo as mensagens de DV visíveis no painel esquerdo. Foram inseridas em ordem cronológica entre 28/01 e 05/02, de modo que os ids das mensagens seguintes foram deslocados em +9 (antigos 29–51 viraram 38–60). A última mensagem de 31/01 (id 35) aparece cortada na captura e termina em reticências ('truncated': true)."
   },
   "messages": [
     {
@@ -450,6 +468,124 @@
     },
     {
       "id": 29,
+      "timestamp": "2025-01-31T19:06:34",
+      "date": "2025-01-31",
+      "time": "19:06:34",
+      "sender": "DV",
+      "content": "Vc fez o filme?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "captura de tela · painel esquerdo (31/01/2025)"
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-01-31T19:59:10",
+      "date": "2025-01-31",
+      "time": "19:59:10",
+      "sender": "Fabiano Zettel",
+      "content": "Amigo,\nNão faz assim que me dá dor de barriga...\nEstamos esperando você definir a empresa...\nE não veio nada de TED do câmbio e do Caco, e etc...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "captura de tela · painel esquerdo (31/01/2025)"
+    },
+    {
+      "id": 31,
+      "timestamp": "2025-01-31T19:59:47",
+      "date": "2025-01-31",
+      "time": "19:59:47",
+      "sender": "DV",
+      "content": "Nao veio?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "captura de tela · painel esquerdo (31/01/2025)"
+    },
+    {
+      "id": 32,
+      "timestamp": "2025-01-31T19:59:49",
+      "date": "2025-01-31",
+      "time": "19:59:49",
+      "sender": "DV",
+      "content": "A do filme?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "captura de tela · painel esquerdo (31/01/2025)"
+    },
+    {
+      "id": 33,
+      "timestamp": "2025-01-31T19:59:59",
+      "date": "2025-01-31",
+      "time": "19:59:59",
+      "sender": "Fabiano Zettel",
+      "content": "Não...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "captura de tela · painel esquerdo (31/01/2025)"
+    },
+    {
+      "id": 34,
+      "timestamp": "2025-01-31T20:00:06",
+      "date": "2025-01-31",
+      "time": "20:00:06",
+      "sender": "Fabiano Zettel",
+      "content": "E vc tem que definir a empresa...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "captura de tela · painel esquerdo (31/01/2025)"
+    },
+    {
+      "id": 35,
+      "timestamp": "2025-01-31T20:00:15",
+      "date": "2025-01-31",
+      "time": "20:00:15",
+      "sender": "Fabiano Zettel",
+      "content": "Ou obrigar o Simonsen a fazer na minha...",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "truncated": true,
+      "source_cite": "captura de tela · painel esquerdo (31/01/2025)"
+    },
+    {
+      "id": 36,
+      "timestamp": "2025-02-03T07:34:21",
+      "date": "2025-02-03",
+      "time": "07:34:21",
+      "sender": "Fabiano Zettel",
+      "content": "Bom dia!\n\n- SL\n- Caco\n- Destinations\n- Resolver filme...\n- FNE está no chão... preciso do Mineiro\n\nO que eu faço?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "captura de tela · painel direito (03/02/2025)"
+    },
+    {
+      "id": 37,
+      "timestamp": "2025-02-03T12:18:48",
+      "date": "2025-02-03",
+      "time": "12:18:48",
+      "sender": "Fabiano Zettel",
+      "content": "Mandei SL e Caco.\nE estou tentando Minas de todo jeito.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "captura de tela · painel direito (03/02/2025)"
+    },
+    {
+      "id": 38,
       "timestamp": "2025-02-05T14:16:16",
       "date": "2025-02-05",
       "time": "14:16:16",
@@ -462,7 +598,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 30,
+      "id": 39,
       "timestamp": "2025-02-05T14:16:31",
       "date": "2025-02-05",
       "time": "14:16:31",
@@ -475,7 +611,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 31,
+      "id": 40,
       "timestamp": "2025-02-05T14:16:38",
       "date": "2025-02-05",
       "time": "14:16:38",
@@ -488,7 +624,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 32,
+      "id": 41,
       "timestamp": "2025-02-05T14:16:54",
       "date": "2025-02-05",
       "time": "14:16:54",
@@ -501,7 +637,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 33,
+      "id": 42,
       "timestamp": "2025-02-05T14:17:25",
       "date": "2025-02-05",
       "time": "14:17:25",
@@ -514,7 +650,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 34,
+      "id": 43,
       "timestamp": "2025-02-05T14:17:28",
       "date": "2025-02-05",
       "time": "14:17:28",
@@ -527,7 +663,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 35,
+      "id": 44,
       "timestamp": "2025-02-05T14:17:32",
       "date": "2025-02-05",
       "time": "14:17:32",
@@ -540,7 +676,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 36,
+      "id": 45,
       "timestamp": "2025-02-05T14:17:33",
       "date": "2025-02-05",
       "time": "14:17:33",
@@ -553,7 +689,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 37,
+      "id": 46,
       "timestamp": "2025-02-05T14:17:39",
       "date": "2025-02-05",
       "time": "14:17:39",
@@ -566,7 +702,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 38,
+      "id": 47,
       "timestamp": "2025-02-11T10:08:54",
       "date": "2025-02-11",
       "time": "10:08:54",
@@ -579,7 +715,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 39,
+      "id": 48,
       "timestamp": "2025-02-11T11:11:25",
       "date": "2025-02-11",
       "time": "11:11:25",
@@ -592,7 +728,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 40,
+      "id": 49,
       "timestamp": "2025-02-11T11:15:05",
       "date": "2025-02-11",
       "time": "11:15:05",
@@ -605,7 +741,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 41,
+      "id": 50,
       "timestamp": "2025-02-11T11:15:07",
       "date": "2025-02-11",
       "time": "11:15:07",
@@ -618,7 +754,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 42,
+      "id": 51,
       "timestamp": "2025-02-11T11:15:30",
       "date": "2025-02-11",
       "time": "11:15:30",
@@ -631,7 +767,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 43,
+      "id": 52,
       "timestamp": "2025-02-11T11:15:51",
       "date": "2025-02-11",
       "time": "11:15:51",
@@ -644,7 +780,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 44,
+      "id": 53,
       "timestamp": "2025-02-11T11:16:26",
       "date": "2025-02-11",
       "time": "11:16:26",
@@ -657,7 +793,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 45,
+      "id": 54,
       "timestamp": "2025-02-11T13:11:59",
       "date": "2025-02-11",
       "time": "13:11:59",
@@ -670,7 +806,7 @@
       "source_cite": "print 10 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 46,
+      "id": 55,
       "timestamp": "2025-02-14T17:20:16",
       "date": "2025-02-14",
       "time": "17:20:16",
@@ -684,7 +820,7 @@
       "forwarded": true
     },
     {
-      "id": 47,
+      "id": 56,
       "timestamp": "2025-02-14T17:20:22",
       "date": "2025-02-14",
       "time": "17:20:22",
@@ -698,7 +834,7 @@
       "quoted": "ENTRE INVESTIME466312546.PDF"
     },
     {
-      "id": 48,
+      "id": 57,
       "timestamp": "2025-03-12T18:32:47",
       "date": "2025-03-12",
       "time": "18:32:47",
@@ -712,7 +848,7 @@
       "forwarded": true
     },
     {
-      "id": 49,
+      "id": 58,
       "timestamp": "2025-03-12T18:32:53",
       "date": "2025-03-12",
       "time": "18:32:53",
@@ -725,7 +861,7 @@
       "source_cite": "print 12 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 50,
+      "id": 59,
       "timestamp": "2025-03-12T18:32:59",
       "date": "2025-03-12",
       "time": "18:32:59",
@@ -738,7 +874,7 @@
       "source_cite": "print 12 · Metrópoles, 12/09/2026"
     },
     {
-      "id": 51,
+      "id": 60,
       "timestamp": "2025-03-12T18:34:23",
       "date": "2025-03-12",
       "time": "18:34:23",
@@ -785,28 +921,40 @@
         "last_message_id": 28
       },
       {
+        "date": "2025-01-31",
+        "message_count": 7,
+        "first_message_id": 29,
+        "last_message_id": 35
+      },
+      {
+        "date": "2025-02-03",
+        "message_count": 2,
+        "first_message_id": 36,
+        "last_message_id": 37
+      },
+      {
         "date": "2025-02-05",
         "message_count": 9,
-        "first_message_id": 29,
-        "last_message_id": 37
+        "first_message_id": 38,
+        "last_message_id": 46
       },
       {
         "date": "2025-02-11",
         "message_count": 8,
-        "first_message_id": 38,
-        "last_message_id": 45
+        "first_message_id": 47,
+        "last_message_id": 54
       },
       {
         "date": "2025-02-14",
         "message_count": 2,
-        "first_message_id": 46,
-        "last_message_id": 47
+        "first_message_id": 55,
+        "last_message_id": 56
       },
       {
         "date": "2025-03-12",
         "message_count": 4,
-        "first_message_id": 48,
-        "last_message_id": 51
+        "first_message_id": 57,
+        "last_message_id": 60
       }
     ]
   }
