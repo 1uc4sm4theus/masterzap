@@ -934,12 +934,14 @@
       "date": "2025-11-16",
       "time": "15:52:00",
       "sender": "DV",
-      "content": "[imagem de visualização única]",
-      "type": "image",
+      "content": "Vai dar certo essa semana.\nO cara que mandei a grana nao liquidou, e eu estou num momento dificil demais. Foram duas parcelas que mandei e ele nao liquidou. Muito foda.\nMas ja organizei pra fazer de novo na terça. Ta muito dificil mas vamos vencer. Se eu passar da semana que vem ai resolvemos tudo em seguida",
+      "type": "text",
       "is_edited": false,
       "attachment": null,
       "urls": [],
-      "view_once": true
+      "view_once": true,
+      "source_cite": "UOL (Cezar Feitoza), 03/11/2026 — texto recuperado do log do iPhone de Vorcaro (captura do app Notas enviada em visualização única)",
+      "time_refined": false
     },
     {
       "id": 73,
