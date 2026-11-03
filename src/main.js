@@ -113,6 +113,7 @@ async function init() {
     'newton-ramos': '/assets/avatar-newton-ramos.jpg',
     'nelson-tanure': '/assets/avatar-nelson-tanure.jpg',
     'diogo-batista-vorcaro': '/assets/avatar-diogo-batista.jpg',
+    'erika-schneider': '/assets/avatar-erika.jpeg',
 
 
 
