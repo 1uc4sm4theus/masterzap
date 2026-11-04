@@ -115,6 +115,7 @@ async function init() {
     'diogo-batista-vorcaro': '/assets/avatar-diogo-batista.jpg',
     'erika-schneider': '/assets/avatar-erika.jpeg',
     'thiago-miranda': '/assets/avatar-thiago-miranda.jpeg',
+    'andre-esteves': '/assets/avatar-andre-esteves.jpeg',
 
 
 
