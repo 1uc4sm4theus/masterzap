@@ -27,6 +27,10 @@ describe('HashRouter', () => {
       expect(HashRouter.parseHash('#/favorites')).toEqual({ route: 'favorites', param: null, messageId: null });
     });
 
+    it('#/events → events', () => {
+      expect(HashRouter.parseHash('#/events')).toEqual({ route: 'events', param: null, messageId: null });
+    });
+
     it('# → home', () => {
       expect(HashRouter.parseHash('#')).toEqual({ route: 'home', param: null, messageId: null });
     });
@@ -108,6 +112,11 @@ describe('HashRouter', () => {
     it('navigate("favorites") sets hash to #/favorites', () => {
       router.navigate('favorites');
       expect(window.location.hash).toBe('#/favorites');
+    });
+
+    it('navigate("events") sets hash to #/events', () => {
+      router.navigate('events');
+      expect(window.location.hash).toBe('#/events');
     });
 
     it('navigate("chat", "martha-graeff") sets hash without messageId', () => {

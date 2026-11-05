@@ -54,7 +54,8 @@
     justify-content: center;
   }
 
-  .sidebar-flights-link {
+  .sidebar-flights-link,
+  .sidebar-events-link {
     display: flex;
     align-items: center;
     flex: 0 0 auto;

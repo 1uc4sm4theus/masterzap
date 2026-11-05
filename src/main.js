@@ -36,6 +36,7 @@ import { renderMediaPanel } from './components/MediaPanel.js';
 import { renderSoundtrackPanel } from './components/SoundtrackPanel.js';
 import { renderSoundtrackPlayer } from './components/SoundtrackPlayer.js';
 import { renderFavoritesPanel } from './components/FavoritesPanel.js';
+import { renderEventsPanel } from './components/EventsPanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
 import { parseLink } from './lib/media.js';
@@ -234,6 +235,7 @@ async function init() {
     closeChat();
     closeProfile();
     closeSettings();
+    container.classList.remove('events-open');
   }
 
   // ── Placeholder SVGs ──────────────────────────────
@@ -329,7 +331,7 @@ async function init() {
     // "Não lidas" tally.
     if (markConversationRead(readConversations, id)) sidebar.refreshReadState?.();
     container.classList.add('chat-open');
-    container.classList.remove('flights-open', 'chatgpt-open', 'soundtrack-open');
+    container.classList.remove('flights-open', 'chatgpt-open', 'soundtrack-open', 'events-open');
 
     const conversation = store.getConversation(id);
     if (!conversation) { showEmptyState(); return; }
@@ -571,6 +573,7 @@ async function init() {
     onFlights: () => router.navigate('flights'),
     onChatGPT: () => router.navigate('chatgpt'),
     onSoundtrack: () => router.navigate('soundtrack'),
+    onEvents: () => router.navigate('events'),
     avatarSrc: activeUser.avatar,
     avatarName: activeUser.name,
     onSettings: openSettings,
@@ -583,7 +586,7 @@ async function init() {
     onChat: () => {
       // From secondary screens, this is the way back to the conversation list.
       const route = router.getCurrentRoute().route;
-      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt' || route === 'soundtrack') { router.navigate('home'); return; }
+      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt' || route === 'soundtrack' || route === 'events') { router.navigate('home'); return; }
       closeProfile();
       closeSettings();
     },
@@ -609,6 +612,7 @@ async function init() {
       onFavorites: () => router.navigate('favorites'),
       onCalls: () => router.navigate('calls'),
       onPayments: () => router.navigate('payments'),
+      onEvents: () => router.navigate('events'),
       onFlights: () => router.navigate('flights'),
       onChatGPT: () => router.navigate('chatgpt'),
       onSoundtrack: () => router.navigate('soundtrack'),
@@ -823,6 +827,13 @@ async function init() {
     });
     mainArea.appendChild(soundtrackPanel);
     navRail.setActive?.('soundtrack');
+  });
+  router.on('events', () => {
+    showEmptyState();
+    sidebar.showChats?.();
+    container.classList.add('events-open');
+    mainArea.replaceChildren(renderEventsPanel());
+    navRail.setActive?.('events');
   });
   router.on('chat', async (id, messageId) => {
     if (messageId) {
