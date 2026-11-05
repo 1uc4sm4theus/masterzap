@@ -253,10 +253,13 @@ async function init() {
       if (!activeLoader || target !== currentConversationId) {
         router.navigate('chat', target);
       }
-      setTimeout(() => {
+      setTimeout(async () => {
         const chatViewEl = mainArea.querySelector('.chat-view');
-        if (chatViewEl && !activeChatSearch) {
+        if (chatViewEl && !activeChatSearch && currentConversationId === target) {
+          const dateIndex = await store.getConversationIndex(target);
+          if (!chatViewEl.isConnected || activeChatSearch || currentConversationId !== target) return;
           activeChatSearch = showMobileSearchBar(chatViewEl, target, {
+            dateIndex,
             onNavigate: (messageId, date) => activeLoader?.scrollToMessage(messageId, date),
             onDateSelect: (date) => activeLoader?.scrollToDate(date),
             onClose: () => { activeChatSearch = null; },
@@ -299,6 +302,7 @@ async function init() {
       const chatViewEl = mainArea.querySelector('.chat-view');
       if (chatViewEl) {
         activeChatSearch = showMobileSearchBar(chatViewEl, conversationId, {
+          dateIndex,
           onNavigate: (messageId, date) => activeLoader?.scrollToMessage(messageId, date),
           onDateSelect: (date) => activeLoader?.scrollToDate(date),
           onClose: () => { activeChatSearch = null; },

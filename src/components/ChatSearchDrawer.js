@@ -54,17 +54,27 @@ export function showChatSearchDrawer(mainArea, conversationId, { dateIndex, onRe
   const inputRow = document.createElement('div');
   inputRow.className = 'chat-search-input-row';
 
+  const calendarBtn = document.createElement('button');
+  calendarBtn.className = 'chat-search-calendar-btn';
+  calendarBtn.setAttribute('aria-label', 'Pesquisar por data');
+  calendarBtn.setAttribute('aria-expanded', 'false');
+  calendarBtn.innerHTML = ICON_CALENDAR; // Static SVG
+  inputRow.appendChild(calendarBtn);
+
+  const searchField = document.createElement('div');
+  searchField.className = 'chat-search-field';
+
   const searchIconEl = document.createElement('span');
   searchIconEl.className = 'chat-search-input-icon';
   searchIconEl.innerHTML = ICON_SEARCH; // Static SVG
-  inputRow.appendChild(searchIconEl);
+  searchField.appendChild(searchIconEl);
 
   const input = document.createElement('input');
   input.type = 'text';
   input.className = 'chat-search-input';
   input.placeholder = 'Pesquisar...';
   input.setAttribute('aria-label', 'Pesquisar mensagens');
-  inputRow.appendChild(input);
+  searchField.appendChild(input);
 
   const clearBtn = document.createElement('button');
   clearBtn.className = 'chat-search-clear-btn';
@@ -76,13 +86,9 @@ export function showChatSearchDrawer(mainArea, conversationId, { dateIndex, onRe
     showEmpty();
     input.focus();
   });
-  inputRow.appendChild(clearBtn);
-
-  const calendarBtn = document.createElement('button');
-  calendarBtn.className = 'chat-search-calendar-btn';
-  calendarBtn.setAttribute('aria-label', 'Pesquisar por data');
-  calendarBtn.innerHTML = ICON_CALENDAR; // Static SVG
-  inputRow.appendChild(calendarBtn);
+  clearBtn.setAttribute('aria-label', 'Limpar pesquisa');
+  searchField.appendChild(clearBtn);
+  inputRow.appendChild(searchField);
 
   drawer.appendChild(inputRow);
 
@@ -93,15 +99,24 @@ export function showChatSearchDrawer(mainArea, conversationId, { dateIndex, onRe
 
   // Calendar
   let calendarEl = null;
+  let selectedDate = null;
+  function closeCalendar() {
+    if (!calendarEl) return;
+    calendarEl.remove();
+    calendarEl = null;
+    calendarBtn.setAttribute('aria-expanded', 'false');
+  }
+
   calendarBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    if (calendarEl) { calendarEl.remove(); calendarEl = null; return; }
+    if (calendarEl) { closeCalendar(); return; }
     calendarEl = buildCalendar(dateIndex, (date) => {
-      calendarEl.remove();
-      calendarEl = null;
+      selectedDate = date;
+      closeCalendar();
       if (onDateSelect) onDateSelect(date);
-    });
+    }, selectedDate);
     drawer.appendChild(calendarEl);
+    calendarBtn.setAttribute('aria-expanded', 'true');
   });
 
   // Search logic
@@ -170,7 +185,11 @@ export function showChatSearchDrawer(mainArea, conversationId, { dateIndex, onRe
   });
 
   input.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { destroy(); if (onClose) onClose(); }
+    if (e.key === 'Escape') {
+      e.stopPropagation();
+      if (calendarEl) closeCalendar();
+      else { destroy(); if (onClose) onClose(); }
+    }
   });
 
   mainArea.appendChild(drawer);
@@ -178,48 +197,61 @@ export function showChatSearchDrawer(mainArea, conversationId, { dateIndex, onRe
 
   function destroy() {
     clearTimeout(debounceTimer);
-    if (calendarEl) { calendarEl.remove(); calendarEl = null; }
+    closeCalendar();
     drawer.remove();
     document.removeEventListener('keydown', onEscKey);
+    document.removeEventListener('pointerdown', onOutsidePointer);
   }
 
   function onEscKey(e) {
-    if (e.key === 'Escape') { destroy(); if (onClose) onClose(); }
+    if (e.key === 'Escape') {
+      if (calendarEl) closeCalendar();
+      else { destroy(); if (onClose) onClose(); }
+    }
+  }
+
+  function onOutsidePointer(e) {
+    if (calendarEl && !drawer.contains(e.target)) closeCalendar();
   }
   document.addEventListener('keydown', onEscKey);
+  document.addEventListener('pointerdown', onOutsidePointer);
 
   return { element: drawer, destroy };
 }
 
-function buildCalendar(dateIndex, onSelect) {
-  const datedEntries = dateIndex.filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d.date));
+export function buildCalendar(dateIndex = [], onSelect = () => {}, selectedDate = null) {
+  const datedEntries = dateIndex.filter(d => d && /^\d{4}-\d{2}-\d{2}$/.test(d.date));
   const availableDates = new Set(datedEntries.map(d => d.date));
   const sortedDates = datedEntries.map(d => d.date).sort();
-  const firstChatDate = sortedDates[0]; // e.g. "2024-02-10"
-  const lastChatDate = sortedDates[sortedDates.length - 1]; // e.g. "2025-08-13"
-
-  // Parse boundaries
-  const [firstY, firstM] = firstChatDate.split('-').map(Number);
-  const [lastY, lastM] = lastChatDate.split('-').map(Number);
-
-  // Start calendar at the last month of the chat
-  let year = lastY;
-  let month = lastM - 1; // 0-indexed
-
   const el = document.createElement('div');
   el.className = 'chat-calendar';
+  el.setAttribute('role', 'dialog');
+  el.setAttribute('aria-label', 'Pesquisar por data');
+
+  if (sortedDates.length === 0) {
+    const empty = document.createElement('p');
+    empty.className = 'chat-calendar-empty';
+    empty.textContent = 'Nenhuma data disponível';
+    el.appendChild(empty);
+    return el;
+  }
+
+  const firstChatDate = sortedDates[0];
+  const lastChatDate = sortedDates[sortedDates.length - 1];
+  const [firstY, firstM] = firstChatDate.split('-').map(Number);
+  const [lastY, lastM] = lastChatDate.split('-').map(Number);
+  let year = lastY;
+  let month = lastM - 1;
 
   function render() {
     while (el.firstChild) el.removeChild(el.firstChild);
 
-    // Clamp to chat range
-    const atMinMonth = (year === firstY && month === firstM - 1);
-    const atMaxMonth = (year === lastY && month === lastM - 1);
     const beforeMin = (year < firstY || (year === firstY && month < firstM - 1));
     const afterMax = (year > lastY || (year === lastY && month > lastM - 1));
-
     if (beforeMin) { year = firstY; month = firstM - 1; }
     if (afterMax) { year = lastY; month = lastM - 1; }
+    const atMinMonth = (year === firstY && month === firstM - 1);
+    const atMaxMonth = (year === lastY && month === lastM - 1);
 
     const nav = document.createElement('div');
     nav.className = 'chat-calendar-nav';
@@ -248,7 +280,9 @@ function buildCalendar(dateIndex, onSelect) {
       'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
     const label = document.createElement('span');
     label.className = 'chat-calendar-label';
+    label.id = 'chat-calendar-month';
     label.textContent = `${monthNames[month]} ${year}`;
+    el.setAttribute('aria-labelledby', label.id);
 
     nav.appendChild(prevBtn);
     nav.appendChild(label);
@@ -284,12 +318,20 @@ function buildCalendar(dateIndex, onSelect) {
       const cell = document.createElement('button');
       cell.className = 'chat-calendar-day';
       cell.textContent = d;
+      cell.setAttribute('aria-label', `${d} de ${monthNames[month]} de ${year}`);
 
       if (availableDates.has(dateStr)) {
         cell.classList.add('has-messages');
+        if (dateStr === selectedDate) {
+          cell.classList.add('selected');
+          cell.setAttribute('aria-pressed', 'true');
+        } else {
+          cell.setAttribute('aria-pressed', 'false');
+        }
         cell.addEventListener('click', (e) => { e.stopPropagation(); onSelect(dateStr); });
       } else {
         cell.classList.add('disabled');
+        cell.disabled = true;
       }
 
       grid.appendChild(cell);

@@ -1203,9 +1203,20 @@
 .chat-search-input-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-bottom: 1px solid var(--WDS-lines-divider);
+  gap: 12px;
+  padding: 16px 24px 12px;
+}
+
+.chat-search-field {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  height: 50px;
+  padding: 0 16px;
+  gap: 12px;
+  background-color: var(--WDS-surface-emphasized);
+  border-radius: 28px;
 }
 
 .chat-search-input-icon {
@@ -1221,7 +1232,11 @@
   font-size: 14px;
   color: var(--WDS-content-default);
   outline: none;
-  padding: 6px 0;
+  padding: 0;
+}
+
+.chat-search-field:focus-within {
+  box-shadow: inset 0 0 0 1px var(--WDS-lines-outline-deemphasized);
 }
 
 .chat-search-input::placeholder {
@@ -1232,11 +1247,20 @@
 .chat-search-calendar-btn {
   background: none;
   border: none;
-  padding: 6px;
+  padding: 8px;
   cursor: pointer;
   color: var(--WDS-content-deemphasized);
   border-radius: 50%;
   flex-shrink: 0;
+}
+
+.chat-search-calendar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--WDS-content-action-default);
 }
 
 .chat-search-clear-btn:hover,
@@ -1286,14 +1310,15 @@
 /* ── Calendar Picker ─────────────────────────── */
 .chat-calendar {
   position: absolute;
-  top: 118px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 280px;
+  top: 126px;
+  left: 24px;
+  width: min(416px, calc(100% - 48px));
+  box-sizing: border-box;
   padding: 16px;
   background-color: var(--WDS-surface-elevated-default);
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, .18);
+  border: 1px solid var(--WDS-lines-divider);
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
   z-index: 70;
 }
 
@@ -1301,12 +1326,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .chat-calendar-label {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   color: var(--WDS-content-default);
   text-transform: capitalize;
 }
@@ -1314,39 +1339,46 @@
 .chat-calendar-nav-btn {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 26px;
   cursor: pointer;
-  color: var(--WDS-content-deemphasized);
-  padding: 4px 8px;
-  border-radius: 4px;
+  color: var(--WDS-content-default);
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
 }
 
-.chat-calendar-nav-btn:hover {
+.chat-calendar-nav-btn:hover:not(:disabled) {
   background-color: var(--WDS-surface-highlight);
+}
+
+.chat-calendar-nav-btn:disabled {
+  color: var(--WDS-content-disabled);
+  cursor: default;
 }
 
 .chat-calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 2px;
+  gap: 4px 2px;
   text-align: center;
 }
 
 .chat-calendar-header {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--WDS-content-deemphasized);
-  padding: 4px 0;
+  padding: 4px 0 8px;
   font-weight: 500;
 }
 
 .chat-calendar-day {
-  font-size: 13px;
-  padding: 6px 0;
+  font-size: 15px;
+  padding: 0;
   border: none;
   background: none;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1357,16 +1389,18 @@
 
 .chat-calendar-day.has-messages {
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .chat-calendar-day.has-messages:hover {
   background-color: var(--WDS-surface-highlight);
 }
 
-.chat-calendar-day.today {
-  color: var(--WDS-accent);
-  font-weight: 700;
+.chat-calendar-day.selected,
+.chat-calendar-day.selected:hover {
+  background-color: var(--WDS-accent);
+  color: var(--WDS-content-inverse);
+  font-weight: 600;
 }
 
 .chat-calendar-day.disabled {
@@ -1376,9 +1410,40 @@
 
 .chat-calendar-day.empty {
   visibility: hidden;
+  pointer-events: none;
 }
 
-/* Mobile handled in shared drawer media query above */
+.chat-calendar-empty {
+  margin: 0;
+  padding: 20px 8px;
+  text-align: center;
+  color: var(--WDS-content-deemphasized);
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .chat-search-input-row {
+    padding: 12px 16px;
+  }
+
+  .chat-calendar {
+    top: calc(100% + 8px);
+    left: auto;
+    right: 8px;
+    width: min(416px, calc(100vw - 24px));
+  }
+
+  .mobile-search-bar {
+    position: relative;
+  }
+
+  .mobile-search-bar .chat-calendar {
+    top: calc(100% + 8px);
+    left: auto;
+    right: 8px;
+    width: min(416px, calc(100vw - 24px));
+  }
+}
 
 /* ── Profile Placeholder (main area when profile is open) ── */
 .profile-placeholder {
