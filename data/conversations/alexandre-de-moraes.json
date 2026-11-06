@@ -9,9 +9,9 @@
       "start": "2025-09-17",
       "end": "2025-11-17"
     },
-    "total_messages": 62,
+    "total_messages": 79,
     "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Mensagens de DANIEL VORCARO enviadas como capturas de tela do aplicativo Notas em modo de visualização única; o conteúdo foi recuperado pela perícia e correlacionado ao envio pelos logs do sistema. Mensagens recebidas de visualização única não foram recuperadas."
+    "note": "Mensagens de DANIEL VORCARO enviadas como capturas de tela do aplicativo Notas em modo de visualização única; o conteúdo foi recuperado pela perícia e correlacionado ao envio pelos logs do sistema. Mensagens recebidas de visualização única não foram recuperadas. | Mensagens adicionais reconstruídas a partir do banco ChatSearchV5f (palavras embaralhadas) e reportagem UOL de 06/11/2026 (Cezar Feitoza). Inclui legenda de 24/10/2025 de Moraes e interações de 28/10, 06/11, 12/11 e 14/11/2025."
   },
   "messages": [
     {
@@ -26,7 +26,8 @@
       "attachment": null,
       "urls": [],
       "source_page": 37,
-      "source_figure": 38
+      "source_figure": 38,
+      "view_once": false
     },
     {
       "id": 2,
@@ -40,7 +41,8 @@
       "attachment": null,
       "urls": [],
       "source_page": 37,
-      "source_figure": 38
+      "source_figure": 38,
+      "view_once": false
     },
     {
       "id": 3,
@@ -54,7 +56,8 @@
       "attachment": null,
       "urls": [],
       "source_page": 37,
-      "source_figure": 38
+      "source_figure": 38,
+      "view_once": false
     },
     {
       "id": 4,
@@ -68,7 +71,8 @@
       "attachment": null,
       "urls": [],
       "source_page": 37,
-      "source_figure": 38
+      "source_figure": 38,
+      "view_once": false
     },
     {
       "id": 5,
@@ -82,7 +86,8 @@
       "attachment": null,
       "urls": [],
       "source_page": 37,
-      "source_figure": 38
+      "source_figure": 38,
+      "view_once": false
     },
     {
       "id": 6,
@@ -96,10 +101,43 @@
       "attachment": null,
       "urls": [],
       "source_page": 37,
-      "source_figure": 38
+      "source_figure": 38,
+      "view_once": false
     },
     {
-      "id": 7,
+      "timestamp": "2025-10-24T12:00:00",
+      "date": "2025-10-24",
+      "time": "12:00:00",
+      "sender": "Alexandre de Moraes BRASILIA",
+      "content": "Obrigado amigo. Nem dá pra perceber que não sou eu rsrs",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": true,
+      "note": "Legenda de imagem de visualização única — conteúdo da imagem não recuperado. Fonte: ChatSearchV5f / reportagem UOL",
+      "id": 7
+    },
+    {
+      "timestamp": "2025-10-28T11:03:00",
+      "date": "2025-10-28",
+      "time": "11:03:00",
+      "sender": "DV",
+      "content": "Opa tudo bem?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f (palavras embaralhadas). Fonte: reportagem UOL",
+      "id": 8
+    },
+    {
+      "id": 9,
       "timestamp": "2025-10-28T11:04:26",
       "date": "2025-10-28",
       "time": "11:04:26",
@@ -116,7 +154,39 @@
       "sent_utc": "2025-10-28 14:04:26"
     },
     {
-      "id": 8,
+      "timestamp": "2025-10-28T11:43:00",
+      "date": "2025-10-28",
+      "time": "11:43:00",
+      "sender": "DV",
+      "content": "Boa, tinha esquecido disso. Sorte aí",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 10
+    },
+    {
+      "timestamp": "2025-10-28T11:44:00",
+      "date": "2025-10-28",
+      "time": "11:44:00",
+      "sender": "Alexandre de Moraes BRASILIA",
+      "content": "Obrigado ",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 11
+    },
+    {
+      "id": 12,
       "timestamp": "2025-10-30T13:26:14",
       "date": "2025-10-30",
       "time": "13:26:14",
@@ -133,7 +203,7 @@
       "sent_utc": "2025-10-30 16:26:14"
     },
     {
-      "id": 9,
+      "id": 13,
       "timestamp": "2025-10-30T13:33:03",
       "date": "2025-10-30",
       "time": "13:33:03",
@@ -150,7 +220,7 @@
       "sent_utc": "2025-10-30 16:33:03"
     },
     {
-      "id": 10,
+      "id": 14,
       "timestamp": "2025-10-30T13:38:40",
       "date": "2025-10-30",
       "time": "13:38:40",
@@ -167,7 +237,7 @@
       "sent_utc": "2025-10-30 16:38:40"
     },
     {
-      "id": 11,
+      "id": 15,
       "timestamp": "2025-10-30T13:41:05",
       "date": "2025-10-30",
       "time": "13:41:05",
@@ -184,7 +254,7 @@
       "sent_utc": "2025-10-30 16:41:05"
     },
     {
-      "id": 12,
+      "id": 16,
       "timestamp": "2025-10-30T13:44:56",
       "date": "2025-10-30",
       "time": "13:44:56",
@@ -201,7 +271,7 @@
       "sent_utc": "2025-10-30 16:44:56"
     },
     {
-      "id": 13,
+      "id": 17,
       "timestamp": "2025-10-30T13:52:11",
       "date": "2025-10-30",
       "time": "13:52:11",
@@ -218,7 +288,7 @@
       "sent_utc": "2025-10-30 16:52:11"
     },
     {
-      "id": 14,
+      "id": 18,
       "timestamp": "2025-10-30T13:55:50",
       "date": "2025-10-30",
       "time": "13:55:50",
@@ -235,7 +305,7 @@
       "sent_utc": "2025-10-30 16:55:50"
     },
     {
-      "id": 15,
+      "id": 19,
       "timestamp": "2025-11-04T17:41:55",
       "date": "2025-11-04",
       "time": "17:41:55",
@@ -252,7 +322,7 @@
       "sent_utc": "2025-11-04 20:41:55"
     },
     {
-      "id": 16,
+      "id": 20,
       "timestamp": "2025-11-04T17:43:44",
       "date": "2025-11-04",
       "time": "17:43:44",
@@ -269,7 +339,7 @@
       "sent_utc": "2025-11-04 20:43:44"
     },
     {
-      "id": 17,
+      "id": 21,
       "timestamp": "2025-11-04T17:51:29",
       "date": "2025-11-04",
       "time": "17:51:29",
@@ -286,7 +356,7 @@
       "sent_utc": "2025-11-04 20:51:29"
     },
     {
-      "id": 18,
+      "id": 22,
       "timestamp": "2025-11-04T17:52:56",
       "date": "2025-11-04",
       "time": "17:52:56",
@@ -303,7 +373,7 @@
       "sent_utc": "2025-11-04 20:52:56"
     },
     {
-      "id": 19,
+      "id": 23,
       "timestamp": "2025-11-04T18:15:24",
       "date": "2025-11-04",
       "time": "18:15:24",
@@ -320,7 +390,7 @@
       "sent_utc": "2025-11-04 21:15:24"
     },
     {
-      "id": 20,
+      "id": 24,
       "timestamp": "2025-11-04T19:09:50",
       "date": "2025-11-04",
       "time": "19:09:50",
@@ -337,7 +407,7 @@
       "sent_utc": "2025-11-04 22:09:50"
     },
     {
-      "id": 21,
+      "id": 25,
       "timestamp": "2025-11-04T20:45:57",
       "date": "2025-11-04",
       "time": "20:45:57",
@@ -354,7 +424,7 @@
       "sent_utc": "2025-11-04 23:45:57"
     },
     {
-      "id": 22,
+      "id": 26,
       "timestamp": "2025-11-05T08:16:46",
       "date": "2025-11-05",
       "time": "08:16:46",
@@ -371,7 +441,7 @@
       "sent_utc": "2025-11-05 11:16:46"
     },
     {
-      "id": 23,
+      "id": 27,
       "timestamp": "2025-11-05T08:17:19",
       "date": "2025-11-05",
       "time": "08:17:19",
@@ -388,7 +458,7 @@
       "sent_utc": "2025-11-05 11:17:19"
     },
     {
-      "id": 24,
+      "id": 28,
       "timestamp": "2025-11-05T14:11:07",
       "date": "2025-11-05",
       "time": "14:11:07",
@@ -405,7 +475,7 @@
       "sent_utc": "2025-11-05 17:11:07"
     },
     {
-      "id": 25,
+      "id": 29,
       "timestamp": "2025-11-05T19:05:56",
       "date": "2025-11-05",
       "time": "19:05:56",
@@ -422,7 +492,39 @@
       "sent_utc": "2025-11-05 22:05:56"
     },
     {
-      "id": 26,
+      "timestamp": "2025-11-06T16:20:00",
+      "date": "2025-11-06",
+      "time": "16:20:00",
+      "sender": "Alexandre de Moraes BRASILIA",
+      "content": "Boa tarde",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 30
+    },
+    {
+      "timestamp": "2025-11-06T16:20:01",
+      "date": "2025-11-06",
+      "time": "16:20:00",
+      "sender": "DV",
+      "content": "Opa",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 31
+    },
+    {
+      "id": 32,
       "timestamp": "2025-11-06T16:26:16",
       "date": "2025-11-06",
       "time": "16:26:16",
@@ -439,7 +541,7 @@
       "sent_utc": "2025-11-06 19:26:16"
     },
     {
-      "id": 27,
+      "id": 33,
       "timestamp": "2025-11-06T20:57:12",
       "date": "2025-11-06",
       "time": "20:57:12",
@@ -456,7 +558,7 @@
       "sent_utc": "2025-11-06 23:57:12"
     },
     {
-      "id": 28,
+      "id": 34,
       "timestamp": "2025-11-06T22:18:29",
       "date": "2025-11-06",
       "time": "22:18:29",
@@ -473,7 +575,7 @@
       "sent_utc": "2025-11-07 01:18:29"
     },
     {
-      "id": 29,
+      "id": 35,
       "timestamp": "2025-11-06T22:33:41",
       "date": "2025-11-06",
       "time": "22:33:41",
@@ -490,7 +592,7 @@
       "sent_utc": "2025-11-07 01:33:41"
     },
     {
-      "id": 30,
+      "id": 36,
       "timestamp": "2025-11-10T17:50:57",
       "date": "2025-11-10",
       "time": "17:50:57",
@@ -507,7 +609,7 @@
       "sent_utc": "2025-11-10 20:50:57"
     },
     {
-      "id": 31,
+      "id": 37,
       "timestamp": "2025-11-11T20:44:45",
       "date": "2025-11-11",
       "time": "20:44:45",
@@ -524,7 +626,7 @@
       "sent_utc": "2025-11-11 23:44:45"
     },
     {
-      "id": 32,
+      "id": 38,
       "timestamp": "2025-11-12T08:55:40",
       "date": "2025-11-12",
       "time": "08:55:40",
@@ -541,7 +643,7 @@
       "sent_utc": "2025-11-12 11:55:40"
     },
     {
-      "id": 33,
+      "id": 39,
       "timestamp": "2025-11-12T09:20:46",
       "date": "2025-11-12",
       "time": "09:20:46",
@@ -558,7 +660,7 @@
       "sent_utc": "2025-11-12 12:20:46"
     },
     {
-      "id": 34,
+      "id": 40,
       "timestamp": "2025-11-12T09:21:18",
       "date": "2025-11-12",
       "time": "09:21:18",
@@ -575,7 +677,7 @@
       "sent_utc": "2025-11-12 12:21:18"
     },
     {
-      "id": 35,
+      "id": 41,
       "timestamp": "2025-11-12T09:37:42",
       "date": "2025-11-12",
       "time": "09:37:42",
@@ -592,7 +694,87 @@
       "sent_utc": "2025-11-12 12:37:42"
     },
     {
-      "id": 36,
+      "timestamp": "2025-11-12T20:42:00",
+      "date": "2025-11-12",
+      "time": "20:42:00",
+      "sender": "DV",
+      "content": "Show",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 42
+    },
+    {
+      "timestamp": "2025-11-12T20:48:00",
+      "date": "2025-11-12",
+      "time": "20:48:00",
+      "sender": "Alexandre de Moraes BRASILIA",
+      "content": "Não basta ser pai, tem de participar rsrs",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 43
+    },
+    {
+      "timestamp": "2025-11-12T21:11:00",
+      "date": "2025-11-12",
+      "time": "21:11:00",
+      "sender": "DV",
+      "content": "Você é paizão",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 44
+    },
+    {
+      "timestamp": "2025-11-12T21:11:01",
+      "date": "2025-11-12",
+      "time": "21:11:00",
+      "sender": "DV",
+      "content": "Manda abraço pra todos",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 45
+    },
+    {
+      "timestamp": "2025-11-12T21:12:00",
+      "date": "2025-11-12",
+      "time": "21:12:00",
+      "sender": "Alexandre de Moraes BRASILIA",
+      "content": "Pode deixar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 46
+    },
+    {
+      "id": 47,
       "timestamp": "2025-11-13T22:40:33",
       "date": "2025-11-13",
       "time": "22:40:33",
@@ -609,7 +791,7 @@
       "sent_utc": "2025-11-14 01:40:33"
     },
     {
-      "id": 37,
+      "id": 48,
       "timestamp": "2025-11-14T10:03:49",
       "date": "2025-11-14",
       "time": "10:03:49",
@@ -626,7 +808,103 @@
       "sent_utc": "2025-11-14 13:03:49"
     },
     {
-      "id": 38,
+      "timestamp": "2025-11-14T13:24:00",
+      "date": "2025-11-14",
+      "time": "13:24:00",
+      "sender": "Alexandre de Moraes BRASILIA",
+      "content": "Me avise quando pousar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 49
+    },
+    {
+      "timestamp": "2025-11-14T13:25:00",
+      "date": "2025-11-14",
+      "time": "13:25:00",
+      "sender": "DV",
+      "content": "Ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 50
+    },
+    {
+      "timestamp": "2025-11-14T13:25:01",
+      "date": "2025-11-14",
+      "time": "13:25:00",
+      "sender": "DV",
+      "content": "Em voo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 51
+    },
+    {
+      "timestamp": "2025-11-14T14:32:00",
+      "date": "2025-11-14",
+      "time": "14:32:00",
+      "sender": "Alexandre de Moraes BRASILIA",
+      "content": "Chegou?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 52
+    },
+    {
+      "timestamp": "2025-11-14T14:35:00",
+      "date": "2025-11-14",
+      "time": "14:35:00",
+      "sender": "DV",
+      "content": "Agora pousei",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 53
+    },
+    {
+      "timestamp": "2025-11-14T14:46:00",
+      "date": "2025-11-14",
+      "time": "14:46:00",
+      "sender": "Alexandre de Moraes BRASILIA",
+      "content": "A caminho então",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "view_once": false,
+      "note": "Reconstruída a partir de ChatSearchV5f. Fonte: reportagem UOL",
+      "id": 54
+    },
+    {
+      "id": 55,
       "timestamp": "2025-11-14T18:19:53",
       "date": "2025-11-14",
       "time": "18:19:53",
@@ -643,7 +921,7 @@
       "sent_utc": "2025-11-14 21:19:53"
     },
     {
-      "id": 39,
+      "id": 56,
       "timestamp": "2025-11-15T18:22:18",
       "date": "2025-11-15",
       "time": "18:22:18",
@@ -660,7 +938,7 @@
       "sent_utc": "2025-11-15 21:22:18"
     },
     {
-      "id": 40,
+      "id": 57,
       "timestamp": "2025-11-15T18:23:25",
       "date": "2025-11-15",
       "time": "18:23:25",
@@ -677,7 +955,7 @@
       "sent_utc": "2025-11-15 21:23:25"
     },
     {
-      "id": 41,
+      "id": 58,
       "timestamp": "2025-11-15T19:43:51",
       "date": "2025-11-15",
       "time": "19:43:51",
@@ -694,7 +972,7 @@
       "sent_utc": "2025-11-15 22:43:51"
     },
     {
-      "id": 42,
+      "id": 59,
       "timestamp": "2025-11-15T21:23:37",
       "date": "2025-11-15",
       "time": "21:23:37",
@@ -711,7 +989,7 @@
       "sent_utc": "2025-11-16 00:23:37"
     },
     {
-      "id": 43,
+      "id": 60,
       "timestamp": "2025-11-15T21:33:59",
       "date": "2025-11-15",
       "time": "21:33:59",
@@ -728,7 +1006,7 @@
       "sent_utc": "2025-11-16 00:33:59"
     },
     {
-      "id": 44,
+      "id": 61,
       "timestamp": "2025-11-15T21:41:33",
       "date": "2025-11-15",
       "time": "21:41:33",
@@ -745,7 +1023,7 @@
       "sent_utc": "2025-11-16 00:41:33"
     },
     {
-      "id": 45,
+      "id": 62,
       "timestamp": "2025-11-15T21:49:45",
       "date": "2025-11-15",
       "time": "21:49:45",
@@ -762,7 +1040,7 @@
       "sent_utc": "2025-11-16 00:49:45"
     },
     {
-      "id": 46,
+      "id": 63,
       "timestamp": "2025-11-15T22:03:16",
       "date": "2025-11-15",
       "time": "22:03:16",
@@ -779,7 +1057,7 @@
       "sent_utc": "2025-11-16 01:03:16"
     },
     {
-      "id": 47,
+      "id": 64,
       "timestamp": "2025-11-15T22:06:07",
       "date": "2025-11-15",
       "time": "22:06:07",
@@ -796,7 +1074,7 @@
       "sent_utc": "2025-11-16 01:06:07"
     },
     {
-      "id": 48,
+      "id": 65,
       "timestamp": "2025-11-15T22:12:27",
       "date": "2025-11-15",
       "time": "22:12:27",
@@ -813,7 +1091,7 @@
       "sent_utc": "2025-11-16 01:12:27"
     },
     {
-      "id": 49,
+      "id": 66,
       "timestamp": "2025-11-15T22:28:29",
       "date": "2025-11-15",
       "time": "22:28:29",
@@ -830,7 +1108,7 @@
       "sent_utc": "2025-11-16 01:28:29"
     },
     {
-      "id": 50,
+      "id": 67,
       "timestamp": "2025-11-15T22:43:52",
       "date": "2025-11-15",
       "time": "22:43:52",
@@ -847,7 +1125,7 @@
       "sent_utc": "2025-11-16 01:43:52"
     },
     {
-      "id": 51,
+      "id": 68,
       "timestamp": "2025-11-16T13:40:19",
       "date": "2025-11-16",
       "time": "13:40:19",
@@ -864,7 +1142,7 @@
       "sent_utc": "2025-11-16 16:40:19"
     },
     {
-      "id": 52,
+      "id": 69,
       "timestamp": "2025-11-16T16:57:47",
       "date": "2025-11-16",
       "time": "16:57:47",
@@ -881,7 +1159,7 @@
       "sent_utc": "2025-11-16 19:57:47"
     },
     {
-      "id": 53,
+      "id": 70,
       "timestamp": "2025-11-16T18:20:18",
       "date": "2025-11-16",
       "time": "18:20:18",
@@ -898,7 +1176,7 @@
       "sent_utc": "2025-11-16 21:20:18"
     },
     {
-      "id": 54,
+      "id": 71,
       "timestamp": "2025-11-17T07:19:01",
       "date": "2025-11-17",
       "time": "07:19:01",
@@ -915,7 +1193,7 @@
       "sent_utc": "2025-11-17 10:19:01"
     },
     {
-      "id": 55,
+      "id": 72,
       "timestamp": "2025-11-17T08:16:56",
       "date": "2025-11-17",
       "time": "08:16:56",
@@ -930,7 +1208,7 @@
       "view_once": true
     },
     {
-      "id": 56,
+      "id": 73,
       "timestamp": "2025-11-17T17:22:40",
       "date": "2025-11-17",
       "time": "17:22:40",
@@ -947,7 +1225,7 @@
       "sent_utc": "2025-11-17 20:22:40"
     },
     {
-      "id": 57,
+      "id": 74,
       "timestamp": "2025-11-17T17:26:12",
       "date": "2025-11-17",
       "time": "17:26:12",
@@ -964,7 +1242,7 @@
       "sent_utc": "2025-11-17 20:26:12"
     },
     {
-      "id": 58,
+      "id": 75,
       "timestamp": "2025-11-17T17:31:30",
       "date": "2025-11-17",
       "time": "17:31:30",
@@ -979,7 +1257,7 @@
       "view_once": true
     },
     {
-      "id": 59,
+      "id": 76,
       "timestamp": "2025-11-17T20:04:55",
       "date": "2025-11-17",
       "time": "20:04:55",
@@ -996,7 +1274,7 @@
       "sent_utc": "2025-11-17 23:04:55"
     },
     {
-      "id": 60,
+      "id": 77,
       "timestamp": "2025-11-17T20:21:44",
       "date": "2025-11-17",
       "time": "20:21:44",
@@ -1011,7 +1289,7 @@
       "view_once": true
     },
     {
-      "id": 61,
+      "id": 78,
       "timestamp": "2025-11-17T20:23:54",
       "date": "2025-11-17",
       "time": "20:23:54",
@@ -1026,7 +1304,7 @@
       "view_once": true
     },
     {
-      "id": 62,
+      "id": 79,
       "timestamp": "2025-11-17T20:48:31",
       "date": "2025-11-17",
       "time": "20:48:31",
@@ -1058,82 +1336,88 @@
         "last_message_id": 6
       },
       {
-        "date": "2025-10-28",
+        "date": "2025-10-24",
         "message_count": 1,
         "first_message_id": 7,
         "last_message_id": 7
       },
       {
+        "date": "2025-10-28",
+        "message_count": 4,
+        "first_message_id": 8,
+        "last_message_id": 11
+      },
+      {
         "date": "2025-10-30",
         "message_count": 7,
-        "first_message_id": 8,
-        "last_message_id": 14
+        "first_message_id": 12,
+        "last_message_id": 18
       },
       {
         "date": "2025-11-04",
         "message_count": 7,
-        "first_message_id": 15,
-        "last_message_id": 21
-      },
-      {
-        "date": "2025-11-05",
-        "message_count": 4,
-        "first_message_id": 22,
+        "first_message_id": 19,
         "last_message_id": 25
       },
       {
-        "date": "2025-11-06",
+        "date": "2025-11-05",
         "message_count": 4,
         "first_message_id": 26,
         "last_message_id": 29
       },
       {
-        "date": "2025-11-10",
-        "message_count": 1,
+        "date": "2025-11-06",
+        "message_count": 6,
         "first_message_id": 30,
-        "last_message_id": 30
-      },
-      {
-        "date": "2025-11-11",
-        "message_count": 1,
-        "first_message_id": 31,
-        "last_message_id": 31
-      },
-      {
-        "date": "2025-11-12",
-        "message_count": 4,
-        "first_message_id": 32,
         "last_message_id": 35
       },
       {
-        "date": "2025-11-13",
+        "date": "2025-11-10",
         "message_count": 1,
         "first_message_id": 36,
         "last_message_id": 36
       },
       {
-        "date": "2025-11-14",
-        "message_count": 2,
+        "date": "2025-11-11",
+        "message_count": 1,
         "first_message_id": 37,
-        "last_message_id": 38
+        "last_message_id": 37
+      },
+      {
+        "date": "2025-11-12",
+        "message_count": 9,
+        "first_message_id": 38,
+        "last_message_id": 46
+      },
+      {
+        "date": "2025-11-13",
+        "message_count": 1,
+        "first_message_id": 47,
+        "last_message_id": 47
+      },
+      {
+        "date": "2025-11-14",
+        "message_count": 8,
+        "first_message_id": 48,
+        "last_message_id": 55
       },
       {
         "date": "2025-11-15",
         "message_count": 12,
-        "first_message_id": 39,
-        "last_message_id": 50
+        "first_message_id": 56,
+        "last_message_id": 67
       },
       {
         "date": "2025-11-16",
         "message_count": 3,
-        "first_message_id": 51,
-        "last_message_id": 53
+        "first_message_id": 68,
+        "last_message_id": 70
       },
       {
         "date": "2025-11-17",
         "message_count": 9,
-        "first_message_id": 54,
-        "last_message_id": 62
+        "first_message_id": 71,
+        "last_message_id": 79
       }
     ]
   }
