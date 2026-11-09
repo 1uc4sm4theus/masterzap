@@ -241,7 +241,7 @@ export function renderChatGPTPanel({ conversations = CHATGPT_CONVERSATIONS, onBa
   const disclaimer = makeElement(
     'p',
     'chatgpt-disclaimer',
-    '⚠️ Conversa reconstruída. Seleção de consultas citadas na reportagem; não representa o histórico completo de 151 interações. As respostas abaixo foram reconstruídas editorialmente a partir da cobertura reportada.'
+    '⚠️ Arquivo editorial das pesquisas de Vorcaro no ChatGPT. Seleção de consultas citadas na reportagem; não representa o histórico completo de 151 interações. As respostas abaixo foram reconstruídas editorialmente a partir da cobertura reportada.'
   );
   panel.appendChild(disclaimer);
 

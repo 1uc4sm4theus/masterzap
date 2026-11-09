@@ -15,8 +15,12 @@ describe('HashRouter', () => {
       expect(HashRouter.parseHash('#/flights')).toEqual({ route: 'flights', param: null, messageId: null });
     });
 
-    it('#/chatgpt → chatgpt', () => {
+    it('#/chatgpt → cited ChatGPT searches', () => {
       expect(HashRouter.parseHash('#/chatgpt')).toEqual({ route: 'chatgpt', param: null, messageId: null });
+    });
+
+    it('#/google-history → attributed Google searches', () => {
+      expect(HashRouter.parseHash('#/google-history')).toEqual({ route: 'google-history', param: null, messageId: null });
     });
 
     it('#/soundtrack → soundtrack', () => {
@@ -74,6 +78,14 @@ describe('HashRouter', () => {
         messageId: null,
       });
     });
+
+    it('removed Master AI route → home', () => {
+      expect(HashRouter.parseHash('#/master-ai')).toEqual({
+        route: 'home',
+        param: null,
+        messageId: null,
+      });
+    });
   });
 
   describe('navigation', () => {
@@ -99,9 +111,14 @@ describe('HashRouter', () => {
       expect(window.location.hash).toBe('#/flights');
     });
 
-    it('navigate("chatgpt") sets hash to #/chatgpt', () => {
+    it('navigate("chatgpt") opens cited ChatGPT searches', () => {
       router.navigate('chatgpt');
       expect(window.location.hash).toBe('#/chatgpt');
+    });
+
+    it('navigate("google-history") opens attributed Google searches', () => {
+      router.navigate('google-history');
+      expect(window.location.hash).toBe('#/google-history');
     });
 
     it('navigate("soundtrack") sets hash to #/soundtrack', () => {

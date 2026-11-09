@@ -35,11 +35,12 @@ export function renderSoundtrackPanel({ onBack, onLoadTrack, currentTrackId = nu
   provenance.className = 'soundtrack-provenance';
   provenance.setAttribute('aria-label', 'Nota de proveniência documental');
   provenance.innerHTML = `
-    <p><strong>Proveniência:</strong> as faixas abaixo foram relacionadas em uma playlist publicada por terceiros. A inclusão não comprova que Daniel Vorcaro ouviu ou tocou essas músicas.</p>
-    <p>Este catálogo não identifica músicas nas conversas. A associação a uma festa depende de reportagem; a fonte jornalística específica não foi fornecida junto à lista.</p>
+    <p><strong>Proveniência:</strong> a playlist abaixo foi publicada por terceiros. As faixas marcadas como execução relatada são registros separados, citados em reportagem, e não fazem parte dessa playlist.</p>
+    <p>Em 9 de novembro de 2026, o UOL noticiou que o celular de Vorcaro se conectou ao som da academia particular de sua casa em São Paulo às 8h52; por quase uma hora, tocaram músicas gospel, incluindo “Caminho no Deserto” e “Eu Só Quero Tua Presença”, de Theo Rubia. A reportagem não comprova que essas faixas integrem a playlist de terceiros.</p>
     <p>A API de metadados da Deezer não permite chamadas diretas pelo navegador (CORS); os créditos e as prévias foram conferidos na consulta pública, e a reprodução usa o widget oficial. Não foram armazenadas URLs MP3 temporárias. A busca oficial do YouTube exigiria uma chave não disponível; nenhum vídeo foi presumido.</p>
     <p><strong>Contagem:</strong> a reportagem menciona 33 faixas, mas a relação textual recebida contém 32. A 33ª não foi inferida.</p>
     <a href="${PLAYLIST_URL}" target="_blank" rel="noopener noreferrer">Abrir playlist de referência no Spotify</a>
+    <a href="https://noticias.uol.com.br/colunas/cezar-feitoza/2026/11/09/vorcaro-cogitou-ser-preso-apos-encontro-com-moraes-o-que-e-tremembe.htm" target="_blank" rel="noopener noreferrer">Abrir reportagem do UOL sobre a música na academia</a>
   `;
   content.appendChild(provenance);
 
@@ -50,7 +51,7 @@ export function renderSoundtrackPanel({ onBack, onLoadTrack, currentTrackId = nu
 
   const list = document.createElement('ol');
   list.className = 'soundtrack-list';
-  list.setAttribute('aria-label', 'Faixas da playlist de referência');
+  list.setAttribute('aria-label', 'Músicas citadas e faixas da playlist de referência');
   const buttonsById = new Map();
 
   for (const track of tracks) {
@@ -81,8 +82,16 @@ export function renderSoundtrackPanel({ onBack, onLoadTrack, currentTrackId = nu
     artist.textContent = track.artist;
     const classification = document.createElement('p');
     classification.className = 'soundtrack-classification';
-    classification.textContent = 'Playlist de terceiros · sem comprovação de audição';
+    classification.textContent = track.classification === 'reported-listening'
+      ? `Execução relatada pela imprensa · conexão às ${track.connectionTime}`
+      : 'Playlist de terceiros · sem comprovação de audição';
     details.append(title, artist, classification);
+    if (track.sourceNote) {
+      const sourceNote = document.createElement('p');
+      sourceNote.className = 'soundtrack-source-note';
+      sourceNote.textContent = track.sourceNote;
+      details.appendChild(sourceNote);
+    }
     item.appendChild(details);
 
     const actions = document.createElement('div');
@@ -91,7 +100,9 @@ export function renderSoundtrackPanel({ onBack, onLoadTrack, currentTrackId = nu
     status.className = 'soundtrack-availability';
     status.textContent = track.availability === 'available'
       ? `Prévia · ${formatPreviewDuration(track.previewDurationSeconds)}`
-      : 'Prévia indisponível: gravação de estúdio não validada';
+      : track.classification === 'reported-listening'
+        ? 'Gravação específica não validada para reprodução'
+        : 'Prévia indisponível: gravação de estúdio não validada';
     actions.appendChild(status);
 
     if (track.availability === 'available') {
@@ -113,10 +124,10 @@ export function renderSoundtrackPanel({ onBack, onLoadTrack, currentTrackId = nu
 
     const source = document.createElement('a');
     source.className = 'soundtrack-source';
-    source.href = track.deezerUrl || PLAYLIST_URL;
+    source.href = track.sourceUrl || track.deezerUrl || PLAYLIST_URL;
     source.target = '_blank';
     source.rel = 'noopener noreferrer';
-    source.textContent = track.deezerUrl ? 'Deezer' : 'Playlist de referência';
+    source.textContent = track.sourceUrl ? 'Reportagem UOL' : track.deezerUrl ? 'Deezer' : 'Playlist de referência';
     source.setAttribute('aria-label', `Abrir fonte de ${track.title}`);
     actions.appendChild(source);
 

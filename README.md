@@ -37,6 +37,7 @@ O nome do repositório — **masterzap** — é uma referência ao projeto origi
 - **Links internos** — clique nos trechos citados pela imprensa e vá direto para a mensagem original
 - **Totalmente responsivo** — experiência completa no celular e no desktop, um diferencial em relação ao [MasterZap](https://www.reddit.com/r/brasil/s/xQeqrG27p8) original
 - **Tema escuro** — alterne pelo ícone abaixo de Sobre na barra lateral; no celular, use o menu da lista de conversas. A preferência fica salva neste navegador
+- **Pesquisas de Vorcaro no ChatGPT** — arquivo editorial com consultas citadas em reportagem e respostas identificadas como reconstruções.
 
 ## Tecnologia
 
@@ -46,7 +47,7 @@ O nome do repositório — **masterzap** — é uma referência ao projeto origi
 | **Build** | Vite |
 | **Dados** | 66.823 mensagens em 43 conversas, divididas em arquivos JSON por data |
 | **Carregamento** | Lazy loading com cache LRU por dia |
-| **Deploy** | Vercel com headers de segurança (HSTS, CSP, X-Frame-Options) |
+| **Deploy** | Vercel com headers de segurança (HSTS, X-Frame-Options, nosniff) |
 | **SEO** | Open Graph, Twitter Cards, JSON-LD, sitemap |
 
 ## Como Rodar Localmente

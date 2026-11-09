@@ -97,6 +97,51 @@ html[data-theme="dark"] .chatgpt-reader {
   color: #e9edef;
 }
 
+html[data-theme="dark"] .google-history-panel,
+html[data-theme="dark"] .app-container.google-history-open .main-area {
+  background: #202124;
+  color: #e8eaed;
+}
+
+html[data-theme="dark"] .google-history-header,
+html[data-theme="dark"] .google-history-disclaimer,
+html[data-theme="dark"] .google-history-date,
+html[data-theme="dark"] .google-history-entry {
+  border-color: #3c4043;
+}
+
+html[data-theme="dark"] .google-history-brand h1,
+html[data-theme="dark"] .google-history-back,
+html[data-theme="dark"] .google-history-disclaimer,
+html[data-theme="dark"] .google-history-date,
+html[data-theme="dark"] .google-history-source,
+html[data-theme="dark"] .google-history-clock,
+html[data-theme="dark"] .google-history-empty {
+  color: #bdc1c6;
+}
+
+html[data-theme="dark"] .google-history-back:hover,
+html[data-theme="dark"] .google-history-disclaimer {
+  background: #303134;
+}
+
+html[data-theme="dark"] .google-history-search {
+  border-color: #5f6368;
+  background: #303134;
+  color: #bdc1c6;
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .google-history-search:focus-within {
+  border-color: #8ab4f8;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .35);
+}
+
+html[data-theme="dark"] .google-history-search input,
+html[data-theme="dark"] .google-history-query {
+  color: #e8eaed;
+}
+
 html[data-theme="dark"] .chatgpt-header {
   border-color: rgba(255, 255, 255, .08);
 }
@@ -111,7 +156,11 @@ html[data-theme="dark"] .chatgpt-source {
 }
 
 html[data-theme="dark"] .chatgpt-brand img,
-html[data-theme="dark"] .nav-rail-btn img,
+html[data-theme="dark"] .nav-rail-btn img{
+  filter: invert(1);
+  mix-blend-mode: normal;
+}
+
 html[data-theme="dark"] .sidebar-chatgpt-link img {
   filter: invert(1);
   mix-blend-mode: normal;
@@ -153,6 +202,28 @@ html[data-theme="dark"] .chatgpt-editorial-notes {
   background: #202c33;
   color: #aebac1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   body,

@@ -2,6 +2,9 @@ node_modules/
 dist/
 .vite/
 *.local
+.env
+.env.*
+!.env.example
 
 # Generated data (rebuild with npm run split-data / npm run export)
 public/data/

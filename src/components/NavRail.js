@@ -13,6 +13,7 @@ const ICON_PAYMENTS = `<svg viewBox="0 0 24 24" width="24" height="24" fill="non
 const ICON_MEDIA = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>`;
 const ICON_FLIGHTS = `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5L21 16Z"/></svg>`;
 const ICON_CHATGPT = '<img src="/assets/chatgpt-logo.png" alt="" aria-hidden="true">';
+const ICON_GOOGLE = `<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.35 3.8" fill="none" stroke="#EA4335" stroke-width="4"/><path d="M4.65 6.8a9 9 0 0 0 0 10.4" fill="none" stroke="#FBBC05" stroke-width="4"/><path d="M4.65 17.2A9 9 0 0 0 17.4 18.5" fill="none" stroke="#34A853" stroke-width="4"/><path d="M17.4 18.5A9 9 0 0 0 20.7 10.2H12" fill="none" stroke="#4285F4" stroke-width="4"/></svg>`;
 const ICON_SOUNDTRACK = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>`;
 const ICON_EVENTS = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>`;
 const ICON_MOON = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>`;
@@ -29,7 +30,7 @@ const ICON_SETTINGS = `<svg viewBox="0 0 24 24" width="24" height="24" fill="cur
  */
 import { defaultAvatarSvg } from '../lib/avatar.js';
 
-export function renderNavRail(container, { avatarSrc, avatarName = 'Perfil', onSettings, onToggleTheme, isDarkTheme = false, onChat, onCalls, onPayments, onMedia, onFlights, onChatGPT, onSoundtrack, onEvents } = {}) {
+export function renderNavRail(container, { avatarSrc, avatarName = 'Perfil', onSettings, onToggleTheme, isDarkTheme = false, onChat, onCalls, onPayments, onMedia, onFlights, onChatGPT, onGoogleHistory, onSoundtrack, onEvents } = {}) {
   const rail = document.createElement('nav');
   rail.className = 'nav-rail';
   rail.setAttribute('aria-label', 'Navegação');
@@ -46,7 +47,8 @@ export function renderNavRail(container, { avatarSrc, avatarName = 'Perfil', onS
     { icon: ICON_PAYMENTS, label: 'Pagamentos', active: false, enabled: true, payments: true },
     { icon: ICON_MEDIA, label: 'Mídias', active: false, enabled: true, media: true },
     { icon: ICON_FLIGHTS, label: 'Voos', active: false, enabled: true, flights: true },
-    { icon: ICON_CHATGPT, label: 'ChatGPT', active: false, enabled: true, chatgpt: true },
+    { icon: ICON_CHATGPT, label: 'Pesquisas do Vorcaro', active: false, enabled: true, chatGPT: true },
+    { icon: ICON_GOOGLE, label: 'Histórico do Google', active: false, enabled: true, googleHistory: true },
     { icon: ICON_SOUNDTRACK, label: 'Trilha Sonora', active: false, enabled: true, soundtrack: true },
     { icon: ICON_EVENTS, label: 'Agenda', active: false, enabled: true, events: true },
   ];
@@ -64,7 +66,8 @@ export function renderNavRail(container, { avatarSrc, avatarName = 'Perfil', onS
     if (item.payments && onPayments) btn.addEventListener('click', onPayments);
     if (item.media && onMedia) btn.addEventListener('click', onMedia);
     if (item.flights && onFlights) btn.addEventListener('click', onFlights);
-    if (item.chatgpt && onChatGPT) btn.addEventListener('click', onChatGPT);
+    if (item.chatGPT && onChatGPT) btn.addEventListener('click', onChatGPT);
+    if (item.googleHistory && onGoogleHistory) btn.addEventListener('click', onGoogleHistory);
     if (item.soundtrack && onSoundtrack) btn.addEventListener('click', onSoundtrack);
     if (item.events && onEvents) btn.addEventListener('click', onEvents);
     topSection.appendChild(btn);
@@ -122,7 +125,8 @@ export function renderNavRail(container, { avatarSrc, avatarName = 'Perfil', onS
       if (label === 'Pagamentos') btn.classList.toggle('active', which === 'payments');
       if (label === 'Mídias') btn.classList.toggle('active', which === 'media');
       if (label === 'Voos') btn.classList.toggle('active', which === 'flights');
-      if (label === 'ChatGPT') btn.classList.toggle('active', which === 'chatgpt');
+      if (label === 'Pesquisas do Vorcaro') btn.classList.toggle('active', which === 'chatgpt');
+      if (label === 'Histórico do Google') btn.classList.toggle('active', which === 'google-history');
       if (label === 'Trilha Sonora') btn.classList.toggle('active', which === 'soundtrack');
       if (label === 'Agenda') btn.classList.toggle('active', which === 'events');
     }

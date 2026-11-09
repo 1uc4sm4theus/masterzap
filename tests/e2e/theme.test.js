@@ -58,7 +58,7 @@ test.describe('dark theme', () => {
     if (isMobile) {
       await page.locator('.sidebar-chatgpt-link').click();
     } else {
-      await page.locator('.nav-rail-btn[title="ChatGPT"]').click();
+      await page.locator('.nav-rail-btn[title="Pesquisas do Vorcaro"]').click();
     }
     await expect(page.locator('.chatgpt-panel')).toBeVisible();
     await expect(page.locator('.chatgpt-panel')).toHaveCSS('background-color', 'rgb(17, 27, 33)');

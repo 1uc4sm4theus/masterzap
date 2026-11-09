@@ -5,7 +5,8 @@
  *   #/                                → empty state (no conversation)
  *   #/chat/:conversationId            → open conversation
  *   #/chat/:conversationId/msg/:msgId → open conversation + scroll to message
- *   #/chatgpt                         → cited ChatGPT conversations
+ *   #/chatgpt                         → cited ChatGPT searches
+ *   #/google-history                  → attributed Google searches
  *   #/favorites                       → saved favorite messages
  */
 
@@ -43,7 +44,7 @@ export class HashRouter {
    * @param {string|number} [messageId]
    */
   navigate(route, param, messageId) {
-    if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt' || route === 'soundtrack' || route === 'favorites' || route === 'events') {
+    if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt' || route === 'google-history' || route === 'soundtrack' || route === 'favorites' || route === 'events') {
       window.location.hash = `#/${route}`;
     } else if (route === 'home') {
       window.location.hash = '#/';
@@ -69,7 +70,7 @@ export class HashRouter {
   static parseHash(hash) {
     const cleaned = hash.replace(/^#\/?/, '');
     if (!cleaned) return { route: 'home', param: null, messageId: null };
-    if (cleaned === 'calls' || cleaned === 'payments' || cleaned === 'media' || cleaned === 'flights' || cleaned === 'chatgpt' || cleaned === 'soundtrack' || cleaned === 'favorites' || cleaned === 'events') return { route: cleaned, param: null, messageId: null };
+    if (cleaned === 'calls' || cleaned === 'payments' || cleaned === 'media' || cleaned === 'flights' || cleaned === 'chatgpt' || cleaned === 'google-history' || cleaned === 'soundtrack' || cleaned === 'favorites' || cleaned === 'events') return { route: cleaned, param: null, messageId: null };
 
     // Match #/chat/:id/msg/:msgId
     const msgMatch = cleaned.match(/^chat\/([^/]+)\/msg\/(.+)$/);

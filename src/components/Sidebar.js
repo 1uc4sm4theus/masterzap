@@ -36,6 +36,7 @@ export function renderSidebar(container, {
   onEvents,
   onFlights,
   onChatGPT,
+  onGoogleHistory,
   onSoundtrack,
   onChats,
   onUserSwitch,
@@ -92,10 +93,20 @@ export function renderSidebar(container, {
     const chatgptLink = document.createElement('button');
     chatgptLink.className = 'sidebar-chatgpt-link';
     chatgptLink.type = 'button';
-    chatgptLink.setAttribute('aria-label', 'Consultas ao ChatGPT');
-    chatgptLink.innerHTML = '<img src="/assets/chatgpt-logo.png" alt="" aria-hidden="true"><span>Consultas ao ChatGPT</span>';
+    chatgptLink.setAttribute('aria-label', 'Pesquisas do Vorcaro no ChatGPT');
+    chatgptLink.innerHTML = '<img src="/assets/chatgpt-logo.png" alt="" aria-hidden="true"><span>Pesquisas do Vorcaro</span>';
     chatgptLink.addEventListener('click', onChatGPT);
     el.insertBefore(chatgptLink, el.querySelector('.sidebar-search'));
+  }
+
+  if (onGoogleHistory) {
+    const googleHistoryLink = document.createElement('button');
+    googleHistoryLink.className = 'sidebar-google-history-link';
+    googleHistoryLink.type = 'button';
+    googleHistoryLink.setAttribute('aria-label', 'Histórico de pesquisas do Google');
+    googleHistoryLink.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.35 3.8" fill="none" stroke="#EA4335" stroke-width="4"/><path d="M4.65 6.8a9 9 0 0 0 0 10.4" fill="none" stroke="#FBBC05" stroke-width="4"/><path d="M4.65 17.2A9 9 0 0 0 17.4 18.5" fill="none" stroke="#34A853" stroke-width="4"/><path d="M17.4 18.5A9 9 0 0 0 20.7 10.2H12" fill="none" stroke="#4285F4" stroke-width="4"/></svg><span>Histórico do Google</span>';
+    googleHistoryLink.addEventListener('click', onGoogleHistory);
+    el.insertBefore(googleHistoryLink, el.querySelector('.sidebar-search'));
   }
 
   if (onSoundtrack) {

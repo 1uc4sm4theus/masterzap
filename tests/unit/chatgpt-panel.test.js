@@ -15,11 +15,12 @@ describe('renderChatGPTPanel', () => {
     expect(panel.querySelector('.chatgpt-list-items').children).toHaveLength(21);
     expect(panel.querySelector('.chatgpt-list-item').textContent).toContain('Varas criminais federais');
     expect(panel.textContent).toContain('não representa o histórico completo de 151 interações');
-    expect(panel.textContent).toContain('Resposta não reproduzida na reportagem.');
+    expect(panel.textContent).toContain('Arquivo editorial das pesquisas de Vorcaro no ChatGPT');
+    expect(panel.textContent).toContain('Resposta reconstruída editorialmente');
     panel.querySelectorAll('.chatgpt-list-item')[4].click();
     expect(panel.textContent).toContain('A formulação da pergunta foi resumida');
     panel.querySelectorAll('.chatgpt-list-item')[19].click();
-    expect(panel.textContent).toContain('A reportagem informa que a resposta foi R$ 2,82.');
+    expect(panel.textContent).toContain('naquela conversa indicava R$ 2,82.');
   });
 
   it('selects conversations and searches their titles and message text', () => {
