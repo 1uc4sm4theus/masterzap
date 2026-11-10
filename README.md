@@ -17,6 +17,7 @@ As conversas vêm de fontes distintas e chegaram ao público em momentos diferen
 
 - **Março de 2026 — as conversas com Martha Graeff.** 65.772 mensagens trocadas com a então noiva vazaram para a imprensa e revelaram conexões com autoridades dos Três Poderes, apelidos que viralizaram nas redes e detalhes do maior escândalo bancário da história do Brasil.
 - **Setembro de 2026 — o relatório da PF sobre Alexandre de Moraes.** Caiu o sigilo da IPJ-A nº 3298613/2026, em que a Polícia Federal reconstrói, a partir do iPhone de Vorcaro, seus contatos com o ministro do STF e outras 22 pessoas. Não é um export de WhatsApp: as mensagens estavam em imagens dentro do laudo e foram transcritas uma a uma — veja [`data/ipj-3298613/README.md`](data/ipj-3298613/README.md).
+- **Grupos citados em reportagens.** Quatro grupos aparecem como conversas separadas, com participantes e trechos atribuídos às fontes; a conversa privada de Antonio Rueda permanece separada do grupo Reunião semanal. G001 — Macallan não tem mensagens ou participantes identificados no material fornecido.
 - **Conversa identificada como Walfrido Warde New.** 31 mensagens dos dias 15 e 16 de maio de 2025 foram adicionadas a partir de material fornecido ao projeto e identificado como capturas de tela do WhatsApp.
 - **Trechos da conversa com ACM Neto.** 14 mensagens foram adicionadas conforme reportagem de Lauro Jardim, em O Globo, de 2 de outubro de 2026, que atribui a origem à PF e ao celular de Daniel Vorcaro. O material não é o chat integral, e algumas datas são aproximadas.
 
@@ -119,7 +120,7 @@ A arquitetura já está ~80% preparada para escalar. O `DataStore` é agnóstico
 
 | Prioridade | Item | Status |
 |------------|------|--------|
-| Alta | Suporte a múltiplas conversas vazadas | Feito — 24 conversas de duas fontes |
+| Alta | Suporte a múltiplas conversas vazadas | Feito — 80 conversas de três fontes, incluindo grupos e trechos jornalísticos |
 | Alta | Cache de índice de busca por conversa | Feito — cache por conversa |
 | Média | Busca cruzada entre conversas | Não iniciado |
 | Média | Suporte a mídias (imagens, áudio, vídeo) | Aguardando disponibilidade do conteúdo |
@@ -134,7 +135,7 @@ As informações compiladas neste projeto são de domínio público, extraídas 
 
 ## English Summary
 
-**MasterWhats** is an interactive viewer for 66,387 WhatsApp messages recovered from the seized phones of Daniel Vorcaro (former owner of Banco Master, arrested by Brazil's Federal Police), across 24 conversations: the leaked exchanges with Martha Graeff and the Federal Police report on his contacts with Supreme Court Justice Alexandre de Moraes, unsealed in September 2026. Built with vanilla JS and Vite, it features global search for conversations and messages with accent support, calendar navigation, direct message link sharing, investigative profiles, and a fully responsive WhatsApp Web-like interface optimized for mobile.
+**MasterWhats** is an interactive viewer for 93,761 messages and published excerpts across 80 conversations: the leaked exchanges with Martha Graeff, the Federal Police report on Daniel Vorcaro's contacts, and four groups described in published reporting. Group excerpts are attributed to their sources and are not represented as full conversation exports. Built with vanilla JS and Vite, it features global search for conversations and messages with accent support, calendar navigation, direct message link sharing, investigative profiles, and a fully responsive WhatsApp Web-like interface optimized for mobile.
 
 The repo name "masterzap" references the original [MasterZap](https://www.reddit.com/r/brasil/s/xQeqrG27p8) project by Lucas Matheus (built on Replit with Grok), which inspired this reimagined version.
 

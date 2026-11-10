@@ -866,16 +866,15 @@
     },
     {
       "id": 67,
-      "timestamp": "2025-11-16",
+      "timestamp": "2025-11-16T10:34:00",
       "date": "2025-11-16",
-      "time": "",
+      "time": "10:34:00",
       "sender": "Flávio Bolsonaro",
       "content": "[chamada de voz perdida]",
       "type": "call",
       "is_edited": false,
       "attachment": null,
       "urls": [],
-      "time_unknown": true,
       "source_cite": "Estadão, 24/09/2026"
     },
     {

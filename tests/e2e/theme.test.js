@@ -63,4 +63,19 @@ test.describe('dark theme', () => {
     await expect(page.locator('.chatgpt-panel')).toBeVisible();
     await expect(page.locator('.chatgpt-panel')).toHaveCSS('background-color', 'rgb(17, 27, 33)');
   });
+
+  test('the calls list uses the dark surface and readable text in dark theme', async ({ page }) => {
+    const isMobile = page.viewportSize().width <= 600;
+    if (isMobile) {
+      await openMobileMenu(page);
+      await page.locator('.sidebar-dropdown-menu .sidebar-dropdown-item', { hasText: 'Ativar tema escuro' }).click();
+    } else {
+      await page.locator('.nav-rail-btn[title="Ativar tema escuro"]').click();
+    }
+
+    await page.goto('/#/calls');
+    await expect(page.locator('.calls-panel')).toBeVisible();
+    await expect(page.locator('.calls-panel')).toHaveCSS('background-color', 'rgb(17, 27, 33)');
+    await expect(page.locator('.calls-title')).toHaveCSS('color', 'rgb(233, 237, 239)');
+  });
 });

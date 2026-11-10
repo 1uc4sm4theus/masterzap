@@ -12,6 +12,15 @@ test('opening an event shows its date, approximate time, place, and mentioned pe
   await expect(details).toContainText('Michel Temer');
 });
 
+test('agenda message references open the original conversation at that message', async ({ page }) => {
+  await page.goto('/#/events');
+  await page.getByRole('option', { name: /Pedido para falar com Andrei Rodrigues/ }).click();
+  await page.getByRole('link', { name: /Abrir mensagem sobre Andrei Rodrigues/ }).click();
+
+  await expect(page).toHaveURL(/#\/chat\/alexandre-de-moraes\/msg\/69$/);
+  await expect(page.locator('.chat-msg-row[data-id="69"]')).toBeVisible();
+});
+
 test('mobile can open the agenda from conversations and return from event details', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');

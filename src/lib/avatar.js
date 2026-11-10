@@ -69,4 +69,13 @@ export function defaultAvatarSvg(seed, size) {
     `</svg>`;
 }
 
+export function defaultGroupAvatarSvg(size) {
+  const dimensions = size ? ` width="${size}" height="${size}"` : '';
+  return `<svg viewBox="0 0 212 212"${dimensions} role="img" aria-hidden="true">` +
+    '<circle cx="106" cy="106" r="106" fill="#dfe5e7"/>' +
+    '<path d="M106 101a29 29 0 1 0 0-58 29 29 0 0 0 0 58zm0 12c-29 0-55 15-55 34v12h110v-12c0-19-26-34-55-34z" fill="#54656f"/>' +
+    '<path d="M55 97a22 22 0 1 0 0-44 22 22 0 0 0 0 44zm-5 13c-16 2-29 11-35 22 8 5 15 13 18 24h12v-12c0-13 6-25 16-33-4-1-8-1-11-1zm112-13a22 22 0 1 0 0-44 22 22 0 0 0 0 44zm5 13c-4 0-8 0-11 1 10 8 16 20 16 33v12h12c3-11 10-19 18-24-6-11-19-20-35-22z" fill="#54656f"/>' +
+    '</svg>';
+}
+
 export { PALETTE as AVATAR_PALETTE };

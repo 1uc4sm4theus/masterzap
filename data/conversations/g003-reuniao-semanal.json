@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "participants": [
+      "Daniel Vorcaro",
+      "Ciro Nogueira",
+      "Antonio Rueda",
+      "Fábio Faria",
+      "Gusttavo Lima"
+    ],
+    "owner": "DV",
+    "contact": "Reunião semanal",
+    "date_range": {
+      "start": "2024-06",
+      "end": "2024-06"
+    },
+    "total_messages": 1,
+    "is_group": true,
+    "members": [
+      {
+        "name": "Daniel Vorcaro"
+      },
+      {
+        "name": "Ciro Nogueira"
+      },
+      {
+        "name": "Antonio Rueda"
+      },
+      {
+        "name": "Fábio Faria"
+      },
+      {
+        "name": "Gusttavo Lima"
+      }
+    ],
+    "group_context": "Organização de encontros privados em Brasília. O trecho de conversa privada entre Antonio Rueda e Daniel Vorcaro está separado no chat Antonio Rueda (relacionado a este grupo), não nesta conversa coletiva.",
+    "source": "UOL — reportagem de 18/10/2026",
+    "group_sources": [
+      {
+        "title": "UOL — reportagem de 18/10/2026",
+        "url": "https://noticias.uol.com.br/colunas/natalia-portinari/2026/10/18/vorcaro-quis-dar-a-gringa-a-hugo-motta-ciro-sugeriu-convidar-amigas.htm?utm_source=chatgpt.com"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-06",
+      "date": "2024-06",
+      "time": "",
+      "sender": "Ciro Nogueira",
+      "content": "Poderíamos convidar umas amigas, mas tem de ser bem segredo",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_context": "A reportagem informa que Antonio Rueda lembrou ao grupo que aquela quarta-feira seria Dia dos Namorados."
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-06",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1
+      }
+    ]
+  }
+}

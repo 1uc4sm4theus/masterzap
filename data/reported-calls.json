@@ -1,0 +1,32 @@
+[
+  {
+    "id": "reported-moraes-followup-2025-11-14",
+    "date": "2025-11-14",
+    "timestamp": "2025-11-14T17:17:00",
+    "display_time": "após 17h17",
+    "conversation_id": null,
+    "message_id": null,
+    "name": "Destinatários não identificados",
+    "kind": "unknown",
+    "reported": true,
+    "status": "reported",
+    "outgoing": true,
+    "description": "Série de ligações após o encontro com Alexandre de Moraes",
+    "source_note": "Relato publicado; não há registro individual de cada chamada no material disponível."
+  },
+  {
+    "id": "reported-martha-call-2025-11-16",
+    "date": "2025-11-16",
+    "timestamp": "2025-11-16T16:45:00",
+    "display_time": "aproximadamente 16h45",
+    "conversation_id": "martha-graeff",
+    "message_id": null,
+    "name": "Martha Graeff",
+    "kind": "unknown",
+    "reported": true,
+    "status": "reported",
+    "outgoing": true,
+    "description": "Vorcaro teria ligado usando fones Bluetooth, logo após sair do encontro com Moraes",
+    "source_note": "Relato publicado; horário aproximado e sem registro individual da chamada."
+  }
+]

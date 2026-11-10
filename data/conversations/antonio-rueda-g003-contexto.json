@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "participants": [
+      "Daniel Vorcaro",
+      "Antonio Rueda"
+    ],
+    "owner": "DV",
+    "contact": "Antonio Rueda",
+    "date_range": {
+      "start": "2024-06",
+      "end": "2024-06"
+    },
+    "total_messages": 1,
+    "related_group": {
+      "id": "g003-reuniao-semanal",
+      "name": "Reunião semanal"
+    },
+    "source": "UOL — reportagem de 18/10/2026",
+    "group_sources": [
+      {
+        "title": "UOL — reportagem de 18/10/2026",
+        "url": "https://noticias.uol.com.br/colunas/natalia-portinari/2026/10/18/vorcaro-quis-dar-a-gringa-a-hugo-motta-ciro-sugeriu-convidar-amigas.htm?utm_source=chatgpt.com"
+      }
+    ],
+    "note": "Conversa privada relacionada ao grupo Reunião semanal. A reportagem informa que o encontro foi transferido para terça-feira."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-06",
+      "date": "2024-06",
+      "time": "",
+      "sender": "Antonio Rueda",
+      "content": "muita namorada p dar conta",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-06",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1
+      }
+    ]
+  }
+}

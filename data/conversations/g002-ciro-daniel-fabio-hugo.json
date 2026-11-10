@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "participants": [
+      "Daniel Vorcaro",
+      "Ciro Nogueira",
+      "Hugo Motta",
+      "Fábio Faria"
+    ],
+    "owner": "DV",
+    "contact": "Ciro Daniel Fábio Hugo",
+    "date_range": {
+      "start": "2025-08-20",
+      "end": "2025-11-17"
+    },
+    "total_messages": 8,
+    "is_group": true,
+    "members": [
+      {
+        "name": "Daniel Vorcaro"
+      },
+      {
+        "name": "Ciro Nogueira"
+      },
+      {
+        "name": "Hugo Motta"
+      },
+      {
+        "name": "Fábio Faria"
+      }
+    ],
+    "group_creator": "Ciro Nogueira",
+    "group_settings": "Mensagens temporárias com duração de 90 dias.",
+    "group_context": "Conversas sobre encontros, jantares, viagens e acontecimentos políticos e investigações. A reportagem transcreve apenas trechos, não a conversa completa.",
+    "source": "UOL — íntegra dos trechos divulgados",
+    "group_sources": [
+      {
+        "title": "UOL — íntegra dos trechos divulgados",
+        "url": "https://noticias.uol.com.br/colunas/cezar-feitoza/2026/09/30/grupo-de-zap-para-organizar-encontros-reunia-vorcaro-ciro-motta-e-faria.htm?utm_source=chatgpt.com"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-08-28",
+      "date": "2025-08-28",
+      "time": "",
+      "sender": "Ciro Nogueira",
+      "content": "Acho que encima (sic) do Beto",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_context": "Compartilhamento de notícia sobre a Operação Carbono Oculto. Não há resposta registrada no trecho divulgado."
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-08-28",
+      "date": "2025-08-28",
+      "time": "",
+      "sender": "Ciro Nogueira",
+      "content": "Avisa quando tiverem indo hangar",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_context": "Organização de deslocamento em aeronave."
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-08-28",
+      "date": "2025-08-28",
+      "time": "",
+      "sender": "Fábio Faria",
+      "content": "To indo agora",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-09-04",
+      "date": "2025-09-04",
+      "time": "",
+      "sender": "DV",
+      "content": "óbvio",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_context": "Resposta que confirma o encontro proposto no contexto do jantar de aniversário organizado por Fábio Faria."
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-09-04",
+      "date": "2025-09-04",
+      "time": "",
+      "sender": "Ciro Nogueira",
+      "content": "Amigos acho qeu eu e hugo vamos ter problemas no jantar quinta, pois vai ter a posse do Carlos Brandao no STJ",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_context": "Conflito de agenda para o jantar."
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-09-04",
+      "date": "2025-09-04",
+      "time": "",
+      "sender": "Hugo Motta",
+      "content": "Verdade. Tinha esquecido",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-11-17",
+      "date": "2025-11-17",
+      "time": "",
+      "sender": "Fábio Faria",
+      "content": "Parabéns irmão",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_context": "Mensagens sobre a proposta do grupo Fictor para comprar o Banco Master. Vorcaro foi preso aproximadamente três horas depois das mensagens, segundo a reportagem."
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-11-17",
+      "date": "2025-11-17",
+      "time": "",
+      "sender": "Ciro Nogueira",
+      "content": "Figurinha (conteúdo gráfico não reproduzido na reportagem)",
+      "type": "sticker",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-08-28",
+        "message_count": 3,
+        "first_message_id": 1,
+        "last_message_id": 3
+      },
+      {
+        "date": "2025-09-04",
+        "message_count": 3,
+        "first_message_id": 4,
+        "last_message_id": 6
+      },
+      {
+        "date": "2025-11-17",
+        "message_count": 2,
+        "first_message_id": 7,
+        "last_message_id": 8
+      }
+    ]
+  }
+}

@@ -12,7 +12,7 @@ import { escapeHtml, formatTime, formatDateLong, linkify } from '../lib/utils.js
 import { ScrollLoader } from '../lib/scroll-loader.js';
 import { ICON_INFO, ICON_SEARCH, ICON_CHECKEMPTY, ICON_BELL, ICON_TIMER, ICON_DOWNLOAD, ICON_CLOSE_CIRCULAR, ICON_MASTERZAP_LOGO, ICON_MEETBALL, ICON_CHEVRON_DW, ICON_SCREENSHOT } from '../lib/icons.js';
 
-import { defaultAvatarSvg } from '../lib/avatar.js';
+import { defaultAvatarSvg, defaultGroupAvatarSvg } from '../lib/avatar.js';
 import { parseContacts, parseLocation, mapsUrl, parseLink, parseAudio, parseImage, conversationForPhone } from '../lib/media.js';
 import { showContactsSheet, ICON_MESSAGE } from './ContactsSheet.js';
 
@@ -38,7 +38,7 @@ const ICON_PIN = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" st
  * @param {Array} messages
  * @returns {HTMLElement}
  */
-function renderDaySection(date, messages, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro') {
+function renderDaySection(date, messages, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', groupOptions = {}) {
   const section = document.createElement('section');
   section.className = 'chat-day';
   section.dataset.date = date;
@@ -53,7 +53,7 @@ function renderDaySection(date, messages, outgoingSender = 'DV', ownerName = 'Da
 
   // Messages
   for (const msg of messages) {
-    section.appendChild(renderMessage(msg, outgoingSender, ownerName));
+    section.appendChild(renderMessage(msg, outgoingSender, ownerName, groupOptions));
   }
 
   return section;
@@ -473,7 +473,7 @@ function renderDeletedMessage() {
  * @param {object} msg
  * @returns {HTMLElement}
  */
-function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro') {
+function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', { isGroup = false, avatarForSender = () => null } = {}) {
   const isOutgoing = msg.sender === outgoingSender;
   const isSystem = msg.type === 'system';
 
@@ -494,6 +494,13 @@ function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro')
 
   const content = document.createElement('div');
   content.className = 'chat-msg-content';
+
+  if (isGroup && !isOutgoing) {
+    const sender = document.createElement('div');
+    sender.className = 'chat-msg-sender';
+    sender.textContent = msg.sender;
+    content.appendChild(sender);
+  }
 
   switch (msg.type) {
     case 'image':
@@ -543,6 +550,28 @@ function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro')
       }
       break;
     }
+  }
+
+  if (msg.source_context) {
+    const context = document.createElement('div');
+    context.className = 'chat-msg-source-context';
+    context.textContent = `Contexto publicado: ${msg.source_context}`;
+    content.appendChild(context);
+  }
+
+  if (isGroup && !isOutgoing) {
+    const senderAvatar = document.createElement('span');
+    senderAvatar.className = 'chat-group-sender-avatar';
+    const avatar = avatarForSender(msg.sender);
+    if (avatar) {
+      const img = document.createElement('img');
+      img.src = avatar;
+      img.alt = '';
+      senderAvatar.appendChild(img);
+    } else {
+      senderAvatar.innerHTML = defaultAvatarSvg(msg.sender, 32);
+    }
+    row.appendChild(senderAvatar);
   }
 
   bubble.appendChild(content);
@@ -599,7 +628,7 @@ function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro')
  */
 // Use the design system meetball icon for 3-dot menu
 
-export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSearch, onCloseChat, onAbout, onScreenshot, onExport, onScreenshotIntent, isConversationPinned = () => false, onTogglePinConversation, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', media: mediaOptions }) {
+export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSearch, onCloseChat, onAbout, onScreenshot, onExport, onScreenshotIntent, isConversationPinned = () => false, onTogglePinConversation, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', avatarForSender, media: mediaOptions }) {
   if (mediaOptions) media = { ...media, ...mediaOptions, container };
   // Clear container
   while (container.firstChild) container.removeChild(container.firstChild);
@@ -624,7 +653,9 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
 
   const avatarEl = document.createElement('div');
   avatarEl.className = 'chat-header-avatar';
-  if (conversation.avatar) {
+  if (conversation.is_group) {
+    avatarEl.innerHTML = defaultGroupAvatarSvg(40);
+  } else if (conversation.avatar) {
     const img = document.createElement('img');
     img.src = conversation.avatar;
     img.alt = displayName;
@@ -654,7 +685,11 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
 
   const subtitleEl = document.createElement('div');
   subtitleEl.className = 'chat-header-info';
-  subtitleEl.textContent = `${conversation.total_messages.toLocaleString('pt-BR')} mensagens`;
+  subtitleEl.textContent = conversation.is_group
+    ? `Grupo do WhatsApp · ${conversation.members?.length ? `${conversation.members.length} participantes` : 'participantes não identificados'}`
+    : conversation.related_group
+      ? `Conversa privada · relacionada ao grupo ${conversation.related_group.name}`
+      : `${conversation.total_messages.toLocaleString('pt-BR')} mensagens`;
   infoEl.appendChild(subtitleEl);
 
   header.appendChild(infoEl);
@@ -788,6 +823,12 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
   messagesArea.className = 'chat-messages';
   messagesArea.setAttribute('role', 'log');
   messagesArea.setAttribute('aria-label', `Mensagens com ${displayName}`);
+  if (!dateIndex.length && conversation.coverage_note) {
+    const emptyNote = document.createElement('div');
+    emptyNote.className = 'chat-empty-note';
+    emptyNote.textContent = conversation.coverage_note;
+    messagesArea.appendChild(emptyNote);
+  }
   el.appendChild(messagesArea);
 
   // Right-click on chat background (not on bubbles) opens dropdown at mouse position
@@ -805,7 +846,10 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
     container: messagesArea,
     dateIndex,
     loadMessages,
-    renderDay: (date, messages) => renderDaySection(date, messages, outgoingSender, ownerName),
+    renderDay: (date, messages) => renderDaySection(date, messages, outgoingSender, ownerName, {
+      isGroup: conversation.is_group,
+      avatarForSender,
+    }),
   });
 
   return { element: el, loader };

@@ -7,7 +7,7 @@
 import { formatTime, escapeHtml, formatNumber, formatRelativeDate } from '../lib/utils.js';
 
 import { ICON_SEARCH as SEARCH_ICON, ICON_MEETBALL } from '../lib/icons.js';
-import { defaultAvatarSvg } from '../lib/avatar.js';
+import { defaultAvatarSvg, defaultGroupAvatarSvg } from '../lib/avatar.js';
 
 /**
  * The two conversations pinned under "Favoritas" — the leaks this project is
@@ -74,7 +74,7 @@ export function renderSidebar(container, {
       <button class="sidebar-tag active" data-filter="todas">Todas</button>
       <button class="sidebar-tag" data-filter="nao-lidas">Não lidas <span class="sidebar-tag-count"></span></button>
       <button class="sidebar-tag" data-filter="favoritas">Favoritas</button>
-      <button class="sidebar-tag disabled">Grupos</button>
+      <button class="sidebar-tag" data-filter="grupos">Grupos</button>
     </div>
     <div class="conversation-list" role="list"></div>
   `;
@@ -183,15 +183,22 @@ export function renderSidebar(container, {
     const lastDate = conv.last_message?.timestamp
       ? conv.last_message.timestamp.split('T')[0]
       : '';
-    const lastTimeLabel = lastDate ? formatRelativeDate(lastDate) : '';
+    const lastTimeLabel = lastDate
+      ? lastDate.length === 7
+        ? new Date(Number(lastDate.slice(0, 4)), Number(lastDate.slice(5, 7)) - 1, 1)
+          .toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' })
+        : formatRelativeDate(lastDate)
+      : '';
 
-    const lastPreview = escapeHtml(conv.last_message?.content || '');
+    const lastPreview = escapeHtml(conv.last_message?.content || conv.list_preview || '');
     const displayName = escapeHtml(
       conv.contact || conv.participants?.[0] || conv.id
     );
     const msgCount = conv.total_messages ? formatNumber(conv.total_messages) : '';
 
-    const avatarHtml = conv.avatar
+    const avatarHtml = conv.is_group
+      ? defaultGroupAvatarSvg(40)
+      : conv.avatar
       ? `<img src="${conv.avatar}" alt="${displayName}" class="conversation-item-avatar-img" />`
       : defaultAvatarSvg(conv.id);
 
@@ -271,6 +278,7 @@ export function renderSidebar(container, {
   function matchesFilter(conv) {
     if (activeFilter === 'nao-lidas') return isUnread(conv);
     if (activeFilter === 'favoritas') return FAVORITE_CONVERSATIONS.has(conv.id);
+    if (activeFilter === 'grupos') return conv.is_group === true;
     return true;
   }
 
@@ -315,7 +323,9 @@ export function renderSidebar(container, {
       tagButtons.forEach(b => b.classList.toggle('active', b === btn));
       searchInput.placeholder = activeFilter === 'favoritas'
         ? 'Pesquisar nas favoritas'
-        : 'Pesquisar';
+        : activeFilter === 'grupos'
+          ? 'Pesquisar nos grupos'
+          : 'Pesquisar';
       applyFilter();
       list.scrollTop = 0;
     });

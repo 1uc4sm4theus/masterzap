@@ -7,6 +7,10 @@ const ICON_PEOPLE = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none"
 const ICON_BACK = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>';
 
 export function renderEventsPanel({ events = EVENTS, selectedId = events[0]?.id } = {}) {
+  const sortDate = event => event.dateOrder?.length === 4
+    ? `${event.dateOrder}-12-31`
+    : event.dateOrder || '';
+  const orderedEvents = [...events].sort((a, b) => sortDate(a).localeCompare(sortDate(b)));
   const panel = document.createElement('section');
   panel.className = 'events-panel';
   panel.setAttribute('aria-label', 'Agenda de eventos');
@@ -20,7 +24,7 @@ export function renderEventsPanel({ events = EVENTS, selectedId = events[0]?.id 
 
   const notice = document.createElement('p');
   notice.className = 'events-source-note';
-  notice.textContent = 'Lista organizada a partir do resumo fornecido. A menção de um evento ou pessoa não comprova presença.';
+  notice.textContent = 'Cronologia organizada a partir dos relatos e fontes indicados. A menção de um evento ou pessoa não comprova presença nem a realização do encontro.';
   listPane.appendChild(notice);
 
   const list = document.createElement('div');
@@ -79,7 +83,9 @@ export function renderEventsPanel({ events = EVENTS, selectedId = events[0]?.id 
     time.className = 'event-detail-meta';
     time.innerHTML = ICON_CLOCK;
     const timeText = document.createElement('span');
-    timeText.textContent = `Horário aproximado: ${event.time}`;
+    timeText.textContent = event.time === 'Não indicado'
+      ? 'Horário não indicado'
+      : `Horário aproximado: ${event.time}`;
     time.appendChild(timeText);
     detailPane.appendChild(time);
 
@@ -87,6 +93,11 @@ export function renderEventsPanel({ events = EVENTS, selectedId = events[0]?.id 
     summary.className = 'event-detail-summary';
     summary.textContent = event.summary;
     detailPane.appendChild(summary);
+
+    const status = document.createElement('p');
+    status.className = 'event-detail-status';
+    status.textContent = `Situação documental: ${event.status || 'não especificada no resumo de origem.'}`;
+    detailPane.appendChild(status);
 
     for (const detail of event.details) {
       const paragraph = document.createElement('p');
@@ -108,9 +119,52 @@ export function renderEventsPanel({ events = EVENTS, selectedId = events[0]?.id 
     }
     detailPane.appendChild(peopleList);
 
+    if (event.messageLinks?.length) {
+      const messagesHeading = document.createElement('h3');
+      messagesHeading.className = 'event-detail-section-title';
+      messagesHeading.textContent = 'Mensagens e registros';
+      detailPane.appendChild(messagesHeading);
+      const messagesList = document.createElement('ul');
+      messagesList.className = 'event-sources-list';
+      for (const reference of event.messageLinks) {
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = `#/chat/${encodeURIComponent(reference.conversationId)}/msg/${reference.messageId}`;
+        link.textContent = reference.label;
+        item.appendChild(link);
+        messagesList.appendChild(item);
+      }
+      detailPane.appendChild(messagesList);
+    }
+
+    const sourcesHeading = document.createElement('h3');
+    sourcesHeading.className = 'event-detail-section-title';
+    sourcesHeading.textContent = 'Fontes indicadas';
+    detailPane.appendChild(sourcesHeading);
+    if (event.sources?.length) {
+      const sourcesList = document.createElement('ul');
+      sourcesList.className = 'event-sources-list';
+      for (const source of event.sources) {
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = source.url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = source.label;
+        item.appendChild(link);
+        sourcesList.appendChild(item);
+      }
+      detailPane.appendChild(sourcesList);
+    } else {
+      const noSources = document.createElement('p');
+      noSources.className = 'event-detail-copy';
+      noSources.textContent = 'Nenhuma fonte específica foi indicada para este item no material enviado.';
+      detailPane.appendChild(noSources);
+    }
+
     const footnote = document.createElement('p');
     footnote.className = 'event-detail-footnote';
-    footnote.textContent = 'Detalhes reproduzem o resumo fornecido e não substituem a verificação nas fontes originais.';
+    footnote.textContent = 'A classificação e os detalhes reproduzem o material fornecido; consulte as fontes originais antes de tratar um relato ou uma mensagem como confirmação de encontro.';
     detailPane.appendChild(footnote);
   }
 
@@ -126,7 +180,7 @@ export function renderEventsPanel({ events = EVENTS, selectedId = events[0]?.id 
     if (window.innerWidth <= 600) detailPane.querySelector('.event-detail-back').focus();
   }
 
-  for (const event of events) {
+  for (const event of orderedEvents) {
     const item = document.createElement('button');
     item.type = 'button';
     item.className = 'event-list-item';
@@ -157,7 +211,7 @@ export function renderEventsPanel({ events = EVENTS, selectedId = events[0]?.id 
   }
   listPane.appendChild(list);
 
-  const selectedEvent = events.find(event => event.id === selectedId);
+  const selectedEvent = orderedEvents.find(event => event.id === selectedId);
   if (selectedEvent) renderDetail(selectedEvent);
   else renderDetail(null);
 

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "participants": [
+      "Daniel Vorcaro",
+      "Belline Santana",
+      "Paulo Sérgio Neves de Souza"
+    ],
+    "owner": "DV",
+    "contact": "Master",
+    "date_range": {
+      "start": "2025-10-02",
+      "end": "2025-10-27"
+    },
+    "total_messages": 3,
+    "is_group": true,
+    "members": [
+      {
+        "name": "Daniel Vorcaro"
+      },
+      {
+        "name": "Belline Santana"
+      },
+      {
+        "name": "Paulo Sérgio Neves de Souza"
+      }
+    ],
+    "group_creator": "Belline Santana",
+    "group_context": "Interlocução entre Vorcaro e servidores do Departamento de Supervisão Bancária do Banco Central. A reportagem também menciona chamadas de voz, mas não há transcrição disponível.",
+    "source": "UOL — Os espiões de Vorcaro",
+    "group_sources": [
+      {
+        "title": "UOL — Os espiões de Vorcaro",
+        "url": "https://tab.uol.com.br/noticias/redacao/2026/08/18/os-espioes-de-vorcaro-como-dono-do-master-usava-grupo-de-aliados-no-bc.htm?utm_source=chatgpt.com"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-10-02",
+      "date": "2025-10-02",
+      "time": "",
+      "sender": "Belline Santana",
+      "content": "Boa tarde. Criei esse grupo, no intuito de facilitar nossa interlocução.",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-10-27",
+      "date": "2025-10-27",
+      "time": "",
+      "sender": "DV",
+      "content": "Segue minuta para avaliação",
+      "type": "document",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": "Ofício Banco Master ao Desup — atualização das ações",
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-10-27",
+      "date": "2025-10-27",
+      "time": "",
+      "sender": "DV",
+      "content": "Por favor, vejam se atende",
+      "type": "text",
+      "timestamp_unknown": true,
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-10-02",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1
+      },
+      {
+        "date": "2025-10-27",
+        "message_count": 2,
+        "first_message_id": 2,
+        "last_message_id": 3
+      }
+    ]
+  }
+}

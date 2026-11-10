@@ -37,13 +37,21 @@ describe('conversations.json', () => {
 
   it('names the contact as a field, not as "the participant that is not DV"', () => {
     for (const conv of conversations) {
+      if (conv.is_group) {
+        expect(conv.contact.trim(), conv.id).not.toBe('');
+        continue;
+      }
       const owner = conv.owner || 'DV';
       expect(conv.contact, conv.id).toBe(conv.participants.find(p => p !== owner) || conv.participants[0]);
     }
   });
 
-  it('has a positive message count everywhere', () => {
+  it('allows an empty group only when its missing transcript is documented', () => {
     for (const conv of conversations) {
+      if (conv.is_group && conv.total_messages === 0) {
+        expect(conv.coverage_note, conv.id).toBeTruthy();
+        continue;
+      }
       expect(conv.total_messages, conv.id).toBeGreaterThan(0);
     }
   });
@@ -58,6 +66,10 @@ describe('conversations.json', () => {
 
   it('keeps the date range consistent with the last message', () => {
     for (const conv of conversations) {
+      if (!conv.last_message) {
+        expect(conv.is_group && conv.total_messages === 0, conv.id).toBe(true);
+        continue;
+      }
       expect(
         conv.last_message.timestamp.startsWith(conv.date_range.end), conv.id
       ).toBe(true);
@@ -97,6 +109,10 @@ describe('per-conversation chunks', () => {
       const index = JSON.parse(
         readFileSync(join(DATA_DIR, conv.id, 'index.json'), 'utf-8')
       );
+      if (index.dates.length === 0) {
+        expect(conv.is_group && conv.total_messages === 0, conv.id).toBe(true);
+        continue;
+      }
       // Spot-check the ends rather than every day of Martha's 534.
       for (const entry of [index.dates[0], index.dates.at(-1)]) {
         const chunk = join(DATA_DIR, conv.id, `${entry.date}.json`);
@@ -110,8 +126,12 @@ describe('profile coverage', () => {
   it('every conversation has a profile written for it', async () => {
     const { CONTACT_PROFILES } = await import('../../src/lib/profile-content.js');
     const missing = conversations
-      .map(c => c.id)
-      .filter(id => !CONTACT_PROFILES[id]);
+      .filter(conversation =>
+        !conversation.is_group &&
+        !conversation.related_group &&
+        !CONTACT_PROFILES[conversation.id]
+      )
+      .map(conversation => conversation.id);
 
     expect(missing).toEqual([]);
   });

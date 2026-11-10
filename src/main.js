@@ -150,6 +150,13 @@ async function init() {
     // The chat Vorcaro kept with himself — his own photo, as WhatsApp shows it.
     'dv-self': '/assets/avatar-dv.jpg',
   };
+  const PERSON_AVATARS = {
+    'Daniel Vorcaro': AVATARS['dv-self'],
+    'Hugo Motta': AVATARS['hugo-motta'],
+    'Fábio Faria': AVATARS['fabio-faria'],
+    'Paulo Sérgio Neves de Souza': AVATARS['diretor-paulo-sergio-bacen'],
+    'Gusttavo Lima': AVATARS['gustavo-lima'],
+  };
   const SENDER_NAMES = {
     DV: 'Daniel Vorcaro',
     'Jair Bolsonaro': 'Jair Bolsonaro',
@@ -404,6 +411,7 @@ async function init() {
       loadMessages: (date) => store.getMessages(id, date),
       outgoingSender,
       ownerName: activeUser.name,
+      avatarForSender: (name) => PERSON_AVATARS[name] || null,
       onBack: () => router.navigate('home'),
       onCloseChat: () => router.navigate('home'),
       isConversationPinned: () => pinnedConversations.has(id),
@@ -443,6 +451,7 @@ async function init() {
             onClose: () => { activeContactInfo = null; },
             onSearch: toggleSearch,
             actions: contactProfileActions,
+            avatarForPerson: (name) => PERSON_AVATARS[name] || null,
           });
         }
       },
@@ -533,6 +542,7 @@ async function init() {
                 onSearch: (term, id) => { closeRightDrawers(); fillSidebarSearch(term, id); },
                 onContact: (id) => { closeRightDrawers(); drawerActions(() => {}).onContact(id); },
               },
+              avatarForPerson: (name) => PERSON_AVATARS[name] || null,
             });
           }
         }, 500);

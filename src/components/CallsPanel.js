@@ -27,7 +27,8 @@ export function groupCalls(calls) {
   const rows = [];
   for (const call of calls) {
     const last = rows[rows.length - 1];
-    if (last && last.call.conversation_id === call.conversation_id
+    if (!call.reported && last && !last.call.reported
+      && last.call.conversation_id === call.conversation_id
       && last.call.date === call.date
       && last.call.outgoing === call.outgoing
       && last.call.status === call.status) {
@@ -41,6 +42,7 @@ export function groupCalls(calls) {
 }
 
 function describe(call) {
+  if (call.reported) return call.description;
   if (call.status === 'missed') return call.outgoing ? 'Não atendida' : 'Perdida';
   if (call.status === 'no_answer') return 'Sem resposta';
   if (call.duration) return call.duration.includes(':') ? `duração ${call.duration}` : call.duration;
@@ -94,28 +96,36 @@ export function renderCallsPanel({ calls = [], conversations = [], avatarFor = (
   list.className = 'calls-list';
   list.setAttribute('role', 'list');
   for (const { call, count } of groupCalls(calls)) {
-    list.appendChild(renderRow(call, count, nameOf(call.conversation_id), avatarFor(call.conversation_id), onOpen));
+    const name = call.reported ? call.name : nameOf(call.conversation_id);
+    list.appendChild(renderRow(call, count, name, avatarFor(call.conversation_id), onOpen));
   }
   panel.appendChild(list);
 
   const foot = document.createElement('p');
   foot.className = 'calls-foot';
-  foot.textContent = `${calls.length} chamadas registradas no material. Tocar numa chamada abre a conversa no ponto em que ela aconteceu.`;
+  const recordedCount = calls.filter(call => !call.reported).length;
+  const reportedCount = calls.length - recordedCount;
+  foot.textContent = `${recordedCount} chamadas registradas nas conversas e ${reportedCount} relatos de ligações publicados. Relatos sem registro individual não comprovam chamadas específicas.`;
   panel.appendChild(foot);
   return panel;
 }
 
 function renderRow(call, count, name, avatar, onOpen) {
   const row = document.createElement('div');
-  row.className = `calls-item${call.status === 'missed' && !call.outgoing ? ' missed' : ''}`;
+  row.className = `calls-item${call.status === 'missed' && !call.outgoing ? ' missed' : ''}${call.reported ? ' reported' : ''}`;
   row.setAttribute('role', 'listitem');
-  row.dataset.conversation = call.conversation_id;
-  row.dataset.message = call.message_id;
+  if (call.conversation_id) row.dataset.conversation = call.conversation_id;
+  if (call.message_id) row.dataset.message = call.message_id;
   const open = () => onOpen(call.conversation_id, call.message_id);
 
   const main = document.createElement('button');
   main.className = 'calls-item-main';
-  main.addEventListener('click', open);
+  if (call.reported && !call.conversation_id) {
+    main.disabled = true;
+    main.setAttribute('aria-label', `${name}: ${call.description}`);
+  } else {
+    main.addEventListener('click', open);
+  }
   const avatarEl = document.createElement('span');
   avatarEl.className = 'calls-item-avatar';
   if (avatar) {
@@ -139,22 +149,37 @@ function renderRow(call, count, name, avatar, onOpen) {
   meta.className = 'calls-item-meta';
   const arrow = document.createElement('span');
   arrow.className = 'calls-item-arrow';
-  arrow.setAttribute('aria-label', call.outgoing ? 'Chamada feita' : 'Chamada recebida');
+  arrow.setAttribute('aria-label', call.reported ? 'Ligação mencionada em relato' : call.outgoing ? 'Chamada feita' : 'Chamada recebida');
   arrow.innerHTML = call.outgoing ? ICON_OUT : ICON_IN;
   meta.appendChild(arrow);
   const when = document.createElement('span');
   const detail = describe(call);
-  when.textContent = detail ? `${formatCallTime(call.timestamp)} · ${detail}` : formatCallTime(call.timestamp);
+  if (call.reported) {
+    const date = dayFormatter.format(new Date(`${call.date}T12:00:00`));
+    when.textContent = `${date}, ${call.display_time} · Relato publicado: ${detail}`;
+    when.title = call.source_note;
+  } else {
+    when.textContent = detail ? `${formatCallTime(call.timestamp)} · ${detail}` : formatCallTime(call.timestamp);
+  }
   meta.appendChild(when);
   text.appendChild(meta);
   main.appendChild(text);
   row.appendChild(main);
 
-  const kind = document.createElement('button');
-  kind.className = 'calls-item-kind';
-  kind.setAttribute('aria-label', call.kind === 'video' ? 'Chamada de vídeo — ver na conversa' : 'Chamada de voz — ver na conversa');
-  kind.innerHTML = call.kind === 'video' ? ICON_VIDEO : ICON_PHONE;
-  kind.addEventListener('click', open);
-  row.appendChild(kind);
+  if (call.reported) {
+    const kind = document.createElement('span');
+    kind.className = 'calls-item-kind calls-item-kind-reported';
+    kind.setAttribute('aria-label', call.source_note);
+    kind.title = call.source_note;
+    kind.innerHTML = ICON_PHONE;
+    row.appendChild(kind);
+  } else {
+    const kind = document.createElement('button');
+    kind.className = 'calls-item-kind';
+    kind.setAttribute('aria-label', call.kind === 'video' ? 'Chamada de vídeo — ver na conversa' : 'Chamada de voz — ver na conversa');
+    kind.innerHTML = call.kind === 'video' ? ICON_VIDEO : ICON_PHONE;
+    kind.addEventListener('click', open);
+    row.appendChild(kind);
+  }
   return row;
 }

@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 CONVERSATIONS_DIR = DATA_DIR / "conversations"
 OUTPUT_DIR = ROOT / "public" / "data"
+REPORTED_CALLS_PATH = DATA_DIR / "reported-calls.json"
 
 
 def slugify(name: str) -> str:
@@ -289,7 +290,12 @@ def split_conversation(conv_id, data, index):
             "sender": last_msg["sender"],
         } if last_msg else None,
     }
-    for key in ("phone", "saved_as", "source", "source_detail", "note"):
+    for key in (
+        "phone", "saved_as", "source", "source_detail", "note",
+        "is_group", "members", "group_creator", "group_settings",
+        "group_context", "group_sources", "coverage_note", "list_preview",
+        "related_group",
+    ):
         if metadata.get(key):
             entry[key] = metadata[key]
     if str(metadata.get("source", "")).startswith("IPJ-A") and REPORT_DOCUMENT:
@@ -324,6 +330,12 @@ def main():
     entries.sort(key=lambda e: (e["last_message"]["timestamp"] or "") if e["last_message"] else "",
                  reverse=True)
     write_json(OUTPUT_DIR / "conversations.json", {"conversations": entries})
+
+    # Reported calls without a corresponding conversation call record remain
+    # explicitly marked so the calls screen does not present them as verified.
+    if REPORTED_CALLS_PATH.exists():
+        with open(REPORTED_CALLS_PATH, "r", encoding="utf-8") as f:
+            CALLS.extend(json.load(f))
 
     # Every call, newest first — the calls screen reads this one file.
     CALLS.sort(

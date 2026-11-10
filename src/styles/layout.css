@@ -727,22 +727,37 @@
 /* Bottom nav — hidden on desktop, shown on mobile */
 .sidebar-bottom-nav {
   display: none;
-  justify-content: space-around;
+  justify-content: stretch;
   align-items: center;
-  padding: 8px 0;
+  gap: 0;
+  padding: 6px 4px max(6px, env(safe-area-inset-bottom));
   border-top: 1px solid var(--WDS-lines-divider);
   background-color: var(--WDS-background-wash-plain);
   flex-shrink: 0;
 }
 
-.sidebar-bottom-tab {
+.sidebar-bottom-nav .sidebar-bottom-tab {
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  padding: 4px 16px;
+  justify-content: center;
+  min-width: 0;
+  gap: 4px;
+  padding: 6px 2px;
   color: var(--WDS-content-deemphasized);
   font-size: 11px;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.sidebar-bottom-tab svg {
+  flex: 0 0 24px;
+}
+
+.sidebar-bottom-tab span {
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .sidebar-bottom-tab.active {

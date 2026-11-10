@@ -28,6 +28,47 @@ test.describe('Calls screen', () => {
     expect(color).toMatch(/^rgb\(229, 57, 53\)$/);
   });
 
+  test('shows Flávio Bolsonaro’s missed call on 16 November at 10:34', async ({ page }) => {
+    await openCalls(page);
+    const call = page.locator('.calls-item[data-conversation="flavio-bolsonaro"][data-message="67"]');
+
+    await expect(call.locator('.calls-item-meta')).toContainText('16 de nov. de 2025, 10:34');
+    await expect(call.locator('.calls-item-meta')).toContainText('Perdida');
+  });
+
+  test('shows reported calls separately from calls recorded in conversations', async ({ page }) => {
+    await openCalls(page);
+    const list = page.locator('.calls-list');
+    const unidentified = list.locator('.calls-item.reported').filter({ hasText: 'Destinatários não identificados' });
+    const martha = list.locator('.calls-item.reported').filter({ hasText: 'Martha Graeff' });
+
+    await expect(unidentified).toContainText('após 17h17');
+    await expect(unidentified).toContainText('Relato publicado');
+    await expect(martha).toContainText('aproximadamente 16h45');
+    await expect(martha).toContainText('fones Bluetooth');
+    await expect(page.locator('.calls-foot')).toContainText('relatos de ligações publicados');
+  });
+
+  test('mobile bottom navigation keeps all tab labels on one line', async ({ page }) => {
+    test.skip(page.viewportSize().width > 600, 'Mobile bottom navigation only');
+    await page.goto('/');
+    await expect(page.locator('.conversation-item').first()).toBeVisible();
+    await expect(page.locator('.sidebar-bottom-nav')).toBeVisible();
+
+    const sizes = await page.locator('.sidebar-bottom-tab span').evaluateAll(elements => elements.map(element => ({
+      whiteSpace: getComputedStyle(element).whiteSpace,
+      clientWidth: element.clientWidth,
+      scrollWidth: element.scrollWidth,
+      lineHeight: Number.parseFloat(getComputedStyle(element).lineHeight),
+    })));
+    for (const size of sizes) {
+      expect(size.whiteSpace).toBe('nowrap');
+      expect(size.clientWidth).toBeGreaterThan(0);
+      expect(size.scrollWidth).toBeLessThanOrEqual(size.clientWidth);
+      expect(size.lineHeight).toBeLessThan(16);
+    }
+  });
+
   test('the buttons across the top are there and do nothing', async ({ page }) => {
     await openCalls(page);
     for (const label of ['Ligar', 'Agendar', 'Teclado', 'Favoritos', 'Pesquisar chamadas', 'Menu']) {
