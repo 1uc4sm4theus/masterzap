@@ -26,6 +26,7 @@ export class ScrollLoader {
     this._nextIndex = dateIndex.length - 1; // Start from most recent
     this._observer = null;
     this._sentinel = null;
+    this._ready = false;
   }
 
   /** Load initial days and set up scroll observation. */
@@ -52,6 +53,7 @@ export class ScrollLoader {
       { root: this._container, rootMargin: '200px 0px 0px 0px' }
     );
     this._observer.observe(this._sentinel);
+    this._ready = true;
   }
 
   /**
@@ -159,6 +161,49 @@ export class ScrollLoader {
   /** Number of days currently loaded in the DOM. */
   get loadedCount() {
     return this._loadedDates.size;
+  }
+
+  /** Whether initial loading is complete and the current position is stable. */
+  get ready() {
+    return this._ready && !this._loading;
+  }
+
+  /**
+   * Capture the first visible message as a stable anchor for later restoration.
+   * Top-of-chat and in-flight loading positions are intentionally ignored.
+   */
+  capturePosition() {
+    if (!this.ready || this._container.scrollTop <= 0) return null;
+    const containerRect = this._container.getBoundingClientRect();
+    const message = Array.from(this._container.querySelectorAll('.chat-msg-row'))
+      .find(row => {
+        const rect = row.getBoundingClientRect();
+        return rect.bottom > containerRect.top && rect.top < containerRect.bottom;
+      });
+    const date = message?.closest('.chat-day')?.dataset.date;
+    if (!message?.dataset.id || !date) return null;
+
+    return {
+      messageId: message.dataset.id,
+      date,
+      offset: message.getBoundingClientRect().top - containerRect.top,
+      scrollTop: this._container.scrollTop,
+    };
+  }
+
+  /** Load an anchor date if needed, then restore its exact viewport offset. */
+  async restorePosition(position) {
+    if (!position?.messageId || !position.date) return false;
+    const day = await this.loadDate(position.date);
+    if (!day) return false;
+    const message = Array.from(day.querySelectorAll('.chat-msg-row'))
+      .find(row => row.dataset.id === String(position.messageId));
+    if (!message) return false;
+
+    const containerTop = this._container.getBoundingClientRect().top;
+    const messageTop = message.getBoundingClientRect().top;
+    this._container.scrollTop += messageTop - containerTop - position.offset;
+    return true;
   }
 
   /**

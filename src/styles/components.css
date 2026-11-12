@@ -1273,10 +1273,23 @@
 }
 
 .chat-calendar-label {
+  flex: 1;
   font-size: 16px;
   font-weight: 600;
   color: var(--WDS-content-default);
   text-transform: capitalize;
+  text-align: center;
+}
+
+.chat-calendar-jump {
+  max-width: 116px;
+  padding: 5px 4px;
+  border: 1px solid var(--WDS-lines-divider);
+  border-radius: 8px;
+  background: var(--WDS-surface-elevated-default);
+  color: var(--WDS-content-default);
+  font: inherit;
+  font-size: 12px;
 }
 
 .chat-calendar-nav-btn {
@@ -1362,6 +1375,36 @@
   text-align: center;
   color: var(--WDS-content-deemphasized);
   font-size: 14px;
+}
+
+.chat-calendar-partial {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 12px;
+}
+
+.chat-calendar-partial-select {
+  min-width: 0;
+  margin-left: 6px;
+  padding: 5px;
+  border: 1px solid var(--WDS-lines-divider);
+  border-radius: 8px;
+  background: var(--WDS-surface-elevated-default);
+  color: var(--WDS-content-default);
+  font: inherit;
+}
+
+.chat-calendar-partial-go {
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--WDS-accent);
+  color: var(--WDS-content-inverse);
+  font: inherit;
+  cursor: pointer;
 }
 
 /* ── Events agenda ───────────────────────────── */
@@ -1663,6 +1706,10 @@
     left: auto;
     right: 8px;
     width: min(416px, calc(100vw - 24px));
+  }
+
+  .chat-calendar-jump {
+    max-width: 88px;
   }
 
   .mobile-search-bar {
@@ -2100,6 +2147,7 @@
   gap: 3px;
   padding: 10px 16px;
   cursor: pointer;
+  border: 0;
   border-bottom: 1px solid var(--WDS-lines-divider);
   transition: background-color 80ms;
 }
@@ -2115,21 +2163,46 @@
 
 .search-result-top {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
   gap: 8px;
 }
 
-.search-result-sender {
+.search-result-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+.search-result-conversation {
+  overflow: hidden;
+  flex: 1;
   font-size: 13.5px;
   font-weight: 500;
   color: var(--WDS-content-default);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .search-result-date {
   font-size: 12px;
   color: var(--WDS-content-deemphasized);
   white-space: nowrap;
+}
+
+.search-result-status {
+  color: var(--WDS-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  white-space: nowrap;
+}
+
+.search-result-favorite {
+  color: var(--WDS-yellow-500, #f1c40f);
+  font-size: 14px;
+  line-height: 1;
 }
 
 .search-result-content {
@@ -2141,129 +2214,72 @@
   line-height: 1.4;
 }
 
+.contact-info-source-section {
+  padding: 16px;
+}
+
+.contact-info-source-section:target {
+  scroll-margin-top: 12px;
+}
+
+.contact-info-source-section .contact-info-section-label {
+  margin-bottom: 6px;
+}
+
+.contact-info-source-value {
+  margin: 0;
+  color: var(--WDS-content-deemphasized);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media print {
+  body,
+  #app,
+  .app-wrapper,
+  .app-container,
+  .main-area,
+  .chat-view,
+  .chat-messages {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  .nav-rail,
+  .sidebar,
+  .app-header-bar,
+  .chat-header-back,
+  .chat-header-menu-btn,
+  .chat-msg-chevron,
+  .mobile-search-bar,
+  .chat-dropdown-menu,
+  .contact-info-drawer,
+  .chat-search-drawer,
+  .msg-info-drawer,
+  .toast,
+  .scroll-sentinel {
+    display: none !important;
+  }
+
+  .chat-messages {
+    position: static !important;
+    padding: 12px !important;
+  }
+
+  .chat-msg-row {
+    break-inside: avoid;
+  }
+}
+
 .search-highlight {
   background-color: var(--WDS-yellow-200);
   color: var(--WDS-content-default);
   border-radius: 2px;
   padding: 0 1px;
-}
-
-/* ── Image preview ────────────────────────────── */
-/* Shown when the platform will neither share the file nor take it on the
-   clipboard: the image goes on the page so the browser's own long-press menu
-   can reach it. */
-
-.image-preview {
-  position: fixed;
-  inset: 0;
-  z-index: 1200;
-  display: flex;
-  flex-direction: column;
-  background-color: #0b141a;
-  opacity: 0;
-  transition: opacity 160ms ease;
-}
-
-.image-preview.open {
-  opacity: 1;
-}
-
-.image-preview-bar {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 12px 16px;
-  color: #fff;
-  flex-shrink: 0;
-}
-
-.image-preview-close {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-}
-
-.image-preview-close:active {
-  background-color: rgba(255, 255, 255, 0.14);
-}
-
-.image-preview-title {
-  font-size: 15px;
-  font-weight: 500;
-}
-
-/* The image gets the space that is left, never more: the hint and the buttons
-   below are laid out first, so nothing ends up on top of them. */
-.image-preview-body {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 16px;
-}
-
-.image-preview-img {
-  max-width: 100%;
-  max-height: 100%;
-  min-height: 0;
-  object-fit: contain;
-  border-radius: 6px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
-.image-preview-footer {
-  flex-shrink: 0;
-  padding: 14px 16px;
-  padding-bottom: max(14px, env(safe-area-inset-bottom));
-}
-
-.image-preview-hint {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.45;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.image-preview-actions {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.image-preview-actions:not(:empty) {
-  margin-top: 14px;
-}
-
-.image-preview-action {
-  min-width: 180px;
-  padding: 12px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 22px;
-  background: transparent;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.image-preview-action.primary {
-  border-color: transparent;
-  background-color: var(--WDS-primary-strong, #1daa61);
-}
-
-.image-preview-action:disabled {
-  opacity: 0.6;
-  cursor: default;
 }
 
 /* ── Contacts sheet: the list behind "Ver todos" on a contact card ───────── */

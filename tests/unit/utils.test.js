@@ -34,6 +34,12 @@ describe('formatDateLong', () => {
     expect(result).toContain('2025');
     expect(result.toLowerCase()).toContain('agosto');
   });
+
+  it('keeps year-only dates partial and rejects unknown dates', () => {
+    expect(formatDateLong('2024')).toBe('2024');
+    expect(formatDateLong('2024-07')).toBe('julho de 2024');
+    expect(formatDateLong('2024-13')).toBe('Data não informada');
+  });
 });
 
 describe('formatDateShort', () => {
@@ -49,6 +55,10 @@ describe('formatTime', () => {
 
   it('handles HH:MM input', () => {
     expect(formatTime('23:59')).toBe('23:59');
+  });
+
+  it('does not invent a time when it is unknown', () => {
+    expect(formatTime(null)).toBe('Horário não informado');
   });
 });
 

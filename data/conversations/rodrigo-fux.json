@@ -8,9 +8,9 @@
     "phone": null,
     "date_range": {
       "start": "2024-12-04",
-      "end": "2024-12-04"
+      "end": "2025-03-12"
     },
-    "total_messages": 9,
+    "total_messages": 15,
     "source": "Conteúdo fornecido pelo usuário",
     "note": "Transcrição fornecida pelo usuário; o número de telefone foi ocultado no material."
   },
@@ -122,6 +122,78 @@
       "is_edited": false,
       "attachment": null,
       "urls": []
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-03-12T10:12:37-03:00",
+      "date": "2025-03-12",
+      "time": "10:12:37",
+      "sender": "Rodrigo Fux",
+      "content": "Bom dia. 10:30hs tô aí",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-03-12T12:12:37-03:00",
+      "date": "2025-03-12",
+      "time": "12:12:37",
+      "sender": "Rodrigo Fux",
+      "content": "Qual a data de Londres mesmo?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-03-12T13:30:29-03:00",
+      "date": "2025-03-12",
+      "time": "13:30:29",
+      "sender": "Rodrigo Fux",
+      "content": "Pode pra mandarem o e-mail para",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-03-12T13:30:41-03:00",
+      "date": "2025-03-12",
+      "time": "13:30:41",
+      "sender": "Rodrigo Fux",
+      "content": "Esse é o meu",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-03-12T13:31:01-03:00",
+      "date": "2025-03-12",
+      "time": "13:31:01",
+      "sender": "Rodrigo Fux",
+      "content": "E para a Secretária do meu pai. Com cópia pra mim.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-03-12T13:34:06-03:00",
+      "date": "2025-03-12",
+      "time": "13:34:06",
+      "sender": "DV",
+      "content": "Vou pedir!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
     }
   ],
   "index": {
@@ -131,6 +203,12 @@
         "message_count": 9,
         "first_message_id": 1,
         "last_message_id": 9
+      },
+      {
+        "date": "2025-03-12",
+        "message_count": 6,
+        "first_message_id": 10,
+        "last_message_id": 15
       }
     ]
   }

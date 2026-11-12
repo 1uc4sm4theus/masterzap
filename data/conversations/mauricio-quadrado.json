@@ -8,10 +8,10 @@
     "saved_as": "Mauricio Quadrado",
     "phone": "5511999856549",
     "date_range": {
-      "start": "2024-03-12",
+      "start": "2024-02-20",
       "end": "2024-03-12"
     },
-    "total_messages": 12,
+    "total_messages": 20,
     "source": "Representação da PF — RioPrevidência e Cláudio Castro (Pet 15.497), publicada pelo Poder360 em 13/09/2026",
     "source_detail": {
       "kind": "police-filing",
@@ -182,10 +182,112 @@
       "attachment": null,
       "urls": [],
       "source_cite": "PF, representação RioPrevidência, p. 38"
+    },
+    {
+      "id": 13,
+      "timestamp": "2024-02-20T14:06:22-03:00",
+      "date": "2024-02-20",
+      "time": "14:06:22",
+      "sender": "Mauricio Quadrado",
+      "content": "Locação já fechamos tudo\nAgora é rodar os contratos\nEu apertei na fiança os valores eles aceitaram",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 14,
+      "timestamp": "2024-02-20T18:50:25-03:00",
+      "date": "2024-02-20",
+      "time": "18:50:25",
+      "sender": "Mauricio Quadrado",
+      "content": "Daniel\nNo STF está 3 a 3\nTofoli impetou\nO Moraes pediu vista e parece que ele está do nosso lado\nPrecisamos do Zanin e Cassio\nEu acredito que o Walfredo ajuda no Zanin\nVc pode ver por favor",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 15,
+      "timestamp": "2024-02-20T18:50:47-03:00",
+      "date": "2024-02-20",
+      "time": "18:50:47",
+      "sender": "Mauricio Quadrado",
+      "content": "Walfredo Mares Guia",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 16,
+      "timestamp": "2024-02-20T19:15:51-03:00",
+      "date": "2024-02-20",
+      "time": "19:15:51",
+      "sender": "DV",
+      "content": "Eu ja conversei esse tema",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 17,
+      "timestamp": "2024-02-20T19:17:16-03:00",
+      "date": "2024-02-20",
+      "time": "19:17:16",
+      "sender": "Mauricio Quadrado",
+      "content": "A Afya está atuando forte\nInformação de dentro do MEC",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 18,
+      "timestamp": "2024-02-20T19:18:17-03:00",
+      "date": "2024-02-20",
+      "time": "19:18:17",
+      "sender": "DV",
+      "content": "Cassio vai votar a favor",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 19,
+      "timestamp": "2024-02-20T19:18:18-03:00",
+      "date": "2024-02-20",
+      "time": "19:18:18",
+      "sender": "DV",
+      "content": "E moraes",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 20,
+      "timestamp": "2024-02-20T19:18:26-03:00",
+      "date": "2024-02-20",
+      "time": "19:18:26",
+      "sender": "DV",
+      "content": "Vai ser apertado mas vamos",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
     }
   ],
   "index": {
     "dates": [
+      {
+        "date": "2024-02-20",
+        "message_count": 8,
+        "first_message_id": 13,
+        "last_message_id": 20
+      },
       {
         "date": "2024-03-12",
         "message_count": 12,

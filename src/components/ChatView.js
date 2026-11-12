@@ -10,11 +10,12 @@
  */
 import { escapeHtml, formatTime, formatDateLong, linkify } from '../lib/utils.js';
 import { ScrollLoader } from '../lib/scroll-loader.js';
-import { ICON_INFO, ICON_SEARCH, ICON_CHECKEMPTY, ICON_BELL, ICON_TIMER, ICON_DOWNLOAD, ICON_CLOSE_CIRCULAR, ICON_MASTERZAP_LOGO, ICON_MEETBALL, ICON_CHEVRON_DW, ICON_SCREENSHOT } from '../lib/icons.js';
+import { ICON_INFO, ICON_SEARCH, ICON_CHECKEMPTY, ICON_BELL, ICON_TIMER, ICON_DOWNLOAD, ICON_CLOSE_CIRCULAR, ICON_MASTERZAP_LOGO, ICON_MEETBALL, ICON_CHEVRON_DW, ICON_PRINT } from '../lib/icons.js';
 
 import { defaultAvatarSvg, defaultGroupAvatarSvg } from '../lib/avatar.js';
 import { parseContacts, parseLocation, mapsUrl, parseLink, parseAudio, parseImage, conversationForPhone } from '../lib/media.js';
 import { showContactsSheet, ICON_MESSAGE } from './ContactsSheet.js';
+import { registerOpenMenu } from '../lib/open-menu.js';
 
 /**
  * What the media renderers need from outside the bubble: who the contacts
@@ -473,7 +474,12 @@ function renderDeletedMessage() {
  * @param {object} msg
  * @returns {HTMLElement}
  */
-function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', { isGroup = false, avatarForSender = () => null } = {}) {
+function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', {
+  isGroup = false,
+  avatarForSender = () => null,
+  source = '',
+  onSourceClick,
+} = {}) {
   const isOutgoing = msg.sender === outgoingSender;
   const isSystem = msg.type === 'system';
 
@@ -628,7 +634,7 @@ function renderMessage(msg, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro',
  */
 // Use the design system meetball icon for 3-dot menu
 
-export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSearch, onCloseChat, onAbout, onScreenshot, onExport, onScreenshotIntent, isConversationPinned = () => false, onTogglePinConversation, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', avatarForSender, media: mediaOptions }) {
+export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSourceClick, onSearch, onCloseChat, onAbout, onPrint, onExport, isConversationPinned = () => false, onTogglePinConversation, outgoingSender = 'DV', ownerName = 'Daniel Vorcaro', avatarForSender, media: mediaOptions }) {
   if (mediaOptions) media = { ...media, ...mediaOptions, container };
   // Clear container
   while (container.firstChild) container.removeChild(container.firstChild);
@@ -713,13 +719,7 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
   // Dropdown menu (hidden by default)
   let menuOpen = false;
   let menuEl = null;
-  let screenshotPreparationStarted = false;
-
-  function prepareScreenshotOnIntent() {
-    if (screenshotPreparationStarted) return;
-    screenshotPreparationStarted = true;
-    onScreenshotIntent?.();
-  }
+  let releaseMenu = null;
 
   function buildMenuEl() {
     const m = document.createElement('div');
@@ -737,7 +737,7 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
       { label: 'Selecionar mensagens', icon: ICON_CHECKEMPTY, action: null, enabled: false },
       { label: 'Modo silencioso', icon: ICON_BELL, action: null, enabled: false },
       { label: 'Mensagens temporárias', icon: ICON_TIMER, action: null, enabled: false },
-      { label: 'Compartilhar print', icon: ICON_SCREENSHOT, action: onScreenshot, enabled: !!onScreenshot },
+      { label: 'Imprimir conversa', icon: ICON_PRINT, action: onPrint, enabled: !!onPrint },
       { label: 'Exportar (.md)', icon: ICON_DOWNLOAD, action: () => onExport('md'), enabled: !!onExport },
       { label: 'Exportar (.json)', icon: ICON_DOWNLOAD, action: () => onExport('json'), enabled: !!onExport },
       { label: 'Fechar conversa', icon: ICON_CLOSE_CIRCULAR, action: onCloseChat || onBack, enabled: !!(onCloseChat || onBack) },
@@ -754,10 +754,6 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
       } else {
         btn.textContent = item.label;
       }
-      if (item.label === 'Compartilhar print') {
-        btn.addEventListener('pointerenter', prepareScreenshotOnIntent, { once: true });
-        btn.addEventListener('focus', prepareScreenshotOnIntent, { once: true });
-      }
       if (item.enabled && item.action) {
         btn.addEventListener('click', () => { closeMenu(); item.action(); });
       }
@@ -771,9 +767,7 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
     menuEl = buildMenuEl();
     header.appendChild(menuEl);
     menuOpen = true;
-    setTimeout(() => {
-      document.addEventListener('click', onOutsideClick, true);
-    }, 0);
+    releaseMenu = registerOpenMenu(menuEl, onMenuDismissed);
   }
 
   function showMenuAt(x, y) {
@@ -792,21 +786,23 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
     if (rect.bottom > window.innerHeight) menuEl.style.top = `${window.innerHeight - rect.height - 8}px`;
 
     menuOpen = true;
-    setTimeout(() => {
-      document.addEventListener('click', onOutsideClick, true);
-    }, 0);
+    releaseMenu = registerOpenMenu(menuEl, onMenuDismissed);
+  }
+
+  function onMenuDismissed() {
+    menuEl?.remove();
+    menuEl = null;
+    menuOpen = false;
+    releaseMenu = null;
   }
 
   function closeMenu() {
     if (menuEl) { menuEl.remove(); menuEl = null; }
     menuOpen = false;
-    document.removeEventListener('click', onOutsideClick, true);
-    document.removeEventListener('contextmenu', onOutsideClick, true);
-  }
-
-  function onOutsideClick(e) {
-    if (menuEl && !menuEl.contains(e.target) && e.target !== menuBtn) {
-      closeMenu();
+    if (releaseMenu) {
+      const release = releaseMenu;
+      releaseMenu = null;
+      release();
     }
   }
 
@@ -849,6 +845,9 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
     renderDay: (date, messages) => renderDaySection(date, messages, outgoingSender, ownerName, {
       isGroup: conversation.is_group,
       avatarForSender,
+      source: conversation.source,
+      sourceDetail: conversation.source_detail,
+      onSourceClick,
     }),
   });
 

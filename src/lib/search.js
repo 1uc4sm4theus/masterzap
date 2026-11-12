@@ -11,6 +11,24 @@ import { dataUrl } from './data-url.js';
 const _indexes = new Map();
 const _pendingIndexes = new Map();
 let _activeIndexId = null;
+// All current conversations fit; future additions still have a hard ceiling.
+const MAX_CACHED_INDEXES = 80;
+
+function getCachedIndex(conversationId) {
+  if (!_indexes.has(conversationId)) return undefined;
+  const index = _indexes.get(conversationId);
+  _indexes.delete(conversationId);
+  _indexes.set(conversationId, index);
+  return index;
+}
+
+function cacheIndex(conversationId, index) {
+  _indexes.delete(conversationId);
+  _indexes.set(conversationId, index);
+  while (_indexes.size > MAX_CACHED_INDEXES) {
+    _indexes.delete(_indexes.keys().next().value);
+  }
+}
 
 /**
  * Load the search index for a conversation.
@@ -24,7 +42,8 @@ let _activeIndexId = null;
  */
 export async function loadSearchIndex(conversationId, basePath = '/data') {
   _activeIndexId = conversationId;
-  if (_indexes.has(conversationId)) return _indexes.get(conversationId);
+  const cached = getCachedIndex(conversationId);
+  if (cached) return cached;
   if (_pendingIndexes.has(conversationId)) return _pendingIndexes.get(conversationId);
 
   const promise = fetch(dataUrl(`${basePath}/${conversationId}/search-index.json`))
@@ -33,7 +52,7 @@ export async function loadSearchIndex(conversationId, basePath = '/data') {
       return r.json();
     })
     .then(data => {
-      _indexes.set(conversationId, data);
+      cacheIndex(conversationId, data);
       return data;
     })
     .finally(() => {
@@ -102,7 +121,7 @@ function excerptAround(content, matchStart, matchEnd) {
  * @returns {Array<{ id, date, sender, content, matchStart, matchEnd }>}
  */
 export function search(query, options = {}) {
-  return searchIndex(_indexes.get(_activeIndexId), query, options);
+  return searchIndex(getCachedIndex(_activeIndexId), query, options);
 }
 
 /**
@@ -176,6 +195,11 @@ export function resetSearchIndex() {
  * @param {string} [conversationId]
  */
 export function isIndexLoaded(conversationId) {
-  if (conversationId !== undefined) return _indexes.has(conversationId);
+  if (conversationId !== undefined) return getCachedIndex(conversationId) !== undefined;
   return _indexes.size > 0;
+}
+
+/** Current number of cached conversation indexes. */
+export function getSearchIndexCacheSize() {
+  return _indexes.size;
 }

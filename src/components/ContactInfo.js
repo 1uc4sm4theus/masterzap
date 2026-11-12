@@ -30,7 +30,7 @@ import { ICON_SEARCH } from '../lib/icons.js';
  * @param {function} [options.onClose]
  * @returns {{ element: HTMLElement, destroy: function }}
  */
-export function showContactInfo(mainArea, conversation, { mediaCounts = {}, onClose, onSearch, actions = {}, avatarForPerson = () => null } = {}) {
+export function showContactInfo(mainArea, conversation, { mediaCounts = {}, onClose, onSearch, actions = {}, avatarForPerson = () => null, focusSource = false } = {}) {
   // Remove existing drawer if any
   const existing = mainArea.querySelector('.contact-info-drawer');
   if (existing) existing.remove();
@@ -151,6 +151,12 @@ export function showContactInfo(mainArea, conversation, { mediaCounts = {}, onCl
     body.appendChild(createDivider());
   }
 
+  const sourceSection = createConversationSourceSection(conversation);
+  if (sourceSection) {
+    body.appendChild(sourceSection);
+    body.appendChild(createDivider());
+  }
+
   if (!conversation.is_group) {
     const actionsEl = document.createElement('div');
     actionsEl.className = 'contact-info-actions';
@@ -177,7 +183,15 @@ export function showContactInfo(mainArea, conversation, { mediaCounts = {}, onCl
   requestAnimationFrame(() => {
     drawer.classList.add('open');
     body.scrollTop = 0;
+    if (focusSource) scrollToSource();
   });
+
+  function scrollToSource() {
+    const target = body.querySelector('#contact-info-source')
+      || body.querySelector('.profile-sources');
+    if (target?.tagName === 'DETAILS') target.open = true;
+    target?.scrollIntoView?.({ block: 'start' });
+  }
 
   function destroy() {
     drawer.remove();
@@ -192,7 +206,54 @@ export function showContactInfo(mainArea, conversation, { mediaCounts = {}, onCl
   }
   document.addEventListener('keydown', onKeyDown);
 
-  return { element: drawer, destroy };
+  return { element: drawer, destroy, scrollToSource };
+}
+
+function createConversationSourceSection(conversation) {
+  const detail = conversation.source_detail;
+  const sources = conversation.group_sources || [];
+
+  const section = document.createElement('section');
+  section.className = 'contact-info-source-section';
+  section.id = 'contact-info-source';
+  const heading = document.createElement('div');
+  heading.className = 'contact-info-section-label';
+  heading.textContent = 'Fonte';
+  section.appendChild(heading);
+
+  const addText = value => {
+    if (!value) return;
+    const text = document.createElement('p');
+    text.className = 'contact-info-source-value';
+    text.textContent = value;
+    section.appendChild(text);
+  };
+  addText(conversation.source || detail?.label || 'Fonte específica não informada nos dados desta conversa.');
+  addText(detail?.how);
+
+  const documentSource = conversation.source_document;
+  if (documentSource?.url) {
+    const link = document.createElement('a');
+    link.className = 'group-info-source';
+    link.href = documentSource.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = documentSource.file || 'Documento de origem';
+    section.appendChild(link);
+  }
+
+  for (const source of sources) {
+    if (!source.url) continue;
+    const link = document.createElement('a');
+    link.className = 'group-info-source';
+    link.href = source.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = source.title || source.url;
+    section.appendChild(link);
+  }
+
+  return section;
 }
 
 function appendGroupInfo(body, conversation, avatarForPerson) {
@@ -271,25 +332,6 @@ function appendGroupInfo(body, conversation, avatarForPerson) {
   }
   body.appendChild(memberSection);
 
-  if (conversation.group_sources?.length) {
-    body.appendChild(createDivider());
-    const sources = document.createElement('section');
-    sources.className = 'group-info-section';
-    const sourceHeading = document.createElement('h3');
-    sourceHeading.className = 'group-info-heading';
-    sourceHeading.textContent = 'Fontes';
-    sources.appendChild(sourceHeading);
-    for (const source of conversation.group_sources) {
-      const link = document.createElement('a');
-      link.className = 'group-info-source';
-      link.href = source.url;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.textContent = source.title;
-      sources.appendChild(link);
-    }
-    body.appendChild(sources);
-  }
 }
 
 function formatGroupDate(value) {

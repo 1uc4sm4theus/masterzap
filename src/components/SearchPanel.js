@@ -4,6 +4,7 @@
 import { escapeHtml, formatDateShort } from '../lib/utils.js';
 import { defaultAvatarSvg } from '../lib/avatar.js';
 import { countSearchIndex, loadSearchIndex, normalize, searchIndex } from '../lib/search.js';
+import { isFavoriteMessageSaved, loadFavoriteMessages } from '../lib/favorites.js';
 
 const DEBOUNCE_MS = 200;
 const MESSAGE_RESULT_LIMIT = 50;
@@ -59,8 +60,9 @@ export function attachSearch(sidebar, conversations, { onResultClick, onConversa
         ? null
         : `${messageCount} resultado${messageCount === 1 ? '' : 's'} encontrado${messageCount === 1 ? '' : 's'}`;
       const section = createSection('Mensagens', countLabel);
+      const favorites = loadFavoriteMessages();
       for (const result of messageResults) {
-        section.appendChild(createMessageResult(result));
+        section.appendChild(createMessageResult(result, favorites));
       }
       if (loading) {
         const status = document.createElement('div');
@@ -153,28 +155,48 @@ export function attachSearch(sidebar, conversations, { onResultClick, onConversa
     return item;
   }
 
-  function createMessageResult(result) {
+  function createMessageResult(result, favorites) {
     const item = document.createElement('div');
     item.className = 'search-result-item';
     item.setAttribute('role', 'button');
     item.setAttribute('tabindex', '0');
 
     const contactEl = document.createElement('span');
-    contactEl.className = 'search-result-sender';
+    contactEl.className = 'search-result-conversation search-result-sender';
     contactEl.textContent = result.contact;
 
     const dateEl = document.createElement('span');
     dateEl.className = 'search-result-date';
     dateEl.textContent = formatDateShort(result.date);
 
+    const metaEl = document.createElement('span');
+    metaEl.className = 'search-result-meta';
+    metaEl.append(contactEl, dateEl);
+    if (result.sender === (result.owner || 'DV')) {
+      const status = document.createElement('span');
+      status.className = 'search-result-status';
+      status.textContent = '✓✓';
+      status.setAttribute('aria-label', 'Mensagem enviada');
+      metaEl.appendChild(status);
+    }
+
+    if (isFavoriteMessageSaved(favorites, result.conversationId, result.id)) {
+      const favorite = document.createElement('span');
+      favorite.className = 'search-result-favorite';
+      favorite.textContent = '★';
+      favorite.setAttribute('aria-label', 'Mensagem favorita');
+      metaEl.appendChild(favorite);
+    }
+
     const topRow = document.createElement('div');
     topRow.className = 'search-result-top';
-    topRow.append(contactEl, dateEl);
+    topRow.appendChild(metaEl);
 
     const contentEl = document.createElement('div');
     contentEl.className = 'search-result-content';
     contentEl.innerHTML = highlightMatch(result.content, result.matchStart, result.matchEnd);
 
+    item.setAttribute('aria-label', `${result.contact}, ${formatDateShort(result.date)}: ${result.content}`);
     item.append(topRow, contentEl);
     const openResult = () => onResultClick(result.conversationId, result.id, result.date);
     item.addEventListener('click', openResult);
@@ -259,7 +281,7 @@ export function attachSearch(sidebar, conversations, { onResultClick, onConversa
         newestFirst: true,
       });
       for (const hit of hits) {
-        messageResults.push({ ...hit, conversationId: conversation.id, contact });
+        messageResults.push({ ...hit, conversationId: conversation.id, contact, owner: conversation.owner });
       }
     });
 

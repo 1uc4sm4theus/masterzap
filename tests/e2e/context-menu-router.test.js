@@ -51,6 +51,16 @@ test.describe('Context Menu — Batch 6', () => {
     await expect(page.locator('.context-menu')).not.toBeVisible();
   });
 
+  test('only one message or chat menu stays open at a time', async ({ page }) => {
+    const bubble = page.locator('.chat-msg-bubble').first();
+    await bubble.click({ button: 'right' });
+    await expect(page.locator('.context-menu')).toBeVisible();
+    await page.locator('.chat-header button[aria-label="Menu"]').click();
+
+    await expect(page.locator('.context-menu')).toHaveCount(0);
+    await expect(page.locator('.chat-dropdown-menu')).toBeVisible();
+  });
+
   test('right-clicking outside a bubble does not show menu', async ({ page }) => {
     const chatMessages = page.locator('.chat-messages');
     // Click on the messages area but not on a bubble

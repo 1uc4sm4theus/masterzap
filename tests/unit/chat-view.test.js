@@ -3,10 +3,10 @@
 import { describe, it, expect, vi } from 'vitest';
 import { renderChatView, renderMessage } from '../../src/components/ChatView.js';
 
-describe('chat menu screenshot preparation', () => {
-  it('prepares a screenshot only when the screenshot action is approached', () => {
+describe('chat print action', () => {
+  it('offers the native print action without preparing a screenshot', () => {
     const container = document.createElement('div');
-    const onScreenshotIntent = vi.fn();
+    const onPrint = vi.fn();
     renderChatView(container, {
       conversation: {
         id: 'martha-graeff',
@@ -16,20 +16,15 @@ describe('chat menu screenshot preparation', () => {
       },
       dateIndex: [],
       loadMessages: async () => [],
-      onScreenshotIntent,
-      onScreenshot: vi.fn(),
+      onPrint,
     });
 
     container.querySelector('.chat-header-menu-btn[aria-label="Menu"]').click();
-    expect(onScreenshotIntent).not.toHaveBeenCalled();
-
-    container.querySelector('.chat-dropdown-item').focus();
-    expect(onScreenshotIntent).not.toHaveBeenCalled();
-
-    const screenshotItem = [...container.querySelectorAll('.chat-dropdown-item')]
-      .find(item => item.textContent.includes('Compartilhar print'));
-    screenshotItem.dispatchEvent(new Event('pointerenter'));
-    expect(onScreenshotIntent).toHaveBeenCalledTimes(1);
+    const printItem = [...container.querySelectorAll('.chat-dropdown-item')]
+      .find(item => item.textContent.includes('Imprimir conversa'));
+    expect(printItem).toBeDefined();
+    printItem.click();
+    expect(onPrint).toHaveBeenCalledTimes(1);
   });
 });
 
@@ -43,6 +38,25 @@ describe('audio message notes', () => {
       content: '[áudio]',
       note: noteText,
       time: '10:12:50',
+    });
+
+    describe('message source badge', () => {
+      it('opens the source details and uses a message citation when available', () => {
+        const onSourceClick = vi.fn();
+        const row = renderMessage({
+          id: 11,
+          sender: 'DV',
+          type: 'text',
+          content: 'Mensagem',
+          time: '10:00:00',
+          source_cite: 'Relatório policial, página 12',
+        }, 'DV', 'Daniel Vorcaro', { source: 'Fonte geral', onSourceClick });
+
+        const source = row.querySelector('.chat-msg-source-badge');
+        expect(source.title).toBe('Relatório policial, página 12');
+        source.click();
+        expect(onSourceClick).toHaveBeenCalledOnce();
+      });
     });
     const bubbles = row.querySelectorAll('.chat-msg-bubble');
     const note = row.querySelector('.chat-msg-note-bubble');

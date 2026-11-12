@@ -72,7 +72,7 @@ test.describe('Chat Interactions', () => {
       'Selecionar mensagens',
       'Modo silencioso',
       'Mensagens temporárias',
-      'Compartilhar print',
+      'Imprimir conversa',
       'Exportar (.md)',
       'Exportar (.json)',
       'Fechar conversa',

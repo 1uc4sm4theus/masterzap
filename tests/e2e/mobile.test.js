@@ -94,6 +94,28 @@ test.describe('Mobile Responsive — Batch 8', () => {
     await expect(page.locator('.context-menu')).toBeVisible();
   });
 
+  test('Android back closes the open context menu without leaving the chat', async ({ page }) => {
+    await page.goto('/#/chat/martha-graeff');
+    const bubble = page.locator('.chat-msg-bubble').first();
+    await bubble.waitFor({ timeout: 10000 });
+    const chatUrl = page.url();
+    await bubble.dispatchEvent('contextmenu');
+    await expect(page.locator('.context-menu')).toBeVisible();
+
+    await page.goBack();
+
+    await expect(page.locator('.context-menu')).toHaveCount(0);
+    expect(page.url()).toBe(chatUrl);
+  });
+
+  test('touching outside a message menu closes it', async ({ page }) => {
+    await page.goto('/#/chat/martha-graeff');
+    await page.locator('.chat-msg-bubble').first().dispatchEvent('contextmenu');
+    await expect(page.locator('.context-menu')).toBeVisible();
+    await page.locator('.chat-header-name').tap();
+    await expect(page.locator('.context-menu')).toHaveCount(0);
+  });
+
   test('green header bar is hidden on mobile', async ({ page }) => {
     await page.goto('/');
     const bar = page.locator('.app-header-bar');

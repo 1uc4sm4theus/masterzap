@@ -24,7 +24,12 @@ export function slugify(name) {
  * @returns {string}
  */
 export function formatDateLong(dateStr) {
+  if (typeof dateStr !== 'string') return 'Data não informada';
+  if (/^\d{4}$/.test(dateStr)) return dateStr;
+  if (!/^\d{4}-\d{2}(?:-\d{2})?$/.test(dateStr)) return 'Data não informada';
   const [year, month, day] = dateStr.split('-').map(Number);
+  if (month < 1 || month > 12) return 'Data não informada';
+  if (day && day > new Date(year, month, 0).getDate()) return 'Data não informada';
   const date = new Date(year, month - 1, day || 1);
   const options = day
     ? { day: 'numeric', month: 'long', year: 'numeric' }
@@ -39,6 +44,7 @@ export function formatDateLong(dateStr) {
  * @returns {string}
  */
 export function formatDateShort(dateStr) {
+  if (/^\d{4}$/.test(dateStr || '')) return dateStr;
   if (/^\d{4}-\d{2}$/.test(dateStr || '')) {
     const [year, month] = dateStr.split('-');
     return `${month}/${year}`;
@@ -54,7 +60,7 @@ export function formatDateShort(dateStr) {
  * @returns {string}
  */
 export function formatTime(time) {
-  if (!time) return '--:--';
+  if (!time) return 'Horário não informado';
   return time.slice(0, 5);
 }
 

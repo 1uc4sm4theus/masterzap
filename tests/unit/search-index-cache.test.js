@@ -4,7 +4,14 @@
 // conversation, and that both bit in practice.
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { loadSearchIndex, isIndexLoaded, resetSearchIndex, search, searchIndex } from '../../src/lib/search.js';
+import {
+  getSearchIndexCacheSize,
+  loadSearchIndex,
+  isIndexLoaded,
+  resetSearchIndex,
+  search,
+  searchIndex,
+} from '../../src/lib/search.js';
 
 const INDEXES = {
   'martha-graeff': [
@@ -81,6 +88,32 @@ describe('search index cache', () => {
   it('propagates a failed fetch and stays unloaded', async () => {
     await expect(loadSearchIndex('nao-existe')).rejects.toThrow();
     expect(isIndexLoaded('nao-existe')).toBe(false);
+  });
+
+  it('keeps a bounded LRU cache and refreshes the least-recently-used index', async () => {
+    globalThis.fetch = vi.fn(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve([]),
+    }));
+
+    for (let index = 0; index < 81; index++) {
+      await loadSearchIndex(`conversation-${index}`);
+    }
+
+    expect(getSearchIndexCacheSize()).toBe(80);
+    expect(isIndexLoaded('conversation-0')).toBe(false);
+
+    await loadSearchIndex('conversation-1');
+    expect(globalThis.fetch).toHaveBeenCalledTimes(81);
+    await loadSearchIndex('conversation-0');
+    expect(globalThis.fetch).toHaveBeenCalledTimes(82);
+    expect(getSearchIndexCacheSize()).toBe(80);
+  });
+
+  it('matches text regardless of accents', () => {
+    expect(searchIndex([
+      { id: 1, date: '2025-01-01', sender: 'DV', content: 'Café com açúcar' },
+    ], 'cafe')).toHaveLength(1);
   });
 });
 

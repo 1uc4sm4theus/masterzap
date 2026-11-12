@@ -46,6 +46,7 @@ export function renderProfileSections(container, sections, sources, credits, act
   if (sources && sources.length > 0) {
     const sourcesEl = document.createElement('details');
     sourcesEl.className = 'profile-sources';
+    sourcesEl.id = 'contact-info-profile-sources';
 
     const summary = document.createElement('summary');
     summary.textContent = 'Fontes e reportagens consultadas';

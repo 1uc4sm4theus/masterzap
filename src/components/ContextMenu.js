@@ -8,6 +8,7 @@
 import { escapeHtml, formatDateLong, formatTime } from '../lib/utils.js';
 import { showToast } from './Toast.js';
 import { ICON_COPY, ICON_SEND, ICON_INFO } from '../lib/icons.js';
+import { registerOpenMenu } from '../lib/open-menu.js';
 
 const ICON_STAR = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg>';
 
@@ -29,6 +30,7 @@ export function attachContextMenu(chatContainer, {
 } = {}) {
   let menuEl = null;
   let drawerEl = null;
+  let releaseMenu = null;
 
   function show(x, y, msg) {
     hideMenu();
@@ -73,12 +75,22 @@ export function attachContextMenu(chatContainer, {
 
     menuEl.style.left = `${left}px`;
     menuEl.style.top = `${top}px`;
+    releaseMenu = registerOpenMenu(menuEl, () => {
+      menuEl?.remove();
+      menuEl = null;
+      releaseMenu = null;
+    });
   }
 
   function hideMenu() {
     if (menuEl) {
       menuEl.remove();
       menuEl = null;
+    }
+    if (releaseMenu) {
+      const release = releaseMenu;
+      releaseMenu = null;
+      release();
     }
   }
 
@@ -313,9 +325,6 @@ export function attachContextMenu(chatContainer, {
   }
 
   function onClickOutside(e) {
-    if (menuEl && !menuEl.contains(e.target)) {
-      hideMenu();
-    }
     if (drawerEl && !drawerEl.contains(e.target)) {
       hideDrawer();
     }
@@ -323,7 +332,6 @@ export function attachContextMenu(chatContainer, {
 
   function onKeyDown(e) {
     if (e.key === 'Escape') {
-      hideMenu();
       hideDrawer();
     }
   }
@@ -345,7 +353,7 @@ export function attachContextMenu(chatContainer, {
   // Attach listeners
   chatContainer.addEventListener('contextmenu', onContextMenu);
   chatContainer.addEventListener('click', onChevronClick);
-  document.addEventListener('click', onClickOutside, true);
+  document.addEventListener('pointerdown', onClickOutside, true);
   document.addEventListener('keydown', onKeyDown);
 
   return {
@@ -354,7 +362,7 @@ export function attachContextMenu(chatContainer, {
       hideDrawer();
       chatContainer.removeEventListener('contextmenu', onContextMenu);
       chatContainer.removeEventListener('click', onChevronClick);
-      document.removeEventListener('click', onClickOutside, true);
+      document.removeEventListener('pointerdown', onClickOutside, true);
       document.removeEventListener('keydown', onKeyDown);
     },
   };

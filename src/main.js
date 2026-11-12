@@ -23,12 +23,9 @@ import { showProfileDrawer } from './components/ProfileDrawer.js';
 import { showSettingsDrawer } from './components/SettingsDrawer.js';
 import { loadReadConversations, markConversationRead } from './lib/read-state.js';
 import { loadPinnedConversations, togglePinnedConversation } from './lib/pinned-conversations.js';
+import { loadChatScrollPosition, saveChatScrollPosition } from './lib/scroll-position.js';
 import { showToast } from './components/Toast.js';
-import {
-  shareChatScreenshot, prepareScreenshot, clearPreparedScreenshot,
-  shareImageFile, canShareFiles,
-} from './lib/screenshot.js';
-import { showImagePreview } from './components/ImagePreview.js';
+import { printChat } from './lib/print.js';
 import { renderPaymentsPanel } from './components/PaymentsPanel.js';
 import { renderFlightsPanel } from './components/FlightsPanel.js';
 import { renderChatGPTPanel } from './components/ChatGPTPanel.js';
@@ -53,9 +50,11 @@ let activeProfileDrawer = null;
 let activeSettingsDrawer = null;
 let activeSearch = null;
 let pendingScrollTarget = null;
+let activeScrollContainer = null;
+let activeScrollHandler = null;
+let scrollSaveTimer = null;
 let mainAreaSavedContent = null;
 let currentConversationId = null;
-let activeImagePreview = null;
 let sidebar = null;
 let router = null;
 let activeUser = APP_USERS[0];
@@ -189,11 +188,22 @@ async function init() {
 
   /** Close the chat (loader, context menu, right drawers). */
   function closeChat() {
-    clearPreparedScreenshot();
-    if (activeImagePreview) { activeImagePreview.destroy(); activeImagePreview = null; }
+    saveCurrentScrollPosition();
+    clearTimeout(scrollSaveTimer);
+    if (activeScrollContainer && activeScrollHandler) {
+      activeScrollContainer.removeEventListener('scroll', activeScrollHandler);
+    }
+    activeScrollContainer = null;
+    activeScrollHandler = null;
     closeRightDrawers();
     if (activeLoader) { activeLoader.destroy(); activeLoader = null; }
     if (activeContextMenu) { activeContextMenu.destroy(); activeContextMenu = null; }
+  }
+
+  function saveCurrentScrollPosition() {
+    if (!activeLoader || !currentConversationId) return false;
+    const position = activeLoader.capturePosition();
+    return saveChatScrollPosition(currentConversationId, position);
   }
 
   /** Close the profile drawer and restore sidebar + main area. */
@@ -350,44 +360,8 @@ async function init() {
     // Build toggleSearch bound to this conversation
     const toggleSearch = () => toggleChatSearch(id, dateIndex);
 
-    /**
-     * Capture what is on screen and hand it to the platform.
-     *
-     * The main area is exactly the right frame for this: on mobile it fills the
-     * screen, and on desktop it is the chat without the sidebar.
-     */
     const contactName = conversation.contact || conversation.participants[0];
     const outgoingSender = conversation.owner || activeUser.owner;
-
-    async function shareScreenshot() {
-      const result = await shareChatScreenshot(mainArea, contactName);
-      console.info('[screenshot]', result.outcome, result.reason || '', result.diag);
-
-      // 'shared' and 'cancelled' say themselves — the share sheet was the
-      // confirmation, and dismissing it was a decision.
-      if (result.outcome === 'copied') showToast(mainArea, 'Imagem copiada');
-      if (result.outcome === 'retry') showToast(mainArea, 'Toque novamente para compartilhar');
-
-      // The platform will neither share the file nor take it on the clipboard.
-      // Put the image on screen: long-pressing it reaches the browser's own
-      // share menu, which does know how to get to WhatsApp.
-      if (result.outcome === 'preview') {
-        activeImagePreview = showImagePreview(mainArea, result.blob, {
-          filename: result.filename,
-          // Offered only where the platform genuinely shares files. Firefox
-          // exposes navigator.share but will not take an image, and a button
-          // that fails is worse than no button.
-          onShare: canShareFiles()
-            ? () => shareImageFile(result.blob, result.filename)
-            : null,
-          onClose: () => { activeImagePreview = null; },
-        });
-      }
-
-      if (result.outcome === 'failed') {
-        showToast(mainArea, 'Não foi possível gerar a imagem');
-      }
-    }
 
     // Action handlers for the investigation sections in the contact drawer
     const contactProfileActions = {
@@ -403,6 +377,18 @@ async function init() {
         closeRightDrawers();
         drawerActions(() => {}).onContact(convId);
       },
+    };
+    const openContactSource = () => {
+      if (activeChatSearch) { activeChatSearch.destroy(); activeChatSearch = null; }
+      if (activeContactInfo) activeContactInfo.destroy();
+      activeContactInfo = showContactInfo(mainArea, conversation, {
+        mediaCounts: conversation.media_counts || MEDIA_COUNTS,
+        onClose: () => { activeContactInfo = null; },
+        onSearch: toggleSearch,
+        actions: contactProfileActions,
+        avatarForPerson: (name) => PERSON_AVATARS[name] || null,
+        focusSource: true,
+      });
     };
 
     const { loader } = renderChatView(mainArea, {
@@ -426,7 +412,14 @@ async function init() {
       },
       onAbout: openSettings,
       onSearch: toggleSearch,
-      onScreenshot: shareScreenshot,
+      onPrint: () => {
+        try {
+          printChat(contactName);
+        } catch (err) {
+          console.error('Failed to print conversation:', err);
+          showToast(mainArea, 'Não foi possível abrir a impressão');
+        }
+      },
       onExport: (format) => downloadFile(exportUrl(conversation.id, format)),
       // Contact cards, voice notes and the like need to know who is who.
       media: {
@@ -438,7 +431,6 @@ async function init() {
         onOpenChat: (convId) => router.navigate('chat', convId),
         onCopy: (text, label) => copyText(text).then(ok => showToast(mainArea, ok ? label : 'Não foi possível copiar')),
       },
-      onScreenshotIntent: () => prepareScreenshot(mainArea, contactName),
       onContactClick: () => {
         // Only one right drawer at a time
         if (activeChatSearch) { activeChatSearch.destroy(); activeChatSearch = null; }
@@ -455,16 +447,8 @@ async function init() {
           });
         }
       },
+      onSourceClick: openContactSource,
     });
-
-    activeLoader = loader;
-    await loader.init();
-
-    if (pendingScrollTarget) {
-      const { messageId, date } = pendingScrollTarget;
-      pendingScrollTarget = null;
-      await loader.scrollToMessage(messageId, date);
-    }
 
     const messagesArea = mainArea.querySelector('.chat-messages');
     if (messagesArea) {
@@ -485,6 +469,26 @@ async function init() {
           );
         },
       });
+    }
+
+    activeLoader = loader;
+    await loader.init();
+
+    if (pendingScrollTarget) {
+      const { messageId, date } = pendingScrollTarget;
+      pendingScrollTarget = null;
+      await loader.scrollToMessage(messageId, date);
+    } else {
+      await loader.restorePosition(loadChatScrollPosition(id));
+    }
+
+    if (messagesArea) {
+      activeScrollContainer = messagesArea;
+      activeScrollHandler = () => {
+        clearTimeout(scrollSaveTimer);
+        scrollSaveTimer = setTimeout(saveCurrentScrollPosition, 250);
+      };
+      messagesArea.addEventListener('scroll', activeScrollHandler, { passive: true });
     }
   }
 

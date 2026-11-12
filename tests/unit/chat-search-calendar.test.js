@@ -50,6 +50,21 @@ describe('chat search calendar', () => {
     expect(calendar.querySelector('.chat-calendar-nav')).toBeNull();
   });
 
+  it('lets the reader jump to a partial month without inventing a day', () => {
+    let selectedDate;
+    const calendar = buildCalendar(
+      [{ date: '2024-07', message_count: 1 }],
+      date => { selectedDate = date; },
+    );
+
+    expect(calendar.querySelector('.chat-calendar-empty')).toBeNull();
+    expect(calendar.querySelector('.chat-calendar-partial-select').value).toBe('2024-07');
+    expect(calendar.querySelector('.chat-calendar-partial-select').selectedOptions[0].textContent)
+      .toContain('dia não informado');
+    calendar.querySelector('.chat-calendar-partial-go').click();
+    expect(selectedDate).toBe('2024-07');
+  });
+
   it('uses the calendar instead of a native date prompt on mobile', () => {
     vi.stubGlobal('requestAnimationFrame', (callback) => callback());
     vi.spyOn(window.history, 'back').mockImplementation(() => {});

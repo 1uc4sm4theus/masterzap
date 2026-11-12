@@ -221,6 +221,7 @@ export function showChatSearchDrawer(mainArea, conversationId, { dateIndex, onRe
 
 export function buildCalendar(dateIndex = [], onSelect = () => {}, selectedDate = null) {
   const datedEntries = dateIndex.filter(d => d && /^\d{4}-\d{2}-\d{2}$/.test(d.date));
+  const partialEntries = dateIndex.filter(d => d && /^\d{4}(?:-\d{2})?$/.test(d.date));
   const availableDates = new Set(datedEntries.map(d => d.date));
   const sortedDates = datedEntries.map(d => d.date).sort();
   const el = document.createElement('div');
@@ -228,11 +229,16 @@ export function buildCalendar(dateIndex = [], onSelect = () => {}, selectedDate 
   el.setAttribute('role', 'dialog');
   el.setAttribute('aria-label', 'Pesquisar por data');
 
-  if (sortedDates.length === 0) {
+  if (sortedDates.length === 0 && partialEntries.length === 0) {
     const empty = document.createElement('p');
     empty.className = 'chat-calendar-empty';
     empty.textContent = 'Nenhuma data disponível';
     el.appendChild(empty);
+    return el;
+  }
+
+  if (sortedDates.length === 0) {
+    appendPartialDatePicker(el, partialEntries, onSelect);
     return el;
   }
 
@@ -286,6 +292,25 @@ export function buildCalendar(dateIndex = [], onSelect = () => {}, selectedDate 
 
     nav.appendChild(prevBtn);
     nav.appendChild(label);
+
+    const jump = document.createElement('select');
+    jump.className = 'chat-calendar-jump';
+    jump.setAttribute('aria-label', 'Ir para mês');
+    for (let cursor = new Date(firstY, firstM - 1, 1);
+      cursor <= new Date(lastY, lastM - 1, 1);
+      cursor.setMonth(cursor.getMonth() + 1)) {
+      const option = document.createElement('option');
+      option.value = `${cursor.getFullYear()}-${String(cursor.getMonth() + 1).padStart(2, '0')}`;
+      option.textContent = `${monthNames[cursor.getMonth()]} ${cursor.getFullYear()}`;
+      option.selected = cursor.getFullYear() === year && cursor.getMonth() === month;
+      jump.appendChild(option);
+    }
+    jump.addEventListener('change', () => {
+      [year, month] = jump.value.split('-').map(Number);
+      month -= 1;
+      render();
+    });
+    nav.appendChild(jump);
     nav.appendChild(nextBtn);
     el.appendChild(nav);
 
@@ -337,8 +362,38 @@ export function buildCalendar(dateIndex = [], onSelect = () => {}, selectedDate 
       grid.appendChild(cell);
     }
     el.appendChild(grid);
+    if (partialEntries.length > 0) appendPartialDatePicker(el, partialEntries, onSelect);
   }
 
   render();
   return el;
+}
+
+function appendPartialDatePicker(container, entries, onSelect) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'chat-calendar-partial';
+  const label = document.createElement('label');
+  label.textContent = 'Período sem dia exato';
+  const select = document.createElement('select');
+  select.className = 'chat-calendar-partial-select';
+  select.setAttribute('aria-label', 'Selecionar período parcial');
+  for (const entry of entries) {
+    const option = document.createElement('option');
+    option.value = entry.date;
+    option.textContent = entry.date.length === 4
+      ? entry.date
+      : `${formatDateShort(entry.date)} · dia não informado`;
+    select.appendChild(option);
+  }
+  const go = document.createElement('button');
+  go.type = 'button';
+  go.className = 'chat-calendar-partial-go';
+  go.textContent = 'Ir';
+  go.addEventListener('click', event => {
+    event.stopPropagation();
+    onSelect(select.value);
+  });
+  label.appendChild(select);
+  wrapper.append(label, go);
+  container.appendChild(wrapper);
 }

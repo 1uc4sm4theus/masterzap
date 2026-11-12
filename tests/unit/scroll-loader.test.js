@@ -108,6 +108,46 @@ describe('ScrollLoader', () => {
     expect(loader.isFullyLoaded).toBe(true);
   });
 
+  it('captures and restores an exact message anchor only after initial loading', async () => {
+    const renderMessageDay = (date, messages) => {
+      const section = document.createElement('section');
+      section.className = 'chat-day';
+      section.dataset.date = date;
+      const row = document.createElement('div');
+      row.className = 'chat-msg-row';
+      row.dataset.id = String(messages[0].id);
+      row.getBoundingClientRect = () => ({ top: 50, bottom: 90 });
+      section.appendChild(row);
+      return section;
+    };
+    container.getBoundingClientRect = () => ({ top: 10, bottom: 410 });
+    const loader = new ScrollLoader({
+      container,
+      dateIndex,
+      loadMessages,
+      renderDay: renderMessageDay,
+    });
+
+    expect(loader.capturePosition()).toBeNull();
+    await loader.init();
+    container.scrollTop = 120;
+    expect(loader.capturePosition()).toMatchObject({
+      messageId: '1',
+      date: '2024-02-10',
+      offset: 40,
+      scrollTop: 120,
+    });
+
+    container.scrollTop = 0;
+    const restored = await loader.restorePosition({
+      messageId: '1',
+      date: '2024-02-14',
+      offset: 20,
+    });
+    expect(restored).toBe(true);
+    expect(container.scrollTop).toBe(20);
+  });
+
   it('handles empty date index gracefully', async () => {
     const loader = new ScrollLoader({
       container,

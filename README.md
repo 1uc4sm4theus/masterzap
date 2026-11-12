@@ -29,12 +29,15 @@ O nome do repositório — **masterzap** — é uma referência ao projeto origi
 
 ## Funcionalidades
 
-- **Busca inteligente** — encontra conversas pelo nome e mensagens em todas as conversas disponíveis, com suporte a acentos e resultados em tempo real
-- **Navegação por calendário** — salte para qualquer data entre fevereiro de 2024 e agosto de 2025
+- **Busca inteligente** — encontra conversas pelo nome e mensagens em todas as conversas disponíveis, com suporte a acentos, resultados em tempo real e cache LRU limitado
+- **Navegação por calendário** — salte para qualquer dia disponível; períodos sem dia exato continuam parciais e podem ser abertos pelo mês/ano
 - **Compartilhamento via link direto** — clique com o botão direito em qualquer mensagem, copie o link e compartilhe. Quem clicar é levado direto para a mensagem exata na conversa — ideal para citar trechos específicos
 - **Mensagens favoritas** — salve mensagens pelo menu de cada mensagem e encontre-as no menu da lista de conversas. Os favoritos ficam salvos neste navegador e abrem a conversa na mensagem original
 - **Perfis investigativos** — biografia de Vorcaro e Martha com contexto e links para as reportagens
-- **Menu de contexto** — copie, compartilhe, favorite ou consulte informações de uma mensagem
+- **Menu de contexto** — copie, compartilhe, favorite ou consulte informações de uma mensagem; só um menu fica aberto, com fechamento por toque externo e botão voltar do Android
+- **Proveniência** — o selo "Fonte" em cada mensagem abre as informações do contato diretamente na seção de origem
+- **Impressão rápida** — usa a impressão nativa do navegador, sem rasterizar a interface com html2canvas
+- **Posição da conversa** — retoma a última mensagem visível ao voltar para um chat
 - **Links internos** — clique nos trechos citados pela imprensa e vá direto para a mensagem original
 - **Totalmente responsivo** — experiência completa no celular e no desktop, um diferencial em relação ao [MasterZap](https://www.reddit.com/r/brasil/s/xQeqrG27p8) original
 - **Tema escuro** — alterne pelo ícone abaixo de Sobre na barra lateral; no celular, use o menu da lista de conversas. A preferência fica salva neste navegador
@@ -121,8 +124,8 @@ A arquitetura já está ~80% preparada para escalar. O `DataStore` é agnóstico
 | Prioridade | Item | Status |
 |------------|------|--------|
 | Alta | Suporte a múltiplas conversas vazadas | Feito — 80 conversas de três fontes, incluindo grupos e trechos jornalísticos |
-| Alta | Cache de índice de busca por conversa | Feito — cache por conversa |
-| Média | Busca cruzada entre conversas | Não iniciado |
+| Alta | Cache de índice de busca por conversa | Feito — cache LRU limitado |
+| Média | Busca cruzada entre conversas | Feito — resultados globais com suporte a acentos |
 | Média | Suporte a mídias (imagens, áudio, vídeo) | Aguardando disponibilidade do conteúdo |
 | Média | Compartilhamento de intervalos de mensagens | Não iniciado |
 | Baixa | Otimização para 100+ conversas (paginação, cache namespacing) | Não iniciado |
