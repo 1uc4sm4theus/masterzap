@@ -9,9 +9,9 @@
     "phone": "5511999856549",
     "date_range": {
       "start": "2024-02-20",
-      "end": "2024-03-12"
+      "end": "2024-05"
     },
-    "total_messages": 20,
+    "total_messages": 23,
     "source": "Representação da PF — RioPrevidência e Cláudio Castro (Pet 15.497), publicada pelo Poder360 em 13/09/2026",
     "source_detail": {
       "kind": "police-filing",
@@ -21,9 +21,17 @@
       "document_sha256": null,
       "made_public": "2026-09-13",
       "how": "Transcrição manual dos prints da extração do celular reproduzidos no documento; cada mensagem cita documento, página e figura.",
-      "complements": []
+      "complements": [
+        {
+          "kind": "press-report",
+          "label": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF",
+          "url": "https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm",
+          "made_public": "2026-11-13",
+          "how": "Trechos citados na reportagem; partes resumidas marcadas como [teor: ...]."
+        }
+      ]
     },
-    "note": "Trechos citados em documentos da PF — a conversa completa não é pública."
+    "note": "Trechos citados em documentos da PF — a conversa completa não é pública. Atualizado com trechos citados pela UOL (13/11/2026); ids renumerados; mensagem de maio/2024 sem dia exato (date_precision: month)."
   },
   "messages": [
     {
@@ -245,6 +253,36 @@
     },
     {
       "id": 18,
+      "timestamp": null,
+      "date": "2024-02-20",
+      "time": null,
+      "sender": "Mauricio Quadrado",
+      "content": "[teor: placar em 3 a 3; Gilmar Mendes determinou o seguimento da norma e foi seguido por Fux e Toffoli; Edson Fachin e Rosa Weber divergiram parcialmente; André Mendonça seguiu a divergência; Moraes \"parece que está do nosso lado\"; faltavam Zanin e Nunes Marques — literal não publicado]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF",
+      "source_url": "https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm",
+      "note": "Resumo da reportagem; pode corresponder em parte à mensagem 14 (literal da PF). Horário exato não publicado; posição estimada."
+    },
+    {
+      "id": 19,
+      "timestamp": null,
+      "date": "2024-02-20",
+      "time": null,
+      "sender": "Mauricio Quadrado",
+      "content": "[trecho citado] risco zero",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF",
+      "source_url": "https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm",
+      "note": "Horário exato não publicado; posição estimada pela narrativa da reportagem (entre as mensagens de 19:17:16 e 19:18:17)."
+    },
+    {
+      "id": 20,
       "timestamp": "2024-02-20T19:18:17-03:00",
       "date": "2024-02-20",
       "time": "19:18:17",
@@ -256,7 +294,7 @@
       "urls": []
     },
     {
-      "id": 19,
+      "id": 21,
       "timestamp": "2024-02-20T19:18:18-03:00",
       "date": "2024-02-20",
       "time": "19:18:18",
@@ -268,7 +306,7 @@
       "urls": []
     },
     {
-      "id": 20,
+      "id": 22,
       "timestamp": "2024-02-20T19:18:26-03:00",
       "date": "2024-02-20",
       "time": "19:18:26",
@@ -278,21 +316,43 @@
       "is_edited": false,
       "attachment": null,
       "urls": []
+    },
+    {
+      "id": 23,
+      "timestamp": null,
+      "date": "2024-05",
+      "time": null,
+      "sender": "Mauricio Quadrado",
+      "content": "Acabou a votação das medicinas. Ganhamos",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_cite": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF",
+      "source_url": "https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm",
+      "date_precision": "month",
+      "note": "Enviada a Vorcaro em maio de 2024, após o julgamento (sessão do plenário virtual no fim de maio); dia e hora não publicados. Pontuação final do trecho (espaço após 'Ganhamos') conforme a reportagem."
     }
   ],
   "index": {
     "dates": [
       {
         "date": "2024-02-20",
-        "message_count": 8,
+        "message_count": 10,
         "first_message_id": 13,
-        "last_message_id": 20
+        "last_message_id": 22
       },
       {
         "date": "2024-03-12",
         "message_count": 12,
         "first_message_id": 1,
         "last_message_id": 12
+      },
+      {
+        "date": "2024-05",
+        "message_count": 1,
+        "first_message_id": 23,
+        "last_message_id": 23
       }
     ]
   }
