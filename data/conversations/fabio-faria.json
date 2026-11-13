@@ -10,12 +10,13 @@
       "start": "2023-10-24",
       "end": "2024-07-23"
     },
-    "total_messages": 189,
+    "total_messages": 199,
     "sources": [
       "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-      "Relatório da PF citado pela piauí em 10–11/09/2026"
+      "Relatório da PF citado pela piauí em 10–11/09/2026",
+      "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)"
     ],
-    "note": "Trechos citados em relatório policial e reportagem da piauí — a conversa completa não consta dos documentos. Mensagens de 24–31/10/2023 (festa de Halloween) carecem de timestamp completo (apenas data) e alguns trechos foram resumidos pela reportagem ([teor: ...])."
+    "note": "Trechos citados em relatório policial e reportagem da piauí — a conversa completa não consta dos documentos. Mensagens de 24–31/10/2023 (festa de Halloween) carecem de timestamp completo (apenas data) e alguns trechos foram resumidos pela reportagem ([teor: ...]). Atualizado com mensagens de 09–19/02/2024 citadas pela UOL (13/11/2026); ids renumerados."
   },
   "messages": [
     {
@@ -1326,6 +1327,165 @@
     },
     {
       "id": 83,
+      "timestamp": null,
+      "date": "2024-02-09",
+      "time": null,
+      "sender": "DV",
+      "content": "[teor: informa que André Mendonça divergiu do relator Gilmar Mendes e que Moraes pediu vista (julgamento sobre novos cursos de medicina, plenário virtual do STF) — literal não publicado]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)",
+      "note": "Ordem dentro do dia e horário exato não publicados; posição estimada pela narrativa da reportagem."
+    },
+    {
+      "id": 84,
+      "timestamp": null,
+      "date": "2024-02-09",
+      "time": null,
+      "sender": "DV",
+      "content": "Notícia ruim. O André Mendonça foi contra. Está 3 a 2",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)",
+      "note": "Ordem dentro do dia e horário exato não publicados; posição estimada pela narrativa da reportagem."
+    },
+    {
+      "id": 85,
+      "timestamp": null,
+      "date": "2024-02-09",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "[teor: pergunta de qual processo se tratava — literal não publicado]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)",
+      "note": "Ordem dentro do dia e horário exato não publicados; posição estimada pela narrativa da reportagem."
+    },
+    {
+      "id": 86,
+      "timestamp": null,
+      "date": "2024-02-09",
+      "time": null,
+      "sender": "DV",
+      "content": "[teor: responde com o número da ação — literal não publicado]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)",
+      "note": "Ordem dentro do dia e horário exato não publicados; posição estimada pela narrativa da reportagem."
+    },
+    {
+      "id": 87,
+      "timestamp": null,
+      "date": "2024-02-18",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "[trecho citado] amanhã às 15h horário do BR na casa do Alex",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)",
+      "note": "Trecho parcial. A PF identifica 'Alex' como Alexandre de Moraes."
+    },
+    {
+      "id": 88,
+      "timestamp": null,
+      "date": "2024-02-18",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "[teor: pede que DV fique com o celular à mão para uma chamada de vídeo — literal não publicado]",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)"
+    },
+    {
+      "id": 89,
+      "timestamp": null,
+      "date": "2024-02-19",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "chegando lá",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)",
+      "note": "Ordem dentro do dia e horário exato não publicados; posição estimada pela narrativa da reportagem."
+    },
+    {
+      "id": 90,
+      "timestamp": null,
+      "date": "2024-02-19",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "te ligo já",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)",
+      "note": "Ordem dentro do dia e horário exato não publicados; posição estimada pela narrativa da reportagem."
+    },
+     {
+      "id": 91,
+      "timestamp": "2024-02-19T15:16:00",
+      "date": "2024-02-19",
+      "time": "15:16:00",
+      "sender": null,
+      "content": "Chamada — duração 06:31",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)",
+      "note": "Hora com precisão de minutos; quem originou a chamada não consta da reportagem. Participantes: Fábio Faria e DV."
+    },
+    {
+      "id": 92,
+      "timestamp": "2024-02-19T16:57:00",
+      "date": "2024-02-19",
+      "time": "16:57:00",
+      "sender": null,
+      "content": "Chamada — duração 03:24",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)",
+      "note": "Hora com precisão de minutos; quem originou a chamada não consta da reportagem. Participantes: Fábio Faria e DV."
+    },
+    {
+      "id": 93,
       "timestamp": "2024-03-13T10:04:19",
       "date": "2024-03-13",
       "time": "10:04:19",
@@ -1342,7 +1502,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 84,
+      "id": 94,
       "timestamp": "2024-03-13T10:09:35",
       "date": "2024-03-13",
       "time": "10:09:35",
@@ -1359,7 +1519,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 85,
+      "id": 95,
       "timestamp": "2024-03-13T13:08:41",
       "date": "2024-03-13",
       "time": "13:08:41",
@@ -1376,7 +1536,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 86,
+      "id": 96,
       "timestamp": "2024-03-13T13:08:46",
       "date": "2024-03-13",
       "time": "13:08:46",
@@ -1393,7 +1553,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 87,
+      "id": 97,
       "timestamp": "2024-03-13T13:09:29",
       "date": "2024-03-13",
       "time": "13:09:29",
@@ -1410,7 +1570,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 88,
+      "id": 98,
       "timestamp": "2024-03-13T13:09:47",
       "date": "2024-03-13",
       "time": "13:09:47",
@@ -1427,7 +1587,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 89,
+      "id": 99,
       "timestamp": "2024-03-13T13:09:55",
       "date": "2024-03-13",
       "time": "13:09:55",
@@ -1444,7 +1604,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 90,
+      "id": 100,
       "timestamp": "2024-03-13T13:10:23",
       "date": "2024-03-13",
       "time": "13:10:23",
@@ -1461,7 +1621,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 91,
+      "id": 101,
       "timestamp": "2024-03-13T13:10:25",
       "date": "2024-03-13",
       "time": "13:10:25",
@@ -1478,7 +1638,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 92,
+      "id": 102,
       "timestamp": "2024-03-13T13:10:49",
       "date": "2024-03-13",
       "time": "13:10:49",
@@ -1495,7 +1655,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 93,
+      "id": 103,
       "timestamp": "2024-03-13T13:10:57",
       "date": "2024-03-13",
       "time": "13:10:57",
@@ -1512,7 +1672,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 94,
+      "id": 104,
       "timestamp": "2024-03-13T13:21:52",
       "date": "2024-03-13",
       "time": "13:21:52",
@@ -1529,7 +1689,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 95,
+      "id": 105,
       "timestamp": "2024-03-13T13:41:02",
       "date": "2024-03-13",
       "time": "13:41:02",
@@ -1546,7 +1706,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 96,
+      "id": 106,
       "timestamp": "2024-03-13T13:41:07",
       "date": "2024-03-13",
       "time": "13:41:07",
@@ -1563,7 +1723,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 97,
+      "id": 107,
       "timestamp": "2024-03-13T17:07:33",
       "date": "2024-03-13",
       "time": "17:07:33",
@@ -1580,7 +1740,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 98,
+      "id": 108,
       "timestamp": "2024-03-13T17:07:34",
       "date": "2024-03-13",
       "time": "17:07:34",
@@ -1597,7 +1757,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 99,
+      "id": 109,
       "timestamp": "2024-03-13T17:07:39",
       "date": "2024-03-13",
       "time": "17:07:39",
@@ -1614,7 +1774,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 100,
+      "id": 110,
       "timestamp": "2024-03-13T17:07:45",
       "date": "2024-03-13",
       "time": "17:07:45",
@@ -1631,7 +1791,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 101,
+      "id": 111,
       "timestamp": "2024-03-13T17:07:49",
       "date": "2024-03-13",
       "time": "17:07:49",
@@ -1648,7 +1808,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 102,
+      "id": 112,
       "timestamp": "2024-03-13T17:07:53",
       "date": "2024-03-13",
       "time": "17:07:53",
@@ -1665,7 +1825,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 103,
+      "id": 113,
       "timestamp": "2024-03-13T17:07:54",
       "date": "2024-03-13",
       "time": "17:07:54",
@@ -1682,7 +1842,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 104,
+      "id": 114,
       "timestamp": "2024-03-13T17:08:02",
       "date": "2024-03-13",
       "time": "17:08:02",
@@ -1699,7 +1859,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 105,
+      "id": 115,
       "timestamp": "2024-03-15T14:56:24",
       "date": "2024-03-15",
       "time": "14:56:24",
@@ -1716,7 +1876,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 106,
+      "id": 116,
       "timestamp": "2024-03-15T14:58:03",
       "date": "2024-03-15",
       "time": "14:58:03",
@@ -1733,7 +1893,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 107,
+      "id": 117,
       "timestamp": "2024-03-15T14:58:23",
       "date": "2024-03-15",
       "time": "14:58:23",
@@ -1750,7 +1910,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 108,
+      "id": 118,
       "timestamp": "2024-03-15T14:58:41",
       "date": "2024-03-15",
       "time": "14:58:41",
@@ -1767,7 +1927,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 109,
+      "id": 119,
       "timestamp": "2024-03-15T15:06:35",
       "date": "2024-03-15",
       "time": "15:06:35",
@@ -1784,7 +1944,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 110,
+      "id": 120,
       "timestamp": "2024-03-15T15:06:39",
       "date": "2024-03-15",
       "time": "15:06:39",
@@ -1801,7 +1961,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 111,
+      "id": 121,
       "timestamp": "2024-03-15T15:06:47",
       "date": "2024-03-15",
       "time": "15:06:47",
@@ -1818,7 +1978,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 112,
+      "id": 122,
       "timestamp": "2024-03-15T15:06:59",
       "date": "2024-03-15",
       "time": "15:06:59",
@@ -1835,7 +1995,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 113,
+      "id": 123,
       "timestamp": "2024-03-15T15:07:02",
       "date": "2024-03-15",
       "time": "15:07:02",
@@ -1852,7 +2012,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 114,
+      "id": 124,
       "timestamp": "2024-03-15T15:07:07",
       "date": "2024-03-15",
       "time": "15:07:07",
@@ -1869,7 +2029,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 115,
+      "id": 125,
       "timestamp": "2024-03-15T15:07:11",
       "date": "2024-03-15",
       "time": "15:07:11",
@@ -1886,7 +2046,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 116,
+      "id": 126,
       "timestamp": "2024-03-15T15:07:21",
       "date": "2024-03-15",
       "time": "15:07:21",
@@ -1903,7 +2063,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 117,
+      "id": 127,
       "timestamp": "2024-03-15T15:07:34",
       "date": "2024-03-15",
       "time": "15:07:34",
@@ -1920,7 +2080,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 118,
+      "id": 128,
       "timestamp": "2024-03-15T15:08:02",
       "date": "2024-03-15",
       "time": "15:08:02",
@@ -1937,7 +2097,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 119,
+      "id": 129,
       "timestamp": "2024-03-15T15:09:08",
       "date": "2024-03-15",
       "time": "15:09:08",
@@ -1954,7 +2114,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 120,
+      "id": 130,
       "timestamp": "2024-03-15T15:09:14",
       "date": "2024-03-15",
       "time": "15:09:14",
@@ -1971,7 +2131,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 121,
+      "id": 131,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -1988,7 +2148,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 122,
+      "id": 132,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -2005,7 +2165,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 123,
+      "id": 133,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -2022,7 +2182,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 124,
+      "id": 134,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -2039,7 +2199,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 125,
+      "id": 135,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -2056,7 +2216,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 126,
+      "id": 136,
       "timestamp": "2024-04-03T09:34:09",
       "date": "2024-04-03",
       "time": "09:34:09",
@@ -2073,7 +2233,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 127,
+      "id": 137,
       "timestamp": "2024-04-03T09:34:33",
       "date": "2024-04-03",
       "time": "09:34:33",
@@ -2090,7 +2250,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 128,
+      "id": 138,
       "timestamp": "2024-04-03T09:37:19",
       "date": "2024-04-03",
       "time": "09:37:19",
@@ -2107,7 +2267,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 129,
+      "id": 139,
       "timestamp": "2024-04-03T09:38:38",
       "date": "2024-04-03",
       "time": "09:38:38",
@@ -2124,7 +2284,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 130,
+      "id": 140,
       "timestamp": "2024-04-03T09:38:53",
       "date": "2024-04-03",
       "time": "09:38:53",
@@ -2141,7 +2301,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 131,
+      "id": 141,
       "timestamp": "2024-04-03T09:39:40",
       "date": "2024-04-03",
       "time": "09:39:40",
@@ -2158,7 +2318,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 132,
+      "id": 142,
       "timestamp": "2024-04-03T09:40:03",
       "date": "2024-04-03",
       "time": "09:40:03",
@@ -2175,7 +2335,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 133,
+      "id": 143,
       "timestamp": "2024-04-03T09:40:06",
       "date": "2024-04-03",
       "time": "09:40:06",
@@ -2192,7 +2352,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 134,
+      "id": 144,
       "timestamp": "2024-04-03T09:41:18",
       "date": "2024-04-03",
       "time": "09:41:18",
@@ -2209,7 +2369,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 135,
+      "id": 145,
       "timestamp": "2024-04-06T11:13:30",
       "date": "2024-04-06",
       "time": "11:13:30",
@@ -2226,7 +2386,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 136,
+      "id": 146,
       "timestamp": "2024-04-06T11:13:31",
       "date": "2024-04-06",
       "time": "11:13:31",
@@ -2243,7 +2403,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 137,
+      "id": 147,
       "timestamp": "2024-04-06T14:55:00",
       "date": "2024-04-06",
       "time": "14:55:00",
@@ -2260,7 +2420,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 138,
+      "id": 148,
       "timestamp": "2024-04-06T14:55:09",
       "date": "2024-04-06",
       "time": "14:55:09",
@@ -2277,7 +2437,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 139,
+      "id": 149,
       "timestamp": "2024-04-06T14:55:12",
       "date": "2024-04-06",
       "time": "14:55:12",
@@ -2294,7 +2454,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 140,
+      "id": 150,
       "timestamp": "2024-04-06T14:55:33",
       "date": "2024-04-06",
       "time": "14:55:33",
@@ -2311,7 +2471,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 141,
+      "id": 151,
       "timestamp": "2024-04-06T14:55:45",
       "date": "2024-04-06",
       "time": "14:55:45",
@@ -2328,7 +2488,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 142,
+      "id": 152,
       "timestamp": "2024-04-06T14:57:09",
       "date": "2024-04-06",
       "time": "14:57:09",
@@ -2345,7 +2505,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 143,
+      "id": 153,
       "timestamp": "2024-04-06T14:57:13",
       "date": "2024-04-06",
       "time": "14:57:13",
@@ -2362,7 +2522,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 144,
+      "id": 154,
       "timestamp": "2024-04-17T19:25:19",
       "date": "2024-04-17",
       "time": "19:25:19",
@@ -2379,7 +2539,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 145,
+      "id": 155,
       "timestamp": "2024-04-17T19:25:34",
       "date": "2024-04-17",
       "time": "19:25:34",
@@ -2396,7 +2556,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 146,
+      "id": 156,
       "timestamp": "2024-04-17T19:57:34",
       "date": "2024-04-17",
       "time": "19:57:34",
@@ -2413,7 +2573,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 147,
+      "id": 157,
       "timestamp": "2024-04-17T19:57:43",
       "date": "2024-04-17",
       "time": "19:57:43",
@@ -2430,7 +2590,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 148,
+      "id": 158,
       "timestamp": "2024-04-17T19:57:50",
       "date": "2024-04-17",
       "time": "19:57:50",
@@ -2447,7 +2607,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 149,
+      "id": 159,
       "timestamp": "2024-04-17T19:58:05",
       "date": "2024-04-17",
       "time": "19:58:05",
@@ -2464,7 +2624,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 150,
+      "id": 160,
       "timestamp": "2024-04-17T19:58:13",
       "date": "2024-04-17",
       "time": "19:58:13",
@@ -2481,7 +2641,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 151,
+      "id": 161,
       "timestamp": "2024-04-18T18:13:07",
       "date": "2024-04-18",
       "time": "18:13:07",
@@ -2498,7 +2658,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 152,
+      "id": 162,
       "timestamp": "2024-04-18T18:13:26",
       "date": "2024-04-18",
       "time": "18:13:26",
@@ -2515,7 +2675,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 153,
+      "id": 163,
       "timestamp": "2024-04-18T18:13:34",
       "date": "2024-04-18",
       "time": "18:13:34",
@@ -2532,7 +2692,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 154,
+      "id": 164,
       "timestamp": "2024-04-18T18:13:41",
       "date": "2024-04-18",
       "time": "18:13:41",
@@ -2549,7 +2709,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 155,
+      "id": 165,
       "timestamp": "2024-04-18T18:13:46",
       "date": "2024-04-18",
       "time": "18:13:46",
@@ -2566,7 +2726,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 156,
+      "id": 166,
       "timestamp": "2024-04-18T18:14:14",
       "date": "2024-04-18",
       "time": "18:14:14",
@@ -2583,7 +2743,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 157,
+      "id": 167,
       "timestamp": "2024-04-25T16:15:56",
       "date": "2024-04-25",
       "time": "16:15:56",
@@ -2600,7 +2760,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 158,
+      "id": 168,
       "timestamp": "2024-04-25T16:40:43",
       "date": "2024-04-25",
       "time": "16:40:43",
@@ -2619,7 +2779,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 159,
+      "id": 169,
       "timestamp": "2024-04-25T16:40:50",
       "date": "2024-04-25",
       "time": "16:40:50",
@@ -2636,7 +2796,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 160,
+      "id": 170,
       "timestamp": "2024-04-25T16:41:30",
       "date": "2024-04-25",
       "time": "16:41:30",
@@ -2653,7 +2813,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 161,
+      "id": 171,
       "timestamp": "2024-04-25T16:41:43",
       "date": "2024-04-25",
       "time": "16:41:43",
@@ -2670,7 +2830,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 162,
+      "id": 172,
       "timestamp": "2024-04-25T16:41:57",
       "date": "2024-04-25",
       "time": "16:41:57",
@@ -2687,7 +2847,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 163,
+      "id": 173,
       "timestamp": "2024-04-25T16:44:25",
       "date": "2024-04-25",
       "time": "16:44:25",
@@ -2704,7 +2864,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 164,
+      "id": 174,
       "timestamp": "2024-04-25T16:44:27",
       "date": "2024-04-25",
       "time": "16:44:27",
@@ -2721,7 +2881,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 165,
+      "id": 175,
       "timestamp": "2024-04-25T16:44:41",
       "date": "2024-04-25",
       "time": "16:44:41",
@@ -2738,7 +2898,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 166,
+      "id": 176,
       "timestamp": "2024-04-25T16:52:33",
       "date": "2024-04-25",
       "time": "16:52:33",
@@ -2755,7 +2915,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 167,
+      "id": 177,
       "timestamp": "2024-04-25T16:52:57",
       "date": "2024-04-25",
       "time": "16:52:57",
@@ -2772,7 +2932,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 168,
+      "id": 178,
       "timestamp": "2024-04-25T17:13:08",
       "date": "2024-04-25",
       "time": "17:13:08",
@@ -2789,7 +2949,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 169,
+      "id": 179,
       "timestamp": "2024-07-16T21:12:35",
       "date": "2024-07-16",
       "time": "21:12:35",
@@ -2806,7 +2966,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 170,
+      "id": 180,
       "timestamp": "2024-07-16T21:12:36",
       "date": "2024-07-16",
       "time": "21:12:36",
@@ -2823,7 +2983,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 171,
+      "id": 181,
       "timestamp": "2024-07-16T21:12:42",
       "date": "2024-07-16",
       "time": "21:12:42",
@@ -2840,7 +3000,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 172,
+      "id": 182,
       "timestamp": "2024-07-16T21:12:46",
       "date": "2024-07-16",
       "time": "21:12:46",
@@ -2857,7 +3017,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 173,
+      "id": 183,
       "timestamp": "2024-07-17T09:55:15",
       "date": "2024-07-17",
       "time": "09:55:15",
@@ -2874,7 +3034,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 174,
+      "id": 184,
       "timestamp": "2024-07-17T09:55:20",
       "date": "2024-07-17",
       "time": "09:55:20",
@@ -2891,7 +3051,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 175,
+      "id": 185,
       "timestamp": "2024-07-23T15:36:14-03:00",
       "date": "2024-07-23",
       "time": "15:36:14",
@@ -2904,7 +3064,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 176,
+      "id": 186,
       "timestamp": "2024-07-23T21:12:10-03:00",
       "date": "2024-07-23",
       "time": "21:12:10",
@@ -2917,7 +3077,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 177,
+      "id": 187,
       "timestamp": "2024-07-23T21:12:14-03:00",
       "date": "2024-07-23",
       "time": "21:12:14",
@@ -2930,7 +3090,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 178,
+      "id": 188,
       "timestamp": "2024-07-23T21:13:18-03:00",
       "date": "2024-07-23",
       "time": "21:13:18",
@@ -2943,7 +3103,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 179,
+      "id": 189,
       "timestamp": "2024-07-23T21:13:25-03:00",
       "date": "2024-07-23",
       "time": "21:13:25",
@@ -2956,7 +3116,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 180,
+      "id": 190,
       "timestamp": "2024-07-23T21:13:45-03:00",
       "date": "2024-07-23",
       "time": "21:13:45",
@@ -2969,7 +3129,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 181,
+      "id": 191,
       "timestamp": "2024-07-23T21:15:17-03:00",
       "date": "2024-07-23",
       "time": "21:15:17",
@@ -2982,7 +3142,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 182,
+      "id": 192,
       "timestamp": "2024-07-23T21:20:00-03:00",
       "date": "2024-07-23",
       "time": "21:20:00",
@@ -2995,7 +3155,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 183,
+      "id": 193,
       "timestamp": "2024-07-23T22:59:24-03:00",
       "date": "2024-07-23",
       "time": "22:59:24",
@@ -3008,7 +3168,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 184,
+      "id": 194,
       "timestamp": "2024-07-23T22:59:30-03:00",
       "date": "2024-07-23",
       "time": "22:59:30",
@@ -3021,7 +3181,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 185,
+      "id": 195,
       "timestamp": "2024-07-23T22:59:35-03:00",
       "date": "2024-07-23",
       "time": "22:59:35",
@@ -3034,7 +3194,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 186,
+      "id": 196,
       "timestamp": "2024-07-23T23:00:16-03:00",
       "date": "2024-07-23",
       "time": "23:00:16",
@@ -3047,7 +3207,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 187,
+      "id": 197,
       "timestamp": "2024-07-23T23:00:22-03:00",
       "date": "2024-07-23",
       "time": "23:00:22",
@@ -3060,7 +3220,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 188,
+      "id": 198,
       "timestamp": "2024-07-23T23:00:36-03:00",
       "date": "2024-07-23",
       "time": "23:00:36",
@@ -3073,7 +3233,7 @@
       "source_ref": "Captura de tela anexada pelo usu?rio"
     },
     {
-      "id": 189,
+      "id": 199,
       "timestamp": "2024-07-23T23:00:48-03:00",
       "date": "2024-07-23",
       "time": "23:00:48",
@@ -3161,65 +3321,83 @@
         "last_message_id": 82
       },
       {
+        "date": "2024-02-09",
+        "message_count": 4,
+        "first_message_id": 83,
+        "last_message_id": 86
+      },
+      {
+        "date": "2024-02-18",
+        "message_count": 2,
+        "first_message_id": 87,
+        "last_message_id": 88
+      },
+      {
+        "date": "2024-02-19",
+        "message_count": 4,
+        "first_message_id": 89,
+        "last_message_id": 92
+      },
+      {
         "date": "2024-03-13",
         "message_count": 22,
-        "first_message_id": 83,
-        "last_message_id": 104
+        "first_message_id": 93,
+        "last_message_id": 114
       },
       {
         "date": "2024-03-15",
         "message_count": 16,
-        "first_message_id": 105,
-        "last_message_id": 120
+        "first_message_id": 115,
+        "last_message_id": 130
       },
       {
         "date": "2024-04-03",
         "message_count": 14,
-        "first_message_id": 121,
-        "last_message_id": 134
+        "first_message_id": 131,
+        "last_message_id": 144
       },
       {
         "date": "2024-04-06",
         "message_count": 9,
-        "first_message_id": 135,
-        "last_message_id": 143
+        "first_message_id": 145,
+        "last_message_id": 153
       },
       {
         "date": "2024-04-17",
         "message_count": 7,
-        "first_message_id": 144,
-        "last_message_id": 150
+        "first_message_id": 154,
+        "last_message_id": 160
       },
       {
         "date": "2024-04-18",
         "message_count": 6,
-        "first_message_id": 151,
-        "last_message_id": 156
+        "first_message_id": 161,
+        "last_message_id": 166
       },
       {
         "date": "2024-04-25",
         "message_count": 12,
-        "first_message_id": 157,
-        "last_message_id": 168
+        "first_message_id": 167,
+        "last_message_id": 178
       },
       {
         "date": "2024-07-16",
         "message_count": 4,
-        "first_message_id": 169,
-        "last_message_id": 172
+        "first_message_id": 179,
+        "last_message_id": 182
       },
       {
         "date": "2024-07-17",
         "message_count": 2,
-        "first_message_id": 173,
-        "last_message_id": 174
+        "first_message_id": 183,
+        "last_message_id": 184
       },
       {
         "date": "2024-07-23",
         "message_count": 15,
-        "first_message_id": 175,
-        "last_message_id": 189
+        "first_message_id": 185,
+        "last_message_id": 199
       }
     ]
   }
-}
+    }
