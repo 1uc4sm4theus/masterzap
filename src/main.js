@@ -117,7 +117,7 @@ async function init() {
     'erika-schneider': '/assets/avatar-erika.jpeg',
     'thiago-miranda': '/assets/avatar-thiago-miranda.jpeg',
     'andre-esteves': '/assets/avatar-andre-esteves.jpeg',
-    'avatar-fabiano-osorio': '/assets/avatar-fabiano-osorio.jpeg',
+    'fabiano-medina': '/assets/avatar-fabiano-osorio.jpeg',
 
 
 
