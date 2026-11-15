@@ -118,6 +118,8 @@ async function init() {
     'thiago-miranda': '/assets/avatar-thiago-miranda.jpeg',
     'andre-esteves': '/assets/avatar-andre-esteves.jpeg',
     'fabiano-medina': '/assets/avatar-fabiano-osorio.jpeg',
+    'ministro-benedito': '/assets/avatar-ministro-benedito.jpg',
+    'dias-toffoli': '/assets/avatar-dias-toffoli.jpeg',
 
 
 
