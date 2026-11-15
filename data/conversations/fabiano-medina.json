@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "participants": ["DV", "Fábio Medina Osório"],
+    "saved_as": "fabio-medina-osorio",
+    "phone": null,
+    "date_range": {
+      "start": "2024-08-13",
+      "end": "2025-05"
+    },
+    "total_messages": 6,
+    "source": "O Globo (coluna Lauro Jardim), nov/2026: 'Vorcaro pediu ajuda a ex-ministro da AGU para destruir o Itaú' — https://oglobo.globo.com/blogs/lauro-jardim/post/2026/11/vorcaro-pediu-ajuda-a-ex-ministro-da-agu-para-destruir-o-itau.ghtml",
+    "note": "Trechos de mensagens de WhatsApp extraídas pela PF do celular de Vorcaro, conforme reproduzidos pela matéria; não é a conversa integral. Fábio Medina Osório é advogado e ex-ministro da AGU (governo Temer). Em nota, Osório afirmou que travou os diálogos 'na condição de advogado', que estão registrados em ata notarial, e que não tem 'nenhum receio em divulgá-las'. Datas de out/2024 e mai/2025 aparecem apenas com mês/ano na matéria: o campo date está em texto parcial (AAAA-MM) e time vazio, para não inventar precisão. Ajustar quando houver o print/arquivo original.",
+    "visible_date_headers_without_messages": []
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-08-13",
+      "date": "2024-08-13",
+      "time": "",
+      "sender": "DV",
+      "content": "atacar itau",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "O Globo / Lauro Jardim (nov/2026)",
+      "verified": false,
+      "notes": "Matéria afirma que, em 13/08/2024, Vorcaro disse que queria 'atacar itau'. Trecho parcial entre aspas; a mensagem completa não é reproduzida.",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-08-13",
+      "date": "2024-08-13",
+      "time": "",
+      "sender": "Fábio Medina Osório",
+      "content": "Isso eu e você vamos planejar depois\nCuidadosamente\nVocê sabe que é minha especialidade",
+      "type": "text",
+      "reply_to_id": 1,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "O Globo / Lauro Jardim (nov/2026)",
+      "verified": false,
+      "notes": "Resposta de Osório. A matéria não informa o horário nem se foram três mensagens separadas ou uma só com quebras de linha; data assumida igual à da mensagem anterior (a matéria diz apenas 'Respondeu Osório').",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-10",
+      "date": "2024-10",
+      "time": "",
+      "sender": "DV",
+      "content": "Itau tentando me massacrar\nPreciso que va pra cima deles",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "O Globo / Lauro Jardim (nov/2026)",
+      "verified": false,
+      "notes": "Contexto segundo a matéria: após a revista Piauí publicar reportagem sobre as 'piruetas de Daniel Vorcaro e seu Banco Master'. A matéria também diz que Vorcaro considerou que chegou a hora de Osório 'entrar pesado' (paráfrase do jornal, sem trecho literal). Dia exato não informado.",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-10",
+      "date": "2024-10",
+      "time": "",
+      "sender": "DV",
+      "content": "Temos que pensar maldade contra itau",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "O Globo / Lauro Jardim (nov/2026)",
+      "verified": false,
+      "notes": "A matéria diz que Vorcaro 'acrescentou' esta frase à anterior; ordem e intervalo exatos não informados.",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-10",
+      "date": "2024-10",
+      "time": "",
+      "sender": "Fábio Medina Osório",
+      "content": "Relato de que o presidente do Itaú 'descascou' Vorcaro em reunião em Nova York ('Picareta foi a palavra mais leve').",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "O Globo / Lauro Jardim (nov/2026)",
+      "verified": false,
+      "notes": "CONTEÚDO PARAFRASEADO pela matéria (apenas 'descascou' e 'Picareta foi a palavra mais leve' aparecem entre aspas). Osório conta que soube do episódio por relato de uma das testemunhas da reunião. 'Dias depois' das mensagens anteriores, mesmo mês (out/2024).",
+      "source_page": null,
+      "source_figure": null
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-05",
+      "date": "2025-05",
+      "time": "",
+      "sender": "Fábio Medina Osório",
+      "content": "Até investigar e destruir o Itaú você já me pediu. Com todo esse grau de confiança acho um absurdo nos desgastarmos por isso. Cabe a você a escolha. Aguardo uma decisão rapidamente.",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "O Globo / Lauro Jardim (nov/2026)",
+      "verified": false,
+      "notes": "Contexto segundo a matéria: Osório cobrou Vorcaro sobre pendências de pagamentos, foi recebido por ele e enviou mensagem de agradecimento, na qual comentou isso. Dia exato não informado.",
+      "source_page": null,
+      "source_figure": null
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-08-13",
+        "message_count": 2,
+        "first_message_id": 1,
+        "last_message_id": 2
+      },
+      {
+        "date": "2024-10",
+        "message_count": 3,
+        "first_message_id": 3,
+        "last_message_id": 5
+      },
+      {
+        "date": "2025-05",
+        "message_count": 1,
+        "first_message_id": 6,
+        "last_message_id": 6
+      }
+    ]
+  }
+}
