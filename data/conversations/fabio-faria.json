@@ -8,17 +8,20 @@
     "phone": "556199910111",
     "date_range": {
       "start": "2023-10-24",
-      "end": "2024-08-26"
+      "end": "2024-09"
     },
-    "total_messages": 217,
+    "total_messages": 220,
     "sources": [
       "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
       "Relatório da PF citado pela piauí em 10–11/09/2026",
       "UOL — Natália Portinari, 13/11/2026 — relatório rejeitado pela cúpula da PF (https://noticias.uol.com.br/colunas/natalia-portinari/2026/11/13/relatorio-rejeitado-por-cupula-da-pf-cita-suspeita-de-moraes-antecipar-voto.htm)",
       "piauí — reportagem sobre o relatório da PF (Toffoli, Arleen, Alcídia): https://piaui.uol.com.br/web/toffoli-relatorio-pf-vorcaro-paraiso-fiscal",
-      "piauí — infográfico 'O WhatsApp de Vorcaro' (bloco 'Fábio Faria')"
+      "piauí — infográfico 'O WhatsApp de Vorcaro' (bloco 'Fábio Faria')",
+      "Diário de Pernambuco, 11/09/2026 — 'Paraíso fiscal: PF suspeita de repasses de 35 milhões entre Vorcaro e Toffoli' (https://www.diariodepernambuco.com.br/politica/2026/09/11723643-paraiso-fiscal-pf-suspeita-de-repasses-de-35-milhoes-entre-vorcaro-e-toffoli.html) — destinatário das mensagens 'Matou a gente' / 'Comecei a suar'",
+      "Jovem Pan — Raízen (ARE 1312127) concluído em 16/09/2024 (https://jovempan.com.br/politica/vorcaro-se-reuniu-com-gilmar-mendes-para-pedir-voto-em-causa-bilionaria-diz-jornal/)",
+      "Metrópoles — julgamento da Alcídia concluído em 01/10/2024 (https://www.metropoles.com/colunas/andreza-matais/celular-de-vorcaro-cita-r-500-mil-para-filho-de-nunes-marques-veja-prints)"
     ],
-    "note": "Trechos citados em relatório policial e reportagens — a conversa completa não consta dos documentos. Mensagens de 24–31/10/2023 e de 09–19/02/2024 não têm horário publicado. Paráfrases da reportagem ([teor: ...]) foram removidas; restam apenas mensagens literais. Atualização de 15/11/2026: acrescentadas 24 mensagens literais da reportagem e do infográfico da piauí (nov/2023, 29/03/2024, abr/2024, jun/2024, 14/08/2024 e 26/08/2024); ids renumerados e as novas trazem o campo 'notes'. Datas parciais ('2023-11', '2024-04', '2024-06') têm timestamp e time nulos; as de 13/11 e 15/11/2023 têm data inferida pela ordem da reportagem. Três mensagens sem data da reportagem (caso Alcídia: 'Matou a gente.', 'Comecei a suar.', 'Pqp.') ficaram de fora porque o formato exige data. As mensagens de 23/07/2024 mantêm os caracteres '?' da captura original."
+    "note": "Trechos citados em relatório policial e reportagens — a conversa completa não consta dos documentos. Mensagens de 24–31/10/2023 e de 09–19/02/2024 não têm horário publicado. Paráfrases da reportagem ([teor: ...]) foram removidas; restam apenas mensagens literais. Atualização de 15/11/2026: acrescentadas 27 mensagens literais da reportagem e do infográfico da piauí (nov/2023, 29/03/2024, abr/2024, jun/2024, 14/08/2024, 26/08/2024 e set/2024); ids renumerados e as novas trazem o campo 'notes'. Datas parciais ('2023-11', '2024-04', '2024-06', '2024-09') têm timestamp e time nulos; as de 13/11 e 15/11/2023 têm data inferida pela ordem da reportagem. Os ids 218–220 ('Matou a gente.', 'Comecei a suar.', 'Pqp.') não têm data na reportagem; o mês 2024-09 é estimativa baseada em fontes externas (ver notes) e ficaram no fim do arquivo. As mensagens de 23/07/2024 mantêm os caracteres '?' da captura original."
   },
   "messages": [
     {"id": 1, "timestamp": null, "date": "2023-10-24", "time": null, "sender": "Fábio Faria", "content": "Davi e Pacheco fechado para terça. Chamei Toffoli tb", "type": "text", "is_edited": false, "attachment": null, "urls": [], "source_ref": "Relatório da PF citado pela piauí em 10–11/09/2026 (Halloween — Madame Satã)"},
@@ -237,7 +240,10 @@
     {"id": 214, "timestamp": "2024-08-14T08:41:00", "date": "2024-08-14", "time": "08:41:00", "sender": "DV", "content": "Isso tem algo errado ai", "type": "text", "is_edited": false, "attachment": null, "urls": [], "forwarded": false, "quoted": null, "source_ref": "piauí — infográfico 'O WhatsApp de Vorcaro' (bloco 'Fábio Faria')", "notes": "Grafia conforme o infográfico; a reportagem traz 'aí'. Segundo a matéria, dita ao constatar que o pagamento ligado ao Tayayá foi feito mas não chegou ao destino final."},
     {"id": 215, "timestamp": "2024-08-14T09:02:00", "date": "2024-08-14", "time": "09:02:00", "sender": "Fábio Faria", "content": "[áudio de visualização única]", "type": "audio_view_once", "is_edited": false, "attachment": null, "urls": [], "forwarded": false, "quoted": null, "source_ref": "piauí — infográfico 'O WhatsApp de Vorcaro' (bloco 'Fábio Faria')", "notes": "Conteúdo do áudio não disponível. Horário do infográfico (09:02)."},
     {"id": 216, "timestamp": "2024-08-14T09:02:00", "date": "2024-08-14", "time": "09:02:00", "sender": "Fábio Faria", "content": "O Bianco vai no T às 11:30. Veja o q tem de info e a gente resolve isso até amanhã. Ele é super do bem e o mais amigo de todos. Deve ser ciúme e pode ser falta de carinho como te falei segunda no almoço", "type": "text", "is_edited": false, "attachment": null, "urls": [], "forwarded": false, "quoted": null, "source_ref": "piauí — infográfico 'O WhatsApp de Vorcaro' (bloco 'Fábio Faria')", "notes": "Horário do infográfico (09:02). O infográfico não identifica 'Bianco' nem 'T'. A matéria diz que Faria pede a Vorcaro que resolva o assunto até o dia seguinte."},
-    {"id": 217, "timestamp": null, "date": "2024-08-26", "time": null, "sender": "Fábio Faria", "content": "Amanhã o Toffoli quer almoçar em SP", "type": "text", "is_edited": false, "attachment": null, "urls": [], "forwarded": false, "quoted": null, "source_ref": "piauí — reportagem sobre o relatório da PF (Toffoli, Arleen, Alcídia) — https://piaui.uol.com.br/web/toffoli-relatorio-pf-vorcaro-paraiso-fiscal", "notes": "Horário não informado. Segundo a matéria, Vorcaro respondeu que tinha compromisso e sugeriu o fim da tarde, e Faria disse que confirmaria (paráfrases omitidas). Sem registro do desfecho."}
+    {"id": 217, "timestamp": null, "date": "2024-08-26", "time": null, "sender": "Fábio Faria", "content": "Amanhã o Toffoli quer almoçar em SP", "type": "text", "is_edited": false, "attachment": null, "urls": [], "forwarded": false, "quoted": null, "source_ref": "piauí — reportagem sobre o relatório da PF (Toffoli, Arleen, Alcídia) — https://piaui.uol.com.br/web/toffoli-relatorio-pf-vorcaro-paraiso-fiscal", "notes": "Horário não informado. Segundo a matéria, Vorcaro respondeu que tinha compromisso e sugeriu o fim da tarde, e Faria disse que confirmaria (paráfrases omitidas). Sem registro do desfecho."},
+    {"id": 218, "timestamp": null, "date": "2024-09", "time": null, "sender": "Fábio Faria", "content": "Matou a gente.", "type": "text", "is_edited": false, "attachment": null, "urls": [], "forwarded": false, "quoted": null, "source_ref": "piauí — reportagem sobre o relatório da PF (Toffoli, Arleen, Alcídia) — https://piaui.uol.com.br/web/toffoli-relatorio-pf-vorcaro-paraiso-fiscal", "notes": "Sem data na reportagem da piauí, que situa a mensagem 'dias antes' do julgamento original da Alcídia, depois da virada de voto de Toffoli. O mês 2024-09 é ESTIMATIVA a partir de fontes externas: o julgamento da Raízen (ARE 1312127), em que a União venceu, foi concluído em 16/09/2024, e o da Alcídia, adiado após vista de Kassio Nunes Marques, foi retomado e concluído em 01/10/2024. Dia e horário desconhecidos. Destinatário: Vorcaro, conforme Diário de Pernambuco e O Globo (11/09/2026). Posicionada no fim do arquivo."},
+    {"id": 219, "timestamp": null, "date": "2024-09", "time": null, "sender": "Fábio Faria", "content": "Comecei a suar.", "type": "text", "is_edited": false, "attachment": null, "urls": [], "forwarded": false, "quoted": null, "source_ref": "piauí — reportagem sobre o relatório da PF (Toffoli, Arleen, Alcídia) — https://piaui.uol.com.br/web/toffoli-relatorio-pf-vorcaro-paraiso-fiscal", "notes": "Mesma situação da mensagem anterior (mês estimado, dia e horário desconhecidos)."},
+    {"id": 220, "timestamp": null, "date": "2024-09", "time": null, "sender": "Fábio Faria", "content": "Pqp.", "type": "text", "is_edited": false, "attachment": null, "urls": [], "forwarded": false, "quoted": null, "source_ref": "piauí — reportagem sobre o relatório da PF (Toffoli, Arleen, Alcídia) — https://piaui.uol.com.br/web/toffoli-relatorio-pf-vorcaro-paraiso-fiscal", "notes": "Mesma situação da mensagem anterior (mês estimado, dia e horário desconhecidos)."}
   ],
   "index": {
     "dates": [
@@ -273,7 +279,8 @@
       {"date": "2024-07-17", "message_count": 2, "first_message_id": 195, "last_message_id": 196},
       {"date": "2024-07-23", "message_count": 15, "first_message_id": 197, "last_message_id": 211},
       {"date": "2024-08-14", "message_count": 5, "first_message_id": 212, "last_message_id": 216},
-      {"date": "2024-08-26", "message_count": 1, "first_message_id": 217, "last_message_id": 217}
+      {"date": "2024-08-26", "message_count": 1, "first_message_id": 217, "last_message_id": 217},
+      {"date": "2024-09", "message_count": 3, "first_message_id": 218, "last_message_id": 220}
     ]
   }
 }

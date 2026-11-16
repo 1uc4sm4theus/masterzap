@@ -9,21 +9,28 @@
     "phone": null,
     "date_range": {
       "start": "2024-09-11",
-      "end": "2024-09-11"
+      "end": "2025-11-15"
     },
-    "total_messages": 14,
-    "source": "Petição da PF — Jaques Wagner e o Banco Master (Inq 5026 / Pet 16.210)",
-    "source_detail": {
-      "kind": "police-filing",
-      "label": "Petição da PF — Jaques Wagner e o Banco Master (Inq 5026 / Pet 16.210)",
-      "document": null,
-      "document_url": "https://arkanto.company/vorcaro/documentos/inq5026-peticao-pf-medidas-cautelares-jaques-wagner.pdf",
-      "document_sha256": null,
-      "made_public": "2026-09",
-      "how": "Transcrição manual dos prints da extração do celular reproduzidos no documento; cada mensagem cita documento, página e figura.",
-      "complements": []
-    },
-    "note": "Trechos citados em documentos da PF — a conversa completa não é pública."
+    "total_messages": 16,
+    "sources": [
+      {
+        "id": "pf-inq5026",
+        "kind": "police-filing",
+        "label": "Petição da PF — Jaques Wagner e o Banco Master (Inq 5026 / Pet 16.210)",
+        "document_url": "https://arkanto.company/vorcaro/documentos/inq5026-peticao-pf-medidas-cautelares-jaques-wagner.pdf",
+        "made_public": "2026-09",
+        "how": "Transcrição manual dos prints da extração do celular reproduzidos no documento; cada mensagem cita documento, página e figura."
+      },
+      {
+        "id": "uol-feitoza-20261116",
+        "kind": "press",
+        "label": "UOL, coluna de Cezar Feitoza (16/11/2026): 'Vorcaro antecipou voo para Dubai 69 minutos após conversar com Moraes'",
+        "document_url": "https://noticias.uol.com.br/colunas/cezar-feitoza/2026/11/16/vorcaro-antecipou-voo-para-dubai-69-minutos-apos-conversar-com-moraes.htm",
+        "made_public": "2026-11-16",
+        "how": "Trechos de mensagens extraídos do celular de Vorcaro e citados pela coluna; não é a conversa integral."
+      }
+    ],
+    "note": "Trechos citados em documentos da PF e na imprensa — a conversa completa não é pública. José Alfredo Berg é descrito como o gestor das aeronaves privadas de Vorcaro. A defesa de Vorcaro não comenta o conteúdo da extração porque questiona a integridade do material e apresentou ao STF um laudo que questiona a cadeia de custódia do telefone. Só entram mensagens literais: a coluna UOL também menciona, sem reproduzir o texto, conversas de cerca de duas semanas sobre o conserto de um jato em Miami (matrícula PSE), a resposta de Vorcaro dizendo que viajaria sozinho e a montagem do plano de voo (Guarulhos, Malta, Dubai). Mensagens do mesmo período com outros interlocutores (Alexandre de Moraes, o piloto, Thatiane da Prime You) não pertencem a este chat."
   },
   "messages": [
     {
@@ -37,6 +44,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63",
       "forwarded": true
     },
@@ -51,6 +59,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63",
       "forwarded": true
     },
@@ -65,6 +74,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63",
       "quoted": "Pq segurou o fsw?"
     },
@@ -79,6 +89,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63",
       "forwarded": true
     },
@@ -93,6 +104,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63"
     },
     {
@@ -106,6 +118,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63",
       "forwarded": true
     },
@@ -120,6 +133,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63",
       "duration": "01:58"
     },
@@ -134,6 +148,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63",
       "forwarded": true
     },
@@ -148,6 +163,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63",
       "forwarded": true
     },
@@ -162,6 +178,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63",
       "duration": "00:13"
     },
@@ -176,6 +193,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63"
     },
     {
@@ -189,6 +207,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63",
       "forwarded": true
     },
@@ -203,6 +222,7 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63"
     },
     {
@@ -216,7 +236,44 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "source_id": "pf-inq5026",
       "source_cite": "PF, petição Jaques Wagner, p. 63"
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-11-15T19:31:00",
+      "date": "2025-11-15",
+      "time": "19:31",
+      "sender": "DV",
+      "content": "CoMo seria voo do fst pra dubai. Saindo sp",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source_id": "uol-feitoza-20261116",
+      "verified": false,
+      "notes": "Grafia conforme a coluna ('CoMo'). Horário 19h31 segundo a coluna; segundos não informados. Vorcaro pede um plano de voo no jato de matrícula FST porque o PSE, em conserto em Miami, só seria liberado após o pagamento de R$ 6,5 milhões e não ficaria pronto a tempo. Ocorre cerca de uma hora depois de ele escrever a Moraes (18h22), segundo a coluna, quando a viagem a Dubai, antes prevista para 19/11/2025, foi antecipada."
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-11-15T19:31:00+",
+      "date": "2025-11-15",
+      "time": "",
+      "sender": "Berg",
+      "content": "Vou gerar a navegação. Só vc de passageiro???",
+      "type": "text",
+      "reply_to_id": 15,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source_id": "uol-feitoza-20261116",
+      "verified": false,
+      "notes": "Resposta de Berg; horário não informado (posterior às 19:31). Segundo a coluna, Vorcaro respondeu que viajaria sozinho e um plano com saída em Guarulhos, parada em Malta e desembarque em Dubai foi montado em minutos (paráfrase, não incluída como mensagem)."
     }
   ],
   "index": {
@@ -226,6 +283,12 @@
         "message_count": 14,
         "first_message_id": 1,
         "last_message_id": 14
+      },
+      {
+        "date": "2025-11-15",
+        "message_count": 2,
+        "first_message_id": 15,
+        "last_message_id": 16
       }
     ]
   }
