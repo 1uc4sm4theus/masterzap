@@ -1,3 +1,4 @@
+
 {
   "metadata": {
     "participants": [
@@ -10,9 +11,9 @@
       "start": "2022-05-20",
       "end": "2025-09-25"
     },
-    "total_messages": 17,
-    "source": "CNN Brasil — Gustavo Uribe: https://www.cnnbrasil.com.br/blogs/gustavo-uribe/politica/em-mensagem-doria-se-diz-preocupado-com-vorcaro-e-pede-conversa-reservada/ | UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF",
-    "note": "Mensagens de 2022 transcritas de capturas de tela da reconstrução publicada pelo UOL (celular de Daniel Vorcaro, apreendido pela PF). Mensagens de 2025 publicadas pela CNN Brasil; o horário de 14:15 foi informado para a mensagem de João Doria. Segundos não constam nas fontes (:00 por padrão). Corrigido date_range.end, que estava 2056-09-25 por erro de digitação."
+    "total_messages": 19,
+    "source": "CNN Brasil — Gustavo Uribe: https://www.cnnbrasil.com.br/blogs/gustavo-uribe/politica/em-mensagem-doria-se-diz-preocupado-com-vorcaro-e-pede-conversa-reservada/ | UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF | Poder360 (Instagram): capturas de mensagens de 08/01/2024 e 21/10/2024",
+    "note": "Mensagens de 2022 transcritas de capturas de tela da reconstrução publicada pelo UOL (celular de Daniel Vorcaro, apreendido pela PF). Mensagens de 2025 publicadas pela CNN Brasil; o horário de 14:15 foi informado para a mensagem de João Doria. Segundos não constam nas fontes (:00 por padrão). Corrigido date_range.end, que estava 2056-09-25 por erro de digitação. Mensagens de 2024 transcritas de capturas publicadas pelo Poder360 no Instagram (horários com segundos, fuso -03:00; trechos ocultados na imagem original); 'Vanos' na mensagem de 21/10/2024 está como no original."
   },
   "messages": [
     {
@@ -212,6 +213,32 @@
     },
     {
       "id": 16,
+      "timestamp": "2024-01-08T15:17:53",
+      "date": "2024-01-08",
+      "time": "15:17:53",
+      "sender": "João Doria",
+      "content": "Amigo Daniel,\nEstou na China.\nAntes de fazer uma reflexão,deixo aqui meu renovado abraço de Feliz Ano pra você e sua Família.\nAgora vamos à reflexão:\nNos conhecemos quando eu era Governador.\nRecebi você e seus sócios no Palácio.Tentamos avançar numa boa ideia de vocês ,mas que teve algumas reticências da Secretaria da Fazenda.\nDepois,chegamos muito próximos de sermos sócios - o que me daria enorme orgulho. Por circunstâncias que sei,independeram de você, não aconteceu.\nEvoluímos na consultoria por um tempo,de forma muito fraterna e positiva. Depois parcialmente interrompida.\nE mais uma vez sei que não por seu desejo.\nNo início de um novo ano,\nquero propor que possamos retomar algumas das nossas boas ideias,para realizarmos juntos.\nAo longo de 2023 você pode perceber minhas características de ação e personalidade.As boas - e as não tão boas. Mas estou certo que hoje você me conhece bem mais do que em 2021 e 22.\nSe eu não estiver enganado nesta reflexão,vamos tentar nos reaproximar e desenhar conquistas juntos.\nAdmiro você.\nE reconheço seus valores.\nPor isso minha perseverança na possibilidade.\nNão quero pecar por falta de atitude, mesmo que você não tenha interesse. O que não diminuirá meu bem querer por você.\nForte a afetuoso abraço",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "Poder360 (Instagram) — captura de mensagens de João Doria a Daniel Vorcaro"
+    },
+    {
+      "id": 17,
+      "timestamp": "2024-10-21T17:30:09",
+      "date": "2024-10-21",
+      "time": "17:30:09",
+      "sender": "João Doria",
+      "content": "Muito obrigado pela reunião\n1. MEIRELLES:\nDaqui a pouco falarei com Henrique Meirelles.Vanos aguardar a sugestão da sua data para o almoço no Banco\n2. CONTRATO:\no valor é de R$ 220 mil.\nTermina em 31 de Outubro.\nSe você concordar podemos renovar por mais 12 meses.\nDe 01 de Novembro 24 à 31 de Outubro 25.\nBasta receber seu OK.\n3. ORIENTE MÉDIO e EUROPA:\nconte com meu apoio integral\n\nForte abraço",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "Poder360 (Instagram) — captura de mensagens de João Doria a Daniel Vorcaro"
+    },
+    {
+      "id": 18,
       "timestamp": "2025-09-25T14:15:00",
       "date": "2025-09-25",
       "time": "14:15:00",
@@ -224,7 +251,7 @@
       "source": "CNN Brasil — Gustavo Uribe"
     },
     {
-      "id": 17,
+      "id": 19,
       "timestamp": "2025-09-25T14:15:00",
       "date": "2025-09-25",
       "time": "14:15:00",
@@ -270,11 +297,23 @@
         "last_message_id": 15
       },
       {
+        "date": "2024-01-08",
+        "message_count": 1,
+        "first_message_id": 16,
+        "last_message_id": 16
+      },
+      {
+        "date": "2024-10-21",
+        "message_count": 1,
+        "first_message_id": 17,
+        "last_message_id": 17
+      },
+      {
         "date": "2025-09-25",
         "message_count": 2,
-        "first_message_id": 16,
-        "last_message_id": 17
+        "first_message_id": 18,
+        "last_message_id": 19
       }
     ]
   }
-}
+      }
