@@ -29,7 +29,7 @@ import { printChat } from './lib/print.js';
 import { renderPaymentsPanel } from './components/PaymentsPanel.js';
 import { renderFlightsPanel } from './components/FlightsPanel.js';
 import { renderChatGPTPanel } from './components/ChatGPTPanel.js';
-import { renderGoogleHistoryPanel } from './components/GoogleHistoryPanel.js';
+import { renderLivestreamPanel } from './components/LivestreamPanel.js';
 import { renderMediaPanel } from './components/MediaPanel.js';
 import { renderSoundtrackPanel } from './components/SoundtrackPanel.js';
 import { renderSoundtrackPlayer } from './components/SoundtrackPlayer.js';
@@ -352,7 +352,7 @@ async function init() {
     // "Não lidas" tally.
     if (markConversationRead(readConversations, id)) sidebar.refreshReadState?.();
     container.classList.add('chat-open');
-    container.classList.remove('flights-open', 'chatgpt-open', 'google-history-open', 'soundtrack-open', 'events-open');
+    container.classList.remove('flights-open', 'chatgpt-open', 'livestream-open', 'soundtrack-open', 'events-open');
 
     const conversation = store.getConversation(id);
     if (!conversation) { showEmptyState(); return; }
@@ -503,10 +503,13 @@ async function init() {
     container.classList.remove('chat-open');
     container.classList.remove('flights-open');
     container.classList.remove('chatgpt-open');
-    container.classList.remove('google-history-open');
+    container.classList.remove('livestream-open');
     container.classList.remove('soundtrack-open');
     while (mainArea.firstChild) mainArea.removeChild(mainArea.firstChild);
-    renderEmptyState(mainArea);
+    renderEmptyState(mainArea, {
+    onOpenLivestream: () => router.navigate('livestream'),
+    avatarFor: (convId) => convId ? (AVATARS[convId] || null) : null,
+  });
   }
 
   // ── Profile drawer ─────────────────────────────────
@@ -591,7 +594,7 @@ async function init() {
     onMedia: () => router.navigate('media'),
     onFlights: () => router.navigate('flights'),
     onChatGPT: () => router.navigate('chatgpt'),
-    onGoogleHistory: () => router.navigate('google-history'),
+    onLivestream: () => router.navigate('livestream'),
     onSoundtrack: () => router.navigate('soundtrack'),
     onEvents: () => router.navigate('events'),
     avatarSrc: activeUser.avatar,
@@ -606,7 +609,7 @@ async function init() {
     onChat: () => {
       // From secondary screens, this is the way back to the conversation list.
       const route = router.getCurrentRoute().route;
-      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt' || route === 'google-history' || route === 'soundtrack' || route === 'events') { router.navigate('home'); return; }
+      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt' || route === 'livestream' || route === 'soundtrack' || route === 'events') { router.navigate('home'); return; }
       closeProfile();
       closeSettings();
     },
@@ -635,7 +638,6 @@ async function init() {
       onEvents: () => router.navigate('events'),
       onFlights: () => router.navigate('flights'),
       onChatGPT: () => router.navigate('chatgpt'),
-      onGoogleHistory: () => router.navigate('google-history'),
       onSoundtrack: () => router.navigate('soundtrack'),
       onChats: () => router.navigate('home'),
       onUserSwitch: toggleUserSwitcher,
@@ -823,7 +825,6 @@ async function init() {
     closeAll();
     setActiveConversation(sidebar, null);
     container.classList.remove('chat-open');
-    container.classList.remove('google-history-open');
     container.classList.add('flights-open');
     while (mainArea.firstChild) mainArea.removeChild(mainArea.firstChild);
     mainArea.appendChild(renderFlightsPanel({ onBack: () => router.navigate('home') }));
@@ -837,12 +838,22 @@ async function init() {
     mainArea.appendChild(renderChatGPTPanel({ onBack: () => router.navigate('home') }));
     navRail.setActive?.('chatgpt');
   });
-  router.on('google-history', () => {
+  router.on('livestream', () => {
     showEmptyState();
     sidebar.showChats?.();
-    container.classList.add('google-history-open');
-    mainArea.replaceChildren(renderGoogleHistoryPanel({ onBack: () => router.navigate('home') }));
-    navRail.setActive?.('google-history');
+    container.classList.add('livestream-open');
+    mainArea.replaceChildren(renderLivestreamPanel({
+      onBack: () => router.navigate('home'),
+      avatarFor: (convId) => convId ? (AVATARS[convId] || null) : null,
+      // Prévia da mensagem citada numa checagem: lê o acervo real, nunca inventa.
+      loadMessagePreview: async (conversationId, messageId) => {
+        const date = await store.findDateForMessage(conversationId, messageId);
+        if (!date) return null;
+        const messages = await store.getMessages(conversationId, date);
+        return messages.find(m => String(m.id) === String(messageId)) || null;
+      },
+    }));
+    navRail.setActive?.('livestream');
   });
   router.on('soundtrack', () => {
     showEmptyState();
@@ -875,7 +886,10 @@ async function init() {
     openConversation(id);
   });
 
-  renderEmptyState(mainArea);
+  renderEmptyState(mainArea, {
+    onOpenLivestream: () => router.navigate('livestream'),
+    avatarFor: (convId) => convId ? (AVATARS[convId] || null) : null,
+  });
 
   container.appendChild(mainArea);
   app.appendChild(headerBar);

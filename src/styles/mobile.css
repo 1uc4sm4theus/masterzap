@@ -18,69 +18,6 @@
 
 /* ── Mobile breakpoint (≤ 600px) ─────────────── */
 @media (max-width: 600px) {
-.sidebar-google-history-link {
-    display: flex;
-    align-items: center;
-    flex: 0 0 auto;
-    gap: 9px;
-    margin: 0 12px 8px;
-    padding: 9px 12px;
-    border: 1px solid var(--WDS-lines-divider);
-    border-radius: 6px;
-    background: var(--WDS-white);
-    color: var(--WDS-content-action-emphasized);
-    cursor: pointer;
-    font: inherit;
-    font-size: 13px;
-    text-align: left;
-  }
-
-.sidebar-google-history-link svg {
-    flex: 0 0 18px;
-  }
-
-.app-container.google-history-open .main-area {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 0;
-    width: 100%;
-    min-width: 0;
-    min-height: 0;
-    height: 100%;
-  }
-
-.google-history-header {
-    min-height: 58px;
-    padding: 8px 12px;
-  }
-
-.google-history-back {
-    display: inline-flex;
-  }
-
-.google-history-disclaimer {
-    padding: 9px 12px;
-  }
-
-.google-history-search {
-    width: calc(100% - 28px);
-    margin: 16px auto 12px;
-    padding: 10px 14px;
-  }
-
-.google-history-content {
-    width: calc(100% - 28px);
-  }
-
-.google-history-entry {
-    gap: 14px;
-    padding: 16px 2px;
-  }
-
-.google-history-query {
-    font-size: 16px;
-  }
-
   .app-wrapper {
     align-items: stretch;
     min-width: 320px;
@@ -162,6 +99,110 @@
     flex-direction: column;
     flex: 1;
     height: 100%;
+  }
+
+  .sidebar-livestream-link {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 9px;
+    margin: 0 12px 8px;
+    padding: 9px 12px;
+    border: 1px solid var(--WDS-lines-divider);
+    border-radius: 6px;
+    background: var(--WDS-white);
+    color: var(--WDS-content-action-emphasized);
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .sidebar-livestream-link svg {
+    flex: 0 0 18px;
+  }
+
+  .app-container.livestream-open .main-area {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .livestream-header {
+    min-height: 64px;
+    gap: 9px;
+    padding: 8px 10px;
+  }
+
+  .livestream-institution-mark {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+    font-size: 11px;
+  }
+
+  .livestream-back {
+    display: inline-flex;
+  }
+
+  .livestream-header > .livestream-status {
+    max-width: 100px;
+    padding: 4px 7px;
+    font-size: 8px;
+    letter-spacing: .03em;
+  }
+
+  .livestream-body {
+    grid-template-areas:
+      "stage"
+      "controls"
+      "details";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr);
+    gap: 0;
+    padding: 12px 12px 20px;
+    overflow-y: auto;
+  }
+
+  .livestream-stage {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    border-radius: 7px;
+  }
+
+  .livestream-waiting {
+    width: calc(100% - 14px);
+    padding: 10px 4px;
+  }
+
+  .livestream-waiting-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .livestream-waiting p {
+    font-size: 11px;
+  }
+
+  .livestream-controls {
+    justify-content: flex-end;
+    min-height: 46px;
+  }
+
+  .livestream-institution,
+  .livestream-youtube-link {
+    font-size: 11px;
+  }
+
+  .livestream-details {
+    margin-top: 6px;
+    padding: 16px;
   }
 
 

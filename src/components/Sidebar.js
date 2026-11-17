@@ -36,7 +36,7 @@ export function renderSidebar(container, {
   onEvents,
   onFlights,
   onChatGPT,
-  onGoogleHistory,
+  onLivestream,
   onSoundtrack,
   onChats,
   onUserSwitch,
@@ -99,14 +99,14 @@ export function renderSidebar(container, {
     el.insertBefore(chatgptLink, el.querySelector('.sidebar-search'));
   }
 
-  if (onGoogleHistory) {
-    const googleHistoryLink = document.createElement('button');
-    googleHistoryLink.className = 'sidebar-google-history-link';
-    googleHistoryLink.type = 'button';
-    googleHistoryLink.setAttribute('aria-label', 'Histórico de pesquisas do Google');
-    googleHistoryLink.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.35 3.8" fill="none" stroke="#EA4335" stroke-width="4"/><path d="M4.65 6.8a9 9 0 0 0 0 10.4" fill="none" stroke="#FBBC05" stroke-width="4"/><path d="M4.65 17.2A9 9 0 0 0 17.4 18.5" fill="none" stroke="#34A853" stroke-width="4"/><path d="M17.4 18.5A9 9 0 0 0 20.7 10.2H12" fill="none" stroke="#4285F4" stroke-width="4"/></svg><span>Histórico do Google</span>';
-    googleHistoryLink.addEventListener('click', onGoogleHistory);
-    el.insertBefore(googleHistoryLink, el.querySelector('.sidebar-search'));
+  if (onLivestream) {
+    const livestreamLink = document.createElement('button');
+    livestreamLink.className = 'sidebar-livestream-link';
+    livestreamLink.type = 'button';
+    livestreamLink.setAttribute('aria-label', 'MasterWhats ao vivo');
+    livestreamLink.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/><path d="M7 2v3m10-3v3"/></svg><span>MasterWhats ao vivo</span>';
+    livestreamLink.addEventListener('click', onLivestream);
+    el.insertBefore(livestreamLink, el.querySelector('.sidebar-search'));
   }
 
   if (onSoundtrack) {

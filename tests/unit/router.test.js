@@ -19,8 +19,8 @@ describe('HashRouter', () => {
       expect(HashRouter.parseHash('#/chatgpt')).toEqual({ route: 'chatgpt', param: null, messageId: null });
     });
 
-    it('#/google-history → attributed Google searches', () => {
-      expect(HashRouter.parseHash('#/google-history')).toEqual({ route: 'google-history', param: null, messageId: null });
+    it('#/livestream → public live broadcasts', () => {
+      expect(HashRouter.parseHash('#/livestream')).toEqual({ route: 'livestream', param: null, messageId: null });
     });
 
     it('#/soundtrack → soundtrack', () => {
@@ -116,9 +116,9 @@ describe('HashRouter', () => {
       expect(window.location.hash).toBe('#/chatgpt');
     });
 
-    it('navigate("google-history") opens attributed Google searches', () => {
-      router.navigate('google-history');
-      expect(window.location.hash).toBe('#/google-history');
+    it('navigate("livestream") opens public live broadcasts', () => {
+      router.navigate('livestream');
+      expect(window.location.hash).toBe('#/livestream');
     });
 
     it('navigate("soundtrack") sets hash to #/soundtrack', () => {

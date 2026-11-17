@@ -5,13 +5,15 @@
  * Security note: innerHTML contains only static markup (no dynamic data).
  */
 
+import { renderLivestreamHomeCall } from './LivestreamPanel.js';
+
 const LOCK_ICON = `<svg viewBox="0 0 10 12" width="10" height="12"><path fill="currentColor" d="M5.175 0A2.318 2.318 0 0 0 2.86 2.318v.884H1.5a1 1 0 0 0-1 1V11a1 1 0 0 0 1 1h7.35a1 1 0 0 0 1-1V4.202a1 1 0 0 0-1-1H7.491v-.884A2.317 2.317 0 0 0 5.175 0Zm0 1.05c.7 0 1.267.567 1.267 1.268v.884H3.909v-.884c0-.7.567-1.268 1.266-1.268Z"/></svg>`;
 
 /**
  * @param {HTMLElement} container
  * @returns {HTMLElement}
  */
-export function renderEmptyState(container) {
+export function renderEmptyState(container, { onOpenLivestream, avatarFor } = {}) {
   const el = document.createElement('div');
   el.className = 'empty-state';
 
@@ -34,6 +36,10 @@ export function renderEmptyState(container) {
       <span>Suas mensagens são exibidas nacionalmente para todos do Brasil.</span>
     </div>
   `;
+
+  if (onOpenLivestream) {
+    el.appendChild(renderLivestreamHomeCall({ onOpen: onOpenLivestream, avatarFor }));
+  }
 
   container.appendChild(el);
   return el;
