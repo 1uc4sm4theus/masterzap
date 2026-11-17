@@ -7,16 +7,214 @@
     "saved_as": null,
     "phone": null,
     "date_range": {
-      "start": "2025-09-25",
-      "end": "2056-09-25"
+      "start": "2022-05-20",
+      "end": "2025-09-25"
     },
-    "total_messages": 2,
-    "source": "CNN Brasil — Gustavo Uribe: https://www.cnnbrasil.com.br/blogs/gustavo-uribe/politica/em-mensagem-doria-se-diz-preocupado-com-vorcaro-e-pede-conversa-reservada/",
-    "note": "Mensagens publicadas pela CNN Brasil, em reportagem de Gustavo Uribe. A matéria informa a conversa entre João Doria e Daniel Vorcaro. O horário de 14:15 foi informado para a mensagem de João Doria."
+    "total_messages": 17,
+    "source": [
+      "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF (capturas de tela)",
+      "CNN Brasil — Gustavo Uribe: https://www.cnnbrasil.com.br/blogs/gustavo-uribe/politica/em-mensagem-doria-se-diz-preocupado-com-vorcaro-e-pede-conversa-reservada/"
+    ],
+    "note": "Mensagens de 2022 transcritas de capturas de tela da reconstrução publicada pelo UOL (celular de Daniel Vorcaro, apreendido pela PF). Mensagens de 2025 publicadas pela CNN Brasil; o horário de 14:15 foi informado para a mensagem de João Doria. Segundos não constam nas fontes (:00 por padrão). Corrigido date_range.end, que estava 2056-09-25 por erro de digitação."
   },
   "messages": [
     {
       "id": 1,
+      "timestamp": "2022-05-20T06:08:00",
+      "date": "2022-05-20",
+      "time": "06:08:00",
+      "sender": "João Doria",
+      "content": "Bom dia!\nMuito obrigado pelo agradabilíssimo jantar de ontem!\nVocê foi um gentleman. E Maurício super agregador.\nEste projeto vai dar certo!\nForte abraço e até breve!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 2,
+      "timestamp": "2022-05-20T08:06:00",
+      "date": "2022-05-20",
+      "time": "08:06:00",
+      "sender": "DV",
+      "content": "Muito obrigado pela visita. Sempre maravilhoso estar com vocês! Vai dar muito certo! Vamos em frente!\nAbraço!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 3,
+      "timestamp": "2022-05-23T22:50:00",
+      "date": "2022-05-23",
+      "time": "22:50:00",
+      "sender": "DV",
+      "content": "Caro Amigo,\nTriste com a notícia por nosso país, mas tenho certeza de que tomou a melhor decisão para a situação.\nConte com meu apoio irrestrito. E espero que agora estejamos ainda mais juntos.\nAbraço",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 4,
+      "timestamp": "2022-05-23T23:13:00",
+      "date": "2022-05-23",
+      "time": "23:13:00",
+      "sender": "João Doria",
+      "content": "Muito obrigado Daniel!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 5,
+      "timestamp": "2022-05-23T23:14:00",
+      "date": "2022-05-23",
+      "time": "23:14:00",
+      "sender": "João Doria",
+      "content": "A vantagem é que vamos colocar ainda mais energia em nosso projeto",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 6,
+      "timestamp": "2022-05-23T23:14:00",
+      "date": "2022-05-23",
+      "time": "23:14:00",
+      "sender": "João Doria",
+      "content": "Carinhoso abraço 💚",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 7,
+      "timestamp": "2022-07-21T15:18:00",
+      "date": "2022-07-21",
+      "time": "15:18:00",
+      "sender": "João Doria",
+      "content": "Muito obrigado pelo almoço !\nMuito obrigado pela confiança !\nVamos dar sequência aos entendimentos :\n1. Minuta do Contrato da Consultoria segue amanhã. Valendo a partir de 01 de Agosto\n2. Reunião LIDE pra definir Aliança Master para 5 anos. Vamos agendar na semana que vem. Vou pedir pra Érika, aqui, agendar com sua secretária.\n3. Patrocínio do Seminário Brasil-Portugal: de acordo seguirá hoje pra você\n4.Banco Central: até amanhã falarei com Roberto Campos e darei notícias\n5.Jantar Master em NY na noite de 13 de novembro, exclusivo no Fasano. Fechado!\nAté sexta Rogério Fasano nos fornece o custo. Será a primeira vez na história que ele fechará o restaurante exclusivamente pra uma empresa.\n6.Cerimonial e formatação de almoços e coquetéis no Banco Master. Falarei hoje com Regina Romero, Chefe de Cerimonial do Palácio. Ela vai te ligar e agendar um café com você. Linda, discreta, elegante e eficiente",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 8,
+      "timestamp": "2022-07-21T15:18:00",
+      "date": "2022-07-21",
+      "time": "15:18:00",
+      "sender": "João Doria",
+      "content": "Abração",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 9,
+      "timestamp": "2022-07-25T15:40:00",
+      "date": "2022-07-25",
+      "time": "15:40:00",
+      "sender": "João Doria",
+      "content": "Já tenho boas notícias sobre o Presidente do Banco Central.\nE quero agendar nosso fim de semana em Campos do Jordão, com você , Augusto , Maurício e Johnny, com esposas.\nPodemos falar ao telefone?\nMe avise\nAbraço",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 10,
+      "timestamp": "2022-07-25T19:24:00",
+      "date": "2022-07-25",
+      "time": "19:24:00",
+      "sender": "DV",
+      "content": "Claro",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 11,
+      "timestamp": "2022-08-11T12:02:00",
+      "date": "2022-08-11",
+      "time": "12:02:00",
+      "sender": "João Doria",
+      "content": "Bom dia Daniel!\n\nPodemos ter nosso Contrato de Consultoria assinado?\nE avançar no Contrato com o LIDE conforme falamos na última reunião ?\nForte abraço",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 12,
+      "timestamp": "2022-08-11T12:02:00",
+      "date": "2022-08-11",
+      "time": "12:02:00",
+      "sender": "DV",
+      "content": "Bom dia tudo bem? Vamos assinar o consultoria sim!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 13,
+      "timestamp": "2022-08-11T12:02:00",
+      "date": "2022-08-11",
+      "time": "12:02:00",
+      "sender": "DV",
+      "content": "O do Lide preciso conversar pra fazermos uns ajustes que minha turma pediu",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 14,
+      "timestamp": "2022-08-11T12:05:00",
+      "date": "2022-08-11",
+      "time": "12:05:00",
+      "sender": "João Doria",
+      "content": "1. Ótimo\nMuito obrigado !\n2. Quer fazer uma rápida reunião de ajustes no segundo tema ?\nChamo o Johnny também. E vamos aí tomar um breve café com você",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 15,
+      "timestamp": "2022-08-11T12:12:00",
+      "date": "2022-08-11",
+      "time": "12:12:00",
+      "sender": "DV",
+      "content": "Vamos sim",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source": "UOL — reconstrução a partir de mensagens do celular de Daniel Vorcaro, apreendido pela PF"
+    },
+    {
+      "id": 16,
       "timestamp": "2025-09-25T14:15:00",
       "date": "2025-09-25",
       "time": "14:15:00",
@@ -25,10 +223,11 @@
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source": "CNN Brasil — Gustavo Uribe"
     },
     {
-      "id": 2,
+      "id": 17,
       "timestamp": "2025-09-25T14:15:00",
       "date": "2025-09-25",
       "time": "14:15:00",
@@ -37,16 +236,47 @@
       "type": "text",
       "is_edited": false,
       "attachment": null,
-      "urls": []
+      "urls": [],
+      "source": "CNN Brasil — Gustavo Uribe"
     }
   ],
   "index": {
     "dates": [
       {
-        "date": "2025-09-25",
+        "date": "2022-05-20",
         "message_count": 2,
         "first_message_id": 1,
         "last_message_id": 2
+      },
+      {
+        "date": "2022-05-23",
+        "message_count": 4,
+        "first_message_id": 3,
+        "last_message_id": 6
+      },
+      {
+        "date": "2022-07-21",
+        "message_count": 2,
+        "first_message_id": 7,
+        "last_message_id": 8
+      },
+      {
+        "date": "2022-07-25",
+        "message_count": 2,
+        "first_message_id": 9,
+        "last_message_id": 10
+      },
+      {
+        "date": "2022-08-11",
+        "message_count": 5,
+        "first_message_id": 11,
+        "last_message_id": 15
+      },
+      {
+        "date": "2025-09-25",
+        "message_count": 2,
+        "first_message_id": 16,
+        "last_message_id": 17
       }
     ]
   }
