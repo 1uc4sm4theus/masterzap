@@ -36,7 +36,23 @@
    "Id antigo 145 ('Eu gostei 😊') consta no HTML como 'Eu gostei 😂🫶🏻' (id novo 12597), 2025-07-17T13:21:39.",
    "Mensagens com data só de mês no JSON anterior ganharam data/hora exatas: id 43 -> 2024-10-03T12:56:04 (id novo 6600, texto completo: 'Kleryston da bet é bem intencionado, mas não me passa segurança. Ele quer marca do banco, do Will. Não vi contrato. Não vi nada. Não vou mandar por agora.'); ids 86/88 -> 2025-03-13T13:15:46 e 13:19:03."
   ],
-  "redacao": "CPFs validos e e-mails de pessoas fisicas tarjados; e-mails institucionais (.gov.br, estadao, infoglobo) mantidos."
+  "redacao": "CPFs validos e e-mails de pessoas fisicas tarjados; e-mails institucionais (.gov.br, estadao, infoglobo) mantidos.",
+  "audio_transcricoes_incluidas": [
+   {
+    "message_id": 7326,
+    "timestamp": "2024-11-01T12:37:56",
+    "sender": "Ana Matos",
+    "duration": "00:24",
+    "campo": "content"
+   },
+   {
+    "message_id": 11594,
+    "timestamp": "2025-04-16T18:59:25",
+    "sender": "Ana Matos",
+    "duration": "01:02",
+    "campo": "content"
+   }
+  ]
  },
  "messages": [
   {
@@ -108117,7 +108133,7 @@
    "date": "2024-11-01",
    "time": "12:37:56",
    "sender": "Ana Matos",
-   "content": "[áudio]",
+   "content": "Ótimo, liga então, beleza. E ele também pediu, Bacelar, dois convites pras filhas do cara, do Andrei, da Polícia Federal, tá? Eu falei que eu ia falar com você primeiro. Eu posso segurar um pouquinho esse do Juca e do Pedro, só pra gente ver quantas quantidades a gente vai ter? Não sei se o Hugo vai pedir mais pra você aí. Depois você me fala. Brigada! Obrigada, beijo.",
    "type": "audio",
    "is_edited": false,
    "attachment": "Arquivo de mensagem de áudio",
@@ -170363,7 +170379,7 @@
    "date": "2025-04-16",
    "time": "18:59:25",
    "sender": "Ana Matos",
-   "content": "[áudio]",
+   "content": "Oi, Daniel, eu não sei muito o que pensar. Que assim, é… nossa salvação tem uma marca pra esse evento, e escritório de advocacia faz muito isso, pra eles não tem problema nenhum, né? Mas ela é mulher do Andrei, e é por isso que ela chegou até mim. Ela já esteve no evento, né? Que ela tem muito interesse em participar dos painéis, tá, e colocar a placa dela. Um evento de quatro milhões de libras, é muito caro, é, pra uma marca só assinar sozinha. Assim, temos que decidir isso rápido, porque ela também tem que se organizar pra isso, se é melhor ou se é pior. Master faz evento para ministros do STF em Londres, ou Master e mulher do procurador da Polícia Federal realizam um evento em Londres. Assim, não sei o que pensar, e acho muito difícil nessa altura do campeonato a gente conseguir outra placa pra colocar lá, sabe? Pra apanhar junto.",
    "type": "audio",
    "is_edited": false,
    "attachment": "Arquivo de mensagem de áudio",
