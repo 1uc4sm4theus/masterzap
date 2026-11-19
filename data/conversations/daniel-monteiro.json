@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Daniel Monteiro"
+    ],
+    "saved_as": "daniel-monteiro",
+    "phone": null,
+    "date_range": {
+      "start": "2025-09",
+      "end": "2025-09"
+    },
+    "total_messages": 2,
+    "source": "Coluna de Natália Portinari no UOL, 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master' (19/11/2026), com mensagens obtidas pelo UOL. Não são transcrições integrais; a conversa completa não é pública.",
+    "note": "Trechos citados na imprensa. Todas as mensagens são citações de reportagem (source 'press', verified false), sem prints correspondentes; hora não informada, por isso timestamp e time são null. Quando a matéria só parafraseia a mensagem, o conteúdo vem entre colchetes e só o trecho entre aspas é literal. Grafias preservadas como publicadas. Remetente 'DV' = Daniel Vorcaro. A defesa de Vorcaro não respondeu à matéria. A ordem entre as duas mensagens segue a matéria; horários não informados.",
+    "visible_date_headers_without_messages": []
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": null,
+      "date": "2025-09",
+      "date_precision": "month",
+      "time": null,
+      "sender": "Daniel Monteiro",
+      "content": "[reclamou de mensagens do gestor a seus sócios]",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "UOL — coluna de Natália Portinari (19/11/2026), 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master'",
+      "notes": "Paráfrase da matéria, sem texto literal: advogado reclamou a Vorcaro de mensagens enviadas por Vladimir Timerman a seus sócios. Setembro de 2025; dia não informado."
+    },
+    {
+      "id": 2,
+      "timestamp": null,
+      "date": "2025-09",
+      "date_precision": "month",
+      "time": null,
+      "sender": "DV",
+      "content": "Esse imbecil tá com ordem de prisão",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "UOL — coluna de Natália Portinari (19/11/2026), 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master'",
+      "notes": "Resposta de Vorcaro, segundo a matéria ('o banqueiro voltou ao tema'); mesmo mês, dia não informado. 'Esse imbecil' refere-se a Timerman. A matéria afirma que a informação sobre 'ordem de prisão' era falsa e que Vorcaro a repetiu a vários interlocutores desde abril de 2025."
+    }
+  ],
+  "reported_patterns": [
+    {
+      "topic": "Repetição da versão da 'ordem de prisão'",
+      "description": "Segundo a matéria, Vorcaro repetiu a afirmação falsa de que Timerman tinha ordem de prisão aberta a diversos interlocutores: à equipe de imprensa do Master (29/04/2025), a Roberto Justus (01/05/2025) e a Daniel Monteiro (set/2025). Timerman foi condenado em 1ª instância em março de 2025 por perseguição e ameaça a Nelson Tanure, com pena substituída por serviços e multa; o TJ-SP manteve a condenação em maio de 2026, reduziu a pena e disse que os fatos não têm relação com o caso Master; Timerman recorre.",
+      "source_ref": "UOL — coluna de Natália Portinari (19/11/2026), 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master'"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-09",
+        "message_count": 2,
+        "first_message_id": 1,
+        "last_message_id": 2,
+        "precision": "month"
+      }
+    ]
+  }
+}

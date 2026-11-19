@@ -10,9 +10,9 @@
       "start": "2023-10-19",
       "end": "2025-10-24"
     },
-    "total_messages": 46,
-    "source": "Trechos citados no relatório policial / decisão STF (Operação Compliance Zero — Caso Master) + BBC News Brasil (mensagens extraídas pela PF do celular de Vorcaro; reportagem sobre pedidos de retirada de conteúdo). A conversa completa não consta publicada na íntegra.",
-    "note": "Luiz Phillipi Machado de Moraes Mourão (vulgo Sicário / Felipe Mourão). Mensagens sem timestamp na fonte ficam com timestamp null. Trechos entre colchetes são paráfrase da PF ou da BBC quando o texto integral não foi reproduzido (campo paraphrased; partial_quote = só um trecho foi citado). Mensagens sem data/hora na fonte recebem data e hora de placeholder (00:00:00) e date_placeholder/timestamp_placeholder = true. Mensagens com source_cite vêm da BBC News Brasil; forwarded = encaminhadas por Mourão como relato de terceiros ('os meninos'). A BBC examinou mais de 11 mil registros da conversa e identificou 189 publicações, páginas e contas mencionadas em pedidos ou relatos de retirada (nov/2023 a nov/2025), e Mourão afirma ter derrubado ao menos 17 perfis no Instagram; aqui constam só as mensagens cujo texto foi reproduzido. VERSÃO SÓ DIÁLOGO: removidas paráfrases entre colchetes, anexos sem texto, contatos, chamadas e eventos de sistema; a versão completa está em masterwhats-sicario-master-completo.json."
+    "total_messages": 59,
+    "source": "Trechos citados no relatório policial / decisão STF (Operação Compliance Zero — Caso Master) + BBC News Brasil (mensagens extraídas pela PF do celular de Vorcaro; reportagem sobre pedidos de retirada de conteúdo) + UOL (19/11/2026, coluna de Natália Portinari, 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master', com mensagens obtidas pelo UOL). A conversa completa não consta publicada na íntegra.",
+    "note": "Luiz Phillipi Machado de Moraes Mourão (vulgo Sicário / Felipe Mourão). Mensagens sem timestamp na fonte ficam com timestamp null. Trechos entre colchetes são paráfrase da PF ou da BBC quando o texto integral não foi reproduzido (campo paraphrased; partial_quote = só um trecho foi citado). Mensagens sem data/hora na fonte recebem data e hora de placeholder (00:00:00) e date_placeholder/timestamp_placeholder = true. Mensagens com source_cite vêm da BBC News Brasil ou do UOL; forwarded = encaminhadas por Mourão como relato de terceiros ('os meninos') ou mensagens de outras pessoas. A BBC examinou mais de 11 mil registros da conversa e identificou 189 publicações, páginas e contas mencionadas em pedidos ou relatos de retirada (nov/2023 a nov/2025), e Mourão afirma ter derrubado ao menos 17 perfis no Instagram; aqui constam só as mensagens cujo texto foi reproduzido. VERSÃO SÓ DIÁLOGO: removidas paráfrases entre colchetes, anexos sem texto, contatos, chamadas e eventos de sistema; a versão completa está em masterwhats-sicario-master-completo.json. Atualização 19/11/2026: os ids 19, 36 e 42-52 vêm da coluna de Natália Portinari no UOL (19/11/2026), sobre a ofensiva contra o gestor Vladimir Timerman (mar/2024 a jun/2025); em vários só um trecho foi citado (partial_quote). Ids renumerados em ordem cronológica: antigos 19-34 passaram a 20-35, antigos 35-39 a 37-41 e antigos 40-46 a 53-59. O arquivo enviado por Mourão em 12/06/2025 com nome, e-mails e telefones de Timerman não consta nesta versão só diálogo. A matéria informa que, segundo a PF, o grupo monitorou Timerman entre dezembro de 2023 e junho de 2024; Timerman afirma que o perfil derrubado em junho de 2025 não era dele. A defesa de Vorcaro não respondeu à matéria."
   },
   "messages": [
     {
@@ -138,7 +138,6 @@
       "source_page": null,
       "source_figure": null,
       "timestamp_placeholder": true,
-      "note": "Data exata dessa mensagem e da seguinte não publicada; BBC diz apenas 'mais tarde'.",
       "source_cite": "BBC News Brasil"
     },
     {
@@ -189,7 +188,6 @@
       "source_page": null,
       "source_figure": null,
       "timestamp_placeholder": true,
-      "note": "Pedido de retirada de vídeo de drone sobre a Ilha do Topete (perfil My Phantom Toy).",
       "source_cite": "BBC News Brasil"
     },
     {
@@ -244,7 +242,6 @@
       "source_page": null,
       "source_figure": null,
       "timestamp_placeholder": true,
-      "note": "Enviada cinco dias depois do pedido, segundo a BBC.",
       "source_cite": "BBC News Brasil"
     },
     {
@@ -314,6 +311,23 @@
     },
     {
       "id": 19,
+      "timestamp": "2024-03-23T00:00:00",
+      "date": "2024-03-23",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "nome do juiz desse caso",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "partial_quote": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 20,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -329,7 +343,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 20,
+      "id": 21,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -345,7 +359,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 21,
+      "id": 22,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -361,7 +375,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 22,
+      "id": 23,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -377,7 +391,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 23,
+      "id": 24,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -393,7 +407,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 24,
+      "id": 25,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -409,7 +423,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 25,
+      "id": 26,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -425,7 +439,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 26,
+      "id": 27,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -441,7 +455,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 27,
+      "id": 28,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -457,7 +471,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 28,
+      "id": 29,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -473,7 +487,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 29,
+      "id": 30,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -489,7 +503,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 30,
+      "id": 31,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -505,7 +519,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 31,
+      "id": 32,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -521,7 +535,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 32,
+      "id": 33,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -537,7 +551,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 33,
+      "id": 34,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -553,7 +567,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 34,
+      "id": 35,
       "timestamp": "2024-04-01T00:00:00",
       "date": "2024-04-01",
       "date_placeholder": true,
@@ -569,7 +583,26 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 35,
+      "id": 36,
+      "timestamp": "2024-06-01T00:00:00",
+      "date": "2024-06-01",
+      "date_approx": "2024-06",
+      "date_placeholder": true,
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "carga total",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "partial_quote": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 37,
       "timestamp": "2024-09-02T00:00:00",
       "date": "2024-09-02",
       "time": "00:00:00",
@@ -585,7 +618,7 @@
       "source_cite": "BBC News Brasil"
     },
     {
-      "id": 36,
+      "id": 38,
       "timestamp": "2024-09-02T00:00:00",
       "date": "2024-09-02",
       "time": "00:00:00",
@@ -598,11 +631,10 @@
       "source_page": null,
       "source_figure": null,
       "timestamp_placeholder": true,
-      "note": "Resposta no mesmo dia, conforme a ordem da reportagem; horário não publicado.",
       "source_cite": "BBC News Brasil"
     },
     {
-      "id": 37,
+      "id": 39,
       "timestamp": "2024-09-02T00:00:00",
       "date": "2024-09-02",
       "time": "00:00:00",
@@ -618,7 +650,7 @@
       "source_cite": "BBC News Brasil"
     },
     {
-      "id": 38,
+      "id": 40,
       "timestamp": "2024-09-10T00:00:00",
       "date": "2024-09-10",
       "time": "00:00:00",
@@ -631,11 +663,10 @@
       "source_page": null,
       "source_figure": null,
       "timestamp_placeholder": true,
-      "note": "BBC: 'oito dias depois' de 02/09/2024.",
       "source_cite": "BBC News Brasil"
     },
     {
-      "id": 39,
+      "id": 41,
       "timestamp": "2024-09-25T00:00:00",
       "date": "2024-09-25",
       "time": "00:00:00",
@@ -649,11 +680,190 @@
       "source_figure": null,
       "timestamp_placeholder": true,
       "forwarded": true,
-      "note": "A BBC informa que as conversas não demonstram que o acesso tenha ocorrido; a Folha disse não ter registrado ataques.",
       "source_cite": "BBC News Brasil"
     },
     {
-      "id": 40,
+      "id": 42,
+      "timestamp": "2025-06-12T00:00:00",
+      "date": "2025-06-12",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "Hoje é Vladmir e LinkedIn",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "forwarded": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 43,
+      "timestamp": "2025-06-12T00:00:00",
+      "date": "2025-06-12",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "Vladmir sai",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "forwarded": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 44,
+      "timestamp": "2025-06-12T00:00:00",
+      "date": "2025-06-12",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "O que é para fazer com esse Vladmir? Já estamos com o acesso total dele",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 45,
+      "timestamp": "2025-06-12T00:00:00",
+      "date": "2025-06-12",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "É para deletar tudo dele, tomar tudo? O que você quer que faça?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 46,
+      "timestamp": "2025-06-12T00:00:00",
+      "date": "2025-06-12",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "O que é para fazer com esse escroto? Posso ir pra cima total?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 47,
+      "timestamp": "2025-06-16T00:00:00",
+      "date": "2025-06-16",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "o perfil do Vladmir do Twitter",
+      "type": "text",
+      "is_edited": false,
+      "attachment": "print do X com a mensagem 'Essa conta não existe'",
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "partial_quote": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 48,
+      "timestamp": "2025-06-16T00:00:00",
+      "date": "2025-06-16",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Essa aí não sei se vale. Tem que pensar. Cara faz muito barulho",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 49,
+      "timestamp": "2025-06-16T00:00:00",
+      "date": "2025-06-16",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "em alguns movimentos",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "partial_quote": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 50,
+      "timestamp": "2025-06-16T00:00:00",
+      "date": "2025-06-16",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "Era o Vladimir. Só que perfil fake que ele criou. Levantamos o IP e o número de tel",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 51,
+      "timestamp": "2025-06-16T00:00:00",
+      "date": "2025-06-16",
+      "time": "00:00:00",
+      "sender": "DV",
+      "content": "Então tinha que derrubar mesmo. Achei que tinha derrubado o dele próprio",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 52,
+      "timestamp": "2025-06-16T00:00:00",
+      "date": "2025-06-16",
+      "time": "00:00:00",
+      "sender": "Sicário",
+      "content": "O dele temos tudo, mas não fizemos nada. Só quando você falar o que é para fazer",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "timestamp_placeholder": true,
+      "source_cite": "UOL, 19/11/2026 — coluna de Natália Portinari (mensagens obtidas pelo UOL)"
+    },
+    {
+      "id": 53,
       "timestamp": "2025-07-25T00:00:00",
       "date": "2025-07-25",
       "time": "00:00:00",
@@ -668,7 +878,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 41,
+      "id": 54,
       "timestamp": "2025-07-25T00:00:00",
       "date": "2025-07-25",
       "time": "00:00:00",
@@ -683,7 +893,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 42,
+      "id": 55,
       "timestamp": "2025-07-25T00:00:00",
       "date": "2025-07-25",
       "time": "00:00:00",
@@ -698,7 +908,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 43,
+      "id": 56,
       "timestamp": "2025-07-25T00:00:00",
       "date": "2025-07-25",
       "time": "00:00:00",
@@ -713,7 +923,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 44,
+      "id": 57,
       "timestamp": "2025-10-23T00:00:00",
       "date": "2025-10-23",
       "time": "00:00:00",
@@ -726,11 +936,10 @@
       "source_page": null,
       "source_figure": null,
       "timestamp_placeholder": true,
-      "note": "A BBC não registra resposta de Vorcaro autorizando a exclusão nem demonstração técnica do acesso; a piauí disse não ter registrado problema no site.",
       "source_cite": "BBC News Brasil"
     },
     {
-      "id": 45,
+      "id": 58,
       "timestamp": "2025-10-24T00:00:00",
       "date": "2025-10-24",
       "time": "00:00:00",
@@ -745,7 +954,7 @@
       "timestamp_placeholder": true
     },
     {
-      "id": 46,
+      "id": 59,
       "timestamp": "2025-10-24T00:00:00",
       "date": "2025-10-24",
       "time": "00:00:00",
@@ -795,48 +1004,98 @@
         "last_message_id": 18
       },
       {
+        "date": "2024-03-23",
+        "message_count": 1,
+        "first_message_id": 19,
+        "last_message_id": 19
+      },
+      {
         "date": "2024-04-01",
         "message_count": 16,
-        "first_message_id": 19,
-        "last_message_id": 34,
+        "first_message_id": 20,
+        "last_message_id": 35,
         "note": "Placeholder: mensagens sem data na fonte (entre abril de 2024 e julho de 2025)."
+      },
+      {
+        "date": "2024-06-01",
+        "message_count": 1,
+        "first_message_id": 36,
+        "last_message_id": 36,
+        "note": "Placeholder: UOL indica apenas junho de 2024 (mensagem 'carga total', já revelada pela PF)."
       },
       {
         "date": "2024-09-02",
         "message_count": 3,
-        "first_message_id": 35,
-        "last_message_id": 37
+        "first_message_id": 37,
+        "last_message_id": 39
       },
       {
         "date": "2024-09-10",
         "message_count": 1,
-        "first_message_id": 38,
-        "last_message_id": 38
+        "first_message_id": 40,
+        "last_message_id": 40
       },
       {
         "date": "2024-09-25",
         "message_count": 1,
-        "first_message_id": 39,
-        "last_message_id": 39
+        "first_message_id": 41,
+        "last_message_id": 41
+      },
+      {
+        "date": "2025-06-12",
+        "message_count": 5,
+        "first_message_id": 42,
+        "last_message_id": 46
+      },
+      {
+        "date": "2025-06-16",
+        "message_count": 6,
+        "first_message_id": 47,
+        "last_message_id": 52,
+        "note": "Data derivada de 'quatro dias depois' de 12/06/2025, segundo a matéria; horários não informados."
       },
       {
         "date": "2025-07-25",
         "message_count": 4,
-        "first_message_id": 40,
-        "last_message_id": 43
+        "first_message_id": 53,
+        "last_message_id": 56
       },
       {
         "date": "2025-10-23",
         "message_count": 1,
-        "first_message_id": 44,
-        "last_message_id": 44
+        "first_message_id": 57,
+        "last_message_id": 57
       },
       {
         "date": "2025-10-24",
         "message_count": 2,
-        "first_message_id": 45,
-        "last_message_id": 46
+        "first_message_id": 58,
+        "last_message_id": 59
       }
     ]
+  },
+  "annotations_uol_19_11_2026": {
+    "19": "Sábado, 23/03/2024. Segundo a matéria, Vorcaro pediu a Mourão, por videochamada e mensagens, que descobrisse o 'nome do juiz desse caso' (inquérito da PF aberto a partir de denúncia da Esh, cuja íntegra ele tinha em mãos). Só o trecho entre aspas é literal; hora não informada. Segundo a PF, o grupo usou no dia seguinte a senha de uma servidora do MPF para acessar o procedimento, que estava sob sigilo. A PF já havia revelado que o grupo monitorou Vladimir Timerman entre dezembro de 2023 e junho de 2024.",
+    "36": "Segundo mensagens já reveladas pela PF e retomadas pela matéria, em junho de 2024 Vorcaro mandou o grupo de Mourão dar 'carga total' em Vladimir Timerman. Dia e hora não informados; só o trecho entre aspas é literal. Cerca de dez dias depois, uma denúncia anônima levou a Polícia Civil de SP a abrir inquérito contra o gestor; as mensagens não mostram quem enviou a denúncia.",
+    "42": "Encaminhada por Mourão a Vorcaro: mensagem de outra pessoa (não identificada na matéria). Reportado pela matéria em 12/06/2025; hora não informada. Grafia 'Vladmir' como publicada.",
+    "43": "Encaminhada por Mourão a Vorcaro: mensagem de outra pessoa (não identificada na matéria), logo antes da pergunta seguinte. Reportado pela matéria em 12/06/2025; hora não informada. Grafia 'Vladmir' como publicada.",
+    "44": "Pergunta de Mourão a Vorcaro logo após encaminhar as mensagens. 'Vladmir' refere-se a Vladimir Timerman. Reportado pela matéria em 12/06/2025; hora não informada. Grafia 'Vladmir' como publicada.",
+    "45": "A matéria cita esta frase logo após a anterior, sem indicar se são mensagens distintas ou a mesma. Reportado pela matéria em 12/06/2025; hora não informada. Grafia 'Vladmir' como publicada.",
+    "46": "Horas depois das anteriores, na mesma data, e depois de Mourão enviar um arquivo com nome, e-mails e telefones de Timerman (anexo não incluído nesta versão só diálogo). Segundo a matéria, Vorcaro não respondeu à pergunta. Reportado pela matéria em 12/06/2025; hora não informada. Grafia 'Vladmir' como publicada.",
+    "47": "'Quatro dias depois' (de 12/06/2025), Mourão avisou que o perfil estava fora do ar e mandou o print. Só o trecho entre aspas é literal. Grafia 'Vladmir' como publicada.",
+    "48": "Reação 'com cautela' de Vorcaro, segundo a matéria. Sequência conforme a matéria; data presumida 16/06/2025 por 'quatro dias depois' da anterior, sem horário.",
+    "49": "Mourão disse que o grupo já tinha neutralizado Timerman 'em alguns movimentos'. Só o trecho entre aspas é literal. Sequência conforme a matéria; data presumida 16/06/2025 por 'quatro dias depois' da anterior, sem horário.",
+    "50": "Sobre o perfil derrubado, que não levava o nome de Timerman. Timerman disse ao UOL que o perfil não era dele e que Vorcaro costumava atribuir a ele todas as críticas sofridas nas redes. Sequência conforme a matéria; data presumida 16/06/2025 por 'quatro dias depois' da anterior, sem horário.",
+    "51": "Sequência conforme a matéria; data presumida 16/06/2025 por 'quatro dias depois' da anterior, sem horário.",
+    "52": "Sequência conforme a matéria; data presumida 16/06/2025 por 'quatro dias depois' da anterior, sem horário."
+  },
+  "annotations_bbc": {
+    "8": "Data exata dessa mensagem e da seguinte não publicada; BBC diz apenas 'mais tarde'.",
+    "11": "Pedido de retirada de vídeo de drone sobre a Ilha do Topete (perfil My Phantom Toy).",
+    "14": "Enviada cinco dias depois do pedido, segundo a BBC.",
+    "38": "Resposta no mesmo dia, conforme a ordem da reportagem; horário não publicado.",
+    "40": "BBC: 'oito dias depois' de 02/09/2024.",
+    "41": "A BBC informa que as conversas não demonstram que o acesso tenha ocorrido; a Folha disse não ter registrado ataques.",
+    "57": "A BBC não registra resposta de Vorcaro autorizando a exclusão nem demonstração técnica do acesso; a piauí disse não ter registrado problema no site."
   }
 }

@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Equipe de imprensa do Banco Master"
+    ],
+    "saved_as": "equipe-imprensa-master",
+    "phone": null,
+    "date_range": {
+      "start": "2025-04-29",
+      "end": "2025-04-29"
+    },
+    "total_messages": 3,
+    "source": "Coluna de Natália Portinari no UOL, 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master' (19/11/2026), com mensagens obtidas pelo UOL. Não são transcrições integrais; a conversa completa não é pública.",
+    "note": "Trechos citados na imprensa. Todas as mensagens são citações de reportagem (source 'press', verified false), sem prints correspondentes; hora não informada, por isso timestamp e time são null. Quando a matéria só parafraseia a mensagem, o conteúdo vem entre colchetes e só o trecho entre aspas é literal. Grafias preservadas como publicadas. Remetente 'DV' = Daniel Vorcaro. A defesa de Vorcaro não respondeu à matéria. O grupo 'equipe de imprensa' não tem nomes na matéria; é tratado como um contato coletivo.",
+    "visible_date_headers_without_messages": []
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": null,
+      "date": "2025-04-29",
+      "date_precision": "day",
+      "time": null,
+      "sender": "DV",
+      "content": "[pediu à equipe uma nota] \"dizendo que a Esh tem feito denúncias infundadas em diversos órgãos com objetivo de extorquir o banco\"",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "UOL — coluna de Natália Portinari (19/11/2026), 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master'",
+      "notes": "Manhã de 29/04/2025, 'na manhã seguinte' à consulta de 28/04/2025 da coluna de Malu Gaspar (O Globo) ao Master sobre um inquérito da PF aberto a partir de denúncia da Esh sobre a compra de precatórios supervalorizados. Só o trecho entre aspas é literal. A matéria não informa o canal nem os integrantes da equipe."
+    },
+    {
+      "id": 2,
+      "timestamp": null,
+      "date": "2025-04-29",
+      "date_precision": "day",
+      "time": null,
+      "sender": "DV",
+      "content": "Que por esse tipo de atividade seu controlador já sofreu ordem de prisão recentemente",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "UOL — coluna de Natália Portinari (19/11/2026), 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master'",
+      "notes": "Mesma ocasião. 'Seu controlador' refere-se a Timerman, controlador da Esh. A matéria afirma que a informação era falsa. Frase citada como 'escreveu' após o pedido da nota; pode ser da mesma mensagem da anterior."
+    },
+    {
+      "id": 3,
+      "timestamp": null,
+      "date": "2025-04-29",
+      "date_precision": "day",
+      "time": null,
+      "sender": "DV",
+      "content": "[pediu que a nota fosse publicada] \"na íntegra\"",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "UOL — coluna de Natália Portinari (19/11/2026), 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master'",
+      "notes": "Só o trecho entre aspas é literal; a matéria não nomeia o destinatário, presumido como a equipe pelo contexto. Segundo a matéria, Walfrido Warde enviou a Vorcaro uma versão que dizia que a ficha policial e judicial de Timerman era extensa, e a versão final, revisada por Vorcaro, dizia que o gestor já tinha sido 'condenado à prisão por essa mesma prática'. A matéria não informa se a nota foi de fato publicada."
+    }
+  ],
+  "reported_patterns": [
+    {
+      "topic": "Nota sobre a denúncia da Esh",
+      "description": "Resposta do Master à consulta da coluna de Malu Gaspar (O Globo) em 28/04/2025 sobre inquérito da PF. A versão final da nota, revisada por Vorcaro, atribuía a Timerman condenação à prisão por 'essa mesma prática'; segundo a matéria, isso não era verdade. Ver também o arquivo de Walfrido Warde (id 71).",
+      "source_ref": "UOL — coluna de Natália Portinari (19/11/2026), 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master'"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-04-29",
+        "message_count": 3,
+        "first_message_id": 1,
+        "last_message_id": 3
+      }
+    ]
+  }
+}

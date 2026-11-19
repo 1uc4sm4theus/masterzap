@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Mágino Barci de Moraes"
+    ],
+    "saved_as": "magino-barci-de-moraes",
+    "phone": null,
+    "date_range": {
+      "start": "2024-08",
+      "end": "2024-08"
+    },
+    "total_messages": 1,
+    "source": "Coluna de Natália Portinari no UOL, 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master' (19/11/2026), com mensagens obtidas pelo UOL. Não são transcrições integrais; a conversa completa não é pública.",
+    "note": "Trechos citados na imprensa. Todas as mensagens são citações de reportagem (source 'press', verified false), sem prints correspondentes; hora não informada, por isso timestamp e time são null. Quando a matéria só parafraseia a mensagem, o conteúdo vem entre colchetes e só o trecho entre aspas é literal. Grafias preservadas como publicadas. Remetente 'DV' = Daniel Vorcaro. A defesa de Vorcaro não respondeu à matéria. O inquérito citado é o da Gafisa, aberto a partir de denúncia da Esh e conduzido pela PF; segundo a matéria, o delegado o concluiu sem indiciar ninguém (agosto de 2024). Não confundir com o inquérito da Polícia Civil de SP sobre honorários da Esh, que motivou a busca na casa de Timerman em 29/11/2024 e foi arquivado a pedido do Ministério Público por falta de provas.",
+    "visible_date_headers_without_messages": []
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": null,
+      "date": "2024-08",
+      "date_precision": "month",
+      "time": null,
+      "sender": "Mágino Barci de Moraes",
+      "content": "[informou que o delegado tinha concluído o inquérito sobre a Gafisa sem indiciar ninguém e que o procurador do caso] \"encampa sugestões do Vladimir\"",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "press",
+      "verified": false,
+      "source_ref": "UOL — coluna de Natália Portinari (19/11/2026), 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master'",
+      "notes": "Mensagem a Vorcaro em agosto de 2024; dia não informado. Só o trecho entre aspas é literal; o resto é paráfrase da matéria. 'Vladimir' refere-se a Vladimir Timerman (gestor da Esh Capital). A matéria diz 'Segundo ele, porém', atribuindo a avaliação sobre o procurador ao próprio advogado."
+    }
+  ],
+  "reported_patterns": [
+    {
+      "topic": "Queixa-crime contra Timerman (out/2024)",
+      "description": "Em outubro de 2024, Vorcaro e o Master apresentaram queixa-crime contra Timerman, patrocinada pelo escritório Barci de Moraes, de Viviane Barci de Moraes. A queixa foi rejeitada por falta de justa causa. A matéria não detalha a relação entre Mágino Barci de Moraes e o escritório de Viviane Barci de Moraes; o vínculo aqui é apenas pelo sobrenome do escritório.",
+      "source_ref": "UOL — coluna de Natália Portinari (19/11/2026), 'Mensagens mostram ofensiva de Vorcaro contra gestor que denunciou o Master'"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-08",
+        "message_count": 1,
+        "first_message_id": 1,
+        "last_message_id": 1,
+        "precision": "month"
+      }
+    ]
+  }
+}
