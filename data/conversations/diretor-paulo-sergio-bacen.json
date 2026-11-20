@@ -7,16 +7,57 @@
     "saved_as": null,
     "phone": "556192146932",
     "date_range": {
-      "start": "2025-03-19",
+      "start": "2024-10",
       "end": "2025-03-19"
     },
-    "total_messages": 5,
+    "total_messages": 7,
     "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+    "additional_sources": [
+      {
+        "name": "Veja",
+        "title": "A comemoração de Vorcaro com ex-diretor do BC por vitória no STF: 'Ganhamos'",
+        "url": "https://veja.abril.com.br/brasil/a-comemoracao-de-vorcaro-com-ex-diretor-do-bc-por-vitoria-no-stf-ganhamos/",
+        "covers": [1, 2]
+      }
+    ],
+    "note": "Trechos citados no relatório policial e em reportagem da Veja — a conversa completa não consta dos documentos. As mensagens de outubro de 2024 (ids 1 e 2) vêm da reportagem; dia e hora exatos não foram informados."
   },
   "messages": [
     {
       "id": 1,
+      "timestamp": null,
+      "date": "2024-10",
+      "time": null,
+      "sender": "DV",
+      "content": "Ganhamos STF",
+      "type": "forwarded",
+      "is_edited": false,
+      "attachment": {
+        "type": "text_summary",
+        "description": "Resumo de um julgamento ocorrido na Segunda Turma do STF, encaminhado junto com a mensagem (conteúdo não reproduzido na reportagem)"
+      },
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "source_ref": "Veja"
+    },
+    {
+      "id": 2,
+      "timestamp": null,
+      "date": "2024-10",
+      "time": null,
+      "sender": "Paulo Sergio",
+      "content": "👍👍👍",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "source_ref": "Veja"
+    },
+    {
+      "id": 3,
       "timestamp": "2025-03-19T19:55:44",
       "date": "2025-03-19",
       "time": "19:55:44",
@@ -30,7 +71,7 @@
       "source_figure": 180
     },
     {
-      "id": 2,
+      "id": 4,
       "timestamp": "2025-03-19T20:22:41",
       "date": "2025-03-19",
       "time": "20:22:41",
@@ -44,7 +85,7 @@
       "source_figure": 180
     },
     {
-      "id": 3,
+      "id": 5,
       "timestamp": "2025-03-19T20:24:20",
       "date": "2025-03-19",
       "time": "20:24:20",
@@ -58,7 +99,7 @@
       "source_figure": 180
     },
     {
-      "id": 4,
+      "id": 6,
       "timestamp": "2025-03-19T20:28:35",
       "date": "2025-03-19",
       "time": "20:28:35",
@@ -72,7 +113,7 @@
       "source_figure": 180
     },
     {
-      "id": 5,
+      "id": 7,
       "timestamp": "2025-03-19T20:32:42",
       "date": "2025-03-19",
       "time": "20:32:42",
@@ -89,10 +130,16 @@
   "index": {
     "dates": [
       {
+        "date": "2024-10",
+        "message_count": 2,
+        "first_message_id": 1,
+        "last_message_id": 2
+      },
+      {
         "date": "2025-03-19",
         "message_count": 5,
-        "first_message_id": 1,
-        "last_message_id": 5
+        "first_message_id": 3,
+        "last_message_id": 7
       }
     ]
   }
