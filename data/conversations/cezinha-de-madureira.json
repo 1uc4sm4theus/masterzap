@@ -1,23 +1,56 @@
 {
   "metadata": {
-    "participants": [
-      "DV",
-      "Cezinha de Madureira"
-    ],
+    "participants": ["DV", "Cezinha de Madureira"],
     "saved_as": "cezinha-de-madureira",
     "phone": null,
-    "date_range": {
-      "start": "2025-03-13",
-      "end": "2025-03-14"
-    },
-    "total_messages": 9,
-    "source": "1 captura de tela de conversa de WhatsApp com marca d'água 'arkanto company' (arquivos 1791815573038_image.png e 1791815578364_image.png, idênticos; transcrito uma vez). Transcrição feita exclusivamente a partir do que aparece na imagem.",
-    "note": "Texto transcrito literalmente, preservando grafia e pontuação como aparecem no print. O print não mostra nome do contato, cabeçalho nem telefone: o nome 'Cezinha de Madureira' foi informado pelo usuário para esta conversa e o titular do aparelho (balões verdes, à direita) foi rotulado 'DV' seguindo as demais conversas do conjunto; ambos os rótulos devem ser confirmados. O print mostra apenas hora e minuto, sem segundos nem fuso; por isso 'timestamp' é null em todos os registros e 'date' e 'time' trazem o que está visível. A data 2025-03-13 das ids 1 a 5 é inferida (ver notes). Inclui 2 registros de chamada de voz (type 'call'): 1 perdida (sem hora) e 1 com duração 00:20. Todos os horários aparecem sem seus separadores de data originais, exceto '14 De Março De 2025'. O print é um recorte: há mensagens antes e depois fora do quadro.",
+    "date_range": { "start": "2025-03-13", "end": "2025-03-14" },
+    "total_messages": 11,
+    "source": "1 captura de tela de conversa de WhatsApp com marca d'água 'arkanto company' (arquivos 1791815573038_image.png e 1791815578364_image.png, idênticos; transcrito uma vez), complementada por 2 mensagens citadas na matéria de O Globo de 20/11/2026 sobre o relatório da PF (ids 1 e 2), que não aparecem no print.",
+    "note": "Registros com source 'screenshot' foram transcritos literalmente do print, preservando grafia e pontuação. O print não mostra nome do contato, cabeçalho nem telefone: o nome 'Cezinha de Madureira' foi informado pelo usuário e o titular do aparelho (balões verdes, à direita) foi rotulado 'DV'; ambos os rótulos devem ser confirmados. O print mostra apenas hora e minuto, sem segundos nem fuso; por isso 'timestamp' é null em todos os registros. A data 2025-03-13 dos ids 1 a 7 é inferida. Inclui 2 registros de chamada de voz (type 'call'): 1 perdida (sem hora) e 1 com duração 00:20. Os ids 1 e 2 vêm da matéria (source 'matéria O Globo', verified false): a matéria os atribui ao deputado Cezinha de Madureira e os situa antes do 'Show'/'Marcado', mas não informa hora; o texto do id 1 é o citado pela matéria e a grafia é a dela; o endereço do id 2 não é reproduzido na matéria. Pendente: print da parte de cima da conversa para confirmar ids 1 e 2 e obter o endereço.",
     "visible_date_headers_without_messages": []
   },
   "messages": [
     {
       "id": 1,
+      "id_anterior": null,
+      "timestamp": null,
+      "date": "2025-03-13",
+      "time": null,
+      "sender": "Cezinha de Madureira",
+      "content": "Amanhã sexta feira 17:00 com ministro André em são Paulo",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "matéria O Globo",
+      "verified": false,
+      "notes": "Citada na matéria; não aparece no print (provavelmente acima do recorte). Hora desconhecida, anterior às 09:49. Data 2025-03-13 inferida pela expressão 'Amanhã sexta feira' e pela reiteração 'sexta dia 14' (id 5); 14/03/2025 foi sexta-feira."
+    },
+    {
+      "id": 2,
+      "id_anterior": null,
+      "timestamp": null,
+      "date": "2025-03-13",
+      "time": null,
+      "sender": "Cezinha de Madureira",
+      "content": null,
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "matéria O Globo",
+      "verified": false,
+      "notes": "A matéria diz que, em seguida, o parlamentar enviou o endereço do Iter (instituto do qual André Mendonça era sócio na ocasião). O texto do endereço não é reproduzido; conteúdo pendente. Tipo (texto, localização ou outro) não informado."
+    },
+    {
+      "id": 3,
+      "id_anterior": 1,
       "timestamp": null,
       "date": "2025-03-13",
       "time": "09:49",
@@ -32,10 +65,11 @@
       "urls": [],
       "source": "screenshot",
       "verified": true,
-      "notes": "Balão cortado na borda superior do print; texto 'Show' legível. Data 2025-03-13 inferida: a mensagem está acima do separador '14 De Março De 2025' e a id 4 diz 'Amanhã sexta dia 14'; o separador do dia anterior não aparece no recorte."
+      "notes": "Balão cortado na borda superior do print; texto 'Show' legível. Data 2025-03-13 inferida: a mensagem está acima do separador '14 De Março De 2025' e o id 5 diz 'Amanhã sexta dia 14'; o separador do dia anterior não aparece no recorte."
     },
     {
-      "id": 2,
+      "id": 4,
+      "id_anterior": 2,
       "timestamp": null,
       "date": "2025-03-13",
       "time": "09:49",
@@ -50,28 +84,11 @@
       "urls": [],
       "source": "screenshot",
       "verified": true,
-      "notes": "Data 2025-03-13 inferida: a mensagem está acima do separador '14 De Março De 2025' e a id 4 diz 'Amanhã sexta dia 14'; o separador do dia anterior não aparece no recorte."
+      "notes": "Data 2025-03-13 inferida (ver id 3)."
     },
     {
-      "id": 3,
-      "timestamp": null,
-      "date": "2025-03-13",
-      "time": "09:50",
-      "sender": "Cezinha de Madureira",
-      "content": "Estarei lá lara te receber",
-      "type": "text",
-      "reply_to_id": null,
-      "is_forwarded": false,
-      "is_edited": false,
-      "attachment": null,
-      "reaction": null,
-      "urls": [],
-      "source": "screenshot",
-      "verified": true,
-      "notes": "Grafia preservada. 'lara' pode ser erro de digitação ou nome próprio; não resolvido. Data 2025-03-13 inferida: a mensagem está acima do separador '14 De Março De 2025' e a id 4 diz 'Amanhã sexta dia 14'; o separador do dia anterior não aparece no recorte."
-    },
-    {
-      "id": 4,
+      "id": 5,
+      "id_anterior": 4,
       "timestamp": null,
       "date": "2025-03-13",
       "time": "09:51",
@@ -86,10 +103,30 @@
       "urls": [],
       "source": "screenshot",
       "verified": true,
-      "notes": "Data 2025-03-13 inferida: a mensagem está acima do separador '14 De Março De 2025' e a id 4 diz 'Amanhã sexta dia 14'; o separador do dia anterior não aparece no recorte."
+      "notes": "Data 2025-03-13 inferida (ver id 3). Reitera o horário informado na mensagem do id 1."
     },
     {
-      "id": 5,
+      "id": 6,
+      "id_anterior": 3,
+      "timestamp": null,
+      "date": "2025-03-13",
+      "time": "09:50",
+      "sender": "Cezinha de Madureira",
+      "content": "Estarei lá lara te receber",
+      "type": "text",
+      "reply_to_id": null,
+      "is_forwarded": false,
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source": "screenshot",
+      "verified": true,
+      "notes": "Grafia preservada. 'lara' pode ser erro de digitação ou nome próprio; não resolvido. ATENÇÃO À ORDEM: pelo horário (09:50) esta mensagem vem antes do id 5 (09:51); mantida aqui a posição visual do print está no JSON anterior (ids 3 e 4). Ver observação abaixo."
+    },
+    {
+      "id": 7,
+      "id_anterior": 5,
       "timestamp": null,
       "date": "2025-03-13",
       "time": null,
@@ -104,10 +141,11 @@
       "urls": [],
       "source": "screenshot",
       "verified": true,
-      "notes": "Balão verde à direita (lado do titular); o print mostra o rótulo 'sem hora' no lugar do horário. Posição entre a id 4 e o separador do dia 14. Data 2025-03-13 inferida: a mensagem está acima do separador '14 De Março De 2025' e a id 4 diz 'Amanhã sexta dia 14'; o separador do dia anterior não aparece no recorte."
+      "notes": "Balão verde à direita (lado do titular); o print mostra 'sem hora'. Posição entre a última mensagem do dia 13 e o separador do dia 14. Data 2025-03-13 inferida (ver id 3)."
     },
     {
-      "id": 6,
+      "id": 8,
+      "id_anterior": 6,
       "timestamp": null,
       "date": "2025-03-14",
       "time": "16:37",
@@ -125,7 +163,8 @@
       "notes": null
     },
     {
-      "id": 7,
+      "id": 9,
+      "id_anterior": 7,
       "timestamp": null,
       "date": "2025-03-14",
       "time": "16:37",
@@ -143,7 +182,8 @@
       "notes": null
     },
     {
-      "id": 8,
+      "id": 10,
+      "id_anterior": 8,
       "timestamp": null,
       "date": "2025-03-14",
       "time": "16:37",
@@ -158,10 +198,11 @@
       "urls": [],
       "source": "screenshot",
       "verified": true,
-      "notes": "Registro de chamada de voz com duração 00:20, exibido no lado do contato (balão branco à esquerda)."
+      "notes": "Registro de chamada de voz com duração 00:20, exibido no lado do contato (balão branco à esquerda). A matéria a descreve como 'ligação de 20 segundos'."
     },
     {
-      "id": 9,
+      "id": 11,
+      "id_anterior": 9,
       "timestamp": null,
       "date": "2025-03-14",
       "time": "16:43",
@@ -183,16 +224,16 @@
     "dates": [
       {
         "date": "2025-03-13",
-        "message_count": 5,
+        "message_count": 7,
         "first_message_id": 1,
-        "last_message_id": 5,
+        "last_message_id": 7,
         "note": "Data inferida; separador do dia não aparece no print."
       },
       {
         "date": "2025-03-14",
         "message_count": 4,
-        "first_message_id": 6,
-        "last_message_id": 9
+        "first_message_id": 8,
+        "last_message_id": 11
       }
     ]
   }
