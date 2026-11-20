@@ -6,58 +6,146 @@
     ],
     "saved_as": null,
     "phone": "556192146932",
+    "contact_label_in_source": "Diretor Paulo Sergio Bacen (556192146932)",
     "date_range": {
-      "start": "2024-10",
+      "start": "2024-10-01",
       "end": "2025-03-19"
     },
-    "total_messages": 7,
-    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "additional_sources": [
-      {
-        "name": "Veja",
-        "title": "A comemoração de Vorcaro com ex-diretor do BC por vitória no STF: 'Ganhamos'",
-        "url": "https://veja.abril.com.br/brasil/a-comemoracao-de-vorcaro-com-ex-diretor-do-bc-por-vitoria-no-stf-ganhamos/",
-        "covers": [1, 2]
-      }
-    ],
-    "note": "Trechos citados no relatório policial e em reportagem da Veja — a conversa completa não consta dos documentos. As mensagens de outubro de 2024 (ids 1 e 2) vêm da reportagem; dia e hora exatos não foram informados."
+    "total_messages": 12,
+    "source": "Print de conversa de WhatsApp com cabeçalho 'WhatsApp Chat - Diretor Paulo Sergio Bacen - 556192146932' (01/10/2024; número da figura e do relatório não visíveis no recorte); IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF (trechos de 19/03/2025, p. 177, fig. 180).",
+    "note": "Ids 1 a 7 (01/10/2024) foram transcritos literalmente do print, que mostra data, hora com segundos e fuso -03:00; grafia e pontuação preservadas. Ids 8 a 12 (19/03/2025) são trechos citados no relatório policial, sem fuso. A conversa completa não consta dos documentos. O print está cortado no topo: há uma mensagem anterior à de id 1, não legível. Remetente das chamadas atribuído pelo lado do balão (esquerda = contato, direita = DV). Os ids 1 a 4 aparecem marcados como 'Encaminhada' no print (forwarded: true): o remetente (DV) encaminhou o conteúdo ao contato, e o autor original não aparece no print."
   },
   "messages": [
     {
       "id": 1,
-      "timestamp": null,
-      "date": "2024-10",
-      "time": null,
+      "timestamp": "2024-10-01T10:08:21-03:00",
+      "date": "2024-10-01",
+      "time": "10:08:21",
       "sender": "DV",
-      "content": "Ganhamos STF",
-      "type": "forwarded",
+      "content": "Pode",
+      "type": "text",
       "is_edited": false,
-      "attachment": {
-        "type": "text_summary",
-        "description": "Resumo de um julgamento ocorrido na Segunda Turma do STF, encaminhado junto com a mensagem (conteúdo não reproduzido na reportagem)"
-      },
+      "attachment": null,
+      "reaction": null,
       "urls": [],
       "source_page": null,
       "source_figure": null,
-      "source_ref": "Veja"
+      "forwarded": true,
+      "quoted": null,
+      "notes": "Mensagem encaminhada (marcada como 'Encaminhada' no print); autor original não identificado. Hora legível como 10:08:21, mas a mensagem seguinte é 16:09:58; conferir no original se não é 16:08:21.",
+      "source_context": "Mensagem encaminhada; autor original não identificado no print."
     },
     {
       "id": 2,
-      "timestamp": null,
-      "date": "2024-10",
-      "time": null,
+      "timestamp": "2024-10-01T16:09:58-03:00",
+      "date": "2024-10-01",
+      "time": "16:09:58",
+      "sender": "DV",
+      "content": "Ganhamos STFI",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "forwarded": true,
+      "quoted": null,
+      "notes": "Mensagem encaminhada (marcada como 'Encaminhada' no print); autor original não identificado. Grafia preservada ('STFI' provavelmente é 'STF!').",
+      "source_context": "Mensagem encaminhada; autor original não identificado no print."
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-10-01T16:22:47-03:00",
+      "date": "2024-10-01",
+      "time": "16:22:47",
+      "sender": "DV",
+      "content": "Boa tarde.\n\nSegue resultado do julgamento do ARE 1327995, de interesse das usinas, que discute a aplicabilidade do Tema 826:\n\nA Segunda Turma do STF, por maioria, negou provimento ao Agravo da União.\nA tese vencedora foi a de que o Tema 826 não se aplica aos processos em fase de execução, devendo ser observada a perícia realizada na fase de conhecimento.\n\nO placar ficou 3x2 (os Ministros Nunes Marques, Edson Fachin e Dias Toffoli negaram provimento ao ARE da União. Foram vencidos os Ministros Gilmar Mendes e André Mendonça)",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "reaction": "🙏",
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "forwarded": true,
+      "quoted": null,
+      "notes": "Mensagem encaminhada (marcada como 'Encaminhada' no print); autor original não identificado. O texto é o resumo do julgamento da Segunda Turma encaminhado junto com o 'Ganhamos STF'. O print mostra a reação 🙏 sob o balão, sem identificar quem reagiu. A segunda linha ('Segue resultado...') está em negrito no original.",
+      "source_context": "Mensagem encaminhada; autor original não identificado no print."
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-10-01T16:22:52-03:00",
+      "date": "2024-10-01",
+      "time": "16:22:52",
+      "sender": "DV",
+      "content": "👊👊",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "forwarded": true,
+      "quoted": null,
+      "notes": "Mensagem encaminhada (marcada como 'Encaminhada' no print); autor original não identificado. Dois emojis de punho; o tom de pele não é distinguível no print.",
+      "source_context": "Mensagem encaminhada; autor original não identificado no print."
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-10-01T16:48:34-03:00",
+      "date": "2024-10-01",
+      "time": "16:48:34",
       "sender": "Paulo Sergio",
       "content": "👍👍👍",
       "type": "text",
       "is_edited": false,
       "attachment": null,
+      "reaction": null,
       "urls": [],
       "source_page": null,
       "source_figure": null,
-      "source_ref": "Veja"
+      "forwarded": false,
+      "quoted": null
     },
     {
-      "id": 3,
+      "id": 6,
+      "timestamp": "2024-10-01T17:08:59-03:00",
+      "date": "2024-10-01",
+      "time": "17:08:59",
+      "sender": "Paulo Sergio",
+      "content": "Chamada de voz perdida",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "forwarded": false,
+      "quoted": null,
+      "notes": "Balão azul alinhado à esquerda (lado do contato)."
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-10-01T17:09:13-03:00",
+      "date": "2024-10-01",
+      "time": "17:09:13",
+      "sender": "Paulo Sergio",
+      "content": "Quando puder me liga",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "reaction": null,
+      "urls": [],
+      "source_page": null,
+      "source_figure": null,
+      "forwarded": false,
+      "quoted": null
+    },
+    {
+      "id": 8,
       "timestamp": "2025-03-19T19:55:44",
       "date": "2025-03-19",
       "time": "19:55:44",
@@ -66,12 +154,15 @@
       "type": "text",
       "is_edited": false,
       "attachment": null,
+      "reaction": null,
       "urls": [],
       "source_page": 177,
-      "source_figure": 180
+      "source_figure": 180,
+      "forwarded": false,
+      "quoted": null
     },
     {
-      "id": 4,
+      "id": 9,
       "timestamp": "2025-03-19T20:22:41",
       "date": "2025-03-19",
       "time": "20:22:41",
@@ -80,12 +171,15 @@
       "type": "text",
       "is_edited": false,
       "attachment": null,
+      "reaction": null,
       "urls": [],
       "source_page": 177,
-      "source_figure": 180
+      "source_figure": 180,
+      "forwarded": false,
+      "quoted": null
     },
     {
-      "id": 5,
+      "id": 10,
       "timestamp": "2025-03-19T20:24:20",
       "date": "2025-03-19",
       "time": "20:24:20",
@@ -94,12 +188,15 @@
       "type": "call",
       "is_edited": false,
       "attachment": null,
+      "reaction": null,
       "urls": [],
       "source_page": 177,
-      "source_figure": 180
+      "source_figure": 180,
+      "forwarded": false,
+      "quoted": null
     },
     {
-      "id": 6,
+      "id": 11,
       "timestamp": "2025-03-19T20:28:35",
       "date": "2025-03-19",
       "time": "20:28:35",
@@ -108,12 +205,15 @@
       "type": "text",
       "is_edited": false,
       "attachment": null,
+      "reaction": null,
       "urls": [],
       "source_page": 177,
-      "source_figure": 180
+      "source_figure": 180,
+      "forwarded": false,
+      "quoted": null
     },
     {
-      "id": 7,
+      "id": 12,
       "timestamp": "2025-03-19T20:32:42",
       "date": "2025-03-19",
       "time": "20:32:42",
@@ -122,24 +222,27 @@
       "type": "text",
       "is_edited": false,
       "attachment": null,
+      "reaction": null,
       "urls": [],
       "source_page": 177,
-      "source_figure": 180
+      "source_figure": 180,
+      "forwarded": false,
+      "quoted": null
     }
   ],
   "index": {
     "dates": [
       {
-        "date": "2024-10",
-        "message_count": 2,
+        "date": "2024-10-01",
+        "message_count": 7,
         "first_message_id": 1,
-        "last_message_id": 2
+        "last_message_id": 7
       },
       {
         "date": "2025-03-19",
         "message_count": 5,
-        "first_message_id": 3,
-        "last_message_id": 7
+        "first_message_id": 8,
+        "last_message_id": 12
       }
     ]
   }
