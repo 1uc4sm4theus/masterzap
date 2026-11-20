@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Marcus Vinicius Adv"
+    ],
+    "saved_as": "marcus-vinicius",
+    "phone": null,
+    "date_range": {
+      "start": "2024-04-17",
+      "end": "2024-04-17"
+    },
+    "total_messages": 8,
+    "sources": [
+      "Capturas de tela do usuário — WhatsApp Chat - Marcus Vinicius Adv (17/04/2024)"
+    ],
+    "note": "Conversa entre DV e contato salvo como 'Marcus Vinicius Adv'. Número redatado nas capturas. Todas as mensagens em 17/04/2024."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-04-17T14:57:34-03:00",
+      "date": "2024-04-17",
+      "time": "14:57:34",
+      "sender": null,
+      "content": "Chamada de voz perdida",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Capturas de tela do usuário (imagens 1 e 2 — 17/04/2024)",
+      "notes": "Chamada azul (recebida por DV / iniciada por Marcus Vinicius); não atendida."
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-04-17T14:58:22-03:00",
+      "date": "2024-04-17",
+      "time": "14:58:22",
+      "sender": "Marcus Vinicius Adv",
+      "content": "O\nAndré Mendonça me chamou lá no\nStf às 16 hs. Posso ir com vc agora ou às 17 hs?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Capturas de tela do usuário (imagens 1 e 2 — 17/04/2024)"
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-04-17T15:02:24-03:00",
+      "date": "2024-04-17",
+      "time": "15:02:24",
+      "sender": "DV",
+      "content": "Opa",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Capturas de tela do usuário (imagens 1 e 2 — 17/04/2024)"
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-04-17T15:07:02-03:00",
+      "date": "2024-04-17",
+      "time": "15:07:02",
+      "sender": null,
+      "content": "Chamada de voz perdida",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Capturas de tela do usuário (imagens 1 e 2 — 17/04/2024)",
+      "notes": "Chamada azul (recebida por DV / iniciada por Marcus Vinicius); não atendida."
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-04-17T15:13:34-03:00",
+      "date": "2024-04-17",
+      "time": "15:13:34",
+      "sender": "DV",
+      "content": "Chamada de voz perdida",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Capturas de tela do usuário (imagens 1 e 2 — 17/04/2024)",
+      "notes": "Chamada verde (iniciada por DV); não atendida."
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-04-17T15:16:30-03:00",
+      "date": "2024-04-17",
+      "time": "15:16:30",
+      "sender": null,
+      "content": "Chamada de voz perdida",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Capturas de tela do usuário (imagens 1 e 2 — 17/04/2024)",
+      "notes": "Chamada azul (recebida por DV / iniciada por Marcus Vinicius); não atendida."
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-04-17T15:17:05-03:00",
+      "date": "2024-04-17",
+      "time": "15:17:05",
+      "sender": "Marcus Vinicius Adv",
+      "content": "Vou às 17 hs no seu escritório",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Capturas de tela do usuário (imagens 1 e 2 — 17/04/2024)"
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-04-17T15:17:08-03:00",
+      "date": "2024-04-17",
+      "time": "15:17:08",
+      "sender": "Marcus Vinicius Adv",
+      "content": "Pode ser?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Capturas de tela do usuário (imagens 1 e 2 — 17/04/2024)"
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-04-17T15:22:25-03:00",
+      "date": "2024-04-17",
+      "time": "15:22:25",
+      "sender": "DV",
+      "content": "Pode ser 18?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (imagem 2 — 17/04/2024)"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-04-17",
+        "message_count": 9,
+        "first_message_id": 1,
+        "last_message_id": 9
+      }
+    ]
+  }
+}

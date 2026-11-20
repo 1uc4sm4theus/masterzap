@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Jarbas"
+    ],
+    "saved_as": "jarbas",
+    "phone": null,
+    "date_range": {
+      "start": "2025-05-24",
+      "end": "2025-05-24"
+    },
+    "total_messages": 3,
+    "sources": [
+      "Capturas de tela do usuário — WhatsApp Chat - Jarbas (24/05/2025)"
+    ],
+    "note": "Conversa entre DV e contato salvo como 'Jarbas'. Número redatado nas capturas. Três mensagens visíveis em 24/05/2025: convite ao lançamento do Instituto Iter em BH e convite especial individual para evento em MG no dia 02/06/2025."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-05-24T10:49:21-03:00",
+      "date": "2025-05-24",
+      "time": "10:49:21",
+      "sender": "Jarbas",
+      "content": "Daniel, bom dia!\n\nO Instituto Iter, criado pelo Professor e Ministro do STF André Mendonça, se dedica a formar líderes e profissionais que farão a diferença em suas áreas, impulsionando o desenvolvimento sustentável e a inovação no Brasil.\n\nConvidamos-o a participar do seu lançamento em Belo Horizonte no dia 2 próximo, segunda-feira dia, às 18h, no Hotel Fasano.\n\nTeremos um debate com Ministro André Mendonça e o Ministro Antônio Anastasia, conforme convite abaixo, seguido de coquetel.\n\nSao poucos os convidados, que foram convidados foram selecionados pelo ITER, e será necessário a confirmação para leitura de QRCODE por questões de segurança.\n\nContamos com a sua presença.\n\nForte abraço.\n\nJarbas",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (imagem 2 — 24/05/2025)",
+      "notes": "Convite ao lançamento do Instituto Iter em BH. Texto parcialmente truncado na captura; transcrito conforme visível."
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-05-24T10:49:36-03:00",
+      "date": "2025-05-24",
+      "time": "10:49:36",
+      "sender": "Jarbas",
+      "content": "CONVITE ESPECIAL - INDIVIDUAL\n\nO Iter desembarca em Minas Gerais, com o evento O papel das instituições públicas nas reformas estruturais do Estado: eficiência e desenvolvimento econômico!\n\nParticipe desse encontro imperdível, com autoridades e especialistas.\n\n📅 2 de junho – 18h às 20h\n🎫 Retirada de ingresso individual: http://bit.ly/3S5Uxs5\n⚠️ Por motivo de segurança, este convite é individual e intransferível, com vaga a ser confirmada mediante cadastro e QR CODE de acesso. Orientamos que não reencaminhe indevidamente este convite para outras pessoas.\n\nHaverá controle de acesso ao local do evento, respeitando as regras das equipes de segurança das autoridades presentes.\n\n💬 Em caso de dúvidas, contate o Instituto Iter em resposta a esta mensagem.\n\nContamos com sua presença!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": ["http://bit.ly/3S5Uxs5"],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Capturas de tela do usuário (imagens 1 e 3 — 24/05/2025)",
+      "notes": "Convite especial individual para evento do Instituto Iter em MG em 02/06/2025. Texto idêntico nas imagens 1 e 3."
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-05-24T10:49:39-03:00",
+      "date": "2025-05-24",
+      "time": "10:49:39",
+      "sender": "Jarbas",
+      "content": "[imagem]",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (imagem 3 — 24/05/2025)",
+      "notes": "Imagem enviada logo após o convite especial; conteúdo não visível na captura (ícone roxo de câmera)."
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-05-24",
+        "message_count": 3,
+        "first_message_id": 1,
+        "last_message_id": 3
+      }
+    ]
+  }
+}

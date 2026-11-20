@@ -10,9 +10,12 @@
       "start": "2024-03-28",
       "end": "2024-04-04"
     },
-    "total_messages": 18,
-    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+    "total_messages": 20,
+    "sources": [
+      "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+      "Informação de Polícia Judiciária nº 576/2026 — SAPJ/CINQ/DICOR/PF, item 4.4 ('Dos diálogos com o contato Marcio Conjur'), Figura 8 ('Marcio Conjur menciona André Mendonça')"
+    ],
+    "note": "Trechos citados em relatórios policiais — a conversa completa não consta dos documentos. Os ids 9 e 10 (30/03/2024) vêm da Figura 8 da Informação de Polícia Judiciária nº 576/2026; os demais vêm do IPJ-A nº 3298613/2026. No print da Figura 8, o sobrenome e o telefone do contato estão tarjados; o telefone deste arquivo vem do outro relatório e não pôde ser confirmado no print novo. Os ids 9 e 10 mostram hora com segundos e fuso -03:00. A mensagem do id 9 está marcada como 'Encaminhada' no print (forwarded: true): o autor original não aparece. O relatório apresenta o trecho como menção a 'André Mendonça', mas o print não identifica o autor do texto encaminhado."
   },
   "messages": [
     {
@@ -26,6 +29,8 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 182,
       "source_figure": 188
     },
@@ -40,6 +45,8 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 182,
       "source_figure": 188
     },
@@ -54,6 +61,8 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 182,
       "source_figure": 188
     },
@@ -68,6 +77,8 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 182,
       "source_figure": 188
     },
@@ -83,6 +94,7 @@
       "attachment": null,
       "urls": [],
       "forwarded": true,
+      "quoted": null,
       "source_page": 182,
       "source_figure": 188
     },
@@ -97,6 +109,8 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 182,
       "source_figure": 188
     },
@@ -111,6 +125,8 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 182,
       "source_figure": 188
     },
@@ -125,11 +141,50 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 182,
       "source_figure": 188
     },
     {
       "id": 9,
+      "timestamp": "2024-03-30T21:43:03-03:00",
+      "date": "2024-03-30",
+      "time": "21:43:03",
+      "sender": "Marcio Conjur",
+      "content": "Querido Márcio, gratíssimo pelo convite, mas infelizmente não poderei participar. Em abril, já viajo para Portugal, onde ficarei uma semana.\nDe qualquer modo, parabéns pelo evento!!!\nForte abraço!!!",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": true,
+      "quoted": null,
+      "source_page": null,
+      "source_figure": 8,
+      "source_ref": "Informação de Polícia Judiciária nº 576/2026 — SAPJ/CINQ/DICOR/PF, item 4.4, Figura 8",
+      "notes": "Mensagem encaminhada (marcada como 'Encaminhada' no print); autor original não identificado. O texto responde a um convite feito a 'Márcio' para um evento em abril. O relatório apresenta o trecho como menção a 'André Mendonça', que aparece na mensagem seguinte.",
+      "source_context": "Mensagem encaminhada; autor original não identificado no print."
+    },
+    {
+      "id": 10,
+      "timestamp": "2024-03-30T21:43:29-03:00",
+      "date": "2024-03-30",
+      "time": "21:43:29",
+      "sender": "Marcio Conjur",
+      "content": "👆André Mendonça",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_page": null,
+      "source_figure": 8,
+      "source_ref": "Informação de Polícia Judiciária nº 576/2026 — SAPJ/CINQ/DICOR/PF, item 4.4, Figura 8",
+      "notes": "Enviada 26 segundos depois da mensagem encaminhada do id 9. O emoji 👆 aponta para a mensagem acima. O relatório (item 4.4) diz que o contato 'menciona André Mendonça'."
+    },
+    {
+      "id": 11,
       "timestamp": "2024-04-03T09:35:57",
       "date": "2024-04-03",
       "time": "09:35:57",
@@ -139,11 +194,13 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 214,
       "source_figure": 226
     },
     {
-      "id": 10,
+      "id": 12,
       "timestamp": "2024-04-03T09:36:05",
       "date": "2024-04-03",
       "time": "09:36:05",
@@ -153,11 +210,13 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 214,
       "source_figure": 226
     },
     {
-      "id": 11,
+      "id": 13,
       "timestamp": "2024-04-03T09:37:37",
       "date": "2024-04-03",
       "time": "09:37:37",
@@ -167,11 +226,13 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 214,
       "source_figure": 226
     },
     {
-      "id": 12,
+      "id": 14,
       "timestamp": "2024-04-03T10:21:22",
       "date": "2024-04-03",
       "time": "10:21:22",
@@ -181,11 +242,13 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 214,
       "source_figure": 226
     },
     {
-      "id": 13,
+      "id": 15,
       "timestamp": "2024-04-04T10:50:14",
       "date": "2024-04-04",
       "time": "10:50:14",
@@ -196,11 +259,12 @@
       "attachment": null,
       "urls": [],
       "forwarded": true,
+      "quoted": null,
       "source_page": 215,
       "source_figure": 227
     },
     {
-      "id": 14,
+      "id": 16,
       "timestamp": "2024-04-04T10:50:14",
       "date": "2024-04-04",
       "time": "10:50:14",
@@ -211,11 +275,12 @@
       "attachment": null,
       "urls": [],
       "forwarded": true,
+      "quoted": null,
       "source_page": 215,
       "source_figure": 227
     },
     {
-      "id": 15,
+      "id": 17,
       "timestamp": "2024-04-04T10:50:15",
       "date": "2024-04-04",
       "time": "10:50:15",
@@ -226,11 +291,12 @@
       "attachment": null,
       "urls": [],
       "forwarded": true,
+      "quoted": null,
       "source_page": 215,
       "source_figure": 227
     },
     {
-      "id": 16,
+      "id": 18,
       "timestamp": "2024-04-04T10:50:15",
       "date": "2024-04-04",
       "time": "10:50:15",
@@ -241,11 +307,12 @@
       "attachment": null,
       "urls": [],
       "forwarded": true,
+      "quoted": null,
       "source_page": 215,
       "source_figure": 227
     },
     {
-      "id": 17,
+      "id": 19,
       "timestamp": "2024-04-04T10:50:15",
       "date": "2024-04-04",
       "time": "10:50:15",
@@ -255,11 +322,13 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 215,
       "source_figure": 227
     },
     {
-      "id": 18,
+      "id": 20,
       "timestamp": "2024-04-04T10:50:15",
       "date": "2024-04-04",
       "time": "10:50:15",
@@ -269,6 +338,8 @@
       "is_edited": false,
       "attachment": null,
       "urls": [],
+      "forwarded": false,
+      "quoted": null,
       "source_page": 215,
       "source_figure": 227
     }
@@ -282,16 +353,22 @@
         "last_message_id": 8
       },
       {
+        "date": "2024-03-30",
+        "message_count": 2,
+        "first_message_id": 9,
+        "last_message_id": 10
+      },
+      {
         "date": "2024-04-03",
         "message_count": 4,
-        "first_message_id": 9,
-        "last_message_id": 12
+        "first_message_id": 11,
+        "last_message_id": 14
       },
       {
         "date": "2024-04-04",
         "message_count": 6,
-        "first_message_id": 13,
-        "last_message_id": 18
+        "first_message_id": 15,
+        "last_message_id": 20
       }
     ]
   }
