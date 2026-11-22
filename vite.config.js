@@ -6,6 +6,17 @@ export default defineConfig({
       process.env.VERCEL_GIT_COMMIT_SHA || Date.now().toString(36)
     ),
   },
+  server: {
+    // No dev o Vite faz o papel do api/master-ia/... (em produção, o server.mjs).
+    // O caminho /api/master-ia/v1/chat/completions chega igual ao nó.
+    proxy: {
+      '/api/master-ia': {
+        target: 'https://4En3bRYyfZ7s7DL7amhdTwAELdZsWywxSMusuchVtihc.node.k8s.prd.nos.ci',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api\/master-ia/, ''),
+      },
+    },
+  },
   root: '.',
   publicDir: 'public',
   build: {

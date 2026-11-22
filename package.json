@@ -7,6 +7,7 @@
     "dev": "python scripts/split_data.py && vite",
     "build": "python3 scripts/split_data.py && node scripts/export.mjs && vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
+    "start": "node server.mjs",
     "split-data": "python3 scripts/split_data.py",
     "export": "node scripts/export.mjs",
     "prerender": "node scripts/prerender.mjs",

@@ -1,8 +1,4 @@
-import http from 'node:http';
-import fs from 'node:fs';
-import path from 'node:path';
 import { Readable } from 'node:stream';
-import { fileURLToPath } from 'node:url';
 
 const UPSTREAM_URL =
   process.env.MASTER_IA_UPSTREAM_URL ||
@@ -14,14 +10,8 @@ const ALLOWED_ORIGINS = new Set([
   'http://127.0.0.1:5173',
 ]);
 
-const DIST = path.join(path.dirname(fileURLToPath(import.meta.url)), 'dist');
-const TYPES = {
-  '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css',
-  '.json': 'application/json', '.webmanifest': 'application/manifest+json',
-  '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
-  '.webp': 'image/webp', '.ico': 'image/x-icon', '.txt': 'text/plain', '.xml': 'application/xml',
-  '.md': 'text/markdown', '.zip': 'application/zip',
-};
+const MAX_BODY_BYTES = 1_000_000;
+const UPSTREAM_TIMEOUT_MS = 60_000;
 
 function applyCors(req, res) {
   const origin = req.headers.origin;
@@ -34,30 +24,43 @@ function applyCors(req, res) {
   res.setHeader('Access-Control-Max-Age', '86400');
 }
 
-function readBody(req, limit = 1_000_000) {
-  return new Promise((resolve, reject) => {
-    const chunks = [];
-    let size = 0;
-    req.on('data', (c) => {
-      size += c.length;
-      if (size > limit) { reject(new Error('too large')); req.destroy(); return; }
-      chunks.push(c);
-    });
-    req.on('end', () => resolve(Buffer.concat(chunks)));
-    req.on('error', reject);
-  });
+function sendJson(res, status, payload) {
+  if (res.headersSent) return res.end();
+  res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8' });
+  return res.end(JSON.stringify(payload));
 }
 
-async function masterIA(req, res) {
+async function readBody(req) {
+  if (req.body !== undefined && req.body !== null) {
+    if (Buffer.isBuffer(req.body)) return req.body;
+    return Buffer.from(typeof req.body === 'string' ? req.body : JSON.stringify(req.body));
+  }
+  const chunks = [];
+  let size = 0;
+  for await (const chunk of req) {
+    size += chunk.length;
+    if (size > MAX_BODY_BYTES) throw new Error('payload too large');
+    chunks.push(chunk);
+  }
+  return Buffer.concat(chunks);
+}
+
+export default async function handler(req, res) {
   applyCors(req, res);
-  if (req.method === 'OPTIONS') { res.writeHead(204); return res.end(); }
+
+  if (req.method === 'OPTIONS') {
+    res.writeHead(204);
+    return res.end();
+  }
   if (req.method !== 'POST') {
-    res.writeHead(405, { Allow: 'POST, OPTIONS', 'Content-Type': 'application/json' });
-    return res.end(JSON.stringify({ error: 'Método não permitido.' }));
+    res.setHeader('Allow', 'POST, OPTIONS');
+    return sendJson(res, 405, { error: 'Método não permitido.' });
   }
 
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 60000);
+  const timeout = setTimeout(() => controller.abort(), UPSTREAM_TIMEOUT_MS);
+  res.on('close', () => controller.abort());
+
   try {
     const body = await readBody(req);
     const upstream = await fetch(UPSTREAM_URL, {
@@ -66,32 +69,20 @@ async function masterIA(req, res) {
       body,
       signal: controller.signal,
     });
+    clearTimeout(timeout);
+
     res.writeHead(upstream.status, {
       'Content-Type': upstream.headers.get('content-type') || 'application/json',
-      'Cache-Control': 'no-cache',
+      'Cache-Control': 'no-cache, no-transform',
+      'X-Accel-Buffering': 'no',
     });
     if (!upstream.body) return res.end();
-    Readable.fromWeb(upstream.body).pipe(res); // repassa streaming se houver
+    Readable.fromWeb(upstream.body).on('error', () => res.end()).pipe(res);
   } catch (error) {
+    clearTimeout(timeout);
     const message = error?.name === 'AbortError'
       ? 'A análise demorou mais que o tempo esperado.'
       : 'Não foi possível concluir a resposta da Master IA.';
-    if (!res.headersSent) res.writeHead(502, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ error: message }));
-  } finally {
-    clearTimeout(timeout);
+    sendJson(res, error?.message === 'payload too large' ? 413 : 502, { error: message });
   }
 }
-
-http.createServer((req, res) => {
-  const url = new URL(req.url, 'http://x');
-
-  if (url.pathname === '/api/master-ia') return masterIA(req, res);
-
-  let file = path.join(DIST, decodeURIComponent(url.pathname));
-  if (!file.startsWith(DIST + path.sep) && file !== DIST) { res.writeHead(403); return res.end(); }
-  if (fs.existsSync(file) && fs.statSync(file).isDirectory()) file = path.join(file, 'index.html');
-  if (!fs.existsSync(file)) { res.writeHead(404); return res.end('Not found'); }
-  res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream' });
-  fs.createReadStream(file).pipe(res);
-}).listen(process.env.PORT || 3000);
