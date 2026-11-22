@@ -2,7 +2,7 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import masterIA from '..api/master-ia/v1/chat/completions.js';
+import masterIA from './api/master-ia/v1/chat/completions.js';
 
 const DIST = path.join(path.dirname(fileURLToPath(import.meta.url)), 'dist');
 const MASTER_IA_PATH = '/api/master-ia/v1/chat/completions';
