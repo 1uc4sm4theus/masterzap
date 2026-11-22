@@ -1,7 +1,10 @@
 import { MASTER_IA_CONFIG } from '../lib/master-ia-config.js';
 import { MasterIAService, NO_EVIDENCE_MESSAGE } from '../lib/master-ia.js';
+import { copyText } from '../lib/utils.js';
 
 const EMPTY_HINT = 'Respostas baseadas nas mensagens do acervo. A atribuição não é comprovação. A pergunta e trechos encontrados podem ser enviados para análise externa.';
+const SESSION_STORAGE_KEY = 'masterwhats:master-ia-sessions';
+const MAX_SAVED_SESSIONS = 20;
 const SUGGESTIONS = [
   { category: 'PESSOA', question: 'Quais conversas mencionam Alexandre de Moraes?' },
   { category: 'LINHA DO TEMPO', question: 'Quando começam e terminam as conversas com Martha Graeff?' },
@@ -11,7 +14,70 @@ const SUGGESTIONS = [
 ];
 
 const services = new WeakMap();
-let sessionHistory = [];
+
+function createSessionId() {
+  return globalThis.crypto?.randomUUID?.()
+    || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
+function loadSessions() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(SESSION_STORAGE_KEY) || '[]');
+    if (!Array.isArray(stored)) return [];
+    return stored
+      .filter(session => session && typeof session.id === 'string' && Array.isArray(session.messages))
+      .map(session => ({
+        ...session,
+        messages: session.messages
+          .filter(message => message && ['user', 'assistant'].includes(message.role) && typeof message.text === 'string')
+          .map(message => message.pending
+            ? {
+              ...message,
+              id: message.id || createSessionId(),
+              pending: false,
+              state: 'cancelled',
+              cancelled: true,
+              text: message.text || 'Geração interrompida.',
+            }
+            : { ...message, id: message.id || createSessionId() }),
+      }))
+      .sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0))
+      .slice(0, MAX_SAVED_SESSIONS);
+  } catch (error) {
+    console.warn('O histórico da Master IA não pôde ser carregado.', error);
+    return [];
+  }
+}
+
+let savedSessions = loadSessions();
+let activeSessionId = savedSessions[0]?.id || createSessionId();
+let sessionHistory = savedSessions.find(session => session.id === activeSessionId)?.messages || [];
+
+function persistSession() {
+  if (!sessionHistory.length) {
+    savedSessions = savedSessions.filter(item => item.id !== activeSessionId);
+    try {
+      localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(savedSessions));
+    } catch (error) {
+      console.warn('O histórico da Master IA não pôde ser salvo.', error);
+    }
+    return;
+  }
+  const firstQuestion = sessionHistory.find(message => message.role === 'user')?.text || 'Nova conversa';
+  const session = {
+    id: activeSessionId,
+    title: firstQuestion.length > 72 ? `${firstQuestion.slice(0, 69)}…` : firstQuestion,
+    updatedAt: Date.now(),
+    messages: sessionHistory,
+  };
+  savedSessions = [session, ...savedSessions.filter(item => item.id !== activeSessionId)]
+    .slice(0, MAX_SAVED_SESSIONS);
+  try {
+    localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(savedSessions));
+  } catch (error) {
+    console.warn('O histórico da Master IA não pôde ser salvo.', error);
+  }
+}
 
 function makeIcon(path) {
   const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -36,7 +102,7 @@ function makeElement(tag, className, text) {
 }
 
 function appendInline(parent, text) {
-  const pattern = /(\*\*[^*]+\*\*|__[^_]+__|`[^`]+`|\*[^*]+\*|_[^_]+_|\[([^\]]+)\]\(([^)]+)\))/g;
+  const pattern = /(`[^`]+`|~~[^~]+~~|\*\*[^*]+\*\*|__[^_]+__|\*[^*]+\*|_[^_]+_|\[([^\]]+)\]\(([^)]+)\))/g;
   let cursor = 0;
   for (const match of text.matchAll(pattern)) {
     if (match.index > cursor) parent.appendChild(document.createTextNode(text.slice(cursor, match.index)));
@@ -44,6 +110,9 @@ function appendInline(parent, text) {
     let node;
     if (token.startsWith('**') || token.startsWith('__')) {
       node = document.createElement('strong');
+      node.textContent = token.slice(2, -2);
+    } else if (token.startsWith('~~')) {
+      node = document.createElement('del');
       node.textContent = token.slice(2, -2);
     } else if (token.startsWith('`')) {
       node = document.createElement('code');
@@ -74,59 +143,167 @@ function appendInline(parent, text) {
   if (cursor < text.length) parent.appendChild(document.createTextNode(text.slice(cursor)));
 }
 
+function splitTableRow(line) {
+  const value = line.trim().replace(/^\|/, '').replace(/\|$/, '');
+  const cells = [];
+  let cell = '';
+  let escaped = false;
+  for (const char of value) {
+    if (char === '|' && !escaped) {
+      cells.push(cell.trim());
+      cell = '';
+    } else {
+      cell += char;
+    }
+    escaped = char === '\\' && !escaped;
+    if (char !== '\\') escaped = false;
+  }
+  cells.push(cell.trim());
+  return cells;
+}
+
+function isTableDivider(line) {
+  return splitTableRow(line).length > 0
+    && splitTableRow(line).every(cell => /^:?-{3,}:?$/.test(cell));
+}
+
+function renderCodeBlock(lines, language) {
+  const pre = makeElement('pre', 'master-ia-code-block');
+  const code = makeElement('code', language && /^[\w+-]+$/.test(language) ? `language-${language}` : '', lines.join('\n'));
+  const copy = makeElement('button', 'master-ia-code-copy', 'Copiar código');
+  const status = makeElement('span', 'master-ia-code-status');
+  status.setAttribute('role', 'status');
+  copy.type = 'button';
+  copy.addEventListener('click', async () => {
+    copy.disabled = true;
+    const copied = await copyText(code.textContent);
+    status.textContent = copied ? 'Código copiado.' : 'Não foi possível copiar o código.';
+    copy.disabled = false;
+  });
+  pre.append(copy, status, code);
+  return pre;
+}
+
 export function renderMarkdown(text) {
   const content = document.createElement('div');
   content.className = 'master-ia-markdown';
-  let paragraph = [];
-  let list = null;
+  const lines = String(text || '').replace(/\r\n/g, '\n').split('\n');
+  let index = 0;
 
-  const flushParagraph = () => {
-    if (!paragraph.length) return;
-    const p = document.createElement('p');
-    paragraph.forEach((line, index) => {
-      if (index) p.appendChild(document.createElement('br'));
-      appendInline(p, line);
-    });
-    content.appendChild(p);
-    paragraph = [];
-  };
-  const closeList = () => {
-    list = null;
-  };
-
-  for (const line of String(text || '').split('\n')) {
-    const heading = line.match(/^(#{1,3})\s+(.+)$/);
-    const unordered = line.match(/^\s*[-*]\s+(.+)$/);
-    const ordered = line.match(/^\s*\d+[.)]\s+(.+)$/);
+  while (index < lines.length) {
+    const line = lines[index];
     if (!line.trim()) {
-      flushParagraph();
-      closeList();
+      index++;
       continue;
     }
+
+    const fence = line.match(/^\s*(```+|~~~+)\s*([\w+-]*)\s*$/);
+    if (fence) {
+      const codeLines = [];
+      index++;
+      while (index < lines.length && !new RegExp(`^\\s*${fence[1][0]}{${fence[1].length},}\\s*$`).test(lines[index])) {
+        codeLines.push(lines[index++]);
+      }
+      if (index < lines.length) index++;
+      content.appendChild(renderCodeBlock(codeLines, fence[2]));
+      continue;
+    }
+
+    const heading = line.match(/^(#{1,6})\s+(.+)$/);
     if (heading) {
-      flushParagraph();
-      closeList();
-      const element = document.createElement(`h${heading[1].length + 1}`);
+      const element = document.createElement(`h${heading[1].length}`);
       appendInline(element, heading[2]);
       content.appendChild(element);
+      index++;
       continue;
     }
-    if (unordered || ordered) {
-      flushParagraph();
-      const tag = unordered ? 'ul' : 'ol';
-      if (!list || list.tagName.toLowerCase() !== tag) {
-        list = document.createElement(tag);
-        content.appendChild(list);
+
+    if (/^\s*(?:[-*_]\s*){3,}$/.test(line)) {
+      content.appendChild(document.createElement('hr'));
+      index++;
+      continue;
+    }
+
+    if (line.includes('|') && index + 1 < lines.length && isTableDivider(lines[index + 1])) {
+      const headers = splitTableRow(line);
+      const dividers = splitTableRow(lines[index + 1]);
+      const table = makeElement('table', 'master-ia-table');
+      const thead = document.createElement('thead');
+      const headerRow = document.createElement('tr');
+      headers.forEach((header, cellIndex) => {
+        const cell = document.createElement('th');
+        const divider = dividers[cellIndex] || '---';
+        cell.style.textAlign = divider.startsWith(':') && divider.endsWith(':')
+          ? 'center'
+          : divider.endsWith(':') ? 'right' : 'left';
+        appendInline(cell, header);
+        headerRow.appendChild(cell);
+      });
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+      const tbody = document.createElement('tbody');
+      index += 2;
+      while (index < lines.length && lines[index].includes('|') && lines[index].trim()) {
+        const row = document.createElement('tr');
+        splitTableRow(lines[index++]).forEach((value, cellIndex) => {
+          const cell = document.createElement('td');
+          const divider = dividers[cellIndex] || '---';
+          cell.style.textAlign = divider.startsWith(':') && divider.endsWith(':')
+            ? 'center'
+            : divider.endsWith(':') ? 'right' : 'left';
+          appendInline(cell, value);
+          row.appendChild(cell);
+        });
+        tbody.appendChild(row);
       }
-      const item = document.createElement('li');
-      appendInline(item, (unordered || ordered)[1]);
-      list.appendChild(item);
+      table.appendChild(tbody);
+      const tableWrap = makeElement('div', 'master-ia-table-wrap');
+      tableWrap.appendChild(table);
+      content.appendChild(tableWrap);
       continue;
     }
-    closeList();
-    paragraph.push(line);
+
+    if (/^\s*>\s?/.test(line)) {
+      const quoteLines = [];
+      while (index < lines.length && /^\s*>\s?/.test(lines[index])) {
+        quoteLines.push(lines[index++].replace(/^\s*>\s?/, ''));
+      }
+      const quote = document.createElement('blockquote');
+      quote.append(...renderMarkdown(quoteLines.join('\n')).childNodes);
+      content.appendChild(quote);
+      continue;
+    }
+
+    const listMatch = line.match(/^\s*([-*+]|\d+[.)])\s+(.+)$/);
+    if (listMatch) {
+      const ordered = /^\d/.test(listMatch[1]);
+      const list = document.createElement(ordered ? 'ol' : 'ul');
+      while (index < lines.length) {
+        const itemMatch = lines[index].match(/^\s*([-*+]|\d+[.)])\s+(.+)$/);
+        if (!itemMatch || /^\d/.test(itemMatch[1]) !== ordered) break;
+        const item = document.createElement('li');
+        appendInline(item, itemMatch[2]);
+        list.appendChild(item);
+        index++;
+      }
+      content.appendChild(list);
+      continue;
+    }
+
+    const paragraph = [];
+    while (index < lines.length && lines[index].trim()
+        && !/^(?:#{1,6}\s|```+|~~~+|\s*>|\s*([-*+]|\d+[.)])\s+)/.test(lines[index])
+        && !/^\s*(?:[-*_]\s*){3,}$/.test(lines[index])
+        && !(lines[index].includes('|') && index + 1 < lines.length && isTableDivider(lines[index + 1]))) {
+      paragraph.push(lines[index++]);
+    }
+    const element = document.createElement('p');
+    paragraph.forEach((paragraphLine, lineIndex) => {
+      if (lineIndex) element.appendChild(document.createElement('br'));
+      appendInline(element, paragraphLine);
+    });
+    content.appendChild(element);
   }
-  flushParagraph();
   return content;
 }
 
@@ -339,7 +516,6 @@ async function createAnswerImage(message) {
 }
 
 function renderShareAction(message) {
-  const tools = makeElement('div', 'master-ia-answer-tools');
   const button = makeElement('button', 'master-ia-share');
   button.type = 'button';
   button.appendChild(makeIcon('M12 16V4m0 0L7 9m5-5 5 5M5 14v5h14v-5'));
@@ -372,32 +548,77 @@ function renderShareAction(message) {
       button.disabled = false;
     }
   });
-  tools.append(button, status);
+  return [button, status];
+}
+
+function renderActivity(status) {
+  const processing = makeElement('span', 'master-ia-processing');
+  processing.setAttribute('role', 'status');
+  processing.append(
+    makeElement('span', 'master-ia-processing-label', status || 'A Master IA está respondendo…'),
+    makeElement('span', 'master-ia-typing-dots', '•••'),
+  );
+  return processing;
+}
+
+function renderAnswerActions(message, onRegenerate, canRegenerate) {
+  const tools = makeElement('div', 'master-ia-answer-tools');
+  const copy = makeElement('button', 'master-ia-copy-answer', 'Copiar resposta');
+  const status = makeElement('span', 'master-ia-copy-status');
+  copy.type = 'button';
+  status.setAttribute('role', 'status');
+  copy.addEventListener('click', async () => {
+    copy.disabled = true;
+    const copied = await copyText(message.text);
+    status.textContent = copied ? 'Resposta copiada.' : 'Não foi possível copiar a resposta.';
+    copy.disabled = false;
+  });
+  tools.append(copy, status);
+
+  if (canRegenerate) {
+    const regenerate = makeElement('button', 'master-ia-regenerate', 'Regenerar');
+    regenerate.type = 'button';
+    regenerate.addEventListener('click', onRegenerate);
+    tools.appendChild(regenerate);
+  }
+  const [share, shareStatus] = renderShareAction(message);
+  tools.append(share, shareStatus);
   return tools;
 }
 
-function renderMessage(message, onNavigate) {
+function renderMessage(message, onNavigate, { onRegenerate, canRegenerate = false } = {}) {
   const row = makeElement('article', `master-ia-message master-ia-message-${message.role}`);
+  row.dataset.state = message.state || (message.pending ? 'thinking' : 'completed');
+  if (message.error) row.setAttribute('role', 'alert');
   row.appendChild(makeElement('div', 'master-ia-message-label', message.role === 'user' ? 'Você' : 'Master IA'));
   const bubble = makeElement('div', 'master-ia-message-bubble');
   if (message.pending) {
-    const processing = makeElement('span', 'master-ia-processing');
-    processing.setAttribute('role', 'status');
-    processing.appendChild(makeElement('span', 'master-ia-processing-label', message.status || 'Consultando o acervo…'));
-    processing.appendChild(makeElement('span', 'master-ia-typing-dots', '•••'));
-    bubble.appendChild(processing);
+    bubble.appendChild(renderActivity(message.status || 'Consultando o acervo…'));
   } else {
     bubble.appendChild(renderMarkdown(message.text));
+    if (message.state === 'streaming') {
+      bubble.appendChild(renderActivity(message.status));
+    } else if (message.cancelled) {
+      const cancelled = makeElement('span', 'master-ia-cancelled-label', 'Geração interrompida.');
+      cancelled.setAttribute('role', 'status');
+      bubble.appendChild(cancelled);
+    }
     if (message.sources?.length) {
       bubble.appendChild(renderSources(message.sources, onNavigate));
       const graph = renderConnectionGraph(message.sources);
       if (graph) bubble.appendChild(graph);
     }
     else if (message.role === 'assistant' && message.text) bubble.appendChild(renderDatasetChip([]));
-    if (message.role === 'assistant' && message.text) bubble.appendChild(renderShareAction(message));
+    if (message.role === 'assistant' && message.text) {
+      bubble.appendChild(renderAnswerActions(message, onRegenerate, canRegenerate));
+    }
   }
   row.appendChild(bubble);
-  if (message.error) row.classList.add('master-ia-message-error');
+  if (message.error) {
+    row.setAttribute('role', 'alert');
+    if (!message.local) row.classList.add('master-ia-message-error');
+  }
+  if (message.cancelled) row.classList.add('master-ia-message-cancelled');
   if (message.text === NO_EVIDENCE_MESSAGE) row.classList.add('master-ia-message-no-evidence');
   return { row, bubble };
 }
@@ -419,13 +640,22 @@ export function renderMasterIAPanel({
   if (!store) throw new Error('renderMasterIAPanel requer o DataStore da aplicação.');
   const panel = makeElement('section', 'master-ia-panel');
   panel.setAttribute('aria-label', 'Master IA');
+  panel.dataset.generationState = 'idle';
+  let activeController = null;
+  let isGenerating = false;
+  let autoFollow = true;
+  let followFrame = null;
+  let lastScrollTop = 0;
 
   const header = makeElement('header', 'master-ia-header');
   const back = makeElement('button', 'master-ia-back');
   back.appendChild(makeIcon('m15 18-6-6 6-6'));
   back.type = 'button';
   back.setAttribute('aria-label', 'Voltar para conversas');
-  back.addEventListener('click', onBack);
+  back.addEventListener('click', () => {
+    activeController?.abort();
+    onBack();
+  });
   const brand = makeElement('div', 'master-ia-brand');
   const logo = makeElement('img', 'master-ia-logo');
   logo.src = '/assets/masterzap-logo.png';
@@ -450,20 +680,24 @@ export function renderMasterIAPanel({
 
   const historyPopover = makeElement('section', 'master-ia-popover master-ia-history-popover');
   historyPopover.hidden = true;
-  historyPopover.setAttribute('aria-label', 'Perguntas desta conversa');
+  historyPopover.setAttribute('aria-label', 'Histórico de conversas');
   historyPopover.appendChild(makeElement('span', 'master-ia-eyebrow', 'HISTÓRICO DESTA CONVERSA'));
   const historyItems = makeElement('div', 'master-ia-history-items');
   historyPopover.appendChild(historyItems);
+  historyPopover.appendChild(makeElement('span', 'master-ia-eyebrow master-ia-session-heading', 'SESSÕES RECENTES'));
+  const sessionItems = makeElement('div', 'master-ia-history-items master-ia-session-items');
+  historyPopover.appendChild(sessionItems);
 
   const menuPopover = makeElement('div', 'master-ia-popover master-ia-menu-popover');
   menuPopover.hidden = true;
   const reset = makeElement('button', 'master-ia-reset', 'Nova conversa');
   reset.type = 'button';
   reset.addEventListener('click', () => {
-    if (send.disabled) return;
+    if (isGenerating) return;
+    persistSession();
+    activeSessionId = createSessionId();
     sessionHistory = [];
-    messages.replaceChildren();
-    welcome.hidden = false;
+    renderHistory();
     historyPopover.hidden = true;
     historyButton.setAttribute('aria-expanded', 'false');
     menuPopover.hidden = true;
@@ -486,7 +720,7 @@ export function renderMasterIAPanel({
   welcomeLogo.width = 54;
   welcomeLogo.height = 54;
   welcome.appendChild(welcomeLogo);
-  welcome.appendChild(makeElement('span', 'master-ia-eyebrow master-ia-welcome-eyebrow', 'ACERVO · 94 MIL MENSAGENS'));
+  welcome.appendChild(makeElement('span', 'master-ia-eyebrow master-ia-welcome-eyebrow', 'ACERVO · 66 MIL MENSAGENS'));
   welcome.appendChild(makeElement('h2', '', 'Boa noite. O que você quer encontrar no acervo?'));
   welcome.appendChild(makeElement('p', '', 'Consulte pessoas, conversas e datas com fontes verificáveis.'));
   const suggestions = makeElement('div', 'master-ia-suggestions');
@@ -528,11 +762,62 @@ export function renderMasterIAPanel({
   };
   const updateComposer = () => {
     resizeInput();
-    send.disabled = textarea.disabled || !textarea.value.trim();
+    send.disabled = !isGenerating && !textarea.value.trim();
+    textarea.disabled = isGenerating;
+    reset.disabled = isGenerating;
+    historyButton.disabled = isGenerating;
+    menuButton.disabled = isGenerating;
+    send.setAttribute('aria-label', isGenerating ? 'Parar geração' : 'Enviar pergunta');
+    send.title = isGenerating ? 'Parar geração' : 'Enviar pergunta';
+    send.classList.toggle('is-stop', isGenerating);
+    send.replaceChildren(makeIcon(isGenerating
+      ? 'M7 7h10v10H7z'
+      : 'M5 12h14m-7-7 7 7-7 7'));
   };
 
   const service = getService(store, config, fetcher);
+  const isNearBottom = () => messages.scrollHeight - messages.clientHeight - messages.scrollTop <= 64;
+  const stopFollowing = () => {
+    if (followFrame !== null) cancelAnimationFrame(followFrame);
+    followFrame = null;
+  };
+  const scrollToBottom = () => {
+    messages.scrollTop = messages.scrollHeight;
+    lastScrollTop = messages.scrollTop;
+  };
+  const followToBottom = () => {
+    if (followFrame !== null) return;
+    followFrame = requestAnimationFrame(() => {
+      followFrame = null;
+      if (!autoFollow) return;
+      const bottom = Math.max(0, messages.scrollHeight - messages.clientHeight);
+      messages.scrollTop = bottom;
+      lastScrollTop = messages.scrollTop;
+    });
+  };
+  messages.addEventListener('scroll', () => {
+    const currentScrollTop = messages.scrollTop;
+    if (isGenerating || followFrame !== null) {
+      if (currentScrollTop < lastScrollTop - 1) {
+        autoFollow = false;
+        stopFollowing();
+      } else if (isNearBottom()) {
+        autoFollow = true;
+        if (isGenerating) followToBottom();
+      }
+    }
+    lastScrollTop = currentScrollTop;
+  }, { passive: true });
+
+  function closePopovers() {
+    historyPopover.hidden = true;
+    historyButton.setAttribute('aria-expanded', 'false');
+    menuPopover.hidden = true;
+    menuButton.setAttribute('aria-expanded', 'false');
+  }
+
   const renderHistory = () => {
+    stopFollowing();
     messages.replaceChildren();
     welcome.hidden = sessionHistory.length > 0;
     if (!sessionHistory.length) {
@@ -540,32 +825,60 @@ export function renderMasterIAPanel({
       return;
     }
     for (const [index, message] of sessionHistory.entries()) {
-      const rendered = renderMessage(message, () => {});
+      const canRegenerate = index === sessionHistory.length - 1
+        && message.role === 'assistant'
+        && !message.pending;
+      const rendered = renderMessage(message, () => {}, {
+        canRegenerate,
+        onRegenerate: () => regenerateLastResponse(message),
+      });
       rendered.row.dataset.historyIndex = String(index);
       messages.appendChild(rendered.row);
     }
-    messages.scrollTop = messages.scrollHeight;
+    autoFollow = true;
+    scrollToBottom();
   };
 
   const updateHistoryPopover = () => {
     historyItems.replaceChildren();
+    sessionItems.replaceChildren();
     const questions = sessionHistory
       .map((message, index) => ({ message, index }))
       .filter(({ message }) => message.role === 'user');
     if (!questions.length) {
       historyItems.appendChild(makeElement('p', 'master-ia-history-empty', 'As perguntas desta conversa aparecerão aqui.'));
+    } else {
+      for (const { message, index } of questions) {
+        const item = makeElement('button', 'master-ia-history-item', message.text);
+        item.type = 'button';
+        item.addEventListener('click', () => {
+          historyPopover.hidden = true;
+          historyButton.setAttribute('aria-expanded', 'false');
+          messages.querySelector(`[data-history-index="${index}"]`)
+            ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+        historyItems.appendChild(item);
+      }
+    }
+    const previousSessions = savedSessions.filter(session => session.id !== activeSessionId);
+    if (!previousSessions.length) {
+      sessionItems.appendChild(makeElement('p', 'master-ia-history-empty', 'Suas outras conversas aparecerão aqui.'));
       return;
     }
-    for (const { message, index } of questions) {
-      const item = makeElement('button', 'master-ia-history-item', message.text);
+    for (const session of previousSessions) {
+      const item = makeElement('button', 'master-ia-history-item master-ia-session-item', session.title || 'Conversa sem título');
       item.type = 'button';
       item.addEventListener('click', () => {
-        historyPopover.hidden = true;
-        historyButton.setAttribute('aria-expanded', 'false');
-        messages.querySelector(`[data-history-index="${index}"]`)
-          ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (isGenerating) return;
+        persistSession();
+        const selected = savedSessions.find(entry => entry.id === session.id);
+        if (!selected) return;
+        activeSessionId = selected.id;
+        sessionHistory = selected.messages;
+        renderHistory();
+        closePopovers();
       });
-      historyItems.appendChild(item);
+      sessionItems.appendChild(item);
     }
   };
 
@@ -585,77 +898,144 @@ export function renderMasterIAPanel({
     menuButton.setAttribute('aria-expanded', String(isOpening));
   });
 
+  function setGenerationState(state, status, message, row) {
+    panel.dataset.generationState = state;
+    if (status) {
+      message.status = status;
+      const indicator = row.bubble.querySelector('.master-ia-processing-label');
+      if (indicator) indicator.textContent = status;
+    }
+    message.state = state;
+    row.row.dataset.state = state;
+  }
+
+  async function regenerateLastResponse(message) {
+    if (isGenerating) return;
+    const assistantIndex = sessionHistory.findIndex(item => item.id === message.id);
+    const userMessage = sessionHistory[assistantIndex - 1];
+    if (assistantIndex !== sessionHistory.length - 1 || userMessage?.role !== 'user') return;
+    const question = userMessage.text;
+    sessionHistory.splice(assistantIndex - 1);
+    persistSession();
+    renderHistory();
+    await submitQuestion(question);
+  }
+
   async function submitQuestion(question) {
     const text = question.trim();
-    if (!text || send.disabled) return;
+    if (!text || isGenerating) return;
+    const controller = new AbortController();
+    activeController = controller;
+    isGenerating = true;
+    autoFollow = true;
+    panel.dataset.generationState = 'sending';
     welcome.hidden = true;
-    const userMessage = { role: 'user', text };
+    const userMessage = { id: createSessionId(), role: 'user', text };
     const assistantMessage = {
+      id: createSessionId(),
       role: 'assistant',
       text: '',
       sources: [],
       pending: true,
       status: 'Pesquisando nas conversas…',
+      state: 'thinking',
     };
     const userHistoryIndex = sessionHistory.length;
     sessionHistory.push(userMessage, assistantMessage);
     const userRow = renderMessage(userMessage, () => {});
-    const assistantRow = renderMessage(assistantMessage, () => {});
+    const assistantRow = renderMessage(assistantMessage, () => {}, {
+      canRegenerate: true,
+      onRegenerate: () => regenerateLastResponse(assistantMessage),
+    });
     userRow.row.dataset.historyIndex = String(userHistoryIndex);
     assistantRow.row.dataset.historyIndex = String(userHistoryIndex + 1);
+    messages.classList.add('is-generating');
     messages.append(userRow.row, assistantRow.row);
     textarea.value = '';
-    resizeInput();
-    send.disabled = true;
-    textarea.disabled = true;
-    reset.disabled = true;
-    send.setAttribute('aria-label', 'Aguarde');
-    messages.scrollTop = messages.scrollHeight;
-
-    const updateStatus = status => {
-      assistantMessage.status = status;
-      const indicator = assistantRow.bubble.querySelector('.master-ia-processing-label');
-      if (indicator) indicator.textContent = status;
-    };
+    updateComposer();
+    persistSession();
+    scrollToBottom();
 
     try {
       const result = await service.answer(text, conversations, {
+        signal: controller.signal,
+        onState: state => {
+          const labels = {
+            thinking: 'Analisando as evidências…',
+            sending: 'Enviando solicitação segura…',
+            streaming: 'Gerando resposta…',
+          };
+          setGenerationState(state, labels[state], assistantMessage, assistantRow);
+        },
         onProgress: progress => {
           if (progress.stage === 'count') {
-            updateStatus(`Contando mensagens originais… ${progress.current} de ${progress.total}`);
+            setGenerationState('thinking', `Contando mensagens originais… ${progress.current} de ${progress.total}`, assistantMessage, assistantRow);
           } else if (progress.stage === 'deep-search') {
-            updateStatus(`Conferindo mensagens completas… ${progress.current} de ${progress.total}`);
+            setGenerationState('thinking', `Conferindo mensagens completas… ${progress.current} de ${progress.total}`, assistantMessage, assistantRow);
           } else {
-            updateStatus(`Pesquisando conversas… ${progress.current} de ${progress.total}`);
+            setGenerationState('thinking', `Pesquisando conversas… ${progress.current} de ${progress.total}`, assistantMessage, assistantRow);
           }
         },
         onToken: partial => {
           if (partial && assistantRow.row.isConnected) {
+            const shouldFollow = autoFollow || isNearBottom();
+            autoFollow = shouldFollow;
             assistantMessage.pending = false;
             assistantMessage.text = partial;
-            assistantRow.bubble.replaceChildren(renderMarkdown(partial));
-            messages.scrollTop = messages.scrollHeight;
+            assistantMessage.state = 'streaming';
+            assistantRow.row.dataset.state = 'streaming';
+            assistantRow.bubble.replaceChildren(
+              renderMarkdown(partial),
+              renderActivity(assistantMessage.status),
+            );
+            if (shouldFollow) followToBottom();
           }
         },
       });
+      const shouldFollow = autoFollow || isNearBottom();
       assistantMessage.text = result.text;
       assistantMessage.sources = result.sources;
       assistantMessage.pending = false;
       assistantMessage.local = result.local;
-      assistantRow.row.replaceWith(renderMessage(assistantMessage, () => {} ).row);
-      messages.scrollTop = messages.scrollHeight;
+      assistantMessage.error = result.synthesisAvailable === false;
+      assistantMessage.state = assistantMessage.error ? 'error' : 'completed';
+      assistantRow.row.replaceWith(renderMessage(assistantMessage, () => {}, {
+        canRegenerate: true,
+        onRegenerate: () => regenerateLastResponse(assistantMessage),
+      }).row);
+      if (shouldFollow) {
+        autoFollow = true;
+        followToBottom();
+      }
+      persistSession();
     } catch (error) {
       assistantMessage.pending = false;
-      assistantMessage.error = true;
-      console.error('Não foi possível consultar a Master IA.', error);
-      assistantMessage.text = 'Não foi possível concluir sua pergunta agora. Tente novamente em instantes.';
-      assistantRow.row.replaceWith(renderMessage(assistantMessage, () => {}).row);
-      messages.scrollTop = messages.scrollHeight;
+      if (controller.signal.aborted) {
+        assistantMessage.cancelled = true;
+        assistantMessage.state = 'cancelled';
+        assistantMessage.text ||= '';
+      } else {
+        assistantMessage.error = true;
+        assistantMessage.state = 'error';
+        console.error('Não foi possível consultar a Master IA.', error);
+        assistantMessage.text = error?.message?.includes('tempo esperado')
+          ? 'A análise demorou mais que o tempo esperado. Tente novamente em instantes.'
+          : 'Não foi possível concluir sua pergunta agora. Tente novamente em instantes.';
+      }
+      assistantRow.row.replaceWith(renderMessage(assistantMessage, () => {}, {
+        canRegenerate: true,
+        onRegenerate: () => regenerateLastResponse(assistantMessage),
+      }).row);
+      if (autoFollow || isNearBottom()) {
+        autoFollow = true;
+        followToBottom();
+      }
+      persistSession();
     } finally {
-      send.disabled = false;
-      textarea.disabled = false;
-      reset.disabled = false;
-      send.setAttribute('aria-label', 'Enviar pergunta');
+      activeController = null;
+      isGenerating = false;
+      panel.dataset.generationState = 'idle';
+      messages.classList.remove('is-generating');
       updateComposer();
       textarea.focus();
     }
@@ -663,6 +1043,10 @@ export function renderMasterIAPanel({
 
   form.addEventListener('submit', event => {
     event.preventDefault();
+    if (activeController) {
+      activeController.abort();
+      return;
+    }
     submitQuestion(textarea.value);
   });
   textarea.addEventListener('input', updateComposer);
