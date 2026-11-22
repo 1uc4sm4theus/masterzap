@@ -36,6 +36,7 @@ export function renderSidebar(container, {
   onEvents,
   onFlights,
   onChatGPT,
+  onMasterIA,
   onLivestream,
   onSoundtrack,
   onChats,
@@ -97,6 +98,16 @@ export function renderSidebar(container, {
     chatgptLink.innerHTML = '<img src="/assets/chatgpt-logo.png" alt="" aria-hidden="true"><span>Pesquisas do Vorcaro</span>';
     chatgptLink.addEventListener('click', onChatGPT);
     el.insertBefore(chatgptLink, el.querySelector('.sidebar-search'));
+  }
+
+  if (onMasterIA) {
+    const masterIALink = document.createElement('button');
+    masterIALink.className = 'sidebar-master-ia-link';
+    masterIALink.type = 'button';
+    masterIALink.setAttribute('aria-label', 'Master IA');
+    masterIALink.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.9 9l5.6 1.8-5.6 1.9-1.9 5.5-1.8-5.5-5.6-1.9L10.2 9 12 3.5Z"/><path d="m19 15 .9 2.2 2.1.8-2.1.8L19 21l-.8-2.2-2.2-.8 2.2-.8L19 15Z"/></svg><span>Master IA</span>';
+    masterIALink.addEventListener('click', onMasterIA);
+    el.insertBefore(masterIALink, el.querySelector('.sidebar-search'));
   }
 
   if (onLivestream) {

@@ -520,6 +520,29 @@
     text-align: left;
   }
 
+.sidebar-master-ia-link {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 9px;
+    margin: 0 12px 8px;
+    padding: 9px 12px;
+    border: 1px solid var(--WDS-lines-divider);
+    border-radius: 6px;
+    background: var(--WDS-white);
+    color: #1769e0;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    text-align: left;
+  }
+
+.sidebar-master-ia-link svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+  }
+
 .sidebar-chatgpt-link img {
     width: 18px;
     height: 18px;
@@ -595,5 +618,99 @@
     max-width: 92%;
     padding: 11px 14px;
     font-size: 14px;
+  }
+
+  .app-container.master-ia-open .main-area {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .master-ia-header {
+    min-height: 56px;
+    gap: 9px;
+    padding: 7px 12px;
+  }
+
+  .master-ia-back {
+    display: inline-flex;
+  }
+
+  .master-ia-brand {
+    gap: 7px;
+  }
+
+  .master-ia-brand h1 {
+    font-size: 16px;
+  }
+
+  .master-ia-reset {
+    width: 40px;
+    min-height: 40px;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+  }
+
+  .master-ia-messages {
+    padding: 18px 12px 12px;
+  }
+
+  .master-ia-welcome {
+    margin: 5vh auto 20px;
+  }
+
+  .master-ia-welcome h2 {
+    font-size: 23px;
+  }
+
+  .master-ia-suggestions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .master-ia-suggestion {
+    width: 100%;
+    min-height: 68px;
+  }
+
+  .master-ia-message {
+    margin-bottom: 18px;
+  }
+
+  .master-ia-message-bubble {
+    max-width: 96%;
+    padding: 10px 13px;
+    font-size: 14px;
+  }
+
+  .master-ia-footer {
+    padding: 0 10px max(8px, env(safe-area-inset-bottom));
+  }
+
+  .master-ia-notice {
+    padding: 7px 3px;
+    font-size: 10px;
+  }
+
+  .master-ia-composer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 6px 6px 6px 12px;
+  }
+
+  .master-ia-input {
+    min-height: 40px;
+    height: 40px;
+    padding: 9px 0;
+    font-size: 16px;
+  }
+
+  .master-ia-send {
+    width: 40px;
+    height: 40px;
   }
 }

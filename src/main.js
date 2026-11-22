@@ -29,6 +29,7 @@ import { printChat } from './lib/print.js';
 import { renderPaymentsPanel } from './components/PaymentsPanel.js';
 import { renderFlightsPanel } from './components/FlightsPanel.js';
 import { renderChatGPTPanel } from './components/ChatGPTPanel.js';
+import { renderMasterIAPanel } from './components/MasterIAPanel.js';
 import { renderLivestreamPanel } from './components/LivestreamPanel.js';
 import { renderMediaPanel } from './components/MediaPanel.js';
 import { renderSoundtrackPanel } from './components/SoundtrackPanel.js';
@@ -352,7 +353,7 @@ async function init() {
     // "Não lidas" tally.
     if (markConversationRead(readConversations, id)) sidebar.refreshReadState?.();
     container.classList.add('chat-open');
-    container.classList.remove('flights-open', 'chatgpt-open', 'livestream-open', 'soundtrack-open', 'events-open');
+    container.classList.remove('flights-open', 'chatgpt-open', 'master-ia-open', 'livestream-open', 'soundtrack-open', 'events-open');
 
     const conversation = store.getConversation(id);
     if (!conversation) { showEmptyState(); return; }
@@ -503,6 +504,7 @@ async function init() {
     container.classList.remove('chat-open');
     container.classList.remove('flights-open');
     container.classList.remove('chatgpt-open');
+    container.classList.remove('master-ia-open');
     container.classList.remove('livestream-open');
     container.classList.remove('soundtrack-open');
     while (mainArea.firstChild) mainArea.removeChild(mainArea.firstChild);
@@ -594,6 +596,7 @@ async function init() {
     onMedia: () => router.navigate('media'),
     onFlights: () => router.navigate('flights'),
     onChatGPT: () => router.navigate('chatgpt'),
+    onMasterIA: () => router.navigate('master-ia'),
     onLivestream: () => router.navigate('livestream'),
     onSoundtrack: () => router.navigate('soundtrack'),
     onEvents: () => router.navigate('events'),
@@ -609,7 +612,7 @@ async function init() {
     onChat: () => {
       // From secondary screens, this is the way back to the conversation list.
       const route = router.getCurrentRoute().route;
-      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt' || route === 'livestream' || route === 'soundtrack' || route === 'events') { router.navigate('home'); return; }
+      if (route === 'calls' || route === 'payments' || route === 'media' || route === 'flights' || route === 'chatgpt' || route === 'master-ia' || route === 'livestream' || route === 'soundtrack' || route === 'events') { router.navigate('home'); return; }
       closeProfile();
       closeSettings();
     },
@@ -638,6 +641,7 @@ async function init() {
       onEvents: () => router.navigate('events'),
       onFlights: () => router.navigate('flights'),
       onChatGPT: () => router.navigate('chatgpt'),
+      onMasterIA: () => router.navigate('master-ia'),
       onSoundtrack: () => router.navigate('soundtrack'),
       onChats: () => router.navigate('home'),
       onUserSwitch: toggleUserSwitcher,
@@ -837,6 +841,17 @@ async function init() {
     mainArea.replaceChildren();
     mainArea.appendChild(renderChatGPTPanel({ onBack: () => router.navigate('home') }));
     navRail.setActive?.('chatgpt');
+  });
+  router.on('master-ia', () => {
+    showEmptyState();
+    sidebar.showChats?.();
+    container.classList.add('master-ia-open');
+    mainArea.replaceChildren(renderMasterIAPanel({
+      store,
+      conversations: conversationsForUser(activeUser, store.getConversations()),
+      onBack: () => router.navigate('home'),
+    }));
+    navRail.setActive?.('master-ia');
   });
   router.on('livestream', () => {
     showEmptyState();
