@@ -23,6 +23,29 @@ function unique(values) {
   return [...new Set(values)];
 }
 
+function throwIfAborted(signal) {
+  if (signal?.aborted) throw signal.reason || new DOMException('Operação cancelada.', 'AbortError');
+}
+
+function awaitWithSignal(promise, signal) {
+  if (!signal) return promise;
+  throwIfAborted(signal);
+  return new Promise((resolve, reject) => {
+    const abort = () => reject(signal.reason || new DOMException('Operação cancelada.', 'AbortError'));
+    signal.addEventListener('abort', abort, { once: true });
+    promise.then(
+      value => {
+        signal.removeEventListener('abort', abort);
+        resolve(value);
+      },
+      error => {
+        signal.removeEventListener('abort', abort);
+        reject(error);
+      },
+    );
+  });
+}
+
 function getTerms(question) {
   return unique(
     normalize(question).match(/[\p{L}\p{N}]{2,}/gu) || [],
@@ -37,13 +60,35 @@ function countPhrase(text, phrase) {
   let count = 0;
   let cursor = 0;
   while ((cursor = normalizedText.indexOf(normalizedPhrase, cursor)) !== -1) {
-    const before = normalizedText[cursor - 1] || '';
-    const after = normalizedText[cursor + normalizedPhrase.length] || '';
-    const isWord = char => /[\p{L}\p{N}]/u.test(char);
-    if (!isWord(before) && !isWord(after)) count++;
+    if (hasWordBoundaries(normalizedText, cursor, normalizedPhrase.length)) count++;
     cursor += normalizedPhrase.length;
   }
   return count;
+}
+
+function hasWordBoundaries(text, start, length) {
+  const before = text[start - 1] || '';
+  const after = text[start + length] || '';
+  const isWord = char => /[\p{L}\p{N}]/u.test(char);
+  return !isWord(before) && !isWord(after);
+}
+
+function matchingTermCount(normalizedText, terms) {
+  return terms.reduce((count, term) => {
+    const normalizedTerm = normalize(term);
+    let cursor = normalizedText.indexOf(normalizedTerm);
+    while (cursor !== -1) {
+      if (hasWordBoundaries(normalizedText, cursor, normalizedTerm.length)) {
+        return count + 1;
+      }
+      cursor = normalizedText.indexOf(normalizedTerm, cursor + normalizedTerm.length);
+    }
+    return count;
+  }, 0);
+}
+
+function minimumMatchingTerms(terms) {
+  return Math.min(terms.length, 2);
 }
 
 function nameInQuestion(question, conversations) {
@@ -110,14 +155,16 @@ function getCountKind(question) {
 
 function messageMatchesTerms(content, terms, phrase) {
   const normalized = normalize(content || '');
-  if (phrase && normalized.includes(normalize(phrase))) return true;
-  return terms.some(term => normalized.includes(term));
+  if (phrase && countPhrase(normalized, phrase)) return true;
+  return terms.length > 0
+    && matchingTermCount(normalized, terms) >= minimumMatchingTerms(terms);
 }
 
-async function forEachLimit(items, limit, callback) {
+async function forEachLimit(items, limit, callback, signal) {
   let cursor = 0;
   const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
     while (cursor < items.length) {
+      throwIfAborted(signal);
       const index = cursor++;
       await callback(items[index], index);
     }
@@ -172,8 +219,11 @@ export class MasterIAService {
     });
   }
 
-  async _scanConversation(conversation, terms, phrase, { onProgress, progress } = {}) {
-    const dateIndex = await this.store.getConversationIndex(conversation.id);
+  async _scanConversation(conversation, terms, phrase, { onProgress, progress, signal } = {}) {
+    const dateIndex = await awaitWithSignal(
+      this.store.getConversationIndex(conversation.id),
+      signal,
+    );
     const matches = [];
     const batches = [];
     for (let i = 0; i < dateIndex.length; i += 8) {
@@ -182,19 +232,18 @@ export class MasterIAService {
 
     let completedDates = 0;
     await forEachLimit(batches, 3, async batch => {
-      const chunks = await this.store.getMessagesForDates(
-        conversation.id,
-        batch.map(entry => entry.date),
+      throwIfAborted(signal);
+      const chunks = await awaitWithSignal(
+        this.store.getMessagesForDates(conversation.id, batch.map(entry => entry.date)),
+        signal,
       );
       for (const message of chunks) {
         if (message.type === 'system' || !message.content) continue;
         if (messageMatchesTerms(message.content, terms, phrase)) {
           matches.push({
             ...sourceFromMessage(conversation, message),
-            score: terms.reduce(
-              (score, term) => score + (normalize(message.content).includes(term) ? 1 : 0),
-              phrase && normalize(message.content).includes(normalize(phrase)) ? 5 : 0,
-            ),
+            score: matchingTermCount(normalize(message.content), terms)
+              + (phrase && countPhrase(message.content, phrase) ? 5 : 0),
           });
           if (matches.length > 80) {
             matches.sort((a, b) => b.score - a.score);
@@ -203,16 +252,18 @@ export class MasterIAService {
         }
       }
       completedDates += batch.length;
+      throwIfAborted(signal);
       onProgress?.({
         ...progress,
         current: completedDates,
         total: dateIndex.length,
       });
-    });
+    }, signal);
     return matches;
   }
 
-  async retrieveEvidence(question, conversations, { onProgress } = {}) {
+  async retrieveEvidence(question, conversations, { onProgress, signal } = {}) {
+    throwIfAborted(signal);
     const terms = getTerms(question);
     const phrase = question.match(/["“](.{2,80}?)["”]/)?.[1] || '';
     if (!terms.length && !phrase) return [];
@@ -223,53 +274,41 @@ export class MasterIAService {
     const candidates = new Map();
     let completed = 0;
     await forEachLimit(conversations, 5, async conversation => {
-      const index = await this._loadSearchIndex(conversation.id);
-      for (const term of terms) {
-        for (const entry of searchIndexForTerm(index, term)) {
-          const key = `${conversation.id}/${entry.id}`;
-          const current = candidates.get(key) || {
-            conversation,
-            id: entry.id,
-            date: entry.date,
-            score: 0,
-          };
-          current.score += 1;
-          candidates.set(key, current);
-        }
-      }
-      if (phrase) {
-        for (const entry of searchIndexForTerm(index, phrase)) {
-          const key = `${conversation.id}/${entry.id}`;
-          const current = candidates.get(key) || {
-            conversation,
-            id: entry.id,
-            date: entry.date,
-            score: 0,
-          };
-          current.score += 5;
-          candidates.set(key, current);
-        }
+      const index = await awaitWithSignal(this._loadSearchIndex(conversation.id), signal);
+      throwIfAborted(signal);
+      for (const entry of searchIndexForQuestion(index, terms, phrase)) {
+        const key = `${conversation.id}/${entry.id}`;
+        candidates.set(key, {
+          conversation,
+          id: entry.id,
+          date: entry.date,
+          score: entry.score,
+        });
       }
       completed++;
       onProgress?.({ stage: 'search', current: completed, total: conversations.length });
       await new Promise(resolve => setTimeout(resolve, 0));
-    });
+    }, signal);
 
-    const allLargeConversations = conversations.filter(isBigConversation);
-    const questionNames = namesInQuestion(question, conversations);
-    const targetedLargeConversations = allLargeConversations.filter(conversation =>
-      questionNames.some(name =>
-        (conversation.participants || []).some(participant => participantMatchesName(participant, name)),
-      ),
+    throwIfAborted(signal);
+    const indexedCandidateCounts = new Map();
+    for (const candidate of candidates.values()) {
+      const conversationId = candidate.conversation.id;
+      indexedCandidateCounts.set(
+        conversationId,
+        (indexedCandidateCounts.get(conversationId) || 0) + 1,
+      );
+    }
+    const largeConversations = conversations.filter(conversation =>
+      isBigConversation(conversation)
+      && (indexedCandidateCounts.get(conversation.id) || 0) < this.config.maxEvidence,
     );
-    const largeConversations = targetedLargeConversations.length
-      ? targetedLargeConversations
-      : candidates.size === 0
-        ? allLargeConversations
-        : [];
     let scannedDates = 0;
     const largeDateIndexes = await Promise.all(
-      largeConversations.map(conversation => this.store.getConversationIndex(conversation.id)),
+      largeConversations.map(conversation => awaitWithSignal(
+        this.store.getConversationIndex(conversation.id),
+        signal,
+      )),
     );
     const totalDates = largeDateIndexes.reduce((sum, index) => sum + index.length, 0);
     const lastProgressByConversation = new Map();
@@ -287,6 +326,7 @@ export class MasterIAService {
           });
         },
         progress: { stage: 'deep-search', conversation: conversation.contact },
+        signal,
       });
       for (const match of matches) {
         const key = `${conversation.id}/${match.messageId}`;
@@ -300,11 +340,16 @@ export class MasterIAService {
       .slice(0, Math.max(this.config.maxEvidence * 3, 24));
 
     const hydrated = await Promise.all(ranked.map(async candidate => {
+      throwIfAborted(signal);
       if (candidate.content !== undefined) return candidate;
-      const messages = await this.store.getMessages(candidate.conversation.id, candidate.date);
+      const messages = await awaitWithSignal(
+        this.store.getMessages(candidate.conversation.id, candidate.date),
+        signal,
+      );
       const message = messages.find(item => String(item.id) === String(candidate.id));
       return message ? sourceFromMessage(candidate.conversation, message) : null;
     }));
+    throwIfAborted(signal);
     const evidence = hydrated.filter(Boolean)
       .sort((a, b) => (b.score || 0) - (a.score || 0))
       .slice(0, this.config.maxEvidence);
@@ -312,14 +357,19 @@ export class MasterIAService {
     return evidence;
   }
 
-  async countPerson(name, conversations, { onProgress } = {}) {
+  async countPerson(name, conversations, { onProgress, signal } = {}) {
+    throwIfAborted(signal);
     const cacheKey = normalize(name);
     if (this._countCache.has(cacheKey)) return this._countCache.get(cacheKey);
 
     const dateIndexes = new Map();
     await forEachLimit(conversations, 5, async conversation => {
-      dateIndexes.set(conversation.id, await this.store.getConversationIndex(conversation.id));
-    });
+      dateIndexes.set(conversation.id, await awaitWithSignal(
+        this.store.getConversationIndex(conversation.id),
+        signal,
+      ));
+      throwIfAborted(signal);
+    }, signal);
     const totalDates = [...dateIndexes.values()].reduce((sum, dates) => sum + dates.length, 0);
     const result = {
       name,
@@ -335,6 +385,7 @@ export class MasterIAService {
     let completedDates = 0;
 
     for (const conversation of conversations) {
+      throwIfAborted(signal);
       const dates = dateIndexes.get(conversation.id) || [];
       const isParticipant = (conversation.participants || []).some(participant => {
         return participantMatchesName(participant, name);
@@ -343,10 +394,11 @@ export class MasterIAService {
 
       for (let offset = 0; offset < dates.length; offset += 8) {
         const batch = dates.slice(offset, offset + 8);
-        const chunks = await this.store.getMessagesForDates(
-          conversation.id,
-          batch.map(entry => entry.date),
+        const chunks = await awaitWithSignal(
+          this.store.getMessagesForDates(conversation.id, batch.map(entry => entry.date)),
+          signal,
         );
+        throwIfAborted(signal);
         for (const message of chunks) {
           if (message.type !== 'system' && message.content) {
             const occurrences = countPhrase(message.content, name);
@@ -376,7 +428,14 @@ export class MasterIAService {
     return result;
   }
 
-  async answer(question, conversations, { onProgress, onToken } = {}) {
+  async answer(question, conversations, {
+    onProgress,
+    onToken,
+    onState,
+    signal,
+  } = {}) {
+    throwIfAborted(signal);
+    onState?.('thinking');
     const asksParticipants = /\b(participantes?|quem participa|quem conversa|entre duas pessoas|entre .+ e .+)\b/i.test(question);
     const asksConversationPeriod = /\b(per[ií]odo da conversa|intervalo da conversa|entre quais datas|quando come[cç]a|quando termina)\b/i.test(question);
     const metadataQuestion = asksParticipants || asksConversationPeriod;
@@ -441,7 +500,7 @@ export class MasterIAService {
           local: true,
         };
       }
-      const counts = await this.countPerson(name, conversations, { onProgress });
+      const counts = await this.countPerson(name, conversations, { onProgress, signal });
       const text = kind === 'sent'
         ? `**Mensagens enviadas**\n\nO acervo registra **${counts.sentMessages}** mensagem(ns) enviada(s) por ${name}. Essa contagem usa o campo de remetente e não equivale a menções textuais.`
         : kind === 'mentioned-conversations'
@@ -456,7 +515,7 @@ export class MasterIAService {
       };
     }
 
-    const evidence = await this.retrieveEvidence(question, conversations, { onProgress });
+    const evidence = await this.retrieveEvidence(question, conversations, { onProgress, signal });
     if (!evidence.length) return { text: NO_EVIDENCE_MESSAGE, sources: [], local: true };
 
     let response;
@@ -467,8 +526,11 @@ export class MasterIAService {
         config: this.config,
         fetcher: this.fetcher,
         onToken,
+        onState,
+        signal,
       });
     } catch (error) {
+      if (signal?.aborted) throw error;
       console.error('Não foi possível concluir a resposta da Master IA.', error);
       return {
         text: `Encontrei ${evidence.length} mensagem(ns) relacionadas, mas não foi possível concluir a resposta agora. Tente novamente em instantes. As fontes encontradas estão disponíveis abaixo.`,
@@ -481,10 +543,17 @@ export class MasterIAService {
   }
 }
 
-function searchIndexForTerm(index, term) {
-  const normalizedTerm = normalize(term);
-  if (normalizedTerm.length < 2) return [];
-  return index.filter(entry => normalize(entry.content || '').includes(normalizedTerm)).slice(0, 40);
+function searchIndexForQuestion(index, terms, phrase) {
+  return index.flatMap(entry => {
+    const normalizedContent = normalize(entry.content || '');
+    const termCount = matchingTermCount(normalizedContent, terms);
+    const phraseMatch = phrase && countPhrase(normalizedContent, phrase) > 0;
+    if (!phraseMatch && (!terms.length || termCount < minimumMatchingTerms(terms))) return [];
+    return [{
+      ...entry,
+      score: termCount + (phraseMatch ? 5 : 0),
+    }];
+  });
 }
 
 export async function requestSynthesis({
@@ -493,63 +562,104 @@ export async function requestSynthesis({
   config = MASTER_IA_CONFIG,
   fetcher = (...args) => fetch(...args),
   onToken,
+  onState,
+  signal,
 }) {
   const evidenceText = evidence.map((item, index) => {
     const source = `${index + 1}. conversa=${item.conversationId}; mensagem=${item.messageId}; data=${item.date}; hora=${item.time}; remetente=${item.sender}; participantes=${item.participants.join(', ')}`;
     return `${source}\n${item.content}`;
   }).join('\n\n').slice(0, config.maxContextChars);
 
-  const send = stream => fetcher(chatCompletionsUrl(config.baseUrl), {
-    method: 'POST',
-    credentials: 'omit',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      model: config.model,
-      stream,
-      messages: [
-        { role: 'system', content: SYSTEM_PROMPT },
-        {
-          role: 'user',
-          content: `Pergunta: ${question}\n\nEvidências recuperadas do acervo:\n${evidenceText}`,
-        },
-      ],
-    }),
-  });
+  const controller = new AbortController();
+  const timeoutMs = Number(config.requestTimeoutMs) > 0
+    ? Number(config.requestTimeoutMs)
+    : 30000;
+  let timedOut = false;
+  const timeout = setTimeout(() => {
+    timedOut = true;
+    controller.abort();
+  }, timeoutMs);
+  const abortRequest = () => controller.abort(signal.reason);
+  if (signal?.aborted) abortRequest();
+  else signal?.addEventListener('abort', abortRequest, { once: true });
 
-  let response = await send(config.stream);
-  if (!response.ok) {
-    const detail = (await response.text()).slice(0, 300);
-    if (config.stream && [400, 422].includes(response.status) && /\bstream(?:ing)?\b.*\b(?:unsupported|not supported|invalid|disabled)\b/i.test(detail)) {
-      response = await send(false);
-    } else {
+  const send = stream => {
+    onState?.('sending');
+    return fetcher(chatCompletionsUrl(config.baseUrl), {
+      method: 'POST',
+      credentials: 'omit',
+      signal: controller.signal,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: config.model,
+        stream,
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
+          {
+            role: 'user',
+            content: `Pergunta: ${question}\n\nEvidências recuperadas do acervo:\n${evidenceText}`,
+          },
+        ],
+      }),
+    });
+  };
+
+  try {
+    throwIfAborted(signal);
+    let response = await send(config.stream);
+    throwIfAborted(signal);
+    if (timedOut) throw new Error('A análise demorou mais que o tempo esperado.');
+    if (!response.ok) {
+      const detail = (await response.text()).slice(0, 300);
+      throwIfAborted(signal);
+      if (config.stream && [400, 422].includes(response.status) && /\bstream(?:ing)?\b.*\b(?:unsupported|not supported|invalid|disabled)\b/i.test(detail)) {
+        response = await send(false);
+      } else {
+        throw new Error(`O serviço de análise respondeu com status ${response.status}${detail ? `: ${detail}` : ''}`);
+      }
+    }
+    if (!response.ok) {
+      const detail = (await response.text()).slice(0, 300);
       throw new Error(`O serviço de análise respondeu com status ${response.status}${detail ? `: ${detail}` : ''}`);
     }
-  }
-  if (!response.ok) {
-    const detail = (await response.text()).slice(0, 300);
-    throw new Error(`O serviço de análise respondeu com status ${response.status}${detail ? `: ${detail}` : ''}`);
-  }
 
-  if (response.headers.get('content-type')?.includes('text/event-stream') && response.body) {
-    return readCompletionStream(response.body, onToken);
-  }
+    if (response.headers.get('content-type')?.includes('text/event-stream') && response.body) {
+      onState?.('streaming');
+      return await readCompletionStream(response.body, onToken, signal);
+    }
 
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content;
-  if (typeof content !== 'string' || !content.trim()) {
-    throw new Error('O serviço de análise não retornou uma resposta válida.');
+    onState?.('thinking');
+    const data = await response.json();
+    throwIfAborted(signal);
+    const content = data.choices?.[0]?.message?.content;
+    if (typeof content !== 'string' || !content.trim()) {
+      throw new Error('O serviço de análise não retornou uma resposta válida.');
+    }
+    onToken?.(content);
+    return content.trim();
+  } catch (error) {
+    if (timedOut) {
+      throw new Error('A análise demorou mais que o tempo esperado.');
+    }
+    if (signal?.aborted) throw signal.reason || new DOMException('Operação cancelada.', 'AbortError');
+    throw error;
+  } finally {
+    clearTimeout(timeout);
+    signal?.removeEventListener('abort', abortRequest);
   }
-  onToken?.(content);
-  return content.trim();
 }
 
 export const requestNosana = requestSynthesis;
 
-async function readCompletionStream(stream, onToken) {
+async function readCompletionStream(stream, onToken, signal) {
   const reader = stream.getReader();
   const decoder = new TextDecoder();
   let buffer = '';
   let answer = '';
+  const cancelReader = () => {
+    reader.cancel(signal.reason).catch(() => {});
+  };
+  signal?.addEventListener('abort', cancelReader, { once: true });
 
   const consume = frame => {
     const data = frame.split('\n')
@@ -565,18 +675,26 @@ async function readCompletionStream(stream, onToken) {
     }
   };
 
-  while (true) {
-    const { value, done } = await reader.read();
-    buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
-    buffer = buffer.replace(/\r\n/g, '\n');
-    let boundary;
-    while ((boundary = buffer.indexOf('\n\n')) !== -1) {
-      consume(buffer.slice(0, boundary));
-      buffer = buffer.slice(boundary + 2);
+  try {
+    while (true) {
+      throwIfAborted(signal);
+      const { value, done } = await reader.read();
+      buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
+      buffer = buffer.replace(/\r\n/g, '\n');
+      let boundary;
+      while ((boundary = buffer.indexOf('\n\n')) !== -1) {
+        consume(buffer.slice(0, boundary));
+        buffer = buffer.slice(boundary + 2);
+      }
+      if (done) break;
     }
-    if (done) break;
+    if (buffer.trim()) consume(buffer);
+    throwIfAborted(signal);
+    if (!answer.trim()) throw new Error('O serviço de análise não retornou uma resposta.');
+    return answer.trim();
+  } finally {
+    signal?.removeEventListener('abort', cancelReader);
+    if (signal?.aborted) await reader.cancel(signal.reason).catch(() => {});
+    reader.releaseLock();
   }
-  if (buffer.trim()) consume(buffer);
-  if (!answer.trim()) throw new Error('O serviço de análise não retornou uma resposta.');
-  return answer.trim();
 }

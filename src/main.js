@@ -848,7 +848,7 @@ async function init() {
     container.classList.add('master-ia-open');
     mainArea.replaceChildren(renderMasterIAPanel({
       store,
-      conversations: conversationsForUser(activeUser, store.getConversations()),
+      conversations: store.getConversations(),
       onBack: () => router.navigate('home'),
     }));
     navRail.setActive?.('master-ia');
