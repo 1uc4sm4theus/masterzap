@@ -1,6 +1,13 @@
 const ICON_PLANE = '<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5L21 16Z"/></svg>';
 const ICON_BACK = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/><path d="M9 12h12"/></svg>';
 
+const AIRPORTS = {
+  Congonhas: { code: 'CGH', city: 'São Paulo · Congonhas' },
+  Guarulhos: { code: 'GRU', city: 'São Paulo · Guarulhos' },
+  'Santos Dumont': { code: 'SDU', city: 'Rio de Janeiro · Santos Dumont' },
+  Galeão: { code: 'GIG', city: 'Rio de Janeiro · Galeão' },
+};
+
 const SECTIONS = [
   {
     title: 'Voos com Vorcaro indicado a bordo',
@@ -197,19 +204,107 @@ function makeElement(tag, className, text) {
   return element;
 }
 
+function splitRoute(route) {
+  return route.split(/ · (?=(?:retorno em [^:]+|no dia seguinte):)/i).map((part) => {
+    const qualifier = part.match(/^(retorno em [^:]+|no dia seguinte):\s*/i);
+    return {
+      label: qualifier
+        ? qualifier[1].replace(/^retorno em /i, 'Retorno · ').replace(/^no dia seguinte$/i, 'No dia seguinte')
+        : '',
+      route: qualifier ? part.slice(qualifier[0].length) : part,
+    };
+  });
+}
+
+function parseEndpoint(value) {
+  const timeMatch = value.match(/,\s*(\d{1,2}h\d{2})\s*$/i);
+  const place = (timeMatch ? value.slice(0, timeMatch.index) : value)
+    .split(' · ')[0]
+    .trim();
+  const airport = AIRPORTS[place];
+  return {
+    time: timeMatch?.[1] || '',
+    code: airport?.code || '',
+    city: airport?.city || place,
+    airportUnidentified: !airport && Boolean(place),
+  };
+}
+
+function renderEndpoint(endpoint, side) {
+  const element = makeElement('div', `flight-endpoint flight-endpoint-${side}`);
+  element.appendChild(makeElement('time', 'flight-endpoint-time', endpoint.time));
+  element.appendChild(makeElement('strong', endpoint.code ? 'flight-airport-code' : 'flight-city-name', endpoint.code || endpoint.city));
+  if (endpoint.code) element.appendChild(makeElement('span', 'flight-endpoint-city', endpoint.city));
+  else if (endpoint.airportUnidentified) element.appendChild(makeElement('span', 'flight-endpoint-city', 'Aeroporto não identificado'));
+  return element;
+}
+
+function renderPartialDestination(destination) {
+  const itinerary = makeElement('div', 'flight-itinerary flight-itinerary-partial');
+  const origin = makeElement('div', 'flight-endpoint flight-endpoint-origin');
+  origin.appendChild(makeElement('span', 'flight-endpoint-unknown', 'Origem não informada'));
+  itinerary.appendChild(origin);
+  const connector = makeElement('div', 'flight-route-connector');
+  connector.insertAdjacentHTML('beforeend', `<span class="flight-route-icon">${ICON_PLANE}</span>`);
+  itinerary.appendChild(connector);
+  itinerary.appendChild(renderEndpoint(parseEndpoint(destination), 'destination'));
+  return itinerary;
+}
+
+function renderRoute(route) {
+  const landing = route.match(/ · pouso às (\d{1,2}h\d{2})$/i);
+  const routeText = landing ? route.slice(0, landing.index) : route;
+  const places = routeText.split('→').map((place) => parseEndpoint(place.trim()));
+  if (landing && !places.at(-1).time) places.at(-1).time = landing[1];
+  const itinerary = makeElement('div', places.length > 2 ? 'flight-itinerary flight-itinerary-multi' : 'flight-itinerary');
+  itinerary.appendChild(renderEndpoint(places[0], 'origin'));
+  for (let index = 1; index < places.length; index += 1) {
+    const connector = makeElement('div', 'flight-route-connector');
+    connector.insertAdjacentHTML('beforeend', `<span class="flight-route-icon">${ICON_PLANE}</span>`);
+    itinerary.appendChild(connector);
+    itinerary.appendChild(renderEndpoint(places[index], index === places.length - 1 ? 'destination' : 'stop'));
+  }
+  if (places.length > 2) {
+    itinerary.appendChild(makeElement('span', 'flight-route-type', 'Conexão registrada'));
+  }
+  return itinerary;
+}
+
+function renderAircraft(value) {
+  const element = makeElement('div', 'flight-aircraft');
+  const registration = value.match(/\b(?:PR|PP|PT|PS)-[A-Z]{3}\b/);
+  const aircraft = registration ? value.replace(registration[0], '').replace(/\s*[·,]\s*/g, ' ').trim() : value;
+  element.appendChild(makeElement('span', 'flight-aircraft-label', 'Aeronave ·'));
+  element.appendChild(makeElement('span', 'flight-aircraft-model', aircraft));
+  if (registration) element.appendChild(makeElement('span', 'flight-registration', registration[0]));
+  return element;
+}
+
 function renderFlight(flight) {
   const card = makeElement('article', 'flight-card');
   const top = makeElement('div', 'flight-card-top');
   top.appendChild(makeElement('time', 'flight-date', flight.date));
-  const aircraft = makeElement('span', 'flight-aircraft', flight.aircraft);
-  top.appendChild(aircraft);
   if (flight.status) top.appendChild(makeElement('span', 'flight-status', flight.status));
   card.appendChild(top);
 
-  const route = makeElement('div', 'flight-route');
-  route.appendChild(makeElement('span', 'flight-route-place', flight.route));
-  route.insertAdjacentHTML('afterbegin', `<span class="flight-route-icon">${ICON_PLANE}</span>`);
-  card.appendChild(route);
+  const routes = makeElement('div', 'flight-routes');
+  const routeParts = splitRoute(flight.route);
+  for (const part of routeParts) {
+    const route = makeElement('section', 'flight-route');
+    if (part.label) route.appendChild(makeElement('span', 'flight-route-label', part.label));
+    if (part.route.includes('→')) route.appendChild(renderRoute(part.route));
+    else {
+      const destination = part.route.match(/^para\s+(.+)$/i);
+      if (destination) route.appendChild(renderPartialDestination(destination[1]));
+      else {
+        route.appendChild(makeElement('span', 'flight-route-context-label', 'Informação de local no registro'));
+        route.appendChild(makeElement('p', 'flight-route-context', part.route));
+      }
+    }
+    routes.appendChild(route);
+  }
+  card.appendChild(routes);
+  card.appendChild(renderAircraft(flight.aircraft));
 
   const passengerList = makeElement('ul', 'flight-passengers');
   passengerList.setAttribute('aria-label', 'Passageiros mencionados');
@@ -217,7 +312,11 @@ function renderFlight(flight) {
     passengerList.appendChild(makeElement('li', 'flight-passenger', passenger));
   }
   card.appendChild(passengerList);
-  if (flight.note) card.appendChild(makeElement('p', 'flight-note', flight.note));
+  const details = makeElement('details', 'flight-details');
+  details.appendChild(makeElement('summary', '', 'Observações e trajeto conforme o registro'));
+  if (flight.note) details.appendChild(makeElement('p', 'flight-note', flight.note));
+  details.appendChild(makeElement('p', 'flight-original-route', `Trajeto informado: ${flight.route}`));
+  card.appendChild(details);
   return card;
 }
 

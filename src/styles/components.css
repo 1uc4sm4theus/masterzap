@@ -402,91 +402,238 @@
 
 .flight-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
 }
 
 .flight-card,
 .flight-aircraft-notes {
   min-width: 0;
-  padding: 18px;
+  padding: 20px 24px;
   border: 1px solid var(--WDS-lines-divider);
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--WDS-surface-elevated-default);
 }
 
 .flight-card-top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
+  margin-bottom: 16px;
 }
 
 .flight-date {
-  color: var(--WDS-content-default);
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.flight-aircraft,
-.flight-status {
-  padding: 5px 9px;
-  border-radius: 6px;
-  background: var(--WDS-background-wash-inset);
   color: var(--WDS-content-deemphasized);
   font-size: 12px;
-  line-height: 1.35;
+}
+
+.flight-status {
+  padding: 3px 8px;
+  border: 1px solid var(--WDS-cream-500);
+  border-radius: 4px;
+  color: var(--WDS-cream-700);
+  font-size: 11px;
 }
 
 .flight-status {
   background: var(--WDS-cream-75);
-  color: var(--WDS-cream-700);
 }
 
 .flight-route {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin: 16px 0 14px;
-  padding: 12px 0;
+  min-width: 0;
+  padding: 4px 0;
+}
+
+.flight-route + .flight-route {
+  margin-top: 12px;
+  padding-top: 14px;
   border-top: 1px solid var(--WDS-lines-divider);
-  border-bottom: 1px solid var(--WDS-lines-divider);
+}
+
+.flight-route-label,
+.flight-route-context-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 11px;
+}
+
+.flight-itinerary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 2px 0 8px;
+}
+
+.flight-itinerary-multi {
+  width: 100%;
+}
+
+.flight-itinerary-multi .flight-endpoint {
+  flex: 0 0 140px;
+}
+
+.flight-itinerary-multi .flight-route-connector {
+  flex: 0 0 76px;
+}
+
+.flight-endpoint {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.flight-endpoint-time {
+  min-height: 18px;
+  color: var(--WDS-content-default);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.flight-airport-code,
+.flight-city-name {
+  overflow: hidden;
+  color: var(--WDS-content-default);
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+}
+
+.flight-endpoint-destination {
+  text-align: right;
+}
+
+.flight-endpoint-city {
+  margin-top: 3px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.flight-endpoint-unknown {
+  color: var(--WDS-content-deemphasized);
+  font-size: 12px;
+}
+
+.flight-route-connector {
+  position: relative;
+  display: flex;
+  flex: 1 1 64px;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  color: var(--WDS-cobalt-500);
+}
+
+.flight-route-connector::before {
+  position: absolute;
+  right: 0;
+  left: 0;
+  border-top: 1px dashed var(--WDS-content-deemphasized);
+  content: '';
 }
 
 .flight-route-icon {
   display: flex;
-  flex: 0 0 24px;
-  color: var(--WDS-cobalt-500);
+  z-index: 1;
+  padding: 2px 5px;
+  background: var(--WDS-surface-elevated-default);
+  transform: rotate(90deg);
 }
 
-.flight-route-place {
-  font-size: 14px;
+.flight-route-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.flight-route-type {
+  flex-basis: 100%;
+  margin-top: -6px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 11px;
+}
+
+.flight-route-context {
+  margin: 0;
+  font-size: 15px;
   line-height: 1.5;
+}
+
+.flight-aircraft {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 9px;
+  margin-top: 9px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 12px;
+}
+
+.flight-aircraft-label {
+  font-size: 11px;
+}
+
+.flight-aircraft-model {
+  color: var(--WDS-content-default);
+}
+
+.flight-registration {
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-registration::before {
+  margin-right: 6px;
+  color: var(--WDS-content-deemphasized);
+  content: '·';
 }
 
 .flight-passengers {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
+  gap: 0;
+  margin: 12px 0 0;
+  padding: 10px 0 0;
+  border-top: 1px solid var(--WDS-lines-divider);
   list-style: none;
 }
 
 .flight-passenger {
-  padding: 6px 10px;
-  border-radius: 18px;
-  background: var(--WDS-background-wash-inset);
   color: var(--WDS-content-default);
   font-size: 12px;
   line-height: 1.35;
 }
 
-.flight-note {
-  margin: 12px 0 0;
+.flight-passenger + .flight-passenger::before {
+  margin: 0 8px;
+  color: var(--WDS-content-deemphasized);
+  content: '·';
+}
+
+.flight-details {
+  margin-top: 10px;
   color: var(--WDS-content-deemphasized);
   font-size: 12px;
   line-height: 1.5;
+}
+
+.flight-details summary {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.flight-details summary:hover,
+.flight-details summary:focus-visible {
+  color: var(--WDS-content-default);
+}
+
+.flight-note,
+.flight-original-route {
+  margin: 8px 0 0;
 }
 
 .flight-card-canceled {
@@ -2308,7 +2455,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 16px 8px;
+  padding: 18px 20px 12px;
 }
 
 .payments-header-icon {
@@ -2329,114 +2476,287 @@
   color: var(--WDS-content-default);
 }
 
-.payments-intro,
-.payments-foot {
+.payments-intro {
   margin: 0;
-  padding: 0 16px 12px;
+  padding-top: 3px;
   font-size: 12px;
   color: var(--WDS-content-deemphasized);
 }
 
-.payments-table {
-  width: 100%;
-  padding: 0 12px;
-}
-
-.payments-row {
+.payments-overview {
   display: grid;
-  grid-template-columns: 1.15fr 1.45fr 0.85fr 1.25fr;
-  gap: 12px;
-  padding: 12px 4px;
-  border-bottom: 1px solid var(--WDS-lines-divider);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 20px;
+  margin: 0 20px 16px;
+  padding: 14px 16px 11px;
+  border: 1px solid var(--WDS-lines-divider);
+  border-radius: 8px;
+  background: var(--WDS-background-wash-inset);
 }
 
-.payments-row-header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background: var(--WDS-white);
+.payments-overview-stat {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.payments-overview-stat span,
+.payments-overview-note {
   color: var(--WDS-content-deemphasized);
   font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
-.payments-cell {
+.payments-overview-stat strong {
   min-width: 0;
-  font-size: 13px;
-  line-height: 1.35;
   color: var(--WDS-content-default);
+  font-size: 15px;
+  font-weight: 600;
   overflow-wrap: anywhere;
 }
 
-.payments-cell-date,
-.payments-cell-amount {
+.payments-overview-note {
+  grid-column: 1 / -1;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.payments-controls {
+  display: grid;
+  grid-template-columns: minmax(190px, 1.4fr) repeat(4, minmax(130px, 1fr));
+  gap: 8px;
+  padding: 0 20px 14px;
+}
+
+.payments-search,
+.payments-filter {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 11px;
+}
+
+.payments-search input,
+.payments-filter select {
+  width: 100%;
+  min-width: 0;
+  height: 36px;
+  padding: 0 9px;
+  border: 1px solid var(--WDS-lines-divider);
+  border-radius: 6px;
+  background: var(--WDS-white);
+  color: var(--WDS-content-default);
+  font: inherit;
+  font-size: 12px;
+}
+
+.payments-search input:focus,
+.payments-filter select:focus {
+  border-color: var(--WDS-accent);
+  outline: 2px solid rgba(var(--WDS-accent-RGB), .15);
+}
+
+.payments-history {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 0 20px 12px;
+}
+
+.payments-period-heading {
+  margin: 13px 0 0;
+  padding: 11px 0 7px;
+  border-bottom: 1px solid var(--WDS-lines-divider);
+  color: var(--WDS-content-deemphasized);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.payments-record {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) minmax(160px, 31%);
+  align-items: center;
+  gap: 12px;
+  min-height: 76px;
+  padding: 12px 2px;
+  border-bottom: 1px solid var(--WDS-lines-divider);
+}
+
+.payments-record-icon {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--WDS-background-wash-inset);
   color: var(--WDS-content-deemphasized);
 }
 
-.payments-cell-amount {
+.payments-record-details {
+  min-width: 0;
+}
+
+.payments-record-recipient,
+.payments-record-origin,
+.payments-record-amount,
+.payments-record-date {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.payments-record-recipient {
+  color: var(--WDS-content-default);
+  font-size: 13px;
   font-weight: 600;
-  color: var(--WDS-accent);
+  line-height: 1.4;
+}
+
+.payments-record-origin,
+.payments-record-date {
+  margin-top: 3px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.payments-record-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.payments-badge {
+  padding: 2px 6px;
+  border: 1px solid var(--WDS-lines-divider);
+  border-radius: 10px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.payments-record-summary {
+  min-width: 0;
+  text-align: right;
+}
+
+.payments-record-amount {
+  color: var(--WDS-content-default);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.payments-record-date {
+  font-variant-numeric: tabular-nums;
+}
+
+.payments-empty,
+.payments-foot {
+  margin: 0;
+  padding: 14px 0;
+  color: var(--WDS-content-deemphasized);
+  font-size: 12px;
 }
 
 .payments-foot {
-  padding-top: 12px;
-  padding-bottom: 24px;
+  padding: 10px 20px 20px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .payments-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 600px) {
+  .payments-panel {
+    overflow-y: auto;
+  }
+
   .payments-header {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 12px 12px 10px;
   }
 
-  .payments-intro,
-  .payments-foot {
-    padding-left: 12px;
-    padding-right: 12px;
+  .payments-overview {
+    gap: 9px 10px;
+    margin: 0 12px 12px;
+    padding: 11px 12px 9px;
   }
 
-  .payments-table {
-    padding: 0 12px;
+  .payments-overview-stat strong {
+    font-size: 13px;
   }
 
-  .payments-row-header {
-    display: none;
+  .payments-overview-note {
+    font-size: 10px;
   }
 
-  .payments-row {
-    display: block;
-    margin-bottom: 10px;
-    padding: 12px;
-    border: 1px solid var(--WDS-lines-divider);
-    border-radius: 8px;
-    background: var(--WDS-white);
+  .payments-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    padding: 0 12px 12px;
   }
 
-  .payments-cell {
-    display: block;
-    padding: 3px 0 3px 82px;
-    min-height: 18px;
-    position: relative;
+  .payments-search {
+    grid-column: 1 / -1;
   }
 
-  .payments-cell::before {
-    position: absolute;
-    left: 0;
-    width: 74px;
-    color: var(--WDS-content-deemphasized);
+  .payments-search input,
+  .payments-filter select {
+    height: 34px;
     font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
   }
 
-  .payments-cell-origin::before { content: 'Origem'; }
-  .payments-cell-recipient::before { content: 'Destino'; }
-  .payments-cell-date::before { content: 'Data'; }
-  .payments-cell-amount::before { content: 'Valor'; }
+  .payments-history {
+    padding: 0 12px 8px;
+  }
+
+  .payments-period-heading {
+    margin-top: 8px;
+    padding-top: 9px;
+  }
+
+  .payments-record {
+    grid-template-columns: 32px minmax(0, 1fr) minmax(100px, 42%);
+    gap: 8px;
+    min-height: 68px;
+    padding: 10px 0;
+  }
+
+  .payments-record-icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+
+  .payments-record-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .payments-record-recipient,
+  .payments-record-amount {
+    font-size: 12px;
+  }
+
+  .payments-record-origin,
+  .payments-record-date {
+    font-size: 10px;
+  }
+
+  .payments-badge {
+    font-size: 9px;
+  }
+
+  .payments-foot {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
 }
 
 .calls-header {

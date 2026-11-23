@@ -264,6 +264,21 @@
     padding: 14px;
   }
 
+  .flight-itinerary {
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .flight-airport-code,
+  .flight-city-name {
+    font-size: 19px;
+  }
+
+  .flight-route-connector {
+    flex-basis: 42px;
+    min-width: 30px;
+  }
+
   /* Show back button on mobile */
   .chat-header-back {
     display: flex;
