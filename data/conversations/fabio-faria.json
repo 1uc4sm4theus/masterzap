@@ -10,7 +10,7 @@
       "start": "2023-10-24",
       "end": "2024-09"
     },
-    "total_messages": 249,
+    "total_messages": 251,
     "sources": [
       "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
       "Relatório da PF citado pela piauí em 10–11/09/2026",
@@ -21,9 +21,10 @@
       "Jovem Pan — Raízen (ARE 1312127) concluído em 16/09/2024 (https://jovempan.com.br/politica/vorcaro-se-reuniu-com-gilmar-mendes-para-pedir-voto-em-causa-bilionaria-diz-jornal/)",
       "Metrópoles — julgamento da Alcídia concluído em 01/10/2024 (https://www.metropoles.com/colunas/andreza-matais/celular-de-vorcaro-cita-r-500-mil-para-filho-de-nunes-marques-veja-prints)",
       "Captura de tela anexada pelo usuário — WhatsApp Chat - Fábio Faria (28/03/2024)",
-      "Capturas de tela do usuário — 09/02/2024 (imagem 3) e 28/03/2024 (imagens 1 e 2)"
+      "Capturas de tela do usuário — 09/02/2024 (imagem 3) e 28/03/2024 (imagens 1 e 2)",
+      "Reportagem colada pelo usuário em 23/11/2026 — mensagens de 16/07/2024 (influenciador / casa em Orlando); veículo não identificado"
     ],
-    "note": "Trechos citados em relatório policial e reportagens — a conversa completa não consta dos documentos. Mensagens de 24–31/10/2023 e de 09–19/02/2024 não têm horário publicado. Paráfrases da reportagem ([teor: ...]) foram removidas; restam apenas mensagens literais. Atualização de 15/11/2026: acrescentadas 27 mensagens literais da reportagem e do infográfico da piauí (nov/2023, 29/03/2024, abr/2024, jun/2024, 14/08/2024, 26/08/2024 e set/2024); ids renumerados e as novas trazem o campo 'notes'. Datas parciais ('2023-11', '2024-04', '2024-06', '2024-09') têm timestamp e time nulos; as de 13/11 e 15/11/2023 têm data inferida pela ordem da reportagem. Os ids 226–228 ('Matou a gente.', 'Comecei a suar.', 'Pqp.') não têm data na reportagem; o mês 2024-09 é estimativa baseada em fontes externas (ver notes) e ficaram no fim do arquivo. As mensagens de 23/07/2024 mantêm os caracteres '?' da captura original. Atualização de 20/11/2026: acrescentadas 8 mensagens literais de 28/03/2024 (captura de tela do WhatsApp, com horário e fuso); ids renumerados (novas: 135–142; as antigas 135–220 passaram a 143–228). Atualização de 20/11/2026 (2ª rodada): corrigidas e expandidas mensagens de 09/02/2024 (ids 91–99: encaminhadas DV, chamadas, 'Qual?', chamada 02:36, imagem+ADC 81, Ok — conforme capturas IPJ-A 576/2026 e imagem 3 do usuário); acrescentadas 13 mensagens de 28/03/2024 (imagens 1 e 2 do usuário: 6 anteriores ao bloco 135–142 e 7 posteriores); ids renumerados sequencialmente; index atualizado."
+    "note": "Trechos citados em relatório policial e reportagens — a conversa completa não consta dos documentos. Mensagens de 24–31/10/2023 e de 09–19/02/2024 não têm horário publicado. Paráfrases da reportagem ([teor: ...]) foram removidas; restam apenas mensagens literais. Atualização de 15/11/2026: acrescentadas 27 mensagens literais da reportagem e do infográfico da piauí (nov/2023, 29/03/2024, abr/2024, jun/2024, 14/08/2024, 26/08/2024 e set/2024); ids renumerados e as novas trazem o campo 'notes'. Datas parciais ('2023-11', '2024-04', '2024-06', '2024-09') têm timestamp e time nulos; as de 13/11 e 15/11/2023 têm data inferida pela ordem da reportagem. Os ids 226–228 ('Matou a gente.', 'Comecei a suar.', 'Pqp.') não têm data na reportagem; o mês 2024-09 é estimativa baseada em fontes externas (ver notes) e ficaram no fim do arquivo. As mensagens de 23/07/2024 mantêm os caracteres '?' da captura original. Atualização de 20/11/2026: acrescentadas 8 mensagens literais de 28/03/2024 (captura de tela do WhatsApp, com horário e fuso); ids renumerados (novas: 135–142; as antigas 135–220 passaram a 143–228). Atualização de 20/11/2026 (2ª rodada): corrigidas e expandidas mensagens de 09/02/2024 (ids 91–99: encaminhadas DV, chamadas, 'Qual?', chamada 02:36, imagem+ADC 81, Ok — conforme capturas IPJ-A 576/2026 e imagem 3 do usuário); acrescentadas 13 mensagens de 28/03/2024 (imagens 1 e 2 do usuário: 6 anteriores ao bloco 135–142 e 7 posteriores); ids renumerados sequencialmente; index atualizado. Atualização de 23/11/2026: acrescentadas 2 mensagens literais de 16/07/2024 (Vorcaro: 'bolsominion'/casa em Orlando; Faria: 'Tem que meter ele no bolo'), sem horário, posicionadas antes das mensagens com horário do mesmo dia; a pergunta de Faria ('de quem se tratava') é paráfrase e foi omitida; ids renumerados (novas: 220–221; as antigas 220–249 passaram a 222–251)."
   },
   "messages": [
     {
@@ -3606,6 +3607,38 @@
     },
     {
       "id": 220,
+      "timestamp": null,
+      "date": "2024-07-16",
+      "time": null,
+      "sender": "DV",
+      "content": "Tem um 'bolsominion' fazendo vídeo fake news. Mostrando casa Orlando, falando que roubei a Caixa (sic). Queria ver se não põe esse cara no bolo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Reportagem fornecida pelo usuário (texto colado em 23/11/2026) — veículo original não identificado",
+      "notes": "Data 16/07/2024 vem da reportagem; horário não informado. Vorcaro reclama de vídeos de um influenciador que, segundo ele, fazia acusações sobre uma casa em Orlando (EUA) e dizia que ele teria roubado a Caixa. '(sic)' conforme a matéria. Posicionada antes das mensagens com horário do mesmo dia."
+    },
+    {
+      "id": 221,
+      "timestamp": null,
+      "date": "2024-07-16",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Nunca ouvi falar. Tem que meter ele no bolo. Rápido. Fakenews",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Reportagem fornecida pelo usuário (texto colado em 23/11/2026) — veículo original não identificado",
+      "notes": "Resposta de Faria, após perguntar de quem se tratava (pergunta não transcrita literalmente na matéria, por isso omitida). Horário não informado."
+    },
+    {
+      "id": 222,
       "timestamp": "2024-07-16T21:12:35",
       "date": "2024-07-16",
       "time": "21:12:35",
@@ -3622,7 +3655,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 221,
+      "id": 223,
       "timestamp": "2024-07-16T21:12:36",
       "date": "2024-07-16",
       "time": "21:12:36",
@@ -3639,7 +3672,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 222,
+      "id": 224,
       "timestamp": "2024-07-16T21:12:42",
       "date": "2024-07-16",
       "time": "21:12:42",
@@ -3656,7 +3689,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 223,
+      "id": 225,
       "timestamp": "2024-07-16T21:12:46",
       "date": "2024-07-16",
       "time": "21:12:46",
@@ -3673,7 +3706,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 224,
+      "id": 226,
       "timestamp": "2024-07-17T09:55:15",
       "date": "2024-07-17",
       "time": "09:55:15",
@@ -3690,7 +3723,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 225,
+      "id": 227,
       "timestamp": "2024-07-17T09:55:20",
       "date": "2024-07-17",
       "time": "09:55:20",
@@ -3707,7 +3740,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 226,
+      "id": 228,
       "timestamp": "2024-07-23T15:36:14-03:00",
       "date": "2024-07-23",
       "time": "15:36:14",
@@ -3720,7 +3753,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 227,
+      "id": 229,
       "timestamp": "2024-07-23T21:12:10-03:00",
       "date": "2024-07-23",
       "time": "21:12:10",
@@ -3733,7 +3766,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 228,
+      "id": 230,
       "timestamp": "2024-07-23T21:12:14-03:00",
       "date": "2024-07-23",
       "time": "21:12:14",
@@ -3746,7 +3779,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 229,
+      "id": 231,
       "timestamp": "2024-07-23T21:13:18-03:00",
       "date": "2024-07-23",
       "time": "21:13:18",
@@ -3759,7 +3792,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 230,
+      "id": 232,
       "timestamp": "2024-07-23T21:13:25-03:00",
       "date": "2024-07-23",
       "time": "21:13:25",
@@ -3772,7 +3805,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 231,
+      "id": 233,
       "timestamp": "2024-07-23T21:13:45-03:00",
       "date": "2024-07-23",
       "time": "21:13:45",
@@ -3785,7 +3818,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 232,
+      "id": 234,
       "timestamp": "2024-07-23T21:15:17-03:00",
       "date": "2024-07-23",
       "time": "21:15:17",
@@ -3798,7 +3831,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 233,
+      "id": 235,
       "timestamp": "2024-07-23T21:20:00-03:00",
       "date": "2024-07-23",
       "time": "21:20:00",
@@ -3811,7 +3844,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 234,
+      "id": 236,
       "timestamp": "2024-07-23T22:59:24-03:00",
       "date": "2024-07-23",
       "time": "22:59:24",
@@ -3824,7 +3857,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 235,
+      "id": 237,
       "timestamp": "2024-07-23T22:59:30-03:00",
       "date": "2024-07-23",
       "time": "22:59:30",
@@ -3837,7 +3870,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 236,
+      "id": 238,
       "timestamp": "2024-07-23T22:59:35-03:00",
       "date": "2024-07-23",
       "time": "22:59:35",
@@ -3850,7 +3883,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 237,
+      "id": 239,
       "timestamp": "2024-07-23T23:00:16-03:00",
       "date": "2024-07-23",
       "time": "23:00:16",
@@ -3863,7 +3896,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 238,
+      "id": 240,
       "timestamp": "2024-07-23T23:00:22-03:00",
       "date": "2024-07-23",
       "time": "23:00:22",
@@ -3876,7 +3909,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 239,
+      "id": 241,
       "timestamp": "2024-07-23T23:00:36-03:00",
       "date": "2024-07-23",
       "time": "23:00:36",
@@ -3889,7 +3922,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 240,
+      "id": 242,
       "timestamp": "2024-07-23T23:00:48-03:00",
       "date": "2024-07-23",
       "time": "23:00:48",
@@ -3902,7 +3935,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 241,
+      "id": 243,
       "timestamp": "2024-08-14T08:28:00",
       "date": "2024-08-14",
       "time": "08:28:00",
@@ -3918,7 +3951,7 @@
       "notes": "Segundo a matéria, Faria liga a Vorcaro às 8h28 e falam por sete minutos; o conteúdo da conversa é desconhecido. Segundos e duração exata não informados (':00' é preenchimento)."
     },
     {
-      "id": 242,
+      "id": 244,
       "timestamp": "2024-08-14T08:41:00",
       "date": "2024-08-14",
       "time": "08:41:00",
@@ -3934,7 +3967,7 @@
       "notes": "Horário do infográfico (08:41); segundos não informados. Grafia conforme o infográfico; a reportagem traz 'Toffoli'. Data 14/08/2024 vem da reportagem. Vorcaro avisa Faria antes de escrever a Toffoli."
     },
     {
-      "id": 243,
+      "id": 245,
       "timestamp": "2024-08-14T08:41:00",
       "date": "2024-08-14",
       "time": "08:41:00",
@@ -3950,7 +3983,7 @@
       "notes": "Grafia conforme o infográfico; a reportagem traz 'aí'. Segundo a matéria, dita ao constatar que o pagamento ligado ao Tayayá foi feito mas não chegou ao destino final."
     },
     {
-      "id": 244,
+      "id": 246,
       "timestamp": "2024-08-14T09:02:00",
       "date": "2024-08-14",
       "time": "09:02:00",
@@ -3966,7 +3999,7 @@
       "notes": "Conteúdo do áudio não disponível. Horário do infográfico (09:02)."
     },
     {
-      "id": 245,
+      "id": 247,
       "timestamp": "2024-08-14T09:02:00",
       "date": "2024-08-14",
       "time": "09:02:00",
@@ -3982,7 +4015,7 @@
       "notes": "Horário do infográfico (09:02). O infográfico não identifica 'Bianco' nem 'T'. A matéria diz que Faria pede a Vorcaro que resolva o assunto até o dia seguinte."
     },
     {
-      "id": 246,
+      "id": 248,
       "timestamp": null,
       "date": "2024-08-26",
       "time": null,
@@ -3998,7 +4031,7 @@
       "notes": "Horário não informado. Segundo a matéria, Vorcaro respondeu que tinha compromisso e sugeriu o fim da tarde, e Faria disse que confirmaria (paráfrases omitidas). Sem registro do desfecho."
     },
     {
-      "id": 247,
+      "id": 249,
       "timestamp": null,
       "date": "2024-09",
       "time": null,
@@ -4014,7 +4047,7 @@
       "notes": "Sem data na reportagem da piauí, que situa a mensagem 'dias antes' do julgamento original da Alcídia, depois da virada de voto de Toffoli. O mês 2024-09 é ESTIMATIVA a partir de fontes externas: o julgamento da Raízen (ARE 1312127), em que a União venceu, foi concluído em 16/09/2024, e o da Alcídia, adiado após vista de Kassio Nunes Marques, foi retomado e concluído em 01/10/2024. Dia e horário desconhecidos. Destinatário: Vorcaro, conforme Diário de Pernambuco e O Globo (11/09/2026). Posicionada no fim do arquivo."
     },
     {
-      "id": 248,
+      "id": 250,
       "timestamp": null,
       "date": "2024-09",
       "time": null,
@@ -4030,7 +4063,7 @@
       "notes": "Mesma situação da mensagem anterior (mês estimado, dia e horário desconhecidos)."
     },
     {
-      "id": 249,
+      "id": 251,
       "timestamp": null,
       "date": "2024-09",
       "time": null,
@@ -4224,39 +4257,39 @@
       },
       {
         "date": "2024-07-16",
-        "message_count": 4,
+        "message_count": 6,
         "first_message_id": 220,
-        "last_message_id": 223
+        "last_message_id": 225
       },
       {
         "date": "2024-07-17",
         "message_count": 2,
-        "first_message_id": 224,
-        "last_message_id": 225
+        "first_message_id": 226,
+        "last_message_id": 227
       },
       {
         "date": "2024-07-23",
         "message_count": 15,
-        "first_message_id": 226,
-        "last_message_id": 240
+        "first_message_id": 228,
+        "last_message_id": 242
       },
       {
         "date": "2024-08-14",
         "message_count": 5,
-        "first_message_id": 241,
-        "last_message_id": 245
+        "first_message_id": 243,
+        "last_message_id": 247
       },
       {
         "date": "2024-08-26",
         "message_count": 1,
-        "first_message_id": 246,
-        "last_message_id": 246
+        "first_message_id": 248,
+        "last_message_id": 248
       },
       {
         "date": "2024-09",
         "message_count": 3,
-        "first_message_id": 247,
-        "last_message_id": 249
+        "first_message_id": 249,
+        "last_message_id": 251
       }
     ]
   }
