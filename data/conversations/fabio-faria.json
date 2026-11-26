@@ -10,7 +10,7 @@
       "start": "2023-10-24",
       "end": "2024-09"
     },
-    "total_messages": 251,
+    "total_messages": 284,
     "sources": [
       "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
       "Relatório da PF citado pela piauí em 10–11/09/2026",
@@ -22,9 +22,14 @@
       "Metrópoles — julgamento da Alcídia concluído em 01/10/2024 (https://www.metropoles.com/colunas/andreza-matais/celular-de-vorcaro-cita-r-500-mil-para-filho-de-nunes-marques-veja-prints)",
       "Captura de tela anexada pelo usuário — WhatsApp Chat - Fábio Faria (28/03/2024)",
       "Capturas de tela do usuário — 09/02/2024 (imagem 3) e 28/03/2024 (imagens 1 e 2)",
-      "Reportagem colada pelo usuário em 23/11/2026 — mensagens de 16/07/2024 (influenciador / casa em Orlando); veículo não identificado"
+      "Reportagem colada pelo usuário em 23/11/2026 — mensagens de 16/07/2024 (influenciador / casa em Orlando); veículo não identificado",
+      "UOL — coluna Fábio Serapião, 29/09/2026 (https://noticias.uol.com.br/colunas/fabio-serapiao/2026/09/29/vorcaro-e-ex-ministro-de-bolsonaro-tentaram-conter-crise-de-moraes-e-musk.htm)",
+      "Captura de tela do usuário (07/04/2024) — WhatsApp Chat - Fábio Faria",
+      "Captura de tela do usuário (07/04/2024, 2ª captura) — WhatsApp Chat - Fábio Faria",
+      "Reportagem fornecida pelo usuário em 26/11/2026 — mensagens de mar/2024 ('Turma não tá de brincadeira pqp') e set/2024 ('Me ligou maluco' … 'Fui pra cima do André com tudo'); veículo não identificado",
+      "Mensagem fornecida pelo usuário em 26/11/2026 — 28/03/2024 10:20:41 ('Ou no banco'); fonte original não identificada"
     ],
-    "note": "Trechos citados em relatório policial e reportagens — a conversa completa não consta dos documentos. Mensagens de 24–31/10/2023 e de 09–19/02/2024 não têm horário publicado. Paráfrases da reportagem ([teor: ...]) foram removidas; restam apenas mensagens literais. Atualização de 15/11/2026: acrescentadas 27 mensagens literais da reportagem e do infográfico da piauí (nov/2023, 29/03/2024, abr/2024, jun/2024, 14/08/2024, 26/08/2024 e set/2024); ids renumerados e as novas trazem o campo 'notes'. Datas parciais ('2023-11', '2024-04', '2024-06', '2024-09') têm timestamp e time nulos; as de 13/11 e 15/11/2023 têm data inferida pela ordem da reportagem. Os ids 226–228 ('Matou a gente.', 'Comecei a suar.', 'Pqp.') não têm data na reportagem; o mês 2024-09 é estimativa baseada em fontes externas (ver notes) e ficaram no fim do arquivo. As mensagens de 23/07/2024 mantêm os caracteres '?' da captura original. Atualização de 20/11/2026: acrescentadas 8 mensagens literais de 28/03/2024 (captura de tela do WhatsApp, com horário e fuso); ids renumerados (novas: 135–142; as antigas 135–220 passaram a 143–228). Atualização de 20/11/2026 (2ª rodada): corrigidas e expandidas mensagens de 09/02/2024 (ids 91–99: encaminhadas DV, chamadas, 'Qual?', chamada 02:36, imagem+ADC 81, Ok — conforme capturas IPJ-A 576/2026 e imagem 3 do usuário); acrescentadas 13 mensagens de 28/03/2024 (imagens 1 e 2 do usuário: 6 anteriores ao bloco 135–142 e 7 posteriores); ids renumerados sequencialmente; index atualizado. Atualização de 23/11/2026: acrescentadas 2 mensagens literais de 16/07/2024 (Vorcaro: 'bolsominion'/casa em Orlando; Faria: 'Tem que meter ele no bolo'), sem horário, posicionadas antes das mensagens com horário do mesmo dia; a pergunta de Faria ('de quem se tratava') é paráfrase e foi omitida; ids renumerados (novas: 220–221; as antigas 220–249 passaram a 222–251)."
+    "note": "Trechos citados em relatório policial e reportagens — a conversa completa não consta dos documentos. Mensagens de 24–31/10/2023 e de 09–19/02/2024 não têm horário publicado. Paráfrases da reportagem ([teor: ...]) foram removidas; restam apenas mensagens literais. Atualização de 15/11/2026: acrescentadas 27 mensagens literais da reportagem e do infográfico da piauí (nov/2023, 29/03/2024, abr/2024, jun/2024, 14/08/2024, 26/08/2024 e set/2024); ids renumerados e as novas trazem o campo 'notes'. Datas parciais ('2023-11', '2024-04', '2024-06', '2024-09') têm timestamp e time nulos; as de 13/11 e 15/11/2023 têm data inferida pela ordem da reportagem. Os ids 'Matou a gente.', 'Comecei a suar.', 'Pqp.' não têm data na reportagem; o mês 2024-09 é estimativa baseada em fontes externas (ver notes) e ficaram no fim do arquivo. As mensagens de 23/07/2024 mantêm os caracteres '?' da captura original. Atualização de 20/11/2026: acrescentadas 8 mensagens literais de 28/03/2024 (captura de tela do WhatsApp, com horário e fuso); ids renumerados. Atualização de 20/11/2026 (2ª rodada): corrigidas e expandidas mensagens de 09/02/2024 (encaminhadas DV, chamadas, 'Qual?', chamada 02:36, imagem+ADC 81, Ok — conforme capturas IPJ-A 576/2026 e imagem 3 do usuário); acrescentadas 13 mensagens de 28/03/2024 (imagens 1 e 2 do usuário); ids renumerados sequencialmente; index atualizado. Atualização de 23/11/2026: acrescentadas 2 mensagens literais de 16/07/2024 (Vorcaro: 'bolsominion'/casa em Orlando; Faria: 'Tem que meter ele no bolo'), sem horário, posicionadas antes das mensagens com horário do mesmo dia; a pergunta de Faria ('de quem se tratava') é paráfrase e foi omitida; ids renumerados. Atualização de 24/11/2026: acrescentadas 9 mensagens literais de 07/04/2024 (captura de tela do WhatsApp, com horário e sem fuso: rascunho em inglês dirigido a 'Elon' e a troca com Vorcaro, 13:05–13:25), posicionadas entre 06/04 e 17/04; ids renumerados sequencialmente; index atualizado. Atualização de 24/11/2026 (2ª rodada): acrescentadas 16 mensagens — 8 de 06/04/2024 (≈20h, da coluna de Fábio Serapião/UOL de 29/09/2026: respostas de Faria 'Claro né'…'Pediu pra eu falar c ele', 'Vc unico (sic)', 'Pra resolver isso', trecho parcial '1 bi'/'EUA pode falar tudo' e 'É mas tem que mostrar outro lado pro Elon', esta de Vorcaro, conforme a matéria) e 8 de 07/04/2024 (2ª captura do WhatsApp, 13:25–15:09, incluindo a versão revisada do texto a Elon às 13:38); paráfrases da matéria omitidas; ids renumerados sequencialmente; index atualizado. Atualização de 26/11/2026: acrescentadas 8 mensagens literais fornecidas pelo usuário — 1 de 28/03/2024 às 10:20:41 (Faria: 'Ou no banco'), posicionada após a das 10:20:04; 1 de março de 2024 sem dia nem horário (Vorcaro: 'Turma não tá de brincadeira pqp'), com data parcial '2024-03', posicionada no início do bloco de março; e 6 de setembro de 2024 sem dia nem horário (Faria: 'Me ligou maluco' … 'Fui pra cima do André com tudo'), com data parcial '2024-09', posicionadas no fim do arquivo, após as três mensagens de 2024-09 já existentes, na ordem fornecida (ordem relativa entre os dois grupos desconhecida). Veículo das reportagens não identificado. Ids renumerados sequencialmente; index atualizado."
   },
   "messages": [
     {
@@ -1685,6 +1690,22 @@
     },
     {
       "id": 105,
+      "timestamp": null,
+      "date": "2024-03",
+      "time": null,
+      "sender": "DV",
+      "content": "Turma não tá de brincadeira pqp",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Reportagem fornecida pelo usuário em 26/11/2026 — veículo original não identificado",
+      "notes": "Data parcial: a reportagem informa apenas março de 2024; dia e horário não informados. Posicionada no início do bloco de março por ordem de data parcial, como nos demais blocos com data parcial. Contexto da mensagem não informado."
+    },
+    {
+      "id": 106,
       "timestamp": "2024-03-13T10:04:19",
       "date": "2024-03-13",
       "time": "10:04:19",
@@ -1701,7 +1722,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 106,
+      "id": 107,
       "timestamp": "2024-03-13T10:09:35",
       "date": "2024-03-13",
       "time": "10:09:35",
@@ -1718,7 +1739,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 107,
+      "id": 108,
       "timestamp": "2024-03-13T13:08:41",
       "date": "2024-03-13",
       "time": "13:08:41",
@@ -1735,7 +1756,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 108,
+      "id": 109,
       "timestamp": "2024-03-13T13:08:46",
       "date": "2024-03-13",
       "time": "13:08:46",
@@ -1752,7 +1773,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 109,
+      "id": 110,
       "timestamp": "2024-03-13T13:09:29",
       "date": "2024-03-13",
       "time": "13:09:29",
@@ -1769,7 +1790,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 110,
+      "id": 111,
       "timestamp": "2024-03-13T13:09:47",
       "date": "2024-03-13",
       "time": "13:09:47",
@@ -1786,7 +1807,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 111,
+      "id": 112,
       "timestamp": "2024-03-13T13:09:55",
       "date": "2024-03-13",
       "time": "13:09:55",
@@ -1803,7 +1824,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 112,
+      "id": 113,
       "timestamp": "2024-03-13T13:10:23",
       "date": "2024-03-13",
       "time": "13:10:23",
@@ -1820,7 +1841,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 113,
+      "id": 114,
       "timestamp": "2024-03-13T13:10:25",
       "date": "2024-03-13",
       "time": "13:10:25",
@@ -1837,7 +1858,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 114,
+      "id": 115,
       "timestamp": "2024-03-13T13:10:49",
       "date": "2024-03-13",
       "time": "13:10:49",
@@ -1854,7 +1875,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 115,
+      "id": 116,
       "timestamp": "2024-03-13T13:10:57",
       "date": "2024-03-13",
       "time": "13:10:57",
@@ -1871,7 +1892,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 116,
+      "id": 117,
       "timestamp": "2024-03-13T13:21:52",
       "date": "2024-03-13",
       "time": "13:21:52",
@@ -1888,7 +1909,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 117,
+      "id": 118,
       "timestamp": "2024-03-13T13:41:02",
       "date": "2024-03-13",
       "time": "13:41:02",
@@ -1905,7 +1926,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 118,
+      "id": 119,
       "timestamp": "2024-03-13T13:41:07",
       "date": "2024-03-13",
       "time": "13:41:07",
@@ -1922,7 +1943,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 119,
+      "id": 120,
       "timestamp": "2024-03-13T17:07:33",
       "date": "2024-03-13",
       "time": "17:07:33",
@@ -1939,7 +1960,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 120,
+      "id": 121,
       "timestamp": "2024-03-13T17:07:34",
       "date": "2024-03-13",
       "time": "17:07:34",
@@ -1956,7 +1977,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 121,
+      "id": 122,
       "timestamp": "2024-03-13T17:07:39",
       "date": "2024-03-13",
       "time": "17:07:39",
@@ -1973,7 +1994,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 122,
+      "id": 123,
       "timestamp": "2024-03-13T17:07:45",
       "date": "2024-03-13",
       "time": "17:07:45",
@@ -1990,7 +2011,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 123,
+      "id": 124,
       "timestamp": "2024-03-13T17:07:49",
       "date": "2024-03-13",
       "time": "17:07:49",
@@ -2007,7 +2028,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 124,
+      "id": 125,
       "timestamp": "2024-03-13T17:07:53",
       "date": "2024-03-13",
       "time": "17:07:53",
@@ -2024,7 +2045,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 125,
+      "id": 126,
       "timestamp": "2024-03-13T17:07:54",
       "date": "2024-03-13",
       "time": "17:07:54",
@@ -2041,7 +2062,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 126,
+      "id": 127,
       "timestamp": "2024-03-13T17:08:02",
       "date": "2024-03-13",
       "time": "17:08:02",
@@ -2058,7 +2079,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 127,
+      "id": 128,
       "timestamp": "2024-03-15T14:56:24",
       "date": "2024-03-15",
       "time": "14:56:24",
@@ -2075,7 +2096,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 128,
+      "id": 129,
       "timestamp": "2024-03-15T14:58:03",
       "date": "2024-03-15",
       "time": "14:58:03",
@@ -2092,7 +2113,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 129,
+      "id": 130,
       "timestamp": "2024-03-15T14:58:23",
       "date": "2024-03-15",
       "time": "14:58:23",
@@ -2109,7 +2130,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 130,
+      "id": 131,
       "timestamp": "2024-03-15T14:58:41",
       "date": "2024-03-15",
       "time": "14:58:41",
@@ -2126,7 +2147,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 131,
+      "id": 132,
       "timestamp": "2024-03-15T15:06:35",
       "date": "2024-03-15",
       "time": "15:06:35",
@@ -2143,7 +2164,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 132,
+      "id": 133,
       "timestamp": "2024-03-15T15:06:39",
       "date": "2024-03-15",
       "time": "15:06:39",
@@ -2160,7 +2181,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 133,
+      "id": 134,
       "timestamp": "2024-03-15T15:06:47",
       "date": "2024-03-15",
       "time": "15:06:47",
@@ -2177,7 +2198,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 134,
+      "id": 135,
       "timestamp": "2024-03-15T15:06:59",
       "date": "2024-03-15",
       "time": "15:06:59",
@@ -2194,7 +2215,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 135,
+      "id": 136,
       "timestamp": "2024-03-15T15:07:02",
       "date": "2024-03-15",
       "time": "15:07:02",
@@ -2211,7 +2232,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 136,
+      "id": 137,
       "timestamp": "2024-03-15T15:07:07",
       "date": "2024-03-15",
       "time": "15:07:07",
@@ -2228,7 +2249,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 137,
+      "id": 138,
       "timestamp": "2024-03-15T15:07:11",
       "date": "2024-03-15",
       "time": "15:07:11",
@@ -2245,7 +2266,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 138,
+      "id": 139,
       "timestamp": "2024-03-15T15:07:21",
       "date": "2024-03-15",
       "time": "15:07:21",
@@ -2262,7 +2283,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 139,
+      "id": 140,
       "timestamp": "2024-03-15T15:07:34",
       "date": "2024-03-15",
       "time": "15:07:34",
@@ -2279,7 +2300,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 140,
+      "id": 141,
       "timestamp": "2024-03-15T15:08:02",
       "date": "2024-03-15",
       "time": "15:08:02",
@@ -2296,7 +2317,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 141,
+      "id": 142,
       "timestamp": "2024-03-15T15:09:08",
       "date": "2024-03-15",
       "time": "15:09:08",
@@ -2313,7 +2334,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 142,
+      "id": 143,
       "timestamp": "2024-03-15T15:09:14",
       "date": "2024-03-15",
       "time": "15:09:14",
@@ -2330,7 +2351,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 143,
+      "id": 144,
       "timestamp": "2024-03-28T10:15:17-03:00",
       "date": "2024-03-28",
       "time": "10:15:17",
@@ -2345,7 +2366,7 @@
       "source_ref": "Captura de tela do usuário (imagem 2 — 28/03/2024)"
     },
     {
-      "id": 144,
+      "id": 145,
       "timestamp": "2024-03-28T10:15:43-03:00",
       "date": "2024-03-28",
       "time": "10:15:43",
@@ -2360,7 +2381,7 @@
       "source_ref": "Captura de tela do usuário (imagem 2 — 28/03/2024)"
     },
     {
-      "id": 145,
+      "id": 146,
       "timestamp": "2024-03-28T10:15:47-03:00",
       "date": "2024-03-28",
       "time": "10:15:47",
@@ -2375,7 +2396,7 @@
       "source_ref": "Captura de tela do usuário (imagem 2 — 28/03/2024)"
     },
     {
-      "id": 146,
+      "id": 147,
       "timestamp": "2024-03-28T10:15:51-03:00",
       "date": "2024-03-28",
       "time": "10:15:51",
@@ -2390,7 +2411,7 @@
       "source_ref": "Captura de tela do usuário (imagem 2 — 28/03/2024)"
     },
     {
-      "id": 147,
+      "id": 148,
       "timestamp": "2024-03-28T10:16:04-03:00",
       "date": "2024-03-28",
       "time": "10:16:04",
@@ -2405,7 +2426,7 @@
       "source_ref": "Captura de tela do usuário (imagem 2 — 28/03/2024)"
     },
     {
-      "id": 148,
+      "id": 149,
       "timestamp": "2024-03-28T10:16:07-03:00",
       "date": "2024-03-28",
       "time": "10:16:07",
@@ -2420,7 +2441,7 @@
       "source_ref": "Captura de tela do usuário (imagem 2 — 28/03/2024)"
     },
     {
-      "id": 149,
+      "id": 150,
       "timestamp": "2024-03-28T10:16:20-03:00",
       "date": "2024-03-28",
       "time": "10:16:20",
@@ -2437,7 +2458,7 @@
       "source_context": "Mensagem encaminhada por Moraes."
     },
     {
-      "id": 150,
+      "id": 151,
       "timestamp": "2024-03-28T10:16:21-03:00",
       "date": "2024-03-28",
       "time": "10:16:21",
@@ -2453,7 +2474,7 @@
       "notes": "Captura de tela do WhatsApp Chat - Fábio Faria - 556199910111 (28/03/2024, fuso -03:00)."
     },
     {
-      "id": 151,
+      "id": 152,
       "timestamp": "2024-03-28T10:16:21-03:00",
       "date": "2024-03-28",
       "time": "10:16:21",
@@ -2470,7 +2491,7 @@
       "source_context": "Mensagem encaminhada por Moraes."
     },
     {
-      "id": 152,
+      "id": 153,
       "timestamp": "2024-03-28T10:16:33-03:00",
       "date": "2024-03-28",
       "time": "10:16:33",
@@ -2486,7 +2507,7 @@
       "notes": "Captura de tela do WhatsApp Chat - Fábio Faria - 556199910111 (28/03/2024, fuso -03:00)."
     },
     {
-      "id": 153,
+      "id": 154,
       "timestamp": "2024-03-28T10:16:36-03:00",
       "date": "2024-03-28",
       "time": "10:16:36",
@@ -2503,7 +2524,7 @@
       "source_context": "Mensagem encaminhada por Moraes."
     },
     {
-      "id": 154,
+      "id": 155,
       "timestamp": "2024-03-28T10:16:41-03:00",
       "date": "2024-03-28",
       "time": "10:16:41",
@@ -2519,7 +2540,7 @@
       "notes": "Captura de tela do WhatsApp Chat - Fábio Faria - 556199910111 (28/03/2024, fuso -03:00)."
     },
     {
-      "id": 155,
+      "id": 156,
       "timestamp": "2024-03-28T10:16:43-03:00",
       "date": "2024-03-28",
       "time": "10:16:43",
@@ -2535,7 +2556,7 @@
       "notes": "Captura de tela do WhatsApp Chat - Fábio Faria - 556199910111 (28/03/2024, fuso -03:00)."
     },
     {
-      "id": 156,
+      "id": 157,
       "timestamp": "2024-03-28T10:16:46-03:00",
       "date": "2024-03-28",
       "time": "10:16:46",
@@ -2551,7 +2572,7 @@
       "notes": "Captura de tela do WhatsApp Chat - Fábio Faria - 556199910111 (28/03/2024, fuso -03:00)."
     },
     {
-      "id": 157,
+      "id": 158,
       "timestamp": "2024-03-28T10:16:55-03:00",
       "date": "2024-03-28",
       "time": "10:16:55",
@@ -2567,7 +2588,7 @@
       "notes": "Grafia original da captura ('el' provavelmente erro por 'em')."
     },
     {
-      "id": 158,
+      "id": 159,
       "timestamp": "2024-03-28T10:17:11-03:00",
       "date": "2024-03-28",
       "time": "10:17:11",
@@ -2582,7 +2603,7 @@
       "source_ref": "Captura de tela do usuário (imagem 1 — 28/03/2024)"
     },
     {
-      "id": 159,
+      "id": 160,
       "timestamp": "2024-03-28T10:17:15-03:00",
       "date": "2024-03-28",
       "time": "10:17:15",
@@ -2597,7 +2618,7 @@
       "source_ref": "Captura de tela do usuário (imagem 1 — 28/03/2024)"
     },
     {
-      "id": 160,
+      "id": 161,
       "timestamp": "2024-03-28T10:17:26-03:00",
       "date": "2024-03-28",
       "time": "10:17:26",
@@ -2613,7 +2634,7 @@
       "notes": "Mensagem encaminhada."
     },
     {
-      "id": 161,
+      "id": 162,
       "timestamp": "2024-03-28T10:17:26-03:00",
       "date": "2024-03-28",
       "time": "10:17:26",
@@ -2629,7 +2650,7 @@
       "notes": "Mensagem encaminhada. Mesmo timestamp da anterior."
     },
     {
-      "id": 162,
+      "id": 163,
       "timestamp": "2024-03-28T10:17:32-03:00",
       "date": "2024-03-28",
       "time": "10:17:32",
@@ -2644,7 +2665,7 @@
       "source_ref": "Captura de tela do usuário (imagem 1 — 28/03/2024)"
     },
     {
-      "id": 163,
+      "id": 164,
       "timestamp": "2024-03-28T10:20:04-03:00",
       "date": "2024-03-28",
       "time": "10:20:04",
@@ -2660,7 +2681,23 @@
       "notes": "Faria fala com assistente/terceiro sobre agenda. 'Pai da Juju' não identificado."
     },
     {
-      "id": 164,
+      "id": 165,
+      "timestamp": "2024-03-28T10:20:41",
+      "date": "2024-03-28",
+      "time": "10:20:41",
+      "sender": "Fábio Faria",
+      "content": "Ou no banco",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Mensagem fornecida pelo usuário em 26/11/2026 — fonte original não identificada",
+      "notes": "Horário 10:20:41 informado pelo usuário; fuso não informado (as demais mensagens do dia, de capturas, estão em -03:00). Posicionada após a mensagem das 10:20:04, que termina com 'Se quiser pode ser no escritório.', da qual parece ser continuação."
+    },
+    {
+      "id": 166,
       "timestamp": null,
       "date": "2024-03-29",
       "time": null,
@@ -2676,7 +2713,7 @@
       "notes": "TRECHO PARCIAL literal. A matéria diz que Faria contou a Vorcaro que Toffoli o chamou para almoçar no dia seguinte 'lá na fazenda dele', com Bruno Dantas (TCU). O restante é paráfrase e foi omitido, assim como a pergunta de Faria sobre usar um helicóptero da Prime You. Horário não informado."
     },
     {
-      "id": 165,
+      "id": 167,
       "timestamp": null,
       "date": "2024-03-29",
       "time": null,
@@ -2692,7 +2729,7 @@
       "notes": "Resposta de Vorcaro; para a matéria, referência ao Tayayá. Horário não informado."
     },
     {
-      "id": 166,
+      "id": 168,
       "timestamp": null,
       "date": "2024-03-29",
       "time": null,
@@ -2708,7 +2745,7 @@
       "notes": "Vorcaro oferece o helicóptero dele. Horário não informado."
     },
     {
-      "id": 167,
+      "id": 169,
       "timestamp": null,
       "date": "2024-03-29",
       "time": null,
@@ -2724,7 +2761,7 @@
       "notes": "Horário não informado."
     },
     {
-      "id": 168,
+      "id": 170,
       "timestamp": null,
       "date": "2024-03-29",
       "time": null,
@@ -2740,7 +2777,7 @@
       "notes": "Horário não informado."
     },
     {
-      "id": 169,
+      "id": 171,
       "timestamp": null,
       "date": "2024-04",
       "time": null,
@@ -2756,7 +2793,7 @@
       "notes": "Data parcial: a matéria diz só 'em abril' de 2024. Faria avisa Vorcaro que ia almoçar com Toffoli e com Alberto Leite. Posicionada no início do bloco de abril por ordem de data parcial."
     },
     {
-      "id": 170,
+      "id": 172,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -2773,7 +2810,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 171,
+      "id": 173,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -2790,7 +2827,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 172,
+      "id": 174,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -2807,7 +2844,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 173,
+      "id": 175,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -2824,7 +2861,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 174,
+      "id": 176,
       "timestamp": "2024-04-03T09:29:51",
       "date": "2024-04-03",
       "time": "09:29:51",
@@ -2841,7 +2878,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 175,
+      "id": 177,
       "timestamp": "2024-04-03T09:34:09",
       "date": "2024-04-03",
       "time": "09:34:09",
@@ -2858,7 +2895,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 176,
+      "id": 178,
       "timestamp": "2024-04-03T09:34:33",
       "date": "2024-04-03",
       "time": "09:34:33",
@@ -2875,7 +2912,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 177,
+      "id": 179,
       "timestamp": "2024-04-03T09:37:19",
       "date": "2024-04-03",
       "time": "09:37:19",
@@ -2892,7 +2929,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 178,
+      "id": 180,
       "timestamp": "2024-04-03T09:38:38",
       "date": "2024-04-03",
       "time": "09:38:38",
@@ -2909,7 +2946,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 179,
+      "id": 181,
       "timestamp": "2024-04-03T09:38:53",
       "date": "2024-04-03",
       "time": "09:38:53",
@@ -2926,7 +2963,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 180,
+      "id": 182,
       "timestamp": "2024-04-03T09:39:40",
       "date": "2024-04-03",
       "time": "09:39:40",
@@ -2943,7 +2980,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 181,
+      "id": 183,
       "timestamp": "2024-04-03T09:40:03",
       "date": "2024-04-03",
       "time": "09:40:03",
@@ -2960,7 +2997,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 182,
+      "id": 184,
       "timestamp": "2024-04-03T09:40:06",
       "date": "2024-04-03",
       "time": "09:40:06",
@@ -2977,7 +3014,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 183,
+      "id": 185,
       "timestamp": "2024-04-03T09:41:18",
       "date": "2024-04-03",
       "time": "09:41:18",
@@ -2994,7 +3031,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 184,
+      "id": 186,
       "timestamp": "2024-04-06T11:13:30",
       "date": "2024-04-06",
       "time": "11:13:30",
@@ -3011,7 +3048,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 185,
+      "id": 187,
       "timestamp": "2024-04-06T11:13:31",
       "date": "2024-04-06",
       "time": "11:13:31",
@@ -3028,7 +3065,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 186,
+      "id": 188,
       "timestamp": "2024-04-06T14:55:00",
       "date": "2024-04-06",
       "time": "14:55:00",
@@ -3045,7 +3082,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 187,
+      "id": 189,
       "timestamp": "2024-04-06T14:55:09",
       "date": "2024-04-06",
       "time": "14:55:09",
@@ -3062,7 +3099,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 188,
+      "id": 190,
       "timestamp": "2024-04-06T14:55:12",
       "date": "2024-04-06",
       "time": "14:55:12",
@@ -3079,7 +3116,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 189,
+      "id": 191,
       "timestamp": "2024-04-06T14:55:33",
       "date": "2024-04-06",
       "time": "14:55:33",
@@ -3096,7 +3133,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 190,
+      "id": 192,
       "timestamp": "2024-04-06T14:55:45",
       "date": "2024-04-06",
       "time": "14:55:45",
@@ -3113,7 +3150,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 191,
+      "id": 193,
       "timestamp": "2024-04-06T14:57:09",
       "date": "2024-04-06",
       "time": "14:57:09",
@@ -3130,7 +3167,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 192,
+      "id": 194,
       "timestamp": "2024-04-06T14:57:13",
       "date": "2024-04-06",
       "time": "14:57:13",
@@ -3147,7 +3184,407 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 193,
+      "id": 195,
+      "timestamp": null,
+      "date": "2024-04-06",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Claro né",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — coluna Fábio Serapião, 29/09/2026 (https://noticias.uol.com.br/colunas/fabio-serapiao/2026/09/29/vorcaro-e-ex-ministro-de-bolsonaro-tentaram-conter-crise-de-moraes-e-musk.htm)",
+      "notes": "Data 06/04/2024 e horário aproximado (por volta das 20h) conforme a matéria; horário exato não informado. Segundo a matéria, antes disso Vorcaro enviou prints sobre o tema a Faria e perguntou se ele acompanhava o assunto (paráfrase omitida). Primeira de quatro respostas seguidas de Faria."
+    },
+    {
+      "id": 196,
+      "timestamp": null,
+      "date": "2024-04-06",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Desde manhã falando com Alex",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — coluna Fábio Serapião, 29/09/2026 (https://noticias.uol.com.br/colunas/fabio-serapiao/2026/09/29/vorcaro-e-ex-ministro-de-bolsonaro-tentaram-conter-crise-de-moraes-e-musk.htm)",
+      "notes": "Segunda das quatro respostas seguidas de Faria; horário aproximado (~20h). Identificação de 'Alex' como Alexandre de Moraes conforme informado pelo usuário, com base em outras conversas entre Vorcaro e Faria."
+    },
+    {
+      "id": 197,
+      "timestamp": null,
+      "date": "2024-04-06",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Ele me mandou logo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — coluna Fábio Serapião, 29/09/2026 (https://noticias.uol.com.br/colunas/fabio-serapiao/2026/09/29/vorcaro-e-ex-ministro-de-bolsonaro-tentaram-conter-crise-de-moraes-e-musk.htm)",
+      "notes": "Terceira das quatro respostas seguidas de Faria; horário aproximado (~20h)."
+    },
+    {
+      "id": 198,
+      "timestamp": null,
+      "date": "2024-04-06",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Pediu pra eu falar c ele",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — coluna Fábio Serapião, 29/09/2026 (https://noticias.uol.com.br/colunas/fabio-serapiao/2026/09/29/vorcaro-e-ex-ministro-de-bolsonaro-tentaram-conter-crise-de-moraes-e-musk.htm)",
+      "notes": "Quarta das quatro respostas seguidas de Faria; horário aproximado (~20h)."
+    },
+    {
+      "id": 199,
+      "timestamp": null,
+      "date": "2024-04-06",
+      "time": null,
+      "sender": "DV",
+      "content": "Vc unico (sic)",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — coluna Fábio Serapião, 29/09/2026 (https://noticias.uol.com.br/colunas/fabio-serapiao/2026/09/29/vorcaro-e-ex-ministro-de-bolsonaro-tentaram-conter-crise-de-moraes-e-musk.htm)",
+      "notes": "Resposta de Vorcaro; '(sic)' conforme a matéria. Horário aproximado (~20h)."
+    },
+    {
+      "id": 200,
+      "timestamp": null,
+      "date": "2024-04-06",
+      "time": null,
+      "sender": "DV",
+      "content": "Pra resolver isso",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — coluna Fábio Serapião, 29/09/2026 (https://noticias.uol.com.br/colunas/fabio-serapiao/2026/09/29/vorcaro-e-ex-ministro-de-bolsonaro-tentaram-conter-crise-de-moraes-e-musk.htm)",
+      "notes": "Horário aproximado (~20h)."
+    },
+    {
+      "id": 201,
+      "timestamp": null,
+      "date": "2024-04-06",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "... 1 bi ... EUA pode falar tudo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — coluna Fábio Serapião, 29/09/2026 (https://noticias.uol.com.br/colunas/fabio-serapiao/2026/09/29/vorcaro-e-ex-ministro-de-bolsonaro-tentaram-conter-crise-de-moraes-e-musk.htm)",
+      "notes": "TRECHO PARCIAL literal: apenas os fragmentos '1 bi' e 'EUA pode falar tudo' (entre aspas na matéria); as reticências marcam o texto omitido. Segundo a matéria, Faria explica que a briga é ruim para Moraes porque Musk tem '1 bi' de seguidores e que nos 'EUA pode falar tudo'; o restante é paráfrase e foi omitido, assim como a defesa de Moraes por Vorcaro (X não pode ser usado para cometer crimes). Horário aproximado (~20h)."
+    },
+    {
+      "id": 202,
+      "timestamp": null,
+      "date": "2024-04-06",
+      "time": null,
+      "sender": "DV",
+      "content": "É mas tem que mostrar outro lado pro Elon",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "UOL — coluna Fábio Serapião, 29/09/2026 (https://noticias.uol.com.br/colunas/fabio-serapiao/2026/09/29/vorcaro-e-ex-ministro-de-bolsonaro-tentaram-conter-crise-de-moraes-e-musk.htm)",
+      "notes": "Remetente: Vorcaro, conforme a matéria (UOL, Serapião, 29/09/2026: 'responde Vorcaro') e confirmado pelo usuário. Segundo a matéria, vem após a defesa de Moraes (X não pode ser usado para cometer crimes; paráfrase omitida). Horário aproximado (~20h)."
+    },
+    {
+      "id": 203,
+      "timestamp": "2024-04-07T13:05:00",
+      "date": "2024-04-07",
+      "time": "13:05:00",
+      "sender": "Fábio Faria",
+      "content": "Hi Elon!\n\nGood news: we signed a contract yesterday and our company will be a Starlink reseller. We will make payment tomorrow. The field here is very open, with interest from the federal government, state governments on the right and on the left. It has everything to be a great success. In fact, Nokia's Latam CEO left there to be our CEO.\n\nI'm following your posts on X about Brazil. Despite being Bolsonaro's former minister, I have great relations with the government and the opposition and, mainly, with the Supreme Court, which I became very close to during the 5G auction.\n\nI am helping to find a way out of this conflict situation between the two sides and I believe that we have made good progress in recent months.\n\nI also want to help preserve X's strong presence here, which is very important for Brazil. I received messages from many ministers, businesspeople, investors asking me to try to broker a solution.\n\nI will be in London this month to participate in an event that I helped organize, with the presence of 5 ministers from the Supreme Court, ministers from the Lula government, opposition parliamentarians, bankers, and businesspeople. I'll be speaking on a panel about AI in elections.\n\nI would like to suggest, if you think it's appropriate, that you have a conversation with Brazilian authorities, including the aforementioned minister Alexandre of the Supreme Court, via video or in person, in the United States, if you're willing.\n\nI am at your disposal.\n\nBest",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024); fuso e segundos não informados (':00' é preenchimento). Versão inicial do texto em inglês, dirigido a 'Elon' (rascunho de mensagem), enviado por Faria a Vorcaro para opinião; mensagem única, com parágrafos separados por linha em branco. Segundo a matéria (UOL, Serapião, 29/09/2026), no mesmo dia Musk postou no X, por volta das 12h, novo ataque a Moraes, e Faria mandou o texto em inglês em resposta a um print enviado por Vorcaro."
+    },
+    {
+      "id": 204,
+      "timestamp": "2024-04-07T13:05:00",
+      "date": "2024-04-07",
+      "time": "13:05:00",
+      "sender": "Fábio Faria",
+      "content": "Oq acha?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024); fuso e segundos não informados (':00' é preenchimento)."
+    },
+    {
+      "id": 205,
+      "timestamp": "2024-04-07T13:07:00",
+      "date": "2024-04-07",
+      "time": "13:07:00",
+      "sender": "DV",
+      "content": "Achei o texto muito bom",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024); fuso e segundos não informados (':00' é preenchimento). Rótulo da captura: 'Daniel Vorcaro'."
+    },
+    {
+      "id": 206,
+      "timestamp": "2024-04-07T13:07:00",
+      "date": "2024-04-07",
+      "time": "13:07:00",
+      "sender": "DV",
+      "content": "Isso seria via whats app?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024); fuso e segundos não informados (':00' é preenchimento)."
+    },
+    {
+      "id": 207,
+      "timestamp": "2024-04-07T13:08:00",
+      "date": "2024-04-07",
+      "time": "13:08:00",
+      "sender": "DV",
+      "content": "Acho que tinha que falar um pouco mais da skylink",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024); fuso e segundos não informados (':00' é preenchimento). Grafia conforme a captura ('skylink')."
+    },
+    {
+      "id": 208,
+      "timestamp": "2024-04-07T13:08:00",
+      "date": "2024-04-07",
+      "time": "13:08:00",
+      "sender": "DV",
+      "content": "Mas ta otimo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024); fuso e segundos não informados (':00' é preenchimento)."
+    },
+    {
+      "id": 209,
+      "timestamp": "2024-04-07T13:10:00",
+      "date": "2024-04-07",
+      "time": "13:10:00",
+      "sender": "Fábio Faria",
+      "content": "Signal",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024); fuso e segundos não informados (':00' é preenchimento)."
+    },
+    {
+      "id": 210,
+      "timestamp": "2024-04-07T13:25:00",
+      "date": "2024-04-07",
+      "time": "13:25:00",
+      "sender": "Fábio Faria",
+      "content": "Falei c Alex",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024); fuso e segundos não informados (':00' é preenchimento). Identificação de 'Alex' como Alexandre de Moraes conforme informado pelo usuário, com base em outras conversas entre Vorcaro e Faria."
+    },
+    {
+      "id": 211,
+      "timestamp": "2024-04-07T13:25:00",
+      "date": "2024-04-07",
+      "time": "13:25:00",
+      "sender": "Fábio Faria",
+      "content": "Ele quer que mande a mensagem",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024); fuso e segundos não informados (':00' é preenchimento)."
+    },
+    {
+      "id": 212,
+      "timestamp": "2024-04-07T13:25:00",
+      "date": "2024-04-07",
+      "time": "13:25:00",
+      "sender": "Fábio Faria",
+      "content": "Oq acha que poderia incluir?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024, 2ª captura) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024, 2ª captura); fuso e segundos não informados (':00' é preenchimento)."
+    },
+    {
+      "id": 213,
+      "timestamp": "2024-04-07T13:29:00",
+      "date": "2024-04-07",
+      "time": "13:29:00",
+      "sender": "DV",
+      "content": "Acho que ta bom",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024, 2ª captura) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024, 2ª captura); fuso e segundos não informados (':00' é preenchimento). Rótulo da captura: 'Daniel Vorcaro'."
+    },
+    {
+      "id": 214,
+      "timestamp": "2024-04-07T13:29:00",
+      "date": "2024-04-07",
+      "time": "13:29:00",
+      "sender": "DV",
+      "content": "Manda sim",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024, 2ª captura) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024, 2ª captura); fuso e segundos não informados (':00' é preenchimento)."
+    },
+    {
+      "id": 215,
+      "timestamp": "2024-04-07T13:30:00",
+      "date": "2024-04-07",
+      "time": "13:30:00",
+      "sender": "DV",
+      "content": "So coloca um exclamacao no inicio",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024, 2ª captura) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024, 2ª captura); fuso e segundos não informados (':00' é preenchimento). Grafia conforme a captura."
+    },
+    {
+      "id": 216,
+      "timestamp": "2024-04-07T13:30:00",
+      "date": "2024-04-07",
+      "time": "13:30:00",
+      "sender": "DV",
+      "content": "Pea mostrar que ta empolgado com negocjo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024, 2ª captura) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024, 2ª captura); fuso e segundos não informados (':00' é preenchimento). Grafia conforme a captura ('Pea', 'negocjo')."
+    },
+    {
+      "id": 217,
+      "timestamp": "2024-04-07T13:30:00",
+      "date": "2024-04-07",
+      "time": "13:30:00",
+      "sender": "DV",
+      "content": "Nao falaria do pgto, pra mostrar que ta concluido ja, isso e detalhe",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024, 2ª captura) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024, 2ª captura); fuso e segundos não informados (':00' é preenchimento)."
+    },
+    {
+      "id": 218,
+      "timestamp": "2024-04-07T13:38:00",
+      "date": "2024-04-07",
+      "time": "13:38:00",
+      "sender": "Fábio Faria",
+      "content": "Hi Elon!\n\n! ! ! Good news: we signed a contract yesterday and our company will be a Starlink reseller. We are all very excited. The field here is very open, with interest from the federal government, state governments on the right and on the left. It has everything to be a great success. In fact, Nokia's Latam CEO left there to be our CEO.\n\nI'm following your posts on X about Brazil. Despite being Bolsonaro's former minister, I have great relations with the government and the opposition and, mainly, with the Supreme Court, which I became very close to during the 5G auction.\n\nI am helping to find a way out of this conflict situation between the two sides and I believe that we have made good progress in recent months.\n\nI also want to help preserve X's strong presence here, which is very important for Brazil. I received messages from many ministers, businesspeople, investors asking me to try to broker a solution.\n\nI will be in London this month to participate in an event that I helped organize, with the presence of 5 ministers from the Supreme Court, ministers from the Lula government, opposition parliamentarians, bankers, and businesspeople. I'll be speaking on a panel about AI in elections.\n\nI would like to suggest, if you think it's appropriate, that you have a conversation with Brazilian authorities, including the aforementioned minister Alexandre of the Supreme Court, via video or in person, in the United States, if you're willing.\n\nI am at your disposal.\n\nBest",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024, 2ª captura) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024, 2ª captura); fuso e segundos não informados (':00' é preenchimento). Versão revisada do texto das 13:05, enviada por Faria; em relação à versão inicial, acrescenta '! ! !' antes de 'Good news:' e 'We are all very excited.', e não traz mais a frase 'We will make payment tomorrow.'; demais parágrafos iguais."
+    },
+    {
+      "id": 219,
+      "timestamp": "2024-04-07T15:09:00",
+      "date": "2024-04-07",
+      "time": "15:09:00",
+      "sender": "DV",
+      "content": "Boa",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Captura de tela do usuário (07/04/2024, 2ª captura) — WhatsApp Chat - Fábio Faria",
+      "notes": "Captura de tela do WhatsApp (07/04/2024, 2ª captura); fuso e segundos não informados (':00' é preenchimento)."
+    },
+    {
+      "id": 220,
       "timestamp": "2024-04-17T19:25:19",
       "date": "2024-04-17",
       "time": "19:25:19",
@@ -3164,7 +3601,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 194,
+      "id": 221,
       "timestamp": "2024-04-17T19:25:34",
       "date": "2024-04-17",
       "time": "19:25:34",
@@ -3181,7 +3618,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 195,
+      "id": 222,
       "timestamp": "2024-04-17T19:57:34",
       "date": "2024-04-17",
       "time": "19:57:34",
@@ -3198,7 +3635,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 196,
+      "id": 223,
       "timestamp": "2024-04-17T19:57:43",
       "date": "2024-04-17",
       "time": "19:57:43",
@@ -3215,7 +3652,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 197,
+      "id": 224,
       "timestamp": "2024-04-17T19:57:50",
       "date": "2024-04-17",
       "time": "19:57:50",
@@ -3232,7 +3669,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 198,
+      "id": 225,
       "timestamp": "2024-04-17T19:58:05",
       "date": "2024-04-17",
       "time": "19:58:05",
@@ -3249,7 +3686,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 199,
+      "id": 226,
       "timestamp": "2024-04-17T19:58:13",
       "date": "2024-04-17",
       "time": "19:58:13",
@@ -3266,7 +3703,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 200,
+      "id": 227,
       "timestamp": "2024-04-18T18:13:07",
       "date": "2024-04-18",
       "time": "18:13:07",
@@ -3283,7 +3720,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 201,
+      "id": 228,
       "timestamp": "2024-04-18T18:13:26",
       "date": "2024-04-18",
       "time": "18:13:26",
@@ -3300,7 +3737,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 202,
+      "id": 229,
       "timestamp": "2024-04-18T18:13:34",
       "date": "2024-04-18",
       "time": "18:13:34",
@@ -3317,7 +3754,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 203,
+      "id": 230,
       "timestamp": "2024-04-18T18:13:41",
       "date": "2024-04-18",
       "time": "18:13:41",
@@ -3334,7 +3771,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 204,
+      "id": 231,
       "timestamp": "2024-04-18T18:13:46",
       "date": "2024-04-18",
       "time": "18:13:46",
@@ -3351,7 +3788,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 205,
+      "id": 232,
       "timestamp": "2024-04-18T18:14:14",
       "date": "2024-04-18",
       "time": "18:14:14",
@@ -3368,7 +3805,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 206,
+      "id": 233,
       "timestamp": "2024-04-25T16:15:56",
       "date": "2024-04-25",
       "time": "16:15:56",
@@ -3385,7 +3822,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 207,
+      "id": 234,
       "timestamp": "2024-04-25T16:40:43",
       "date": "2024-04-25",
       "time": "16:40:43",
@@ -3404,7 +3841,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 208,
+      "id": 235,
       "timestamp": "2024-04-25T16:40:50",
       "date": "2024-04-25",
       "time": "16:40:50",
@@ -3421,7 +3858,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 209,
+      "id": 236,
       "timestamp": "2024-04-25T16:41:30",
       "date": "2024-04-25",
       "time": "16:41:30",
@@ -3438,7 +3875,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 210,
+      "id": 237,
       "timestamp": "2024-04-25T16:41:43",
       "date": "2024-04-25",
       "time": "16:41:43",
@@ -3455,7 +3892,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 211,
+      "id": 238,
       "timestamp": "2024-04-25T16:41:57",
       "date": "2024-04-25",
       "time": "16:41:57",
@@ -3472,7 +3909,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 212,
+      "id": 239,
       "timestamp": "2024-04-25T16:44:25",
       "date": "2024-04-25",
       "time": "16:44:25",
@@ -3489,7 +3926,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 213,
+      "id": 240,
       "timestamp": "2024-04-25T16:44:27",
       "date": "2024-04-25",
       "time": "16:44:27",
@@ -3506,7 +3943,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 214,
+      "id": 241,
       "timestamp": "2024-04-25T16:44:41",
       "date": "2024-04-25",
       "time": "16:44:41",
@@ -3523,7 +3960,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 215,
+      "id": 242,
       "timestamp": "2024-04-25T16:52:33",
       "date": "2024-04-25",
       "time": "16:52:33",
@@ -3540,7 +3977,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 216,
+      "id": 243,
       "timestamp": "2024-04-25T16:52:57",
       "date": "2024-04-25",
       "time": "16:52:57",
@@ -3557,7 +3994,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 217,
+      "id": 244,
       "timestamp": "2024-04-25T17:13:08",
       "date": "2024-04-25",
       "time": "17:13:08",
@@ -3574,7 +4011,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 218,
+      "id": 245,
       "timestamp": null,
       "date": "2024-06",
       "time": null,
@@ -3590,7 +4027,7 @@
       "notes": "Dia não informado (jun/2024). Reação de Vorcaro, segundo a matéria, à selfie de Alberto Leite com Toffoli no camarote da final da Liga dos Campeões, em Londres; Vorcaro não estava na cena. Horário não informado."
     },
     {
-      "id": 219,
+      "id": 246,
       "timestamp": null,
       "date": "2024-06",
       "time": null,
@@ -3606,7 +4043,7 @@
       "notes": "Resposta de Faria à mensagem anterior. Para a matéria, a frase pressupõe hábito. Horário não informado."
     },
     {
-      "id": 220,
+      "id": 247,
       "timestamp": null,
       "date": "2024-07-16",
       "time": null,
@@ -3622,7 +4059,7 @@
       "notes": "Data 16/07/2024 vem da reportagem; horário não informado. Vorcaro reclama de vídeos de um influenciador que, segundo ele, fazia acusações sobre uma casa em Orlando (EUA) e dizia que ele teria roubado a Caixa. '(sic)' conforme a matéria. Posicionada antes das mensagens com horário do mesmo dia."
     },
     {
-      "id": 221,
+      "id": 248,
       "timestamp": null,
       "date": "2024-07-16",
       "time": null,
@@ -3638,7 +4075,7 @@
       "notes": "Resposta de Faria, após perguntar de quem se tratava (pergunta não transcrita literalmente na matéria, por isso omitida). Horário não informado."
     },
     {
-      "id": 222,
+      "id": 249,
       "timestamp": "2024-07-16T21:12:35",
       "date": "2024-07-16",
       "time": "21:12:35",
@@ -3655,7 +4092,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 223,
+      "id": 250,
       "timestamp": "2024-07-16T21:12:36",
       "date": "2024-07-16",
       "time": "21:12:36",
@@ -3672,7 +4109,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 224,
+      "id": 251,
       "timestamp": "2024-07-16T21:12:42",
       "date": "2024-07-16",
       "time": "21:12:42",
@@ -3689,7 +4126,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 225,
+      "id": 252,
       "timestamp": "2024-07-16T21:12:46",
       "date": "2024-07-16",
       "time": "21:12:46",
@@ -3706,7 +4143,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 226,
+      "id": 253,
       "timestamp": "2024-07-17T09:55:15",
       "date": "2024-07-17",
       "time": "09:55:15",
@@ -3723,7 +4160,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 227,
+      "id": 254,
       "timestamp": "2024-07-17T09:55:20",
       "date": "2024-07-17",
       "time": "09:55:20",
@@ -3740,7 +4177,7 @@
       "source_ref": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF"
     },
     {
-      "id": 228,
+      "id": 255,
       "timestamp": "2024-07-23T15:36:14-03:00",
       "date": "2024-07-23",
       "time": "15:36:14",
@@ -3753,7 +4190,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 229,
+      "id": 256,
       "timestamp": "2024-07-23T21:12:10-03:00",
       "date": "2024-07-23",
       "time": "21:12:10",
@@ -3766,7 +4203,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 230,
+      "id": 257,
       "timestamp": "2024-07-23T21:12:14-03:00",
       "date": "2024-07-23",
       "time": "21:12:14",
@@ -3779,7 +4216,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 231,
+      "id": 258,
       "timestamp": "2024-07-23T21:13:18-03:00",
       "date": "2024-07-23",
       "time": "21:13:18",
@@ -3792,7 +4229,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 232,
+      "id": 259,
       "timestamp": "2024-07-23T21:13:25-03:00",
       "date": "2024-07-23",
       "time": "21:13:25",
@@ -3805,7 +4242,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 233,
+      "id": 260,
       "timestamp": "2024-07-23T21:13:45-03:00",
       "date": "2024-07-23",
       "time": "21:13:45",
@@ -3818,7 +4255,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 234,
+      "id": 261,
       "timestamp": "2024-07-23T21:15:17-03:00",
       "date": "2024-07-23",
       "time": "21:15:17",
@@ -3831,7 +4268,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 235,
+      "id": 262,
       "timestamp": "2024-07-23T21:20:00-03:00",
       "date": "2024-07-23",
       "time": "21:20:00",
@@ -3844,7 +4281,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 236,
+      "id": 263,
       "timestamp": "2024-07-23T22:59:24-03:00",
       "date": "2024-07-23",
       "time": "22:59:24",
@@ -3857,7 +4294,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 237,
+      "id": 264,
       "timestamp": "2024-07-23T22:59:30-03:00",
       "date": "2024-07-23",
       "time": "22:59:30",
@@ -3870,7 +4307,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 238,
+      "id": 265,
       "timestamp": "2024-07-23T22:59:35-03:00",
       "date": "2024-07-23",
       "time": "22:59:35",
@@ -3883,7 +4320,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 239,
+      "id": 266,
       "timestamp": "2024-07-23T23:00:16-03:00",
       "date": "2024-07-23",
       "time": "23:00:16",
@@ -3896,7 +4333,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 240,
+      "id": 267,
       "timestamp": "2024-07-23T23:00:22-03:00",
       "date": "2024-07-23",
       "time": "23:00:22",
@@ -3909,7 +4346,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 241,
+      "id": 268,
       "timestamp": "2024-07-23T23:00:36-03:00",
       "date": "2024-07-23",
       "time": "23:00:36",
@@ -3922,7 +4359,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 242,
+      "id": 269,
       "timestamp": "2024-07-23T23:00:48-03:00",
       "date": "2024-07-23",
       "time": "23:00:48",
@@ -3935,7 +4372,7 @@
       "source_ref": "Captura de tela anexada pelo usuário"
     },
     {
-      "id": 243,
+      "id": 270,
       "timestamp": "2024-08-14T08:28:00",
       "date": "2024-08-14",
       "time": "08:28:00",
@@ -3951,7 +4388,7 @@
       "notes": "Segundo a matéria, Faria liga a Vorcaro às 8h28 e falam por sete minutos; o conteúdo da conversa é desconhecido. Segundos e duração exata não informados (':00' é preenchimento)."
     },
     {
-      "id": 244,
+      "id": 271,
       "timestamp": "2024-08-14T08:41:00",
       "date": "2024-08-14",
       "time": "08:41:00",
@@ -3967,7 +4404,7 @@
       "notes": "Horário do infográfico (08:41); segundos não informados. Grafia conforme o infográfico; a reportagem traz 'Toffoli'. Data 14/08/2024 vem da reportagem. Vorcaro avisa Faria antes de escrever a Toffoli."
     },
     {
-      "id": 245,
+      "id": 272,
       "timestamp": "2024-08-14T08:41:00",
       "date": "2024-08-14",
       "time": "08:41:00",
@@ -3983,7 +4420,7 @@
       "notes": "Grafia conforme o infográfico; a reportagem traz 'aí'. Segundo a matéria, dita ao constatar que o pagamento ligado ao Tayayá foi feito mas não chegou ao destino final."
     },
     {
-      "id": 246,
+      "id": 273,
       "timestamp": "2024-08-14T09:02:00",
       "date": "2024-08-14",
       "time": "09:02:00",
@@ -3999,7 +4436,7 @@
       "notes": "Conteúdo do áudio não disponível. Horário do infográfico (09:02)."
     },
     {
-      "id": 247,
+      "id": 274,
       "timestamp": "2024-08-14T09:02:00",
       "date": "2024-08-14",
       "time": "09:02:00",
@@ -4015,7 +4452,7 @@
       "notes": "Horário do infográfico (09:02). O infográfico não identifica 'Bianco' nem 'T'. A matéria diz que Faria pede a Vorcaro que resolva o assunto até o dia seguinte."
     },
     {
-      "id": 248,
+      "id": 275,
       "timestamp": null,
       "date": "2024-08-26",
       "time": null,
@@ -4031,7 +4468,7 @@
       "notes": "Horário não informado. Segundo a matéria, Vorcaro respondeu que tinha compromisso e sugeriu o fim da tarde, e Faria disse que confirmaria (paráfrases omitidas). Sem registro do desfecho."
     },
     {
-      "id": 249,
+      "id": 276,
       "timestamp": null,
       "date": "2024-09",
       "time": null,
@@ -4047,7 +4484,7 @@
       "notes": "Sem data na reportagem da piauí, que situa a mensagem 'dias antes' do julgamento original da Alcídia, depois da virada de voto de Toffoli. O mês 2024-09 é ESTIMATIVA a partir de fontes externas: o julgamento da Raízen (ARE 1312127), em que a União venceu, foi concluído em 16/09/2024, e o da Alcídia, adiado após vista de Kassio Nunes Marques, foi retomado e concluído em 01/10/2024. Dia e horário desconhecidos. Destinatário: Vorcaro, conforme Diário de Pernambuco e O Globo (11/09/2026). Posicionada no fim do arquivo."
     },
     {
-      "id": 250,
+      "id": 277,
       "timestamp": null,
       "date": "2024-09",
       "time": null,
@@ -4063,7 +4500,7 @@
       "notes": "Mesma situação da mensagem anterior (mês estimado, dia e horário desconhecidos)."
     },
     {
-      "id": 251,
+      "id": 278,
       "timestamp": null,
       "date": "2024-09",
       "time": null,
@@ -4077,6 +4514,102 @@
       "quoted": null,
       "source_ref": "piauí — reportagem sobre o relatório da PF (Toffoli, Arleen, Alcídia) — https://piaui.uol.com.br/web/toffoli-relatorio-pf-vorcaro-paraiso-fiscal",
       "notes": "Mesma situação da mensagem anterior (mês estimado, dia e horário desconhecidos)."
+    },
+    {
+      "id": 279,
+      "timestamp": null,
+      "date": "2024-09",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Me ligou maluco",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Reportagem fornecida pelo usuário em 26/11/2026 — veículo original não identificado",
+      "notes": "Data parcial: a reportagem informa setembro de 2024, sem dia nem horário. Posicionada após as três mensagens de 2024-09 já existentes ('Matou a gente.', 'Comecei a suar.', 'Pqp.'), cuja data é estimativa; a ordem relativa entre os dois grupos é desconhecida. Primeira de seis mensagens seguidas de Faria, na ordem fornecida. Quem ligou não é identificado no trecho."
+    },
+    {
+      "id": 280,
+      "timestamp": null,
+      "date": "2024-09",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Ele tá dentro com a gente. Foi bom pra saber.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Reportagem fornecida pelo usuário em 26/11/2026 — veículo original não identificado",
+      "notes": "Mesma situação da mensagem anterior (setembro de 2024, dia e horário não informados). 'Ele' não é identificado no trecho."
+    },
+    {
+      "id": 281,
+      "timestamp": null,
+      "date": "2024-09",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "O Kassio achou que tinha boi na linha",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Reportagem fornecida pelo usuário em 26/11/2026 — veículo original não identificado",
+      "notes": "Mesma situação da mensagem anterior. 'Kassio' não identificado no trecho."
+    },
+    {
+      "id": 282,
+      "timestamp": null,
+      "date": "2024-09",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "O Esteves é amigo do Gilmar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Reportagem fornecida pelo usuário em 26/11/2026 — veículo original não identificado",
+      "notes": "Mesma situação da mensagem anterior. 'Esteves' e 'Gilmar' não identificados no trecho; 'Esteves' também aparece na mensagem de 03/04/2024 ('Seu amigo Esteves vai dar pulos de raiva rsrs')."
+    },
+    {
+      "id": 283,
+      "timestamp": null,
+      "date": "2024-09",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Foi só achismo do Kassio e já falei que o André estava firme",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Reportagem fornecida pelo usuário em 26/11/2026 — veículo original não identificado",
+      "notes": "Mesma situação da mensagem anterior. 'Kassio' e 'André' não identificados no trecho."
+    },
+    {
+      "id": 284,
+      "timestamp": null,
+      "date": "2024-09",
+      "time": null,
+      "sender": "Fábio Faria",
+      "content": "Fui pra cima do André com tudo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": false,
+      "quoted": null,
+      "source_ref": "Reportagem fornecida pelo usuário em 26/11/2026 — veículo original não identificado",
+      "notes": "Mesma situação da mensagem anterior. Última das seis mensagens seguidas de Faria."
     }
   ],
   "index": {
@@ -4190,106 +4723,118 @@
         "last_message_id": 104
       },
       {
+        "date": "2024-03",
+        "message_count": 1,
+        "first_message_id": 105,
+        "last_message_id": 105
+      },
+      {
         "date": "2024-03-13",
         "message_count": 22,
-        "first_message_id": 105,
-        "last_message_id": 126
+        "first_message_id": 106,
+        "last_message_id": 127
       },
       {
         "date": "2024-03-15",
         "message_count": 16,
-        "first_message_id": 127,
-        "last_message_id": 142
+        "first_message_id": 128,
+        "last_message_id": 143
       },
       {
         "date": "2024-03-28",
-        "message_count": 21,
-        "first_message_id": 143,
-        "last_message_id": 163
+        "message_count": 22,
+        "first_message_id": 144,
+        "last_message_id": 165
       },
       {
         "date": "2024-03-29",
         "message_count": 5,
-        "first_message_id": 164,
-        "last_message_id": 168
+        "first_message_id": 166,
+        "last_message_id": 170
       },
       {
         "date": "2024-04",
         "message_count": 1,
-        "first_message_id": 169,
-        "last_message_id": 169
+        "first_message_id": 171,
+        "last_message_id": 171
       },
       {
         "date": "2024-04-03",
         "message_count": 14,
-        "first_message_id": 170,
-        "last_message_id": 183
+        "first_message_id": 172,
+        "last_message_id": 185
       },
       {
         "date": "2024-04-06",
-        "message_count": 9,
-        "first_message_id": 184,
-        "last_message_id": 192
+        "message_count": 17,
+        "first_message_id": 186,
+        "last_message_id": 202
+      },
+      {
+        "date": "2024-04-07",
+        "message_count": 17,
+        "first_message_id": 203,
+        "last_message_id": 219
       },
       {
         "date": "2024-04-17",
         "message_count": 7,
-        "first_message_id": 193,
-        "last_message_id": 199
+        "first_message_id": 220,
+        "last_message_id": 226
       },
       {
         "date": "2024-04-18",
         "message_count": 6,
-        "first_message_id": 200,
-        "last_message_id": 205
+        "first_message_id": 227,
+        "last_message_id": 232
       },
       {
         "date": "2024-04-25",
         "message_count": 12,
-        "first_message_id": 206,
-        "last_message_id": 217
+        "first_message_id": 233,
+        "last_message_id": 244
       },
       {
         "date": "2024-06",
         "message_count": 2,
-        "first_message_id": 218,
-        "last_message_id": 219
+        "first_message_id": 245,
+        "last_message_id": 246
       },
       {
         "date": "2024-07-16",
         "message_count": 6,
-        "first_message_id": 220,
-        "last_message_id": 225
+        "first_message_id": 247,
+        "last_message_id": 252
       },
       {
         "date": "2024-07-17",
         "message_count": 2,
-        "first_message_id": 226,
-        "last_message_id": 227
+        "first_message_id": 253,
+        "last_message_id": 254
       },
       {
         "date": "2024-07-23",
         "message_count": 15,
-        "first_message_id": 228,
-        "last_message_id": 242
+        "first_message_id": 255,
+        "last_message_id": 269
       },
       {
         "date": "2024-08-14",
         "message_count": 5,
-        "first_message_id": 243,
-        "last_message_id": 247
+        "first_message_id": 270,
+        "last_message_id": 274
       },
       {
         "date": "2024-08-26",
         "message_count": 1,
-        "first_message_id": 248,
-        "last_message_id": 248
+        "first_message_id": 275,
+        "last_message_id": 275
       },
       {
         "date": "2024-09",
-        "message_count": 3,
-        "first_message_id": 249,
-        "last_message_id": 251
+        "message_count": 9,
+        "first_message_id": 276,
+        "last_message_id": 284
       }
     ]
   }

@@ -720,7 +720,7 @@ export function renderMasterIAPanel({
   welcomeLogo.width = 54;
   welcomeLogo.height = 54;
   welcome.appendChild(welcomeLogo);
-  welcome.appendChild(makeElement('span', 'master-ia-eyebrow master-ia-welcome-eyebrow', 'ACERVO · 66 MIL MENSAGENS'));
+  welcome.appendChild(makeElement('span', 'master-ia-eyebrow master-ia-welcome-eyebrow', 'ACERVO · 97 MIL MENSAGENS'));
   welcome.appendChild(makeElement('h2', '', 'Boa noite. O que você quer encontrar no acervo?'));
   welcome.appendChild(makeElement('p', '', 'Consulte pessoas, conversas e datas com fontes verificáveis.'));
   const suggestions = makeElement('div', 'master-ia-suggestions');
