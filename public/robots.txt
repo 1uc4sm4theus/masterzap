@@ -15,7 +15,7 @@ User-agent: Googlebot
 Allow: /
 
 # Índice para LLMs e o conteúdo completo em texto
-# https://www.masterwhats.com.br/llms.txt
-# https://www.masterwhats.com.br/llms-full.txt
+# https://masterwhats.recomendeme.com.br/llms.txt
+# https://masterwhats.recomendeme.com.br/llms-full.txt
 
-Sitemap: https://www.masterwhats.com.br/sitemap.xml
+Sitemap: https://masterwhats.recomendeme.com.br/sitemap.xml

@@ -6,12 +6,14 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SITE } from '../../src/lib/site-config.js';
+
+export { SITE };
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '../..');
 export const DATA_DIR = join(ROOT, 'data');
 export const PUBLIC_DATA = join(ROOT, 'public/data');
 
-export const SITE = 'https://www.masterwhats.com.br';
 export const REPO = 'https://github.com/rafaelbressan/masterzap';
 
 // The phones were seized in Brazil and every timestamp in the sources is local

@@ -1,535 +1,269 @@
-/**
- * Give every conversation a real page, every person talked about an index,
- * and crawlers the whole corpus.
- *
- * Runs after `vite build`, on top of dist/index.html, and writes:
- *
- *   dist/chat/<id>/index.html         the built app page, retitled for one
- *                                     conversation, with the profile and the
- *                                     messages as plain HTML and a one-line
- *                                     script that sets the hash so the app
- *                                     opens that chat
- *   dist/chat/<id>/<YYYY-MM>/         one page per month, for a conversation
- *                                     too big to show whole (Martha's 65k)
- *   dist/quem/<slug>/index.html       every mention of a person, by
- *                                     conversation, dated, pointing at the
- *                                     message â€” and dist/quem/ listing them
- *   dist/llms-full.txt                the site's text â€” about, profiles,
- *                                     highlights, people â€” with a pointer to
- *                                     each conversation's Markdown
- *   dist/sitemap.xml                  all of the above
- *
- * The router keeps its hash routes; nothing in the app changes. A crawler that
- * runs no JavaScript reads the article. A browser runs the app, which removes
- * the article as its first act.
- */
+// @vitest-environment node
+//
+// Guards on what the build hands to crawlers: a real page per conversation,
+// the whole corpus as text, and a sitemap that lists them. Read from dist, so
+// `npm run build` comes first.
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from 'node:fs';
-import { join } from 'node:path';
+import { describe, it, expect } from 'vitest';
+import { readFileSync, existsSync, statSync, readdirSync } from 'fs';
+import { join } from 'path';
 
-import { getContactProfile, VORCARO_PROFILE, SOURCES } from '../src/lib/profile-content.js';
-import { SETTINGS_CONTENT } from '../src/lib/settings-content.js';
-import { PEOPLE } from '../src/lib/people-content.js';
-import {
-  ROOT, SITE, REPO, TIMEZONE, UTC_OFFSET,
-  loadEntries, loadMessages, sourceOf, contactOf, whoIs, createResolver, mentionsOf, createLocator, isPaged, PREVIEW_MESSAGES,
-  urlsIn, linksToMarkdown, linksToText, linksToHtml, escapeHtml,
-  longDate, phonePretty, messageText, citationOf, messageUrl,
-} from './lib/corpus.mjs';
-
+const ROOT = join(import.meta.dirname, '../..');
 const DIST = join(ROOT, 'dist');
-const templatePath = join(DIST, 'index.html');
-if (!existsSync(templatePath)) {
-  console.error('dist/index.html not found â€” run `vite build` first');
-  process.exit(1);
-}
-const template = readFileSync(templatePath, 'utf-8');
-const today = new Date().toISOString().slice(0, 10);
-const entries = loadEntries();
-const resolve = createResolver(entries);
-const byId = new Map(entries.map(e => [e.id, e]));
+const SITE = 'https://masterwhats.recomendeme.com.br';
 
-const monthFmt = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric' });
-const longMonth = (ym) => monthFmt.format(new Date(`${ym}-15T12:00:00`));
+const conversations = JSON.parse(
+  readFileSync(join(ROOT, 'public/data/conversations.json'), 'utf-8')
+).conversations;
 
-/** 'YYYY-MM' â†’ messages of that month, in order. */
-function monthsOf(messages) {
-  const months = new Map();
-  for (const msg of messages) {
-    const ym = msg.date.slice(0, 7);
-    if (!months.has(ym)) months.set(ym, []);
-    months.get(ym).push(msg);
-  }
-  return months;
-}
+const page = (id) => readFileSync(join(DIST, 'chat', id, 'index.html'), 'utf-8');
+const ldBlocks = (html) => [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+  .map(m => JSON.parse(m[1]));
 
-const locate = createLocator(entries);
-/** The static page (no fragment) where a message's anchor lives. */
-const pathOf = (conversationId, msg) => locate(conversationId, msg)?.replace(/#.*$/, '') ?? null;
-
-function reportDoc(source) {
-  const doc = {
-    '@type': 'DigitalDocument',
-    name: 'IPJ-A nÂº 3298613/2026 â€” PolÃ­cia Federal',
-    description: 'InformaÃ§Ã£o de PolÃ­cia JudiciÃ¡ria de AnÃ¡lise sobre o iPhone apreendido de Daniel Vorcaro; sigilo levantado em 1Âº de setembro de 2026.',
-    datePublished: '2026-08-27',
-  };
-  if (source.document_pages) doc.numberOfPages = source.document_pages;
-  if (source.document_url) doc.url = source.document_url;
-  if (source.document_sha256) {
-    doc.identifier = { '@type': 'PropertyValue', propertyID: 'sha256', value: source.document_sha256 };
-  }
-  return doc;
-}
-
-// â”€â”€ page skeleton â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-
-/**
- * The built app page, retitled and with an article in it.
- *
- * @param {object} o
- * @param {string} o.title
- * @param {string} o.description
- * @param {string} o.path - canonical path, e.g. /chat/x
- * @param {object} o.jsonLd
- * @param {string} o.chat - the conversation the app opens; a #msg-N fragment
- *   on the way in becomes that message in the app
- * @param {string} o.hash - what the app opens when there is no fragment
- * @param {string} o.article - the HTML for crawlers
- * @param {string} [o.extraHead]
- */
-function appPage({ title, description, path, jsonLd, chat, hash, article, extraHead = '' }) {
-  const url = `${SITE}${path}`;
-  const attr = escapeHtml;
-  let html = template;
-  const swap = (re, replacement) => {
-    if (!re.test(html)) throw new Error(`template lost ${re}`);
-    html = html.replace(re, replacement);
-  };
-  swap(/<title>[^<]*<\/title>/, `<title>${attr(title)}</title>`);
-  swap(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${attr(description)}">`);
-  swap(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`);
-  swap(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${attr(title)}">`);
-  swap(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${attr(description)}">`);
-  swap(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`);
-  swap(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${attr(title)}">`);
-  swap(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${attr(description)}">`);
-
-  // The home page's structured data does not describe this page.
-  html = html.replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
-  swap(/<\/head>/, `<script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n</script>\n`
-    + extraHead
-    // A crawler follows #msg-N to the anchor; a browser gets the app at that message.
-    + `<script>(function(){var m=location.hash.match(/^#msg-(\\d+)$/);if(m)location.replace('#/chat/${chat}/msg/'+m[1]);else if(!location.hash)location.replace('${hash}')})()</script>\n</head>`);
-
-  swap(/\s*<noscript>/, `\n${article}\n<noscript>`);
-  return html;
-}
-
-// â”€â”€ conversation pages â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-
-/** A description a search result can show, from the profile when there is one. */
-function describe(entry, profile, who) {
-  const first = profile?.sections?.[0]?.paragraphs?.[0]?.text;
-  const fallback = `Conversa entre Daniel Vorcaro e ${who}: ${entry.total_messages} mensagens, de ${entry.date_range.start} a ${entry.date_range.end}, no MasterWhats.`;
-  if (!first) return fallback;
-  const text = linksToText(first).replace(/\s+/g, ' ').trim();
-  if (text.length <= 155) return text;
-  return `${text.slice(0, 155).replace(/\s+\S*$/, '')}â€¦`;
-}
-
-function conversationLd(entry, who, description, { path, month, first, last, parent } = {}) {
-  const url = `${SITE}${path}`;
-  const source = sourceOf(entry);
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'Conversation',
-    '@id': url,
-    name: month ? `Daniel Vorcaro â†” ${who} â€” ${longMonth(month)}` : `Daniel Vorcaro â†” ${who}`,
-    url,
-    inLanguage: 'pt-BR',
-    description,
-    temporalCoverage: `${first}/${last}`,
-    about: [
-      { '@type': 'Person', name: 'Daniel Vorcaro' },
-      { '@type': 'Person', name: who },
-    ],
-    isPartOf: parent ? { '@id': `${SITE}${parent}` } : { '@id': `${SITE}/#dataset` },
-    encoding: [
-      { '@type': 'MediaObject', encodingFormat: 'text/markdown', contentUrl: `${SITE}/export/masterwhats-${entry.id}.md` },
-      { '@type': 'MediaObject', encodingFormat: 'application/json', contentUrl: `${SITE}/export/masterwhats-${entry.id}.json` },
-    ],
-    dateModified: today,
-  };
-  if (source.kind === 'police-report') data.isBasedOn = reportDoc(source);
-  return data;
-}
-
-function messagesHtml(messages) {
-  const out = [];
-  let day = null;
-  for (const msg of messages) {
-    if (msg.date !== day) {
-      day = msg.date;
-      out.push(`<h3>${longDate(day)}</h3>`);
+describe('one page per conversation', () => {
+  it('exists for every conversation the site lists', () => {
+    for (const conv of conversations) {
+      expect(existsSync(join(DIST, 'chat', conv.id, 'index.html')), conv.id).toBe(true);
     }
-    const cite = msg.source_page ? ` <small>(laudo p. ${msg.source_page}${msg.source_figure ? `, fig. ${msg.source_figure}` : ''})</small>` : '';
-    const timeLabel = msg.time ? msg.time.slice(0, 5) : '--:--';
-    const datetimeAttr = msg.timestamp ? ` datetime="${msg.timestamp}${UTC_OFFSET}"` : '';
-    out.push(`<p id="msg-${msg.id}"><time${datetimeAttr}>${timeLabel}</time> <b>${escapeHtml(msg.sender)}</b>: ${escapeHtml(messageText(msg))}${cite}</p>`);
-  }
-  return out;
-}
-
-function provenanceHtml(entry) {
-  const source = sourceOf(entry);
-  const out = ['<h2>ProveniÃªncia</h2><dl>'];
-  out.push(`<dt>Fonte</dt><dd>${escapeHtml(source.label)}</dd>`);
-  if (source.document) out.push(`<dt>Documento</dt><dd>${source.document_url ? `<a href="${escapeHtml(source.document_url)}" rel="noopener">${escapeHtml(source.document)}</a>` : escapeHtml(source.document)}${source.document_pages ? `, ${source.document_pages} pÃ¡ginas` : ''} (no repositÃ³rio; o site nÃ£o serve o PDF)</dd>`);
-  if (source.document_sha256) out.push(`<dt>sha256 do documento</dt><dd><code>${source.document_sha256}</code></dd>`);
-  out.push(`<dt>Como chegou ao pÃºblico</dt><dd>${escapeHtml(source.how)}</dd>`);
-  if (entry.saved_as) out.push(`<dt>Contato salvo como</dt><dd>${escapeHtml(entry.saved_as)}</dd>`);
-  if (entry.phone) out.push(`<dt>Telefone</dt><dd>${escapeHtml(phonePretty(entry.phone))}</dd>`);
-  out.push(`<dt>Fuso dos horÃ¡rios</dt><dd>${TIMEZONE} (UTC${UTC_OFFSET})</dd>`);
-  if (entry.note) out.push(`<dt>ObservaÃ§Ã£o</dt><dd>${escapeHtml(entry.note)}</dd>`);
-  out.push('</dl>');
-  return out;
-}
-
-function profileHtml(profile, who, entry, fromPath) {
-  const out = [];
-  const urls = [];
-  if (!profile) return { html: out, urls };
-  out.push(`<h2>Quem Ã© ${escapeHtml(who)}</h2>`);
-  for (const section of profile.sections || []) {
-    if (section.title && section.title !== who && section.title !== `Sobre ${who}`) {
-      out.push(`<h3>${escapeHtml(section.title)}</h3>`);
-    }
-    for (const p of section.paragraphs || []) {
-      urls.push(...urlsIn(p.text));
-      out.push(`<p>${linksToHtml(p.text, { resolve, context: entry.id, hrefFor: locate, fromPath })}</p>`);
-    }
-  }
-  return { html: out, urls };
-}
-
-function sourcesHtml(urls) {
-  const sources = [...new Set(urls)];
-  if (!sources.length) return [];
-  return ['<h2>Fontes</h2><ul>', ...sources.map(u => `<li><a href="${escapeHtml(u)}" rel="noopener">${escapeHtml(u)}</a></li>`), '</ul>'];
-}
-
-function conversationPage(entry, messages, profile, who) {
-  const path = `/chat/${entry.id}`;
-  const months = monthsOf(messages);
-  const paged = isPaged(entry);
-  const shown = paged ? messages.slice(0, PREVIEW_MESSAGES) : messages;
-  const out = [];
-
-  out.push(`<article id="prerender">`);
-  out.push(`<h1>Daniel Vorcaro â†” ${escapeHtml(who)}</h1>`);
-  out.push(`<p>${entry.total_messages} mensagens, de ${entry.date_range.start} a ${entry.date_range.end}. `
-    + `<a href="/#/chat/${entry.id}">Abrir no MasterWhats</a> Â· `
-    + `<a href="/export/masterwhats-${entry.id}.md">Markdown completo</a> Â· `
-    + `<a href="/export/masterwhats-${entry.id}.json">JSON</a></p>`);
-  out.push(...provenanceHtml(entry));
-  const { html: profileBlock, urls } = profileHtml(profile, who, entry, path);
-  out.push(...profileBlock);
-
-  if (paged) {
-    out.push(`<h2>Meses</h2><p>A conversa inteira, um mÃªs por pÃ¡gina:</p><ul>`);
-    for (const [ym, msgs] of months) {
-      out.push(`<li><a href="${path}/${ym}">${longMonth(ym)}</a> â€” ${msgs.length} mensagens</li>`);
-    }
-    out.push('</ul>');
-  }
-
-  out.push(`<h2>Conversa${paged ? ` (primeiras ${shown.length} mensagens)` : ''}</h2>`);
-  out.push(...messagesHtml(shown));
-  if (paged) {
-    out.push(`<p>As outras ${messages.length - shown.length} mensagens estÃ£o nas pÃ¡ginas por mÃªs acima, no <a href="/export/masterwhats-${entry.id}.md">Markdown completo</a> e <a href="/#/chat/${entry.id}">no app</a>.</p>`);
-  }
-  out.push(...sourcesHtml(urls));
-  out.push('</article>');
-
-  const description = describe(entry, profile, who);
-  return appPage({
-    title: `Daniel Vorcaro â†” ${who} â€” MasterWhats`,
-    description,
-    path,
-    jsonLd: conversationLd(entry, who, description, { path, first: entry.date_range.start, last: entry.date_range.end }),
-    chat: entry.id,
-    hash: `#/chat/${entry.id}`,
-    article: out.join('\n'),
   });
-}
 
-function monthPage(entry, who, ym, msgs, prevYm, nextYm) {
-  const path = `/chat/${entry.id}/${ym}`;
-  const parent = `/chat/${entry.id}`;
-  const out = [];
-  out.push(`<article id="prerender">`);
-  out.push(`<h1>Daniel Vorcaro â†” ${escapeHtml(who)} â€” ${longMonth(ym)}</h1>`);
-  out.push(`<p>${msgs.length} mensagens em ${longMonth(ym)}, de ${msgs[0].date} a ${msgs.at(-1).date}. `
-    + `<a href="${parent}">A conversa</a> Â· `
-    + (prevYm ? `<a href="${parent}/${prevYm}" rel="prev">${longMonth(prevYm)}</a> Â· ` : '')
-    + (nextYm ? `<a href="${parent}/${nextYm}" rel="next">${longMonth(nextYm)}</a> Â· ` : '')
-    + `<a href="/#/chat/${entry.id}/msg/${msgs[0].id}">Abrir no MasterWhats</a> Â· `
-    + `<a href="/export/masterwhats-${entry.id}-${ym}.md">Markdown deste mÃªs</a> Â· `
-    + `<a href="/export/masterwhats-${entry.id}.md">Markdown completo</a></p>`);
-  out.push(...messagesHtml(msgs));
-  out.push('</article>');
-
-  const description = `Conversa entre Daniel Vorcaro e ${who} em ${longMonth(ym)}: ${msgs.length} mensagens, de ${msgs[0].date} a ${msgs.at(-1).date}.`;
-  const links = (prevYm ? `<link rel="prev" href="${SITE}${parent}/${prevYm}">\n` : '')
-    + (nextYm ? `<link rel="next" href="${SITE}${parent}/${nextYm}">\n` : '');
-  return appPage({
-    title: `Daniel Vorcaro â†” ${who} â€” ${longMonth(ym)} â€” MasterWhats`,
-    description,
-    path,
-    jsonLd: conversationLd(entry, who, description, { path, month: ym, first: msgs[0].date, last: msgs.at(-1).date, parent }),
-    chat: entry.id,
-    hash: `#/chat/${entry.id}/msg/${msgs[0].id}`,
-    article: out.join('\n'),
-    extraHead: links,
+  it('is titled and canonical for that conversation, not the home page', () => {
+    for (const conv of conversations) {
+      const html = page(conv.id);
+      expect(html, conv.id).toContain(`<link rel="canonical" href="${SITE}/chat/${conv.id}">`);
+      expect(html, conv.id).toContain(`<meta property="og:url" content="${SITE}/chat/${conv.id}">`);
+      expect(html, conv.id).toMatch(/<title>Daniel Vorcaro ↔ .+ — MasterWhats<\/title>/);
+    }
   });
-}
 
-// â”€â”€ people â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  it('gives every message an anchor and links the highlights to them', () => {
+    const html = page('alexandre-de-moraes');
+    expect(html).toContain('<p id="msg-39">');
+    expect(html).toContain('<a href="#msg-39">Acha que segunda ja tenho que estar fora?</a>');
+    expect(html).toContain('<small>⟨15/11/2025 18:22 · laudo p. 109, fig. 108⟩</small>');
+  });
 
-/** A page of its own: the app has no route for it, so it does not boot the app. */
-function standalone({ title, description, path, jsonLd, body }) {
-  const url = `${SITE}${path}`;
-  return `<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${escapeHtml(title)}</title>
-<meta name="description" content="${escapeHtml(description)}">
-<link rel="canonical" href="${url}">
-<meta property="og:title" content="${escapeHtml(title)}">
-<meta property="og:description" content="${escapeHtml(description)}">
-<meta property="og:url" content="${url}">
-<meta property="og:type" content="website">
-<meta property="og:image" content="${SITE}/assets/og-image.png">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
-<script type="application/ld+json">
-${JSON.stringify(jsonLd, null, 2)}
-</script>
-<style>
-  body { margin: 0; background: #f0f2f5; color: #111b21; font: 16px/1.5 Roboto, "Helvetica Neue", Arial, sans-serif; }
-  main { max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; }
-  header { border-bottom: 1px solid #d1d7db; padding-bottom: 12px; margin-bottom: 20px; }
-  header a { color: #1daa61; text-decoration: none; font-weight: 700; }
-  h1 { font-size: 1.6rem; margin: 8px 0 4px; }
-  h2 { font-size: 1.15rem; margin: 28px 0 8px; }
-  p { margin: 8px 0; }
-  .role, small, .how { color: #667781; }
-  .msg { background: #fff; border-radius: 8px; padding: 10px 12px; margin: 8px 0; }
-  .msg time { color: #667781; font-size: .9rem; }
-  .msg .links { font-size: .85rem; }
-  a { color: #027eb5; }
-  ul.people li { margin: 6px 0; }
-</style>
-</head>
-<body>
-<main>
-<header><a href="/">MasterWhats</a> Â· <a href="/quem">Pessoas citadas</a></header>
-${body}
-</main>
-</body>
-</html>
-`;
-}
+  it('names the report by pages and hash', () => {
+    const html = page('ciro-soares');
+    expect(html).toContain('218 páginas');
+    expect(html).toMatch(/<dt>sha256 do documento<\/dt><dd><code>[0-9a-f]{64}<\/code><\/dd>/);
+    // The path is the repository's; a crawler must not fetch it from the site.
+    expect(html).toContain('href="https://github.com/rafaelbressan/masterzap/blob/main/data/source/');
+    expect(html).toContain('o site não serve o PDF');
+    const [ld] = ldBlocks(html);
+    expect(ld.isBasedOn.numberOfPages).toBe(218);
+    expect(ld.isBasedOn.identifier.value).toMatch(/^[0-9a-f]{64}$/);
+  });
 
-function mentionHtml(conversationId, msg, alias, primary) {
-  const cite = msg.source_page ? ` <small>(laudo p. ${msg.source_page}${msg.source_figure ? `, fig. ${msg.source_figure}` : ''})</small>` : '';
-  const datetime = msg.timestamp || msg.date;
-  return `<div class="msg" id="m-${conversationId}-${msg.id}">`
-    + `<time datetime="${datetime ? `${datetime}${msg.timestamp ? UTC_OFFSET : ''}` : ''}">${citationOf(msg).split(' Â· ')[0]}</time> Â· <b>${escapeHtml(msg.sender)}</b>${cite}${alias !== primary ? ` <small>Â· por Â«${escapeHtml(alias)}Â»</small>` : ''}<br>`
-    + `${escapeHtml(messageText(msg))}<br>`
-    + `<span class="links"><a href="${locate(conversationId, msg)}">ver na conversa</a> Â· <a href="${messageUrl(conversationId, msg)}">no app</a> Â· msg ${msg.id}</span>`
-    + `</div>`;
-}
+  it('carries the conversation as plain HTML, with the contact named', () => {
+    const html = page('ciro-soares');
+    expect(html).toContain('<article id="prerender">');
+    expect(html).toContain('<h1>Daniel Vorcaro ↔ Ciro Soares</h1>');
+    expect(html).toContain('<h2>Quem é Ciro Soares</h2>');
+    expect(html).toContain('<h2>Proveniência</h2>');
+    expect(html).toMatch(/<time datetime="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}-03:00">/);
+    expect(html).toContain('laudo p. ');
+  });
 
-function personPage(person, mentions) {
-  const path = `/quem/${person.slug}`;
-  const total = [...mentions.values()].reduce((n, v) => n + v.length, 0);
-  const convs = [...mentions.keys()].map(id => byId.get(id));
-  const primary = person.aliases[0].match;
-  const byAlias = new Map();
-  for (const hits of mentions.values()) for (const { alias } of hits) byAlias.set(alias, (byAlias.get(alias) || 0) + 1);
-  // In the order the aliases are declared: the name first, the nicknames after.
-  const breakdown = person.aliases.filter(a => byAlias.has(a.match)).map(a => `${byAlias.get(a.match)} por Â«${a.match}Â»`).join(', ');
-  const description = `${person.name}, ${person.role}: ${total} menÃ§Ãµes em ${convs.length} conversa${convs.length === 1 ? '' : 's'} dos celulares de Daniel Vorcaro â€” ${convs.map(contactOf).join(', ')}.`;
-  const body = [];
-  body.push(`<h1>${escapeHtml(person.name)}</h1>`);
-  body.push(`<p class="role">${escapeHtml(person.role)}${person.profile ? ` Â· <a href="/chat/${person.profile}">perfil e conversa com Vorcaro</a>` : ''}</p>`);
-  body.push(`<p>${total} menÃ§Ãµes em ${convs.length} conversa${convs.length === 1 ? '' : 's'} â€” ${breakdown}. Cada uma linka a mensagem na conversa e no app; as do relatÃ³rio da PF citam pÃ¡gina e figura do laudo.</p>`);
-  body.push(`<p class="how">Como as mensagens se referem a essa pessoa: ${person.aliases.map(a => `<code>${escapeHtml(a.match)}</code>${a.only ? ` (sÃ³ em ${a.only.map(id => contactOf(byId.get(id))).join(', ')})` : ''}`).join(', ')}. Uma menÃ§Ã£o achada por um apelido que nÃ£o Ã© o nome vem marcada.</p>`);
-  for (const [id, hits] of mentions) {
-    const entry = byId.get(id);
-    body.push(`<h2><a href="/chat/${id}">Daniel Vorcaro â†” ${escapeHtml(contactOf(entry))}</a> â€” ${hits.length} men${hits.length === 1 ? 'Ã§Ã£o' : 'Ã§Ãµes'}</h2>`);
-    for (const { msg, alias } of hits) body.push(mentionHtml(id, msg, alias, primary));
-  }
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${SITE}${path}`,
-    url: `${SITE}${path}`,
-    name: `${person.name} nas conversas de Daniel Vorcaro`,
-    description,
-    inLanguage: 'pt-BR',
-    about: { '@type': 'Person', name: person.name, jobTitle: person.role },
-    isPartOf: { '@id': `${SITE}/#dataset` },
-    dateModified: today,
-  };
-  return standalone({ title: `${person.name} nas conversas de Daniel Vorcaro â€” MasterWhats`, description, path, jsonLd, body: body.join('\n') });
-}
+  it('shows only a preview of the big one and says where the rest is', () => {
+    const html = page('martha-graeff');
+    expect(html).toContain('(primeiras 200 mensagens)');
+    expect(html).toContain('/export/masterwhats-martha-graeff.md');
+    expect(html.length).toBeLessThan(400_000);
+  });
 
-function peopleIndex(people) {
-  const body = ['<h1>Pessoas citadas</h1>', '<p>Quem aparece nas conversas de Daniel Vorcaro, com toda menÃ§Ã£o datada e apontando para a mensagem.</p>', '<ul class="people">'];
-  for (const { person, mentions } of people) {
-    const total = [...mentions.values()].reduce((n, v) => n + v.length, 0);
-    body.push(`<li><a href="/quem/${person.slug}">${escapeHtml(person.name)}</a> â€” ${escapeHtml(person.role)} Â· ${total} menÃ§Ãµes em ${mentions.size} conversa${mentions.size === 1 ? '' : 's'}</li>`);
-  }
-  body.push('</ul>');
-  const jsonLd = {
-    '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': `${SITE}/quem`, url: `${SITE}/quem`,
-    name: 'Pessoas citadas nas conversas de Daniel Vorcaro', inLanguage: 'pt-BR', isPartOf: { '@id': `${SITE}/#dataset` }, dateModified: today,
-  };
-  return standalone({ title: 'Pessoas citadas â€” MasterWhats', description: 'Quem aparece nas conversas de Daniel Vorcaro, com toda menÃ§Ã£o datada e apontando para a mensagem.', path: '/quem', jsonLd, body: body.join('\n') });
-}
+  it('describes itself as a Conversation in the dataset', () => {
+    for (const conv of conversations) {
+      const blocks = ldBlocks(page(conv.id));
+      expect(blocks, conv.id).toHaveLength(1);
+      const [ld] = blocks;
+      expect(ld['@type']).toBe('Conversation');
+      expect(ld['@id']).toBe(`${SITE}/chat/${conv.id}`);
+      expect(ld.isPartOf['@id']).toBe(`${SITE}/#dataset`);
+      expect(ld.encoding.map(e => e.contentUrl)).toContain(`${SITE}/export/masterwhats-${conv.id}.md`);
+      if (conv.source?.startsWith('IPJ-A')) expect(ld.isBasedOn['@type'], conv.id).toBe('DigitalDocument');
+    }
+  });
 
-// â”€â”€ llms-full.txt â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  it('opens that chat in the app', () => {
+    for (const conv of conversations) {
+      expect(page(conv.id), conv.id).toContain(`location.replace('#/chat/${conv.id}')`);
+    }
+  });
 
-function profileParagraphs(profile, context) {
-  const out = [];
-  for (const section of profile?.sections || []) {
-    if (section.title) out.push(`**${section.title}**`, '');
-    for (const p of section.paragraphs || []) out.push(linksToMarkdown(p.text, { resolve, context, hrefFor: locate }), '');
-  }
-  return out;
-}
+  it('loads the same bundle the home page does', () => {
+    const home = readFileSync(join(DIST, 'index.html'), 'utf-8');
+    const [bundle] = home.match(/\/assets\/index-[\w-]+\.js/);
+    expect(existsSync(join(DIST, bundle))).toBe(true);
+    for (const conv of conversations) expect(page(conv.id), conv.id).toContain(bundle);
+  });
 
-function llmsFull(built, people) {
-  const total = built.reduce((n, b) => n + b.entry.total_messages, 0);
-  const about = SETTINGS_CONTENT.sections.find(s => s.title === 'Sobre o Projeto');
-  const rest = SETTINGS_CONTENT.sections.filter(s => s !== about);
-  const out = [
-    '# MasterWhats â€” conteÃºdo completo', '',
-    `> Tudo que o site diz, em texto. Cada citaÃ§Ã£o traz âŸ¨data hora Â· laudo p., fig.âŸ© e linka a mensagem na pÃ¡gina estÃ¡tica (${SITE}/chat/<id>#msg-<n>, ou a pÃ¡gina do mÃªs na conversa com Martha Graeff); a mesma pÃ¡gina abre o app nessa mensagem para quem tem JavaScript. O mesmo n aparece como "msg n" no Markdown de cada conversa. ${built.length} conversas, ${total} mensagens, de ${built.at(-1)?.entry.date_range.start ?? ''} a ${built[0]?.entry.date_range.end ?? ''}. Gerado em ${today}. CÃ³digo e dados: ${REPO}.`, '',
-    '## Sobre o projeto', '',
-    ...(about?.paragraphs || []).map(p => linksToMarkdown(p.text, { resolve, hrefFor: locate }) + '\n'),
-    '## Quem Ã© Daniel Vorcaro', '',
-    ...profileParagraphs(VORCARO_PROFILE, 'martha-graeff'),
-    `## Conversas (${built.length})`, '',
-  ];
-  for (const { entry, who, profile, months } of built) {
-    const source = sourceOf(entry);
-    out.push(`### ${who} â€” ${entry.total_messages} mensagens, ${entry.date_range.start} a ${entry.date_range.end}`, '');
-    out.push(`- PÃ¡gina: ${SITE}/chat/${entry.id}`);
-    if (months) out.push(`- Um mÃªs por pÃ¡gina: ${[...months.keys()].map(ym => `${SITE}/chat/${entry.id}/${ym}`).join(' Â· ')}`, `- Markdown por mÃªs (troque o mÃªs): ${SITE}/export/masterwhats-${entry.id}-${[...months.keys()][0]}.md`);
-    out.push(`- Conversa completa em Markdown: ${SITE}/export/masterwhats-${entry.id}.md Â· JSON: ${SITE}/export/masterwhats-${entry.id}.json`);
-    out.push(`- Fonte: ${source.label}`);
-    if (entry.saved_as) out.push(`- Salvo no celular como: ${entry.saved_as}`);
-    if (entry.note) out.push(`- ObservaÃ§Ã£o: ${entry.note}`);
-    out.push('');
-    out.push(...profileParagraphs(profile, entry.id));
-  }
-  out.push(`## Pessoas citadas (${people.length})`, '', `Ãndice em ${SITE}/quem â€” cada pÃ¡gina lista toda menÃ§Ã£o, por conversa, datada e apontando para a mensagem.`, '');
-  for (const { person, mentions } of people) {
-    const per = [...mentions].map(([id, hits]) => `${contactOf(byId.get(id))} (${hits.length})`).join(', ');
-    out.push(`- [${person.name}](${SITE}/quem/${person.slug}) â€” ${person.role}. Citado em: ${per}.`);
-  }
-  out.push('');
-  for (const section of rest) {
-    out.push(`## ${section.title}`, '');
-    for (const p of section.paragraphs) out.push(linksToMarkdown(p.text, { resolve, hrefFor: locate }), '');
-  }
-  const report = entries.map(e => e.source_document).find(Boolean);
-  if (report) {
-    out.push('## Documento-fonte do relatÃ³rio da PF', '',
-      `- Arquivo: ${report.file} â€” ${report.pages} pÃ¡ginas`,
-      `- sha256: ${report.sha256}`,
-      `- Onde obter: ${report.url} (pÃ¡gina) ou ${report.download} (os bytes) â€” o site nÃ£o serve o PDF; o caminho acima Ã© do repositÃ³rio`, '');
-  }
-  out.push('## Fontes gerais', '', ...SOURCES.map(s => `- [${s.label}](${s.url})`), '');
-  out.push('## Export', '',
-    'Comece pelo arquivo de uma conversa (7 a 40 KB, links acima); os consolidados sÃ£o grandes e raramente necessÃ¡rios.',
-    `- Zip com tudo: ${SITE}/export/masterwhats-export.zip (3 MB)`,
-    `- Tudo em Markdown: ${SITE}/export/masterwhats.md (3 MB)`,
-    `- Tudo em JSON: ${SITE}/export/masterwhats.json (14 MB)`, '');
-  return out.join('\n');
-}
+  it('leaves no site-only markup in the article', () => {
+    for (const conv of conversations) {
+      const [article] = page(conv.id).match(/<article id="prerender">[\s\S]*?<\/article>/);
+      expect(article, conv.id).not.toMatch(/\{[^}]+\}\[[^\]]+\]/);
+      expect(article, conv.id).not.toContain('[action:');
+    }
+  });
+});
 
-// â”€â”€ sitemap â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+describe('discovery', () => {
+  // A crawler should not have to guess that llms.txt exists.
+  it('the home page and robots.txt point at llms.txt', () => {
+    const home = readFileSync(join(DIST, 'index.html'), 'utf-8');
+    expect(home).toContain('<link rel="alternate" type="text/plain" href="/llms.txt"');
+    expect(home).toContain('href="/llms-full.txt"');
+    const robots = readFileSync(join(ROOT, 'public/robots.txt'), 'utf-8');
+    expect(robots).toContain('/llms.txt');
+  });
+});
 
-function sitemap(built, people) {
-  const url = (loc, priority, changefreq = 'weekly') =>
-    `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
-  const rows = [url(`${SITE}/`, '1.0')];
-  for (const { entry, months } of built) {
-    const headline = entry.id === 'alexandre-de-moraes' || entry.id === 'martha-graeff';
-    rows.push(url(`${SITE}/chat/${entry.id}`, headline ? '0.9' : '0.8'));
-    if (months) for (const ym of months.keys()) rows.push(url(`${SITE}/chat/${entry.id}/${ym}`, '0.6', 'monthly'));
-  }
-  rows.push(url(`${SITE}/quem`, '0.8'));
-  for (const { person } of people) rows.push(url(`${SITE}/quem/${person.slug}`, '0.7'));
-  rows.push(url(`${SITE}/llms.txt`, '0.7'));
-  rows.push(url(`${SITE}/llms-full.txt`, '0.7'));
-  rows.push(url(`${SITE}/export/masterwhats.md`, '0.6', 'monthly'));
-  for (const { entry } of built) rows.push(url(`${SITE}/export/masterwhats-${entry.id}.md`, '0.5', 'monthly'));
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows.join('\n')}\n</urlset>\n`;
-}
+describe('a conversation too big for one page', () => {
+  const months = readdirSync(join(DIST, 'chat', 'martha-graeff')).filter(n => /^\d{4}-\d{2}$/.test(n)).sort();
 
-// â”€â”€ run â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  it('gets one page per month, and the main page lists them', () => {
+    expect(months.length).toBeGreaterThan(12);
+    const main = page('martha-graeff');
+    expect(main).toContain('<h2>Meses</h2>');
+    for (const ym of months) expect(main, ym).toContain(`<a href="/chat/martha-graeff/${ym}">`);
+  });
 
-const built = [];
-for (const entry of entries) {
-  const messages = resolve.messagesOf(entry.id);
-  const profile = getContactProfile(entry.id);
-  const who = whoIs(entry, profile);
-  const dir = join(DIST, 'chat', entry.id);
-  mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, 'index.html'), conversationPage(entry, messages, profile, who));
+  it('holds only that month, in order, chained to its neighbours', () => {
+    const html = readFileSync(join(DIST, 'chat/martha-graeff/2024-12/index.html'), 'utf-8');
+    expect(html).toContain('<link rel="canonical" href="https://masterwhats.recomendeme.com.br/chat/martha-graeff/2024-12">');
+    expect(html).toContain('<link rel="prev" href="https://masterwhats.recomendeme.com.br/chat/martha-graeff/2024-11">');
+    expect(html).toContain('<link rel="next" href="https://masterwhats.recomendeme.com.br/chat/martha-graeff/2025-01">');
+    const stamps = [...html.matchAll(/<time datetime="(\d{4}-\d{2})-\d{2}T/g)].map(m => m[1]);
+    expect(stamps.length).toBeGreaterThan(100);
+    expect(new Set(stamps)).toEqual(new Set(['2024-12']));
+    const [ld] = ldBlocks(html);
+    expect(ld['@type']).toBe('Conversation');
+    expect(ld.isPartOf['@id']).toBe(`${SITE}/chat/martha-graeff`);
+    expect(html).toContain("location.replace('#/chat/martha-graeff/msg/");
+  });
 
-  let months = null;
-  if (isPaged(entry)) {
-    months = monthsOf(messages);
-    const yms = [...months.keys()];
-    yms.forEach((ym, i) => {
-      mkdirSync(join(dir, ym), { recursive: true });
-      writeFileSync(join(dir, ym, 'index.html'), monthPage(entry, who, ym, months.get(ym), yms[i - 1], yms[i + 1]));
-    });
-  }
-  built.push({ entry, who, profile, months });
-  console.log(`chat/${entry.id}/ â€” ${who}${months ? ` (${months.size} meses)` : ''}`);
-}
+  // The famous quote lives in December 2024, not among the first 200. Its
+  // anchor is on the month page, and the home page's highlight points there.
+  it('anchors the message on its month page, where the home page points', () => {
+    expect(readFileSync(join(DIST, 'chat/martha-graeff/2024-12/index.html'), 'utf-8')).toContain('<p id="msg-35686">');
+    expect(readFileSync(join(DIST, 'index.html'), 'utf-8')).toContain('href="/chat/martha-graeff/2024-12#msg-35686"');
+  });
 
-const people = [];
-for (const person of PEOPLE) {
-  const mentions = mentionsOf(person, entries, resolve.messagesOf);
-  if (!mentions.size) {
-    console.error(`pessoa sem menÃ§Ã£o nenhuma: ${person.slug} â€” confira os apelidos em people-content.js`);
-    process.exit(1);
-  }
-  const dir = join(DIST, 'quem', person.slug);
-  mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, 'index.html'), personPage(person, mentions));
-  people.push({ person, mentions });
-  console.log(`quem/${person.slug}/ â€” ${[...mentions.values()].reduce((n, v) => n + v.length, 0)} menÃ§Ãµes`);
-}
-writeFileSync(join(DIST, 'quem', 'index.html'), peopleIndex(people));
+  // A static anchor link must work for a browser too: the page opens the app
+  // at that message instead of at the top of the chat.
+  it('turns a #msg-N fragment into the app route for that message', () => {
+    expect(page('alexandre-de-moraes')).toContain("location.replace('#/chat/alexandre-de-moraes/msg/'+m[1])");
+  });
+});
 
-// The sizes the index quotes decide whether a crawler downloads a file. They
-// are stamped from the files themselves rather than typed and forgotten.
-const mb = (name) => `${(statSync(join(DIST, 'export', name)).size / 1e6).toFixed(1)} MB`;
-const SIZES = { 'masterwhats.md': mb('masterwhats.md'), 'masterwhats.json': mb('masterwhats.json'), 'masterwhats-export.zip': mb('masterwhats-export.zip') };
-const stampSizes = (text) => text.replace(/(masterwhats(?:-export)?\.(?:md|json|zip)) \([\d.,]+ MB\)/g, (m, name) => `${name} (${SIZES[name] || m.slice(name.length + 2, -1)})`);
-writeFileSync(join(DIST, 'llms.txt'), stampSizes(readFileSync(join(DIST, 'llms.txt'), 'utf-8')));
-writeFileSync(join(DIST, 'llms-full.txt'), stampSizes(llmsFull(built, people)));
-writeFileSync(join(DIST, 'sitemap.xml'), sitemap(built, people));
-console.log(`\nDone! ${built.length} conversations, ${people.length} people, llms-full.txt, sitemap.xml â†’ ${DIST}`);
+describe('people', () => {
+  const person = (slug) => readFileSync(join(DIST, 'quem', slug, 'index.html'), 'utf-8');
+
+  it('has an index and a page per person', () => {
+    const index = readFileSync(join(DIST, 'quem/index.html'), 'utf-8');
+    expect(index).toContain('<a href="/quem/paulo-gonet">Paulo Gonet</a>');
+    expect(index).toContain('<a href="/quem/andre-esteves">André Esteves</a>');
+  });
+
+  it('lists every mention by conversation, dated, pointing at the message', () => {
+    const html = person('paulo-gonet');
+    expect(html).toContain('<h1>Paulo Gonet</h1>');
+    // Counts say which alias found what; a hit by an alias is marked.
+    expect(html).toMatch(/\d+ por «gonet», \d+ por «paulo»/);
+    expect(html).toContain('· por «paulo»</small>');
+    // The son is not the father.
+    expect(html).not.toContain('Pedro Gonet');
+    expect(html).toContain('Daniel Vorcaro ↔ Ciro Soares</a>');
+    expect(html).toContain('href="/chat/ciro-soares#msg-34"');
+    expect(html).toContain('href="https://masterwhats.recomendeme.com.br/#/chat/ciro-soares/msg/34"');
+    expect(html).toContain('laudo p. 207, fig. 219');
+    expect(html).toMatch(/<time datetime="2025-03-29T13:58:\d{2}-03:00">29\/03\/2025 13:58<\/time>/);
+  });
+
+  it('says how it read the names, so an ambiguous alias is not a hidden guess', () => {
+    expect(person('paulo-gonet')).toContain('<code>paulo</code> (só em Alexandre de Moraes');
+  });
+
+  it('points a mention in the big conversation at its month page', () => {
+    expect(person('andre-esteves')).toMatch(/href="\/chat\/martha-graeff\/\d{4}-\d{2}#msg-\d+"/);
+  });
+
+  it('describes the page as being about a Person', () => {
+    const [ld] = ldBlocks(person('paulo-gonet'));
+    expect(ld['@type']).toBe('WebPage');
+    expect(ld.about).toEqual({ '@type': 'Person', name: 'Paulo Gonet', jobTitle: 'Procurador-geral da República' });
+  });
+
+  it('is in the sitemap and in llms-full.txt', () => {
+    const xml = readFileSync(join(DIST, 'sitemap.xml'), 'utf-8');
+    expect(xml).toContain(`<loc>${SITE}/quem</loc>`);
+    expect(xml).not.toContain(`<loc>${SITE}/quem/</loc>`);
+    expect(xml).toContain(`<loc>${SITE}/quem/paulo-gonet</loc>`);
+    expect(xml).toContain(`<loc>${SITE}/chat/martha-graeff/2024-12</loc>`);
+    const t = readFileSync(join(DIST, 'llms-full.txt'), 'utf-8');
+    expect(t).toContain('## Pessoas citadas (');
+    expect(t).toContain(`[Paulo Gonet](${SITE}/quem/paulo-gonet)`);
+    expect(t).toContain(`${SITE}/chat/martha-graeff/2024-12`);
+  });
+});
+
+describe('the home page', () => {
+  it('describes the corpus as a Dataset with downloads', () => {
+    const blocks = ldBlocks(readFileSync(join(DIST, 'index.html'), 'utf-8'));
+    const dataset = blocks.find(b => b['@type'] === 'Dataset');
+    expect(dataset['@id']).toBe(`${SITE}/#dataset`);
+    expect(dataset.distribution.map(d => d.contentUrl)).toContain(`${SITE}/export/masterwhats-export.zip`);
+  });
+});
+
+describe('llms.txt', () => {
+  it('quotes the real size of the big files', () => {
+    const t = readFileSync(join(DIST, 'llms.txt'), 'utf-8');
+    const real = (statSync(join(DIST, 'export/masterwhats.md')).size / 1e6).toFixed(1);
+    expect(t).toContain(`masterwhats.md (${real} MB)`);
+  });
+});
+
+describe('llms-full.txt', () => {
+  const text = () => readFileSync(join(DIST, 'llms-full.txt'), 'utf-8');
+
+  it('names every conversation and points at its Markdown', () => {
+    const t = text();
+    expect(t).toContain(`## Conversas (${conversations.length})`);
+    for (const conv of conversations) {
+      expect(t, conv.id).toContain(`${SITE}/chat/${conv.id}`);
+      expect(t, conv.id).toContain(`${SITE}/export/masterwhats-${conv.id}.md`);
+    }
+  });
+
+  it('cites every highlight with a link, a date and a page', () => {
+    const t = text();
+    expect(t).toContain('/chat/alexandre-de-moraes#msg-39) ⟨15/11/2025 18:22 · laudo p. 109, fig. 108⟩');
+    // The famous quote lives in December 2024, on that month's page.
+    expect(t).toContain('/chat/martha-graeff/2024-12#msg-35686) ⟨04/12/2024 00:33⟩');
+    expect(t).toContain('## Documento-fonte do relatório da PF');
+  });
+
+  it('carries the profiles with their sources as links, and nothing site-only', () => {
+    const t = text();
+    expect(t).toContain('## Quem é Daniel Vorcaro');
+    expect(t).toMatch(/\[[^\]]+\]\(https?:\/\/[^)]+\)/);
+    expect(t).not.toMatch(/\{[^}]+\}\[[^\]]+\]/);
+    expect(t).not.toContain('[action:');
+  });
+});
+
+describe('sitemap.xml', () => {
+  it('lists home, every page and every Markdown', () => {
+    const xml = readFileSync(join(DIST, 'sitemap.xml'), 'utf-8');
+    const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+    expect(locs).toContain(`${SITE}/`);
+    expect(locs).toContain(`${SITE}/llms.txt`);
+    expect(locs).toContain(`${SITE}/llms-full.txt`);
+    for (const conv of conversations) {
+      expect(locs, conv.id).toContain(`${SITE}/chat/${conv.id}`);
+      expect(locs, conv.id).toContain(`${SITE}/export/masterwhats-${conv.id}.md`);
+    }
+    expect(locs.some(l => l.includes('#'))).toBe(false);
+  });
+});
