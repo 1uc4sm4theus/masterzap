@@ -4,7 +4,7 @@
 
 > Visualizador interativo de 66.823 mensagens de WhatsApp em 43 conversas, reunidas de fontes distintas — de Martha Graeff a Alexandre de Moraes.
 
-**[Acesse ao vivo: www.masterwhats.com.br](https://www.masterwhats.com.br/)**
+**[Acesse ao vivo: masterwhats.recomendeme.com.br](https://masterwhats.recomendeme.com.br/)**
 
 ---
 
@@ -42,6 +42,17 @@ O nome do repositório — **masterzap** — é uma referência ao projeto origi
 - **Totalmente responsivo** — experiência completa no celular e no desktop, um diferencial em relação ao [MasterZap](https://www.reddit.com/r/brasil/s/xQeqrG27p8) original
 - **Tema escuro** — alterne pelo ícone abaixo de Sobre na barra lateral; no celular, use o menu da lista de conversas. A preferência fica salva neste navegador
 - **Pesquisas de Vorcaro no ChatGPT** — arquivo editorial com consultas citadas em reportagem e respostas identificadas como reconstruções.
+- **Master IA** — interface conversacional para consultar o acervo publicado no próprio frontend. Recupera evidências dos índices/chunks por data, calcula contagens no navegador e vincula cada fonte à conversa/mensagem original.
+
+### Master IA e inferência
+
+A Master IA usa os arquivos existentes em `public/data/`; não adiciona backend, banco de dados ou cópia completa das conversas. A busca considera todas as conversas do acervo, independentemente do perfil de telefone ativo, e envia ao modelo somente os trechos mais relevantes dentro do limite de contexto. Os índices de busca compartilham o cache do buscador normal, e os chunks por data usam o cache LRU do `DataStore`. Como o índice da conversa grande limita o texto por mensagem, buscas completas consultam os chunks originais em lotes paralelos de até oito dias; perguntas que exigem varrer o acervo ainda podem levar mais tempo.
+
+As respostas são transmitidas progressivamente quando o endpoint oferece SSE. O usuário pode interromper a geração, copiar ou regenerar a última resposta; o Markdown inclui código, tabelas, listas e citações. As sessões ficam salvas localmente no navegador e podem ser retomadas pelo histórico.
+
+Perguntas quantitativas e de metadados são respondidas localmente. Para síntese de mensagens, o navegador envia ao deployment GPT-OSS na Nosana apenas a pergunta e um conjunto limitado de trechos recuperados, via `/api/master-ia/v1/chat/completions`. Um proxy relativo do próprio site evita diferenças de CORS entre desenvolvimento e produção; `src/lib/master-ia-config.js` centraliza o endpoint interno e o modelo. A inferência não usa a API da OpenAI nem credenciais privadas.
+
+O proxy é configurado no Vite para desenvolvimento e no Vercel para produção. Somente mensagens recuperadas para uma pergunta são enviadas ao modelo; perguntas locais de contagem não fazem chamada de inferência.
 
 ## Tecnologia
 
@@ -144,4 +155,4 @@ The repo name "masterzap" references the original [MasterZap](https://www.reddit
 
 **Contributions welcome** — new leaked conversations, media support, sharing improvements, and bug fixes. See the Roadmap section above. Only text messages are currently available; images, audio, and video were not part of the leaks.
 
-**[Live: www.masterwhats.com.br](https://www.masterwhats.com.br/)** | **Author: [Rafael Bressan](https://linkedin.com/in/rafaelbressan)**
+**[Live: masterwhats.recomendeme.com.br](https://masterwhats.recomendeme.com.br/)** | **Author: [Rafael Bressan](https://linkedin.com/in/rafaelbressan)**
