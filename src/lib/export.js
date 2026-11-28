@@ -17,7 +17,7 @@ import { join } from 'node:path';
 import JSZip from 'jszip';
 
 import { getContactProfile, VORCARO_PROFILE, SOURCES } from './src/lib/profile-content.js';
-import { SETTINGS_CONTENT } from './src/lib/settings-content.js';
+import { getContactProfile, VORCARO_PROFILE, SOURCES } from './profile-content.js';
 import {
   ROOT, SITE, REPO, TIMEZONE, UTC_OFFSET,
   loadEntries, loadMessages, sourceOf, contactOf, whoIs, createResolver, createLocator, isPaged,
