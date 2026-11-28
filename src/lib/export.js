@@ -17,12 +17,13 @@ import { join } from 'node:path';
 import JSZip from 'jszip';
 
 import { getContactProfile, VORCARO_PROFILE, SOURCES } from './profile-content.js';
+import { SETTINGS_CONTENT } from './settings-content.js';
 
 import {
   ROOT, SITE, REPO, TIMEZONE, UTC_OFFSET,
   loadEntries, loadMessages, sourceOf, contactOf, whoIs, createResolver, createLocator, isPaged,
   urlsIn, linksToMarkdown, longDate, phonePretty, MEDIA,
-} from './lib/corpus.mjs';
+} from '../../scripts/lib/corpus.mjs';
 
 const OUT = join(ROOT, 'public/export');
 const FORMAT_VERSION = 1;
