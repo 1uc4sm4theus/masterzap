@@ -32,6 +32,9 @@ Entre os principais conjuntos estão:
 
 O acervo é organizado por conversa e interlocutor. Novos documentos e conjuntos de mensagens podem ser incorporados à medida que se tornem públicos e possam ser documentados.
 
+
+%CONVERSATIONS%
+
 ### Proveniência e integridade
 
 A consulta às mensagens deve ser acompanhada de informações que permitam verificar sua origem.

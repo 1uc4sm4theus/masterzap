@@ -1,27 +1,29 @@
 /**
  * What the build scripts share: where the conversations are, how to read them
  * and how the site's content links turn into plain Markdown or HTML.
+ *
+ * Versão independente: não usa src/lib/provenance.js, quote.js, utils.js nem
+ * participants.js. A única dependência do app é src/config/site.js (domínio).
  */
 
 import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SITE } from '../../src/lib/site-config.js';
-
-export { SITE };
+import { SITE_URL } from '../../src/config/site.js';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '../..');
 export const DATA_DIR = join(ROOT, 'data');
 export const PUBLIC_DATA = join(ROOT, 'public/data');
 
-export const REPO = 'https://github.com/rafaelbressan/masterzap';
+/** The site's address — src/config/site.js decides it, for the app and the build alike. */
+export const SITE = SITE_URL;
+export { REPO_URL as REPO } from '../../src/config/site.js';
 
 // The phones were seized in Brazil and every timestamp in the sources is local
 // wall-clock time. Brazil has had no daylight saving since 2019, so from the
 // first message (December 2023) on the offset is a constant.
 export const TIMEZONE = 'America/Sao_Paulo';
 export const UTC_OFFSET = '-03:00';
-
 
 /** The conversations as the site lists them, newest first. */
 export function loadEntries() {
@@ -37,17 +39,72 @@ export function loadMessages(entry) {
   return JSON.parse(readFileSync(join(DATA_DIR, 'messages.json'), 'utf-8')).messages;
 }
 
+/** data/sources.json, by id, when the project has it; an empty map otherwise. */
+let sourcesById = null;
+export function loadSources() {
+  if (!sourcesById) {
+    const file = join(DATA_DIR, 'sources.json');
+    sourcesById = existsSync(file)
+      ? new Map(JSON.parse(readFileSync(file, 'utf-8')).sources.map(s => [s.id, s]))
+      : new Map();
+  }
+  return sourcesById;
+}
+
+/** Kinds of source that are official records rather than reporting. */
+export const OFFICIAL_KINDS = new Set(['laudo-pf', 'peticao-stf', 'police-report']);
+
+// ── participants ───────────────────────────────────────────────────────────
+
+/** The phone's owner, as titles name him. */
+export const ownerName = (entry) => entry?.owner_name || 'Daniel Vorcaro';
+
+/** The other side: the name split_data.py recorded, else the participant who is not the owner. */
+export const contactOf = (entry) =>
+  entry.contact
+  || (entry.participants || []).find(p => p !== (entry.owner || 'DV'))
+  || (entry.participants || [])[0]
+  || entry.id;
+
+/** How a conversation is titled: "Grupo Macallan", or "Daniel Vorcaro ↔ Fábio Faria". */
+export const pairTitle = (entry, who) =>
+  (entry?.is_group ? `Grupo ${contactOf(entry)}` : `${ownerName(entry)} ↔ ${who}`);
+
+/** The person, as opposed to the name the phone saved them under. */
+export const whoIs = (entry, profile) =>
+  profile?.name || profile?.sections?.[0]?.title?.replace(/^Sobre /, '') || contactOf(entry);
+
+// ── sources ────────────────────────────────────────────────────────────────
+
 /**
  * Where a conversation's text came from, in the terms the reader will need.
- * The report's file, hash and page count come from conversations.json, where
- * split_data.py computed them once.
+ * Uses data/sources.json when the conversation has a source_id registered
+ * there; otherwise falls back to what conversations.json carries.
  */
 export function sourceOf(entry) {
-  if (entry.source_detail) {
+  const src = entry.source_id ? loadSources().get(entry.source_id) : null;
+  if (src) {
     return {
-      ...entry.source_detail,
-      label: entry.source_detail.label || entry.source,
+      id: src.id,
+      kind: src.kind,
+      label: src.titulo,
+      name: src.nome || null,
+      description: src.descricao || null,
+      outlet: src.orgao_ou_veiculo || null,
+      date: src.data || null,
+      verification: entry.verification || null,
+      document: src.file || null,
+      document_url: src.url || null,
+      document_download: src.download || null,
+      document_sha256: src.sha256 || null,
+      document_pages: src.pages || null,
+      archive_url: src.archive_url || null,
+      made_public: src.made_public || null,
+      how: src.how,
     };
+  }
+  if (entry.source_detail) {
+    return { ...entry.source_detail, label: entry.source_detail.label || entry.source };
   }
   if (entry.source?.startsWith('IPJ-A')) {
     const doc = entry.source_document || {};
@@ -60,34 +117,60 @@ export function sourceOf(entry) {
       document_sha256: doc.sha256 || null,
       document_pages: doc.pages || null,
       made_public: '2026-09-01',
-      how: 'TranscriÃ§Ã£o manual das imagens do laudo; cada mensagem cita a pÃ¡gina e a figura de origem.',
+      how: 'Transcrição manual das imagens do laudo; cada mensagem cita a página e a figura de origem.',
     };
   }
-  if (entry.source === 'ConteÃºdo fornecido pelo usuÃ¡rio') {
+  if (entry.source === 'Conteúdo fornecido pelo usuário') {
     return {
       kind: 'user-provided',
       label: entry.source,
       document: null,
       document_sha256: null,
       made_public: null,
-      how: 'ConteÃºdo fornecido diretamente para inclusÃ£o no projeto.',
+      how: 'Conteúdo fornecido diretamente para inclusão no projeto.',
     };
   }
   return {
     kind: 'leak',
-    label: 'Vazamento das conversas com Martha Graeff, marÃ§o de 2026',
+    label: 'Vazamento das conversas com Martha Graeff, março de 2026',
     document: null,
     document_sha256: null,
     made_public: '2026-03',
-    how: 'Export de WhatsApp extraÃ­do do celular apreendido, vazado para a imprensa.',
+    how: 'Export de WhatsApp extraído do celular apreendido, vazado para a imprensa.',
   };
 }
 
-export const contactOf = (entry) => entry.contact || entry.participants.find(p => p !== (entry.owner || 'DV')) || entry.participants[0];
+const SEAL_LABELS = {
+  verificado: 'Verificado',
+  'nao-verificado': 'Não verificado',
+  imprensa: 'Imprensa',
+};
+const sealLabel = (seal) => (seal ? SEAL_LABELS[seal] || seal : null);
 
-/** The person, as opposed to the name the phone saved them under. */
-export const whoIs = (entry, profile) =>
-  profile?.name || profile?.sections?.[0]?.title?.replace(/^Sobre /, '') || contactOf(entry);
+/** One line about where the conversation came from: "Verificado · <fonte>", or just the source. */
+export function sealSummary(entry) {
+  const source = sourceOf(entry);
+  const where = source.outlet ? `${source.label}, ${source.outlet}` : source.label;
+  const seal = sealLabel(entry.verification);
+  return seal ? `${seal} · ${where}` : where;
+}
+
+/**
+ * What a message from another source than its conversation's says beside it:
+ * its own seal and source, when they differ from the conversation's.
+ */
+export function messageProvenanceTags(msg, entry, { standalone = false } = {}) {
+  const tags = [];
+  const seal = msg.verification || entry.verification;
+  const baseline = standalone ? 'verificado' : entry.verification;
+  if (seal && seal !== baseline && SEAL_LABELS[seal]) tags.push(SEAL_LABELS[seal].toLowerCase());
+  if (msg.source_id && msg.source_id !== entry.source_id) {
+    tags.push(`fonte: ${loadSources().get(msg.source_id)?.titulo || msg.source_id}`);
+  }
+  return tags;
+}
+
+// ── text helpers ───────────────────────────────────────────────────────────
 
 export const urlsIn = (text) => [...text.matchAll(/\{[^}]+\}\[(https?:\/\/[^\]]+)\]/g)].map(m => m[1]);
 
@@ -95,22 +178,14 @@ export const escapeHtml = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
-// â”€â”€ highlights that point at a message â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-
 /** The app's search normalisation (src/lib/search.js), mirrored. */
 export const normalize = (str) => str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
+// ── highlights that point at a message ─────────────────────────────────────
+
 /**
- * Turn the site's `action:search` links into a message each.
- *
- * In the app a highlight is a search: tap it and the conversation scrolls to
- * the first message that matches. Outside the app that search has nobody to
- * run it, so it is run here, once, at build time, and the result â€” the
- * message, its date, its page in the report â€” travels with the quote.
- *
- * A term that matches nothing is a broken highlight, and the build fails on
- * it: profile-content.js already promises that every term appears in its
- * conversation, and a silent miss would leave a quote pointing nowhere.
+ * Turn the site's `action:search` links into a message each, at build time.
+ * A term that matches nothing is a broken highlight, and the build fails on it.
  */
 export function createResolver(entries) {
   const byId = new Map(entries.map(e => [e.id, e]));
@@ -136,7 +211,7 @@ export function createResolver(entries) {
 /**
  * Every message that names a person, by conversation.
  *
- * @returns {Map<string, object[]>} conversation id â†’ messages, in order; only
+ * @returns {Map<string, object[]>} conversation id → messages, in order; only
  *   conversations with at least one mention
  */
 export function mentionsOf(person, entries, messagesOf) {
@@ -151,8 +226,6 @@ export function mentionsOf(person, entries, messagesOf) {
     for (const m of messagesOf(entry.id)) {
       const text = normalize(m.content || '');
       const rule = rules.find(r => (!r.only || r.only.has(entry.id)) && r.re.test(text) && !(r.unless && r.unless.test(text)));
-      // Each hit remembers the alias that found it, so a page can say
-      // "8 by Â«gonetÂ», 5 by Â«pauloÂ»" instead of one inferred total.
       if (rule) hits.push({ msg: m, alias: person.aliases[rules.indexOf(rule)].match });
     }
     if (hits.length) found.set(entry.id, hits);
@@ -160,49 +233,90 @@ export function mentionsOf(person, entries, messagesOf) {
   return found;
 }
 
-const brDate = (iso) => /^\d{4}-\d{2}-\d{2}$/.test(iso || '')
-  ? `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}`
-  : /^\d{4}-\d{2}$/.test(iso || '')
-    ? `${iso.slice(5, 7)}/${iso.slice(0, 4)}`
-  : 'Data não informada';
+// ── dates ──────────────────────────────────────────────────────────────────
 
-/** "15/11/2025 18:22 Â· laudo p. 109, fig. 108" â€” what a quote needs to be checked. */
-export function citationOf(msg) {
-  const time = msg.time ? ` ${msg.time.slice(0, 5)}` : '';
-  const parts = [`${brDate(msg.date)}${time}`];
-  if (msg.source_page) parts.push(`laudo p. ${msg.source_page}${msg.source_figure ? `, fig. ${msg.source_figure}` : ''}`);
-  return parts.join(' Â· ');
+// A message's date may be partial ("2024-07", "2024") or absent ("sem-data").
+const DAY = /^\d{4}-\d{2}-\d{2}$/;
+const MONTH = /^\d{4}-\d{2}$/;
+const YEAR = /^\d{4}$/;
+export const NO_DATE = 'Data não informada';
+
+/** "2024-07-02" → "02/07/2024"; "2024-07" → "07/2024"; "2024" → "2024". */
+export const brDate = (iso) => (DAY.test(iso || '') ? `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}`
+  : MONTH.test(iso || '') ? `${iso.slice(5, 7)}/${iso.slice(0, 4)}`
+  : YEAR.test(iso || '') ? iso
+  : NO_DATE);
+
+/** The month a message belongs to, for the per-month pages. */
+export const monthOf = (date) => (DAY.test(date || '') || MONTH.test(date || '') ? date.slice(0, 7) : YEAR.test(date || '') ? date : 'sem-data');
+
+const dateFmt = new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+const monthYearFmt = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric' });
+
+/** "15 de novembro de 2025"; a partial date says only what it knows. */
+export const longDate = (iso) => (DAY.test(iso || '') ? dateFmt.format(new Date(`${iso}T12:00:00`))
+  : MONTH.test(iso || '') ? monthYearFmt.format(new Date(`${iso}-15T12:00:00`))
+  : YEAR.test(iso || '') ? iso
+  : NO_DATE);
+
+/** A conversation's period in words: "de X a Y", "em X", or "sem data conhecida". */
+export function periodOf(range) {
+  const { start, end } = range || {};
+  if (!start || start === 'sem-data') return 'sem data conhecida';
+  return start === end ? `em ${start}` : `de ${start} a ${end}`;
 }
 
-/**
- * A conversation with more messages than this gets one static page per month;
- * its main page shows the first ones and an index of the months.
- */
+/** A timestamp with the zone, or null when the time is not known. */
+export const zonedTimestamp = (msg) => {
+  if (!msg.timestamp) return null;
+  return /[+-]\d{2}:\d{2}$/.test(msg.timestamp) ? msg.timestamp : `${msg.timestamp}${UTC_OFFSET}`;
+};
+
+// ── citations and locations ────────────────────────────────────────────────
+
+let entriesById = null;
+const entryOf = (conversationId) => {
+  if (!conversationId) return null;
+  entriesById ??= new Map(loadEntries().map(e => [e.id, e]));
+  return entriesById.get(conversationId) || null;
+};
+
+/** Where in its document a message is: "laudo p. 109, fig. 108", or ''. */
+export function pageOf(msg, conversationId) {
+  if (!msg.source_page) return '';
+  const sourceId = msg.source_id || entryOf(conversationId)?.source_id;
+  const word = loadSources().get(sourceId)?.cita || 'laudo';
+  return `${word} p. ${msg.source_page}${msg.source_figure ? `, fig. ${msg.source_figure}` : ''}`;
+}
+
+/** "15/11/2025 18:22 · laudo p. 109, fig. 108" — what a quote needs to be checked. */
+export function citationOf(msg, conversationId, { standalone = false } = {}) {
+  const parts = [msg.time ? `${brDate(msg.date)} ${msg.time.slice(0, 5)}` : `${brDate(msg.date)}, horário não informado`];
+  const page = pageOf(msg, conversationId);
+  if (page) parts.push(page);
+  const entry = entryOf(conversationId);
+  if (entry) parts.push(...messageProvenanceTags(msg, entry, { standalone }));
+  return parts.join(' · ');
+}
+
+/** A conversation with more messages than this gets one static page per month. */
 export const PREVIEW_MESSAGES = 200;
 export const isPaged = (entry) => entry.total_messages > PREVIEW_MESSAGES;
 
-/**
- * Where a message's anchor lives in the static site: /chat/<id>, or the month
- * page of a conversation too big for one. Returns a path, or null for a
- * conversation the site does not have.
- */
+/** Where a message's anchor lives in the static site. */
 export function createLocator(entries) {
   const byId = new Map(entries.map(e => [e.id, e]));
   return (conversationId, msg) => {
     const entry = byId.get(conversationId);
     if (!entry) return null;
-    return isPaged(entry) ? `/chat/${conversationId}/${msg.date.slice(0, 7)}#msg-${msg.id}` : `/chat/${conversationId}#msg-${msg.id}`;
+    return isPaged(entry) ? `/chat/${conversationId}/${monthOf(msg.date)}#msg-${msg.id}` : `/chat/${conversationId}#msg-${msg.id}`;
   };
 }
 
 export const messageUrl = (conversationId, msg) => `${SITE}/#/chat/${conversationId}/msg/${msg.id}`;
 
-/**
- * Parse one of the site's links into what it points at.
- *
- * `context` is the conversation an `action:search:` without an `@` means â€”
- * the one open in the app when the profile is shown.
- */
+// ── the site's {text}[url] links ───────────────────────────────────────────
+
 function targetOf(url, { resolve, context } = {}) {
   if (!url.startsWith('action:')) return { kind: 'external', url };
   const search = url.match(/^action:search(?:@([^:]+))?:(.+)$/);
@@ -220,20 +334,7 @@ function targetOf(url, { resolve, context } = {}) {
 
 /**
  * The site's {text}[url] links, rendered for a medium that is not the app.
- *
- * @param {string} text
- * @param {object} [opts]
- * @param {'md'|'html'|'text'} [opts.mode]
- * @param {function} [opts.resolve] - from createResolver; without it,
- *   highlights come out as plain text
- * @param {string} [opts.context] - conversation for `action:search:` links
- * @param {string} [opts.samePage] - in html, messages of this conversation
- *   are linked by anchor rather than by site URL
- * @param {function} [opts.hrefFor] - where a message's anchor lives in the
- *   static site: (conversationId, msg) => path, or null to fall back to the
- *   app's hash route. A path is made absolute in Markdown.
- * @param {string} [opts.fromPath] - the page being rendered; a link to an
- *   anchor on that same page is written as just the fragment
+ * opts: mode ('md' | 'html' | 'text'), resolve, context, samePage, hrefFor, fromPath.
  */
 export function renderLinks(text, opts = {}) {
   const mode = opts.mode || 'md';
@@ -241,7 +342,10 @@ export function renderLinks(text, opts = {}) {
   const link = (label, href) => (mode === 'md' ? `[${label}](${href})`
     : mode === 'html' ? `<a href="${escapeHtml(href)}"${href.startsWith('http') ? ' rel="noopener"' : ''}>${escapeHtml(label)}</a>`
     : label);
-  const cite = (msg) => (mode === 'html' ? ` <small>âŸ¨${escapeHtml(citationOf(msg))}âŸ©</small>` : ` âŸ¨${citationOf(msg)}âŸ©`);
+  const cite = (msg, conversationId) => {
+    const where = citationOf(msg, conversationId, { standalone: conversationId !== (opts.samePage ?? opts.context) });
+    return mode === 'html' ? ` <small>⟨${escapeHtml(where)}⟩</small>` : ` ⟨${where}⟩`;
+  };
 
   let out = '';
   let last = 0;
@@ -258,7 +362,7 @@ export function renderLinks(text, opts = {}) {
         if (placed && mode === 'md' && placed.startsWith('/')) placed = `${SITE}${placed}`;
         const href = placed || ((mode === 'html' && opts.samePage === target.conversationId)
           ? `#msg-${target.msg.id}` : messageUrl(target.conversationId, target.msg));
-        out += link(label, href) + cite(target.msg); break;
+        out += link(label, href) + cite(target.msg, target.conversationId); break;
       }
       case 'conversation':
         out += link(label, mode === 'html' ? `/chat/${target.conversationId}` : `${SITE}/chat/${target.conversationId}`); break;
@@ -270,25 +374,18 @@ export function renderLinks(text, opts = {}) {
   return out + esc(text.slice(last));
 }
 
-/** Thin names for the common cases. */
 export const linksToMarkdown = (text, opts) => renderLinks(text, { ...opts, mode: 'md' });
 export const linksToHtml = (text, opts) => renderLinks(text, { ...opts, mode: 'html' });
 export const linksToText = (text) => renderLinks(text, { mode: 'text' });
 
-const dateFmt = new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
-const monthFmt = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric' });
-export const longDate = (iso) => /^\d{4}-\d{2}-\d{2}$/.test(iso || '')
-  ? dateFmt.format(new Date(`${iso}T12:00:00`))
-  : /^\d{4}-\d{2}$/.test(iso || '')
-    ? monthFmt.format(new Date(`${iso}-15T12:00:00`))
-    : 'Data não informada';
+// ── messages ───────────────────────────────────────────────────────────────
 
 export const phonePretty = (p) => (p && /^55\d{10,11}$/.test(p)
   ? `+55 ${p.slice(2, 4)} ${p.slice(4, -4)}-${p.slice(-4)}`
   : p || null);
 
 export const MEDIA = {
-  image: 'Foto', video: 'VÃ­deo', audio: 'Ãudio', sticker: 'Sticker',
+  image: 'Foto', video: 'Vídeo', audio: 'Áudio', sticker: 'Sticker',
   document: 'Documento', call: 'Chamada', deleted: 'Mensagem apagada', system: 'Sistema',
 };
 
@@ -307,4 +404,11 @@ export function messageText(msg) {
     case 'system': return `(${text})`;
     default: return text;
   }
+}
+
+/** One message in a static page: escaped, line breaks kept, "Encaminhada" first if it was. */
+export function messageHtml(msg) {
+  const text = escapeHtml(messageText(msg)).replace(/\n/g, '<br>');
+  const forwarded = msg.is_forwarded || msg.forwarded;
+  return `${forwarded ? '<i>Encaminhada</i> ' : ''}${text}`;
 }
